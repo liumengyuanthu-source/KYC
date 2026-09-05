@@ -1,0 +1,2 @@
+# Christina must approve at least one active prohibited term before T00 can pass.
+# Add one prohibited term per line. Blank lines and lines beginning with # are ignored.

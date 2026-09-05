@@ -1,0 +1,2 @@
+Change_ID,Change_Date,Change_Type,Summary,Source_ID,Decision_ID,Changed_By,Impacted_Artifact_IDs,Previous_Status,New_Status,Validation_Result,Notes
+CHG-001,2026-09-05,SCOPE_UPDATE,Adopted automation-first Miro production model,SRC-004,DEC-002,Codex,CJ-T08A|CJ-T08B|CJ-T08C,MANUAL_ASSEMBLY,AUTOMATION_FIRST,RECORDED,

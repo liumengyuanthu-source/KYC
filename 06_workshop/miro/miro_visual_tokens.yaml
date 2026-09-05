@@ -1,0 +1,42 @@
+version: "0.1"
+status: PROVISIONAL_PILOT
+canvas:
+  background: "#F7F9FC"
+  frame_fill: "#FFFFFF"
+  frame_border: "#D8E0E8"
+colour:
+  primary_blue: "#005B9F"
+  dark_navy: "#123B56"
+  light_blue: "#EAF4FB"
+  process_grey: "#EDF1F4"
+  assumption_yellow: "#FFF4CC"
+  target_green: "#E7F5ED"
+  human_purple: "#EEE8FA"
+  risk_red: "#FDECEC"
+  opportunity_orange: "#FFF0E2"
+  text_primary: "#1E2A35"
+  text_secondary: "#5E6B78"
+spacing:
+  frame_margin: 80
+  stage_gap: 24
+  lane_gap: 8
+  card_gap: 16
+  card_padding: 18
+shape:
+  corner_radius: 12
+  border_width: 2
+  header_height: 100
+  lane_label_width: 360
+  standard_card_width: 260
+  standard_card_height: 150
+  compact_card_width: 220
+  compact_card_height: 110
+text:
+  font_family: "Miro-supported sans-serif"
+  frame_title: 40
+  stage_title: 24
+  lane_title: 20
+  card_title: 17
+  card_body: 14
+  tag_text: 11
+  footer_text: 10

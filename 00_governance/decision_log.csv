@@ -1,0 +1,3 @@
+Decision_ID,Decision,Decision_Status,Decision_Owner,Decision_Date,Rationale,Source_ID,Supersedes_Decision_ID,Impacted_Artifact_IDs,Effective_Version,Notes
+DEC-001,Use a dedicated clean project directory,APPROVED,Christina,2026-09-04,Protect parent workspace artifacts,,,,v0.1,
+DEC-002,Adopt automation-first Miro V0 production,APPROVED,Christina,2026-09-05,Use GPT-organised v1.1 scope,SRC-004,,CJ-T08A|CJ-T08B|CJ-T08C,v0.1,

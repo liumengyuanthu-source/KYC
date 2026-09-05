@@ -1,0 +1,11 @@
+frame_code: F04
+segment: S2
+title: "Current End-to-End Executive Journey — Pilot Segment"
+version: V0
+status: BLOCKED_SOURCE_NOT_VALIDATED
+missing_sources:
+  - "03_personas_journey/current_journey_matrix.csv"
+  - "03_personas_journey/pain_point_register.csv"
+items: []
+notes:
+  - "Current actions, systems, pain and root-cause hypotheses require validated source rows."

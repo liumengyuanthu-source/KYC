@@ -1,0 +1,27 @@
+project_title: "Institutional Clear-to-Trade Product"
+version: "0.1"
+board:
+  url: null
+  id: null
+  team: null
+  permission: UNVERIFIED
+  target_area: UNVERIFIED
+status: BLOCKED_CONNECTION_AND_SOURCES
+frames:
+  - {code: F00, title: "Board Home & Navigation", priority: A, status: BLOCKED_SOURCE_NOT_VALIDATED}
+  - {code: F00A, title: "Automation Component Library & Visual Tokens", priority: PILOT, status: LOCAL_SPEC_READY}
+  - {code: F01, title: "Sources, Evidence Status & Visual Legend", priority: A, status: BLOCKED_SOURCE_NOT_VALIDATED}
+  - {code: F02, title: "Journey Architecture", priority: PILOT, status: BLOCKED_SOURCE_NOT_VALIDATED}
+  - {code: F03, title: "Role Ecosystem & Persona Hypotheses", priority: A, status: BLOCKED_SOURCE_NOT_VALIDATED}
+  - {code: F04, title: "Current End-to-End Executive Journey", priority: PILOT, status: BLOCKED_SOURCE_NOT_VALIDATED}
+  - {code: F05, title: "Current Detailed Service Blueprint", priority: B, status: BLOCKED_SOURCE_NOT_VALIDATED}
+  - {code: F06, title: "Case Manager Deep Dive", priority: A, status: BLOCKED_SOURCE_NOT_VALIDATED}
+  - {code: F07, title: "KYC Operations Deep Dive", priority: A, status: BLOCKED_SOURCE_NOT_VALIDATED}
+  - {code: F08, title: "Hero Case & Trigger Variants", priority: A, status: BLOCKED_SOURCE_NOT_VALIDATED}
+  - {code: F09, title: "Target Agentic End-to-End Journey", priority: PILOT, status: BLOCKED_SOURCE_NOT_VALIDATED}
+  - {code: F10, title: "MVP vs Target HITL & Autonomy", priority: A, status: BLOCKED_SOURCE_NOT_VALIDATED}
+  - {code: F11, title: "Structured State & Continuous Readiness", priority: B, status: BLOCKED_SOURCE_NOT_VALIDATED}
+  - {code: F12, title: "Pain → Root Cause → Opportunity", priority: B, status: BLOCKED_SOURCE_NOT_VALIDATED}
+  - {code: F13, title: "Journey → Capability → Requirement", priority: B, status: BLOCKED_SOURCE_NOT_VALIDATED}
+  - {code: F14, title: "Evidence Gaps & Validation Plan", priority: B, status: BLOCKED_SOURCE_NOT_VALIDATED}
+  - {code: F15, title: "Executive Export Frames", priority: A, status: BLOCKED_SOURCE_NOT_VALIDATED}

@@ -1,0 +1,15 @@
+frame_code: F00A
+title: "Automation Component Library & Visual Tokens"
+version: V0
+status: LOCAL_SPEC_READY
+source_files:
+  - "00_sources/raw/Clear_to_Trade_UXUI_Miro_Automation_Scope_v1.1.md"
+token_file: "06_workshop/miro/miro_visual_tokens.yaml"
+component_catalogue: "06_workshop/miro/miro_component_catalog.md"
+items:
+  - type: TOKEN_REFERENCE
+    content_id: VISUAL-TOKENS-0.1
+  - type: COMPONENT_CATALOGUE_REFERENCE
+    content_id: COMPONENT-CATALOGUE-0.1
+notes:
+  - "Local definition only; no Miro item ID exists."

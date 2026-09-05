@@ -1,0 +1,1 @@
+Process_ID,Journey_ID,Task,Autonomy_Mode_MVP,Autonomy_Mode_Target,Accountable_Human,Allowed_Action,Prohibited_Action,Guardrail,Escalation_Trigger,Expected_Decision,Reentry_Rule,Audit_Record,Source_ID,Assumption_ID,Validation_Status

@@ -1,0 +1,9 @@
+frame_code: F02
+title: "Journey Architecture"
+version: V0
+status: BLOCKED_SOURCE_NOT_VALIDATED
+missing_sources:
+  - "03_personas_journey/journey_moments_master.csv"
+items: []
+notes:
+  - "Do not populate from scope documents."

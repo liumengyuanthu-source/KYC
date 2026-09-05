@@ -1,0 +1,12 @@
+frame_code: F09
+segment: S2
+title: "Target Agentic End-to-End Journey — Pilot Segment"
+version: V0
+status: BLOCKED_SOURCE_NOT_VALIDATED
+missing_sources:
+  - "03_personas_journey/target_journey_matrix.csv"
+  - "04_operating_model/hitl_task_matrix.csv"
+  - "04_operating_model/state_transition_table.csv"
+items: []
+notes:
+  - "Agentic action, rules/tools, human boundary and state require validated source rows."
