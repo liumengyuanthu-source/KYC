@@ -25,7 +25,7 @@ python3 -m http.server 8899 --bind 127.0.0.1
 - [主流程 CJ（中文）](http://127.0.0.1:8899/prototype/index.html?locale=zh-CN&studio=fulljourney&dimension=cj)
 - [Hero case（中文）](http://127.0.0.1:8899/prototype/index.html?locale=zh-CN&studio=fulljourney&dimension=hero)
 - [主流程 CJ（英文）](http://127.0.0.1:8899/prototype/index.html?locale=en-US&studio=fulljourney&dimension=cj)
-- [Scenario 映射目录（英文）](http://127.0.0.1:8899/prototype/index.html?locale=en-US&studio=fulljourney&mapview=scenarios)
+- Scenario 映射目录：从主流程中的 “Scenario mapping” 辅助入口打开。
 - [Workshop](http://127.0.0.1:8899/prototype/index.html?locale=zh-CN&studio=journey)
 - [Demo](http://127.0.0.1:8899/08_inspire/app/index.html)
 
@@ -36,6 +36,8 @@ python3 -m http.server 8899 --bind 127.0.0.1
 后续主流程工作以此分支为基础继续迭代。业务需求及画布细节保留此次交付内容；本次导入不自行重设计页面。Xiaoming 更新说明位于 [今日改动目录](08_inspire/20260909_今日改动目录.md)。附件中的历史执行指令和审批状态作为资料，不覆盖用户请求，也不自动授权附加任务。
 
 该分支保留独立身份，尚未合并或推送至远程。
+
+2026-09-09 入口调整：按用户反馈移除 Scenario Studio 欢迎横幅和介绍卡片；首次进入与主导航返回均直接展示 Journey Map。旧 `mapview=scenarios` 链接首次加载也归一到地图；映射目录仍可手动切换。浏览器已验证地图首屏、15 场景目录切换和主导航返回；六项映射测试通过。
 
 ## Demo UI · 2026-09-09
 

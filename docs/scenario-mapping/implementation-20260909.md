@@ -13,7 +13,7 @@
 - S11 Credit 与 S12 Legal 按稳定 SCN ID 编号；S14 readiness 与 S15 confirmation / publication 分开呈现。
 - 顶栏、蓝色欢迎区、浅蓝提示区、黄色主按钮、衬线标题和表格层级呼应参考图。手机宽度将目录改为卡片。
 
-入口：`/prototype/index.html?locale=en-US&studio=fulljourney&mapview=scenarios`。
+入口更新：`/prototype/index.html?locale=en-US&studio=fulljourney` 直接显示 Journey Map；通过 “Scenario mapping” 查看目录。用户后续要求去掉欢迎横幅和介绍卡片，现已移除，旧目录链接首次打开也先展示地图。
 
 ## 数据维护
 
