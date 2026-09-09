@@ -1,0 +1,81 @@
+/* Scenario/source relationships are the primary content of the map inspector. */
+html body #focus-chip.jsp-inspector {
+  padding:0!important; display:flex; flex-direction:column; overflow:hidden;
+  width:min(460px,calc(100% - 32px))!important; max-width:calc(100% - 32px)!important;
+  max-height:min(690px,calc(100% - 86px)); font-family:Arial,'PingFang SC',sans-serif;
+}
+html body #focus-chip.jsp-inspector[hidden] { display:none; }
+#focus-chip.jsp-inspector .relationship-lens-head { flex-shrink:0; padding:16px 20px 12px; border-bottom:1px solid #e4ebf2; }
+#focus-chip.jsp-inspector .relationship-lens-eyebrow { font-size:10px; letter-spacing:.14em; color:#627b90; }
+#focus-chip.jsp-inspector .relationship-lens-title { font-size:17px; font-weight:600; }
+#focus-chip.jsp-inspector .semantic-passport-detail { font-size:12px; color:#66788b; }
+#focus-chip.jsp-inspector :is(#focus-passport-meta,#focus-evidence,#btn-focus-relations) { display:none!important; }
+#focus-chip.jsp-inspector .relationship-lens-actions { flex-direction:row-reverse; align-items:center; gap:5px; }
+#focus-chip.jsp-inspector #btn-focus-copy { font-size:11px; }
+#focus-chip.jsp-inspector #btn-focus-clear { width:32px; min-width:32px; height:36px; min-height:36px; }
+.jsp-scroll { min-height:0; overflow-y:auto; overscroll-behavior:contain; padding:18px 20px; scrollbar-gutter:stable; }
+.jsp-picker:empty { display:none; }
+.jsp-picker label { display:grid; gap:6px; margin-bottom:18px; font-size:11px; color:#62778c; }
+.jsp-picker select { display:block; width:100%; min-width:0; min-height:42px; padding:8px 30px 8px 10px; border:1px solid #cbdce9; border-radius:6px; background:#f3f8fc; color:#175f95; font:13px Arial,'PingFang SC',sans-serif; }
+.jsp-meta { display:flex; align-items:center; gap:10px; color:#64798b; font-size:11px; }
+.jsp-meta span:first-child { background:#e6f3fb; color:#0868ac; padding:3px 8px; border-radius:4px; font-weight:700; }
+#focus-chip .jsp-scenario h2 { margin:10px 0; font:600 23px/1.2 Georgia,'Songti SC',serif; letter-spacing:-.02em; color:#172239; }
+.jsp-rationale { color:#53687d; font-size:12px; line-height:1.65; margin:0 0 20px; }
+#focus-chip :is(.jsp-primary,.jsp-related) h3 { display:flex; align-items:center; gap:8px; font:600 12px Arial,'PingFang SC',sans-serif; color:#0a65a7; margin:0 0 5px; }
+.jsp-primary h3>span,.jsp-related>summary>span { color:#6a8196; font-size:11px; font-weight:400; }
+.jsp-caption { font-size:11px; line-height:1.5; color:#718294; margin:0 0 10px; }
+.jsp-primary { margin-top:18px; }
+.jsp-source-chips { display:flex; flex-wrap:wrap; gap:6px; }
+html body #focus-chip .jsp-source-chips button { min-height:32px; padding:5px 9px; border:1px solid #d2e5f2; border-radius:4px; background:#edf6fc!important; }
+.jsp-source-chips code { font:12px/1.4 ui-monospace,SFMono-Regular,Consolas,monospace; color:#0565a8; }
+html body #focus-chip .jsp-source-chips button[data-source-role=related] { background:#f4f6f8!important; border-color:#dde3e9; }
+.jsp-source-chips button[data-source-role=related] code { color:#607386; }
+html body #focus-chip .jsp-source-chips button[aria-pressed=true] { background:#106bb4!important; border-color:#106bb4; }
+.jsp-source-chips button[aria-pressed=true] code { color:#fff; }
+.jsp-related h3 span { color:#748494; font-weight:400; }
+.jsp-related .jsp-caption { margin:8px 0; }
+.jsp-source-preview { margin-top:14px; }
+.jsp-source-preview:has(.jsp-source) { background:#f5f9fc; border:1px solid #dce8f1; border-radius:6px; padding:0 12px; }
+.jsp-source-preview .jsp-source { border:0; }
+.jsp-origins>summary { cursor:pointer; color:#236b9c; }
+.jsp-source { border-bottom:1px solid #e7edf3; }
+.jsp-source>summary { display:grid; grid-template-columns:50px minmax(0,1fr) 12px; align-items:start; gap:9px; padding:10px 0; cursor:pointer; font-size:12px; line-height:1.45; color:#304c65; list-style:none; }
+.jsp-source>summary::-webkit-details-marker { display:none; }
+.jsp-source code,.jsp-related-codes code { font:11px/1.5 ui-monospace,SFMono-Regular,Consolas,monospace; background:#ecf5fc; color:#0868ac; border-radius:3px; padding:2px 4px; }
+.jsp-source[open]>.jsp-source-body { padding:2px 0 14px; }
+.jsp-source[open]>summary .jsp-expand { transform:rotate(45deg); }
+.jsp-expand { color:#2270a7; }
+.jsp-source-body { font-size:11px; color:#566b80; line-height:1.6; }
+.jsp-source-body>p { margin:8px 0; }
+.jsp-source-body>p:first-child { color:#116da9; font-weight:600; }
+.jsp-source-body dl { display:grid; grid-template-columns:50px minmax(0,1fr); gap:5px 10px; margin:12px 0; }
+.jsp-source-body dd { margin:0; }
+.jsp-occurrences { list-style:none; padding:0; margin:12px 0 0; }
+.jsp-occurrences li { margin-top:8px; }
+.jsp-occurrences span { display:block; font-size:10px; }
+.jsp-occurrences code { display:block; font-size:10px; overflow-wrap:anywhere; white-space:normal; }
+.jsp-occurrence-note { border-left:2px solid #e5b64f; padding-left:8px; }
+.jsp-related { margin-top:18px; }
+.jsp-related>summary,.jsp-notes>summary,.jsp-connections>summary { cursor:pointer; font-size:12px; font-weight:600; color:#466b89; }
+.jsp-related>.jsp-caption { margin-top:8px; }
+.jsp-related-codes { display:flex; flex-wrap:wrap; gap:5px; margin:8px 0; }
+.jsp-related[open]+.jsp-related-codes { display:none; }
+.jsp-related-codes code { color:#627689; background:#f0f3f6; }
+.jsp-notes,.jsp-connections { margin-top:16px; padding-top:14px; border-top:1px solid #e7edf3; }
+.jsp-notes p,.jsp-related>p { font-size:11px; line-height:1.6; color:#6b7d8f; }
+#focus-chip .jsp-connections .relationship-lens-list { display:block!important; padding:0; }
+#focus-chip .jsp-connections .relationship-lens-summary { display:block; margin:10px 0; font-size:11px; }
+#focus-chip .jsp-connections .semantic-passport-reach { margin:10px 0; }
+.jsp-footer { flex-shrink:0; padding:12px 20px; border-top:1px solid #e3ebf3; background:#fff; }
+.jsp-footer[hidden] { display:none; }
+html body #focus-chip button.jsp-cta { width:100%; display:flex; justify-content:space-between; align-items:center; min-height:44px; padding:12px 18px; font-size:13px; font-weight:600; color:#192239!important; background:#ffca24!important; border:1px solid #ffca24; border-radius:24px; }
+html body #focus-chip button.jsp-cta:hover { background:#f5be13!important; }
+#focus-chip.jsp-inspector :is(summary,select):focus-visible { outline:2px solid #1675b7; outline-offset:3px; border-radius:3px; }
+@media(max-width:600px) {
+  html body #focus-chip.jsp-inspector { position:fixed; z-index:400; left:8px!important; right:8px!important; top:72px!important; bottom:16px; width:calc(100% - 16px)!important; max-width:calc(100% - 16px)!important; max-height:none; }
+  .diagram-container:has(.jsp-inspector:not([hidden])) .diagram-nav { visibility:hidden; }
+  .jsp-scroll { padding:14px 16px; }
+  #focus-chip.jsp-inspector .relationship-lens-head { padding:12px 16px; }
+  #focus-chip .jsp-scenario h2 { font-size:21px; }
+  .jsp-footer { padding:10px 16px; }
+}

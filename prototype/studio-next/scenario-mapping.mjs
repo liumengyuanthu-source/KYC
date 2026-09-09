@@ -3,7 +3,7 @@ import {scenarioMappings, sourceActions} from './scenario-source-data.mjs';
 export {scenarioMappings};
 const escape = value => String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 export const getScenarioMapping = id => scenarioMappings.find(s => s.id === id) || null;
-const relatedRoles = {
+export const relatedRoles = {
   S1: {'M2.4':'Risk feedback into scope'},
   S2: {'M1.3':'Case context','M2.1':'Requirement applicability','M3.3':'Reuse clarification request','M3.4':'Evidence input'},
   S3: {'M0.4':'Booking-model input','M3.3':'Reuse clarification request'},

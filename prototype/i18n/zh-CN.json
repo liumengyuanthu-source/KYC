@@ -3174,5 +3174,18 @@
   "Process explorer views": "流程视图",
   "Scenario source mapping directory": "场景来源映射总表",
   "Open scenario": "打开场景",
-  "Explore the existing work": "查看对应的现有工作"
+  "Explore the existing work": "查看对应的现有工作",
+  "JOURNEY STEP": "旅程节点",
+  "Close scenario preview": "关闭场景预览",
+  "Scenarios at this step": "此节点关联的场景",
+  "View scenario detail": "查看场景详情",
+  "These steps form this scenario’s backbone.": "这些源步骤共同构成此场景的主干。",
+  "Related source steps": "关联来源步骤",
+  "Inputs, reuse and handoffs; not extra steps in sequence.": "输入、复用或交接关系，不代表额外的串行步骤。",
+  "Mapping notes": "映射说明",
+  "Map connections": "地图连线",
+  "Multiple Target occurrences share this code; each source location is retained.": "目标图中存在多处同编号来源；每个来源位置均独立保留。",
+  "Source locations": "来源位置",
+  "Select a source step to see its role and origin.": "点击源步骤，查看它与场景的关系及来源。",
+  "How these steps connect": "这些步骤如何关联"
 }
