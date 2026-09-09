@@ -37,10 +37,14 @@ python3 -m http.server 8899 --bind 127.0.0.1
 
 该分支保留独立身份，尚未合并或推送至远程。
 
-2026-09-09 入口调整：按用户反馈移除 Scenario Studio 欢迎横幅和介绍卡片；首次进入与主导航返回均直接展示 Journey Map。旧 `mapview=scenarios` 链接首次加载也归一到地图；映射目录仍可手动切换。浏览器已验证地图首屏、15 场景目录切换和主导航返回；六项映射测试通过。
+2026-09-09 入口调整：按用户反馈移除 Scenario Studio 欢迎横幅和介绍卡片；首次进入与主导航返回均直接展示 Journey Map。旧 `mapview=scenarios` 链接首次加载也归一到地图；后续已按用户要求移除独立目录切换，来源映射通过地图节点弹窗查看。
 
 ## Demo UI · 2026-09-09
 
 按用户补充要求，`08_inspire/app/` 六类页面已统一门户风格，并更新故事角色展示；原有流程和状态交互保留。详见 [Demo UI 实施与验证](docs/demo-ui-20260909.md)。Scenario Template 继续保持原样。
 
 2026-09-09 导航精简：用户进一步要求去掉 Journey map / Scenario mapping 切换。地图上方现仅保留左对齐的 Customer journey / Hero case 两个 tab；已验证两者双向切换，场景弹窗来源映射保持可用。
+
+## GitHub 准备 · 2026-09-09
+
+目标仓库为 `liumengyuanthu-source/KYC`。站点入口、发布文件清单、运行脚本及手动 GitHub Pages 工作流已准备；独立发布副本生成于 `.release/KYC/`。完整部署状态与步骤见 [部署说明](docs/DEPLOYMENT.md)。尚未上传或公开发布。

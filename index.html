@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Clear-to-Trade</title>
+</head>
+<body>
+  <p><a href="./prototype/index.html?locale=en-US&amp;studio=fulljourney&amp;dimension=cj">Open Clear-to-Trade Journey Map</a></p>
+  <script>
+    const destination = new URL('./prototype/index.html', location.href);
+    destination.search = location.search;
+    if (!destination.searchParams.has('studio')) destination.searchParams.set('studio', 'fulljourney');
+    if (!destination.searchParams.has('dimension')) destination.searchParams.set('dimension', 'cj');
+    if (!destination.searchParams.has('locale')) destination.searchParams.set('locale', 'en-US');
+    destination.hash = location.hash;
+    location.replace(destination.href);
+  </script>
+</body>
+</html>
