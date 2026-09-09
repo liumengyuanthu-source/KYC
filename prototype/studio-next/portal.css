@@ -2,6 +2,8 @@
    Scoped to Scenario Studio; the standalone Scenario Template is unchanged. */
 :root { --sm-navy:#151a30; --sm-blue:#1068b2; --sm-yellow:#ffc322; --sm-pale:#e8f3fa; --sm-line:#e1e4e9; --sm-muted:#5c6471; }
 body.sn-active { background:#fff; }
+body.sn-active .sn-root:has(.sn-workshop-guide) { max-width:1680px; padding:26px clamp(20px,4vw,72px) 36px; }
+@media(max-width:600px) { body.sn-active .sn-root:has(.sn-workshop-guide) { padding:22px 16px 28px; } }
 .sn-app-header.sn-workshop-header { min-height:68px; padding:12px 28px; background:var(--sm-navy); border:0; gap:24px; }
 .sn-app-header .sn-wordmark { display:flex; align-items:center; gap:12px; letter-spacing:0; text-decoration:none; }
 .sm-brand-mark { width:36px; height:36px; display:grid; place-items:center; background:var(--sm-blue); color:#fff; font:700 12px Arial,sans-serif; }
