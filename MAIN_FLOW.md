@@ -25,7 +25,7 @@ python3 -m http.server 8899 --bind 127.0.0.1
 - [主流程 CJ（中文）](http://127.0.0.1:8899/prototype/index.html?locale=zh-CN&studio=fulljourney&dimension=cj)
 - [Hero case（中文）](http://127.0.0.1:8899/prototype/index.html?locale=zh-CN&studio=fulljourney&dimension=hero)
 - [主流程 CJ（英文）](http://127.0.0.1:8899/prototype/index.html?locale=en-US&studio=fulljourney&dimension=cj)
-- Scenario 映射目录：从主流程中的 “Scenario mapping” 辅助入口打开。
+- Scenario 映射：从 Journey Map 的场景弹窗查看 Primary / Related 来源。
 - [Workshop](http://127.0.0.1:8899/prototype/index.html?locale=zh-CN&studio=journey)
 - [Demo](http://127.0.0.1:8899/08_inspire/app/index.html)
 
@@ -42,3 +42,5 @@ python3 -m http.server 8899 --bind 127.0.0.1
 ## Demo UI · 2026-09-09
 
 按用户补充要求，`08_inspire/app/` 六类页面已统一门户风格，并更新故事角色展示；原有流程和状态交互保留。详见 [Demo UI 实施与验证](docs/demo-ui-20260909.md)。Scenario Template 继续保持原样。
+
+2026-09-09 导航精简：用户进一步要求去掉 Journey map / Scenario mapping 切换。地图上方现仅保留左对齐的 Customer journey / Hero case 两个 tab；已验证两者双向切换，场景弹窗来源映射保持可用。

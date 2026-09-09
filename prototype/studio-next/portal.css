@@ -17,7 +17,7 @@ body.sn-active .sn-root:has(.sm-portal) { max-width:none!important; width:100%; 
 .sn-root .sm-yellow:hover,.sm-next button:hover { background:#ffd04d; border-color:#eeb100; }
 .sm-yellow span,.sm-next button span { margin-left:14px; }
 .sm-kicker { display:block; color:#526376; font-size:10px; letter-spacing:.2em; font-weight:500; margin-bottom:8px; }
-.sm-view-toolbar { margin:0 clamp(24px,5vw,84px) 18px; display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap; }
+.sm-view-toolbar { margin:0 clamp(16px,3vw,52px) 18px; display:flex; align-items:center; justify-content:flex-start; gap:16px; flex-wrap:wrap; }
 .sm-view-tabs { display:flex; padding:4px; background:#f0f1f3; border-radius:28px; }
 .sm-view-tabs button,.sm-view-toolbar .sn-dimension-nav button { font-size:13px; min-height:38px; padding:9px 19px; border:0; background:transparent; border-radius:24px; color:#4b5160; box-shadow:none; }
 .sm-view-tabs button[aria-pressed=true] { background:#3b3e4e; color:#fff; }
@@ -124,7 +124,6 @@ dialog.sn-panel .sn-panel-bar button { background:transparent; border:1px solid 
 .sm-source summary:focus-visible,.sm-reading-note summary:focus-visible,.sm-search input:focus-visible { outline:3px solid #1686ca; outline-offset:3px; }
 @media(max-width:900px) {
   .sn-app-header.sn-workshop-header { padding:12px 18px; gap:12px; }
-  .sm-view-toolbar { margin-inline:22px; }
   .sm-stage-list { grid-template-columns:repeat(3,minmax(0,1fr)); }
   .sm-directory-head { align-items:flex-start; flex-direction:column; gap:16px; }
   .sm-mapping-columns { grid-template-columns:1fr; }
@@ -136,7 +135,7 @@ dialog.sn-panel .sn-panel-bar button { background:transparent; border:1px solid 
   .sm-brand-mark { width:30px; height:30px; }
   .sn-app-header.sn-workshop-header { flex-wrap:wrap; }
   .sn-app-header nav { order:3; width:100%; justify-content:center; }
-  .sm-view-toolbar { margin-inline:14px; }
+  .sm-view-toolbar { margin-inline:12px; }
   .sm-view-tabs button,.sm-view-toolbar .sn-dimension-nav button { padding:9px 13px; font-size:12px; }
   .sm-stage-list { gap:8px; }
   .sm-stage-list button { padding:12px; min-height:82px; }

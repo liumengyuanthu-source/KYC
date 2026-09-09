@@ -1,4 +1,4 @@
-import {studioNextHtml,studioNextHeader,mountStudioNext,unmountStudioNext,syncStudioNextPop} from './studio-next/ui.mjs?v=journey-first-20260909';
+import {studioNextHtml,studioNextHeader,mountStudioNext,unmountStudioNext,syncStudioNextPop} from './studio-next/ui.mjs?v=journey-tabs-20260909';
 import {createBatchB,collaborationAction,collaborationProjection,COLLAB_IDS} from './collaboration-engine.mjs';
 import {renderCollaboration} from './collaboration-ui.mjs';
 import {createMediaHost,previewNavigation,sanitiseSnapshot} from './media-host.mjs';
