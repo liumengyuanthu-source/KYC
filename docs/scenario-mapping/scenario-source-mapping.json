@@ -1,0 +1,832 @@
+{
+  "status": "analysis_only_not_wired_into_runtime",
+  "basis": "User adopted the supplied Markdown as the mapping guideline; interaction recommendations remain design proposals.",
+  "source_file": "Clear_to_Trade_Scenario_to_Source_Process_Mapping_for_Codex.md",
+  "source_sha256": "19b35d4ba339456976c407e729b386a79db71cecb5714019fb7cb48b582557f9",
+  "scenario_count": 15,
+  "unique_primary_source_codes": 71,
+  "primary_associations": 73,
+  "existing_work_items": 94,
+  "existing_atomic_actions": 229,
+  "scenarios": [
+    {
+      "scenario_number": "S1",
+      "scenario_id": "SCN-SCOPE",
+      "guideline_title": "Define onboarding scope",
+      "current_title": "Establish the relationship",
+      "stage": "Initiate",
+      "primary": [
+        "M0.1",
+        "M0.2",
+        "M0.3",
+        "M0.4",
+        "M1.1",
+        "M1.2",
+        "M1.3"
+      ],
+      "related": [
+        "M2.4"
+      ],
+      "rationale": "Together they establish the initial case: request intake, case creation, sales/reporting/booking context, product scope, DD level and booking model. M2.4 feeds risk/requirement changes back into scope.",
+      "guideline_note": "Build one S1 current-state flow. M0.1 can contain deeper branching (group relationship, cross-region visibility, booking choice), but remains inside S1.",
+      "existing_work_item_ids": [
+        "D3-SCOPE-01",
+        "D3-SCOPE-02",
+        "D3-SCOPE-03",
+        "D3-SCOPE-04",
+        "D3-SCOPE-05"
+      ],
+      "existing_work_item_refs_are_inherited_not_revalidated": true,
+      "existing_source_codes": [
+        "M0.1",
+        "M0.2",
+        "M0.3",
+        "M0.4",
+        "M1.1",
+        "M1.2",
+        "M1.3",
+        "M2.4"
+      ],
+      "primary_without_existing_work_item_anchor": [],
+      "existing_codes_outside_new_primary_related": [],
+      "inherited_occurrence_locators": [
+        "SRC-007|p1|CLIENT FULFILMENT / KYC OPS|shape18|M2.4|occ4",
+        "SRC-007|p1|CLIENT FULFILMENT / KYC OPS|shape284|M1.2|occ1",
+        "SRC-007|p1|CLIENT FULFILMENT / KYC OPS|shape284|M1.3|occ2",
+        "SRC-007|p1|CLIENT FULFILMENT / KYC OPS|shape3|M0.3|occ1",
+        "SRC-007|p1|CLIENT FULFILMENT / KYC OPS|shape3|M0.4|occ2",
+        "SRC-007|p1|SALES / RM (Front Office)|shape20|M1.1|occ1",
+        "SRC-007|p1|SALES / RM (Front Office)|shape283|M0.1|occ1",
+        "SRC-007|p1|SALES / RM (Front Office)|shape283|M0.2|occ2",
+        "SRC-007|p2|Agentic execution|shape18|M2.4|occ4",
+        "SRC-007|p2|Agentic execution|shape279|M0.1|occ1",
+        "SRC-007|p2|Agentic execution|shape279|M0.2|occ2",
+        "SRC-007|p2|Agentic execution|shape279|M0.3|occ3",
+        "SRC-007|p2|Agentic execution|shape279|M0.4|occ4",
+        "SRC-007|p2|Agentic execution|shape284|M1.2|occ1",
+        "SRC-007|p2|Agentic execution|shape284|M1.3|occ2",
+        "SRC-007|p2|SALES / RM (Front Office)|shape20|M1.1|occ1",
+        "SRC-007|p2|SALES / RM (Front Office)|shape283|M0.1|occ1"
+      ]
+    },
+    {
+      "scenario_number": "S2",
+      "scenario_id": "SCN-ENTITY",
+      "guideline_title": "Confirm entity & authority",
+      "current_title": "Separate entity and authority",
+      "stage": "Initiate",
+      "primary": [
+        "M1.4",
+        "M1.5"
+      ],
+      "related": [
+        "M1.3",
+        "M2.1",
+        "M3.3",
+        "M3.4"
+      ],
+      "rationale": "The source directly supports legal-name/location confirmation and entity classification/triage. Case creation, requirement applicability and clarification/evidence actions provide supporting context.",
+      "guideline_note": "Do not rewrite M1.4/M1.5 as full authority verification. Authority detail is design elaboration and should be marked as such.",
+      "existing_work_item_ids": [
+        "D3-ENTITY-01",
+        "D3-ENTITY-02",
+        "D3-ENTITY-03",
+        "D3-ENTITY-04",
+        "D3-ENTITY-05",
+        "D3-ENTITY-06"
+      ],
+      "existing_work_item_refs_are_inherited_not_revalidated": true,
+      "existing_source_codes": [
+        "M1.3",
+        "M1.4",
+        "M1.5",
+        "M2.1",
+        "M3.3",
+        "M3.4"
+      ],
+      "primary_without_existing_work_item_anchor": [],
+      "existing_codes_outside_new_primary_related": [],
+      "inherited_occurrence_locators": [
+        "SRC-007|p1|CLIENT FULFILMENT / KYC OPS|shape18|M2.1|occ1",
+        "SRC-007|p1|CLIENT FULFILMENT / KYC OPS|shape284|M1.3|occ2",
+        "SRC-007|p1|CLIENT FULFILMENT / KYC OPS|shape284|M1.4|occ3",
+        "SRC-007|p1|CLIENT FULFILMENT / KYC OPS|shape284|M1.5|occ4",
+        "SRC-007|p1|CLIENT FULFILMENT / KYC OPS|shape292|M3.3|occ3",
+        "SRC-007|p1|CLIENT FULFILMENT / KYC OPS|shape292|M3.4|occ4",
+        "SRC-007|p1|SALES / RM (Front Office)|shape9|M3.3|occ1",
+        "SRC-007|p2|Agentic execution|shape18|M2.1|occ1",
+        "SRC-007|p2|Agentic execution|shape284|M1.3|occ2",
+        "SRC-007|p2|Agentic execution|shape284|M1.4|occ3",
+        "SRC-007|p2|Agentic execution|shape284|M1.5|occ4",
+        "SRC-007|p2|Agentic execution|shape292|M3.3|occ3",
+        "SRC-007|p2|Agentic execution|shape292|M3.4|occ4",
+        "SRC-007|p2|CLIENT FULFILMENT / KYC OPS — Human in the Loop|shape280|unnumbered|occ1",
+        "SRC-007|p2|CLIENT FULFILMENT / KYC OPS — Human in the Loop|shape281|unnumbered|occ1"
+      ]
+    },
+    {
+      "scenario_number": "S3",
+      "scenario_id": "SCN-REQUIREMENTS",
+      "guideline_title": "Determine applicable requirements",
+      "current_title": "Determine applicable requirements",
+      "stage": "Determine",
+      "primary": [
+        "M2.1",
+        "M2.2",
+        "M2.3",
+        "M2.4",
+        "M2.5"
+      ],
+      "related": [
+        "M0.4",
+        "M3.3"
+      ],
+      "rationale": "These actions determine AML/KYC and non-AML requirements, consolidate them, adjust them for risk/EDD and issue them to the client. Booking model is an input; clarification may reuse client-request activity.",
+      "guideline_note": "Build one requirements flow: applicability → relief/exemption → consolidation → risk adjustment → issue requirements.",
+      "existing_work_item_ids": [
+        "D3-REQUIREMENTS-01",
+        "D3-REQUIREMENTS-02",
+        "D3-REQUIREMENTS-03",
+        "D3-REQUIREMENTS-04",
+        "D3-REQUIREMENTS-05",
+        "D3-REQUIREMENTS-06"
+      ],
+      "existing_work_item_refs_are_inherited_not_revalidated": true,
+      "existing_source_codes": [
+        "M0.4",
+        "M2.1",
+        "M2.2",
+        "M2.3",
+        "M2.4",
+        "M2.5",
+        "M3.3"
+      ],
+      "primary_without_existing_work_item_anchor": [],
+      "existing_codes_outside_new_primary_related": [],
+      "inherited_occurrence_locators": [
+        "SRC-007|p1|CLIENT FULFILMENT / KYC OPS|shape18|M2.1|occ1",
+        "SRC-007|p1|CLIENT FULFILMENT / KYC OPS|shape18|M2.2|occ2",
+        "SRC-007|p1|CLIENT FULFILMENT / KYC OPS|shape18|M2.3|occ3",
+        "SRC-007|p1|CLIENT FULFILMENT / KYC OPS|shape18|M2.4|occ4",
+        "SRC-007|p1|CLIENT FULFILMENT / KYC OPS|shape291|M2.5|occ1",
+        "SRC-007|p1|CLIENT FULFILMENT / KYC OPS|shape292|M3.3|occ3",
+        "SRC-007|p1|CLIENT FULFILMENT / KYC OPS|shape3|M0.4|occ2",
+        "SRC-007|p1|SALES / RM (Front Office)|shape9|M3.3|occ1",
+        "SRC-007|p2|Agentic execution|shape18|M2.1|occ1",
+        "SRC-007|p2|Agentic execution|shape18|M2.2|occ2",
+        "SRC-007|p2|Agentic execution|shape18|M2.3|occ3",
+        "SRC-007|p2|Agentic execution|shape18|M2.4|occ4",
+        "SRC-007|p2|Agentic execution|shape18|M2.5|occ5",
+        "SRC-007|p2|Agentic execution|shape279|M0.4|occ4",
+        "SRC-007|p2|Agentic execution|shape292|M3.3|occ3"
+      ]
+    },
+    {
+      "scenario_number": "S4",
+      "scenario_id": "SCN-SOURCE",
+      "guideline_title": "Reuse existing evidence",
+      "current_title": "Reuse permitted evidence",
+      "stage": "Determine",
+      "primary": [
+        "M3.1",
+        "M3.5"
+      ],
+      "related": [
+        "M3.2",
+        "M3.4"
+      ],
+      "rationale": "The core is sourcing from public/commercial sources and maintaining sourcing/audit trail. Gap identification and evidence validation support the reuse decision.",
+      "guideline_note": "Focus the Scenario on “what can be reused, for what purpose, with what provenance/currentness”. M3.5 also supports S5/S6, so do not make it exclusive to S4.",
+      "existing_work_item_ids": [
+        "D3-SOURCE-01",
+        "D3-SOURCE-02",
+        "D3-SOURCE-03",
+        "D3-SOURCE-04",
+        "D3-SOURCE-05",
+        "D3-SOURCE-06"
+      ],
+      "existing_work_item_refs_are_inherited_not_revalidated": true,
+      "existing_source_codes": [
+        "M3.1",
+        "M3.2",
+        "M3.4",
+        "M3.5"
+      ],
+      "primary_without_existing_work_item_anchor": [],
+      "existing_codes_outside_new_primary_related": [],
+      "inherited_occurrence_locators": [
+        "SRC-007|p1|CLIENT FULFILMENT / KYC OPS|shape292|M3.1|occ1",
+        "SRC-007|p1|CLIENT FULFILMENT / KYC OPS|shape292|M3.2|occ2",
+        "SRC-007|p1|CLIENT FULFILMENT / KYC OPS|shape292|M3.4|occ4",
+        "SRC-007|p1|CLIENT FULFILMENT / KYC OPS|shape292|M3.5|occ5",
+        "SRC-007|p2|Agentic execution|shape292|M3.1|occ1",
+        "SRC-007|p2|Agentic execution|shape292|M3.2|occ2",
+        "SRC-007|p2|Agentic execution|shape292|M3.4|occ4",
+        "SRC-007|p2|Agentic execution|shape292|M3.5|occ5"
+      ]
+    },
+    {
+      "scenario_number": "S5",
+      "scenario_id": "SCN-GAP",
+      "guideline_title": "Request & submit missing information",
+      "current_title": "Request the specific missing facts",
+      "stage": "Determine",
+      "primary": [
+        "M3.2",
+        "M3.3",
+        "M3.5"
+      ],
+      "related": [
+        "M2.5",
+        "M3.4"
+      ],
+      "rationale": "The Scenario starts from residual gaps, creates client requests and manages outstanding items. Issued requirements feed the request; received evidence hands off into validation.",
+      "guideline_note": "Current flow should show residual gap → request → response/clarification → outstanding status. M3.4 is mainly a handoff to S6.",
+      "existing_work_item_ids": [
+        "D3-GAP-01",
+        "D3-GAP-02",
+        "D3-GAP-03",
+        "D3-GAP-04",
+        "D3-GAP-05",
+        "D3-GAP-06"
+      ],
+      "existing_work_item_refs_are_inherited_not_revalidated": true,
+      "existing_source_codes": [
+        "M2.5",
+        "M3.2",
+        "M3.3",
+        "M3.4",
+        "M3.5"
+      ],
+      "primary_without_existing_work_item_anchor": [],
+      "existing_codes_outside_new_primary_related": [],
+      "inherited_occurrence_locators": [
+        "SRC-007|p1|CLIENT FULFILMENT / KYC OPS|shape291|M2.5|occ1",
+        "SRC-007|p1|CLIENT FULFILMENT / KYC OPS|shape292|M3.2|occ2",
+        "SRC-007|p1|CLIENT FULFILMENT / KYC OPS|shape292|M3.3|occ3",
+        "SRC-007|p1|CLIENT FULFILMENT / KYC OPS|shape292|M3.4|occ4",
+        "SRC-007|p1|CLIENT FULFILMENT / KYC OPS|shape292|M3.5|occ5",
+        "SRC-007|p1|SALES / RM (Front Office)|shape9|M3.3|occ1",
+        "SRC-007|p2|Agentic execution|shape18|M2.5|occ5",
+        "SRC-007|p2|Agentic execution|shape292|M3.2|occ2",
+        "SRC-007|p2|Agentic execution|shape292|M3.3|occ3",
+        "SRC-007|p2|Agentic execution|shape292|M3.4|occ4",
+        "SRC-007|p2|Agentic execution|shape292|M3.5|occ5"
+      ]
+    },
+    {
+      "scenario_number": "S6",
+      "scenario_id": "SCN-VALIDATE",
+      "guideline_title": "Assess evidence for purpose",
+      "current_title": "Assess evidence for its purpose",
+      "stage": "Determine",
+      "primary": [
+        "M3.4",
+        "M3.5"
+      ],
+      "related": [
+        "M3.3"
+      ],
+      "rationale": "The source says capture & validate evidence and manage gaps/audit trail. “Purpose-specific sufficiency” is the design refinement layered on top.",
+      "guideline_note": "Keep “received”, “valid source”, “usable for purpose”, and “sufficient” as distinct states. Mark purpose-specific assessment as design elaboration where not explicit in source wording.",
+      "existing_work_item_ids": [
+        "D3-VALIDATE-01",
+        "D3-VALIDATE-02",
+        "D3-VALIDATE-03",
+        "D3-VALIDATE-04",
+        "D3-VALIDATE-05",
+        "D3-VALIDATE-06"
+      ],
+      "existing_work_item_refs_are_inherited_not_revalidated": true,
+      "existing_source_codes": [
+        "M3.3",
+        "M3.4",
+        "M3.5"
+      ],
+      "primary_without_existing_work_item_anchor": [],
+      "existing_codes_outside_new_primary_related": [],
+      "inherited_occurrence_locators": [
+        "SRC-007|p1|CLIENT FULFILMENT / KYC OPS|shape292|M3.3|occ3",
+        "SRC-007|p1|CLIENT FULFILMENT / KYC OPS|shape292|M3.4|occ4",
+        "SRC-007|p1|CLIENT FULFILMENT / KYC OPS|shape292|M3.5|occ5",
+        "SRC-007|p1|SALES / RM (Front Office)|shape9|M3.3|occ1",
+        "SRC-007|p2|Agentic execution|shape292|M3.3|occ3",
+        "SRC-007|p2|Agentic execution|shape292|M3.4|occ4",
+        "SRC-007|p2|Agentic execution|shape292|M3.5|occ5",
+        "SRC-007|p2|CLIENT FULFILMENT / KYC OPS — Human in the Loop|shape281|unnumbered|occ1",
+        "SRC-007|p2|CLIENT FULFILMENT / KYC OPS — Human in the Loop|shape392|unnumbered|occ1"
+      ]
+    },
+    {
+      "scenario_number": "S7",
+      "scenario_id": "SCN-POPULATION",
+      "guideline_title": "Establish screening population",
+      "current_title": "Define who and what to screen",
+      "stage": "Assess",
+      "primary": [
+        "M4.1",
+        "M4.2",
+        "M4.3",
+        "M4.4"
+      ],
+      "related": [
+        "M4.7"
+      ],
+      "rationale": "These actions cover risk pre-screening, early adverse-media screening, establishing the screening population and comprehensive screening. M4.7 is a downstream result dependency.",
+      "guideline_note": "Do not reduce this Scenario to population setup only. The source scope includes early and comprehensive screening execution.",
+      "existing_work_item_ids": [
+        "D3-POPULATION-01",
+        "D3-POPULATION-02",
+        "D3-POPULATION-03",
+        "D3-POPULATION-04",
+        "D3-POPULATION-05",
+        "D3-POPULATION-06"
+      ],
+      "existing_work_item_refs_are_inherited_not_revalidated": true,
+      "existing_source_codes": [
+        "M4.1",
+        "M4.2",
+        "M4.3",
+        "M4.4",
+        "M4.7"
+      ],
+      "primary_without_existing_work_item_anchor": [],
+      "existing_codes_outside_new_primary_related": [],
+      "inherited_occurrence_locators": [
+        "SRC-007|p1|CLIENT FULFILMENT / KYC OPS|shape296|M4.1|occ1",
+        "SRC-007|p1|CLIENT FULFILMENT / KYC OPS|shape296|M4.2|occ2",
+        "SRC-007|p1|CLIENT FULFILMENT / KYC OPS|shape296|M4.3|occ3",
+        "SRC-007|p1|CLIENT FULFILMENT / KYC OPS|shape296|M4.4|occ4",
+        "SRC-007|p1|FINANCIAL CRIME / RISK / COMPLIANCE|shape177|M4.7|occ2",
+        "SRC-007|p2|Agentic execution|shape296|M4.1|occ1",
+        "SRC-007|p2|Agentic execution|shape296|M4.2|occ2",
+        "SRC-007|p2|Agentic execution|shape296|M4.3|occ3",
+        "SRC-007|p2|Agentic execution|shape296|M4.4|occ4",
+        "SRC-007|p2|Agentic execution|shape296|M4.7|occ7"
+      ]
+    },
+    {
+      "scenario_number": "S8",
+      "scenario_id": "SCN-MATCH",
+      "guideline_title": "Review possible screening match",
+      "current_title": "Review a potential match",
+      "stage": "Assess",
+      "primary": [
+        "M4.5",
+        "M4.6",
+        "M4.7"
+      ],
+      "related": [
+        "M3.3",
+        "M3.4",
+        "M8.1"
+      ],
+      "rationale": "The core flow is adjudicate hits → assess risk/materiality → determine screening outcome. Client clarification/evidence can be reused, and the outcome feeds overall readiness.",
+      "guideline_note": "Build one hit-review flow with evidence/request branches and a clear human-judgement gate. M8.1 is downstream consumption, not another step inside the match review.",
+      "existing_work_item_ids": [
+        "D3-MATCH-01",
+        "D3-MATCH-02",
+        "D3-MATCH-03",
+        "D3-MATCH-04",
+        "D3-MATCH-05",
+        "D3-MATCH-06",
+        "D3-MATCH-07"
+      ],
+      "existing_work_item_refs_are_inherited_not_revalidated": true,
+      "existing_source_codes": [
+        "M3.3",
+        "M3.4",
+        "M4.5",
+        "M4.6",
+        "M4.7",
+        "M8.1"
+      ],
+      "primary_without_existing_work_item_anchor": [],
+      "existing_codes_outside_new_primary_related": [],
+      "inherited_occurrence_locators": [
+        "SRC-007|p1|CLIENT FULFILMENT / KYC OPS|shape292|M3.3|occ3",
+        "SRC-007|p1|CLIENT FULFILMENT / KYC OPS|shape292|M3.4|occ4",
+        "SRC-007|p1|CLIENT FULFILMENT / KYC OPS|shape296|M4.5|occ5",
+        "SRC-007|p1|CLIENT FULFILMENT / KYC OPS|shape65|M8.1|occ1",
+        "SRC-007|p1|FINANCIAL CRIME / RISK / COMPLIANCE|shape177|M4.6|occ1",
+        "SRC-007|p1|FINANCIAL CRIME / RISK / COMPLIANCE|shape177|M4.7|occ2",
+        "SRC-007|p1|SALES / RM (Front Office)|shape9|M3.3|occ1",
+        "SRC-007|p2|Agentic execution|shape292|M3.3|occ3",
+        "SRC-007|p2|Agentic execution|shape292|M3.4|occ4",
+        "SRC-007|p2|Agentic execution|shape296|M4.5|occ5",
+        "SRC-007|p2|Agentic execution|shape296|M4.6|occ6",
+        "SRC-007|p2|Agentic execution|shape296|M4.7|occ7",
+        "SRC-007|p2|Agentic execution|shape65|M8.1|occ1",
+        "SRC-007|p2|CLIENT FULFILMENT / KYC OPS — Human in the Loop|shape376|unnumbered|occ1",
+        "SRC-007|p2|CLIENT FULFILMENT / KYC OPS — Human in the Loop|shape392|unnumbered|occ1",
+        "SRC-007|p2|FINANCIAL CRIME / RISK / COMPLIANCE — Human in the Loop|shape409|unnumbered|occ1"
+      ]
+    },
+    {
+      "scenario_number": "S9",
+      "scenario_id": "SCN-EDD",
+      "guideline_title": "Conduct EDD",
+      "current_title": "Assess enhanced due diligence when applicable",
+      "stage": "Assess",
+      "primary": [
+        "M5.1",
+        "M5.2",
+        "M5.3",
+        "M5.4",
+        "M5.5",
+        "M5.6",
+        "M5.7",
+        "M5.8",
+        "M5.9",
+        "M5.10"
+      ],
+      "related": [
+        "M2.4"
+      ],
+      "rationale": "The source covers initiation, assignment, evidence pack, risk-factor assessment, gap closure, specialist consultation, outcome/conditions, approvals and handoff. Target also makes human judgement/approval explicit in M5.9/M5.10.",
+      "guideline_note": "Build one EDD lifecycle. Do not interpret Target-only M5.9/M5.10 as proof that judgement did not exist in Current; treat them as explicit target decomposition until validated.",
+      "existing_work_item_ids": [
+        "D3-EDD-01",
+        "D3-EDD-02",
+        "D3-EDD-03",
+        "D3-EDD-04",
+        "D3-EDD-05",
+        "D3-EDD-06",
+        "D3-EDD-07",
+        "D3-EDD-08"
+      ],
+      "existing_work_item_refs_are_inherited_not_revalidated": true,
+      "existing_source_codes": [
+        "M2.4",
+        "M5.1",
+        "M5.10",
+        "M5.2",
+        "M5.3",
+        "M5.4",
+        "M5.5",
+        "M5.6",
+        "M5.7",
+        "M5.8",
+        "M5.9"
+      ],
+      "primary_without_existing_work_item_anchor": [],
+      "existing_codes_outside_new_primary_related": [],
+      "inherited_occurrence_locators": [
+        "SRC-007|p1|CLIENT FULFILMENT / KYC OPS|shape18|M2.4|occ4",
+        "SRC-007|p1|FINANCIAL CRIME / RISK / COMPLIANCE|shape297|M5.1|occ1",
+        "SRC-007|p1|FINANCIAL CRIME / RISK / COMPLIANCE|shape297|M5.2|occ2",
+        "SRC-007|p1|FINANCIAL CRIME / RISK / COMPLIANCE|shape297|M5.3|occ3",
+        "SRC-007|p1|FINANCIAL CRIME / RISK / COMPLIANCE|shape297|M5.4|occ4",
+        "SRC-007|p1|FINANCIAL CRIME / RISK / COMPLIANCE|shape297|M5.5|occ5",
+        "SRC-007|p1|FINANCIAL CRIME / RISK / COMPLIANCE|shape297|M5.6|occ6",
+        "SRC-007|p1|FINANCIAL CRIME / RISK / COMPLIANCE|shape297|M5.7|occ7",
+        "SRC-007|p1|FINANCIAL CRIME / RISK / COMPLIANCE|shape297|M5.8|occ8",
+        "SRC-007|p2|Agentic execution|shape18|M2.4|occ4",
+        "SRC-007|p2|Agentic execution|shape297|M5.1|occ1",
+        "SRC-007|p2|Agentic execution|shape297|M5.2|occ2",
+        "SRC-007|p2|Agentic execution|shape297|M5.3|occ3",
+        "SRC-007|p2|Agentic execution|shape297|M5.4|occ4",
+        "SRC-007|p2|Agentic execution|shape297|M5.5|occ5",
+        "SRC-007|p2|Agentic execution|shape297|M5.6|occ6",
+        "SRC-007|p2|Agentic execution|shape297|M5.7|occ7",
+        "SRC-007|p2|Agentic execution|shape297|M5.8|occ8",
+        "SRC-007|p2|CLIENT FULFILMENT / KYC OPS — Human in the Loop|shape392|unnumbered|occ1",
+        "SRC-007|p2|FINANCIAL CRIME / RISK / COMPLIANCE — Human in the Loop|shape410|M5.10|occ2",
+        "SRC-007|p2|FINANCIAL CRIME / RISK / COMPLIANCE — Human in the Loop|shape410|M5.9|occ1"
+      ]
+    },
+    {
+      "scenario_number": "S10",
+      "scenario_id": "SCN-CONFLICTS",
+      "guideline_title": "Conduct conflicts review",
+      "current_title": "Investigate conflicts early",
+      "stage": "Resolve",
+      "primary": [
+        "M7.1",
+        "M7.2",
+        "M7.3",
+        "M7.4",
+        "M7.5",
+        "M7.6",
+        "M7.7"
+      ],
+      "related": [
+        "M1.1"
+      ],
+      "rationale": "The core is initiating the check, performing searches, investigating potential conflicts, escalation, confirming and recording outcome. M1.1 can provide early information for starting the check.",
+      "guideline_note": "Show the review as potentially early/parallel. Do not place it late just because M7 numbering is high.",
+      "existing_work_item_ids": [
+        "D3-CONFLICTS-01",
+        "D3-CONFLICTS-02",
+        "D3-CONFLICTS-03",
+        "D3-CONFLICTS-04",
+        "D3-CONFLICTS-05"
+      ],
+      "existing_work_item_refs_are_inherited_not_revalidated": true,
+      "existing_source_codes": [
+        "M1.1",
+        "M7.1",
+        "M7.2",
+        "M7.3",
+        "M7.4",
+        "M7.5",
+        "M7.6",
+        "M7.7"
+      ],
+      "primary_without_existing_work_item_anchor": [],
+      "existing_codes_outside_new_primary_related": [],
+      "inherited_occurrence_locators": [
+        "SRC-007|p1|RMG CONTROL ROOM|shape312|M7.1|occ1",
+        "SRC-007|p1|RMG CONTROL ROOM|shape312|M7.2|occ2",
+        "SRC-007|p1|RMG CONTROL ROOM|shape312|M7.3|occ3",
+        "SRC-007|p1|RMG CONTROL ROOM|shape312|M7.4|occ4",
+        "SRC-007|p1|SALES / RM (Front Office)|shape20|M1.1|occ1",
+        "SRC-007|p2|Agentic execution|shape312|M7.1|occ1",
+        "SRC-007|p2|Agentic execution|shape312|M7.2|occ2",
+        "SRC-007|p2|Agentic execution|shape312|M7.3|occ3",
+        "SRC-007|p2|Agentic execution|shape312|M7.4|occ4",
+        "SRC-007|p2|RMG CONTROL ROOM — Human in the Loop|shape311|M7.5|occ1",
+        "SRC-007|p2|RMG CONTROL ROOM — Human in the Loop|shape311|M7.6|occ2",
+        "SRC-007|p2|RMG CONTROL ROOM — Human in the Loop|shape311|M7.7|occ3",
+        "SRC-007|p2|SALES / RM (Front Office)|shape20|M1.1|occ1"
+      ]
+    },
+    {
+      "scenario_number": "S11",
+      "scenario_id": "SCN-CREDIT",
+      "guideline_title": "Assess Credit & conditions",
+      "current_title": "Assess credit risk and conditions",
+      "stage": "Resolve",
+      "primary": [
+        "C2.1",
+        "C2.2",
+        "C2.3",
+        "C2.4",
+        "C2.5",
+        "C2.6",
+        "C2.7"
+      ],
+      "related": [
+        "C1.4",
+        "C1.6"
+      ],
+      "rationale": "These actions determine Credit applicability, gather exposure/financial data, assess risk, set limits/conditions, obtain approval and hand data/results to Legal. Legal consumes Credit inputs.",
+      "guideline_note": "Keep Credit decision, conditions, fulfilment and final agreement check distinct. Target strike-through formatting does not by itself mean those activities are removed.",
+      "existing_work_item_ids": [
+        "D3-CREDIT-01",
+        "D3-CREDIT-02",
+        "D3-CREDIT-03",
+        "D3-CREDIT-04",
+        "D3-CREDIT-05",
+        "D3-CREDIT-06",
+        "D3-CREDIT-07"
+      ],
+      "existing_work_item_refs_are_inherited_not_revalidated": true,
+      "existing_source_codes": [
+        "C1.4",
+        "C1.6",
+        "C2.1",
+        "C2.2",
+        "C2.3",
+        "C2.4",
+        "C2.5",
+        "C2.6",
+        "C2.7"
+      ],
+      "primary_without_existing_work_item_anchor": [],
+      "existing_codes_outside_new_primary_related": [],
+      "inherited_occurrence_locators": [
+        "SRC-007|p1|CGM LEGAL|shape336|C1.4|occ1",
+        "SRC-007|p1|CGM LEGAL|shape340|C1.6|occ1",
+        "SRC-007|p1|CREDIT|shape316|C2.1|occ1",
+        "SRC-007|p1|CREDIT|shape318|C2.2|occ1",
+        "SRC-007|p1|CREDIT|shape320|C2.3|occ1",
+        "SRC-007|p1|CREDIT|shape322|C2.4|occ1",
+        "SRC-007|p1|CREDIT|shape324|C2.5|occ1",
+        "SRC-007|p1|CREDIT|shape326|C2.6|occ1",
+        "SRC-007|p1|CREDIT|shape328|C2.7|occ1",
+        "SRC-007|p2|CGM LEGAL|shape336|C1.4|occ1",
+        "SRC-007|p2|CGM LEGAL|shape340|C1.6|occ1",
+        "SRC-007|p2|CREDIT|shape316|C2.1|occ1",
+        "SRC-007|p2|CREDIT|shape318|C2.2|occ1",
+        "SRC-007|p2|CREDIT|shape320|C2.3|occ1",
+        "SRC-007|p2|CREDIT|shape322|C2.4|occ1",
+        "SRC-007|p2|CREDIT|shape324|C2.5|occ1",
+        "SRC-007|p2|CREDIT|shape326|C2.6|occ1",
+        "SRC-007|p2|CREDIT|shape328|C2.7|occ1"
+      ]
+    },
+    {
+      "scenario_number": "S12",
+      "scenario_id": "SCN-LEGAL",
+      "guideline_title": "Manage Legal agreements & conditions",
+      "current_title": "Prepare and review agreements",
+      "stage": "Resolve",
+      "primary": [
+        "C1.1",
+        "C1.2",
+        "C1.3",
+        "C1.4",
+        "C1.5",
+        "C1.6",
+        "C1.7",
+        "C1.8"
+      ],
+      "related": [
+        "C2.6",
+        "C2.7"
+      ],
+      "rationale": "The Legal flow covers request intake, agreement/form selection, draft/review, Credit input incorporation, negotiation, approvals, execution and storage of terms/documents. Credit provides named inputs and review points.",
+      "guideline_note": "Do not force the whole Legal flow to wait serially for Credit. Model C2.6/C2.7 as dependencies/handoffs where applicable.",
+      "existing_work_item_ids": [
+        "D3-LEGAL-01",
+        "D3-LEGAL-02",
+        "D3-LEGAL-03",
+        "D3-LEGAL-04",
+        "D3-LEGAL-05",
+        "D3-LEGAL-06",
+        "D3-LEGAL-07",
+        "D3-LEGAL-08"
+      ],
+      "existing_work_item_refs_are_inherited_not_revalidated": true,
+      "existing_source_codes": [
+        "C1.1",
+        "C1.2",
+        "C1.3",
+        "C1.4",
+        "C1.5",
+        "C1.6",
+        "C1.7",
+        "C1.8",
+        "C2.6",
+        "C2.7"
+      ],
+      "primary_without_existing_work_item_anchor": [],
+      "existing_codes_outside_new_primary_related": [],
+      "inherited_occurrence_locators": [
+        "SRC-007|p1|CGM LEGAL|shape330|C1.1|occ1",
+        "SRC-007|p1|CGM LEGAL|shape332|C1.2|occ1",
+        "SRC-007|p1|CGM LEGAL|shape334|C1.3|occ1",
+        "SRC-007|p1|CGM LEGAL|shape336|C1.4|occ1",
+        "SRC-007|p1|CGM LEGAL|shape338|C1.5|occ1",
+        "SRC-007|p1|CGM LEGAL|shape340|C1.6|occ1",
+        "SRC-007|p1|CGM LEGAL|shape342|C1.7|occ1",
+        "SRC-007|p1|CGM LEGAL|shape344|C1.8|occ1",
+        "SRC-007|p1|CREDIT|shape326|C2.6|occ1",
+        "SRC-007|p1|CREDIT|shape328|C2.7|occ1",
+        "SRC-007|p2|CGM LEGAL|shape330|C1.1|occ1",
+        "SRC-007|p2|CGM LEGAL|shape332|C1.2|occ1",
+        "SRC-007|p2|CGM LEGAL|shape334|C1.3|occ1",
+        "SRC-007|p2|CGM LEGAL|shape336|C1.4|occ1",
+        "SRC-007|p2|CGM LEGAL|shape338|C1.5|occ1",
+        "SRC-007|p2|CGM LEGAL|shape340|C1.6|occ1",
+        "SRC-007|p2|CGM LEGAL|shape342|C1.7|occ1",
+        "SRC-007|p2|CGM LEGAL|shape344|C1.8|occ1",
+        "SRC-007|p2|CREDIT|shape326|C2.6|occ1",
+        "SRC-007|p2|CREDIT|shape328|C2.7|occ1"
+      ]
+    },
+    {
+      "scenario_number": "S13",
+      "scenario_id": "SCN-QA",
+      "guideline_title": "QA review",
+      "current_title": "Remediate a precise finding",
+      "stage": "Resolve",
+      "primary": [
+        "M6.1",
+        "M6.2",
+        "M6.3",
+        "M6.4",
+        "M6.5",
+        "M6.6",
+        "M6.7",
+        "M6.8"
+      ],
+      "related": [],
+      "rationale": "The source provides a complete QA lifecycle: applicable requirements, completeness, source validation, evidence sufficiency, screening/EDD cross-check, gap issue, remediation re-review and sign-off.",
+      "guideline_note": "Preserve the full loop. The simplified Scenario name “QA review” must not remove remediation/re-review.",
+      "existing_work_item_ids": [
+        "D3-QA-01",
+        "D3-QA-02",
+        "D3-QA-03",
+        "D3-QA-04",
+        "D3-QA-05",
+        "D3-QA-06",
+        "D3-QA-07",
+        "D3-QA-08"
+      ],
+      "existing_work_item_refs_are_inherited_not_revalidated": true,
+      "existing_source_codes": [
+        "M6.1",
+        "M6.2",
+        "M6.3",
+        "M6.4",
+        "M6.5",
+        "M6.6",
+        "M6.7",
+        "M6.8"
+      ],
+      "primary_without_existing_work_item_anchor": [],
+      "existing_codes_outside_new_primary_related": [],
+      "inherited_occurrence_locators": [
+        "SRC-007|p1|QA TEAM (explicit label inside source block)|shape298|M6.1|occ1",
+        "SRC-007|p1|QA TEAM (explicit label inside source block)|shape298|M6.2|occ2",
+        "SRC-007|p1|QA TEAM (explicit label inside source block)|shape298|M6.3|occ3",
+        "SRC-007|p1|QA TEAM (explicit label inside source block)|shape298|M6.4|occ4",
+        "SRC-007|p1|QA TEAM (explicit label inside source block)|shape298|M6.5|occ5",
+        "SRC-007|p1|QA TEAM (explicit label inside source block)|shape298|M6.6|occ6",
+        "SRC-007|p1|QA TEAM (explicit label inside source block)|shape298|M6.7|occ7",
+        "SRC-007|p1|QA TEAM (explicit label inside source block)|shape298|M6.8|occ8",
+        "SRC-007|p2|Agentic execution|shape298|M6.1|occ1",
+        "SRC-007|p2|Agentic execution|shape298|M6.2|occ2",
+        "SRC-007|p2|Agentic execution|shape298|M6.3|occ3",
+        "SRC-007|p2|Agentic execution|shape298|M6.4|occ4",
+        "SRC-007|p2|Agentic execution|shape298|M6.5|occ5",
+        "SRC-007|p2|Agentic execution|shape298|M6.6|occ6",
+        "SRC-007|p2|Agentic execution|shape298|M6.7|occ7",
+        "SRC-007|p2|Agentic execution|shape298|M6.8|occ8"
+      ]
+    },
+    {
+      "scenario_number": "S14",
+      "scenario_id": "SCN-READINESS",
+      "guideline_title": "Aggregate readiness conditions",
+      "current_title": "Understand open prerequisites",
+      "stage": "Clear",
+      "primary": [
+        "M8.1"
+      ],
+      "related": [
+        "M6.1",
+        "M8.3"
+      ],
+      "rationale": "M8.1 is the main readiness aggregation action. QA applicability is an input and M8.3 is the authorised confirmation boundary that follows readiness.",
+      "guideline_note": "Treat S14 as “are all prerequisites truly satisfied?” not “clear-to-trade already published”. Ready ≠ authorised confirmation.",
+      "existing_work_item_ids": [
+        "D3-READINESS-01",
+        "D3-READINESS-02",
+        "D3-READINESS-03",
+        "D3-READINESS-04",
+        "D3-READINESS-05"
+      ],
+      "existing_work_item_refs_are_inherited_not_revalidated": true,
+      "existing_source_codes": [
+        "M6.1",
+        "M8.1",
+        "M8.3"
+      ],
+      "primary_without_existing_work_item_anchor": [],
+      "existing_codes_outside_new_primary_related": [],
+      "inherited_occurrence_locators": [
+        "SRC-007|p1|CLIENT FULFILMENT / KYC OPS|shape65|M8.1|occ1",
+        "SRC-007|p1|CLIENT FULFILMENT / KYC OPS|shape65|M8.3|occ3",
+        "SRC-007|p1|QA TEAM (explicit label inside source block)|shape298|M6.1|occ1",
+        "SRC-007|p2|Agentic execution|shape298|M6.1|occ1",
+        "SRC-007|p2|Agentic execution|shape65|M8.1|occ1",
+        "SRC-007|p2|Agentic execution|shape65|M8.3|occ3"
+      ]
+    },
+    {
+      "scenario_number": "S15",
+      "scenario_id": "SCN-PUBLISH",
+      "guideline_title": "Confirm & publish outcome",
+      "current_title": "Record and communicate a scoped outcome",
+      "stage": "Clear",
+      "primary": [
+        "M8.2",
+        "M8.3",
+        "M8.4",
+        "M8.5"
+      ],
+      "related": [],
+      "rationale": "The source covers case finalisation, confirmation/recording of cleared-to-trade status, clearance timestamp and communication outcome.",
+      "guideline_note": "Keep decision, recording, timestamp, downstream publication and communication as separate semantics. Do not trigger these from navigation or demo playback.",
+      "existing_work_item_ids": [
+        "D3-PUBLISH-01",
+        "D3-PUBLISH-02",
+        "D3-PUBLISH-03",
+        "D3-PUBLISH-04",
+        "D3-PUBLISH-05"
+      ],
+      "existing_work_item_refs_are_inherited_not_revalidated": true,
+      "existing_source_codes": [
+        "M8.2",
+        "M8.3",
+        "M8.4",
+        "M8.5"
+      ],
+      "primary_without_existing_work_item_anchor": [],
+      "existing_codes_outside_new_primary_related": [],
+      "inherited_occurrence_locators": [
+        "SRC-007|p1|CLIENT FULFILMENT / KYC OPS|shape65|M8.2|occ2",
+        "SRC-007|p1|CLIENT FULFILMENT / KYC OPS|shape65|M8.3|occ3",
+        "SRC-007|p1|CLIENT FULFILMENT / KYC OPS|shape65|M8.4|occ4",
+        "SRC-007|p1|SALES / RM (Front Office)|shape289|M8.5|occ1",
+        "SRC-007|p2|Agentic execution|shape65|M8.2|occ2",
+        "SRC-007|p2|Agentic execution|shape65|M8.3|occ3",
+        "SRC-007|p2|Agentic execution|shape65|M8.4|occ4",
+        "SRC-007|p2|SALES / RM (Front Office)|shape289|M8.5|occ1"
+      ]
+    }
+  ]
+}

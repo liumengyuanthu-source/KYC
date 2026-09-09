@@ -2,6 +2,12 @@
 
 Christina 于 2026-09-09 指定 Xiaoming 今日更新版为后续主流程。开发分支为 `codex/xiaoming-main-flow-20260909`。
 
+## Scenario 映射纲领 · 2026-09-09 补充
+
+后续 Scenario ↔ M/C steps 映射依据用户指定的 [Scenario Template ↔ Source Process Mapping](docs/scenario-mapping/Clear_to_Trade_Scenario_to_Source_Process_Mapping_for_Codex.md)。15 个 Scenario 为工作坊容器，71 个 M/C 来源编号为追溯层；Primary 与 Related 分开处理。
+
+已完成 [映射与交互分析](docs/scenario-mapping/interaction-analysis.md)、[逐来源动作映射表](docs/scenario-mapping/scenario-source-steps.csv) 和 [结构化映射](docs/scenario-mapping/scenario-source-mapping.json)。分析包括现有弹窗内容位置、进入九模块 Scenario Template 的建议路径及现有 M0.1 模板的接入差距；页面接线尚未实现。
+
 ## 来源与范围
 
 完整导入 `AU_Bank_update.zip` 的 `prototype/` 与 `08_inspire/`，保留原始文件内容和相对路径，恢复 ZIP 内中文文件名，仅排除 macOS 元数据。`prototype/studio-next/` 是新版 CJ / Hero case 的主要开发位置。
