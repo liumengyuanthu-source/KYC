@@ -7,6 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Roboto+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="portal-theme.css?v=20260909-2">
 </head>
 <body data-page="documents">
 <div class="frame">
@@ -17,8 +18,8 @@
       <input type="text" placeholder="Search documents…">
     </div>
     <div class="topbar-spacer"></div>
-    <button class="icon-btn" onclick="toast('2 new updates from Aria')"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#54453f" stroke-width="1.8" stroke-linecap="round"><path d="M18 8a6 6 0 1 0-12 0c0 7-3 8-3 8h18s-3-1-3-8"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/></svg><span class="dot"></span></button>
-    <div class="avatar">AB</div>
+    <button class="icon-btn" aria-label="Notifications" onclick="toast('2 new updates from Aria')"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#54453f" stroke-width="1.8" stroke-linecap="round"><path d="M18 8a6 6 0 1 0-12 0c0 7-3 8-3 8h18s-3-1-3-8"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/></svg><span class="dot"></span></button>
+    <div class="portal-profile" title="Person T · Client contributor"><span class="avatar">PT</span><span class="profile-copy">Person T<small>Client contributor</small></span></div>
   </header>
 
   <div class="shell">
@@ -195,6 +196,6 @@
   </div>
 </div>
 
-<script src="app.js"></script>
+<script src="app.js?v=portal-20260909"></script>
 </body>
 </html>

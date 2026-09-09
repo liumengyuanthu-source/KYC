@@ -144,7 +144,7 @@
       if (!body.dataset.seeded) {
         body.dataset.seeded = "1";
         const hello = {
-          home: "Hi Annette — I'm Aria, orchestrating your clear-to-trade cases. Ask me about status, what's blocking, or what I need from you next.",
+          home: "Hi Person T — I'm Aria, orchestrating your clear-to-trade cases. Ask me about status, what's blocking, or what I need from you next.",
           intake: "I'll guide you through this request. I auto-fill what I can and only ask for what the booking model and risk rules actually require.",
           case: "You're looking at the live execution state of case OB-2026-0147. Ask me why anything is waiting, or what's running in parallel.",
           documents: "I source documents from registries and data providers first — uploads are the last resort. Ask me about any row.",

@@ -11,8 +11,8 @@
   let taskOwner='you';
   function renderTasks(){
     const tasks=[
-      {owner:state.submittedAt?'bank':'you',title:state.submittedAt?'Review the funds & wealth explanation':'Review and complete the funds & wealth explanation',caseName:'Meridian · OB-2026-0147',role:state.submittedAt?'KYC / EDD reviewer':'You · Information provider',detail:state.submittedAt?'Response received. Check evidence sufficiency before the EDD handoff.':'Aria has prepared the questions. Check the context and supply the missing facts.',label:state.submittedAt?'View submitted response':'Review request',action:'explanation'},
-      {owner:'you',title:'Check and upload the certified director register',caseName:'Meridian · OB-2026-0147',role:'You · Document provider',detail:'Check that the copy is certified and matches the applicant. Bank acceptance follows upload.',label:'Review document request',href:'documents.html'},
+      {owner:state.submittedAt?'bank':'you',title:state.submittedAt?'Review the funds & wealth explanation':'Review and complete the funds & wealth explanation',caseName:'Meridian · OB-2026-0147',role:state.submittedAt?'KYC / EDD reviewer':'Person T · Information provider',detail:state.submittedAt?'Response received. Check evidence sufficiency before the EDD handoff.':'Aria has prepared the questions. Check the context and supply the missing facts.',label:state.submittedAt?'View submitted response':'Review request',action:'explanation'},
+      {owner:'you',title:'Check and upload the certified director register',caseName:'Meridian · OB-2026-0147',role:'Person T · Document provider',detail:'Check that the copy is certified and matches the applicant. Bank acceptance follows upload.',label:'Review document request',href:'documents.html'},
       {owner:'bank',title:'Assess source-of-wealth evidence',caseName:'Harbourview · DEMO-EDD-002',role:'EDD / Financial Crime specialist',detail:'Compare the submitted business-sale evidence with the declared wealth explanation. Sufficiency remains undecided.',label:'View review context',href:'request.html?case=DEMO-EDD-002'}
     ];
     const yours=tasks.filter(task=>task.owner==='you').length;
