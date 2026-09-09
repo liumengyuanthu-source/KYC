@@ -52,7 +52,7 @@ test('M0.1 preview source data retains separate Target occurrences and the ambig
 });
 
 
-test('S1 opens the existing M0.1 sample in a separate tab under root and GitHub project paths', () => {
+test('S1 opens the M0.1 Version 2 Summary in a separate tab under root and GitHub project paths', () => {
   const html = scenarioCtaHtml('SCN-SCOPE');
   assert.match(html, /^<a /);
   assert.match(html, /target="_blank"/);
@@ -61,11 +61,15 @@ test('S1 opens the existing M0.1 sample in a separate tab under root and GitHub 
   for (const prefix of ['', '/KYC']) {
     for (const view of ['target', 'hero']) {
       const destination = new URL(href, `https://example.com${prefix}/prototype/studio-next/${view}-journey.html`);
-      assert.equal(destination.pathname, `${prefix}/prototype/scenario-samples/m0-1/index.html`);
+      assert.equal(destination.pathname, `${prefix}/prototype/scenario-samples/m0-1-v2/index.html`);
+      assert.equal(destination.hash, '#6');
     }
   }
   const sample = readFileSync(new URL(href, new URL('../studio-next/target-journey.html', import.meta.url)), 'utf8');
   assert.match(sample, /Scenario M0\.1 - Sales location &amp; booking entity/);
+  assert.match(sample, /Version 2/);
+  assert.match(sample, /version-2\.css/);
+  assert.match(sample, /tobe-workflow\.js/);
 });
 
 test('unimplemented workshops keep their own scenario detail instead of opening the S1 sample', () => {

@@ -20,7 +20,7 @@ export function scenariosForNode(nodeId) {
 }
 const esc = value => String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 
-// S1 currently opens the approved M0.1 workshop sample. Other scenarios retain
+// S1 currently opens the approved M0.1 Version 2 workshop sample. Other scenarios retain
 // their existing detail until their own workshop templates are available.
 export function scenarioCtaHtml(id) {
   const scenario = scenarioMappings.find(s => s.id === id);
@@ -28,7 +28,7 @@ export function scenarioCtaHtml(id) {
   const attrs = `class="jsp-cta" data-scenario-id="${id}" aria-label="View scenario detail: ${esc(scenario.number)} · ${esc(scenario.title)}"`;
   const label = '<span>View scenario detail</span><span aria-hidden="true">↗</span>';
   return id === 'SCN-SCOPE'
-    ? `<a ${attrs} href="../scenario-samples/m0-1/index.html" target="_blank" rel="noopener noreferrer">${label}</a>`
+    ? `<a ${attrs} href="../scenario-samples/m0-1-v2/index.html#6" target="_blank" rel="noopener noreferrer">${label}</a>`
     : `<button type="button" ${attrs}><span>View scenario detail</span><span aria-hidden="true">→</span></button>`;
 }
 

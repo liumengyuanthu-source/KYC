@@ -3,21 +3,22 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Clear-to-Trade · Scenario Studio — M0.1</title>
+<title>Scenario Template Version 2 · Clear-to-Trade — M0.1</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="version-2.css">
 </head>
 <body>
 <div class="window" id="window">
 
   <!-- window chrome -->
   <div class="chrome">
-    <div class="dots"><span></span><span></span><span></span></div>
+    <div class="brand-mark" aria-hidden="true">CT</div>
     <div class="chrome-title">
       <svg viewBox="0 0 24 24" class="ic"><path d="M12 2l7 4v6c0 5-3.5 8.5-7 10-3.5-1.5-7-5-7-10V6l7-4z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M8.5 12l2.5 2.5 4.5-5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      Clear-to-Trade · Scenario Studio
+      <span>Clear-to-Trade · Scenario Studio<small>Scenario Template · Version 2</small></span>
     </div>
     <div class="chrome-right">
       <span class="save-state" id="saveState">All drafts saved locally</span>
@@ -35,6 +36,7 @@
       <header class="masthead">
         <div class="masthead-top">
           <div class="scenario-heading">
+            <span class="scenario-kicker">NEW INSTITUTIONAL RELATIONSHIP · WORKSHOP</span>
             <h1 id="moduleTitle">Scenario M0.1 - Sales location &amp; booking entity</h1>
             <p class="module-sub" id="moduleSub"><b class="objective-label">Objective</b> Determine the appropriate sales location, reporting context and booking entity for Entity A’s onboarding request, using supported relationship, product and jurisdiction information; identify unresolved questions and any human decisions needed before downstream handoff.</p>
           </div>
@@ -86,6 +88,7 @@
 <div id="printArea" class="print-area"></div>
 
 <script src="before-workflow.js"></script>
+<script src="tobe-workflow.js"></script>
 <script src="discussion-summary.js"></script>
 <script src="app.js"></script>
 </body>

@@ -23,8 +23,8 @@ Local verification: three packaging tests and twelve scenario-mapping tests pass
 
 Status: prepared locally; not uploaded to GitHub or published to Pages. See [deployment instructions](DEPLOYMENT.md).
 
-## S1 workshop sample
+## S1 workshop sample — Version 2
 
-The nine runtime files from `experiments/kimi-scenario-template-r01/app` were copied unchanged into `prototype/scenario-samples/m0-1/`. The sample retains its M0.1 title and content; converting it into the full Scenario 1 template is deferred. Its relative URLs work under a GitHub project path.
+S1 opens the user-selected Version 2 at its Summary step (`#6`) in a separate tab. Runtime files from `scenario-template-versions/version-2/app` are copied unchanged into `prototype/scenario-samples/m0-1-v2/`, including its V2 stylesheet, local hero image, To-be viewers and eleven-row Summary mapping. Browser drafts use the original V2 storage namespace. The previous V1 copy is replaced; the source versions remain untouched.
 
-Verification: twelve mapping/link tests and three packaging tests passed. Chrome opened the sample in a new tab from the built `/KYC/` path; S2 retained its own detail. The in-app browser did not create a tab during the automated click test, so the sample was opened separately for preview.
+The sample retains its M0.1 title and content; converting it into the full Scenario 1 template is deferred. Relative URLs support GitHub project paths.

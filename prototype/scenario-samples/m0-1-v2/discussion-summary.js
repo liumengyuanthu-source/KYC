@@ -53,12 +53,27 @@ function discussionCoverage(){
 function sourceRecordHTML(r){
  return `<div class="summary-source"><span class="summary-status">${esc(r.status)}</span> <small>${esc(r.id)} · ${esc(r.title)}</small>${hasText(r.comment)?`<p class="source-comment">${esc(r.comment)}</p>`:''}</div>`;
 }
-function mappingSummaryHTML(model){
- if(!model.rows.length)return '<p class="summary-empty">No discussion recorded yet. Review a Before action, To-be action, situation or hypothesis to build this mapping.</p>';
- return `<div class="summary-map-scroll"><table class="map-tbl"><thead><tr><th>Before / pain</th><th>Proposed To-be / Human boundary</th><th>Discussion &amp; source</th></tr></thead><tbody>${model.rows.map(r=>`<tr data-summary-row="${r.step}">
- <td><b>${r.step} · ${esc(r.before.t)}</b><p>${esc(r.pain)}</p></td>
- <td><b>${esc(r.target.t)}</b><p>${esc(r.target.fn)}</p><small>Human boundary: ${esc(r.target.gate)}</small></td>
- <td>${r.records.map(sourceRecordHTML).join('')}</td></tr>`).join('')}</tbody></table></div>`;
+// Reader preferences only; preserve existing bN / tN review IDs and coverage slots.
+let summaryMappingView='all';
+const summaryReviewTargets={};
+function summaryMappingRows(model){
+ return MAPPING.map((cells,i)=>({id:i===10?'handoff':String(i+1),step:Math.min(i+1,10),cells,
+  records:model.records.filter(r=>r.steps.includes(Math.min(i+1,10)))}));
+}
+function mappingReviewStatus(row){
+ return row.records.length?'Discussion recorded · see source status':'Unreviewed — to validate';
+}
+function mappingReviewControls(row){
+ const id=summaryReviewTargets[row.id]||'b'+row.step;
+ return `<label class="mapping-review-label">Review scope<select data-summary-review-target="${row.id}" aria-label="Review scope for ${row.id==='handoff'?'downstream handoff':'step '+row.step}"><option value="b${row.step}" ${id==='b'+row.step?'selected':''}>Before / pain</option><option value="t${row.step}" ${id==='t'+row.step?'selected':''}>To-be proposal</option></select></label>
+ ${row.id==='handoff'?'<small class="mapping-shared-note">Shared with Step 10 · no separate approval</small>':''}${actsHTML(id)}`;
+}
+function mappingSummaryHTML(model,{interactive=false}={}){
+ const rows=summaryMappingRows(model);
+ return `<div class="summary-map-scroll" tabindex="0" role="region" aria-label="Before to To-be mapping and discussion"><table class="map-tbl mapping-review"><thead><tr><th scope="col">Before</th><th scope="col">Pain</th><th scope="col">To-be Agentic Response</th><th scope="col">Human Gate</th><th scope="col">Discussion</th></tr></thead><tbody>${rows.map(r=>`<tr data-mapping-row="${r.id}" ${r.id!=='handoff'&&r.records.length?`data-summary-row="${r.step}"`:''} ${interactive&&summaryMappingView==='discussed'&&!r.records.length?'hidden':''}>
+ ${r.cells.map((text,i)=>`<td class="mapping-${['before','pain','target','human'][i]}">${i===0?`<small class="mapping-step">${r.id==='handoff'?'Step 10 · downstream handoff':'Step '+r.step}</small>`:''}${esc(text)}</td>`).join('')}
+ <td class="review-discussion"><span class="mapping-status">${mappingReviewStatus(r)}</span>${interactive?mappingReviewControls(r):''}<div class="mapping-sources">${r.records.map(sourceRecordHTML).join('')}</div></td></tr>`).join('')}</tbody></table></div>
+ ${interactive?`<p class="summary-empty mapping-filter-empty" ${summaryMappingView!=='discussed'||model.rows.length?'hidden':''}>No discussed mappings yet. Choose All mappings to start a review.</p>`:''}`;
 }
 function bundleSummaryHTML(model,interactive=true){
  if(!model.features.length)return '<p class="summary-empty">No feature suggestions yet. The bundle will grow from relevant discussion; nothing is preselected.</p>';

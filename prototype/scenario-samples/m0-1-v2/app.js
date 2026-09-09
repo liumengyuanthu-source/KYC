@@ -325,7 +325,7 @@ const CMP = [
 /* ============================================================
    state
    ============================================================ */
-const LS_KEY = 'ctt-m01-studio-v1';
+const LS_KEY = 'ctt-m01-studio-v2';
 const blank = {
   step:0, done:{}, notes:{}, actions:{}, hypo:{}, gates:{},
   bundle:{}, summary:{status:'',trans:[],target:'',note:''},
@@ -427,8 +427,9 @@ function bindActs(root){
       host.replaceWith(tmp.firstElementChild);
     });
     bindActs(document);
-    if(inlineComment)document.querySelector(`#module input[data-cid="${id}"]`)?.focus();
+    if(inlineComment)inlineComment.querySelector(`input[data-cid="${id}"]`)?.focus();
     renderActivity();
+    if(S.step===5)refreshSummaryDiscussion();
     });
   });
   root.querySelectorAll('input[data-cid]').forEach(inp=>{
@@ -437,6 +438,8 @@ function bindActs(root){
     inp.addEventListener('input',()=>{
     const id=inp.dataset.cid; const a=S.actions[id]||{};
     a.comment=inp.value; S.actions[id]=a; save(); renderActivity();
+    document.querySelectorAll(`input[data-cid="${id}"]`).forEach(other=>{if(other!==inp)other.value=inp.value;});
+    if(S.step===5)refreshSummaryDiscussion();
     });
   });
 }
@@ -621,6 +624,7 @@ function renderContext(m){
    Module 2 — Before / Current Process
    ============================================================ */
 let beforeWorkflowCleanup=null;
+let tobeWorkflowCleanup=null;
 function flagChip(f){
   if(f==='handoff')return '<span class="flag flag-handoff">Cross-region handoff</span>';
   if(f==='wait')return '<span class="flag flag-wait">Wait</span>';
@@ -777,7 +781,7 @@ function renderDiagnose(m){
   <div class="sec">
     <div class="sec-head"><h2 id="beforeReviewTitle">Before → pain → opportunity</h2>
       <span class="hint">Working hypotheses — validate with the client</span></div>
-    <p class="diagnose-review-hint">Discussion is shared with each Before step. Scroll across for all columns.</p>
+    <p class="diagnose-review-hint">Add a review or comment in the Discussion column. Your input is shared with the corresponding Before step.</p>
     <div class="diagnose-table-scroll" role="region" aria-labelledby="beforeReviewTitle" tabindex="0">
     <table class="esc diagnose-review">
       <thead><tr><th scope="col">Before step</th><th scope="col">RM possible action</th><th scope="col">Human Pain and Friction</th><th scope="col">Opportunity</th><th scope="col">Discussion</th></tr></thead>
@@ -852,47 +856,6 @@ function vLink(lbl){
   return `<div class="v-link"><span class="stem"></span>${lbl?`<span>${lbl}</span>`:''}<span class="arr"></span></div>`;
 }
 function renderTobe(m){
-  const flow=`
-  <div class="flow-v">
-    ${vNode(I.mail,'Person T / RM submits business intent','Onboarding request — FX + Trade Finance','',null)}
-    ${vLink()}
-    ${vNode(I.agent,'Scope & Booking Agent','Orchestrates the full M0.1 investigation — not one big AI box','agent-node',null)}
-    ${vLink()}
-    ${TOBE.slice(0,7).map(s=>vNode(s.n,esc(s.t),'Click for the 10-part step detail','',`data-tnode="${s.n}"`)).join(vLink())}
-    ${vLink()}
-    <div class="diamond">${I.search} Enough information?</div>
-    <div class="fork">
-      <div class="fork-col">
-        <span class="fork-tag">No — resolve gap</span>
-        ${vNode(8,esc(TOBE[7].t),'Agent attempts bounded resolution first','',`data-tnode="8"`)}
-        ${vLink()}
-        <div class="diamond" style="font-size:11.5px">Still unresolved?</div>
-        <div class="fork" style="width:100%;gap:12px">
-          <div class="fork-col"><span class="fork-tag">No</span>
-            ${vNode('↺','Agent resumes','Context retained — continue the flow','',null)}</div>
-          <div class="fork-col"><span class="fork-tag">Yes</span>
-            ${vNode(I.gate,'Human input','One precise question — see HG-01 / HG-02','gate-node','data-gate="HG-01"')}</div>
-        </div>
-      </div>
-      <div class="fork-col">
-        <span class="fork-tag">Yes — compare options</span>
-        ${vNode(9,esc(TOBE[8].t),'Supported options · rule basis · trade-offs','',`data-tnode="9"`)}
-        ${vLink()}
-        <div class="diamond" style="font-size:11.5px">Unique supported result?</div>
-        <div class="fork" style="width:100%;gap:12px">
-          <div class="fork-col"><span class="fork-tag">Yes</span>
-            ${vNode('★','Recommend','Unique supported recommendation prepared','',null)}</div>
-          <div class="fork-col"><span class="fork-tag">No</span>
-            ${vNode(I.gate,'Human decision','Business choice — see HG-04','gate-node','data-gate="HG-04"')}</div>
-        </div>
-      </div>
-    </div>
-    <div class="merge"></div>
-    ${vLink()}
-    ${vNode(10,esc(TOBE[9].t),'Auditable · downstream-consumable','',`data-tnode="10"`)}
-    ${vLink()}
-    ${vNode(I.next,'Downstream onboarding','WF-01 durable case state — owner · waiting on · next actor · history','',null)}
-  </div>`;
 
   m.innerHTML=`
   <div class="sec">
@@ -910,20 +873,32 @@ function renderTobe(m){
   <div class="sec">
     <div class="sec-head"><h2>Target workflow — playable map</h2>
       <span class="spacer"></span><span class="hint">Human Gates are first-class objects, not icons</span></div>
-    <div class="mapwrap">
+    <div class="mapwrap before-map tobe-map" id="tobeMap">
       <div class="maptools">
-        <span class="q">${I.agent} M0.1 To-be workflow</span>
-        <button class="toolbtn" id="playT">${I.play} Play agent run</button>
+        <span class="q">M0.1 Sales location &amp; booking entity ｜ To-be</span>
+        <div class="tobe-view-switch" role="group" aria-label="Workflow section">
+          <button class="toolbtn" data-tobe-view="investigate" aria-pressed="true">1 · Investigate</button>
+          <button class="toolbtn" data-tobe-view="resolve" aria-pressed="false">2 · Resolve &amp; handoff</button>
+        </div>
+        <button class="toolbtn before-play" id="tobePlay" disabled aria-pressed="false">Play guided tour</button>
+        <button class="toolbtn" id="tobeExpand" aria-pressed="false">Expand diagram</button>
+        <a class="toolbtn" id="tobeFullViewer" href="diagrams/tobe-investigate.html?theme=light" target="_blank" rel="noopener">Open full viewer ↗</a>
+        <button class="toolbtn" id="tobeStaticToggle" aria-pressed="false">Static fallback</button>
       </div>
-      <div class="mapscroll" style="max-height:560px" id="tobeScroll">${flow}</div>
+      <div class="before-viewer" id="tobeScroll">
+        <iframe id="tobeArchify" title="Interactive M0.1 To-be workflow — Archify" allow="fullscreen; clipboard-write" allowfullscreen></iframe>
+        <div id="tobeStatic" hidden>
+          <img src="diagrams/tobe-investigate.svg" alt="Complete M0.1 investigation workflow">
+          <p class="before-boundary">Static diagram · all action details remain available below.</p>
+          <div class="before-static-actions">${TOBE.map(s=>`<button class="toolbtn" data-tnode="${s.n}">${s.n} · ${esc(s.t)}</button>`).join('')}</div>
+        </div>
+      </div>
       <div class="map-legend">
-        <span>Legend:</span>
-        <span class="flag" style="background:var(--ink);color:var(--surface)">Agent</span>
-        <span class="flag" style="background:var(--mint);color:var(--mint-d)">Agent step</span>
-        <span class="flag" style="background:var(--yellow);color:var(--yellow-d)">Decision</span>
-        <span class="flag" style="background:var(--gate-bg);color:var(--gate-d)">Human Gate</span>
+        <span id="tobeViewerStatus">Loading Archify…</span><span>Play / focus / export are read-only demonstrations.</span>
       </div>
     </div>
+    <div class="before-detail-picker"><label for="tobeAction">Explore an action</label><select id="tobeAction"><option value="">Workflow context</option>${TOBE.map(s=>`<option value="${s.n}">${s.n} · ${esc(s.t)}</option>`).join('')}</select></div>
+    <div class="card before-inspector" id="tobeInspector" aria-live="polite"></div>
   </div>
 
   <div class="sec">
@@ -959,25 +934,7 @@ function renderTobe(m){
 
   bindNotes(m,'tobe');
   bindActs(m);
-  m.querySelectorAll('[data-tnode]').forEach(n=>n.addEventListener('click',()=>openTobeStep(+n.dataset.tnode)));
-  m.querySelectorAll('[data-gate]').forEach(n=>n.addEventListener('click',()=>openGateDrawer(n.dataset.gate)));
-  $('#playT').addEventListener('click',()=>{
-    const nodes=$$('#tobeScroll .v-node'); let i=0;
-    $('#playT').classList.add('on'); $('#playT').innerHTML=I.stop+' Running…';
-    const run=setInterval(()=>{
-      $$('#tobeScroll .v-node.playing').forEach(x=>x.classList.remove('playing'));
-      if(i>=nodes.length){
-        clearInterval(run);
-        $('#playT').classList.remove('on'); $('#playT').innerHTML=I.play+' Play agent run';
-        toast('Agent run complete · recommendation prepared');
-        feed('Agent run simulated — recommendation prepared','var(--mint-d)');
-        return;
-      }
-      nodes[i].classList.add('playing');
-      nodes[i].scrollIntoView({behavior:'smooth',block:'center'});
-      i++;
-    },800);
-  });
+  tobeWorkflowCleanup=TobeWorkflow.mount(m,TOBE,GATES,openTobeStep,openGateDrawer);
 }
 function cmpCell(v){
   const [k,t]=v.split(':');
@@ -1111,6 +1068,31 @@ function openGateDrawer(id){
    Module 6 — Summary
    ============================================================ */
 function bundleId(g,i){return 'bd-'+g+'-'+i;}
+function bindSummaryBundle(m){
+ m.querySelectorAll('[data-bid]').forEach(b=>b.onclick=()=>{S.bundle[b.dataset.bid]=S.bundle[b.dataset.bid]!==true;save();renderSummary(m);});
+ m.querySelectorAll('[data-breset]').forEach(b=>b.onclick=()=>{delete S.bundle[b.dataset.breset];save();renderSummary(m);});
+}
+function refreshSummaryDiscussion(){
+ const m=$('#module');if(!m.querySelector('#discussionSynthesis'))return;
+ const model=discussionModel();
+ m.querySelector('#mappingCount').textContent=`${model.rows.length} / 10 actions discussed · 1 linked handoff`;
+ summaryMappingRows(model).forEach(row=>{
+  const el=m.querySelector(`[data-mapping-row="${row.id}"]`);
+  el.hidden=summaryMappingView==='discussed'&&!row.records.length;
+  if(row.records.length&&row.id!=='handoff')el.dataset.summaryRow=String(row.step);else delete el.dataset.summaryRow;
+  el.querySelector('.mapping-status').textContent=mappingReviewStatus(row);
+  el.querySelector('.mapping-sources').innerHTML=row.records.map(sourceRecordHTML).join('');
+ });
+ m.querySelector('.mapping-filter-empty').hidden=summaryMappingView!=='discussed'||model.rows.length>0;
+ m.querySelectorAll('[data-mapping-filter]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.mappingFilter===summaryMappingView)));
+ m.querySelector('#dynamicBundle').innerHTML=bundleSummaryHTML(model);
+ m.querySelector('#bundleCount').textContent=`${model.features.length} relevant / manually retained features · ${model.features.filter(f=>f.included).length} included manually`;
+ bindSummaryBundle(m);
+ const pains=BEFORE.filter(s=>S.actions['b'+s.n]?.act==='agree');
+ m.querySelector('#confirmedPains').innerHTML=pains.length?'<ul>'+pains.map(s=>`<li>Step ${s.n} — ${esc(s.t)}</li>`).join('')+'</ul>':'No Before steps agreed yet. Modified and comment-only items remain open.';
+ const open=[...model.unanswered,...model.open.map(r=>`${r.id} · ${r.title} — ${r.status}`)];
+ m.querySelector('#openQuestions').innerHTML=open.length?'<ul>'+open.map(q=>`<li>${esc(q)}</li>`).join('')+'</ul>':'No recorded open issues. Unreviewed actions are not confirmed.';
+}
 function renderSummary(m){
   const model=discussionModel();
   const confirmedPains=BEFORE.filter(s=>S.actions['b'+s.n]?.act==='agree');
@@ -1120,14 +1102,15 @@ function renderSummary(m){
   m.innerHTML=`
   <div class="sec">
     <div class="sec-head"><h2>Before → Pain → To-be mapping</h2>
-      <span class="chip chip-mint" style="font-size:10px">${model.rows.length} discussed actions · source-linked</span></div>
-    <p class="diagnose-review-hint">Updated from recorded reviews. To-be descriptions are design proposals; comments are quoted, not rewritten into approved requirements.</p>
-    <div class="card" id="discussionSynthesis">${mappingSummaryHTML(model)}</div>
+      <span class="chip chip-mint" id="mappingCount" style="font-size:10px">${model.rows.length} / 10 actions discussed · 1 linked handoff</span></div>
+    <p class="diagnose-review-hint">Template baseline · M0.1 Workshop Spec §12. Current-state claims remain working hypotheses; To-be responses are proposals. Review each scope separately. Comments are retained verbatim.</p>
+    <div class="mapping-filters" role="group" aria-label="Mapping visibility"><button class="toolbtn" data-mapping-filter="all" aria-pressed="${summaryMappingView==='all'}">All mappings</button><button class="toolbtn" data-mapping-filter="discussed" aria-pressed="${summaryMappingView==='discussed'}">Discussed only</button></div>
+    <div class="card" id="discussionSynthesis">${mappingSummaryHTML(model,{interactive:true})}</div>
   </div>
 
   <div class="sec">
     <div class="sec-head"><h2>Product Feature Bundle — Scope &amp; Booking Agent</h2>
-      <span class="hint">${model.features.length} relevant / manually retained features · ${model.features.filter(f=>f.included).length} included manually</span></div>
+      <span class="hint" id="bundleCount">${model.features.length} relevant / manually retained features · ${model.features.filter(f=>f.included).length} included manually</span></div>
     <p class="diagnose-review-hint">Suggestions follow an explicit discussion-to-feature crosswalk. Click to include or exclude; manual choices survive later discussion changes.</p>
     <div class="card" id="dynamicBundle">${bundleSummaryHTML(model)}</div>
   </div>
@@ -1190,12 +1173,13 @@ function renderSummary(m){
     </div>
   </div>`;
 
-  m.querySelectorAll('[data-bid]').forEach(b=>b.addEventListener('click',()=>{
-    const id=b.dataset.bid;
-    S.bundle[id]=S.bundle[id]!==true;
-    save(); renderSummary(m);
-  }));
-  m.querySelectorAll('[data-breset]').forEach(b=>b.addEventListener('click',()=>{delete S.bundle[b.dataset.breset];save();renderSummary(m);}));
+  bindSummaryBundle(m);
+  bindActs(m);
+  m.querySelectorAll('[data-mapping-filter]').forEach(b=>b.onclick=()=>{summaryMappingView=b.dataset.mappingFilter;refreshSummaryDiscussion();});
+  m.querySelectorAll('[data-summary-review-target]').forEach(select=>select.onchange=()=>{
+   summaryReviewTargets[select.dataset.summaryReviewTarget]=select.value;
+   const host=select.closest('td').querySelector('[data-acts-host]'),tmp=document.createElement('div');tmp.innerHTML=actsHTML(select.value);host.replaceWith(tmp.firstElementChild);bindActs(m);
+  });
   const grp=(sel,key,multi)=>{
     m.querySelectorAll(sel+' .radio-pill').forEach(b=>b.addEventListener('click',()=>{
       if(multi){
@@ -1252,7 +1236,9 @@ function buildPrint(){
     <h2>8 · Workshop note</h2><p>${esc(S.summary.note||'—')}</p>
     <h2>9 · Module notes — original wording</h2>${discussionNotesHTML()}
     <h2>10 · Recorded open issues</h2>${model.unanswered.map(t=>`<p>${esc(t)}</p>`).join('')}${model.open.map(sourceRecordHTML).join('')}
-    <p style="margin-top:14px;font-size:10px;color:#777">Local, rule-based workshop synthesis. Proposals, comments and demo decisions do not establish bank policy, authority or trade clearance.</p>`;
+    <p style="margin-top:14px;font-size:10px;color:#777">Local, rule-based workshop synthesis. Proposals, comments and demo decisions do not establish bank policy, authority or trade clearance.</p>
+    <section class="tobe-print-diagram"><h2>To-be workflow · Investigate</h2><img src="diagrams/tobe-investigate.svg" alt="Complete investigation workflow"></section>
+    <section class="tobe-print-diagram"><h2>To-be workflow · Resolve &amp; handoff</h2><img src="diagrams/tobe-resolve.svg" alt="Complete resolution and handoff workflow"><p>Read-only proposed workflow. Human authority and bank rules require validation; M0.1 is not trade clearance.</p></section>`;
   $('#printArea').querySelectorAll('details').forEach(d=>d.open=true);
 }
 
@@ -1266,6 +1252,7 @@ const BEFORE_SUMMARY='Fragmented systems, manual data entry and repeated clarifi
 
 function go(i){
   beforeWorkflowCleanup?.();beforeWorkflowCleanup=null;
+  tobeWorkflowCleanup?.();tobeWorkflowCleanup=null;
   const prev=STEPS[S.step];
   if(i>S.step) S.done[prev.id]=true;
   S.step=Math.max(0,Math.min(STEPS.length-1,i));
