@@ -1,4 +1,4 @@
-const dict=await(await fetch(new URL('./zh-CN.json?v=journey17',import.meta.url))).json();
+const dict=await(await fetch(new URL('./zh-CN.json?v=source-map-3',import.meta.url))).json();
 const KEY='ctt_locale_v1',allowed=['en-US','zh-CN'];
 let locale=new URLSearchParams(location.search).get('locale');if(!allowed.includes(locale)){try{locale=localStorage.getItem(KEY)}catch{}locale=allowed.includes(locale)?locale:'en-US'}
 const originals=new WeakMap(),attributes=new WeakMap();let changing=false,queued=false;

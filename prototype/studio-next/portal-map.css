@@ -1,0 +1,12 @@
+/* Shared visual treatment for CJ and Hero, leaving authored nodes/edges intact. */
+html body { background:#fff!important; color:#182039!important; }
+html body .diagram-container { border:0!important; border-radius:0!important; }
+html body #focus-chip { background:#fff!important; color:#182039!important; border:1px solid #d7e2ee!important; border-radius:12px!important; box-shadow:0 12px 36px #10264a26!important; padding:18px!important; }
+html body #focus-chip .ctt-node-detail { position:static!important; padding:16px 0 0!important; margin-top:14px!important; border-top:1px solid #e1eaf3!important; background:transparent!important; box-shadow:none!important; max-width:100%!important; color:#182039!important; }
+html body #focus-chip .ctt-node-detail strong { width:100%; color:#597087!important; font-size:11px!important; }
+html body #focus-chip .ctt-node-detail button { padding:11px 15px!important; min-height:42px!important; background:#e7f3fb!important; color:#075e9f!important; border:1px solid #d2e7f6!important; border-radius:7px!important; font-size:13px!important; text-align:left; line-height:1.4; }
+html body #focus-chip .ctt-node-detail button:hover { background:#ffc322!important; border-color:#ffc322!important; color:#151a30!important; }
+html body .diagram-nav { background:#151a30!important; border-radius:24px!important; padding:5px 12px!important; border:1px solid #303b55!important; }
+html body .diagram-nav button { border-radius:20px!important; }
+html body .diagram-nav button:focus-visible,html body .ctt-node-detail button:focus-visible { outline:3px solid #ffc322!important; outline-offset:3px!important; }
+html body .diagram-nav button[aria-pressed=true] { background:#116bb5!important; color:#fff!important; }
