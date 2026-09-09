@@ -1,0 +1,8 @@
+import fs from 'node:fs';import path from 'node:path';import crypto from 'node:crypto';import {spawnSync} from 'node:child_process';
+const task=process.argv[2]||'final',root=process.cwd(),base='00_governance/d3a/baseline',work='.superpowers/sdd/2026-09-07-d3a-pc01';
+const files=[];function walk(dir){if(!fs.existsSync(dir))return;for(const e of fs.readdirSync(dir,{withFileTypes:true})){const p=path.join(dir,e.name);if(e.isDirectory()){if(!['diagrams','qa','media'].includes(e.name))walk(p);}else if(/\.(mjs|css|html|json)$/.test(e.name))files.push(p);}}walk('prototype');
+const changed=files.filter(p=>!fs.existsSync(path.join(base,p))||!fs.readFileSync(p).equals(fs.readFileSync(path.join(base,p))));
+const selected=changed.filter(p=>task==='task-1'?/prototype\/(reconstruction\/(registry|copy|pc01)\.mjs|tests\/reconstruction-registry\.test\.mjs)$/.test(p):task==='task-2'?!/reconstruction\/(registry|copy|pc01)\.mjs|reconstruction-registry\.test/.test(p):true);
+let output=`# ${task} exact D3A workspace delta\n\nBase/head1e202f5102aaf0726940e0ae8508341ad032b93a unchanged. Review relative to this turn's pre-edit source snapshots, not unrelated dirty HEAD differences. No commits.\n\n`;
+for(const p of selected){const bytes=fs.readFileSync(p),old=path.join(base,p);output+=`## ${p}\nSHA256: ${crypto.createHash('sha256').update(bytes).digest('hex')}\n\n`;if(fs.existsSync(old)){const d=spawnSync('diff',['-u',old,p],{encoding:'utf8'});if(d.status>1)throw Error(d.stderr);output+='```diff\n'+d.stdout+'```\n';}else output+='```\n'+bytes.toString()+'\n```\n';}
+const out=path.join(work,`${task}-diff.md`);fs.writeFileSync(out,output);console.log({path:path.join(root,out),files:selected,bytes:output.length});

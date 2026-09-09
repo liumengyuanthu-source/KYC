@@ -1,0 +1,421 @@
+Synthetic demonstration record · not bank-approved
+
+Internal review · local operational simulation · SRC-016 · D5 v0.2
+
+No production authority, SLA or whole-case clearance is established by this record.
+
+Screening Review Person T · Entity A
+
+DEMO-CTT-001 · Scope: FX forward for future USD procurement payments · Scope revision 3 · Case revision 31 · KYC Operations
+
+Not ready
+Current problem: an unresolved local identity result is recorded
+Owner: Unassigned · Next actor: Unassigned
+Recommended next action: Await a configured follow-up owner · The recorded local result is not repeated and does not clear the case.
+S1 Initiate & scope
+S2 Determine & source
+S3 Screen & assess
+S4 Assure & resolve
+S5 Clear to trade
+01 Bind query
+✓
+Step complete
+02 Compare information
+→
+Action needed
+03 Request evidence if needed
+◷
+Waiting
+04 Review pack
+→
+Action needed
+05 Human judgment
+✓
+Step complete
+06 Record local result
+✓
+Step complete
+
+Required steps still being confirmed. Step selection is reading only. Actual work: 
+◷
+Waiting
+
+View all steps, owners and time
+Bind query
+
+✓
+Step complete · Owner: Unassigned · Assignee: Unassigned
+
+Next actor: Unassigned · Inspect bound query
+
+Entered / queued
+Sep 8, 2026, 4:16 AM · Australia/Sydney
+Started
+Sep 8, 2026, 4:16 AM · Australia/Sydney
+Waiting since
+Not recorded
+Completed
+Sep 8, 2026, 4:16 AM · Australia/Sydney
+Elapsed
+0 h
+Queue / in-progress residence / waiting
+0 h / 0 h / 0 h
+Human active effort
+Unknown — residence is not measured effort
+As of
+Sep 8, 2027, 10:00 AM · Australia/Sydney
+2027-09-08T00:00:00.000Z
+
+Expected: not yet estimable. Reviewable information and an owner estimate are required. No confirmed target or SLA is configured.
+
+Time health: 
+?
+Not yet established
+
+DEMO-CTT-001/work/screening-review-c
+D5-v0.2:3:31 · 00_sources/d5/Clear_to_Trade_D5_Product_Experience_Bindings_v0.2.json
+Compare information
+
+→
+Action needed · Owner: Unassigned · Assignee: Unassigned
+
+Next actor: Unassigned · Review the available comparisons
+
+Entered / queued
+Sep 8, 2026, 4:16 AM · Australia/Sydney
+Started
+Not recorded
+Waiting since
+Not recorded
+Completed
+Not recorded
+Elapsed
+8765.72 h
+Queue / in-progress residence / waiting
+8765.72 h / 0 h / 0 h
+Human active effort
+Unknown — residence is not measured effort
+As of
+Sep 8, 2027, 10:00 AM · Australia/Sydney
+2027-09-08T00:00:00.000Z
+
+Expected: not yet estimable. Reviewable information and an owner estimate are required. No confirmed target or SLA is configured.
+
+Time health: 
+?
+Not yet established
+
+DEMO-CTT-001/work/screening-review-c
+D5-v0.2:3:31 · 00_sources/d5/Clear_to_Trade_D5_Product_Experience_Bindings_v0.2.json
+Request evidence if needed
+
+◷
+Waiting · Owner: Unassigned · Assignee: Unassigned
+
+Next actor: KYC Operations · Resume review using the current purpose assessment
+
+Entered / queued
+Sep 8, 2026, 4:16 AM · Australia/Sydney
+Started
+Not recorded
+Waiting since
+Sep 8, 2026, 4:16 AM · Australia/Sydney
+Completed
+Not recorded
+Elapsed
+8765.72 h
+Queue / in-progress residence / waiting
+0 h / 0 h / 8765.72 h
+Human active effort
+Unknown — residence is not measured effort
+As of
+Sep 8, 2027, 10:00 AM · Australia/Sydney
+2027-09-08T00:00:00.000Z
+
+Expected: not yet estimable. Reviewable information and an owner estimate are required. No confirmed target or SLA is configured.
+
+Time health: 
+?
+Not yet established
+
+DEMO-CTT-001/work/screening-review-c · DEMO-CTT-001/work/c-information_gap-9
+D5-v0.2:3:31 · 00_sources/d5/Clear_to_Trade_D5_Product_Experience_Bindings_v0.2.json
+Review pack
+
+→
+Action needed · Owner: Unassigned · Assignee: Unassigned
+
+Next actor: Unassigned · Review prepared inputs and unknowns
+
+Entered / queued
+Sep 8, 2026, 4:16 AM · Australia/Sydney
+Started
+Not recorded
+Waiting since
+Not recorded
+Completed
+Not recorded
+Elapsed
+8765.72 h
+Queue / in-progress residence / waiting
+8765.72 h / 0 h / 0 h
+Human active effort
+Unknown — residence is not measured effort
+As of
+Sep 8, 2027, 10:00 AM · Australia/Sydney
+2027-09-08T00:00:00.000Z
+
+Expected: not yet estimable. Reviewable information and an owner estimate are required. No confirmed target or SLA is configured.
+
+Time health: 
+?
+Not yet established
+
+DEMO-CTT-001/work/screening-review-c
+D5-v0.2:3:31 · 00_sources/d5/Clear_to_Trade_D5_Product_Experience_Bindings_v0.2.json
+Human judgment
+
+✓
+Step complete · Owner: Unassigned · Assignee: Unassigned
+
+Next actor: Unassigned · Request information or refer for review
+
+Entered / queued
+Sep 8, 2026, 4:16 AM · Australia/Sydney
+Started
+Not recorded
+Waiting since
+Not recorded
+Completed
+Sep 8, 2026, 4:16 AM · Australia/Sydney
+Elapsed
+0 h
+Queue / in-progress residence / waiting
+0 h / 0 h / 0 h
+Human active effort
+Unknown — residence is not measured effort
+As of
+Sep 8, 2027, 10:00 AM · Australia/Sydney
+2027-09-08T00:00:00.000Z
+
+Expected: not yet estimable. Reviewable information and an owner estimate are required. No confirmed target or SLA is configured.
+
+Time health: 
+?
+Not yet established
+
+DEMO-CTT-001/work/screening-review-c
+D5-v0.2:3:31 · 00_sources/d5/Clear_to_Trade_D5_Product_Experience_Bindings_v0.2.json
+Record local result
+
+✓
+Step complete · Owner: Unassigned · Assignee: Unassigned
+
+Next actor: Unassigned · Record only a configured, supported result
+
+Entered / queued
+Sep 8, 2026, 4:16 AM · Australia/Sydney
+Started
+Not recorded
+Waiting since
+Not recorded
+Completed
+Sep 8, 2026, 4:16 AM · Australia/Sydney
+Elapsed
+0 h
+Queue / in-progress residence / waiting
+0 h / 0 h / 0 h
+Human active effort
+Unknown — residence is not measured effort
+As of
+Sep 8, 2027, 10:00 AM · Australia/Sydney
+2027-09-08T00:00:00.000Z
+
+Expected: not yet estimable. Reviewable information and an owner estimate are required. No confirmed target or SLA is configured.
+
+Time health: 
+?
+Not yet established
+
+DEMO-CTT-001/work/screening-review-c
+D5-v0.2:3:31 · 00_sources/d5/Clear_to_Trade_D5_Product_Experience_Bindings_v0.2.json
+
+Projection of current scope, tasks and recorded outputs; missing completeness remains unknown.
+
+Compare the identity information
+Attribute	Person T	Source record	Comparison
+Name	Person T	Person T	Similar · review needed
+Birth date	Not provided	1970 (year only) / 1971 (year only)	Inconclusive
+Birthplace	Not provided	Not provided	Inconclusive
+Nationality	Not provided	Not provided	Inconclusive
+Evidence for identity distinction
+
+EV-ID-C01 · Intake status: released · v1
+
+DEMO-CTT-001/person/person-t · DEMO-CTT-001/evidence/collaboration-2
+
+Purpose assessment: Insufficient · v1
+
+Received is not assessed. Coordination evidence does not automatically satisfy the screening identity purpose.
+
+Original query, source and versions
+Finding
+DEMO-CTT-001/finding/person-t-c01 · v3
+Original query
+DEMO-CTT-001/screening-run/c-1
+Subject snapshot
+DEMO-CTT-001/run-subject/c-1
+Source snapshot
+DEMO-CTT-001/provider-snapshot/c-1
+
+Name: Synthetic name similarity; no identity conclusion
+DEMO-CTT-001/provider-snapshot/c-1
+
+Birth date: Available subject evidence does not support a precise comparison
+DEMO-CTT-001/provider-snapshot/c-1
+
+Birthplace: Available subject evidence does not support a precise comparison
+DEMO-CTT-001/provider-snapshot/c-1
+
+Nationality: Available subject evidence does not support a precise comparison
+DEMO-CTT-001/provider-snapshot/c-1
+
+Authored synthetic source content; no live model or provider call.
+
+Your review
+
+Human question: identity remains inconclusive; a configured reviewer may record unresolved or referral only; this does not clear the case.
+
+Saved review rationale: Person T identity remains unresolved; request distinguishing identity context only.
+
+Exclusion is unavailable: no reviewed exclusion fixture or permission configuration. Referral destination is Unassigned until configured.
+
+Record unresolved requires a configured reviewer.
+
+Local result recorded
+
+Unresolved · Identity remains unresolved for these inputs; specialist follow-up remains necessary.
+
+DEMO-CTT-001/screening-decision/c-1 · 2026-09-07T18:16:55.340Z
+
+This action changes only its bound task or finding. Coverage remains incomplete; the case is not ready.
+
+Other case conditions · parallel work
+Credit
+?
+Not yet established
+Applicability: Unknown · Earlier scope · requires current review
+Legal
+?
+Not yet established
+Applicability: Unknown · Earlier scope · requires current review
+Conflicts
+?
+Not yet established
+Applicability: Required · Earlier scope · requires current review
+Financial Crime reviewer
+?
+Not yet established
+Applicability: Unknown · Earlier scope · requires current review
+QA reviewer
+?
+Not yet established
+Applicability: Required · Earlier scope · requires current review
+
+Manifest completeness is unknown. No complete-case date or clearance follows from a local review result.
+
+Activity timeline
+
+Sep 8, 2026, 4:16 AM · Australia/Sydney · Preliminary query requested
+DEMO-CTT-001/event/screening-c-19
+
+Sep 8, 2026, 4:16 AM · Australia/Sydney · Synthetic query result received
+DEMO-CTT-001/event/screening-c-20
+
+Sep 8, 2026, 4:16 AM · Australia/Sydney · Review draft saved
+DEMO-CTT-001/event/screening-c-21
+
+Sep 8, 2026, 4:16 AM · Australia/Sydney · Identity information requested
+DEMO-CTT-001/event/screening-c-22
+
+Sep 8, 2026, 4:16 AM · Australia/Sydney · Task event recorded
+DEMO-CTT-001/event/collaboration-23-25
+
+Sep 8, 2026, 4:16 AM · Australia/Sydney · Task event recorded
+DEMO-CTT-001/event/collaboration-24-26
+
+Sep 8, 2026, 4:16 AM · Australia/Sydney · Request dispatched
+DEMO-CTT-001/event/collaboration-25-27
+
+Sep 8, 2026, 4:16 AM · Australia/Sydney · Task event recorded
+DEMO-CTT-001/event/collaboration-26-28
+
+Sep 8, 2026, 4:16 AM · Australia/Sydney · Task event recorded
+DEMO-CTT-001/event/collaboration-27-29
+
+Sep 8, 2026, 4:16 AM · Australia/Sydney · Task event recorded
+DEMO-CTT-001/event/collaboration-28-30
+
+Sep 8, 2026, 4:16 AM · Australia/Sydney · Task event recorded
+DEMO-CTT-001/event/collaboration-29-31
+
+Sep 8, 2026, 4:16 AM · Australia/Sydney · Identity purpose assessed
+DEMO-CTT-001/event/screening-c-30
+
+Sep 8, 2026, 4:16 AM · Australia/Sydney · Scoped review result recorded
+DEMO-CTT-001/event/screening-c-31
+
+Related dependencies
+
+Identity input → purpose assessment → authorized human review. Credit, Legal and Conflicts proceed on their own inputs.
+
+Static Archify overview; not a live workflow or task completion control.
+Related evidence
+Evidence for identity distinction
+
+EV-ID-C01 · Intake status: released · v1
+
+DEMO-CTT-001/person/person-t · DEMO-CTT-001/evidence/collaboration-2
+
+Purpose assessment: Insufficient · v1
+
+Received is not assessed. Coordination evidence does not automatically satisfy the screening identity purpose.
+
+Contacts and communications
+
+Email is the default relationship channel. Contact and recipient details must come from a reviewed request. Sensitive information uses the approved secure contribution task.
+
+Recent history
+
+History uses current access and frozen snapshots.
+
+Work notes
+
+Review notes are kept in the task’s saved rationale. Contact notes use the existing scoped Collaboration action.
+
+Illustrative timing example · separate from this session
+D5U-TIME-DEMO-01
+
+Synthetic illustration only; not this case’s business events or a bank SLA.
+
+Entered / queued
+Sep 7, 2026, 9:00 AM · Australia/Sydney
+Started
+Sep 7, 2026, 9:30 AM · Australia/Sydney
+Waiting since
+Sep 7, 2026, 10:00 AM · Australia/Sydney
+Completed
+Not recorded
+Elapsed
+5 h
+Queue / in-progress residence / waiting
+0.5 h / 0.5 h / 4 h
+Human active effort
+Unknown — residence is not measured effort
+As of
+Sep 7, 2026, 2:00 PM · Australia/Sydney
+2026-09-07T14:00:00+10:00
+
+After all required information is ready for this review: an estimated 1–2 business days. Internal synthetic parameter, not client-shareable. Arrival time and business calendar are unknown; no calendar finish or whole-case date is calculated.
+
+D5-v0.2 §18.5 · 2026-09-07T14:00:00+10:00 · D5-v0.2 · Human effort unknown

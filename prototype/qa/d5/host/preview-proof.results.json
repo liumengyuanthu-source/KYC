@@ -1,0 +1,30 @@
+{
+  "at": "2026-09-07T18:04:03.676Z",
+  "browser": "152.0.7977.76",
+  "results": [
+    {
+      "ids": [
+        "D5-03",
+        "D5-04",
+        "D5-43"
+      ],
+      "name": "direct-preview-fresh-explicit-entry",
+      "status": "passed",
+      "screenshot": "prototype/qa/d5/host/direct-preview-fresh-explicit-entry.png",
+      "errors": [],
+      "remote": []
+    },
+    {
+      "ids": [
+        "D5-04",
+        "D5-15",
+        "D5U-37"
+      ],
+      "name": "direct-preview-restores-live-without-write",
+      "status": "passed",
+      "screenshot": "prototype/qa/d5/host/direct-preview-restores-live-without-write.png",
+      "errors": [],
+      "remote": []
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "sources": [
+    {
+      "source_id": "SRC-015",
+      "path": "/Users/christinaliu/Downloads/Clear_to_Trade_D2_Batch_B_Client_Collaboration_Approved_Addendum_v1.0.md",
+      "sha256": "1017f5d761734393898366e2dd0df612c109dd69abf893dada124690613f94b8",
+      "status": "USER_APPROVED_DEMO_DIRECTION",
+      "bank_policy_status": "unconfirmed"
+    }
+  ],
+  "missing": [
+    {
+      "name": "Clear_to_Trade_D2_Batch_B_Product_Demo_and_Client_Channels_Research_v0.1.md",
+      "status": "not_received",
+      "blocking": false
+    }
+  ],
+  "media": {
+    "video": "not_received_static_fallback",
+    "real_email": "disabled_not_run",
+    "real_authentication": "not_run"
+  }
+}

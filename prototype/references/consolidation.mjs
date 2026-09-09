@@ -1,0 +1,6 @@
+// Additional approved F design bindings only; source observations and verification are unchanged.
+const f1=['F01-case','F01-party','F01-authority','F01-requirement','F01-evidence','F01-work','F01-specialist','F01-prerequisite','F01-readiness','F01-decision','F01-publication'];
+const f2=['F02-change','F02-dependency','F02-scope','F02-task','F02-branch','F02-case','F02-unknown','F02-affected','F02-unaffected','F02-unknowns','F02-reassess','F02-readiness'];
+const f3=['F03-spine','F03-studio','F03-product','F03-lab','F03-print'];
+const bindings={'SRC-017:R22':[...f1,...f3],'SRC-017:R20':f2,'SRC-017:R18':['F01-evidence','F01-decision','F02-change','F02-reassess'],'SRC-017:R26':['F01-authority','F01-decision','F01-publication'],'SRC-020:M6-M8':['F01-work','F01-prerequisite','F01-readiness','F01-decision','F01-publication','F02-reassess','F02-readiness']};
+export function withConsolidationBindings(card){const nodes=bindings[card.observation.observation_id];return !nodes?card:{...card,binding:{...card.binding,semantic_node_refs:[...new Set([...card.binding.semantic_node_refs,...nodes])],f_mapping_source:'SRC-021',f_mapping_status:'approved_design_interpretation_not_source_or_bank_fact'}};}

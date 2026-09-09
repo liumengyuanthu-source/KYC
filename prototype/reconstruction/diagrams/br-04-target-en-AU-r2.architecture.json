@@ -1,0 +1,123 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "Evidence Sourcing & Use Assessment · To-be",
+    "locale": "en",
+    "quality_profile": "showcase",
+    "animation": "none",
+    "viewBox": [
+      1380,
+      620
+    ],
+    "legend": {
+      "mode": "hidden"
+    }
+  },
+  "components": [
+    {
+      "id": "ROOT-BR-04-target",
+      "type": "external",
+      "label": "Evidence Sourcing & Use Assessment",
+      "sublabel": "Work grouping · not execution",
+      "pos": [
+        60,
+        266
+      ],
+      "size": [
+        400,
+        88
+      ]
+    },
+    {
+      "id": "TOBE-D3-SOURCE-03-CANDIDATE-CLAIMS",
+      "type": "external",
+      "label": "Prepare candidate claims",
+      "pos": [
+        850,
+        70
+      ],
+      "size": [
+        500,
+        92
+      ]
+    },
+    {
+      "id": "TOBE-D3-SOURCE-03-CONFIRMED-VALUES",
+      "type": "external",
+      "label": "Form usable values after confirmation",
+      "pos": [
+        850,
+        195
+      ],
+      "size": [
+        500,
+        92
+      ]
+    },
+    {
+      "id": "TOBE-D3-VALIDATE-04-USE-ASSESSMENT",
+      "type": "external",
+      "label": "Prepare a purpose-specific assessment",
+      "pos": [
+        850,
+        320
+      ],
+      "size": [
+        500,
+        92
+      ]
+    },
+    {
+      "id": "TOBE-D3-VALIDATE-04-HUMAN-SUFFICIENCY",
+      "type": "external",
+      "label": "Retain human sufficiency judgement",
+      "pos": [
+        850,
+        445
+      ],
+      "size": [
+        500,
+        92
+      ]
+    }
+  ],
+  "connections": [
+    {
+      "id": "CONTAINS-BR-04-target-1",
+      "from": "ROOT-BR-04-target",
+      "to": "TOBE-D3-SOURCE-03-CANDIDATE-CLAIMS",
+      "label": "Contains work",
+      "variant": "default"
+    },
+    {
+      "id": "CONTAINS-BR-04-target-2",
+      "from": "ROOT-BR-04-target",
+      "to": "TOBE-D3-SOURCE-03-CONFIRMED-VALUES",
+      "label": "Contains work",
+      "variant": "default",
+      "labelAt": [
+        755,
+        241
+      ]
+    },
+    {
+      "id": "CONTAINS-BR-04-target-3",
+      "from": "ROOT-BR-04-target",
+      "to": "TOBE-D3-VALIDATE-04-USE-ASSESSMENT",
+      "label": "Contains work",
+      "variant": "default",
+      "labelAt": [
+        755,
+        366
+      ]
+    },
+    {
+      "id": "CONTAINS-BR-04-target-4",
+      "from": "ROOT-BR-04-target",
+      "to": "TOBE-D3-VALIDATE-04-HUMAN-SUFFICIENCY",
+      "label": "Contains work",
+      "variant": "default"
+    }
+  ]
+}

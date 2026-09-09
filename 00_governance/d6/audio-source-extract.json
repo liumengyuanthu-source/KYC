@@ -1,0 +1,31 @@
+{
+  "status": "PARTIAL_SOURCE_EXTRACTION_NOT_ORIGINAL_CUE_SHEET",
+  "source": "/Users/christinaliu/Downloads/Clear_to_Trade_D6_Audio_and_Music_Brief_v1.0.md",
+  "source_sha256": "77423ad5873f3509866a26e516014f531b54abd086352b8cb158337e3473ce00",
+  "missing_sources": ["D6 main specification v0.2 and original manifest", "Clear_to_Trade_D6_Audio_Cue_Sheet_v1.0.json"],
+  "default_mode": "silent",
+  "playback_capability": "no_verified_audio",
+  "selected_candidate_ref": null,
+  "actual_file_ref": null,
+  "stem_file_refs": [],
+  "caption_track_ref": null,
+  "actual_in_ms": null,
+  "actual_out_ms": null,
+  "rights_review_status": "not_reviewed",
+  "technical_test_status": "NOT_RUN",
+  "music_directions": [
+    {"direction": "A", "name": "Calm Editorial Ambient", "audition_duration_seconds": [20, 30], "status": "planned_not_produced", "actual_file_ref": null, "selected_for_use": false},
+    {"direction": "B", "name": "Light Neutral Pulse", "audition_duration_seconds": [20, 30], "status": "planned_not_produced", "actual_file_ref": null, "selected_for_use": false}
+  ],
+  "frames": [
+    {"frame_ref": "OM-F1", "text_origin": "INHERITED_VERBATIM_FROM_SUPPLIED_BRIEF_SECTION_6", "en-AU": "We are looking at one screening task, not a completed case.", "zh-CN": "我们先看这一条筛查任务，而不是把整个案件视为已经完成。", "music_policy": "optional_after_explicit_enable", "pause_after": false},
+    {"frame_ref": "OM-F2", "text_origin": "INHERITED_VERBATIM_FROM_SUPPLIED_BRIEF_SECTION_6", "en-AU": "The product prepares the relevant information and keeps the unknowns visible.", "zh-CN": "产品准备相关信息，并保留无法确定的地方。", "music_policy": "low_if_approved_zero_tail_before_F3", "pause_after": false},
+    {"frame_ref": "OM-F3", "text_origin": "INHERITED_VERBATIM_FROM_SUPPLIED_BRIEF_SECTION_6", "en-AU": "Information is still missing. The next step is a targeted request for that information.", "zh-CN": "需要的信息仍不足，下一步是针对具体问题补充资料。", "music_policy": "none_entire_frame", "pause_after": true, "next_frame_gate": "explicit_authored_checkpoint_required_original_contract_missing"},
+    {"frame_ref": "OM-F4", "text_origin": "INHERITED_VERBATIM_FROM_SUPPLIED_BRIEF_SECTION_6", "en-AU": "The appropriate reviewer retains the judgement. More information, referral, or an unresolved outcome remain valid options.", "zh-CN": "专业判断交由适当人员，补件、移交或保持未决同样是有效结果。", "music_policy": "none_entire_frame", "pause_after": true},
+    {"frame_ref": "OM-F5", "text_origin": "INHERITED_VERBATIM_FROM_SUPPLIED_BRIEF_SECTION_6", "en-AU": "This authored example shows a recorded local outcome; it does not make a decision for the current user.", "zh-CN": "这个后续示例展示已记录的局部结果，而不是替当前用户作决定。", "music_policy": "optional_same_neutral_tone_explicit_authored_example_only", "pause_after": false},
+    {"frame_ref": "OM-F6", "text_origin": "INHERITED_VERBATIM_FROM_SUPPLIED_BRIEF_SECTION_6", "en-AU": "This item has an outcome. The case still needs its other applicable conditions to be satisfied.", "zh-CN": "这一项已有处理结果，但案件仍需满足其余适用条件。", "music_policy": "none_no_celebration_tail", "pause_after": true}
+  ],
+  "missing_script_frame_refs": ["D6-TIME-F1", "D6-TIME-F2", "D6-TIME-F3", "D6-TIME-F4", "D6-TIME-F5", "D6-WORK-F1", "D6-WORK-F2", "D6-WORK-F3", "D6-WORK-F4", "D6-WORK-F5"],
+  "en-US_rule": "Localise spelling only after original Cue Sheet reconciliation; no corresponding audio file exists.",
+  "integration_status": "NOT_INTEGRATED_AWAITING_ORIGINAL_D6_CONTRACTS"
+}

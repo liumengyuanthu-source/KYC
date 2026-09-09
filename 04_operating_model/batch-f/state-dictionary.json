@@ -1,0 +1,142 @@
+{
+  "derived": true,
+  "runtime_store": false,
+  "source_ref": "SRC-021",
+  "case_id": "DEMO-CTT-001",
+  "validation_status": "approved_demo_design_not_bank_validation",
+  "generator": "04_operating_model/batch-f/build-consolidation.mjs",
+  "canonical_legacy_dictionary": "04_operating_model/state_dictionary.csv",
+  "mapping_source": "prototype/consolidation.mjs",
+  "domains": [
+    {
+      "domain": "applicability",
+      "values": [
+        "required",
+        "not_required",
+        "unknown",
+        "review_required"
+      ],
+      "note": "unknown and review_required never mean not_required"
+    },
+    {
+      "domain": "work",
+      "values": [
+        "not_started",
+        "in_progress",
+        "waiting",
+        "completed",
+        "superseded"
+      ],
+      "legacy": {
+        "ready": "not_started",
+        "draft": "in_progress",
+        "awaiting_input": "waiting",
+        "awaiting_response": "waiting",
+        "awaiting_human": "waiting",
+        "awaiting_review": "waiting",
+        "paused": "waiting",
+        "referred": "waiting"
+      },
+      "note": "Completed work never implies evidence sufficiency or condition satisfaction"
+    },
+    {
+      "domain": "condition",
+      "values": [
+        "open",
+        "review_required",
+        "satisfied",
+        "blocked",
+        "unknown"
+      ],
+      "legacy": {
+        "pending": "open",
+        "not_required": "separate applicability decision; preserve raw status"
+      },
+      "note": "Do not convert not_required into satisfied or approved"
+    },
+    {
+      "domain": "evidence_use",
+      "values": [
+        "not_assessed",
+        "sufficient",
+        "insufficient",
+        "unknown"
+      ],
+      "note": "Purpose, subject, claim and version are required; receipt is a separate field"
+    },
+    {
+      "domain": "request_response",
+      "values": [
+        "open",
+        "draft",
+        "submitted",
+        "under_review",
+        "needs_more_information",
+        "closed"
+      ],
+      "note": "Submission is not sufficient evidence"
+    },
+    {
+      "domain": "request_review",
+      "values": [
+        "draft",
+        "pending_review",
+        "approved",
+        "superseded"
+      ],
+      "note": "Approved request is not sent"
+    },
+    {
+      "domain": "dispatch",
+      "values": [
+        "not_requested",
+        "queued",
+        "sent",
+        "failed"
+      ],
+      "note": "Delivery observed separately; sent is not read"
+    },
+    {
+      "domain": "legal_review_approval_execution",
+      "values": [
+        "review_status",
+        "approval_status",
+        "execution_status"
+      ],
+      "note": "Independent fields remain intact; internal approval is not executed agreement"
+    },
+    {
+      "domain": "QA",
+      "values": [
+        "not_final",
+        "gap_open",
+        "re_review_required",
+        "passed",
+        "signed_off"
+      ],
+      "note": "Signoff alone is not readiness"
+    },
+    {
+      "domain": "clearance",
+      "values": [
+        "NOT_READY",
+        "READY_FOR_AUTHORISED_CONFIRMATION",
+        "CLEARED_TO_TRADE"
+      ],
+      "legacy": {
+        "not_ready": "legacy non-E not ready",
+        "candidate_ready": "legacy candidate only; cannot infer E readiness"
+      },
+      "note": "Only E evaluates current readiness; unavailable is null, not factual Not ready"
+    },
+    {
+      "domain": "publication",
+      "values": [
+        "not_requested",
+        "succeeded",
+        "failed"
+      ],
+      "note": "Separate current_applicability; historical succeeded is not current after invalidation. No trade is executed"
+    }
+  ]
+}

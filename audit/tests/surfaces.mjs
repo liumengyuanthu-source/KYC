@@ -1,0 +1,35 @@
+import {chromium} from '../tooling/node_modules/playwright/index.mjs';
+import AxeBuilder from '../tooling/node_modules/@axe-core/playwright/dist/index.mjs';
+import fs from 'node:fs';import assert from 'node:assert/strict';
+const base='http://127.0.0.1:8765/prototype/',out='audit/screenshots/actual/surfaces/';fs.mkdirSync(out,{recursive:true});
+const browser=await chromium.launch({executablePath:'/Applications/Google Chrome.app/Contents/MacOS/Google Chrome',headless:true});
+const results=[];
+const seedFile='audit/screenshots/actual/journey/review.result.en-AU.state.json';
+async function run(name,fn,{width=1440,height=900,locale='en-AU',role='ROLE-KYCOPS',seed=seedFile,studio=false}={}){
+ const s=JSON.parse(fs.readFileSync(seed));s.navigation={...s.navigation,page:studio?'studio':'product',step:'screening',modal:false,studioPage:null,locale,role,mode:'explore',d5:{}};
+ const ctx=await browser.newContext({viewport:{width,height},reducedMotion:'reduce'});await ctx.addInitScript(s=>{if(!sessionStorage.getItem('ctt-round-a-v1'))sessionStorage.setItem('ctt-round-a-v1',JSON.stringify(s));},s);
+ const page=await ctx.newPage();page.setDefaultTimeout(8000);const errors=[];page.on('pageerror',e=>errors.push(e.message));
+ const state=()=>page.evaluate(()=>JSON.parse(sessionStorage.getItem('ctt-round-a-v1')));
+ const click=async(a,v)=>{const q=`[data-action="${a}"]${v?`[data-value="${v}"]`:''}`,m=page.locator('dialog[open]').locator(q);await(await m.count()?m:page.locator(q)).filter({visible:true}).first().click();};
+ const d=async(a,v)=>page.locator(`[data-d5-action="${a}"]${v?`[data-value="${v}"]`:''}`).filter({visible:true}).first().click();
+ try{await page.goto(base);await page.waitForSelector('#main');const before=(await state()).data;const detail=await fn({page,state,click,d,before});assert.deepEqual(errors,[]);await page.evaluate(()=>{window.scrollTo(0,0);document.activeElement?.blur();});await page.screenshot({path:out+name+'.png'});fs.writeFileSync(out+name+'.state.json',JSON.stringify(await state(),null,2));results.push({name,status:'passed',viewport:{width,height},locale,detail,screenshot:out+name+'.png'});}
+ catch(e){results.push({name,status:'failed',error:e.message,errors});await page.screenshot({path:out+name+'.failure.png'}).catch(()=>{});}
+ finally{fs.writeFileSync('audit/reports/surfaces-results.json',JSON.stringify({at:new Date().toISOString(),browser:browser.version(),results},null,2));await ctx.close();}
+}
+for(const [width,height] of [[1920,1080],[1440,900],[1366,768],[1280,800],[1024,768],[390,844]])for(const locale of ['en-AU','zh-CN'])await run(`responsive-${width}-${locale}`,async({page,state,before})=>{
+ const metrics=await page.evaluate(()=>{const box=s=>{const e=document.querySelector(s);if(!e)return null;const r=e.getBoundingClientRect();return {x:r.x,y:r.y,width:r.width,height:r.height};};return {width:innerWidth,scroll:document.documentElement.scrollWidth,evidence:box('.d5-evidence-column'),actions:box('.d5-action-column'),core:document.querySelectorAll('[data-d5-core]').length,font:getComputedStyle(document.querySelector('#screening-rationale')).fontSize};});
+ assert.ok(metrics.scroll<=width+1,JSON.stringify(metrics));assert.equal(metrics.core,4);await page.locator('#screening-rationale').fill('Long input / 较长的用户输入 '.repeat(25));await page.locator('[data-d5-action="customize"]').click();await page.locator('[data-d5-action="cancel-layout"]').click();assert.deepEqual((await state()).data,before);return metrics;
+},{width,height,locale});
+for(const comparison of ['current','target'])await run('journey-'+comparison,async({page,state,click,before})=>{await click('compare',comparison);assert.ok(await page.locator('.journey-scroll').isVisible());assert.deepEqual((await state()).data,before);},{studio:true});
+await run('scenario-modal-keyboard',async({page,state,click,before})=>{
+ await click('scene','SCN-MATCH');const dialog=page.locator('#scenario-dialog');assert.ok(await dialog.isVisible());
+ const focus=[];for(let i=0;i<20;i++){await page.keyboard.press('Tab');focus.push(await page.evaluate(()=>({inside:!!document.activeElement.closest('dialog[open]'),tag:document.activeElement.tagName,label:document.activeElement.getAttribute('aria-label')||document.activeElement.textContent.slice(0,60)})));}
+ assert.ok(focus.every(f=>f.inside),'Tab escaped native modal');await page.keyboard.press('Escape');await page.waitForFunction(()=>!document.querySelector('#scenario-dialog').open);await page.waitForFunction(()=>document.activeElement?.matches('[data-action="scene"]'));
+ assert.deepEqual((await state()).data,before);await click('scene','SCN-MATCH');const axe=await new AxeBuilder({page}).analyze();fs.writeFileSync('audit/accessibility/scenario-modal.json',JSON.stringify(axe,null,2));return {focus,focus_return:true};
+},{studio:true});
+for(const tab of ['active','my_completed_work','archived'])await run('cases-'+tab,async({page,state,d,before})=>{await d('cases');await d('case-tab',tab);assert.deepEqual((await state()).data,before);const axe=await new AxeBuilder({page}).analyze();fs.writeFileSync('audit/accessibility/cases-'+tab+'.json',JSON.stringify(axe,null,2));return {outcomeFixtures:tab==='active'?'live readonly record':'empty approved outcome fixtures'};});
+await run('layout-changed',async({page,state,d,before})=>{await d('customize');await d('add','OPT-NOTES');await d('up','OPT-NOTES');await d('save-layout');assert.equal(await page.locator('[data-d5-core]').count(),4);assert.deepEqual((await state()).data,before);});
+await run('readiness-not-ready',async({page,state,click,before})=>{await click('return','journey');await click('scene','SCN-READINESS');const buttons=await page.locator('#scenario-dialog [data-action="product"]').all();assert.ok(buttons.length);await buttons[0].click();assert.match(await page.locator('#main').innerText(),/Not ready|尚未/);assert.deepEqual((await state()).data,before);const axe=await new AxeBuilder({page}).analyze();fs.writeFileSync('audit/accessibility/readiness.json',JSON.stringify(axe,null,2));});
+for(const role of ['ROLE-RM','ROLE-CLIENT','ROLE-REVIEWER'])await run('role-'+role,async({page,state,before})=>{const axe=await new AxeBuilder({page}).analyze();fs.writeFileSync('audit/accessibility/'+role+'.json',JSON.stringify(axe,null,2));if(role!=='ROLE-REVIEWER')assert.doesNotMatch(await page.locator('#main').innerText(),/1970|1971|SYN-PROVIDER/);assert.deepEqual((await state()).data,before);},{role});
+await run('text-scale-200',async({page,state,before})=>{await page.addStyleTag({content:'html{font-size:200%} body{font-size:200%}'});await page.locator('#screening-rationale').fill('Text scaling retains task input');assert.ok(await page.locator('#screening-rationale').isVisible());assert.deepEqual((await state()).data,before);return {method:'CSS root/body 200% text scaling; not OS screen-reader or native browser zoom certification'};});
+await browser.close();console.log({checks:results.length,passed:results.filter(x=>x.status==='passed').length,failed:results.filter(x=>x.status==='failed')});if(results.some(x=>x.status==='failed'))process.exitCode=1;

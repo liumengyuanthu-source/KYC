@@ -1,0 +1,217 @@
+{
+  "at": "2026-09-07T18:05:58.887Z",
+  "scope": "D5U-T00–T06 Person T review gate only",
+  "preserved": [
+    {
+      "file": "prototype/case-engine.mjs",
+      "sha256": "b6186ddb5725dcaea07a39a11c0d4b34e356885c9eb3189ca40f029622d8082c",
+      "unchanged": true
+    },
+    {
+      "file": "prototype/batch-a-engine.mjs",
+      "sha256": "1627092f7222e563a0a7408c44045c54f744274693f25453a0fb0d7e039aa315",
+      "unchanged": true
+    },
+    {
+      "file": "prototype/collaboration-engine.mjs",
+      "sha256": "d7d55efec4c9c5f2d19f6f13ffc58ad7f0bb2e61c6cce7caa8e73ed68b0ea4f4",
+      "unchanged": true
+    },
+    {
+      "file": "prototype/screening-engine.mjs",
+      "sha256": "ab9b873e971f929ec12088f1b90bb13ce716c57538d266ca800d0c3d95c14d9d",
+      "unchanged": true
+    },
+    {
+      "file": "prototype/specialist-engine.mjs",
+      "sha256": "259053892877c1bed7793ffa2ba9929763a76f3fda7d7ab6730b040e94e845ce",
+      "unchanged": true
+    },
+    {
+      "file": "prototype/navigation.mjs",
+      "sha256": "852db5f343718695d48efaebb3f7a0d02945d2ebedd1d24f498274138d0a3641",
+      "unchanged": true
+    },
+    {
+      "file": "prototype/glass.css",
+      "sha256": "a1bf80865fa79d548c7b300b09e03957e20d25ab4631f0e7c2a79e4278c6136e",
+      "unchanged": true
+    }
+  ],
+  "sources": {
+    "actions": 229,
+    "works": 94,
+    "scenes": 15,
+    "d4_sha256": "fdaa5d5c172645dd2f0409bbc929a016dd5d78ba0ea24d3b15f2fd79ba3852ad",
+    "d5_sha256": "896f760ceef1725b6a323dcefd559c86a0e0871fac0dcb58f2a91b80e0cb72a0"
+  },
+  "files": [
+    {
+      "file": "prototype/product-experience/command-intent.mjs",
+      "sha256": "f525dd76f959ec49a3ccd6fb282ec84fdb1a8b31aa5d0aab4d88f8804e04477f",
+      "lines": 7
+    },
+    {
+      "file": "prototype/product-experience/history.mjs",
+      "sha256": "e6406ac91d4b7255c056d2d51b49316c8244c5ca56cc0c423db4c193a8c3139b",
+      "lines": 26
+    },
+    {
+      "file": "prototype/product-experience/preferences.mjs",
+      "sha256": "9f4342a0c416ad2fdc33bc9241ba9c7395d919c5069d02c0b94d9c35beb0538b",
+      "lines": 30
+    },
+    {
+      "file": "prototype/product-experience/product-experience.css",
+      "sha256": "9919d4604de9628a302e89178ab1d26cb565cab183552240a8f97262bffec86d",
+      "lines": 8
+    },
+    {
+      "file": "prototype/product-experience/projection.mjs",
+      "sha256": "779ef1b6e7a9536b37afcc7120de95a3bae7ae505574cdbc902dd448d335cfc9",
+      "lines": 63
+    },
+    {
+      "file": "prototype/product-experience/request-context.mjs",
+      "sha256": "4044b1e0a403f7e54a5df14023839e6bddb714af0d36d0b52ba18fdd807cdc68",
+      "lines": 15
+    },
+    {
+      "file": "prototype/product-experience/temporal.mjs",
+      "sha256": "4d969253d09c1e41228b22d95588790195dcdbcca3a076e14b23a8ff4902002a",
+      "lines": 26
+    },
+    {
+      "file": "prototype/product-experience/ui.mjs",
+      "sha256": "6197a2ebcb3c9f894feeb1a2e31283c0a7558c7e7377897efd5bf75969864818",
+      "lines": 49
+    }
+  ],
+  "checks": {
+    "unit": 320,
+    "independent": 9,
+    "regression_suites": 16,
+    "host": 23,
+    "print_views": 5,
+    "physical_pages": 26
+  },
+  "host": [
+    {
+      "file": "host-browser",
+      "check": "pilot-core-current-finding",
+      "status": "passed"
+    },
+    {
+      "file": "host-browser",
+      "check": "step-reading-does-not-execute",
+      "status": "passed"
+    },
+    {
+      "file": "host-browser",
+      "check": "layout-save-reset-and-draft-isolation",
+      "status": "passed"
+    },
+    {
+      "file": "host-browser",
+      "check": "history-dirty-stay-failed-save-discard",
+      "status": "passed"
+    },
+    {
+      "file": "host-browser",
+      "check": "saved-review-history-language-roundtrip",
+      "status": "passed"
+    },
+    {
+      "file": "host-browser",
+      "check": "safe-rm-client-projections",
+      "status": "passed"
+    },
+    {
+      "file": "host-browser",
+      "check": "narrow-touch-reduced-motion",
+      "status": "passed"
+    },
+    {
+      "file": "host-browser",
+      "check": "three-language-current-input",
+      "status": "passed"
+    },
+    {
+      "file": "navigation-extra",
+      "check": "reload-keeps-current-saved-task",
+      "status": "passed"
+    },
+    {
+      "file": "navigation-extra",
+      "check": "keyboard-control-keeps-semantic-focus",
+      "status": "passed"
+    },
+    {
+      "file": "navigation-extra",
+      "check": "step-and-language-preserve-open-reading-detail",
+      "status": "passed"
+    },
+    {
+      "file": "navigation-extra",
+      "check": "persona-preferences-and-dirty-input-do-not-cross",
+      "status": "passed"
+    },
+    {
+      "file": "navigation-extra",
+      "check": "readonly-record-and-zero-results",
+      "status": "passed"
+    },
+    {
+      "file": "navigation-extra",
+      "check": "unavailable-history-distinct-from-no-results",
+      "status": "passed"
+    },
+    {
+      "file": "modules-proof",
+      "check": "layout-preview-cancel-move-collapse",
+      "status": "passed"
+    },
+    {
+      "file": "modules-proof",
+      "check": "layout-storage-error-keeps-task-input",
+      "status": "passed"
+    },
+    {
+      "file": "modules-proof",
+      "check": "static-dependency-missing-readable-fallback",
+      "status": "passed"
+    },
+    {
+      "file": "modules-proof",
+      "check": "layout-collapse-overrides-prior-reading-but-cancel-restores",
+      "status": "passed"
+    },
+    {
+      "file": "preview-proof",
+      "check": "direct-preview-fresh-explicit-entry",
+      "status": "passed"
+    },
+    {
+      "file": "preview-proof",
+      "check": "direct-preview-restores-live-without-write",
+      "status": "passed"
+    },
+    {
+      "file": "safe-request-proof",
+      "check": "rm-request-entry-retains-safe-audience",
+      "status": "passed"
+    },
+    {
+      "file": "safe-request-proof",
+      "check": "client-request-entry-retains-safe-audience",
+      "status": "passed"
+    },
+    {
+      "file": "resume-proof",
+      "check": "assessed-identity-resumes-native-review",
+      "status": "passed"
+    }
+  ],
+  "not_production": true,
+  "remote_published": false
+}

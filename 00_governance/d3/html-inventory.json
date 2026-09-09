@@ -1,0 +1,1279 @@
+{
+  "at": "2026-09-07T14:38:57.889Z",
+  "scope": "/Users/christinaliu/Documents/ChatGPT/Australia Bank/clear-to-trade-product",
+  "method": "File scan; token count includes code and is not a visible-text or visual pass",
+  "files": [
+    {
+      "file": "00_governance/batch-c/baseline/prototype/index.html",
+      "family": "archive_or_qa",
+      "sha256": "1f1f671c8950f6272d90ada3f24b87f324091602d1a9e5a4f7dc55034e6da438",
+      "bytes": 1584,
+      "technicalTokenCount": 0,
+      "visual_status": "not_run"
+    },
+    {
+      "file": "00_governance/batch-d/baseline/prototype/index.html",
+      "family": "archive_or_qa",
+      "sha256": "b7ad03532caa45dee70e287036d78025fc9fd7f4772cd650531982123821aef7",
+      "bytes": 1630,
+      "technicalTokenCount": 0,
+      "visual_status": "not_run"
+    },
+    {
+      "file": "00_governance/d3/baseline/index.html",
+      "family": "archive_or_qa",
+      "sha256": "23a2401a1b408800e2e01e8496b0cea4e59eb85d768d7a549eda63cbb178522c",
+      "bytes": 2172,
+      "technicalTokenCount": 12,
+      "visual_status": "not_run"
+    },
+    {
+      "file": "prototype/diagrams/batch-a/DG-ENABLE-A.en-AU.html",
+      "family": "standalone_archify",
+      "sha256": "6280921565cba554ed9221c40a13f19362d71d2e89c54a13241b54e868a46968",
+      "bytes": 704275,
+      "technicalTokenCount": 0,
+      "visual_status": "not_run"
+    },
+    {
+      "file": "prototype/diagrams/batch-a/DG-ENABLE-A.en-AU.visual-check.html",
+      "family": "standalone_archify",
+      "sha256": "a282b8615dd0089610b19c1643c2d2882a53be44a5274c8ea575d91df808b921",
+      "bytes": 1946,
+      "technicalTokenCount": 6,
+      "visual_status": "not_run"
+    },
+    {
+      "file": "prototype/diagrams/batch-a/DG-ENABLE-A.en-US.html",
+      "family": "standalone_archify",
+      "sha256": "6280921565cba554ed9221c40a13f19362d71d2e89c54a13241b54e868a46968",
+      "bytes": 704275,
+      "technicalTokenCount": 0,
+      "visual_status": "not_run"
+    },
+    {
+      "file": "prototype/diagrams/batch-a/DG-ENABLE-A.en-US.visual-check.html",
+      "family": "standalone_archify",
+      "sha256": "0350910f2f759c7a8a663a30c0d212bcdb5526ea167186475003c52d28ebeda5",
+      "bytes": 1946,
+      "technicalTokenCount": 6,
+      "visual_status": "not_run"
+    },
+    {
+      "file": "prototype/diagrams/batch-a/DG-ENABLE-A.zh-CN.html",
+      "family": "standalone_archify",
+      "sha256": "8735ef0393e6e0710778a4bc2675a36c16b7a520747f7972ceb9e9e8ef44d846",
+      "bytes": 703853,
+      "technicalTokenCount": 0,
+      "visual_status": "not_run"
+    },
+    {
+      "file": "prototype/diagrams/batch-a/DG-ENABLE-A.zh-CN.visual-check.html",
+      "family": "standalone_archify",
+      "sha256": "aa89429e23ed2dc4619ea5bcd55ef929d5a964ef46599a5fda2350ae3a142501",
+      "bytes": 1946,
+      "technicalTokenCount": 6,
+      "visual_status": "not_run"
+    },
+    {
+      "file": "prototype/diagrams/batch-a/DG-ENTITY-A.en-AU.html",
+      "family": "standalone_archify",
+      "sha256": "fa547732d19ab9454df85acf3ac369a30aeeefc424f6387a706a17d3f7ac8dd3",
+      "bytes": 704926,
+      "technicalTokenCount": 0,
+      "visual_status": "not_run"
+    },
+    {
+      "file": "prototype/diagrams/batch-a/DG-ENTITY-A.en-AU.visual-check.html",
+      "family": "standalone_archify",
+      "sha256": "06245f976f1b9602d7cb9fbac2245defdb621a47ac4fea6338faf28bb9437fb9",
+      "bytes": 1946,
+      "technicalTokenCount": 6,
+      "visual_status": "not_run"
+    },
+    {
+      "file": "prototype/diagrams/batch-a/DG-ENTITY-A.en-US.html",
+      "family": "standalone_archify",
+      "sha256": "fa547732d19ab9454df85acf3ac369a30aeeefc424f6387a706a17d3f7ac8dd3",
+      "bytes": 704926,
+      "technicalTokenCount": 0,
+      "visual_status": "not_run"
+    },
+    {
+      "file": "prototype/diagrams/batch-a/DG-ENTITY-A.en-US.visual-check.html",
+      "family": "standalone_archify",
+      "sha256": "4e8153f9cd51e4b936ec10f4c9aadf8d15785777e60c5b129c2070277874cf22",
+      "bytes": 1946,
+      "technicalTokenCount": 6,
+      "visual_status": "not_run"
+    },
+    {
+      "file": "prototype/diagrams/batch-a/DG-ENTITY-A.zh-CN.html",
+      "family": "standalone_archify",
+      "sha256": "94ffc61030371f4f7c50f0f564ba79ecb0936836537c0877cabd9bb599be46d3",
+      "bytes": 704700,
+      "technicalTokenCount": 0,
+      "visual_status": "not_run"
+    },
+    {
+      "file": "prototype/diagrams/batch-a/DG-ENTITY-A.zh-CN.visual-check.html",
+      "family": "standalone_archify",
+      "sha256": "38ba7ce1eca8b852ac11a0648cf9704a5b5fdc8593a388bd9e4ff9ceeb9ae6d1",
+      "bytes": 1946,
+      "technicalTokenCount": 6,
+      "visual_status": "not_run"
+    },
+    {
+      "file": "prototype/diagrams/batch-a/DG-SCOPE-A.en-AU.html",
+      "family": "standalone_archify",
+      "sha256": "dc1e8bd4705bd820d775ca58de9d5072db30665a6be4659699d01fbaca432fc1",
+      "bytes": 703894,
+      "technicalTokenCount": 0,
+      "visual_status": "not_run"
+    },
+    {
+      "file": "prototype/diagrams/batch-a/DG-SCOPE-A.en-AU.visual-check.html",
+      "family": "standalone_archify",
+      "sha256": "90b02d504ab52eb7bfe0afbb896e5a928ae6cc8557a928903305ccfa5ea1691a",
+      "bytes": 1940,
+      "technicalTokenCount": 6,
+      "visual_status": "not_run"
+    },
+    {
+      "file": "prototype/diagrams/batch-a/DG-SCOPE-A.en-US.html",
+      "family": "standalone_archify",
+      "sha256": "dc1e8bd4705bd820d775ca58de9d5072db30665a6be4659699d01fbaca432fc1",
+      "bytes": 703894,
+      "technicalTokenCount": 0,
+      "visual_status": "not_run"
+    },
+    {
+      "file": "prototype/diagrams/batch-a/DG-SCOPE-A.en-US.visual-check.html",
+      "family": "standalone_archify",
+      "sha256": "475f84c7ec026ee42c687fe30b105aea7a018bd6ebb3c23b04ea61f3c45031de",
+      "bytes": 1940,
+      "technicalTokenCount": 6,
+      "visual_status": "not_run"
+    },
+    {
+      "file": "prototype/diagrams/batch-a/DG-SCOPE-A.zh-CN.html",
+      "family": "standalone_archify",
+      "sha256": "216b5dbcea9a89b9d6b0f96cf6bdaa8cc0474b17f359a371024139668cc73c65",
+      "bytes": 703441,
+      "technicalTokenCount": 0,
+      "visual_status": "not_run"
+    },
+    {
+      "file": "prototype/diagrams/batch-a/DG-SCOPE-A.zh-CN.visual-check.html",
+      "family": "standalone_archify",
+      "sha256": "f102e6979b5513190c73978c8dc9f275c8c4aa072228cee0d24cf3ba9d1b7b22",
+      "bytes": 1940,
+      "technicalTokenCount": 6,
+      "visual_status": "not_run"
+    },
+    {
+      "file": "prototype/diagrams/batch-b/client-collaboration.en-AU.html",
+      "family": "standalone_archify",
+      "sha256": "d1cbc8ab5f71651389ae1515d5be159dd81d29d7094a68c996a6c29d2b677a9e",
+      "bytes": 707549,
+      "technicalTokenCount": 0,
+      "visual_status": "not_run"
+    },
+    {
+      "file": "prototype/diagrams/batch-b/client-collaboration.en-AU.visual-check.html",
+      "family": "standalone_archify",
+      "sha256": "43c0c73a36c7ea14670250f2f5626c0cbe8212d65dbc9b3e004c1fc36ae4c030",
+      "bytes": 2000,
+      "technicalTokenCount": 0,
+      "visual_status": "not_run"
+    },
+    {
+      "file": "prototype/diagrams/batch-b/client-collaboration.en-US.html",
+      "family": "standalone_archify",
+      "sha256": "d1cbc8ab5f71651389ae1515d5be159dd81d29d7094a68c996a6c29d2b677a9e",
+      "bytes": 707549,
+      "technicalTokenCount": 0,
+      "visual_status": "not_run"
+    },
+    {
+      "file": "prototype/diagrams/batch-b/client-collaboration.en-US.visual-check.html",
+      "family": "standalone_archify",
+      "sha256": "f52d5dcbb72206f0159574f5f11a0a570df3ca357a6a24ccf02559a13f98f6e4",
+      "bytes": 2000,
+      "technicalTokenCount": 0,
+      "visual_status": "not_run"
+    },
+    {
+      "file": "prototype/diagrams/batch-b/client-collaboration.zh-CN.html",
+      "family": "standalone_archify",
+      "sha256": "cc2421d21ccf987ccb21f88266a1a79d97066ca45ad707dc5d7501d4d9472710",
+      "bytes": 707198,
+      "technicalTokenCount": 0,
+      "visual_status": "not_run"
+    },
+    {
+      "file": "prototype/diagrams/batch-b/client-collaboration.zh-CN.visual-check.html",
+      "family": "standalone_archify",
+      "sha256": "fb29c7fe1476e3c15a287a13e2a8d2f0b5939d7be1de2ff3fc88318ee61b9bbd",
+      "bytes": 2000,
+      "technicalTokenCount": 0,
+      "visual_status": "not_run"
+    },
+    {
+      "file": "prototype/diagrams/batch-c/DG-C-EDD.Current.en-AU.html",
+      "family": "standalone_archify",
+      "sha256": "4dc400db794543476931e4e7790b29ffe7bd8c8c73991f74d11b9b57367e39af",
+      "bytes": 706464,
+      "technicalTokenCount": 0,
+      "visual_status": "not_run"
+    },
+    {
+      "file": "prototype/diagrams/batch-c/DG-C-EDD.Current.en-AU.visual-check.html",
+      "family": "standalone_archify",
+      "sha256": "510821cbdd839bc0219cb4d0663f2e9e2251cdbe368ba40eb4bf9ed0f9968a95",
+      "bytes": 1976,
+      "technicalTokenCount": 6,
+      "visual_status": "not_run"
+    },
+    {
+      "file": "prototype/diagrams/batch-c/DG-C-EDD.Current.en-US.html",
+      "family": "standalone_archify",
+      "sha256": "4dc400db794543476931e4e7790b29ffe7bd8c8c73991f74d11b9b57367e39af",
+      "bytes": 706464,
+      "technicalTokenCount": 0,
+      "visual_status": "not_run"
+    },
+    {
+      "file": "prototype/diagrams/batch-c/DG-C-EDD.Current.en-US.visual-check.html",
+      "family": "standalone_archify",
+      "sha256": "dc547f8deb0b593956b498c2ae50a1d04c5ca15ef2784abc2a39c0680bd83a7a",
+      "bytes": 1976,
+      "technicalTokenCount": 6,
+      "visual_status": "not_run"
+    },
+    {
+      "file": "prototype/diagrams/batch-c/DG-C-EDD.Current.zh-CN.html",
+      "family": "standalone_archify",
+      "sha256": "bbe80aaf3c22299b58968784188c27b75f723dbecdc422708e0d84e2f8fd13c8",
+      "bytes": 704739,
+      "technicalTokenCount": 0,
+      "visual_status": "not_run"
+    },
+    {
+      "file": "prototype/diagrams/batch-c/DG-C-EDD.Current.zh-CN.visual-check.html",
+      "family": "standalone_archify",
+      "sha256": "de58d8514095583e66425c96af4b6e3aa2b33a01fb35b2541ccbf6783fed822a",
+      "bytes": 1976,
+      "technicalTokenCount": 6,
+      "visual_status": "not_run"
+    },
+    {
+      "file": "prototype/diagrams/batch-c/DG-C-EDD.Target.en-AU.html",
+      "family": "standalone_archify",
+      "sha256": "99f6fe2783a52e043704d18b02b0aba22dc3cf5dbdcaf55b07e07e3024353a2b",
+      "bytes": 706190,
+      "technicalTokenCount": 0,
+      "visual_status": "not_run"
+    },
+    {
+      "file": "prototype/diagrams/batch-c/DG-C-EDD.Target.en-AU.visual-check.html",
+      "family": "standalone_archify",
+      "sha256": "2c904cb849858a0108a932f0f0c1aef0112d757d2b3b572813a83dde13b46b94",
+      "bytes": 1970,
+      "technicalTokenCount": 6,
+      "visual_status": "not_run"
+    },
+    {
+      "file": "prototype/diagrams/batch-c/DG-C-EDD.Target.en-US.html",
+      "family": "standalone_archify",
+      "sha256": "99f6fe2783a52e043704d18b02b0aba22dc3cf5dbdcaf55b07e07e3024353a2b",
+      "bytes": 706190,
+      "technicalTokenCount": 0,
+      "visual_status": "not_run"
+    },
+    {
+      "file": "prototype/diagrams/batch-c/DG-C-EDD.Target.en-US.visual-check.html",
+      "family": "standalone_archify",
+      "sha256": "b7e2f55ca929fac17acf0193c96d0b22810ddc6084f68e65f44ef230381be6a2",
+      "bytes": 1970,
+      "technicalTokenCount": 6,
+      "visual_status": "not_run"
+    },
+    {
+      "file": "prototype/diagrams/batch-c/DG-C-EDD.Target.zh-CN.html",
+      "family": "standalone_archify",
+      "sha256": "3a1ae9f5a5fb65ccbd2044c5e52eab215976353ff12ba1da8b415fcf3a8f8da0",
+      "bytes": 704447,
+      "technicalTokenCount": 0,
+      "visual_status": "not_run"
+    },
+    {
+      "file": "prototype/diagrams/batch-c/DG-C-EDD.Target.zh-CN.visual-check.html",
+      "family": "standalone_archify",
+      "sha256": "dc3d345fd4e2e0a12583cdd846e51ed569d16eaea13357275f35f138afcdd3e1",
+      "bytes": 1970,
+      "technicalTokenCount": 6,
+      "visual_status": "not_run"
+    },
+    {
+      "file": "prototype/diagrams/batch-c/DG-C-MATCH.Current.en-AU.html",
+      "family": "standalone_archify",
+      "sha256": "fc41f775037c1e38a15fdbb8f3e5bfff55bee27a33a3edf7496fdb5709c22500",
+      "bytes": 704629,
+      "technicalTokenCount": 0,
+      "visual_status": "not_run"
+    },
+    {
+      "file": "prototype/diagrams/batch-c/DG-C-MATCH.Current.en-AU.r02.html",
+      "family": "standalone_archify",
+      "sha256": "136075d3be8d49c2be18468fe5ace1b1d9e424a4f99f579f8058350be5f8033b",
+      "bytes": 704341,
+      "technicalTokenCount": 0,
+      "visual_status": "not_run"
+    },
+    {
+      "file": "prototype/diagrams/batch-c/DG-C-MATCH.Current.en-AU.r02.visual-check.html",
+      "family": "standalone_archify",
+      "sha256": "bc7208c5bed182a973fbc7b36625ae8f752357c9b56d79218dbe455480fb05b0",
+      "bytes": 2012,
+      "technicalTokenCount": 6,
+      "visual_status": "not_run"
+    },
+    {
+      "file": "prototype/diagrams/batch-c/DG-C-MATCH.Current.en-AU.visual-check.html",
+      "family": "standalone_archify",
+      "sha256": "fcb989ca8c58fb74ffe6c607bb96bc61fb69babc142d0b02b01ea108e6daac21",
+      "bytes": 1988,
+      "technicalTokenCount": 6,
+      "visual_status": "not_run"
+    },
+    {
+      "file": "prototype/diagrams/batch-c/DG-C-MATCH.Current.en-US.html",
+      "family": "standalone_archify",
+      "sha256": "fc41f775037c1e38a15fdbb8f3e5bfff55bee27a33a3edf7496fdb5709c22500",
+      "bytes": 704629,
+      "technicalTokenCount": 0,
+      "visual_status": "not_run"
+    },
+    {
+      "file": "prototype/diagrams/batch-c/DG-C-MATCH.Current.en-US.r02.html",
+      "family": "standalone_archify",
+      "sha256": "136075d3be8d49c2be18468fe5ace1b1d9e424a4f99f579f8058350be5f8033b",
+      "bytes": 704341,
+      "technicalTokenCount": 0,
+      "visual_status": "not_run"
+    },
+    {
+      "file": "prototype/diagrams/batch-c/DG-C-MATCH.Current.en-US.r02.visual-check.html",
+      "family": "standalone_archify",
+      "sha256": "fcf0070ee8e2fdfb93ad326bbf999da1c37c7b356a6c41fef2986579bc08dc4d",
+      "bytes": 2012,
+      "technicalTokenCount": 6,
+      "visual_status": "not_run"
+    },
+    {
+      "file": "prototype/diagrams/batch-c/DG-C-MATCH.Current.en-US.visual-check.html",
+      "family": "standalone_archify",
+      "sha256": "98ce4955293d5bad231a89409bb21c6dd0115f250bf0266f8156df8dafa57f22",
+      "bytes": 1988,
+      "technicalTokenCount": 6,
+      "visual_status": "not_run"
+    },
+    {
+      "file": "prototype/diagrams/batch-c/DG-C-MATCH.Current.zh-CN.html",
+      "family": "standalone_archify",
+      "sha256": "fcea51023dc17e163b65731200414f30d5b21238cedba4acd05b92c5ba5df100",
+      "bytes": 705192,
+      "technicalTokenCount": 0,
+      "visual_status": "not_run"
+    },
+    {
+      "file": "prototype/diagrams/batch-c/DG-C-MATCH.Current.zh-CN.r02.html",
+      "family": "standalone_archify",
+      "sha256": "ceeef2a61a634cda16a4e396b155d507e7205055c7380d386ff9e214c484e90d",
+      "bytes": 704931,
+      "technicalTokenCount": 0,
+      "visual_status": "not_run"
+    },
+    {
+      "file": "prototype/diagrams/batch-c/DG-C-MATCH.Current.zh-CN.r02.visual-check.html",
+      "family": "standalone_archify",
+      "sha256": "e5cd5d9b444872cbf440651fdd6942886467c18b5a4d44bc7c6d712f9799e8fa",
+      "bytes": 2012,
+      "technicalTokenCount": 6,
+      "visual_status": "not_run"
+    },
+    {
+      "file": "prototype/diagrams/batch-c/DG-C-MATCH.Current.zh-CN.visual-check.html",
+      "family": "standalone_archify",
+      "sha256": "ce6b4350d02d4788bc540bbc729247a29dd06117bd7bd21063c2452e31db779f",
+      "bytes": 1988,
+      "technicalTokenCount": 6,
+      "visual_status": "not_run"
+    },
+    {
+      "file": "prototype/diagrams/batch-c/DG-C-MATCH.Target.en-AU.html",
+      "family": "standalone_archify",
+      "sha256": "821b0e840c54a61d6ce45c030297668b28d24dcc0b9f4931ff8c2e2ce563b5ea",
+      "bytes": 704491,
+      "technicalTokenCount": 0,
+      "visual_status": "not_run"
+    },
+    {
+      "file": "prototype/diagrams/batch-c/DG-C-MATCH.Target.en-AU.r02.html",
+      "family": "standalone_archify",
+      "sha256": "54c03087f55ba7e78e7c9b0e42195a3395e5cbc4d44a0530f84184bc0d2d4d13",
+      "bytes": 704715,
+      "technicalTokenCount": 0,
+      "visual_status": "not_run"
+    },
+    {
+      "file": "prototype/diagrams/batch-c/DG-C-MATCH.Target.en-AU.r02.visual-check.html",
+      "family": "standalone_archify",
+      "sha256": "28def4b342c6a853d6063d5a3bab6604bb7ad75e8b402b392af6062b90da28c6",
+      "bytes": 2006,
+      "technicalTokenCount": 6,
+      "visual_status": "not_run"
+    },
+    {
+      "file": "prototype/diagrams/batch-c/DG-C-MATCH.Target.en-AU.visual-check.html",
+      "family": "standalone_archify",
+      "sha256": "85b2f97adae8e15a61ca29a05197707837b7c9b48d8b6ae8e15082ac7e0fbc7a",
+      "bytes": 1982,
+      "technicalTokenCount": 6,
+      "visual_status": "not_run"
+    },
+    {
+      "file": "prototype/diagrams/batch-c/DG-C-MATCH.Target.en-US.html",
+      "family": "standalone_archify",
+      "sha256": "821b0e840c54a61d6ce45c030297668b28d24dcc0b9f4931ff8c2e2ce563b5ea",
+      "bytes": 704491,
+      "technicalTokenCount": 0,
+      "visual_status": "not_run"
+    },
+    {
+      "file": "prototype/diagrams/batch-c/DG-C-MATCH.Target.en-US.r02.html",
+      "family": "standalone_archify",
+      "sha256": "54c03087f55ba7e78e7c9b0e42195a3395e5cbc4d44a0530f84184bc0d2d4d13",
+      "bytes": 704715,
+      "technicalTokenCount": 0,
+      "visual_status": "not_run"
+    },
+    {
+      "file": "prototype/diagrams/batch-c/DG-C-MATCH.Target.en-US.r02.visual-check.html",
+      "family": "standalone_archify",
+      "sha256": "2f57521c26ba6098e7eefd979087585f6e6f43e5f815fa101769077aee6c6ec3",
+      "bytes": 2006,
+      "technicalTokenCount": 6,
+      "visual_status": "not_run"
+    },
+    {
+      "file": "prototype/diagrams/batch-c/DG-C-MATCH.Target.en-US.visual-check.html",
+      "family": "standalone_archify",
+      "sha256": "550d6573f8e8373f6f5cd12772addd8486c24da62c086e2fbe8f22064426b35e",
+      "bytes": 1982,
+      "technicalTokenCount": 6,
+      "visual_status": "not_run"
+    },
+    {
+      "file": "prototype/diagrams/batch-c/DG-C-MATCH.Target.zh-CN.html",
+      "family": "standalone_archify",
+      "sha256": "66adb62d29b8aa08755f9f188af3a8a242521e48965953e303469886883454ac",
+      "bytes": 704969,
+      "technicalTokenCount": 0,
+      "visual_status": "not_run"
+    },
+    {
+      "file": "prototype/diagrams/batch-c/DG-C-MATCH.Target.zh-CN.r02.html",
+      "family": "standalone_archify",
+      "sha256": "ae58f3feb3dffd8642bff54a1b708b8247cef69f5dfc2dce0f46524ceadfb60f",
+      "bytes": 705230,
+      "technicalTokenCount": 0,
+      "visual_status": "not_run"
+    },
+    {
+      "file": "prototype/diagrams/batch-c/DG-C-MATCH.Target.zh-CN.r02.visual-check.html",
+      "family": "standalone_archify",
+      "sha256": "a71a05ec8e5a17748e38613efd1821b62253400c481c55a9dd45696334a1e603",
+      "bytes": 2006,
+      "technicalTokenCount": 6,
+      "visual_status": "not_run"
+    },
+    {
+      "file": "prototype/diagrams/batch-c/DG-C-MATCH.Target.zh-CN.visual-check.html",
+      "family": "standalone_archify",
+      "sha256": "20fdef4ff89336a2df8a77c97c97967fabdeb226cf7c1c9d2ec9ef6747857749",
+      "bytes": 1982,
+      "technicalTokenCount": 6,
+      "visual_status": "not_run"
+    },
+    {
+      "file": "prototype/diagrams/batch-c/DG-C-POPULATION.Current.en-AU.html",
+      "family": "standalone_archify",
+      "sha256": "71526ac2684e3b54c9a334162478daa7b02d3d5c6c1287aecbfbe960587f9ef6",
+      "bytes": 704421,
+      "technicalTokenCount": 0,
+      "visual_status": "not_run"
+    },
+    {
+      "file": "prototype/diagrams/batch-c/DG-C-POPULATION.Current.en-AU.r02.html",
+      "family": "standalone_archify",
+      "sha256": "19706e638b8539e360e8e314107df973411f25e6efdd5446fa821a6d28f43c13",
+      "bytes": 704454,
+      "technicalTokenCount": 0,
+      "visual_status": "not_run"
+    },
+    {
+      "file": "prototype/diagrams/batch-c/DG-C-POPULATION.Current.en-AU.r02.visual-check.html",
+      "family": "standalone_archify",
+      "sha256": "08c05759ea02a583911fbdc3d557fd271362064ee1dd9f61548e812201404705",
+      "bytes": 2042,
+      "technicalTokenCount": 6,
+      "visual_status": "not_run"
+    },
+    {
+      "file": "prototype/diagrams/batch-c/DG-C-POPULATION.Current.en-AU.visual-check.html",
+      "family": "standalone_archify",
+      "sha256": "0b6264053a92b979726c7fa5daa34301bfe8419f34613630b63d2b7239dee2e0",
+      "bytes": 2018,
+      "technicalTokenCount": 6,
+      "visual_status": "not_run"
+    },
+    {
+      "file": "prototype/diagrams/batch-c/DG-C-POPULATION.Current.en-US.html",
+      "family": "standalone_archify",
+      "sha256": "71526ac2684e3b54c9a334162478daa7b02d3d5c6c1287aecbfbe960587f9ef6",
+      "bytes": 704421,
+      "technicalTokenCount": 0,
+      "visual_status": "not_run"
+    },
+    {
+      "file": "prototype/diagrams/batch-c/DG-C-POPULATION.Current.en-US.r02.html",
+      "family": "standalone_archify",
+      "sha256": "19706e638b8539e360e8e314107df973411f25e6efdd5446fa821a6d28f43c13",
+      "bytes": 704454,
+      "technicalTokenCount": 0,
+      "visual_status": "not_run"
+    },
+    {
+      "file": "prototype/diagrams/batch-c/DG-C-POPULATION.Current.en-US.r02.visual-check.html",
+      "family": "standalone_archify",
+      "sha256": "521655ffb6b9588ca8c8c30723117e6c24a7fb0946735d226f69901562b89e19",
+      "bytes": 2042,
+      "technicalTokenCount": 6,
+      "visual_status": "not_run"
+    },
+    {
+      "file": "prototype/diagrams/batch-c/DG-C-POPULATION.Current.en-US.visual-check.html",
+      "family": "standalone_archify",
+      "sha256": "0a49083792986954c45efefc56ddcf69e4038432c95eb3ba26c29552291affa3",
+      "bytes": 2018,
+      "technicalTokenCount": 6,
+      "visual_status": "not_run"
+    },
+    {
+      "file": "prototype/diagrams/batch-c/DG-C-POPULATION.Current.zh-CN.html",
+      "family": "standalone_archify",
+      "sha256": "0eb6ccc26647fe7c67272fe5feca82165f2caa2cc08a1ba909cc3bf134d6b6f2",
+      "bytes": 705124,
+      "technicalTokenCount": 0,
+      "visual_status": "not_run"
+    },
+    {
+      "file": "prototype/diagrams/batch-c/DG-C-POPULATION.Current.zh-CN.visual-check.html",
+      "family": "standalone_archify",
+      "sha256": "897df41fd5b9e4243d7ce76d32cdb8a68abdcc952c76adaa7caf18f87610a5e0",
+      "bytes": 2018,
+      "technicalTokenCount": 6,
+      "visual_status": "not_run"
+    },
+    {
+      "file": "prototype/diagrams/batch-c/DG-C-POPULATION.Target.en-AU.html",
+      "family": "standalone_archify",
+      "sha256": "6eb14cd6779ec7fbb5d16bbf4b09638dc74986773cc6c8425ff2468f5a864736",
+      "bytes": 704198,
+      "technicalTokenCount": 0,
+      "visual_status": "not_run"
+    },
+    {
+      "file": "prototype/diagrams/batch-c/DG-C-POPULATION.Target.en-AU.r02.html",
+      "family": "standalone_archify",
+      "sha256": "0ee4ee1415e83d67dd12260e796a7037374f7cc58ae219b1bac183d609391d64",
+      "bytes": 704741,
+      "technicalTokenCount": 0,
+      "visual_status": "not_run"
+    },
+    {
+      "file": "prototype/diagrams/batch-c/DG-C-POPULATION.Target.en-AU.r02.visual-check.html",
+      "family": "standalone_archify",
+      "sha256": "30fa4ed8d4e249fa2afa4c2b0a9ba867af532817c2a38919ec47c2bbe55ed389",
+      "bytes": 2036,
+      "technicalTokenCount": 6,
+      "visual_status": "not_run"
+    },
+    {
+      "file": "prototype/diagrams/batch-c/DG-C-POPULATION.Target.en-AU.visual-check.html",
+      "family": "standalone_archify",
+      "sha256": "dd6598a4eaa15ef9bb4480ba4c2747483bfc6a7d15e338c0583bb31adbedc8bc",
+      "bytes": 2012,
+      "technicalTokenCount": 6,
+      "visual_status": "not_run"
+    },
+    {
+      "file": "prototype/diagrams/batch-c/DG-C-POPULATION.Target.en-US.html",
+      "family": "standalone_archify",
+      "sha256": "6eb14cd6779ec7fbb5d16bbf4b09638dc74986773cc6c8425ff2468f5a864736",
+      "bytes": 704198,
+      "technicalTokenCount": 0,
+      "visual_status": "not_run"
+    },
+    {
+      "file": "prototype/diagrams/batch-c/DG-C-POPULATION.Target.en-US.r02.html",
+      "family": "standalone_archify",
+      "sha256": "0ee4ee1415e83d67dd12260e796a7037374f7cc58ae219b1bac183d609391d64",
+      "bytes": 704741,
+      "technicalTokenCount": 0,
+      "visual_status": "not_run"
+    },
+    {
+      "file": "prototype/diagrams/batch-c/DG-C-POPULATION.Target.en-US.r02.visual-check.html",
+      "family": "standalone_archify",
+      "sha256": "4efb0edbfff541573e002c7ebf2e2ae225d221416c65a793531250357d6ac8f4",
+      "bytes": 2036,
+      "technicalTokenCount": 6,
+      "visual_status": "not_run"
+    },
+    {
+      "file": "prototype/diagrams/batch-c/DG-C-POPULATION.Target.en-US.visual-check.html",
+      "family": "standalone_archify",
+      "sha256": "3cf81abb492d4fd5000e1499edc3ec8d73388b1200025282f5399b8057514560",
+      "bytes": 2012,
+      "technicalTokenCount": 6,
+      "visual_status": "not_run"
+    },
+    {
+      "file": "prototype/diagrams/batch-c/DG-C-POPULATION.Target.zh-CN.html",
+      "family": "standalone_archify",
+      "sha256": "042760ac46c9461d0ccbca92edc38b80d87999898fd709fabaa7df6a17135ccd",
+      "bytes": 704832,
+      "technicalTokenCount": 0,
+      "visual_status": "not_run"
+    },
+    {
+      "file": "prototype/diagrams/batch-c/DG-C-POPULATION.Target.zh-CN.visual-check.html",
+      "family": "standalone_archify",
+      "sha256": "e156efbb653d0cd0759cc734edc972164e4e95e9d82d636d8a7e3a921bd4bd8e",
+      "bytes": 2012,
+      "technicalTokenCount": 6,
+      "visual_status": "not_run"
+    },
+    {
+      "file": "prototype/diagrams/batch-d/DG-D01.en-AU.html",
+      "family": "standalone_archify",
+      "sha256": "c1201c92dac9acda86c4c1de60beeb0adfeb576cb73619b74169f9daa86c89a7",
+      "bytes": 706966,
+      "technicalTokenCount": 0,
+      "visual_status": "not_run"
+    },
+    {
+      "file": "prototype/diagrams/batch-d/DG-D01.en-AU.r02.html",
+      "family": "standalone_archify",
+      "sha256": "f97cd0480e02465f634332ccaa0a89f74ce5c1be462da45f05e10f9281ee6dc9",
+      "bytes": 707391,
+      "technicalTokenCount": 0,
+      "visual_status": "not_run"
+    },
+    {
+      "file": "prototype/diagrams/batch-d/DG-D01.en-AU.r02.visual-check.html",
+      "family": "standalone_archify",
+      "sha256": "1c6ff0e99c9532cc57b1764af4be4d2b0846f24af859ae2ac470e7f4f9f51b04",
+      "bytes": 1940,
+      "technicalTokenCount": 6,
+      "visual_status": "not_run"
+    },
+    {
+      "file": "prototype/diagrams/batch-d/DG-D01.en-AU.visual-check.html",
+      "family": "standalone_archify",
+      "sha256": "ab6e60ff9b11d30d6fcdcf81a130bdb09aa9eeb3def1423ae5725def329df708",
+      "bytes": 1916,
+      "technicalTokenCount": 6,
+      "visual_status": "not_run"
+    },
+    {
+      "file": "prototype/diagrams/batch-d/DG-D01.en-US.html",
+      "family": "standalone_archify",
+      "sha256": "c1201c92dac9acda86c4c1de60beeb0adfeb576cb73619b74169f9daa86c89a7",
+      "bytes": 706966,
+      "technicalTokenCount": 0,
+      "visual_status": "not_run"
+    },
+    {
+      "file": "prototype/diagrams/batch-d/DG-D01.en-US.r02.html",
+      "family": "standalone_archify",
+      "sha256": "f97cd0480e02465f634332ccaa0a89f74ce5c1be462da45f05e10f9281ee6dc9",
+      "bytes": 707391,
+      "technicalTokenCount": 0,
+      "visual_status": "not_run"
+    },
+    {
+      "file": "prototype/diagrams/batch-d/DG-D01.en-US.r02.visual-check.html",
+      "family": "standalone_archify",
+      "sha256": "b85500b752c9f36f0831ff9f30af8c6984a253ecbe943887f23e915a5d03ab3e",
+      "bytes": 1940,
+      "technicalTokenCount": 6,
+      "visual_status": "not_run"
+    },
+    {
+      "file": "prototype/diagrams/batch-d/DG-D01.en-US.visual-check.html",
+      "family": "standalone_archify",
+      "sha256": "f235a3b8828a11fad6c84930c47677f23768a749c873cb5daf34664418a90d0a",
+      "bytes": 1916,
+      "technicalTokenCount": 6,
+      "visual_status": "not_run"
+    },
+    {
+      "file": "prototype/diagrams/batch-d/DG-D01.zh-CN.html",
+      "family": "standalone_archify",
+      "sha256": "8f360910ca22ee30e642d34577eb59e0e71056beaf5bb010077c06731572f390",
+      "bytes": 706553,
+      "technicalTokenCount": 0,
+      "visual_status": "not_run"
+    },
+    {
+      "file": "prototype/diagrams/batch-d/DG-D01.zh-CN.r02.html",
+      "family": "standalone_archify",
+      "sha256": "1cf0d8f1ffc5fea9371d8fd85b6c9918e4dd5063d343d0cff566980541e7ecf4",
+      "bytes": 706981,
+      "technicalTokenCount": 0,
+      "visual_status": "not_run"
+    },
+    {
+      "file": "prototype/diagrams/batch-d/DG-D01.zh-CN.r02.visual-check.html",
+      "family": "standalone_archify",
+      "sha256": "585071beca4238d6fc0015561244c61b9b598c1bd0d2411fec64632fdf04af77",
+      "bytes": 1940,
+      "technicalTokenCount": 6,
+      "visual_status": "not_run"
+    },
+    {
+      "file": "prototype/diagrams/batch-d/DG-D01.zh-CN.visual-check.html",
+      "family": "standalone_archify",
+      "sha256": "16b4e0a565f744bbe9eaac3db1371f0c11ae1201cba66abeb2568afc4ad20e37",
+      "bytes": 1916,
+      "technicalTokenCount": 6,
+      "visual_status": "not_run"
+    },
+    {
+      "file": "prototype/diagrams/batch-d/DG-D02.en-AU.html",
+      "family": "standalone_archify",
+      "sha256": "0ce26693fd5dcf96e77340108700f635e43b39b2936069286e129d17b9d6d24b",
+      "bytes": 709288,
+      "technicalTokenCount": 0,
+      "visual_status": "not_run"
+    },
+    {
+      "file": "prototype/diagrams/batch-d/DG-D02.en-AU.r02.html",
+      "family": "standalone_archify",
+      "sha256": "13664ea2fa4d29f24d41208b854082eec60b9ffcd852ca08090922f902e6309d",
+      "bytes": 708850,
+      "technicalTokenCount": 0,
+      "visual_status": "not_run"
+    },
+    {
+      "file": "prototype/diagrams/batch-d/DG-D02.en-AU.r02.visual-check.html",
+      "family": "standalone_archify",
+      "sha256": "3b464e319041fbafae2f370e9bf8cefcf047942e14d2fa0c6e00758625cf8dda",
+      "bytes": 1940,
+      "technicalTokenCount": 6,
+      "visual_status": "not_run"
+    },
+    {
+      "file": "prototype/diagrams/batch-d/DG-D02.en-AU.visual-check.html",
+      "family": "standalone_archify",
+      "sha256": "96148b7aea9eed56396392664e4319b6aa7d07e29d8942fc2a5937dda1afff8e",
+      "bytes": 1916,
+      "technicalTokenCount": 6,
+      "visual_status": "not_run"
+    },
+    {
+      "file": "prototype/diagrams/batch-d/DG-D02.en-US.html",
+      "family": "standalone_archify",
+      "sha256": "0ce26693fd5dcf96e77340108700f635e43b39b2936069286e129d17b9d6d24b",
+      "bytes": 709288,
+      "technicalTokenCount": 0,
+      "visual_status": "not_run"
+    },
+    {
+      "file": "prototype/diagrams/batch-d/DG-D02.en-US.r02.html",
+      "family": "standalone_archify",
+      "sha256": "13664ea2fa4d29f24d41208b854082eec60b9ffcd852ca08090922f902e6309d",
+      "bytes": 708850,
+      "technicalTokenCount": 0,
+      "visual_status": "not_run"
+    },
+    {
+      "file": "prototype/diagrams/batch-d/DG-D02.en-US.r02.visual-check.html",
+      "family": "standalone_archify",
+      "sha256": "760f6ccb27a8337102e2d5145e42a1083075797051dba034a9e5c65d0e257cff",
+      "bytes": 1940,
+      "technicalTokenCount": 6,
+      "visual_status": "not_run"
+    },
+    {
+      "file": "prototype/diagrams/batch-d/DG-D02.en-US.visual-check.html",
+      "family": "standalone_archify",
+      "sha256": "a6defac9eac8dd1fc97630c0dc5e32eddaf7c5bc24d193c708cf2fbec16788d6",
+      "bytes": 1916,
+      "technicalTokenCount": 6,
+      "visual_status": "not_run"
+    },
+    {
+      "file": "prototype/diagrams/batch-d/DG-D02.zh-CN.html",
+      "family": "standalone_archify",
+      "sha256": "4649d7d9d4f301ff4b75efb2ed113238ced8082ad373d9f96cb8225b6e352465",
+      "bytes": 708486,
+      "technicalTokenCount": 0,
+      "visual_status": "not_run"
+    },
+    {
+      "file": "prototype/diagrams/batch-d/DG-D02.zh-CN.r02.html",
+      "family": "standalone_archify",
+      "sha256": "cefd3740c8854bde1bf56c3c535d35fc154676a494e20d08dcd9404bf65d428d",
+      "bytes": 709081,
+      "technicalTokenCount": 0,
+      "visual_status": "not_run"
+    },
+    {
+      "file": "prototype/diagrams/batch-d/DG-D02.zh-CN.r02.visual-check.html",
+      "family": "standalone_archify",
+      "sha256": "0c1f80133ec6b44d24ddc4c9fcee0339d8408ac2f5d705beecbfd2a506661426",
+      "bytes": 1940,
+      "technicalTokenCount": 6,
+      "visual_status": "not_run"
+    },
+    {
+      "file": "prototype/diagrams/batch-d/DG-D02.zh-CN.visual-check.html",
+      "family": "standalone_archify",
+      "sha256": "3f08d2475e158e80f2e515d47b4c6a247a9798ea48ea9fe67439e1d2bda156db",
+      "bytes": 1916,
+      "technicalTokenCount": 6,
+      "visual_status": "not_run"
+    },
+    {
+      "file": "prototype/diagrams/batch-d/DG-D03.en-AU.html",
+      "family": "standalone_archify",
+      "sha256": "bdc95abbe99b4db63af4896a425bb225cdf937bab15881ba16bc103c61edca99",
+      "bytes": 715723,
+      "technicalTokenCount": 0,
+      "visual_status": "not_run"
+    },
+    {
+      "file": "prototype/diagrams/batch-d/DG-D03.en-AU.r02.html",
+      "family": "standalone_archify",
+      "sha256": "500b2d8de2b082ce583fc3fc06f7d92a4676c3d8da5f5fc5065fc8aaf575481f",
+      "bytes": 716458,
+      "technicalTokenCount": 0,
+      "visual_status": "not_run"
+    },
+    {
+      "file": "prototype/diagrams/batch-d/DG-D03.en-AU.r02.visual-check.html",
+      "family": "standalone_archify",
+      "sha256": "81a9b0ecf7eea08b1bf3e4159ac50167b8fbf6681e83439355d285b53bb42a1e",
+      "bytes": 1940,
+      "technicalTokenCount": 6,
+      "visual_status": "not_run"
+    },
+    {
+      "file": "prototype/diagrams/batch-d/DG-D03.en-AU.visual-check.html",
+      "family": "standalone_archify",
+      "sha256": "5332cd3d364c1e2678a4eed8f6e0a552261074d3094548656530c83999bfa346",
+      "bytes": 1916,
+      "technicalTokenCount": 6,
+      "visual_status": "not_run"
+    },
+    {
+      "file": "prototype/diagrams/batch-d/DG-D03.en-US.html",
+      "family": "standalone_archify",
+      "sha256": "bdc95abbe99b4db63af4896a425bb225cdf937bab15881ba16bc103c61edca99",
+      "bytes": 715723,
+      "technicalTokenCount": 0,
+      "visual_status": "not_run"
+    },
+    {
+      "file": "prototype/diagrams/batch-d/DG-D03.en-US.r02.html",
+      "family": "standalone_archify",
+      "sha256": "500b2d8de2b082ce583fc3fc06f7d92a4676c3d8da5f5fc5065fc8aaf575481f",
+      "bytes": 716458,
+      "technicalTokenCount": 0,
+      "visual_status": "not_run"
+    },
+    {
+      "file": "prototype/diagrams/batch-d/DG-D03.en-US.r02.visual-check.html",
+      "family": "standalone_archify",
+      "sha256": "11bc2d77d7521d72f21df1b430d0e14f4a91e9cc77845f32d7e15b5adbf64e6a",
+      "bytes": 1940,
+      "technicalTokenCount": 6,
+      "visual_status": "not_run"
+    },
+    {
+      "file": "prototype/diagrams/batch-d/DG-D03.en-US.visual-check.html",
+      "family": "standalone_archify",
+      "sha256": "7902dcfb86660b8c5bebe462973a12bbb689916dfcd0d91111495d01c2961b5f",
+      "bytes": 1916,
+      "technicalTokenCount": 6,
+      "visual_status": "not_run"
+    },
+    {
+      "file": "prototype/diagrams/batch-d/DG-D03.zh-CN.html",
+      "family": "standalone_archify",
+      "sha256": "f78e5089d9019bcd8b57a1e5477b792fb6db806410f741d9c4a9563a70a6691c",
+      "bytes": 714705,
+      "technicalTokenCount": 0,
+      "visual_status": "not_run"
+    },
+    {
+      "file": "prototype/diagrams/batch-d/DG-D03.zh-CN.r02.html",
+      "family": "standalone_archify",
+      "sha256": "bdf37694083bc3a79b1c7f996b1e24f0672d13013d3a588b233330c9e2dd0cf1",
+      "bytes": 716980,
+      "technicalTokenCount": 0,
+      "visual_status": "not_run"
+    },
+    {
+      "file": "prototype/diagrams/batch-d/DG-D03.zh-CN.r02.visual-check.html",
+      "family": "standalone_archify",
+      "sha256": "111b353f4ef9f3b3afd0676fef94f7b3a7890850dd25c7758a9b843ceb841bb0",
+      "bytes": 1940,
+      "technicalTokenCount": 6,
+      "visual_status": "not_run"
+    },
+    {
+      "file": "prototype/diagrams/batch-d/DG-D03.zh-CN.visual-check.html",
+      "family": "standalone_archify",
+      "sha256": "53e0dd41b03ec2f8eb3a30acd5262d621f97c1ef779d1a704ceca341676eba9e",
+      "bytes": 1916,
+      "technicalTokenCount": 6,
+      "visual_status": "not_run"
+    },
+    {
+      "file": "prototype/diagrams/current.en-AU.html",
+      "family": "standalone_archify",
+      "sha256": "60bdb39b0c7bd205e446b42cd781c49949dfa011ebe5fed30eb1f65c3e8f0795",
+      "bytes": 717070,
+      "technicalTokenCount": 1,
+      "visual_status": "not_run"
+    },
+    {
+      "file": "prototype/diagrams/current.en-AU.visual-check.html",
+      "family": "standalone_archify",
+      "sha256": "f9322f33141b23c888708308a1b3a267314f7d48de548f61f70977fd884ad3d4",
+      "bytes": 1922,
+      "technicalTokenCount": 0,
+      "visual_status": "not_run"
+    },
+    {
+      "file": "prototype/diagrams/current.en-US.html",
+      "family": "standalone_archify",
+      "sha256": "8d5ac99f72d0cbad55354dd5a3a1b6257e35be1bc5a68a8189e8ae1d4df0e96b",
+      "bytes": 717070,
+      "technicalTokenCount": 1,
+      "visual_status": "not_run"
+    },
+    {
+      "file": "prototype/diagrams/current.en-US.visual-check.html",
+      "family": "standalone_archify",
+      "sha256": "95d578435e8d8b658ec48ca7a753e300d72ff3caea6cf01d0a9f7799413aa111",
+      "bytes": 1922,
+      "technicalTokenCount": 0,
+      "visual_status": "not_run"
+    },
+    {
+      "file": "prototype/diagrams/current.zh-CN.html",
+      "family": "standalone_archify",
+      "sha256": "cafd085abebcc0139646ae7e94fa6e33df32fea622bf9948d73643a0aca6f7eb",
+      "bytes": 716503,
+      "technicalTokenCount": 1,
+      "visual_status": "not_run"
+    },
+    {
+      "file": "prototype/diagrams/current.zh-CN.visual-check.html",
+      "family": "standalone_archify",
+      "sha256": "fc21968176b29d5c7d8e71c98c4682c7b22338cad75a2b1760f2bfa29e6e2903",
+      "bytes": 1922,
+      "technicalTokenCount": 0,
+      "visual_status": "not_run"
+    },
+    {
+      "file": "prototype/diagrams/screening.en-AU.html",
+      "family": "standalone_archify",
+      "sha256": "7ddd44fcac3f5b5260bd5e8ffaab4bba736f90bbb79b89263cf83f09ee9c52fe",
+      "bytes": 703901,
+      "technicalTokenCount": 10,
+      "visual_status": "not_run"
+    },
+    {
+      "file": "prototype/diagrams/screening.en-AU.visual-check.html",
+      "family": "standalone_archify",
+      "sha256": "11190499d9557b1348857824de52ae7286b96ed6c9572fa205d4f8bcd481a0eb",
+      "bytes": 1934,
+      "technicalTokenCount": 0,
+      "visual_status": "not_run"
+    },
+    {
+      "file": "prototype/diagrams/screening.en-US.html",
+      "family": "standalone_archify",
+      "sha256": "f8a61bc0680f2817b3065872ba373a226468da4676108826a7b4728d6c581810",
+      "bytes": 703901,
+      "technicalTokenCount": 10,
+      "visual_status": "not_run"
+    },
+    {
+      "file": "prototype/diagrams/screening.en-US.visual-check.html",
+      "family": "standalone_archify",
+      "sha256": "9f3147fde405809c17c20de85abf565b2ec5ef4b2cd30b59c9249309d6ba1b37",
+      "bytes": 1934,
+      "technicalTokenCount": 0,
+      "visual_status": "not_run"
+    },
+    {
+      "file": "prototype/diagrams/screening.zh-CN.html",
+      "family": "standalone_archify",
+      "sha256": "c6d94954e6479c728d8ffc9037887695d9d0523597deae18afa7650b3fccc704",
+      "bytes": 703388,
+      "technicalTokenCount": 10,
+      "visual_status": "not_run"
+    },
+    {
+      "file": "prototype/diagrams/screening.zh-CN.visual-check.html",
+      "family": "standalone_archify",
+      "sha256": "fd5d7020c2c61b3399819753302a8b5f3ff8995d7d8a55ca50ea1c2c1a017eae",
+      "bytes": 1934,
+      "technicalTokenCount": 0,
+      "visual_status": "not_run"
+    },
+    {
+      "file": "prototype/diagrams/target.en-AU.html",
+      "family": "standalone_archify",
+      "sha256": "34c258b3d4926663365d2715692dab86eafbcbca58f109b84cfe21730c9255eb",
+      "bytes": 717047,
+      "technicalTokenCount": 1,
+      "visual_status": "not_run"
+    },
+    {
+      "file": "prototype/diagrams/target.en-AU.visual-check.html",
+      "family": "standalone_archify",
+      "sha256": "bc92863723dd8864781848e43306ec29a2edd06eb2e5d40f1bd24ad725db7e44",
+      "bytes": 1916,
+      "technicalTokenCount": 0,
+      "visual_status": "not_run"
+    },
+    {
+      "file": "prototype/diagrams/target.en-US.html",
+      "family": "standalone_archify",
+      "sha256": "7f938874b7d4956dfba374da49415cd4d8db82fd102e779faae6bf55ca98337a",
+      "bytes": 717047,
+      "technicalTokenCount": 1,
+      "visual_status": "not_run"
+    },
+    {
+      "file": "prototype/diagrams/target.en-US.visual-check.html",
+      "family": "standalone_archify",
+      "sha256": "c5fbc40f518ce0d50d9c62acaefa6785141619ab73d408b3c9fe65b14ecd55b8",
+      "bytes": 1916,
+      "technicalTokenCount": 0,
+      "visual_status": "not_run"
+    },
+    {
+      "file": "prototype/diagrams/target.zh-CN.html",
+      "family": "standalone_archify",
+      "sha256": "9302c41126052ae6175b26633ae146a6f88a6dd5cc540316baddf3bf7ce67f0f",
+      "bytes": 716479,
+      "technicalTokenCount": 1,
+      "visual_status": "not_run"
+    },
+    {
+      "file": "prototype/diagrams/target.zh-CN.visual-check.html",
+      "family": "standalone_archify",
+      "sha256": "0264edea230000a08474ad873154bee8645a8c872e3818fe7c06f80e47505873",
+      "bytes": 1916,
+      "technicalTokenCount": 0,
+      "visual_status": "not_run"
+    },
+    {
+      "file": "prototype/index.html",
+      "family": "active_host",
+      "sha256": "d05f33a729131503398bea7161f0a02db123c21c9a4dccfc1451ba0526e0aec6",
+      "bytes": 2221,
+      "technicalTokenCount": 12,
+      "visual_status": "not_run"
+    },
+    {
+      "file": "prototype/media/d2-batch-a/r01/assets/diagrams/DG-ENABLE-A__r01__en-AU.html",
+      "family": "static_or_media",
+      "sha256": "29d1830725c22086207aaf21257f48122bd4324c9268ad19664f8921eebfba64",
+      "bytes": 700807,
+      "technicalTokenCount": 0,
+      "visual_status": "not_run"
+    },
+    {
+      "file": "prototype/media/d2-batch-a/r01/assets/diagrams/DG-ENABLE-A__r01__zh-CN.html",
+      "family": "static_or_media",
+      "sha256": "cd22164d70cd52858ec799ecbd0c3f705a6896ac2a5652c723f6a6d2f05897a8",
+      "bytes": 700269,
+      "technicalTokenCount": 0,
+      "visual_status": "not_run"
+    },
+    {
+      "file": "prototype/media/d2-batch-a/r01/assets/diagrams/DG-ENTITY-A__r01__en-AU.html",
+      "family": "static_or_media",
+      "sha256": "8401ba6b65ec28fb6bb2601309e2d48bd030bd13890c2d3b9bb52e6355a6488b",
+      "bytes": 701358,
+      "technicalTokenCount": 0,
+      "visual_status": "not_run"
+    },
+    {
+      "file": "prototype/media/d2-batch-a/r01/assets/diagrams/DG-ENTITY-A__r01__zh-CN.html",
+      "family": "static_or_media",
+      "sha256": "5559045b702a4005ca4e97ad14e1c3365adb4878ffcb9cddefd5cf2632dde6db",
+      "bytes": 700878,
+      "technicalTokenCount": 0,
+      "visual_status": "not_run"
+    },
+    {
+      "file": "prototype/media/d2-batch-a/r01/assets/diagrams/DG-SCOPE-A__r01__en-AU.html",
+      "family": "static_or_media",
+      "sha256": "b34f1915ed162331587b788e077c1d019169d57275a4b2677eb2213eedeca7e6",
+      "bytes": 700604,
+      "technicalTokenCount": 0,
+      "visual_status": "not_run"
+    },
+    {
+      "file": "prototype/media/d2-batch-a/r01/assets/diagrams/DG-SCOPE-A__r01__zh-CN.html",
+      "family": "static_or_media",
+      "sha256": "ce06385f6156ccc669ae48d1c962a8c6d6e094d5a383f541dc5efcabb5897a82",
+      "bytes": 700169,
+      "technicalTokenCount": 0,
+      "visual_status": "not_run"
+    },
+    {
+      "file": "prototype/media/d2-batch-a/r01/print/DMO-A01__r01__en-AU.html",
+      "family": "static_or_media",
+      "sha256": "78cbf4ee9d7da53fdaa153011bde9f70fcdde552a24fe2bf59fd7215c0aee689",
+      "bytes": 15660,
+      "technicalTokenCount": 15,
+      "visual_status": "not_run"
+    },
+    {
+      "file": "prototype/media/d2-batch-a/r01/print/DMO-A01__r01__en-US.html",
+      "family": "static_or_media",
+      "sha256": "423af448519b86a2a8385741961885124419d667b416e42a59bbf608b3aa5166",
+      "bytes": 15660,
+      "technicalTokenCount": 15,
+      "visual_status": "not_run"
+    },
+    {
+      "file": "prototype/media/d2-batch-a/r01/print/DMO-A01__r01__zh-CN.html",
+      "family": "static_or_media",
+      "sha256": "a29139a2c950d32cafcee7c4b2332905335b1ddc24d09cff1c19f0f1335d3721",
+      "bytes": 14894,
+      "technicalTokenCount": 15,
+      "visual_status": "not_run"
+    },
+    {
+      "file": "prototype/media/d2-batch-a/r01/print/DMO-A02__r01__en-AU.html",
+      "family": "static_or_media",
+      "sha256": "1a9634be85d95fe17915308a49167e4d878ee90db742fd51b256745f41fdc141",
+      "bytes": 20042,
+      "technicalTokenCount": 18,
+      "visual_status": "not_run"
+    },
+    {
+      "file": "prototype/media/d2-batch-a/r01/print/DMO-A02__r01__en-US.html",
+      "family": "static_or_media",
+      "sha256": "b2adbd6b02e0133380c05fdee90523d83d944104a91f4945217e8c95d3d17e52",
+      "bytes": 20042,
+      "technicalTokenCount": 18,
+      "visual_status": "not_run"
+    },
+    {
+      "file": "prototype/media/d2-batch-a/r01/print/DMO-A02__r01__zh-CN.html",
+      "family": "static_or_media",
+      "sha256": "ce782e022393682cfb366da46b75012dccbde5984326dfbeea7ae2bdf905937c",
+      "bytes": 18924,
+      "technicalTokenCount": 18,
+      "visual_status": "not_run"
+    },
+    {
+      "file": "prototype/media/d2-batch-c/static/SCN-EDD.en-AU.html",
+      "family": "static_or_media",
+      "sha256": "555d2bc20902b4802559ee140be0323d47cf97eb60c0d80603cfae7516e8bc09",
+      "bytes": 34570,
+      "technicalTokenCount": 55,
+      "visual_status": "not_run"
+    },
+    {
+      "file": "prototype/media/d2-batch-c/static/SCN-EDD.en-US.html",
+      "family": "static_or_media",
+      "sha256": "432646c489d2be3331d08cee762199f856f3478fa381300764ec424d8d7259a6",
+      "bytes": 34570,
+      "technicalTokenCount": 55,
+      "visual_status": "not_run"
+    },
+    {
+      "file": "prototype/media/d2-batch-c/static/SCN-EDD.zh-CN.html",
+      "family": "static_or_media",
+      "sha256": "226315b76f31b9db3186423c89693cc8acc10bbc61a4e055229276ea479669b0",
+      "bytes": 30356,
+      "technicalTokenCount": 62,
+      "visual_status": "not_run"
+    },
+    {
+      "file": "prototype/media/d2-batch-c/static/SCN-MATCH.en-AU.html",
+      "family": "static_or_media",
+      "sha256": "ec702be1e7f4be5afa475237dcb39d4cddd9f48faa1c1ed7b8d1c9fdbd5e8724",
+      "bytes": 48206,
+      "technicalTokenCount": 96,
+      "visual_status": "not_run"
+    },
+    {
+      "file": "prototype/media/d2-batch-c/static/SCN-MATCH.en-US.html",
+      "family": "static_or_media",
+      "sha256": "adbbbca4fa54ef02e4c1853d606ec31228dce80cdd967f89e4e1e5ca242bd648",
+      "bytes": 48206,
+      "technicalTokenCount": 96,
+      "visual_status": "not_run"
+    },
+    {
+      "file": "prototype/media/d2-batch-c/static/SCN-MATCH.zh-CN.html",
+      "family": "static_or_media",
+      "sha256": "20da46a9cc7656fa1796889d74a39b2ce4bbd50f4482cf044e9b2da8c385f220",
+      "bytes": 40745,
+      "technicalTokenCount": 116,
+      "visual_status": "not_run"
+    },
+    {
+      "file": "prototype/media/d2-batch-c/static/SCN-POPULATION.en-AU.html",
+      "family": "static_or_media",
+      "sha256": "ca732305464a1ce47d10620e64660a7d798d5c7ebec3e3df18a22d6b783e3f23",
+      "bytes": 33372,
+      "technicalTokenCount": 55,
+      "visual_status": "not_run"
+    },
+    {
+      "file": "prototype/media/d2-batch-c/static/SCN-POPULATION.en-US.html",
+      "family": "static_or_media",
+      "sha256": "507289b98ad45ae50ca05c5ba570bca106e8a5578edd9e1e5fee66b3ec42ddba",
+      "bytes": 33372,
+      "technicalTokenCount": 55,
+      "visual_status": "not_run"
+    },
+    {
+      "file": "prototype/media/d2-batch-c/static/SCN-POPULATION.zh-CN.html",
+      "family": "static_or_media",
+      "sha256": "2c77e1e281e20cd4db66ea5733a179be1feb47c2bbfbf14a6d03935d1d0bb4c6",
+      "bytes": 29347,
+      "technicalTokenCount": 65,
+      "visual_status": "not_run"
+    }
+  ]
+}

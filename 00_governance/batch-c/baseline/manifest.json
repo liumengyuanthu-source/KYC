@@ -1,0 +1,42 @@
+{
+  "at": "2026-09-07T09:39:32.379Z",
+  "git_head": "1e202f5102aaf0726940e0ae8508341ad032b93a",
+  "files": [
+    {
+      "path": "prototype/app.mjs",
+      "sha256": "af6d82afd138dddabbe872d99649a0a0135377bc429c5450b087450eb036d0f0"
+    },
+    {
+      "path": "prototype/case-engine.mjs",
+      "sha256": "b6186ddb5725dcaea07a39a11c0d4b34e356885c9eb3189ca40f029622d8082c"
+    },
+    {
+      "path": "prototype/batch-a-engine.mjs",
+      "sha256": "1627092f7222e563a0a7408c44045c54f744274693f25453a0fb0d7e039aa315"
+    },
+    {
+      "path": "prototype/collaboration-engine.mjs",
+      "sha256": "c371d64760044b50b4c85f65f98eb04ea3e4d1979ea0e3a47cfb51e346ad19bb"
+    },
+    {
+      "path": "prototype/collaboration-ui.mjs",
+      "sha256": "a22ccb20001fdd4968e9213d92e3b47d4eae7f9919ec940ecf07575c99273214"
+    },
+    {
+      "path": "prototype/content.mjs",
+      "sha256": "385bed2aa13cfba577ba811d9da2550ccb22a69477328c932ddd87fa02d6bdd4"
+    },
+    {
+      "path": "prototype/navigation.mjs",
+      "sha256": "8789c8c05325100ca4150903c19ab908c094874e4395fe240a20be66c99beae5"
+    },
+    {
+      "path": "prototype/index.html",
+      "sha256": "1f1f671c8950f6272d90ada3f24b87f324091602d1a9e5a4f7dc55034e6da438"
+    },
+    {
+      "path": "prototype/media-host.mjs",
+      "sha256": "5276c098bad87c94ec165b939d6b8f74fe2e670394da2c568f616834ce297ffb"
+    }
+  ]
+}

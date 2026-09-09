@@ -1,0 +1,21 @@
+// Task 2 regression copy. Assertions unchanged; local runtime/output paths adapted; original receipts preserved.
+import {chromium} from '/Users/christinaliu/Documents/ChatGPT/Australia Bank/clear-to-trade-product/audit/tooling/node_modules/playwright/index.mjs';
+import fs from 'node:fs';
+import assert from 'node:assert/strict';
+import {screeningAction,screeningProjection,C_IDS} from '/Users/christinaliu/Documents/ChatGPT/Australia Bank/clear-to-trade-product/prototype/screening-engine.mjs';
+import {collaborationAction} from '/Users/christinaliu/Documents/ChatGPT/Australia Bank/clear-to-trade-product/prototype/collaboration-engine.mjs';
+
+let seed=JSON.parse(fs.readFileSync('audit/screenshots/actual/journey/identity.assessed.en-AU.state.json'));
+const original=structuredClone(seed.data),evidenceId=seed.data.evidence.at(-1).id,branchId=seed.data.workItems.find(x=>x.branch_type==='information_gap').id;
+seed.data=screeningAction(seed.data,{type:'resume_branch',role:'ROLE-KYCOPS',branchId,key:'FINAL-GUIDANCE-RESUME',expectedRevision:seed.data.case.revision,expectedScopeRevision:seed.data.scopes[0].revision,expectedInputRevisions:screeningProjection(seed.data,{role:'ROLE-KYCOPS'}).inputRevisions,rationale:'Resume against current assessed input',at:'2026-09-08T12:00:00Z'});
+seed.data=collaborationAction(seed.data,{type:'release_artifact',role:'ROLE-KYCOPS',requestId:C_IDS.request,itemId:C_IDS.identityItem,reference:evidenceId,intakeStatus:'quarantined',expectedRevision:seed.data.case.revision,expectedRequestRevision:seed.data.informationRequests.find(x=>x.id===C_IDS.request).revision,expectedItemRevision:seed.data.requestItems.find(x=>x.id===C_IDS.identityItem).revision,key:'FINAL-GUIDANCE-QUARANTINE',rationale:'Recheck intake after changed artifact input',now:'2026-09-08T12:30:00Z'});
+seed.navigation={...seed.navigation,page:'product',modal:false,locale:'en-AU',step:'screening',role:'ROLE-FINCRIME',d5:{}};
+const expected=structuredClone(seed.data),browser=await chromium.launch({executablePath:'/Applications/Google Chrome.app/Contents/MacOS/Google Chrome',headless:true}),context=await browser.newContext({viewport:{width:1366,height:768},reducedMotion:'reduce'});
+await context.addInitScript(value=>sessionStorage.setItem('ctt-round-a-v1',JSON.stringify(value)),seed);
+const page=await context.newPage();await page.goto('http://127.0.0.1:8765/prototype/');
+const hero=await page.locator('.d5-issue').innerText(),saved=await page.evaluate(()=>JSON.parse(sessionStorage.getItem('ctt-round-a-v1')));
+assert.match(hero,/identity evidence inputs changed after the last assessment/);assert.match(hero,/Next actor: KYC Operations/);assert.match(hero,/Recheck intake release, evidence linking and reassess for this purpose/);assert.doesNotMatch(hero,/Refer to specialist|Resume review|current purpose assessment is insufficient/);assert.deepEqual(saved.data,expected);assert.equal(saved.data.case.id,original.case.id);
+await page.locator('.d5-issue').screenshot({path:'prototype/qa/batch-e/regression/final-guidance/quarantined-after-resume.png'});
+const receipt={at:new Date().toISOString(),status:'passed',case_id:saved.data.case.id,case_revision:saved.data.case.revision,source_revision:original.case.revision,data_equal_after_render:true,hero};
+fs.writeFileSync('prototype/qa/batch-e/regression/final-guidance/quarantined-after-resume.json',JSON.stringify(receipt,null,2));
+await browser.close();console.log(receipt);

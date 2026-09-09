@@ -1,0 +1,42 @@
+[
+  {
+    "name": "DG-E01.en-AU",
+    "canonical_export": "SVG viewer download",
+    "html_sha256": "5d3d330b78af972a78eb48db5483fda4a10e6c27f50340130e7e68b94266b930",
+    "svg_sha256": "351f9005e467a2c136217a1d2273405d5797fc86821c49fbe1e08f32d3e5306d",
+    "host_derivative": "Neutral black/blue/white palette and sans-serif font; geometry/text unchanged",
+    "state_writes": false
+  },
+  {
+    "name": "DG-E02.en-AU",
+    "canonical_export": "SVG viewer download",
+    "html_sha256": "f3a6ccdc91b4169b5943936f70002017a1c63170556fe363fbeaf21ad7551a51",
+    "svg_sha256": "88bcebb240163b7fe57ade2c3b4bc4df68a4c8d8694681ee1318e27d00820199",
+    "host_derivative": "Neutral black/blue/white palette and sans-serif font; geometry/text unchanged",
+    "state_writes": false
+  },
+  {
+    "name": "DG-E01.zh-CN",
+    "canonical_export": "SVG viewer download",
+    "html_sha256": "bbb382b8e643a26454c059727f4f1cd22be158d52212c0bdde4405cd69581607",
+    "svg_sha256": "c188f3242b2588d599ab4ef3238d1eb2c4a291bc850c642562bd42346eff4bb0",
+    "host_derivative": "Neutral black/blue/white palette and sans-serif font; geometry/text unchanged",
+    "state_writes": false
+  },
+  {
+    "name": "DG-E02.zh-CN",
+    "canonical_export": "SVG viewer download",
+    "html_sha256": "ed7b33a14458460fff77b6d160eddd6570b8a2411947ba3caa7d239688fdd313",
+    "svg_sha256": "74820157d57c4eccb2917d2806e9c164f0401800bdc37cead5a8c03edc95caaf",
+    "host_derivative": "Neutral black/blue/white palette and sans-serif font; geometry/text unchanged",
+    "state_writes": false
+  },
+  {
+    "name": "DG-E03.zh-CN",
+    "canonical_export": "SVG viewer download",
+    "html_sha256": "786c87fb5162e7979250f1d79a4552cf1c8254aec46228044d3d468eaa91a999",
+    "svg_sha256": "616b0b7a44a57df982d28adeab328b4cc1bf26031692cdae8e84d5de6b12a2ee",
+    "host_derivative": "Neutral black/blue/white palette and sans-serif font; geometry/text unchanged",
+    "state_writes": false
+  }
+]

@@ -1,0 +1,39 @@
+{
+  "at": "2026-09-07T17:18:07.316Z",
+  "command": "node --test prototype/qa/d5/temporal-independent.test.mjs prototype/qa/d5/projection-independent.test.mjs",
+  "exit": 1,
+  "tests": [
+    {
+      "name": "D5U-07 never-started local result does not borrow finding queue timestamp",
+      "status": "failed"
+    },
+    {
+      "name": "D5U-13 a basis string without confirmed target kind cannot certify overdue",
+      "status": "failed"
+    },
+    {
+      "name": "D5U-37 reading every group never writes business state",
+      "status": "passed"
+    },
+    {
+      "name": "D5U-08 independent Sydney residence oracle totals five hours, not five hours human work",
+      "status": "passed"
+    },
+    {
+      "name": "D5U-07 missing event time does not become page-open time",
+      "status": "passed"
+    },
+    {
+      "name": "D5U-29 finished historical work does not accumulate today waiting",
+      "status": "passed"
+    },
+    {
+      "name": "D5U-11 localisation changes formatting, not Sydney timestamps or calendar",
+      "status": "passed"
+    },
+    {
+      "name": "D5U-33 internal, stale and unreviewed estimates cannot become client commitments",
+      "status": "passed"
+    }
+  ]
+}

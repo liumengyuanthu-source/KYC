@@ -1,0 +1,56 @@
+{
+  "status": "additive_candidate_v0.1_not_production_schema",
+  "valid": true,
+  "snapshots": [
+    {
+      "snapshot": "E-entry",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "snapshot": "E-gap",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "snapshot": "E-remediation-completed",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "snapshot": "E-qa-signed-alone",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "snapshot": "E-ready",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "snapshot": "E-cleared",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "snapshot": "E-publication-failed",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "snapshot": "E-published",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "snapshot": "E-evidence-changed",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "snapshot": "E-scope-changed",
+      "valid": true,
+      "errors": []
+    }
+  ]
+}

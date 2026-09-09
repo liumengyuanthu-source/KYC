@@ -1,0 +1,330 @@
+{
+  "derived": true,
+  "runtime_store": false,
+  "source_ref": "SRC-021",
+  "case_id": "DEMO-CTT-001",
+  "validation_status": "approved_demo_design_not_bank_validation",
+  "generator": "04_operating_model/batch-f/build-consolidation.mjs",
+  "entries": [
+    {
+      "canonical_path": "00_governance/source_register.csv",
+      "original": {
+        "Source_ID": "SRC-001",
+        "Source_Title": "Codex Master Handoff",
+        "File_Name": "CODEX_MASTER_HANDOFF.md",
+        "Source_Type": "Markdown",
+        "Tier": "2",
+        "Owner": "Christina",
+        "Source_Date": "2026-09-04",
+        "Received_Date": "2026-09-04",
+        "Confidentiality": "Restricted",
+        "SHA256": "5d393e9112d05ec32e91545d9b1c600192965097dd754a6ef25de1d7a1328b72",
+        "Repository_Path": "CODEX_MASTER_HANDOFF.md",
+        "Intended_Use": "Master delivery specification",
+        "Availability_Status": "AVAILABLE",
+        "Provenance_Status": "WRITTEN_BRIEF_CONFIRMED",
+        "Validation_Status": "REVIEWED",
+        "Notes": "Contains the written brief summary"
+      }
+    },
+    {
+      "canonical_path": "00_governance/source_register.csv",
+      "original": {
+        "Source_ID": "SRC-002",
+        "Source_Title": "T00 Bootstrap Task",
+        "File_Name": "Clear_to_Trade_Codex_Task_00_Bootstrap.md",
+        "Source_Type": "Markdown",
+        "Tier": "2",
+        "Owner": "Christina",
+        "Source_Date": "2026-09-04",
+        "Received_Date": "2026-09-04",
+        "Confidentiality": "Restricted",
+        "SHA256": "4bbf49824a1ad5114eef3d1ff0494ae7f0ba761a52d95cbc27022c721149b212",
+        "Repository_Path": "00_sources/raw/Clear_to_Trade_Codex_Task_00_Bootstrap.md",
+        "Intended_Use": "T00 execution scope",
+        "Availability_Status": "AVAILABLE",
+        "Provenance_Status": "DECISION_APPROVED",
+        "Validation_Status": "REVIEWED",
+        "Notes": ""
+      }
+    },
+    {
+      "canonical_path": "00_governance/source_register.csv",
+      "original": {
+        "Source_ID": "SRC-003",
+        "Source_Title": "CJ-T08A Miro Pilot Task",
+        "File_Name": "Clear_to_Trade_Codex_Task_CJ08A_Miro_Pilot_v1.md",
+        "Source_Type": "Markdown",
+        "Tier": "2",
+        "Owner": "Christina",
+        "Source_Date": "2026-09-05",
+        "Received_Date": "2026-09-05",
+        "Confidentiality": "Restricted",
+        "SHA256": "8ded1044c52956d746c2893c39a3c81fecfeadbb8f72e31a7e11192b184728d0",
+        "Repository_Path": "00_sources/raw/Clear_to_Trade_Codex_Task_CJ08A_Miro_Pilot_v1.md",
+        "Intended_Use": "Miro pilot task definition",
+        "Availability_Status": "AVAILABLE",
+        "Provenance_Status": "DECISION_APPROVED",
+        "Validation_Status": "REVIEWED",
+        "Notes": ""
+      }
+    },
+    {
+      "canonical_path": "00_governance/source_register.csv",
+      "original": {
+        "Source_ID": "SRC-004",
+        "Source_Title": "Miro Automation Scope v1.1",
+        "File_Name": "Clear_to_Trade_UXUI_Miro_Automation_Scope_v1.1.md",
+        "Source_Type": "Markdown",
+        "Tier": "2",
+        "Owner": "Christina",
+        "Source_Date": "2026-09-05",
+        "Received_Date": "2026-09-05",
+        "Confidentiality": "Restricted",
+        "SHA256": "4702087759c19f9b8e45efbb81cc61474e240b2d0c0966eacb99ab120abcaa6b",
+        "Repository_Path": "00_sources/raw/Clear_to_Trade_UXUI_Miro_Automation_Scope_v1.1.md",
+        "Intended_Use": "UX/UI automation scope",
+        "Availability_Status": "AVAILABLE",
+        "Provenance_Status": "DECISION_APPROVED",
+        "Validation_Status": "REVIEWED",
+        "Notes": ""
+      }
+    },
+    {
+      "canonical_path": "00_governance/source_register.csv",
+      "original": {
+        "Source_ID": "SRC-005",
+        "Source_Title": "4 September meeting transcript",
+        "File_Name": "09-04 Meeting_ Institutional Trading KYC _Clear to Trade_ Product Kickoff & Planning-transcript.txt",
+        "Source_Type": "Text",
+        "Tier": "1",
+        "Owner": "Christina",
+        "Source_Date": "2026-09-04",
+        "Received_Date": "2026-09-05",
+        "Confidentiality": "Restricted",
+        "SHA256": "c3f1024027d8b1eda4ec62776f229bb6cd38cdb32446c6161e4c64cd53b6a0d6",
+        "Repository_Path": "00_sources/raw/09-04 Meeting_ Institutional Trading KYC _Clear to Trade_ Product Kickoff & Planning-transcript.txt",
+        "Intended_Use": "Primary meeting evidence",
+        "Availability_Status": "AVAILABLE",
+        "Provenance_Status": "MEETING_CONFIRMED",
+        "Validation_Status": "REVIEWED_WORKING_NOT_CLIENT_VALIDATED",
+        "Notes": "Raw preserved; analytical index 00_sources/normalized/2026-09-05-source-review.md; atomic mapping pending"
+      }
+    },
+    {
+      "canonical_path": "00_governance/source_register.csv",
+      "original": {
+        "Source_ID": "SRC-006",
+        "Source_Title": "4 September meeting summary",
+        "File_Name": "09-04 Meeting_ Institutional Trading KYC _Clear to Trade_ Product Kickoff & Planning-Summary.txt",
+        "Source_Type": "Text",
+        "Tier": "2",
+        "Owner": "Christina",
+        "Source_Date": "2026-09-04",
+        "Received_Date": "2026-09-05",
+        "Confidentiality": "Restricted",
+        "SHA256": "2d1147c2d053446e3f62dda32480678ca69fab82a198c047d9adb138c8f669f9",
+        "Repository_Path": "00_sources/raw/09-04 Meeting_ Institutional Trading KYC _Clear to Trade_ Product Kickoff & Planning-Summary.txt",
+        "Intended_Use": "Derivative AI meeting summary",
+        "Availability_Status": "AVAILABLE",
+        "Provenance_Status": "CLIENT_VALIDATION_REQUIRED",
+        "Validation_Status": "REVIEWED_WORKING_NOT_CLIENT_VALIDATED",
+        "Notes": "Raw preserved; analytical index 00_sources/normalized/2026-09-05-source-review.md; atomic mapping pending"
+      }
+    },
+    {
+      "canonical_path": "00_governance/source_register.csv",
+      "original": {
+        "Source_ID": "SRC-007",
+        "Source_Title": "Sanitised Process Map",
+        "File_Name": "Sanitised Process Map.pptx",
+        "Source_Type": "PowerPoint",
+        "Tier": "1",
+        "Owner": "Christina",
+        "Source_Date": "",
+        "Received_Date": "2026-09-05",
+        "Confidentiality": "Restricted",
+        "SHA256": "9ce02c70bdacabc3209208d82bb92efdf01352b2122caa2ba8dca175226f1f11",
+        "Repository_Path": "00_sources/raw/Sanitised Process Map.pptx",
+        "Intended_Use": "Primary process evidence",
+        "Availability_Status": "AVAILABLE",
+        "Provenance_Status": "PROCESS_MAP_DERIVED",
+        "Validation_Status": "REVIEWED_WORKING_NOT_CLIENT_VALIDATED",
+        "Notes": "Raw preserved; analytical index 00_sources/normalized/2026-09-05-source-review.md; atomic mapping pending"
+      }
+    },
+    {
+      "canonical_path": "00_governance/source_register.csv",
+      "original": {
+        "Source_ID": "SRC-008",
+        "Source_Title": "Raunaq written brief",
+        "File_Name": "Embedded in CODEX_MASTER_HANDOFF.md",
+        "Source_Type": "Written brief",
+        "Tier": "1",
+        "Owner": "Christina",
+        "Source_Date": "2026-09-04",
+        "Received_Date": "2026-09-04",
+        "Confidentiality": "Restricted",
+        "SHA256": "5d393e9112d05ec32e91545d9b1c600192965097dd754a6ef25de1d7a1328b72",
+        "Repository_Path": "CODEX_MASTER_HANDOFF.md",
+        "Intended_Use": "Confirmed product ask",
+        "Availability_Status": "PROVISIONAL_EMBEDDED",
+        "Provenance_Status": "WRITTEN_BRIEF_CONFIRMED",
+        "Validation_Status": "CLIENT_VALIDATION_REQUIRED",
+        "Notes": "Confirm whether a separate controlled source exists"
+      }
+    },
+    {
+      "canonical_path": "00_governance/source_register.csv",
+      "original": {
+        "Source_ID": "SRC-021",
+        "Source_Title": "D2 Batch F Consolidation Final",
+        "File_Name": "Clear_to_Trade_D2_Batch_F_Consolidation_Final_v1.0.md",
+        "Source_Type": "Markdown",
+        "Tier": "2",
+        "Owner": "Christina",
+        "Source_Date": "",
+        "Received_Date": "2026-09-08",
+        "Confidentiality": "Restricted",
+        "SHA256": "fc45e0101a726bcd83e6d83918e586618ac7be836902dc18d2094eda34c7e8bb",
+        "Repository_Path": "/Users/christinaliu/Downloads/Clear_to_Trade_D2_Batch_F_Consolidation_Final_v1.0.md",
+        "Intended_Use": "Approved D2 consolidation scope",
+        "Availability_Status": "AVAILABLE",
+        "Provenance_Status": "DECISION_APPROVED",
+        "Validation_Status": "DEMO_DESIGN_NOT_BANK_VALIDATION",
+        "Notes": "SRC-009 through SRC-020 remain in original subordinate manifests; no reassignment"
+      }
+    },
+    {
+      "canonical_path": "00_governance/round-a/source_manifest.json",
+      "original": {
+        "source_id": "SRC-009",
+        "path": "../0907 studio building/Clear_to_Trade_Experience_Principles_IA_Baseline_v0.4.md",
+        "sha256": "710b4ad330ab5c2163c2cdd3410963e5cb4f9bcbcd7d37fc0fa157a1df167e5d",
+        "availability_status": "AVAILABLE",
+        "source_status": "USER-CONFIRMED",
+        "validation_status": "WORKING_NOT_BANK_VALIDATED",
+        "scope_note": "Design source; status does not confer bank policy/authority. Mixed claims retain per-claim status."
+      }
+    },
+    {
+      "canonical_path": "00_governance/round-a/source_manifest.json",
+      "original": {
+        "source_id": "SRC-010",
+        "path": "../0907 studio building/Clear_to_Trade_Discussion_2_Living_Story_Scenarios_Benchmark_Spec_v0.1.md",
+        "sha256": "83130ac2ab4092affa439073839ef842960022f3ccdd1f19b1295c48cf298712",
+        "availability_status": "AVAILABLE",
+        "source_status": "DESIGN-HYPOTHESIS",
+        "validation_status": "WORKING_NOT_BANK_VALIDATED",
+        "scope_note": "Design source; status does not confer bank policy/authority. Mixed claims retain per-claim status."
+      }
+    },
+    {
+      "canonical_path": "00_governance/round-a/source_manifest.json",
+      "original": {
+        "source_id": "SRC-011",
+        "path": "../0907 studio building/Clear_to_Trade_Journey_Content_and_Interaction_Playbook_v0.1.md",
+        "sha256": "f2c18ab2821cc1851077d29172a6c1a6e5e3b5a4c238167e7a8fd2906ddc8f86",
+        "availability_status": "AVAILABLE",
+        "source_status": "DESIGN-HYPOTHESIS",
+        "validation_status": "WORKING_NOT_BANK_VALIDATED",
+        "scope_note": "Design source; status does not confer bank policy/authority. Mixed claims retain per-claim status."
+      }
+    },
+    {
+      "canonical_path": "00_governance/round-a/source_manifest.json",
+      "original": {
+        "source_id": "SRC-012",
+        "path": "../0907 studio building/Confidential_Banking_Living_Case_Parallel_Module_Integration.md",
+        "sha256": "dfa0d9d5c464dc4d421b05d0a53bd5c8558c83485a2a813ca945d5e4e14c2059",
+        "availability_status": "AVAILABLE",
+        "source_status": "DESIGN-HYPOTHESIS",
+        "validation_status": "WORKING_NOT_BANK_VALIDATED",
+        "scope_note": "Design source; status does not confer bank policy/authority. Mixed claims retain per-claim status."
+      }
+    },
+    {
+      "canonical_path": "00_governance/round-a/batch-a-sources.json",
+      "original": {
+        "source_id": "SRC-013",
+        "path": "/Users/christinaliu/Downloads/Clear_to_Trade_D2_Batch_A_Scope_Entity_Final_v1.0.md",
+        "sha256": "a179172c336bd25025a510021d17957309a4bcf042e025f2de3eb69eb19f1e99",
+        "status": "USER-APPROVED Batch A only",
+        "bank_validation_status": "NOT_BANK_POLICY"
+      }
+    },
+    {
+      "canonical_path": "00_governance/round-a/batch-a-sources.json",
+      "original": {
+        "source_id": "SRC-014",
+        "path": "/Users/christinaliu/Downloads/Clear_to_Trade_D2_Batch_A_Media_Format_and_Demo_Brief_v1.0.md",
+        "sha256": "96667637c8970a50100c53a0ba83989c51627cc81e90242949e145d391a56f1a",
+        "status": "PRODUCTION-BRIEF / visual candidates not selected",
+        "bank_validation_status": "NOT_BANK_POLICY"
+      }
+    },
+    {
+      "canonical_path": "04_operating_model/batch-b/source-manifest.json",
+      "original": {
+        "source_id": "SRC-015",
+        "path": "/Users/christinaliu/Downloads/Clear_to_Trade_D2_Batch_B_Client_Collaboration_Approved_Addendum_v1.0.md",
+        "sha256": "1017f5d761734393898366e2dd0df612c109dd69abf893dada124690613f94b8",
+        "status": "USER_APPROVED_DEMO_DIRECTION",
+        "bank_policy_status": "unconfirmed"
+      }
+    },
+    {
+      "canonical_path": "00_governance/batch-c/source-manifest.json",
+      "original": {
+        "source_id": "SRC-016",
+        "path": "/Users/christinaliu/Downloads/Clear_to_Trade_D2_Batch_C_Screening_Review_and_EDD_Final_v1.0.md",
+        "sha256": "78eb0d541ec0b06781f0a6fa9cf5cb5008eda163add372f870626f0e150a7f1a",
+        "availability": "available",
+        "status": "approved_demo_design",
+        "bank_policy_status": "not_confirmed"
+      }
+    },
+    {
+      "canonical_path": "00_governance/batch-c/source-manifest.json",
+      "original": {
+        "source_id": "SRC-017",
+        "path": "/Users/christinaliu/Downloads/Clear_to_Trade_Session_Research_Kimi_PPT_Brief_v1.0.md",
+        "sha256": "9e542dc0832c41a10784fa370e6b0a140b90e2c48cdf2e7f51e51657a789c3a0",
+        "availability": "available",
+        "status": "inherited_research_not_reverified",
+        "bank_policy_status": "not_confirmed"
+      }
+    },
+    {
+      "canonical_path": "00_governance/batch-c/source-manifest.json",
+      "original": {
+        "source_id": "SRC-018",
+        "path": "/Users/christinaliu/Downloads/Clear_to_Trade_Public_Product_Visual_Links_v1.0.md",
+        "sha256": "10cf2281ac8d1cf7648c5681f8b5def6bf987319a522e5f8c21ec02a1eb55fd9",
+        "availability": "available",
+        "status": "inherited_research_not_reverified",
+        "bank_policy_status": "not_confirmed"
+      }
+    },
+    {
+      "canonical_path": "00_governance/batch-d/source-manifest.json",
+      "original": {
+        "source_id": "SRC-019",
+        "path": "/Users/christinaliu/Downloads/Clear_to_Trade_D2_Batch_D_Parallel_Specialist_Work_Final_v1.0.md",
+        "sha256": "378aadc049143db4fa126268bf10a02ab0e5a7f4b1ae68727ee6c34eeba4b76f",
+        "status": "approved_demo_design",
+        "bank_policy_status": "not_confirmed"
+      }
+    },
+    {
+      "canonical_path": "00_governance/batch-e/acceptance-status.json",
+      "original": {
+        "source_ref": "SRC-020",
+        "source_path": "/Users/christinaliu/Downloads/Clear_to_Trade_D2_Batch_E_QA_Readiness_Clearance_Final_v1.0.md",
+        "source_status": "approved_demo_design_not_bank_validation",
+        "implementation_status_ref": "00_governance/batch-e/acceptance-status.json"
+      }
+    }
+  ],
+  "note": "Original status fields are preserved; approval, availability and implementation verification are different dimensions."
+}

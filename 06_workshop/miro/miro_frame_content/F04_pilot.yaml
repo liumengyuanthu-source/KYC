@@ -1,11 +1,1671 @@
-frame_code: F04
-segment: S2
-title: "Current End-to-End Executive Journey — Pilot Segment"
-version: V0
-status: BLOCKED_SOURCE_NOT_VALIDATED
-missing_sources:
-  - "03_personas_journey/current_journey_matrix.csv"
-  - "03_personas_journey/pain_point_register.csv"
-items: []
-notes:
-  - "Current actions, systems, pain and root-cause hypotheses require validated source rows."
+{
+  "frame_code": "F04",
+  "segment": "S2",
+  "title": "Current S2 — Requirements and evidence",
+  "version": "V0.1",
+  "status": "MIRO_V0_CREATED_AWAITING_REVIEW",
+  "source_files": [
+    "03_personas_journey/current_journey_matrix.csv",
+    "03_personas_journey/journey_moments.csv",
+    "00_governance/assumption_register.csv"
+  ],
+  "canonical_journey_file": "03_personas_journey/journey_moments.csv",
+  "layout": {
+    "margin": 80,
+    "lane_label_width": 360,
+    "column_width": 340,
+    "column_gap": 24,
+    "row_height": 220,
+    "row_gap": 16,
+    "header_height": 240,
+    "width": 2316,
+    "height": 2916,
+    "note": "Draft geometry; text fit and native anchors must be verified after rendering in Miro. Wider cards than base token are a provisional S2 density adaptation."
+  },
+  "lanes": [
+    [
+      "L01",
+      "Journey moment"
+    ],
+    [
+      "L02",
+      "User objective / JTBD"
+    ],
+    [
+      "L03",
+      "Client / Sales-RM"
+    ],
+    [
+      "L04",
+      "Case Manager"
+    ],
+    [
+      "L05",
+      "KYC Operations"
+    ],
+    [
+      "L06",
+      "Product execution / rules"
+    ],
+    [
+      "L07",
+      "Systems / evidence"
+    ],
+    [
+      "L08",
+      "Handoff / dependency"
+    ],
+    [
+      "L09",
+      "Pain / root cause / value"
+    ],
+    [
+      "L10",
+      "Human authority / exception"
+    ],
+    [
+      "L11",
+      "State / open questions"
+    ]
+  ],
+  "items": [
+    {
+      "content_id": "F04-S2-C1-L01",
+      "component": "CMP-ACTION",
+      "lane": "L01",
+      "column": 1,
+      "title": "J-M2-01",
+      "body": "Determine applicable requirements",
+      "visible_tag": "PROCESS_MAP_DERIVED",
+      "journey_id": "J-M2-01",
+      "process_ids": [
+        "M2.1",
+        "M2.2",
+        "M2.3",
+        "M2.4"
+      ],
+      "source_refs": [
+        {
+          "source_id": "SRC-007",
+          "locator": "slide 1 shape 18; slide 2 shape 18"
+        }
+      ],
+      "assumption_ids": [
+        "ASM-001",
+        "ASM-002"
+      ],
+      "x": 440,
+      "y": 240,
+      "width": 340,
+      "height": 220
+    },
+    {
+      "content_id": "F04-S2-C1-L02",
+      "component": "CMP-ACTION",
+      "lane": "L02",
+      "column": 1,
+      "title": "User objective / JTBD",
+      "body": "Understand what is required and why.",
+      "visible_tag": "CLIENT_VALIDATION_REQUIRED",
+      "journey_id": "J-M2-01",
+      "process_ids": [
+        "M2.1",
+        "M2.2",
+        "M2.3",
+        "M2.4"
+      ],
+      "source_refs": [
+        {
+          "source_id": "SRC-007",
+          "locator": "slide 1 shape 18; slide 2 shape 18"
+        }
+      ],
+      "assumption_ids": [
+        "ASM-001",
+        "ASM-002"
+      ],
+      "x": 440,
+      "y": 476,
+      "width": 340,
+      "height": 220
+    },
+    {
+      "content_id": "F04-S2-C1-L03",
+      "component": "CMP-ACTION",
+      "lane": "L03",
+      "column": 1,
+      "title": "Client / Sales-RM",
+      "body": "Clarify relationship context when asked.",
+      "visible_tag": "CLIENT_VALIDATION_REQUIRED",
+      "journey_id": "J-M2-01",
+      "process_ids": [
+        "M2.1",
+        "M2.2",
+        "M2.3",
+        "M2.4"
+      ],
+      "source_refs": [
+        {
+          "source_id": "SRC-007",
+          "locator": "slide 1 shape 18; slide 2 shape 18"
+        }
+      ],
+      "assumption_ids": [
+        "ASM-001",
+        "ASM-002"
+      ],
+      "x": 440,
+      "y": 712,
+      "width": 340,
+      "height": 220
+    },
+    {
+      "content_id": "F04-S2-C1-L04",
+      "component": "CMP-ACTION",
+      "lane": "L04",
+      "column": 1,
+      "title": "Case Manager",
+      "body": "Coordinate unresolved context and specialist input.",
+      "visible_tag": "CLIENT_VALIDATION_REQUIRED",
+      "journey_id": "J-M2-01",
+      "process_ids": [
+        "M2.1",
+        "M2.2",
+        "M2.3",
+        "M2.4"
+      ],
+      "source_refs": [
+        {
+          "source_id": "SRC-007",
+          "locator": "slide 1 shape 18; slide 2 shape 18"
+        }
+      ],
+      "assumption_ids": [
+        "ASM-001",
+        "ASM-002"
+      ],
+      "x": 440,
+      "y": 948,
+      "width": 340,
+      "height": 220
+    },
+    {
+      "content_id": "F04-S2-C1-L05",
+      "component": "CMP-ACTION",
+      "lane": "L05",
+      "column": 1,
+      "title": "KYC Operations",
+      "body": "Determine and reconcile applicable requirements.",
+      "visible_tag": "CLIENT_VALIDATION_REQUIRED",
+      "journey_id": "J-M2-01",
+      "process_ids": [
+        "M2.1",
+        "M2.2",
+        "M2.3",
+        "M2.4"
+      ],
+      "source_refs": [
+        {
+          "source_id": "SRC-007",
+          "locator": "slide 1 shape 18; slide 2 shape 18"
+        }
+      ],
+      "assumption_ids": [
+        "ASM-001",
+        "ASM-002"
+      ],
+      "x": 440,
+      "y": 1184,
+      "width": 340,
+      "height": 220
+    },
+    {
+      "content_id": "F04-S2-C1-L06",
+      "component": "CMP-ACTION",
+      "lane": "L06",
+      "column": 1,
+      "title": "Product execution / rules",
+      "body": "Interpret policy and reliefs; consolidate requirements; adjust for risk and EDD indicators.",
+      "visible_tag": "PROCESS_MAP_DERIVED",
+      "journey_id": "J-M2-01",
+      "process_ids": [
+        "M2.1",
+        "M2.2",
+        "M2.3",
+        "M2.4"
+      ],
+      "source_refs": [
+        {
+          "source_id": "SRC-007",
+          "locator": "slide 1 shape 18; slide 2 shape 18"
+        }
+      ],
+      "assumption_ids": [
+        "ASM-001",
+        "ASM-002"
+      ],
+      "x": 440,
+      "y": 1420,
+      "width": 340,
+      "height": 220
+    },
+    {
+      "content_id": "F04-S2-C1-L07",
+      "component": "CMP-ACTION",
+      "lane": "L07",
+      "column": 1,
+      "title": "Systems / evidence",
+      "body": "Policy/CIP library and risk rules",
+      "visible_tag": "CLIENT_VALIDATION_REQUIRED",
+      "journey_id": "J-M2-01",
+      "process_ids": [
+        "M2.1",
+        "M2.2",
+        "M2.3",
+        "M2.4"
+      ],
+      "source_refs": [
+        {
+          "source_id": "SRC-007",
+          "locator": "slide 1 shape 18; slide 2 shape 18"
+        }
+      ],
+      "assumption_ids": [
+        "ASM-001",
+        "ASM-002"
+      ],
+      "x": 440,
+      "y": 1656,
+      "width": 340,
+      "height": 220
+    },
+    {
+      "content_id": "F04-S2-C1-L08",
+      "component": "CMP-ACTION",
+      "lane": "L08",
+      "column": 1,
+      "title": "Handoff / dependency",
+      "body": "Ask Legal about non-AML requirements when needed.",
+      "visible_tag": "CLIENT_VALIDATION_REQUIRED",
+      "journey_id": "J-M2-01",
+      "process_ids": [
+        "M2.1",
+        "M2.2",
+        "M2.3",
+        "M2.4"
+      ],
+      "source_refs": [
+        {
+          "source_id": "SRC-007",
+          "locator": "slide 1 shape 18; slide 2 shape 18"
+        }
+      ],
+      "assumption_ids": [
+        "ASM-001",
+        "ASM-002"
+      ],
+      "x": 440,
+      "y": 1892,
+      "width": 340,
+      "height": 220
+    },
+    {
+      "content_id": "F04-S2-C1-L09",
+      "component": "CMP-PAIN",
+      "lane": "L09",
+      "column": 1,
+      "title": "Pain / root cause / value",
+      "body": "Pain hypothesis: Case-by-case interpretation may produce inconsistent requests.\nRoot hypothesis: Policy context and rationale may be fragmented.",
+      "visible_tag": "DESIGN_HYPOTHESIS",
+      "journey_id": "J-M2-01",
+      "process_ids": [
+        "M2.1",
+        "M2.2",
+        "M2.3",
+        "M2.4"
+      ],
+      "source_refs": [
+        {
+          "source_id": "SRC-007",
+          "locator": "slide 1 shape 18; slide 2 shape 18"
+        }
+      ],
+      "assumption_ids": [
+        "ASM-001",
+        "ASM-002"
+      ],
+      "x": 440,
+      "y": 2128,
+      "width": 340,
+      "height": 220
+    },
+    {
+      "content_id": "F04-S2-C1-L10",
+      "component": "CMP-HUMAN",
+      "lane": "L10",
+      "column": 1,
+      "title": "Human authority / exception",
+      "body": "Human-led in the source process map. Exact approval and release rights remain open (Q-001).",
+      "visible_tag": "CLIENT_VALIDATION_REQUIRED",
+      "journey_id": "J-M2-01",
+      "process_ids": [
+        "M2.1",
+        "M2.2",
+        "M2.3",
+        "M2.4"
+      ],
+      "source_refs": [
+        {
+          "source_id": "SRC-007",
+          "locator": "slide 1 shape 18; slide 2 shape 18"
+        }
+      ],
+      "assumption_ids": [
+        "ASM-001",
+        "ASM-002"
+      ],
+      "x": 440,
+      "y": 2364,
+      "width": 340,
+      "height": 220
+    },
+    {
+      "content_id": "F04-S2-C1-L11",
+      "component": "CMP-STATE",
+      "lane": "L11",
+      "column": 1,
+      "title": "State / open questions",
+      "body": "Record requirement, evidence and gap outcomes; current data schema unverified (Q-003).",
+      "visible_tag": "CLIENT_VALIDATION_REQUIRED",
+      "journey_id": "J-M2-01",
+      "process_ids": [
+        "M2.1",
+        "M2.2",
+        "M2.3",
+        "M2.4"
+      ],
+      "source_refs": [
+        {
+          "source_id": "SRC-007",
+          "locator": "slide 1 shape 18; slide 2 shape 18"
+        }
+      ],
+      "assumption_ids": [
+        "ASM-001",
+        "ASM-002"
+      ],
+      "x": 440,
+      "y": 2600,
+      "width": 340,
+      "height": 220
+    },
+    {
+      "content_id": "F04-S2-C2-L01",
+      "component": "CMP-ACTION",
+      "lane": "L01",
+      "column": 2,
+      "title": "J-M3-01",
+      "body": "Source existing evidence",
+      "visible_tag": "PROCESS_MAP_DERIVED",
+      "journey_id": "J-M3-01",
+      "process_ids": [
+        "M3.1"
+      ],
+      "source_refs": [
+        {
+          "source_id": "SRC-007",
+          "locator": "slide 1 shape 292 M3.1; slide 2 shape 292"
+        }
+      ],
+      "assumption_ids": [
+        "ASM-001",
+        "ASM-002"
+      ],
+      "x": 804,
+      "y": 240,
+      "width": 340,
+      "height": 220
+    },
+    {
+      "content_id": "F04-S2-C2-L02",
+      "component": "CMP-ACTION",
+      "lane": "L02",
+      "column": 2,
+      "title": "User objective / JTBD",
+      "body": "Reuse evidence before asking the client again.",
+      "visible_tag": "CLIENT_VALIDATION_REQUIRED",
+      "journey_id": "J-M3-01",
+      "process_ids": [
+        "M3.1"
+      ],
+      "source_refs": [
+        {
+          "source_id": "SRC-007",
+          "locator": "slide 1 shape 292 M3.1; slide 2 shape 292"
+        }
+      ],
+      "assumption_ids": [
+        "ASM-001",
+        "ASM-002"
+      ],
+      "x": 804,
+      "y": 476,
+      "width": 340,
+      "height": 220
+    },
+    {
+      "content_id": "F04-S2-C2-L03",
+      "component": "CMP-ACTION",
+      "lane": "L03",
+      "column": 2,
+      "title": "Client / Sales-RM",
+      "body": "No additional request until available evidence is checked.",
+      "visible_tag": "CLIENT_VALIDATION_REQUIRED",
+      "journey_id": "J-M3-01",
+      "process_ids": [
+        "M3.1"
+      ],
+      "source_refs": [
+        {
+          "source_id": "SRC-007",
+          "locator": "slide 1 shape 292 M3.1; slide 2 shape 292"
+        }
+      ],
+      "assumption_ids": [
+        "ASM-001",
+        "ASM-002"
+      ],
+      "x": 804,
+      "y": 712,
+      "width": 340,
+      "height": 220
+    },
+    {
+      "content_id": "F04-S2-C2-L04",
+      "component": "CMP-ACTION",
+      "lane": "L04",
+      "column": 2,
+      "title": "Case Manager",
+      "body": "Coordinate source access issues.",
+      "visible_tag": "CLIENT_VALIDATION_REQUIRED",
+      "journey_id": "J-M3-01",
+      "process_ids": [
+        "M3.1"
+      ],
+      "source_refs": [
+        {
+          "source_id": "SRC-007",
+          "locator": "slide 1 shape 292 M3.1; slide 2 shape 292"
+        }
+      ],
+      "assumption_ids": [
+        "ASM-001",
+        "ASM-002"
+      ],
+      "x": 804,
+      "y": 948,
+      "width": 340,
+      "height": 220
+    },
+    {
+      "content_id": "F04-S2-C2-L05",
+      "component": "CMP-ACTION",
+      "lane": "L05",
+      "column": 2,
+      "title": "KYC Operations",
+      "body": "Search approved sources and record relevant evidence.",
+      "visible_tag": "CLIENT_VALIDATION_REQUIRED",
+      "journey_id": "J-M3-01",
+      "process_ids": [
+        "M3.1"
+      ],
+      "source_refs": [
+        {
+          "source_id": "SRC-007",
+          "locator": "slide 1 shape 292 M3.1; slide 2 shape 292"
+        }
+      ],
+      "assumption_ids": [
+        "ASM-001",
+        "ASM-002"
+      ],
+      "x": 804,
+      "y": 1184,
+      "width": 340,
+      "height": 220
+    },
+    {
+      "content_id": "F04-S2-C2-L06",
+      "component": "CMP-ACTION",
+      "lane": "L06",
+      "column": 2,
+      "title": "Product execution / rules",
+      "body": "Search public and commercial sources for relevant documents.",
+      "visible_tag": "PROCESS_MAP_DERIVED",
+      "journey_id": "J-M3-01",
+      "process_ids": [
+        "M3.1"
+      ],
+      "source_refs": [
+        {
+          "source_id": "SRC-007",
+          "locator": "slide 1 shape 292 M3.1; slide 2 shape 292"
+        }
+      ],
+      "assumption_ids": [
+        "ASM-001",
+        "ASM-002"
+      ],
+      "x": 804,
+      "y": 1420,
+      "width": 340,
+      "height": 220
+    },
+    {
+      "content_id": "F04-S2-C2-L07",
+      "component": "CMP-ACTION",
+      "lane": "L07",
+      "column": 2,
+      "title": "Systems / evidence",
+      "body": "External registries, data providers and evidence repository",
+      "visible_tag": "CLIENT_VALIDATION_REQUIRED",
+      "journey_id": "J-M3-01",
+      "process_ids": [
+        "M3.1"
+      ],
+      "source_refs": [
+        {
+          "source_id": "SRC-007",
+          "locator": "slide 1 shape 292 M3.1; slide 2 shape 292"
+        }
+      ],
+      "assumption_ids": [
+        "ASM-001",
+        "ASM-002"
+      ],
+      "x": 804,
+      "y": 1656,
+      "width": 340,
+      "height": 220
+    },
+    {
+      "content_id": "F04-S2-C2-L08",
+      "component": "CMP-ACTION",
+      "lane": "L08",
+      "column": 2,
+      "title": "Handoff / dependency",
+      "body": "Sourcing result goes to evidence/gap review.",
+      "visible_tag": "CLIENT_VALIDATION_REQUIRED",
+      "journey_id": "J-M3-01",
+      "process_ids": [
+        "M3.1"
+      ],
+      "source_refs": [
+        {
+          "source_id": "SRC-007",
+          "locator": "slide 1 shape 292 M3.1; slide 2 shape 292"
+        }
+      ],
+      "assumption_ids": [
+        "ASM-001",
+        "ASM-002"
+      ],
+      "x": 804,
+      "y": 1892,
+      "width": 340,
+      "height": 220
+    },
+    {
+      "content_id": "F04-S2-C2-L09",
+      "component": "CMP-PAIN",
+      "lane": "L09",
+      "column": 2,
+      "title": "Pain / root cause / value",
+      "body": "Pain hypothesis: Users may switch tools and gather the same information repeatedly.\nRoot hypothesis: Source access and evidence context may be fragmented.",
+      "visible_tag": "DESIGN_HYPOTHESIS",
+      "journey_id": "J-M3-01",
+      "process_ids": [
+        "M3.1"
+      ],
+      "source_refs": [
+        {
+          "source_id": "SRC-007",
+          "locator": "slide 1 shape 292 M3.1; slide 2 shape 292"
+        }
+      ],
+      "assumption_ids": [
+        "ASM-001",
+        "ASM-002"
+      ],
+      "x": 804,
+      "y": 2128,
+      "width": 340,
+      "height": 220
+    },
+    {
+      "content_id": "F04-S2-C2-L10",
+      "component": "CMP-HUMAN",
+      "lane": "L10",
+      "column": 2,
+      "title": "Human authority / exception",
+      "body": "Human-led in the source process map. Exact approval and release rights remain open (Q-001).",
+      "visible_tag": "CLIENT_VALIDATION_REQUIRED",
+      "journey_id": "J-M3-01",
+      "process_ids": [
+        "M3.1"
+      ],
+      "source_refs": [
+        {
+          "source_id": "SRC-007",
+          "locator": "slide 1 shape 292 M3.1; slide 2 shape 292"
+        }
+      ],
+      "assumption_ids": [
+        "ASM-001",
+        "ASM-002"
+      ],
+      "x": 804,
+      "y": 2364,
+      "width": 340,
+      "height": 220
+    },
+    {
+      "content_id": "F04-S2-C2-L11",
+      "component": "CMP-STATE",
+      "lane": "L11",
+      "column": 2,
+      "title": "State / open questions",
+      "body": "Record requirement, evidence and gap outcomes; current data schema unverified (Q-003).",
+      "visible_tag": "CLIENT_VALIDATION_REQUIRED",
+      "journey_id": "J-M3-01",
+      "process_ids": [
+        "M3.1"
+      ],
+      "source_refs": [
+        {
+          "source_id": "SRC-007",
+          "locator": "slide 1 shape 292 M3.1; slide 2 shape 292"
+        }
+      ],
+      "assumption_ids": [
+        "ASM-001",
+        "ASM-002"
+      ],
+      "x": 804,
+      "y": 2600,
+      "width": 340,
+      "height": 220
+    },
+    {
+      "content_id": "F04-S2-C3-L01",
+      "component": "CMP-ACTION",
+      "lane": "L01",
+      "column": 3,
+      "title": "J-M3-02",
+      "body": "Identify residual gaps",
+      "visible_tag": "PROCESS_MAP_DERIVED",
+      "journey_id": "J-M3-02",
+      "process_ids": [
+        "M3.2"
+      ],
+      "source_refs": [
+        {
+          "source_id": "SRC-007",
+          "locator": "slide 1 shape 292 M3.2; slide 2 shape 281"
+        }
+      ],
+      "assumption_ids": [
+        "ASM-001",
+        "ASM-002"
+      ],
+      "x": 1168,
+      "y": 240,
+      "width": 340,
+      "height": 220
+    },
+    {
+      "content_id": "F04-S2-C3-L02",
+      "component": "CMP-ACTION",
+      "lane": "L02",
+      "column": 3,
+      "title": "User objective / JTBD",
+      "body": "See what is still missing and what blocks progress.",
+      "visible_tag": "CLIENT_VALIDATION_REQUIRED",
+      "journey_id": "J-M3-02",
+      "process_ids": [
+        "M3.2"
+      ],
+      "source_refs": [
+        {
+          "source_id": "SRC-007",
+          "locator": "slide 1 shape 292 M3.2; slide 2 shape 281"
+        }
+      ],
+      "assumption_ids": [
+        "ASM-001",
+        "ASM-002"
+      ],
+      "x": 1168,
+      "y": 476,
+      "width": 340,
+      "height": 220
+    },
+    {
+      "content_id": "F04-S2-C3-L03",
+      "component": "CMP-ACTION",
+      "lane": "L03",
+      "column": 3,
+      "title": "Client / Sales-RM",
+      "body": "Avoid repeat requests for already available evidence.",
+      "visible_tag": "CLIENT_VALIDATION_REQUIRED",
+      "journey_id": "J-M3-02",
+      "process_ids": [
+        "M3.2"
+      ],
+      "source_refs": [
+        {
+          "source_id": "SRC-007",
+          "locator": "slide 1 shape 292 M3.2; slide 2 shape 281"
+        }
+      ],
+      "assumption_ids": [
+        "ASM-001",
+        "ASM-002"
+      ],
+      "x": 1168,
+      "y": 712,
+      "width": 340,
+      "height": 220
+    },
+    {
+      "content_id": "F04-S2-C3-L04",
+      "component": "CMP-ACTION",
+      "lane": "L04",
+      "column": 3,
+      "title": "Case Manager",
+      "body": "Coordinate gap ownership and priorities.",
+      "visible_tag": "CLIENT_VALIDATION_REQUIRED",
+      "journey_id": "J-M3-02",
+      "process_ids": [
+        "M3.2"
+      ],
+      "source_refs": [
+        {
+          "source_id": "SRC-007",
+          "locator": "slide 1 shape 292 M3.2; slide 2 shape 281"
+        }
+      ],
+      "assumption_ids": [
+        "ASM-001",
+        "ASM-002"
+      ],
+      "x": 1168,
+      "y": 948,
+      "width": 340,
+      "height": 220
+    },
+    {
+      "content_id": "F04-S2-C3-L05",
+      "component": "CMP-ACTION",
+      "lane": "L05",
+      "column": 3,
+      "title": "KYC Operations",
+      "body": "Assess missing or unresolved evidence.",
+      "visible_tag": "CLIENT_VALIDATION_REQUIRED",
+      "journey_id": "J-M3-02",
+      "process_ids": [
+        "M3.2"
+      ],
+      "source_refs": [
+        {
+          "source_id": "SRC-007",
+          "locator": "slide 1 shape 292 M3.2; slide 2 shape 281"
+        }
+      ],
+      "assumption_ids": [
+        "ASM-001",
+        "ASM-002"
+      ],
+      "x": 1168,
+      "y": 1184,
+      "width": 340,
+      "height": 220
+    },
+    {
+      "content_id": "F04-S2-C3-L06",
+      "component": "CMP-ACTION",
+      "lane": "L06",
+      "column": 3,
+      "title": "Product execution / rules",
+      "body": "Compare available evidence against requirements and identify residual gaps.",
+      "visible_tag": "PROCESS_MAP_DERIVED",
+      "journey_id": "J-M3-02",
+      "process_ids": [
+        "M3.2"
+      ],
+      "source_refs": [
+        {
+          "source_id": "SRC-007",
+          "locator": "slide 1 shape 292 M3.2; slide 2 shape 281"
+        }
+      ],
+      "assumption_ids": [
+        "ASM-001",
+        "ASM-002"
+      ],
+      "x": 1168,
+      "y": 1420,
+      "width": 340,
+      "height": 220
+    },
+    {
+      "content_id": "F04-S2-C3-L07",
+      "component": "CMP-ACTION",
+      "lane": "L07",
+      "column": 3,
+      "title": "Systems / evidence",
+      "body": "Requirements list and evidence repository",
+      "visible_tag": "CLIENT_VALIDATION_REQUIRED",
+      "journey_id": "J-M3-02",
+      "process_ids": [
+        "M3.2"
+      ],
+      "source_refs": [
+        {
+          "source_id": "SRC-007",
+          "locator": "slide 1 shape 292 M3.2; slide 2 shape 281"
+        }
+      ],
+      "assumption_ids": [
+        "ASM-001",
+        "ASM-002"
+      ],
+      "x": 1168,
+      "y": 1656,
+      "width": 340,
+      "height": 220
+    },
+    {
+      "content_id": "F04-S2-C3-L08",
+      "component": "CMP-ACTION",
+      "lane": "L08",
+      "column": 3,
+      "title": "Handoff / dependency",
+      "body": "Unresolved interpretation goes to the designated reviewer.",
+      "visible_tag": "CLIENT_VALIDATION_REQUIRED",
+      "journey_id": "J-M3-02",
+      "process_ids": [
+        "M3.2"
+      ],
+      "source_refs": [
+        {
+          "source_id": "SRC-007",
+          "locator": "slide 1 shape 292 M3.2; slide 2 shape 281"
+        }
+      ],
+      "assumption_ids": [
+        "ASM-001",
+        "ASM-002"
+      ],
+      "x": 1168,
+      "y": 1892,
+      "width": 340,
+      "height": 220
+    },
+    {
+      "content_id": "F04-S2-C3-L09",
+      "component": "CMP-PAIN",
+      "lane": "L09",
+      "column": 3,
+      "title": "Pain / root cause / value",
+      "body": "Pain hypothesis: Missing provenance or unclear ownership may prolong gap resolution.\nRoot hypothesis: Requirements and evidence may not share a consistent link.",
+      "visible_tag": "DESIGN_HYPOTHESIS",
+      "journey_id": "J-M3-02",
+      "process_ids": [
+        "M3.2"
+      ],
+      "source_refs": [
+        {
+          "source_id": "SRC-007",
+          "locator": "slide 1 shape 292 M3.2; slide 2 shape 281"
+        }
+      ],
+      "assumption_ids": [
+        "ASM-001",
+        "ASM-002"
+      ],
+      "x": 1168,
+      "y": 2128,
+      "width": 340,
+      "height": 220
+    },
+    {
+      "content_id": "F04-S2-C3-L10",
+      "component": "CMP-HUMAN",
+      "lane": "L10",
+      "column": 3,
+      "title": "Human authority / exception",
+      "body": "Human-led in the source process map. Exact approval and release rights remain open (Q-001).",
+      "visible_tag": "CLIENT_VALIDATION_REQUIRED",
+      "journey_id": "J-M3-02",
+      "process_ids": [
+        "M3.2"
+      ],
+      "source_refs": [
+        {
+          "source_id": "SRC-007",
+          "locator": "slide 1 shape 292 M3.2; slide 2 shape 281"
+        }
+      ],
+      "assumption_ids": [
+        "ASM-001",
+        "ASM-002"
+      ],
+      "x": 1168,
+      "y": 2364,
+      "width": 340,
+      "height": 220
+    },
+    {
+      "content_id": "F04-S2-C3-L11",
+      "component": "CMP-STATE",
+      "lane": "L11",
+      "column": 3,
+      "title": "State / open questions",
+      "body": "Record requirement, evidence and gap outcomes; current data schema unverified (Q-003).",
+      "visible_tag": "CLIENT_VALIDATION_REQUIRED",
+      "journey_id": "J-M3-02",
+      "process_ids": [
+        "M3.2"
+      ],
+      "source_refs": [
+        {
+          "source_id": "SRC-007",
+          "locator": "slide 1 shape 292 M3.2; slide 2 shape 281"
+        }
+      ],
+      "assumption_ids": [
+        "ASM-001",
+        "ASM-002"
+      ],
+      "x": 1168,
+      "y": 2600,
+      "width": 340,
+      "height": 220
+    },
+    {
+      "content_id": "F04-S2-C4-L01",
+      "component": "CMP-ACTION",
+      "lane": "L01",
+      "column": 4,
+      "title": "J-M3-03",
+      "body": "Request targeted information",
+      "visible_tag": "PROCESS_MAP_DERIVED",
+      "journey_id": "J-M3-03",
+      "process_ids": [
+        "M2.5",
+        "M3.3"
+      ],
+      "source_refs": [
+        {
+          "source_id": "SRC-007",
+          "locator": "slide 1 shapes 291 and 292 M3.3; slide 1 shape 9"
+        }
+      ],
+      "assumption_ids": [
+        "ASM-001",
+        "ASM-002"
+      ],
+      "x": 1532,
+      "y": 240,
+      "width": 340,
+      "height": 220
+    },
+    {
+      "content_id": "F04-S2-C4-L02",
+      "component": "CMP-ACTION",
+      "lane": "L02",
+      "column": 4,
+      "title": "User objective / JTBD",
+      "body": "Receive one clear request explaining the remaining information needed.",
+      "visible_tag": "CLIENT_VALIDATION_REQUIRED",
+      "journey_id": "J-M3-03",
+      "process_ids": [
+        "M2.5",
+        "M3.3"
+      ],
+      "source_refs": [
+        {
+          "source_id": "SRC-007",
+          "locator": "slide 1 shapes 291 and 292 M3.3; slide 1 shape 9"
+        }
+      ],
+      "assumption_ids": [
+        "ASM-001",
+        "ASM-002"
+      ],
+      "x": 1532,
+      "y": 476,
+      "width": 340,
+      "height": 220
+    },
+    {
+      "content_id": "F04-S2-C4-L03",
+      "component": "CMP-ACTION",
+      "lane": "L03",
+      "column": 4,
+      "title": "Client / Sales-RM",
+      "body": "Provide requested documents or explain why they are unavailable.",
+      "visible_tag": "CLIENT_VALIDATION_REQUIRED",
+      "journey_id": "J-M3-03",
+      "process_ids": [
+        "M2.5",
+        "M3.3"
+      ],
+      "source_refs": [
+        {
+          "source_id": "SRC-007",
+          "locator": "slide 1 shapes 291 and 292 M3.3; slide 1 shape 9"
+        }
+      ],
+      "assumption_ids": [
+        "ASM-001",
+        "ASM-002"
+      ],
+      "x": 1532,
+      "y": 712,
+      "width": 340,
+      "height": 220
+    },
+    {
+      "content_id": "F04-S2-C4-L04",
+      "component": "CMP-ACTION",
+      "lane": "L04",
+      "column": 4,
+      "title": "Case Manager",
+      "body": "Coordinate communications and follow-up; role split to validate.",
+      "visible_tag": "CLIENT_VALIDATION_REQUIRED",
+      "journey_id": "J-M3-03",
+      "process_ids": [
+        "M2.5",
+        "M3.3"
+      ],
+      "source_refs": [
+        {
+          "source_id": "SRC-007",
+          "locator": "slide 1 shapes 291 and 292 M3.3; slide 1 shape 9"
+        }
+      ],
+      "assumption_ids": [
+        "ASM-001",
+        "ASM-002"
+      ],
+      "x": 1532,
+      "y": 948,
+      "width": 340,
+      "height": 220
+    },
+    {
+      "content_id": "F04-S2-C4-L05",
+      "component": "CMP-ACTION",
+      "lane": "L05",
+      "column": 4,
+      "title": "KYC Operations",
+      "body": "Specify the missing evidence and explain the requirement.",
+      "visible_tag": "CLIENT_VALIDATION_REQUIRED",
+      "journey_id": "J-M3-03",
+      "process_ids": [
+        "M2.5",
+        "M3.3"
+      ],
+      "source_refs": [
+        {
+          "source_id": "SRC-007",
+          "locator": "slide 1 shapes 291 and 292 M3.3; slide 1 shape 9"
+        }
+      ],
+      "assumption_ids": [
+        "ASM-001",
+        "ASM-002"
+      ],
+      "x": 1532,
+      "y": 1184,
+      "width": 340,
+      "height": 220
+    },
+    {
+      "content_id": "F04-S2-C4-L06",
+      "component": "CMP-ACTION",
+      "lane": "L06",
+      "column": 4,
+      "title": "Product execution / rules",
+      "body": "Issue requirements and request outstanding information from the client.",
+      "visible_tag": "PROCESS_MAP_DERIVED",
+      "journey_id": "J-M3-03",
+      "process_ids": [
+        "M2.5",
+        "M3.3"
+      ],
+      "source_refs": [
+        {
+          "source_id": "SRC-007",
+          "locator": "slide 1 shapes 291 and 292 M3.3; slide 1 shape 9"
+        }
+      ],
+      "assumption_ids": [
+        "ASM-001",
+        "ASM-002"
+      ],
+      "x": 1532,
+      "y": 1420,
+      "width": 340,
+      "height": 220
+    },
+    {
+      "content_id": "F04-S2-C4-L07",
+      "component": "CMP-ACTION",
+      "lane": "L07",
+      "column": 4,
+      "title": "Systems / evidence",
+      "body": "Client communication channel and case workspace",
+      "visible_tag": "CLIENT_VALIDATION_REQUIRED",
+      "journey_id": "J-M3-03",
+      "process_ids": [
+        "M2.5",
+        "M3.3"
+      ],
+      "source_refs": [
+        {
+          "source_id": "SRC-007",
+          "locator": "slide 1 shapes 291 and 292 M3.3; slide 1 shape 9"
+        }
+      ],
+      "assumption_ids": [
+        "ASM-001",
+        "ASM-002"
+      ],
+      "x": 1532,
+      "y": 1656,
+      "width": 340,
+      "height": 220
+    },
+    {
+      "content_id": "F04-S2-C4-L08",
+      "component": "CMP-ACTION",
+      "lane": "L08",
+      "column": 4,
+      "title": "Handoff / dependency",
+      "body": "Client response returns to evidence review; Sales/RM involvement to validate.",
+      "visible_tag": "CLIENT_VALIDATION_REQUIRED",
+      "journey_id": "J-M3-03",
+      "process_ids": [
+        "M2.5",
+        "M3.3"
+      ],
+      "source_refs": [
+        {
+          "source_id": "SRC-007",
+          "locator": "slide 1 shapes 291 and 292 M3.3; slide 1 shape 9"
+        }
+      ],
+      "assumption_ids": [
+        "ASM-001",
+        "ASM-002"
+      ],
+      "x": 1532,
+      "y": 1892,
+      "width": 340,
+      "height": 220
+    },
+    {
+      "content_id": "F04-S2-C4-L09",
+      "component": "CMP-PAIN",
+      "lane": "L09",
+      "column": 4,
+      "title": "Pain / root cause / value",
+      "body": "Pain hypothesis: Repeated or unclear requests may create avoidable client effort.\nRoot hypothesis: Request ownership and requirement rationale may be dispersed.",
+      "visible_tag": "DESIGN_HYPOTHESIS",
+      "journey_id": "J-M3-03",
+      "process_ids": [
+        "M2.5",
+        "M3.3"
+      ],
+      "source_refs": [
+        {
+          "source_id": "SRC-007",
+          "locator": "slide 1 shapes 291 and 292 M3.3; slide 1 shape 9"
+        }
+      ],
+      "assumption_ids": [
+        "ASM-001",
+        "ASM-002"
+      ],
+      "x": 1532,
+      "y": 2128,
+      "width": 340,
+      "height": 220
+    },
+    {
+      "content_id": "F04-S2-C4-L10",
+      "component": "CMP-HUMAN",
+      "lane": "L10",
+      "column": 4,
+      "title": "Human authority / exception",
+      "body": "Human-led in the source process map. Exact approval and release rights remain open (Q-001).",
+      "visible_tag": "CLIENT_VALIDATION_REQUIRED",
+      "journey_id": "J-M3-03",
+      "process_ids": [
+        "M2.5",
+        "M3.3"
+      ],
+      "source_refs": [
+        {
+          "source_id": "SRC-007",
+          "locator": "slide 1 shapes 291 and 292 M3.3; slide 1 shape 9"
+        }
+      ],
+      "assumption_ids": [
+        "ASM-001",
+        "ASM-002"
+      ],
+      "x": 1532,
+      "y": 2364,
+      "width": 340,
+      "height": 220
+    },
+    {
+      "content_id": "F04-S2-C4-L11",
+      "component": "CMP-STATE",
+      "lane": "L11",
+      "column": 4,
+      "title": "State / open questions",
+      "body": "Record requirement, evidence and gap outcomes; current data schema unverified (Q-003).",
+      "visible_tag": "CLIENT_VALIDATION_REQUIRED",
+      "journey_id": "J-M3-03",
+      "process_ids": [
+        "M2.5",
+        "M3.3"
+      ],
+      "source_refs": [
+        {
+          "source_id": "SRC-007",
+          "locator": "slide 1 shapes 291 and 292 M3.3; slide 1 shape 9"
+        }
+      ],
+      "assumption_ids": [
+        "ASM-001",
+        "ASM-002"
+      ],
+      "x": 1532,
+      "y": 2600,
+      "width": 340,
+      "height": 220
+    },
+    {
+      "content_id": "F04-S2-C5-L01",
+      "component": "CMP-ACTION",
+      "lane": "L01",
+      "column": 5,
+      "title": "J-M3-04",
+      "body": "Validate and manage evidence",
+      "visible_tag": "PROCESS_MAP_DERIVED",
+      "journey_id": "J-M3-04",
+      "process_ids": [
+        "M3.4",
+        "M3.5"
+      ],
+      "source_refs": [
+        {
+          "source_id": "SRC-007",
+          "locator": "slide 1 shape 292 M3.4-M3.5; slide 2 shape 292"
+        }
+      ],
+      "assumption_ids": [
+        "ASM-001",
+        "ASM-002"
+      ],
+      "x": 1896,
+      "y": 240,
+      "width": 340,
+      "height": 220
+    },
+    {
+      "content_id": "F04-S2-C5-L02",
+      "component": "CMP-ACTION",
+      "lane": "L02",
+      "column": 5,
+      "title": "User objective / JTBD",
+      "body": "Know which gaps are closed and what happens next.",
+      "visible_tag": "CLIENT_VALIDATION_REQUIRED",
+      "journey_id": "J-M3-04",
+      "process_ids": [
+        "M3.4",
+        "M3.5"
+      ],
+      "source_refs": [
+        {
+          "source_id": "SRC-007",
+          "locator": "slide 1 shape 292 M3.4-M3.5; slide 2 shape 292"
+        }
+      ],
+      "assumption_ids": [
+        "ASM-001",
+        "ASM-002"
+      ],
+      "x": 1896,
+      "y": 476,
+      "width": 340,
+      "height": 220
+    },
+    {
+      "content_id": "F04-S2-C5-L03",
+      "component": "CMP-ACTION",
+      "lane": "L03",
+      "column": 5,
+      "title": "Client / Sales-RM",
+      "body": "Respond to specific follow-up questions if evidence remains insufficient.",
+      "visible_tag": "CLIENT_VALIDATION_REQUIRED",
+      "journey_id": "J-M3-04",
+      "process_ids": [
+        "M3.4",
+        "M3.5"
+      ],
+      "source_refs": [
+        {
+          "source_id": "SRC-007",
+          "locator": "slide 1 shape 292 M3.4-M3.5; slide 2 shape 292"
+        }
+      ],
+      "assumption_ids": [
+        "ASM-001",
+        "ASM-002"
+      ],
+      "x": 1896,
+      "y": 712,
+      "width": 340,
+      "height": 220
+    },
+    {
+      "content_id": "F04-S2-C5-L04",
+      "component": "CMP-ACTION",
+      "lane": "L04",
+      "column": 5,
+      "title": "Case Manager",
+      "body": "Track blockers and coordinate the next accountable action.",
+      "visible_tag": "CLIENT_VALIDATION_REQUIRED",
+      "journey_id": "J-M3-04",
+      "process_ids": [
+        "M3.4",
+        "M3.5"
+      ],
+      "source_refs": [
+        {
+          "source_id": "SRC-007",
+          "locator": "slide 1 shape 292 M3.4-M3.5; slide 2 shape 292"
+        }
+      ],
+      "assumption_ids": [
+        "ASM-001",
+        "ASM-002"
+      ],
+      "x": 1896,
+      "y": 948,
+      "width": 340,
+      "height": 220
+    },
+    {
+      "content_id": "F04-S2-C5-L05",
+      "component": "CMP-ACTION",
+      "lane": "L05",
+      "column": 5,
+      "title": "KYC Operations",
+      "body": "Assess received evidence and record unresolved gaps.",
+      "visible_tag": "CLIENT_VALIDATION_REQUIRED",
+      "journey_id": "J-M3-04",
+      "process_ids": [
+        "M3.4",
+        "M3.5"
+      ],
+      "source_refs": [
+        {
+          "source_id": "SRC-007",
+          "locator": "slide 1 shape 292 M3.4-M3.5; slide 2 shape 292"
+        }
+      ],
+      "assumption_ids": [
+        "ASM-001",
+        "ASM-002"
+      ],
+      "x": 1896,
+      "y": 1184,
+      "width": 340,
+      "height": 220
+    },
+    {
+      "content_id": "F04-S2-C5-L06",
+      "component": "CMP-ACTION",
+      "lane": "L06",
+      "column": 5,
+      "title": "Product execution / rules",
+      "body": "Capture and validate evidence; manage outstanding gaps and the sourcing audit trail.",
+      "visible_tag": "PROCESS_MAP_DERIVED",
+      "journey_id": "J-M3-04",
+      "process_ids": [
+        "M3.4",
+        "M3.5"
+      ],
+      "source_refs": [
+        {
+          "source_id": "SRC-007",
+          "locator": "slide 1 shape 292 M3.4-M3.5; slide 2 shape 292"
+        }
+      ],
+      "assumption_ids": [
+        "ASM-001",
+        "ASM-002"
+      ],
+      "x": 1896,
+      "y": 1420,
+      "width": 340,
+      "height": 220
+    },
+    {
+      "content_id": "F04-S2-C5-L07",
+      "component": "CMP-ACTION",
+      "lane": "L07",
+      "column": 5,
+      "title": "Systems / evidence",
+      "body": "Case workspace and evidence repository",
+      "visible_tag": "CLIENT_VALIDATION_REQUIRED",
+      "journey_id": "J-M3-04",
+      "process_ids": [
+        "M3.4",
+        "M3.5"
+      ],
+      "source_refs": [
+        {
+          "source_id": "SRC-007",
+          "locator": "slide 1 shape 292 M3.4-M3.5; slide 2 shape 292"
+        }
+      ],
+      "assumption_ids": [
+        "ASM-001",
+        "ASM-002"
+      ],
+      "x": 1896,
+      "y": 1656,
+      "width": 340,
+      "height": 220
+    },
+    {
+      "content_id": "F04-S2-C5-L08",
+      "component": "CMP-ACTION",
+      "lane": "L08",
+      "column": 5,
+      "title": "Handoff / dependency",
+      "body": "Make suitable evidence available downstream; keep unresolved blockers visible.",
+      "visible_tag": "CLIENT_VALIDATION_REQUIRED",
+      "journey_id": "J-M3-04",
+      "process_ids": [
+        "M3.4",
+        "M3.5"
+      ],
+      "source_refs": [
+        {
+          "source_id": "SRC-007",
+          "locator": "slide 1 shape 292 M3.4-M3.5; slide 2 shape 292"
+        }
+      ],
+      "assumption_ids": [
+        "ASM-001",
+        "ASM-002"
+      ],
+      "x": 1896,
+      "y": 1892,
+      "width": 340,
+      "height": 220
+    },
+    {
+      "content_id": "F04-S2-C5-L09",
+      "component": "CMP-PAIN",
+      "lane": "L09",
+      "column": 5,
+      "title": "Pain / root cause / value",
+      "body": "Pain hypothesis: Remediation may restart work when prior decisions and versions are hard to find.\nRoot hypothesis: Weak version/context links may obscure why a gap was reopened.",
+      "visible_tag": "DESIGN_HYPOTHESIS",
+      "journey_id": "J-M3-04",
+      "process_ids": [
+        "M3.4",
+        "M3.5"
+      ],
+      "source_refs": [
+        {
+          "source_id": "SRC-007",
+          "locator": "slide 1 shape 292 M3.4-M3.5; slide 2 shape 292"
+        }
+      ],
+      "assumption_ids": [
+        "ASM-001",
+        "ASM-002"
+      ],
+      "x": 1896,
+      "y": 2128,
+      "width": 340,
+      "height": 220
+    },
+    {
+      "content_id": "F04-S2-C5-L10",
+      "component": "CMP-HUMAN",
+      "lane": "L10",
+      "column": 5,
+      "title": "Human authority / exception",
+      "body": "Human-led in the source process map. Exact approval and release rights remain open (Q-001).",
+      "visible_tag": "CLIENT_VALIDATION_REQUIRED",
+      "journey_id": "J-M3-04",
+      "process_ids": [
+        "M3.4",
+        "M3.5"
+      ],
+      "source_refs": [
+        {
+          "source_id": "SRC-007",
+          "locator": "slide 1 shape 292 M3.4-M3.5; slide 2 shape 292"
+        }
+      ],
+      "assumption_ids": [
+        "ASM-001",
+        "ASM-002"
+      ],
+      "x": 1896,
+      "y": 2364,
+      "width": 340,
+      "height": 220
+    },
+    {
+      "content_id": "F04-S2-C5-L11",
+      "component": "CMP-STATE",
+      "lane": "L11",
+      "column": 5,
+      "title": "State / open questions",
+      "body": "Record requirement, evidence and gap outcomes; current data schema unverified (Q-003).",
+      "visible_tag": "CLIENT_VALIDATION_REQUIRED",
+      "journey_id": "J-M3-04",
+      "process_ids": [
+        "M3.4",
+        "M3.5"
+      ],
+      "source_refs": [
+        {
+          "source_id": "SRC-007",
+          "locator": "slide 1 shape 292 M3.4-M3.5; slide 2 shape 292"
+        }
+      ],
+      "assumption_ids": [
+        "ASM-001",
+        "ASM-002"
+      ],
+      "x": 1896,
+      "y": 2600,
+      "width": 340,
+      "height": 220
+    }
+  ],
+  "connectors": [
+    {
+      "content_id": "F04-SEQ-1",
+      "type": "CON-REQ",
+      "from": "F04-S2-C1-L01",
+      "to": "F04-S2-C2-L01",
+      "label": "Illustrative reading order; conditional branches apply",
+      "anchor_status": "PLANNED_NOT_MIRO_VERIFIED"
+    },
+    {
+      "content_id": "F04-SEQ-2",
+      "type": "CON-REQ",
+      "from": "F04-S2-C2-L01",
+      "to": "F04-S2-C3-L01",
+      "label": "Illustrative reading order; conditional branches apply",
+      "anchor_status": "PLANNED_NOT_MIRO_VERIFIED"
+    },
+    {
+      "content_id": "F04-SEQ-3",
+      "type": "CON-REQ",
+      "from": "F04-S2-C3-L01",
+      "to": "F04-S2-C4-L01",
+      "label": "Illustrative reading order; conditional branches apply",
+      "anchor_status": "PLANNED_NOT_MIRO_VERIFIED"
+    },
+    {
+      "content_id": "F04-SEQ-4",
+      "type": "CON-REQ",
+      "from": "F04-S2-C4-L01",
+      "to": "F04-S2-C5-L01",
+      "label": "Illustrative reading order; conditional branches apply",
+      "anchor_status": "PLANNED_NOT_MIRO_VERIFIED"
+    },
+    {
+      "content_id": "F04-SKIP",
+      "type": "CON-OPT",
+      "from": "F04-S2-C2-L01",
+      "to": "F04-S2-C5-L01",
+      "label": "Existing evidence may proceed directly to review",
+      "anchor_status": "PLANNED_NOT_MIRO_VERIFIED"
+    },
+    {
+      "content_id": "F04-REWORK",
+      "type": "CON-LOOP",
+      "from": "F04-S2-C5-L01",
+      "to": "F04-S2-C3-L01",
+      "label": "Insufficient evidence: reopen gap",
+      "anchor_status": "PLANNED_NOT_MIRO_VERIFIED"
+    }
+  ],
+  "notes": [
+    "Eleven lanes are an explicit ASM-006 proposal, not certified parent-spec conformity.",
+    "S2 is a slice, not the full end-to-end journey.",
+    "2026-09-07: native items and connector references read back; detailed design calibration and client validation remain open."
+  ],
+  "miro_frame_id": "3458764682843351920",
+  "miro_url": "https://miro.com/app/board/uXjVHr-MAS8=/?moveToWidget=3458764682843351920",
+  "readback_managed_count": 74
+}

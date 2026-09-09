@@ -1,0 +1,18 @@
+{
+  "at": "2026-09-07T17:55:04.952Z",
+  "command": "node /Users/christinaliu/Documents/ChatGPT/Australia Bank/clear-to-trade-product/prototype/qa/d5/om-regression/print-lifecycle.mjs",
+  "browser": "152.0.7977.76",
+  "results": [
+    {
+      "ids": [
+        "OM-16",
+        "OM-25"
+      ],
+      "name": "native-print-pauses-narration",
+      "status": "passed",
+      "screenshot": "prototype/qa/d5/om-regression/host/native-print-pauses-narration.png",
+      "errors": [],
+      "remote": []
+    }
+  ]
+}

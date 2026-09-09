@@ -1,0 +1,78 @@
+{
+  "at": "2026-09-07T17:29:36.233Z",
+  "browser": "152.0.7977.76",
+  "results": [
+    {
+      "ids": [
+        "D5-04",
+        "D5-15",
+        "D5U-37"
+      ],
+      "name": "reload-keeps-current-saved-task",
+      "status": "passed",
+      "screenshot": "prototype/qa/d5/host/reload-keeps-current-saved-task.png",
+      "errors": [],
+      "remote": []
+    },
+    {
+      "ids": [
+        "D5-06",
+        "D5-42",
+        "D5U-39"
+      ],
+      "name": "keyboard-control-keeps-semantic-focus",
+      "status": "passed",
+      "screenshot": "prototype/qa/d5/host/keyboard-control-keeps-semantic-focus.png",
+      "errors": [],
+      "remote": []
+    },
+    {
+      "ids": [
+        "D5-37",
+        "D5-39",
+        "D5U-02",
+        "D5U-39"
+      ],
+      "name": "step-and-language-preserve-open-reading-detail",
+      "status": "failed",
+      "error": "Expected values to be strictly equal:\n\nnull !== ''\n",
+      "stack": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\nnull !== ''\n\n    at file:///Users/christinaliu/Documents/ChatGPT/Australia%20Bank/clear-to-trade-product/prototype/qa/d5/navigation-extra.mjs:10:135\n    at async probe (file:///Users/christinaliu/Documents/ChatGPT/Australia%20Bank/clear-to-trade-product/prototype/qa/d5/harness.mjs:16:95)\n    at async file:///Users/christinaliu/Documents/ChatGPT/Australia%20Bank/clear-to-trade-product/prototype/qa/d5/navigation-extra.mjs:9:1",
+      "errors": [],
+      "remote": []
+    },
+    {
+      "ids": [
+        "D5U-21",
+        "D5U-28"
+      ],
+      "name": "persona-preferences-and-dirty-input-do-not-cross",
+      "status": "passed",
+      "screenshot": "prototype/qa/d5/host/persona-preferences-and-dirty-input-do-not-cross.png",
+      "errors": [],
+      "remote": []
+    },
+    {
+      "ids": [
+        "D5U-25",
+        "D5U-26",
+        "D5U-28"
+      ],
+      "name": "readonly-record-and-zero-results",
+      "status": "passed",
+      "screenshot": "prototype/qa/d5/host/readonly-record-and-zero-results.png",
+      "errors": [],
+      "remote": []
+    },
+    {
+      "ids": [
+        "D5U-25",
+        "D5U-27"
+      ],
+      "name": "unavailable-history-distinct-from-no-results",
+      "status": "passed",
+      "screenshot": "prototype/qa/d5/host/unavailable-history-distinct-from-no-results.png",
+      "errors": [],
+      "remote": []
+    }
+  ]
+}

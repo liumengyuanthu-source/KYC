@@ -1,0 +1,98 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "准备与等待",
+    "locale": "zh-CN",
+    "quality_profile": "showcase",
+    "animation": "none",
+    "legend": {
+      "mode": "hidden"
+    },
+    "viewBox": [
+      1100,
+      620
+    ]
+  },
+  "components": [
+    {
+      "id": "context",
+      "type": "external",
+      "label": "已审阅上下文",
+      "sublabel": "范围 / 主体 / 已知输入",
+      "pos": [
+        50,
+        80
+      ],
+      "size": [
+        220,
+        96
+      ]
+    },
+    {
+      "id": "requirements",
+      "type": "external",
+      "label": "要求草稿",
+      "sublabel": "仅依据已知上下文",
+      "pos": [
+        780,
+        80
+      ],
+      "size": [
+        220,
+        96
+      ]
+    },
+    {
+      "id": "authority",
+      "type": "external",
+      "label": "权限复核",
+      "sublabel": "需证据 / 尚未指派",
+      "pos": [
+        50,
+        430
+      ],
+      "size": [
+        220,
+        96
+      ]
+    },
+    {
+      "id": "external",
+      "type": "external",
+      "label": "对外动作",
+      "sublabel": "权限待确认 / 未执行",
+      "pos": [
+        780,
+        430
+      ],
+      "size": [
+        220,
+        96
+      ]
+    }
+  ],
+  "connections": [
+    {
+      "id": "draft-gate",
+      "from": "context",
+      "to": "requirements",
+      "label": "输入充分且无适用暂停"
+    },
+    {
+      "id": "authority-gap",
+      "from": "context",
+      "to": "authority",
+      "label": "特定主体 / 用途证据缺口",
+      "variant": "dashed",
+      "labelDy": 130
+    },
+    {
+      "id": "action-waits",
+      "from": "authority",
+      "to": "external",
+      "label": "等待相应用途权限",
+      "variant": "dashed"
+    }
+  ]
+}

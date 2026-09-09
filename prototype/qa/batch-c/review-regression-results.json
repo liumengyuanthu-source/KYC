@@ -1,0 +1,135 @@
+{
+  "at": "2026-09-07T12:13:50.548Z",
+  "command": "node prototype/qa/batch-c/review-regressions.mjs",
+  "results": [
+    {
+      "ids": [
+        "RT-C13",
+        "RT-C58"
+      ],
+      "name": "review-fix.activity.ROLE-RM",
+      "status": "passed",
+      "steps": "Actual frozen host UI; isolated synthetic session; full case unchanged",
+      "case_before": {
+        "revision": 34
+      },
+      "case_after": {
+        "revision": 34
+      },
+      "screenshot": "review-fix.activity.ROLE-RM.png"
+    },
+    {
+      "ids": [
+        "RT-C13",
+        "RT-C58"
+      ],
+      "name": "review-fix.activity.ROLE-CLIENT",
+      "status": "passed",
+      "steps": "Actual frozen host UI; isolated synthetic session; full case unchanged",
+      "case_before": {
+        "revision": 34
+      },
+      "case_after": {
+        "revision": 34
+      },
+      "screenshot": "review-fix.activity.ROLE-CLIENT.png"
+    },
+    {
+      "ids": [
+        "RT-C13",
+        "RT-C58"
+      ],
+      "name": "review-fix.activity.ROLE-CASEMGR",
+      "status": "passed",
+      "steps": "Actual frozen host UI; isolated synthetic session; full case unchanged",
+      "case_before": {
+        "revision": 34
+      },
+      "case_after": {
+        "revision": 34
+      },
+      "screenshot": "review-fix.activity.ROLE-CASEMGR.png"
+    },
+    {
+      "ids": [
+        "RT-C67"
+      ],
+      "name": "review-fix.authorized-case-history",
+      "status": "passed",
+      "steps": "Actual frozen host UI; isolated synthetic session; full case unchanged",
+      "case_before": {
+        "revision": 34
+      },
+      "case_after": {
+        "revision": 34
+      },
+      "screenshot": "review-fix.authorized-case-history.png"
+    },
+    {
+      "ids": [
+        "RT-C29",
+        "RT-C61"
+      ],
+      "name": "review-fix.dirty-c-to-collaboration",
+      "status": "passed",
+      "steps": "Actual frozen host UI; isolated synthetic session; full case unchanged",
+      "case_before": {
+        "revision": 34
+      },
+      "case_after": {
+        "revision": 34
+      },
+      "screenshot": "review-fix.dirty-c-to-collaboration.png"
+    },
+    {
+      "ids": [
+        "RT-C29",
+        "RT-C44",
+        "RT-C61"
+      ],
+      "name": "review-fix.dirty-collaboration-return",
+      "status": "passed",
+      "steps": "Actual frozen host UI; isolated synthetic session; full case unchanged",
+      "case_before": {
+        "revision": 34
+      },
+      "case_after": {
+        "revision": 34
+      },
+      "screenshot": "review-fix.dirty-collaboration-return.png"
+    },
+    {
+      "ids": [
+        "RT-C49",
+        "RT-C50",
+        "RT-C60"
+      ],
+      "name": "review-fix.reference-scroll",
+      "status": "passed",
+      "steps": "Actual frozen host UI; isolated synthetic session; full case unchanged",
+      "case_before": {
+        "revision": 34
+      },
+      "case_after": {
+        "revision": 34
+      },
+      "screenshot": "review-fix.reference-scroll.png"
+    },
+    {
+      "ids": [
+        "RT-C39"
+      ],
+      "name": "review-fix.edd-owner-question",
+      "status": "passed",
+      "steps": "Actual frozen host UI; isolated synthetic session; full case unchanged",
+      "case_before": {
+        "revision": 34
+      },
+      "case_after": {
+        "revision": 34
+      },
+      "screenshot": "review-fix.edd-owner-question.png"
+    }
+  ],
+  "errors": []
+}

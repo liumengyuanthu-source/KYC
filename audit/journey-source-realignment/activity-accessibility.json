@@ -1,0 +1,810 @@
+{
+  "violations": [],
+  "incomplete": [
+    {
+      "id": "aria-prohibited-attr",
+      "impact": "serious",
+      "tags": [
+        "cat.aria",
+        "wcag2a",
+        "wcag412",
+        "EN-301-549",
+        "EN-9.4.1.2",
+        "RGAAv4",
+        "RGAA-7.1.1"
+      ],
+      "description": "Ensure ARIA attributes are not prohibited for an element's role",
+      "help": "Elements must only use permitted ARIA attributes",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/aria-prohibited-attr?application=playwright",
+      "nodes": [
+        {
+          "any": [],
+          "all": [],
+          "none": [
+            {
+              "id": "aria-prohibited-attr",
+              "data": {
+                "role": null,
+                "nodeName": "div",
+                "messageKey": "noRoleSingular",
+                "prohibited": [
+                  "aria-label"
+                ]
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "aria-label attribute is not well supported on a div with no valid role attribute."
+            }
+          ],
+          "impact": "serious",
+          "html": "<div class=\"segmented\" aria-label=\"对照\">",
+          "target": [
+            "div[aria-label=\"对照\"]"
+          ],
+          "failureSummary": "Fix all of the following:\n  aria-label attribute is not well supported on a div with no valid role attribute."
+        }
+      ]
+    },
+    {
+      "id": "color-contrast",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "7.5pt (10px)",
+                "fontWeight": "normal",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<header class=\"modal-head journey-modal-head\">",
+                  "target": [
+                    ".modal-head"
+                  ]
+                },
+                {
+                  "html": "<dialog id=\"scenario-dialog\" aria-labelledby=\"scene-title\" open=\"\">",
+                  "target": [
+                    "#scenario-dialog"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p class=\"eyebrow\">M3 · 文件与证据获取 · 角色活动 / 只读</p>",
+          "target": [
+            ".modal-head > .eyebrow"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "24.0pt (32px)",
+                "fontWeight": "normal",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<header class=\"modal-head journey-modal-head\">",
+                  "target": [
+                    ".modal-head"
+                  ]
+                },
+                {
+                  "html": "<dialog id=\"scenario-dialog\" aria-labelledby=\"scene-title\" open=\"\">",
+                  "target": [
+                    "#scenario-dialog"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h2 id=\"scene-title\" tabindex=\"-1\">提供所需文件与信息</h2>",
+          "target": [
+            "#scene-title"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.8pt (13px)",
+                "fontWeight": "normal",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<select id=\"scene-locale\" aria-label=\"活动语言\"><option value=\"en-AU\">English (AU)</option><option value=\"en-US\">English (US)</option><option value=\"zh-CN\" selected=\"\">简体中文</option></select>",
+                  "target": [
+                    "#scene-locale"
+                  ]
+                },
+                {
+                  "html": "<header class=\"modal-head journey-modal-head\">",
+                  "target": [
+                    ".modal-head"
+                  ]
+                },
+                {
+                  "html": "<dialog id=\"scenario-dialog\" aria-labelledby=\"scene-title\" open=\"\">",
+                  "target": [
+                    "#scenario-dialog"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<select id=\"scene-locale\" aria-label=\"活动语言\"><option value=\"en-AU\">English (AU)</option><option value=\"en-US\">English (US)</option><option value=\"zh-CN\" selected=\"\">简体中文</option></select>",
+          "target": [
+            "#scene-locale"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "16.5pt (22px)",
+                "fontWeight": "normal",
+                "messageKey": "shortTextContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<span class=\"glass-surface\" aria-hidden=\"true\"></span>",
+                  "target": [
+                    ".close > .glass-surface[aria-hidden=\"true\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element content is too short to determine if it is actual text content"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"button-label\">×</span>",
+          "target": [
+            ".close > .button-label"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<span class=\"selection-glass\" aria-hidden=\"true\" data-value=\"current\" style=\"left: 4px; top: 4px; width: 79px; height: 34px;\"></span>",
+                  "target": [
+                    "div[aria-label=\"对照\"] > .selection-glass[data-value=\"current\"][aria-hidden=\"true\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"button-label\">Current</span>",
+          "target": [
+            "div[aria-label=\"对照\"] > button[data-action=\"compare\"][data-value=\"current\"] > .button-label"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"segmented\" aria-label=\"对照\">",
+                  "target": [
+                    "div[aria-label=\"对照\"]"
+                  ]
+                },
+                {
+                  "html": "<dialog id=\"scenario-dialog\" aria-labelledby=\"scene-title\" open=\"\">",
+                  "target": [
+                    "#scenario-dialog"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"button-label\">Target</span>",
+          "target": [
+            "div[aria-label=\"对照\"] > button[data-value=\"target\"][data-action=\"compare\"] > .button-label"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "7.5pt (10px)",
+                "fontWeight": "normal",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<dialog id=\"scenario-dialog\" aria-labelledby=\"scene-title\" open=\"\">",
+                  "target": [
+                    "#scenario-dialog"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"eyebrow\">角色目标</span>",
+          "target": [
+            ".journey-role-goal > .eyebrow"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "13.5pt (18px)",
+                "fontWeight": "normal",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<dialog id=\"scenario-dialog\" aria-labelledby=\"scene-title\" open=\"\">",
+                  "target": [
+                    "#scenario-dialog"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<strong>客户 · 提供所需文件与信息</strong>",
+          "target": [
+            ".journey-role-goal > strong"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "8.3pt (11px)",
+                "fontWeight": "normal",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<dialog id=\"scenario-dialog\" aria-labelledby=\"scene-title\" open=\"\">",
+                  "target": [
+                    "#scenario-dialog"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<dt>所需输入</dt>",
+          "target": [
+            "div:nth-child(1) > dt"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "normal",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<dialog id=\"scenario-dialog\" aria-labelledby=\"scene-title\" open=\"\">",
+                  "target": [
+                    "#scenario-dialog"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<dd>注明用途与期限的限定文件请求</dd>",
+          "target": [
+            "div:nth-child(1) > dd"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "8.3pt (11px)",
+                "fontWeight": "normal",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<dialog id=\"scenario-dialog\" aria-labelledby=\"scene-title\" open=\"\">",
+                  "target": [
+                    "#scenario-dialog"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<dt>预期本项输出</dt>",
+          "target": [
+            "div:nth-child(2) > dt"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "normal",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<dialog id=\"scenario-dialog\" aria-labelledby=\"scene-title\" open=\"\">",
+                  "target": [
+                    "#scenario-dialog"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<dd>客户提交的信息与文件；尚未构成已接受证据</dd>",
+          "target": [
+            "div:nth-child(2) > dd"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "8.3pt (11px)",
+                "fontWeight": "normal",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<dialog id=\"scenario-dialog\" aria-labelledby=\"scene-title\" open=\"\">",
+                  "target": [
+                    "#scenario-dialog"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<dt>交接</dt>",
+          "target": [
+            "div:nth-child(3) > dt"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "normal",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<dialog id=\"scenario-dialog\" aria-labelledby=\"scene-title\" open=\"\">",
+                  "target": [
+                    "#scenario-dialog"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<dd>交接至客户履约／KYC 运营。</dd>",
+          "target": [
+            "div:nth-child(3) > dd"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<dialog id=\"scenario-dialog\" aria-labelledby=\"scene-title\" open=\"\">",
+                  "target": [
+                    "#scenario-dialog"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p class=\"small muted\">所需输入与预期输出用于描述工作，不代表本合成案件已经就绪。活动视图将相关源步骤归组，并复用现有场景。</p>",
+          "target": [
+            ".journey-activity-reader > .muted.small"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<dialog id=\"scenario-dialog\" aria-labelledby=\"scene-title\" open=\"\">",
+                  "target": [
+                    "#scenario-dialog"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<strong>共享合成案件</strong>",
+          "target": [
+            "aside > strong"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.8pt (13px)",
+                "fontWeight": "normal",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<dialog id=\"scenario-dialog\" aria-labelledby=\"scene-title\" open=\"\">",
+                  "target": [
+                    "#scenario-dialog"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p>Entity A（澳大利亚）申请外汇远期；Entity B（新加坡）为其已报告母公司。Person T 任职于 B，并声称为 A 协调；具体代表权限仍未知。详细场景展示现有任务、依赖、图示与媒体。</p>",
+          "target": [
+            "aside > p:nth-child(2)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.8pt (13px)",
+                "fontWeight": "normal",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<dialog id=\"scenario-dialog\" aria-labelledby=\"scene-title\" open=\"\">",
+                  "target": [
+                    "#scenario-dialog"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p>产品使用当前演示角色 <strong>客户履约 / KYC 运营</strong>. 阅读视角不授予任何权限。</p>",
+          "target": [
+            "aside > p:nth-child(3)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.8pt (13px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<dialog id=\"scenario-dialog\" aria-labelledby=\"scene-title\" open=\"\">",
+                  "target": [
+                    "#scenario-dialog"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<strong>客户履约 / KYC 运营</strong>",
+          "target": [
+            "p:nth-child(3) > strong"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<footer class=\"modal-footer\">",
+                  "target": [
+                    ".modal-footer"
+                  ]
+                },
+                {
+                  "html": "<dialog id=\"scenario-dialog\" aria-labelledby=\"scene-title\" open=\"\">",
+                  "target": [
+                    "#scenario-dialog"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"small muted\">客户 · M3</span>",
+          "target": [
+            ".modal-footer > .muted.small"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.8pt (13px)",
+                "fontWeight": "normal",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<span class=\"glass-surface\" aria-hidden=\"true\"></span>",
+                  "target": [
+                    "button[data-action=\"journey-activity-print\"] > .glass-surface[aria-hidden=\"true\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"button-label\">打印本项活动</span>",
+          "target": [
+            "button[data-action=\"journey-activity-print\"] > .button-label"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.8pt (13px)",
+                "fontWeight": "normal",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<span class=\"glass-surface\" aria-hidden=\"true\"></span>",
+                  "target": [
+                    ".primary > .glass-surface[aria-hidden=\"true\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"button-label\">打开共享场景 → 产品任务</span>",
+          "target": [
+            ".primary > .button-label"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        }
+      ]
+    }
+  ]
+}

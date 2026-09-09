@@ -1,0 +1,88 @@
+{
+  "results": [
+    {
+      "html": "reconstruction/diagrams/br-03-current-zh-CN-r3.html",
+      "status": "pass",
+      "sha256": "cc292e3fad5e4ac52ebf8b078394f442990cd052c89ce8824690990d903f0518",
+      "diagnostics": [],
+      "receipt": "prototype/reconstruction/diagrams/br-03-current-zh-CN-r3.visual-check.json"
+    },
+    {
+      "html": "reconstruction/diagrams/br-03-target-zh-CN-r3.html",
+      "status": "pass",
+      "sha256": "803836940224f74e208b8a6ca578789fd3807b07e4a6b438ce5552e782ab0712",
+      "diagnostics": [],
+      "receipt": "prototype/reconstruction/diagrams/br-03-target-zh-CN-r3.visual-check.json"
+    },
+    {
+      "html": "reconstruction/diagrams/br-03-target-en-AU-r3.html",
+      "status": "pass",
+      "sha256": "39bfbcb7cfd02205363e578fa243dac545e4c155365850a3cef6e3deec79e7d5",
+      "diagnostics": [],
+      "receipt": "prototype/reconstruction/diagrams/br-03-target-en-AU-r3.visual-check.json"
+    },
+    {
+      "html": "reconstruction/diagrams/br-03-current-en-AU-r3.html",
+      "status": "pass",
+      "sha256": "3ddbc871c660878420063dd3f257414f20370083aeeb015fe8207a04f588020f",
+      "diagnostics": [],
+      "receipt": "prototype/reconstruction/diagrams/br-03-current-en-AU-r3.visual-check.json"
+    },
+    {
+      "html": "reconstruction/diagrams/br-04-target-zh-CN-r3.html",
+      "status": "pass",
+      "sha256": "acf9bf49c724740ee98b28733767f893168a0190d559d5fed44b3f16c3e6fc05",
+      "diagnostics": [],
+      "receipt": "prototype/reconstruction/diagrams/br-04-target-zh-CN-r3.visual-check.json"
+    },
+    {
+      "html": "reconstruction/diagrams/br-04-current-zh-CN-r3.html",
+      "status": "pass",
+      "sha256": "efe89c5e00f8eb1505fed1762275cbd0d20d9c0b7aae4431d11ee60d1a9ef0c6",
+      "diagnostics": [],
+      "receipt": "prototype/reconstruction/diagrams/br-04-current-zh-CN-r3.visual-check.json"
+    },
+    {
+      "html": "reconstruction/diagrams/br-04-current-en-AU-r3.html",
+      "status": "pass",
+      "sha256": "9171556a716d5e21f65f46fe9f721b94c954f21fea104f4317aeb4cc76bed0ef",
+      "diagnostics": [],
+      "receipt": "prototype/reconstruction/diagrams/br-04-current-en-AU-r3.visual-check.json"
+    },
+    {
+      "html": "reconstruction/diagrams/br-04-target-en-AU-r3.html",
+      "status": "pass",
+      "sha256": "6bc676babfd925f67a5ff1ca5474b12ea82c388326494caf86845079f78c6076",
+      "diagnostics": [],
+      "receipt": "prototype/reconstruction/diagrams/br-04-target-en-AU-r3.visual-check.json"
+    },
+    {
+      "html": "reconstruction/diagrams/br-05-current-zh-CN-r3.html",
+      "status": "pass",
+      "sha256": "ad29dadcd7c089b3aa57477aba7d08d48e3078694ecd183806d2accf54e42798",
+      "diagnostics": [],
+      "receipt": "prototype/reconstruction/diagrams/br-05-current-zh-CN-r3.visual-check.json"
+    },
+    {
+      "html": "reconstruction/diagrams/br-05-target-zh-CN-r3.html",
+      "status": "pass",
+      "sha256": "cf69126f85fc367a96bf239578c4c1384556f6b1ae6a1695e650dc66c502012f",
+      "diagnostics": [],
+      "receipt": "prototype/reconstruction/diagrams/br-05-target-zh-CN-r3.visual-check.json"
+    },
+    {
+      "html": "reconstruction/diagrams/br-05-current-en-AU-r3.html",
+      "status": "pass",
+      "sha256": "fcd87c857b415ad3a4d1a97d7720f280c18108306253f3d0ac681138bad4ded8",
+      "diagnostics": [],
+      "receipt": "prototype/reconstruction/diagrams/br-05-current-en-AU-r3.visual-check.json"
+    },
+    {
+      "html": "reconstruction/diagrams/br-05-target-en-AU-r3.html",
+      "status": "pass",
+      "sha256": "09b5ba5f798c5bec08eef3b38b640587a629c01cdc7b44067d5d352a02ff1d47",
+      "diagnostics": [],
+      "receipt": "prototype/reconstruction/diagrams/br-05-target-en-AU-r3.visual-check.json"
+    }
+  ]
+}

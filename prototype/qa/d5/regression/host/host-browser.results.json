@@ -1,0 +1,174 @@
+{
+  "at": "2026-09-07T17:54:59.051Z",
+  "browser": "152.0.7977.76",
+  "results": [
+    {
+      "ids": [
+        "UX-01",
+        "UX-02",
+        "UX-26"
+      ],
+      "name": "SCN-REQUIREMENTS.entry",
+      "status": "passed",
+      "screenshot": "prototype/qa/d5/regression/host/SCN-REQUIREMENTS.entry.png",
+      "errors": []
+    },
+    {
+      "ids": [
+        "UX-01",
+        "UX-02",
+        "UX-26"
+      ],
+      "name": "SCN-SOURCE.entry",
+      "status": "passed",
+      "screenshot": "prototype/qa/d5/regression/host/SCN-SOURCE.entry.png",
+      "errors": []
+    },
+    {
+      "ids": [
+        "UX-01",
+        "UX-02",
+        "UX-26"
+      ],
+      "name": "SCN-GAP.entry",
+      "status": "passed",
+      "screenshot": "prototype/qa/d5/regression/host/SCN-GAP.entry.png",
+      "errors": []
+    },
+    {
+      "ids": [
+        "UX-01",
+        "UX-02",
+        "UX-26"
+      ],
+      "name": "SCN-VALIDATE.entry",
+      "status": "passed",
+      "screenshot": "prototype/qa/d5/regression/host/SCN-VALIDATE.entry.png",
+      "errors": []
+    },
+    {
+      "ids": [
+        "UX-03",
+        "UX-25"
+      ],
+      "name": "MAP-D3-REQUIREMENTS-01.members",
+      "status": "passed",
+      "screenshot": "prototype/qa/d5/regression/host/MAP-D3-REQUIREMENTS-01.members.png",
+      "errors": []
+    },
+    {
+      "ids": [
+        "UX-04",
+        "UX-25"
+      ],
+      "name": "MAP-D3-GAP-05.members",
+      "status": "passed",
+      "screenshot": "prototype/qa/d5/regression/host/MAP-D3-GAP-05.members.png",
+      "errors": []
+    },
+    {
+      "ids": [
+        "UX-05",
+        "UX-30"
+      ],
+      "name": "SCN-SOURCE.proposal",
+      "status": "passed",
+      "screenshot": "prototype/qa/d5/regression/host/SCN-SOURCE.proposal.png",
+      "errors": []
+    },
+    {
+      "ids": [
+        "UX-05"
+      ],
+      "name": "SCN-GAP.proposal",
+      "status": "passed",
+      "screenshot": "prototype/qa/d5/regression/host/SCN-GAP.proposal.png",
+      "errors": []
+    },
+    {
+      "ids": [
+        "UX-07",
+        "UX-08"
+      ],
+      "name": "control-and-hypothesis",
+      "status": "passed",
+      "screenshot": "prototype/qa/d5/regression/host/control-and-hypothesis.png",
+      "errors": []
+    },
+    {
+      "ids": [
+        "UX-09"
+      ],
+      "name": "filter-empty",
+      "status": "passed",
+      "screenshot": "prototype/qa/d5/regression/host/filter-empty.png",
+      "errors": []
+    },
+    {
+      "ids": [
+        "UX-10",
+        "UX-14",
+        "UX-16",
+        "UX-17",
+        "UX-25"
+      ],
+      "name": "references-history-locale",
+      "status": "passed",
+      "screenshot": "prototype/qa/d5/regression/host/references-history-locale.png",
+      "errors": []
+    },
+    {
+      "ids": [
+        "UX-14",
+        "UX-20",
+        "UX-25"
+      ],
+      "name": "selection-history-and-detail-scroll",
+      "status": "passed",
+      "screenshot": "prototype/qa/d5/regression/host/selection-history-and-detail-scroll.png",
+      "errors": []
+    },
+    {
+      "ids": [
+        "UX-16",
+        "UX-17",
+        "UX-21"
+      ],
+      "name": "zh-CN.mobile",
+      "status": "passed",
+      "screenshot": "prototype/qa/d5/regression/host/zh-CN.mobile.png",
+      "errors": []
+    },
+    {
+      "ids": [
+        "UX-16",
+        "UX-17",
+        "UX-21"
+      ],
+      "name": "en-AU.mobile",
+      "status": "passed",
+      "screenshot": "prototype/qa/d5/regression/host/en-AU.mobile.png",
+      "errors": []
+    },
+    {
+      "ids": [
+        "UX-16",
+        "UX-17",
+        "UX-21"
+      ],
+      "name": "en-US.mobile",
+      "status": "passed",
+      "screenshot": "prototype/qa/d5/regression/host/en-US.mobile.png",
+      "errors": []
+    },
+    {
+      "ids": [
+        "UX-22"
+      ],
+      "name": "missing-static-diagrams",
+      "status": "passed",
+      "screenshot": "prototype/qa/d5/regression/host/missing-static-diagrams.png",
+      "errors": []
+    }
+  ]
+}

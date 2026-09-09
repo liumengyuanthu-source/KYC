@@ -1,0 +1,97 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "集团展示名与交易法人",
+    "locale": "zh-CN",
+    "quality_profile": "showcase",
+    "animation": "none",
+    "legend": {
+      "mode": "hidden"
+    },
+    "viewBox": [
+      1100,
+      620
+    ]
+  },
+  "components": [
+    {
+      "id": "request",
+      "type": "external",
+      "label": "合成关系请求",
+      "sublabel": "EV-A01 / 外汇远期意图",
+      "pos": [
+        50,
+        80
+      ],
+      "size": [
+        220,
+        96
+      ]
+    },
+    {
+      "id": "group-a",
+      "type": "external",
+      "label": "Group A",
+      "sublabel": "集团商业展示名",
+      "pos": [
+        780,
+        80
+      ],
+      "size": [
+        220,
+        96
+      ]
+    },
+    {
+      "id": "entity-a",
+      "type": "external",
+      "label": "Entity A",
+      "sublabel": "澳大利亚经营公司",
+      "pos": [
+        50,
+        430
+      ],
+      "size": [
+        220,
+        96
+      ]
+    },
+    {
+      "id": "scope",
+      "type": "external",
+      "label": "工作范围",
+      "sublabel": "Booking / 产品资格未决",
+      "pos": [
+        780,
+        430
+      ],
+      "size": [
+        220,
+        96
+      ]
+    }
+  ],
+  "connections": [
+    {
+      "id": "uses-group-label",
+      "from": "request",
+      "to": "group-a",
+      "label": "使用集团展示名"
+    },
+    {
+      "id": "intended-entity",
+      "from": "request",
+      "to": "entity-a",
+      "label": "RM澄清拟交易主体",
+      "variant": "dashed",
+      "labelDy": 130
+    },
+    {
+      "id": "scope-subject",
+      "from": "entity-a",
+      "to": "scope",
+      "label": "唯一拟准入交易法人"
+    }
+  ]
+}

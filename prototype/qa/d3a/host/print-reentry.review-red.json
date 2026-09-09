@@ -1,0 +1,16 @@
+{
+  "at": "2026-09-07T15:59:53.939Z",
+  "browser": "152.0.7977.76",
+  "results": [
+    {
+      "ids": [
+        "UX-23",
+        "UX-24"
+      ],
+      "name": "branch-print-url-product-reentry",
+      "status": "failed",
+      "error": "Product native print must not inherit a prior authored branch print\n\n1 !== 0\n",
+      "errors": []
+    }
+  ]
+}

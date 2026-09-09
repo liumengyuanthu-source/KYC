@@ -1,0 +1,34 @@
+{
+  "source_ref": "SRC-019:14",
+  "status": "interface_only_no_batch_e_implementation",
+  "case_id": "DEMO-CTT-001",
+  "condition_store": "clearanceConditions",
+  "condition_ids": [
+    "DEMO-CTT-001/condition/conflicts",
+    "DEMO-CTT-001/condition/credit",
+    "DEMO-CTT-001/condition/legal"
+  ],
+  "professional_condition_fields": [
+    "condition_id",
+    "domain",
+    "case_scope_ref",
+    "applicability",
+    "condition_status",
+    "blocking_scope",
+    "owner_role_ref",
+    "dependency_refs",
+    "decision_refs",
+    "evidence_refs",
+    "last_changed_at"
+  ],
+  "readiness_derivation": "Existing case-engine.readiness; not_ready while upstream C/QA and specialist conditions remain unresolved",
+  "screening": "Scoped review recorded; population and coverage open",
+  "conflicts": "Specialist review pending",
+  "credit": "Condition approved; versioned Legal input available",
+  "legal": "Internal approval authored; execution pending; revision currency must be checked",
+  "qa": "Not final",
+  "bank_authority": "unknown",
+  "no_execution_signatory_inference": true,
+  "no_completion_percentage": true,
+  "no_automatic_clearance": true
+}

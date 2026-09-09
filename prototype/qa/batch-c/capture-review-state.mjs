@@ -1,0 +1,15 @@
+import {chromium} from '/Users/christinaliu/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright/index.mjs';
+import {readFileSync,writeFileSync} from 'node:fs';
+import assert from 'node:assert/strict';
+const dir='prototype/qa/batch-c/',saved=JSON.parse(readFileSync(dir+'host-saved-session.json'));
+const browser=await chromium.launch({executablePath:'/Applications/Google Chrome.app/Contents/MacOS/Google Chrome',headless:true});
+const context=await browser.newContext({viewport:{width:1440,height:1000}}),page=await context.newPage();
+saved.navigation={...saved.navigation,page:'product',step:'screening',scenario:'SCN-MATCH',locale:'zh-CN',role:'ROLE-KYCOPS',modal:false,reference:null,mode:'explore'};
+await page.addInitScript(s=>sessionStorage.setItem('ctt-round-a-v1',JSON.stringify(s)),saved);
+await page.goto('http://127.0.0.1:8765/prototype/');await page.waitForSelector('[data-c-panel="screening"]');await page.evaluate(()=>document.fonts.ready);await page.evaluate(()=>window.scrollTo(0,0));
+await page.screenshot({path:dir+'review-mainline.zh-CN.png'});
+const decisions=page.locator('[data-c-panel="screening"] .c-result');assert.equal(await decisions.count(),2);
+await decisions.first().scrollIntoViewIfNeeded();await page.screenshot({path:dir+'review-decisions.zh-CN.png'});
+const after=await page.evaluate(()=>JSON.parse(sessionStorage.getItem('ctt-round-a-v1')).data);assert.deepEqual(after,saved.data);
+writeFileSync(dir+'review-capture.json',JSON.stringify({at:new Date().toISOString(),status:'passed',kind:'actual_saved_host_state_not_video',case_revision:after.case.revision,scope_revision:after.scopes[0].revision,images:['review-mainline.zh-CN.png','review-decisions.zh-CN.png'],business_unchanged:true},null,2)+'\n');
+await browser.close();

@@ -1,6 +1,6 @@
 Deliverable_ID,Deliverable_Name,Purpose,Owner,Visual_Lead,Version,Status,Due_Date,Dependencies,Gate_ID,Repository_Path,Client_Facing,Validation_Status,Last_Updated,Notes
-D0,Evidence Assumption and Decision Register,Factual governance foundation,Christina,,v0.1,IN_PROGRESS,2026-09-07,SRC-001|SRC-005|SRC-006|SRC-007|SRC-008,G0,00_governance,false,BLOCKED,2026-09-05,Missing Tier 1 sources
-D1,Process Decomposition and Journey Backbone,Structural journey foundation,Christina,Xiaoming,v0.1,NOT_STARTED,2026-09-08,D0,G1,01_process,false,BLOCKED,2026-09-05,Depends on primary sources
+D0,Evidence Assumption and Decision Register,Factual governance foundation,Christina,,v0.1,IN_PROGRESS,2026-09-07,SRC-001|SRC-005|SRC-006|SRC-007|SRC-008,G0,00_governance,false,IN_PROGRESS,2026-09-05,Sources reviewed; registers and atomic mapping pending
+D1,Process Decomposition and Journey Backbone,Structural journey foundation,Christina,Xiaoming,v0.1,IN_PROGRESS,2026-09-08,D0,G1,01_process,false,IN_PROGRESS,2026-09-05,Working five-stage backbone drafted; atomic mapping pending
 D2,Initiative and Product Framing Deck,Narrative foundation,Christina,Xiaoming,v0.1,NOT_STARTED,2026-09-10,D0|D1,G1,02_initiative_deck,true,BLOCKED,2026-09-05,
 D3,Persona and Jobs-to-Be-Done Hypothesis Pack,Role foundation,Christina,Coco,v0.1,NOT_STARTED,2026-09-10,D0|D1,G1,03_personas_journey,false,BLOCKED,2026-09-05,
 D4,Current Role-based User Journey,Problem foundation,Christina,Xiaoming,v0.1,NOT_STARTED,2026-09-10,D1|D3,G1,03_personas_journey,true,BLOCKED,2026-09-05,
@@ -10,9 +10,9 @@ D7,Human-in-the-Loop and Autonomy Model,Control foundation,Christina,Coco,v0.1,N
 D8,Structured State Model,State foundation,Christina,Coco,v0.1,NOT_STARTED,2026-09-23,D6,G4,04_operating_model,true,BLOCKED,2026-09-05,
 D9,Agentic Operating Model,Work allocation foundation,Christina,Coco,v0.1,NOT_STARTED,2026-09-23,D6,G4,04_operating_model,true,BLOCKED,2026-09-05,
 D10,Product Capability and Requirement Hypothesis Pack,Product definition foundation,Christina,Coco,v0.1,NOT_STARTED,2026-09-30,D4|D5|D6|D7|D8|D9,G5,05_product_requirements,true,BLOCKED,2026-09-05,
-D11,Pre-client and Workshop Material Pack,Workshop execution foundation,Christina,Xiaoming|Coco,v0.1,NOT_STARTED,2026-09-16,D2|D3|D4|D5|D6|D7|D8|D9|D10,G5,06_workshop,true,BLOCKED,2026-09-05,
+D11,Pre-client and Workshop Material Pack,Workshop execution foundation,Christina,Xiaoming|Coco,v0.1,NOT_STARTED,2026-09-16,D2|D3|D4|D5|D6|D7,G5,06_workshop,true,BLOCKED,2026-09-05,16 Sep discussion pack uses provisional concepts; later workshop version incorporates D8-D10 subject to date confirmation
 D12,Post-workshop Product Definition Pack,Post-workshop baseline,Christina,Xiaoming|Coco,v0.1,NOT_STARTED,,D11,G7,07_output/postworkshop_product_definition,true,BLOCKED,2026-09-05,
 T00,Repository Bootstrap and Guardrails,Create controlled repository and validation foundation,Codex,,v0.1,IN_PROGRESS,2026-09-07,SRC-001,G0,.,false,IN_PROGRESS,2026-09-05,
-CJ-T08A,Miro MCP Preflight and Visual-System Pilot,Prove content-to-canvas workflow,Codex,Xiaoming|Coco,v0.1,BLOCKED,2026-09-07,D1|D4|D6,UX1,06_workshop/miro,false,BLOCKED,2026-09-05,No callable Miro tool board URL or validated sources
+CJ-T08A,Miro MCP Preflight and Visual-System Pilot,Prove content-to-canvas workflow,Codex,Xiaoming|Coco,v0.1,IN_PROGRESS,2026-09-07,D1|D4|D6,UX1,06_workshop/miro,false,AWAITING_REVIEW,2026-09-07,Four frames created; 206 native objects read back; awaiting pilot feedback
 CJ-T08B,Generate Miro Alpha Board V0,Create editable Priority A frames,Codex,Xiaoming|Coco,V0,NOT_STARTED,2026-09-08,CJ-T08A,UX2,06_workshop/miro,true,BLOCKED,2026-09-05,Requires pilot approval
 CJ-T08C,Post-Design Reconciliation and Export Readiness,Reconcile designer changes and prepare exports,Codex,Xiaoming|Coco,V0.5,NOT_STARTED,2026-09-10,CJ-T08B,UX5,06_workshop/miro,true,BLOCKED,2026-09-05,Requires designer refinement

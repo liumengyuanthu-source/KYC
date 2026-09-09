@@ -1,0 +1,12 @@
+[
+  {
+    ids: [ 'RT-D14', 'RT-D15' ],
+    name: 'SCN-CREDIT focuses and advances its rendered DG-D02',
+    status: 'passed'
+  },
+  {
+    ids: [ 'RT-D14', 'RT-D15' ],
+    name: 'SCN-READINESS focuses and advances its rendered DG-D03',
+    status: 'passed'
+  }
+]

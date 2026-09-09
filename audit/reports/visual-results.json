@@ -1,0 +1,696 @@
+{
+  "config": {
+    "argv": [
+      "/usr/local/bin/node",
+      "/Users/christinaliu/Documents/ChatGPT/Australia Bank/clear-to-trade-product/audit/tooling/node_modules/@playwright/test/cli.js",
+      "test",
+      "--config=audit/playwright.config.mjs"
+    ],
+    "configFile": "/Users/christinaliu/Documents/ChatGPT/Australia Bank/clear-to-trade-product/audit/playwright.config.mjs",
+    "rootDir": "/Users/christinaliu/Documents/ChatGPT/Australia Bank/clear-to-trade-product/audit/tests",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/Users/christinaliu/Documents/ChatGPT/Australia Bank/clear-to-trade-product/audit/screenshots/diffs",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "/Users/christinaliu/Documents/ChatGPT/Australia Bank/clear-to-trade-product/audit/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "visual.spec.mjs"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "/Users/christinaliu/Documents/ChatGPT/Australia Bank/clear-to-trade-product/audit/reports/visual-results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.63.0",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "visual.spec.mjs",
+      "file": "visual.spec.mjs",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "01-current",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 760,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-07T19:07:00.186Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a9e8504622c1797aedfc-e4431247b80f6018075d",
+          "file": "visual.spec.mjs",
+          "line": 19,
+          "column": 37
+        },
+        {
+          "title": "02-target",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 873,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-07T19:07:01.166Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a9e8504622c1797aedfc-5bc4ebd459006170916d",
+          "file": "visual.spec.mjs",
+          "line": 19,
+          "column": 37
+        },
+        {
+          "title": "03-scenario",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 683,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-07T19:07:02.046Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a9e8504622c1797aedfc-55aa33e627e7e97cd650",
+          "file": "visual.spec.mjs",
+          "line": 19,
+          "column": 37
+        },
+        {
+          "title": "04-CHK01",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 849,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-07T19:07:02.735Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a9e8504622c1797aedfc-5b512cd79758b006e6a0",
+          "file": "visual.spec.mjs",
+          "line": 19,
+          "column": 37
+        },
+        {
+          "title": "05-CHK02",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 895,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-07T19:07:03.593Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a9e8504622c1797aedfc-ab4929db4cb62bb54011",
+          "file": "visual.spec.mjs",
+          "line": 19,
+          "column": 37
+        },
+        {
+          "title": "06-CHK03",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 1505,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveScreenshot\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\n  3013 pixels (ratio 0.01 of all image pixels) are different.\n\n  Snapshot: 06-CHK03.png\n\nCall log:\n\u001b[2m  - Expect \"toHaveScreenshot(06-CHK03.png)\" with timeout 5000ms\u001b[22m\n\u001b[2m    - verifying given screenshot expectation\u001b[22m\n\u001b[2m  - taking page screenshot\u001b[22m\n\u001b[2m    - disabled all CSS animations\u001b[22m\n\u001b[2m  - waiting for fonts to load...\u001b[22m\n\u001b[2m  - fonts loaded\u001b[22m\n\u001b[2m  - 3013 pixels (ratio 0.01 of all image pixels) are different.\u001b[22m\n\u001b[2m  - waiting 100ms before taking screenshot\u001b[22m\n\u001b[2m  - taking page screenshot\u001b[22m\n\u001b[2m    - disabled all CSS animations\u001b[22m\n\u001b[2m  - waiting for fonts to load...\u001b[22m\n\u001b[2m  - fonts loaded\u001b[22m\n\u001b[2m  - captured a stable screenshot\u001b[22m\n\u001b[2m  - 3013 pixels (ratio 0.01 of all image pixels) are different.\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveScreenshot\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\n  3013 pixels (ratio 0.01 of all image pixels) are different.\n\n  Snapshot: 06-CHK03.png\n\nCall log:\n\u001b[2m  - Expect \"toHaveScreenshot(06-CHK03.png)\" with timeout 5000ms\u001b[22m\n\u001b[2m    - verifying given screenshot expectation\u001b[22m\n\u001b[2m  - taking page screenshot\u001b[22m\n\u001b[2m    - disabled all CSS animations\u001b[22m\n\u001b[2m  - waiting for fonts to load...\u001b[22m\n\u001b[2m  - fonts loaded\u001b[22m\n\u001b[2m  - 3013 pixels (ratio 0.01 of all image pixels) are different.\u001b[22m\n\u001b[2m  - waiting 100ms before taking screenshot\u001b[22m\n\u001b[2m  - taking page screenshot\u001b[22m\n\u001b[2m    - disabled all CSS animations\u001b[22m\n\u001b[2m  - waiting for fonts to load...\u001b[22m\n\u001b[2m  - fonts loaded\u001b[22m\n\u001b[2m  - captured a stable screenshot\u001b[22m\n\u001b[2m  - 3013 pixels (ratio 0.01 of all image pixels) are different.\u001b[22m\n\n    at /Users/christinaliu/Documents/ChatGPT/Australia Bank/clear-to-trade-product/audit/tests/visual.spec.mjs:32:21",
+                    "location": {
+                      "file": "/Users/christinaliu/Documents/ChatGPT/Australia Bank/clear-to-trade-product/audit/tests/visual.spec.mjs",
+                      "column": 21,
+                      "line": 32
+                    },
+                    "snippet": "  30 |  // On later runs retain it: changed pixels fail and require explicit human review.\n  31 |  const baseline=testInfo.snapshotPath(name+'.png');if(!fs.existsSync(baseline)){fs.mkdirSync(path.dirname(baseline),{recursive:true});await page.screenshot({path:baseline,animations:'disabled'});}\n> 32 |  await expect(page).toHaveScreenshot(name+'.png',{animations:'disabled',maxDiffPixelRatio:0.001});\n     |                     ^\n  33 |  expect(await page.evaluate(()=>JSON.parse(sessionStorage.getItem('ctt-round-a-v1')).data)).toEqual(before);\n  34 | });\n  35 |"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/christinaliu/Documents/ChatGPT/Australia Bank/clear-to-trade-product/audit/tests/visual.spec.mjs",
+                        "column": 21,
+                        "line": 32
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveScreenshot\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\n  3013 pixels (ratio 0.01 of all image pixels) are different.\n\n  Snapshot: 06-CHK03.png\n\nCall log:\n\u001b[2m  - Expect \"toHaveScreenshot(06-CHK03.png)\" with timeout 5000ms\u001b[22m\n\u001b[2m    - verifying given screenshot expectation\u001b[22m\n\u001b[2m  - taking page screenshot\u001b[22m\n\u001b[2m    - disabled all CSS animations\u001b[22m\n\u001b[2m  - waiting for fonts to load...\u001b[22m\n\u001b[2m  - fonts loaded\u001b[22m\n\u001b[2m  - 3013 pixels (ratio 0.01 of all image pixels) are different.\u001b[22m\n\u001b[2m  - waiting 100ms before taking screenshot\u001b[22m\n\u001b[2m  - taking page screenshot\u001b[22m\n\u001b[2m    - disabled all CSS animations\u001b[22m\n\u001b[2m  - waiting for fonts to load...\u001b[22m\n\u001b[2m  - fonts loaded\u001b[22m\n\u001b[2m  - captured a stable screenshot\u001b[22m\n\u001b[2m  - 3013 pixels (ratio 0.01 of all image pixels) are different.\u001b[22m\n\n\n  30 |  // On later runs retain it: changed pixels fail and require explicit human review.\n  31 |  const baseline=testInfo.snapshotPath(name+'.png');if(!fs.existsSync(baseline)){fs.mkdirSync(path.dirname(baseline),{recursive:true});await page.screenshot({path:baseline,animations:'disabled'});}\n> 32 |  await expect(page).toHaveScreenshot(name+'.png',{animations:'disabled',maxDiffPixelRatio:0.001});\n     |                     ^\n  33 |  expect(await page.evaluate(()=>JSON.parse(sessionStorage.getItem('ctt-round-a-v1')).data)).toEqual(before);\n  34 | });\n  35 |\n    at /Users/christinaliu/Documents/ChatGPT/Australia Bank/clear-to-trade-product/audit/tests/visual.spec.mjs:32:21"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-07T19:07:04.494Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "06-CHK03-expected.png",
+                      "contentType": "image/png",
+                      "path": "/Users/christinaliu/Documents/ChatGPT/Australia Bank/clear-to-trade-product/audit/screenshots/baselines/06-CHK03.png"
+                    },
+                    {
+                      "name": "06-CHK03-actual.png",
+                      "contentType": "image/png",
+                      "path": "/Users/christinaliu/Documents/ChatGPT/Australia Bank/clear-to-trade-product/audit/screenshots/diffs/visual-06-CHK03/06-CHK03-actual.png"
+                    },
+                    {
+                      "name": "06-CHK03-diff.png",
+                      "contentType": "image/png",
+                      "path": "/Users/christinaliu/Documents/ChatGPT/Australia Bank/clear-to-trade-product/audit/screenshots/diffs/visual-06-CHK03/06-CHK03-diff.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/christinaliu/Documents/ChatGPT/Australia Bank/clear-to-trade-product/audit/screenshots/diffs/visual-06-CHK03/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/christinaliu/Documents/ChatGPT/Australia Bank/clear-to-trade-product/audit/screenshots/diffs/visual-06-CHK03/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/christinaliu/Documents/ChatGPT/Australia Bank/clear-to-trade-product/audit/tests/visual.spec.mjs",
+                    "column": 21,
+                    "line": 32
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "a9e8504622c1797aedfc-a3aebdc0d867427fa81c",
+          "file": "visual.spec.mjs",
+          "line": 19,
+          "column": 37
+        },
+        {
+          "title": "07-CHK04",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 957,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-07T19:07:06.485Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a9e8504622c1797aedfc-19712643d98ef9852552",
+          "file": "visual.spec.mjs",
+          "line": 19,
+          "column": 37
+        },
+        {
+          "title": "08-decision-pack",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 1234,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveScreenshot\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\n  61063 pixels (ratio 0.05 of all image pixels) are different.\n\n  Snapshot: 08-decision-pack.png\n\nCall log:\n\u001b[2m  - Expect \"toHaveScreenshot(08-decision-pack.png)\" with timeout 5000ms\u001b[22m\n\u001b[2m    - verifying given screenshot expectation\u001b[22m\n\u001b[2m  - taking page screenshot\u001b[22m\n\u001b[2m    - disabled all CSS animations\u001b[22m\n\u001b[2m  - waiting for fonts to load...\u001b[22m\n\u001b[2m  - fonts loaded\u001b[22m\n\u001b[2m  - 61063 pixels (ratio 0.05 of all image pixels) are different.\u001b[22m\n\u001b[2m  - waiting 100ms before taking screenshot\u001b[22m\n\u001b[2m  - taking page screenshot\u001b[22m\n\u001b[2m    - disabled all CSS animations\u001b[22m\n\u001b[2m  - waiting for fonts to load...\u001b[22m\n\u001b[2m  - fonts loaded\u001b[22m\n\u001b[2m  - captured a stable screenshot\u001b[22m\n\u001b[2m  - 61063 pixels (ratio 0.05 of all image pixels) are different.\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveScreenshot\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\n  61063 pixels (ratio 0.05 of all image pixels) are different.\n\n  Snapshot: 08-decision-pack.png\n\nCall log:\n\u001b[2m  - Expect \"toHaveScreenshot(08-decision-pack.png)\" with timeout 5000ms\u001b[22m\n\u001b[2m    - verifying given screenshot expectation\u001b[22m\n\u001b[2m  - taking page screenshot\u001b[22m\n\u001b[2m    - disabled all CSS animations\u001b[22m\n\u001b[2m  - waiting for fonts to load...\u001b[22m\n\u001b[2m  - fonts loaded\u001b[22m\n\u001b[2m  - 61063 pixels (ratio 0.05 of all image pixels) are different.\u001b[22m\n\u001b[2m  - waiting 100ms before taking screenshot\u001b[22m\n\u001b[2m  - taking page screenshot\u001b[22m\n\u001b[2m    - disabled all CSS animations\u001b[22m\n\u001b[2m  - waiting for fonts to load...\u001b[22m\n\u001b[2m  - fonts loaded\u001b[22m\n\u001b[2m  - captured a stable screenshot\u001b[22m\n\u001b[2m  - 61063 pixels (ratio 0.05 of all image pixels) are different.\u001b[22m\n\n    at /Users/christinaliu/Documents/ChatGPT/Australia Bank/clear-to-trade-product/audit/tests/visual.spec.mjs:32:21",
+                    "location": {
+                      "file": "/Users/christinaliu/Documents/ChatGPT/Australia Bank/clear-to-trade-product/audit/tests/visual.spec.mjs",
+                      "column": 21,
+                      "line": 32
+                    },
+                    "snippet": "  30 |  // On later runs retain it: changed pixels fail and require explicit human review.\n  31 |  const baseline=testInfo.snapshotPath(name+'.png');if(!fs.existsSync(baseline)){fs.mkdirSync(path.dirname(baseline),{recursive:true});await page.screenshot({path:baseline,animations:'disabled'});}\n> 32 |  await expect(page).toHaveScreenshot(name+'.png',{animations:'disabled',maxDiffPixelRatio:0.001});\n     |                     ^\n  33 |  expect(await page.evaluate(()=>JSON.parse(sessionStorage.getItem('ctt-round-a-v1')).data)).toEqual(before);\n  34 | });\n  35 |"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/christinaliu/Documents/ChatGPT/Australia Bank/clear-to-trade-product/audit/tests/visual.spec.mjs",
+                        "column": 21,
+                        "line": 32
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveScreenshot\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\n  61063 pixels (ratio 0.05 of all image pixels) are different.\n\n  Snapshot: 08-decision-pack.png\n\nCall log:\n\u001b[2m  - Expect \"toHaveScreenshot(08-decision-pack.png)\" with timeout 5000ms\u001b[22m\n\u001b[2m    - verifying given screenshot expectation\u001b[22m\n\u001b[2m  - taking page screenshot\u001b[22m\n\u001b[2m    - disabled all CSS animations\u001b[22m\n\u001b[2m  - waiting for fonts to load...\u001b[22m\n\u001b[2m  - fonts loaded\u001b[22m\n\u001b[2m  - 61063 pixels (ratio 0.05 of all image pixels) are different.\u001b[22m\n\u001b[2m  - waiting 100ms before taking screenshot\u001b[22m\n\u001b[2m  - taking page screenshot\u001b[22m\n\u001b[2m    - disabled all CSS animations\u001b[22m\n\u001b[2m  - waiting for fonts to load...\u001b[22m\n\u001b[2m  - fonts loaded\u001b[22m\n\u001b[2m  - captured a stable screenshot\u001b[22m\n\u001b[2m  - 61063 pixels (ratio 0.05 of all image pixels) are different.\u001b[22m\n\n\n  30 |  // On later runs retain it: changed pixels fail and require explicit human review.\n  31 |  const baseline=testInfo.snapshotPath(name+'.png');if(!fs.existsSync(baseline)){fs.mkdirSync(path.dirname(baseline),{recursive:true});await page.screenshot({path:baseline,animations:'disabled'});}\n> 32 |  await expect(page).toHaveScreenshot(name+'.png',{animations:'disabled',maxDiffPixelRatio:0.001});\n     |                     ^\n  33 |  expect(await page.evaluate(()=>JSON.parse(sessionStorage.getItem('ctt-round-a-v1')).data)).toEqual(before);\n  34 | });\n  35 |\n    at /Users/christinaliu/Documents/ChatGPT/Australia Bank/clear-to-trade-product/audit/tests/visual.spec.mjs:32:21"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-07T19:07:07.641Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "08-decision-pack-expected.png",
+                      "contentType": "image/png",
+                      "path": "/Users/christinaliu/Documents/ChatGPT/Australia Bank/clear-to-trade-product/audit/screenshots/baselines/08-decision-pack.png"
+                    },
+                    {
+                      "name": "08-decision-pack-actual.png",
+                      "contentType": "image/png",
+                      "path": "/Users/christinaliu/Documents/ChatGPT/Australia Bank/clear-to-trade-product/audit/screenshots/diffs/visual-08-decision-pack/08-decision-pack-actual.png"
+                    },
+                    {
+                      "name": "08-decision-pack-diff.png",
+                      "contentType": "image/png",
+                      "path": "/Users/christinaliu/Documents/ChatGPT/Australia Bank/clear-to-trade-product/audit/screenshots/diffs/visual-08-decision-pack/08-decision-pack-diff.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/christinaliu/Documents/ChatGPT/Australia Bank/clear-to-trade-product/audit/screenshots/diffs/visual-08-decision-pack/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/christinaliu/Documents/ChatGPT/Australia Bank/clear-to-trade-product/audit/screenshots/diffs/visual-08-decision-pack/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/christinaliu/Documents/ChatGPT/Australia Bank/clear-to-trade-product/audit/tests/visual.spec.mjs",
+                    "column": 21,
+                    "line": 32
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "a9e8504622c1797aedfc-c5c0ec7eb4b02b18b73f",
+          "file": "visual.spec.mjs",
+          "line": 19,
+          "column": 37
+        },
+        {
+          "title": "09-case-return",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 842,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-07T19:07:09.272Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a9e8504622c1797aedfc-6f67d6e017ff2d7e6c1e",
+          "file": "visual.spec.mjs",
+          "line": 19,
+          "column": 37
+        },
+        {
+          "title": "10-readiness",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 711,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-07T19:07:10.303Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a9e8504622c1797aedfc-590ef12ab9cfed9b6c1a",
+          "file": "visual.spec.mjs",
+          "line": 19,
+          "column": 37
+        },
+        {
+          "title": "11-active",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 603,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-07T19:07:11.019Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a9e8504622c1797aedfc-5f87ac95aab862530fe0",
+          "file": "visual.spec.mjs",
+          "line": 19,
+          "column": 37
+        },
+        {
+          "title": "12-my-completed-empty",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 639,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-07T19:07:11.628Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a9e8504622c1797aedfc-0553862c7a70cd7a76cb",
+          "file": "visual.spec.mjs",
+          "line": 19,
+          "column": 37
+        },
+        {
+          "title": "13-archived-empty",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 616,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-07T19:07:12.274Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a9e8504622c1797aedfc-5c691adecc10ad02f888",
+          "file": "visual.spec.mjs",
+          "line": 19,
+          "column": 37
+        },
+        {
+          "title": "14-default-layout",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 696,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-07T19:07:12.898Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a9e8504622c1797aedfc-e23a302ad3b3e6eb156d",
+          "file": "visual.spec.mjs",
+          "line": 19,
+          "column": 37
+        },
+        {
+          "title": "15-changed-layout",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 910,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-07T19:07:13.599Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a9e8504622c1797aedfc-bc72d5b8c46b5bd0e83d",
+          "file": "visual.spec.mjs",
+          "line": 19,
+          "column": 37
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-09-07T19:06:59.931Z",
+    "duration": 14662.524,
+    "expected": 13,
+    "skipped": 0,
+    "unexpected": 2,
+    "flaky": 0
+  }
+}

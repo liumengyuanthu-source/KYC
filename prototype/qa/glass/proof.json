@@ -1,0 +1,98 @@
+{
+  "at": "2026-09-07T06:28:44.775Z",
+  "checks": [
+    {
+      "locale": "zh-CN",
+      "documentOverflow": false,
+      "pageErrors": [],
+      "firstScene": {
+        "x": 241.1875,
+        "y": 788.59375,
+        "width": 368,
+        "height": 156.4375
+      }
+    },
+    {
+      "drag": {
+        "before": 405,
+        "moved": 729,
+        "restored": true
+      }
+    },
+    {
+      "locale": "en-AU",
+      "documentOverflow": false,
+      "pageErrors": [],
+      "firstScene": {
+        "x": 241.1875,
+        "y": 806.78125,
+        "width": 368,
+        "height": 177.234375
+      }
+    },
+    {
+      "route": {
+        "blockedRevision": 6,
+        "revision": 7,
+        "decisions": 1,
+        "readiness": "not_ready",
+        "publication": "not_requested"
+      }
+    },
+    {
+      "idleAnimations": 0
+    },
+    {
+      "print": {
+        "uniqueScenarioIDs": 15,
+        "diagrams": 3,
+        "screenNavigationHidden": true
+      }
+    },
+    {
+      "locale": "en-US",
+      "documentOverflow": false,
+      "pageErrors": [],
+      "firstScene": {
+        "x": 241.1875,
+        "y": 806.78125,
+        "width": 368,
+        "height": 177.234375
+      }
+    },
+    {
+      "touchPressRelease": true
+    },
+    {
+      "reducedTransparencyFallback": true
+    },
+    {
+      "mobileReturnDoesNotCoverContent": true
+    },
+    {
+      "width1024Overflow": false
+    }
+  ],
+  "screens": [
+    "studio.zh-CN.png",
+    "scenario.zh-CN.png",
+    "workspace.zh-CN.png",
+    "studio.en-AU.png",
+    "button-hover.en-AU.png",
+    "button-pressed.en-AU.png",
+    "disabled-role.en-AU.png",
+    "screening.en-AU.png",
+    "clearance.en-AU.png",
+    "print.en-AU.png",
+    "studio.en-US.png",
+    "touch-pressed.zh-CN.png",
+    "workspace-mobile.zh-CN.png"
+  ],
+  "sourceHashes": {
+    "app.mjs": "7bb10c1a585d312e2cb796ccb323817f40ff8949381229834754ad4f9ca412ea",
+    "glass.mjs": "768cb55eb430715a49a7de98c2852ccde506be37379be4a094209e90198d85c4",
+    "glass.css": "a1bf80865fa79d548c7b300b09e03957e20d25ab4631f0e7c2a79e4278c6136e",
+    "studio.css": "2916e22cd9ee88775366d8217f25d8d646b4e65902aac94ed30891df9dae78f1",
+    "case-engine.mjs": "2d459e2155c09272370af76e39a151dfb73549911489e175bbfa817b9494dd88"
+  }
+}

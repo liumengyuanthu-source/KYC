@@ -1,0 +1,26 @@
+[
+  {
+    "scene": "SCN-REQUIREMENTS",
+    "errors": [],
+    "title": "明确适用要求",
+    "screenshot": "prototype/qa/d3a/before/SCN-REQUIREMENTS.png"
+  },
+  {
+    "scene": "SCN-SOURCE",
+    "errors": [],
+    "title": "复用已有证据",
+    "screenshot": "prototype/qa/d3a/before/SCN-SOURCE.png"
+  },
+  {
+    "scene": "SCN-GAP",
+    "errors": [],
+    "title": "只询问剩余缺口",
+    "screenshot": "prototype/qa/d3a/before/SCN-GAP.png"
+  },
+  {
+    "scene": "SCN-VALIDATE",
+    "errors": [],
+    "title": "按用途评估证据",
+    "screenshot": "prototype/qa/d3a/before/SCN-VALIDATE.png"
+  }
+]

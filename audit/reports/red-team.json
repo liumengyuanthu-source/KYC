@@ -1,0 +1,152 @@
+[
+  {
+    "id": "ERT-01",
+    "attack": "False Ready",
+    "classification": "business logic",
+    "oracle": "Unresolved required branches prevent whole-case clearance.",
+    "result": "PASS bounded oracle",
+    "tests": [
+      "False Green: unresolved Legal, Credit, QA and unknown EDD prevent readiness"
+    ]
+  },
+  {
+    "id": "ERT-02",
+    "attack": "Stale / withdrawn evidence",
+    "classification": "business logic",
+    "oracle": "Changed/quarantined evidence invalidates old assessment. Withdrawal event not implemented; not separately exercised.",
+    "result": "PASS bounded oracle",
+    "tests": [
+      "D5 changed or quarantined intake invalidates the old assessment before suggesting Resume"
+    ]
+  },
+  {
+    "id": "ERT-03",
+    "attack": "Wrong role / authority",
+    "classification": "permission/privacy",
+    "oracle": "Role-bound bridge exposes no Ops commands to RM or denied client.",
+    "result": "PASS bounded oracle",
+    "tests": [
+      "D5 RM request bridge cannot emit Ops projection or write controls; client missing/revoked session stays denied"
+    ]
+  },
+  {
+    "id": "ERT-04",
+    "attack": "Missing owner",
+    "classification": "open business assumption",
+    "oracle": "Unassigned remains explicit; no invented bank reviewer.",
+    "result": "PASS bounded oracle",
+    "tests": [
+      "D5 progress has five anchors, six MATCH groups, actual binding and unknown manifest"
+    ]
+  },
+  {
+    "id": "ERT-05",
+    "attack": "Missing applicability",
+    "classification": "business logic",
+    "oracle": "Empty/unknown manifest cannot become Ready.",
+    "result": "PASS bounded oracle",
+    "tests": [
+      "Empty conditions and missing scope fail closed"
+    ]
+  },
+  {
+    "id": "ERT-06",
+    "attack": "Conflicting evidence",
+    "classification": "test-data",
+    "oracle": "Authored contradictory year claims remain inconclusive; conflicting uploaded-document workflow NOT_RUN.",
+    "result": "PASS bounded oracle",
+    "tests": [
+      "RT-C07/08/09/34: possible match uses Person T immutable snapshots and honest comparison"
+    ]
+  },
+  {
+    "id": "ERT-07",
+    "attack": "Stale decision write",
+    "classification": "business logic",
+    "oracle": "Current role, versions, rationale and idempotency gate decisions.",
+    "result": "PASS bounded oracle",
+    "tests": [
+      "RT-C14/15/16/17/66: permissions, rationale, stale inputs and idempotency protect writes"
+    ]
+  },
+  {
+    "id": "ERT-08",
+    "attack": "History / current collision",
+    "classification": "permission/privacy",
+    "oracle": "Historical projection does not replace current session; no full archived outcome fixture.",
+    "result": "PASS bounded oracle",
+    "tests": [
+      "D5 history access precedes search and frozen record selection never changes the current session"
+    ]
+  },
+  {
+    "id": "ERT-09",
+    "attack": "Language / view writes",
+    "classification": "UX/business logic",
+    "oracle": "Actual browser language/future-step/return checks preserve data.",
+    "result": "PASS bounded oracle",
+    "tests": [
+      "D5 progress has five anchors, six MATCH groups, actual binding and unknown manifest"
+    ]
+  },
+  {
+    "id": "ERT-10",
+    "attack": "Optional module hides core",
+    "classification": "UI/permission",
+    "oracle": "Core cannot be removed or grant derived from preference.",
+    "result": "PASS bounded oracle",
+    "tests": [
+      "D5 layout stores only IDs, is persona scoped, rechecks roles and keeps immutable core"
+    ]
+  },
+  {
+    "id": "ERT-11",
+    "attack": "Page open writes started",
+    "classification": "business logic",
+    "oracle": "Projection read does not create event or start time; browser open state equality.",
+    "result": "PASS bounded oracle",
+    "tests": [
+      "D5 progress has five anchors, six MATCH groups, actual binding and unknown manifest"
+    ]
+  },
+  {
+    "id": "ERT-12",
+    "attack": "Estimate expires → complete",
+    "classification": "business logic",
+    "oracle": "Clock jump to 2027 and readonly timing view cannot complete current case (time-print-results).",
+    "result": "PASS bounded oracle",
+    "tests": [
+      "D5 exact time illustration is isolated, conditional, internal and preserves timestamps"
+    ]
+  },
+  {
+    "id": "ERT-13",
+    "attack": "Parallel branch wrongly paused",
+    "classification": "business logic",
+    "oracle": "Affected Legal work can wait without stopping Credit.",
+    "result": "PASS bounded oracle",
+    "tests": [
+      "D review fix: unknown Legal dependency blocks affected preparation without stopping Credit"
+    ]
+  },
+  {
+    "id": "ERT-14",
+    "attack": "Local complete closes case",
+    "classification": "business logic",
+    "oracle": "Local decision preserves open Legal/Credit/QA/EDD and no publication.",
+    "result": "PASS bounded oracle",
+    "tests": [
+      "One complete slice records a local decision, preserves other branches and does not publish"
+    ]
+  },
+  {
+    "id": "ERT-15",
+    "attack": "Client-safe narrative leak",
+    "classification": "permission/privacy",
+    "oracle": "Provider details, internal counts and timing illustration excluded before HTML; actual client DOM/print checked.",
+    "result": "PASS bounded oracle",
+    "tests": [
+      "D5 RM/client projections exclude internal evidence, timing examples, identifiers and counts before HTML"
+    ]
+  }
+]

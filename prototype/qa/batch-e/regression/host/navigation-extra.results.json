@@ -1,0 +1,77 @@
+{
+  "at": "2026-09-07T20:39:24.064Z",
+  "browser": "152.0.7977.76",
+  "results": [
+    {
+      "ids": [
+        "D5-04",
+        "D5-15",
+        "D5U-37"
+      ],
+      "name": "reload-keeps-current-saved-task",
+      "status": "passed",
+      "screenshot": "prototype/qa/batch-e/regression/host/reload-keeps-current-saved-task.png",
+      "errors": [],
+      "remote": []
+    },
+    {
+      "ids": [
+        "D5-06",
+        "D5-42",
+        "D5U-39"
+      ],
+      "name": "keyboard-control-keeps-semantic-focus",
+      "status": "passed",
+      "screenshot": "prototype/qa/batch-e/regression/host/keyboard-control-keeps-semantic-focus.png",
+      "errors": [],
+      "remote": []
+    },
+    {
+      "ids": [
+        "D5-37",
+        "D5-39",
+        "D5U-02",
+        "D5U-39"
+      ],
+      "name": "step-and-language-preserve-open-reading-detail",
+      "status": "passed",
+      "screenshot": "prototype/qa/batch-e/regression/host/step-and-language-preserve-open-reading-detail.png",
+      "errors": [],
+      "remote": []
+    },
+    {
+      "ids": [
+        "D5U-21",
+        "D5U-28"
+      ],
+      "name": "persona-preferences-and-dirty-input-do-not-cross",
+      "status": "passed",
+      "screenshot": "prototype/qa/batch-e/regression/host/persona-preferences-and-dirty-input-do-not-cross.png",
+      "errors": [],
+      "remote": []
+    },
+    {
+      "ids": [
+        "D5U-25",
+        "D5U-26",
+        "D5U-28"
+      ],
+      "name": "readonly-record-and-zero-results",
+      "status": "passed",
+      "screenshot": "prototype/qa/batch-e/regression/host/readonly-record-and-zero-results.png",
+      "errors": [],
+      "remote": []
+    },
+    {
+      "ids": [
+        "D5U-25",
+        "D5U-27"
+      ],
+      "name": "unavailable-history-distinct-from-no-results",
+      "status": "passed",
+      "screenshot": "prototype/qa/batch-e/regression/host/unavailable-history-distinct-from-no-results.png",
+      "errors": [],
+      "remote": []
+    }
+  ]
+}

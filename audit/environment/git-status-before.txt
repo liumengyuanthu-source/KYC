@@ -1,0 +1,87 @@
+ M 00_governance/assumption_register.csv
+ M 00_governance/deliverable_manifest.csv
+ M 00_governance/fact_register.csv
+ M 00_governance/open_questions.csv
+ M 00_governance/source_register.csv
+ M 00_sources/source_inventory.csv
+ M 01_process/process_decomposition.csv
+ M 01_process/process_decomposition.md
+ M 01_process/process_to_journey_mapping.csv
+ M 03_personas_journey/jobs_to_be_done.csv
+ M 03_personas_journey/journey_moments.csv
+ M 03_personas_journey/pain_point_register.csv
+ M 03_personas_journey/persona_hypotheses.md
+ M 04_operating_model/hitl_task_matrix.csv
+ M 04_operating_model/state_dictionary.csv
+ M 04_operating_model/state_transitions.csv
+ M 06_workshop/miro/miro_board_manifest.yaml
+ M 06_workshop/miro/miro_build_log.md
+ M 06_workshop/miro/miro_connection_report.md
+ M 06_workshop/miro/miro_designer_refinement_backlog.csv
+ M 06_workshop/miro/miro_frame_content/F00A.yaml
+ M 06_workshop/miro/miro_frame_content/F02.yaml
+ M 06_workshop/miro/miro_frame_content/F04_pilot.yaml
+ M 06_workshop/miro/miro_frame_content/F09_pilot.yaml
+ M 06_workshop/miro/miro_frame_manifest.csv
+ M 06_workshop/miro/miro_geometry_qa.csv
+ M 06_workshop/miro/miro_item_registry.csv
+ M 07_output/bootstrap_status_report.md
+?? 00_governance/batch-b/
+?? 00_governance/batch-c/
+?? 00_governance/batch-d/
+?? 00_governance/batch-f/
+?? 00_governance/d3/
+?? 00_governance/d3a/
+?? 00_governance/d5/
+?? 00_governance/experience_design_baseline.md
+?? 00_governance/media-mainline/
+?? 00_governance/operating-model/
+?? 00_governance/round-a/
+?? 00_sources/d3/
+?? 00_sources/d4/
+?? 00_sources/d5/
+?? 00_sources/normalized/
+?? "00_sources/raw/09-04 Meeting_ Institutional Trading KYC _Clear to Trade_ Product Kickoff & Planning-Summary.txt"
+?? "00_sources/raw/09-04 Meeting_ Institutional Trading KYC _Clear to Trade_ Product Kickoff & Planning-transcript.txt"
+?? "00_sources/raw/Sanitised Process Map.pptx"
+?? 03_personas_journey/current_journey_matrix.csv
+?? 03_personas_journey/d3/
+?? 03_personas_journey/round-a/
+?? 03_personas_journey/target_journey_matrix.csv
+?? 04_operating_model/batch-b/
+?? 04_operating_model/batch-c/
+?? 04_operating_model/batch-d/
+?? 04_operating_model/d4/
+?? 04_operating_model/round-a/
+?? 04_operating_model/structured_state_model.md
+?? 06_workshop/miro/miro_frame_svg/
+?? 06_workshop/miro/pilot_prohibited_terms.txt
+?? 07_output/2026-09-07-d2-batch-a-review.md
+?? 07_output/2026-09-07-d2-batch-b-review.md
+?? 07_output/2026-09-07-d2-batch-c-review.md
+?? 07_output/2026-09-07-d2-batch-d-review.md
+?? 07_output/2026-09-07-d3-pilot-review.md
+?? 07_output/2026-09-07-d3a-pc01-review.md
+?? 07_output/2026-09-07-glass-review.md
+?? 07_output/2026-09-07-media-mainline-review.md
+?? 07_output/2026-09-07-round-a-review.md
+?? 07_output/2026-09-07-s2-pilot-review.md
+?? 07_output/2026-09-08-d4-operating-model-review.md
+?? 07_output/2026-09-08-d5-product-experience-review.md
+?? 07_output/batch-c-local-review-guide.md
+?? 07_output/batch-d-local-review-guide.md
+?? 07_output/operating-model-customer-en/
+?? audit/
+?? docs/superpowers/plans/2026-09-05-content-to-miro-delivery.md
+?? docs/superpowers/plans/2026-09-07-batch-b.md
+?? docs/superpowers/plans/2026-09-07-batch-c.md
+?? docs/superpowers/plans/2026-09-07-batch-d.md
+?? docs/superpowers/plans/2026-09-07-d3-pilot.md
+?? docs/superpowers/plans/2026-09-07-d3a-pc01.md
+?? docs/superpowers/plans/2026-09-07-media-mainline.md
+?? docs/superpowers/plans/2026-09-07-round-a.md
+?? docs/superpowers/plans/2026-09-08-d4-operating-model.md
+?? docs/superpowers/plans/2026-09-08-d5-product-experience.md
+?? docs/superpowers/plans/2026-09-08-experience-quality-gate.md
+?? output/
+?? prototype/

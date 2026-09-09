@@ -1,0 +1,5282 @@
+{
+  "source": "SRC-016 Final 1.0",
+  "status": "candidate_field_delta_not_production_migration",
+  "baseline": "B-coordination-assessed",
+  "entry": "C-entry",
+  "snapshots_sha256": "c64f1830696e9c84aaa75374e55e6952aebfe95620d16f688909c7da0b753178",
+  "field_rows": 647,
+  "counts": {
+    "new_collection": 342,
+    "existing_field_reused": 234,
+    "additive_field_on_C_records": 71
+  },
+  "preserved_at_entry": {
+    "scopes": {
+      "old_record_count": 1,
+      "unchanged_at_C_entry": true
+    },
+    "entities": {
+      "old_record_count": 2,
+      "unchanged_at_C_entry": true
+    },
+    "naturalPersons": {
+      "old_record_count": 2,
+      "unchanged_at_C_entry": true
+    },
+    "authorities": {
+      "old_record_count": 6,
+      "unchanged_at_C_entry": true
+    },
+    "requestItems": {
+      "old_record_count": 2,
+      "unchanged_at_C_entry": true
+    },
+    "requestRecipients": {
+      "old_record_count": 2,
+      "unchanged_at_C_entry": true
+    },
+    "accessGrants": {
+      "old_record_count": 2,
+      "unchanged_at_C_entry": true
+    },
+    "screeningFindings": {
+      "old_record_count": 1,
+      "unchanged_at_C_entry": true
+    },
+    "clearanceConditions": {
+      "old_record_count": 7,
+      "unchanged_at_C_entry": true
+    }
+  },
+  "fields": [
+    {
+      "object": "ScreeningPopulation",
+      "collection": "screeningPopulations",
+      "field": "business_validation_status",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-POPULATION"
+    },
+    {
+      "object": "ScreeningPopulation",
+      "collection": "screeningPopulations",
+      "field": "case_id",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-POPULATION"
+    },
+    {
+      "object": "ScreeningPopulation",
+      "collection": "screeningPopulations",
+      "field": "case_scope_id",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-POPULATION"
+    },
+    {
+      "object": "ScreeningPopulation",
+      "collection": "screeningPopulations",
+      "field": "case_scope_ref",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-POPULATION"
+    },
+    {
+      "object": "ScreeningPopulation",
+      "collection": "screeningPopulations",
+      "field": "completeness_basis_refs",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-POPULATION"
+    },
+    {
+      "object": "ScreeningPopulation",
+      "collection": "screeningPopulations",
+      "field": "confirmation_permission_ref",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-POPULATION"
+    },
+    {
+      "object": "ScreeningPopulation",
+      "collection": "screeningPopulations",
+      "field": "confirmed_at",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-POPULATION"
+    },
+    {
+      "object": "ScreeningPopulation",
+      "collection": "screeningPopulations",
+      "field": "confirmed_by_ref",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-POPULATION"
+    },
+    {
+      "object": "ScreeningPopulation",
+      "collection": "screeningPopulations",
+      "field": "created_at",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-POPULATION"
+    },
+    {
+      "object": "ScreeningPopulation",
+      "collection": "screeningPopulations",
+      "field": "id",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-POPULATION"
+    },
+    {
+      "object": "ScreeningPopulation",
+      "collection": "screeningPopulations",
+      "field": "implementation_fidelity",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-POPULATION"
+    },
+    {
+      "object": "ScreeningPopulation",
+      "collection": "screeningPopulations",
+      "field": "inventory_gap_refs",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-POPULATION"
+    },
+    {
+      "object": "ScreeningPopulation",
+      "collection": "screeningPopulations",
+      "field": "inventory_status",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-POPULATION"
+    },
+    {
+      "object": "ScreeningPopulation",
+      "collection": "screeningPopulations",
+      "field": "latest_run_ref",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-POPULATION"
+    },
+    {
+      "object": "ScreeningPopulation",
+      "collection": "screeningPopulations",
+      "field": "membership_refs",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-POPULATION"
+    },
+    {
+      "object": "ScreeningPopulation",
+      "collection": "screeningPopulations",
+      "field": "policy_profile_ref",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-POPULATION"
+    },
+    {
+      "object": "ScreeningPopulation",
+      "collection": "screeningPopulations",
+      "field": "population_review_status",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-POPULATION"
+    },
+    {
+      "object": "ScreeningPopulation",
+      "collection": "screeningPopulations",
+      "field": "population_revision",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-POPULATION"
+    },
+    {
+      "object": "ScreeningPopulation",
+      "collection": "screeningPopulations",
+      "field": "provenance",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-POPULATION"
+    },
+    {
+      "object": "ScreeningPopulation",
+      "collection": "screeningPopulations",
+      "field": "revision",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-POPULATION"
+    },
+    {
+      "object": "ScreeningPopulation",
+      "collection": "screeningPopulations",
+      "field": "scope_revision",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-POPULATION"
+    },
+    {
+      "object": "ScreeningPopulation",
+      "collection": "screeningPopulations",
+      "field": "sensitivity",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-POPULATION"
+    },
+    {
+      "object": "ScreeningPopulation",
+      "collection": "screeningPopulations",
+      "field": "simulation_flag",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-POPULATION"
+    },
+    {
+      "object": "ScreeningPopulation",
+      "collection": "screeningPopulations",
+      "field": "source_refs",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-POPULATION"
+    },
+    {
+      "object": "ScreeningPopulation",
+      "collection": "screeningPopulations",
+      "field": "source_status",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-POPULATION"
+    },
+    {
+      "object": "ScreeningPopulation",
+      "collection": "screeningPopulations",
+      "field": "synthetic",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-POPULATION"
+    },
+    {
+      "object": "ScreeningPopulation",
+      "collection": "screeningPopulations",
+      "field": "updated_at",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-POPULATION"
+    },
+    {
+      "object": "ScreeningMembership",
+      "collection": "screeningMemberships",
+      "field": "assessment_ref",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-POPULATION"
+    },
+    {
+      "object": "ScreeningMembership",
+      "collection": "screeningMemberships",
+      "field": "basis_refs",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-POPULATION"
+    },
+    {
+      "object": "ScreeningMembership",
+      "collection": "screeningMemberships",
+      "field": "business_validation_status",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-POPULATION"
+    },
+    {
+      "object": "ScreeningMembership",
+      "collection": "screeningMemberships",
+      "field": "case_id",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-POPULATION"
+    },
+    {
+      "object": "ScreeningMembership",
+      "collection": "screeningMemberships",
+      "field": "case_scope_id",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-POPULATION"
+    },
+    {
+      "object": "ScreeningMembership",
+      "collection": "screeningMemberships",
+      "field": "created_at",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-POPULATION"
+    },
+    {
+      "object": "ScreeningMembership",
+      "collection": "screeningMemberships",
+      "field": "criterion_ref",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-POPULATION"
+    },
+    {
+      "object": "ScreeningMembership",
+      "collection": "screeningMemberships",
+      "field": "id",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-POPULATION"
+    },
+    {
+      "object": "ScreeningMembership",
+      "collection": "screeningMemberships",
+      "field": "implementation_fidelity",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-POPULATION"
+    },
+    {
+      "object": "ScreeningMembership",
+      "collection": "screeningMemberships",
+      "field": "membership_decision",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-POPULATION"
+    },
+    {
+      "object": "ScreeningMembership",
+      "collection": "screeningMemberships",
+      "field": "missing_attribute_refs",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-POPULATION"
+    },
+    {
+      "object": "ScreeningMembership",
+      "collection": "screeningMemberships",
+      "field": "party_ref",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-POPULATION"
+    },
+    {
+      "object": "ScreeningMembership",
+      "collection": "screeningMemberships",
+      "field": "party_revision",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-POPULATION"
+    },
+    {
+      "object": "ScreeningMembership",
+      "collection": "screeningMemberships",
+      "field": "population_ref",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-POPULATION"
+    },
+    {
+      "object": "ScreeningMembership",
+      "collection": "screeningMemberships",
+      "field": "provenance",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-POPULATION"
+    },
+    {
+      "object": "ScreeningMembership",
+      "collection": "screeningMemberships",
+      "field": "query_input_status",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-POPULATION"
+    },
+    {
+      "object": "ScreeningMembership",
+      "collection": "screeningMemberships",
+      "field": "relationship_role_refs",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-POPULATION"
+    },
+    {
+      "object": "ScreeningMembership",
+      "collection": "screeningMemberships",
+      "field": "revision",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-POPULATION"
+    },
+    {
+      "object": "ScreeningMembership",
+      "collection": "screeningMemberships",
+      "field": "scope_revision",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-POPULATION"
+    },
+    {
+      "object": "ScreeningMembership",
+      "collection": "screeningMemberships",
+      "field": "screening_category",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-POPULATION"
+    },
+    {
+      "object": "ScreeningMembership",
+      "collection": "screeningMemberships",
+      "field": "sensitivity",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-POPULATION"
+    },
+    {
+      "object": "ScreeningMembership",
+      "collection": "screeningMemberships",
+      "field": "simulation_flag",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-POPULATION"
+    },
+    {
+      "object": "ScreeningMembership",
+      "collection": "screeningMemberships",
+      "field": "source_refs",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-POPULATION"
+    },
+    {
+      "object": "ScreeningMembership",
+      "collection": "screeningMemberships",
+      "field": "source_status",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-POPULATION"
+    },
+    {
+      "object": "ScreeningMembership",
+      "collection": "screeningMemberships",
+      "field": "synthetic",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-POPULATION"
+    },
+    {
+      "object": "ScreeningMembership",
+      "collection": "screeningMemberships",
+      "field": "updated_at",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-POPULATION"
+    },
+    {
+      "object": "ScreeningRun",
+      "collection": "screeningRuns",
+      "field": "business_validation_status",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningRun",
+      "collection": "screeningRuns",
+      "field": "case_id",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningRun",
+      "collection": "screeningRuns",
+      "field": "case_scope_id",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningRun",
+      "collection": "screeningRuns",
+      "field": "category_scope",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningRun",
+      "collection": "screeningRuns",
+      "field": "completed_at",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningRun",
+      "collection": "screeningRuns",
+      "field": "created_at",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningRun",
+      "collection": "screeningRuns",
+      "field": "data_as_of",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningRun",
+      "collection": "screeningRuns",
+      "field": "data_snapshot_ref",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningRun",
+      "collection": "screeningRuns",
+      "field": "data_version_status",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningRun",
+      "collection": "screeningRuns",
+      "field": "failure_code",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningRun",
+      "collection": "screeningRuns",
+      "field": "id",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningRun",
+      "collection": "screeningRuns",
+      "field": "idempotency_ref",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningRun",
+      "collection": "screeningRuns",
+      "field": "implementation_fidelity",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningRun",
+      "collection": "screeningRuns",
+      "field": "input_fingerprint",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningRun",
+      "collection": "screeningRuns",
+      "field": "named_outcome",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningRun",
+      "collection": "screeningRuns",
+      "field": "population_ref",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningRun",
+      "collection": "screeningRuns",
+      "field": "population_revision",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningRun",
+      "collection": "screeningRuns",
+      "field": "provenance",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningRun",
+      "collection": "screeningRuns",
+      "field": "provider_adapter_ref",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningRun",
+      "collection": "screeningRuns",
+      "field": "query_plan_ref",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningRun",
+      "collection": "screeningRuns",
+      "field": "query_plan_revision",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningRun",
+      "collection": "screeningRuns",
+      "field": "query_scope_ref",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningRun",
+      "collection": "screeningRuns",
+      "field": "requested_at",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningRun",
+      "collection": "screeningRuns",
+      "field": "result_count",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningRun",
+      "collection": "screeningRuns",
+      "field": "result_snapshot_refs",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningRun",
+      "collection": "screeningRuns",
+      "field": "revision",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningRun",
+      "collection": "screeningRuns",
+      "field": "run_kind",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningRun",
+      "collection": "screeningRuns",
+      "field": "run_status",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningRun",
+      "collection": "screeningRuns",
+      "field": "scope_revision",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningRun",
+      "collection": "screeningRuns",
+      "field": "sensitivity",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningRun",
+      "collection": "screeningRuns",
+      "field": "simulation_flag",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningRun",
+      "collection": "screeningRuns",
+      "field": "source_refs",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningRun",
+      "collection": "screeningRuns",
+      "field": "source_status",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningRun",
+      "collection": "screeningRuns",
+      "field": "subject_snapshot_refs",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningRun",
+      "collection": "screeningRuns",
+      "field": "synthetic",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningRun",
+      "collection": "screeningRuns",
+      "field": "updated_at",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "RunSubjectSnapshot",
+      "collection": "runSubjectSnapshots",
+      "field": "attribute_claim_refs",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "RunSubjectSnapshot",
+      "collection": "runSubjectSnapshots",
+      "field": "business_validation_status",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "RunSubjectSnapshot",
+      "collection": "runSubjectSnapshots",
+      "field": "case_id",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "RunSubjectSnapshot",
+      "collection": "runSubjectSnapshots",
+      "field": "case_scope_id",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "RunSubjectSnapshot",
+      "collection": "runSubjectSnapshots",
+      "field": "created_at",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "RunSubjectSnapshot",
+      "collection": "runSubjectSnapshots",
+      "field": "id",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "RunSubjectSnapshot",
+      "collection": "runSubjectSnapshots",
+      "field": "implementation_fidelity",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "RunSubjectSnapshot",
+      "collection": "runSubjectSnapshots",
+      "field": "name_claims",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "RunSubjectSnapshot",
+      "collection": "runSubjectSnapshots",
+      "field": "original_script_context",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "RunSubjectSnapshot",
+      "collection": "runSubjectSnapshots",
+      "field": "party_ref",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "RunSubjectSnapshot",
+      "collection": "runSubjectSnapshots",
+      "field": "party_revision",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "RunSubjectSnapshot",
+      "collection": "runSubjectSnapshots",
+      "field": "permitted_query_scope_refs",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "RunSubjectSnapshot",
+      "collection": "runSubjectSnapshots",
+      "field": "provenance",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "RunSubjectSnapshot",
+      "collection": "runSubjectSnapshots",
+      "field": "provenance_refs",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "RunSubjectSnapshot",
+      "collection": "runSubjectSnapshots",
+      "field": "revision",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "RunSubjectSnapshot",
+      "collection": "runSubjectSnapshots",
+      "field": "scope_revision",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "RunSubjectSnapshot",
+      "collection": "runSubjectSnapshots",
+      "field": "sensitivity",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "RunSubjectSnapshot",
+      "collection": "runSubjectSnapshots",
+      "field": "simulation_flag",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "RunSubjectSnapshot",
+      "collection": "runSubjectSnapshots",
+      "field": "source_refs",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "RunSubjectSnapshot",
+      "collection": "runSubjectSnapshots",
+      "field": "source_status",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "RunSubjectSnapshot",
+      "collection": "runSubjectSnapshots",
+      "field": "synthetic",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "RunSubjectSnapshot",
+      "collection": "runSubjectSnapshots",
+      "field": "updated_at",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningQueryPlan",
+      "collection": "screeningQueryPlans",
+      "field": "business_validation_status",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningQueryPlan",
+      "collection": "screeningQueryPlans",
+      "field": "case_id",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningQueryPlan",
+      "collection": "screeningQueryPlans",
+      "field": "case_scope_id",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningQueryPlan",
+      "collection": "screeningQueryPlans",
+      "field": "category_scope",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningQueryPlan",
+      "collection": "screeningQueryPlans",
+      "field": "created_at",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningQueryPlan",
+      "collection": "screeningQueryPlans",
+      "field": "id",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningQueryPlan",
+      "collection": "screeningQueryPlans",
+      "field": "implementation_fidelity",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningQueryPlan",
+      "collection": "screeningQueryPlans",
+      "field": "input_fingerprint",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningQueryPlan",
+      "collection": "screeningQueryPlans",
+      "field": "plan_status",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningQueryPlan",
+      "collection": "screeningQueryPlans",
+      "field": "policy_profile_ref",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningQueryPlan",
+      "collection": "screeningQueryPlans",
+      "field": "population_ref",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningQueryPlan",
+      "collection": "screeningQueryPlans",
+      "field": "population_revision",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningQueryPlan",
+      "collection": "screeningQueryPlans",
+      "field": "provenance",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningQueryPlan",
+      "collection": "screeningQueryPlans",
+      "field": "query_permission_ref",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningQueryPlan",
+      "collection": "screeningQueryPlans",
+      "field": "query_scope_ref",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningQueryPlan",
+      "collection": "screeningQueryPlans",
+      "field": "revision",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningQueryPlan",
+      "collection": "screeningQueryPlans",
+      "field": "run_kind",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningQueryPlan",
+      "collection": "screeningQueryPlans",
+      "field": "scope_revision",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningQueryPlan",
+      "collection": "screeningQueryPlans",
+      "field": "sensitivity",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningQueryPlan",
+      "collection": "screeningQueryPlans",
+      "field": "simulation_flag",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningQueryPlan",
+      "collection": "screeningQueryPlans",
+      "field": "source_refs",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningQueryPlan",
+      "collection": "screeningQueryPlans",
+      "field": "source_status",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningQueryPlan",
+      "collection": "screeningQueryPlans",
+      "field": "subject_refs",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningQueryPlan",
+      "collection": "screeningQueryPlans",
+      "field": "synthetic",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningQueryPlan",
+      "collection": "screeningQueryPlans",
+      "field": "updated_at",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningResultSnapshot",
+      "collection": "screeningResultSnapshots",
+      "field": "business_validation_status",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningResultSnapshot",
+      "collection": "screeningResultSnapshots",
+      "field": "case_id",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningResultSnapshot",
+      "collection": "screeningResultSnapshots",
+      "field": "case_scope_id",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningResultSnapshot",
+      "collection": "screeningResultSnapshots",
+      "field": "created_at",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningResultSnapshot",
+      "collection": "screeningResultSnapshots",
+      "field": "data_as_of",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningResultSnapshot",
+      "collection": "screeningResultSnapshots",
+      "field": "data_snapshot_ref",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningResultSnapshot",
+      "collection": "screeningResultSnapshots",
+      "field": "data_version_status",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningResultSnapshot",
+      "collection": "screeningResultSnapshots",
+      "field": "historical",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningResultSnapshot",
+      "collection": "screeningResultSnapshots",
+      "field": "id",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningResultSnapshot",
+      "collection": "screeningResultSnapshots",
+      "field": "implementation_fidelity",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningResultSnapshot",
+      "collection": "screeningResultSnapshots",
+      "field": "named_outcome",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningResultSnapshot",
+      "collection": "screeningResultSnapshots",
+      "field": "provenance",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningResultSnapshot",
+      "collection": "screeningResultSnapshots",
+      "field": "provider_snapshot_refs",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningResultSnapshot",
+      "collection": "screeningResultSnapshots",
+      "field": "result_count",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningResultSnapshot",
+      "collection": "screeningResultSnapshots",
+      "field": "result_status",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningResultSnapshot",
+      "collection": "screeningResultSnapshots",
+      "field": "revision",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningResultSnapshot",
+      "collection": "screeningResultSnapshots",
+      "field": "run_input_fingerprint",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningResultSnapshot",
+      "collection": "screeningResultSnapshots",
+      "field": "run_ref",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningResultSnapshot",
+      "collection": "screeningResultSnapshots",
+      "field": "run_revision",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningResultSnapshot",
+      "collection": "screeningResultSnapshots",
+      "field": "scope_revision",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningResultSnapshot",
+      "collection": "screeningResultSnapshots",
+      "field": "sensitivity",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningResultSnapshot",
+      "collection": "screeningResultSnapshots",
+      "field": "simulation_flag",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningResultSnapshot",
+      "collection": "screeningResultSnapshots",
+      "field": "source_refs",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningResultSnapshot",
+      "collection": "screeningResultSnapshots",
+      "field": "source_retrieved_at",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningResultSnapshot",
+      "collection": "screeningResultSnapshots",
+      "field": "source_status",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningResultSnapshot",
+      "collection": "screeningResultSnapshots",
+      "field": "synthetic",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningResultSnapshot",
+      "collection": "screeningResultSnapshots",
+      "field": "updated_at",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningCoverageItem",
+      "collection": "screeningCoverageItems",
+      "field": "applicability",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-POPULATION"
+    },
+    {
+      "object": "ScreeningCoverageItem",
+      "collection": "screeningCoverageItems",
+      "field": "applicability_basis_ref",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-POPULATION"
+    },
+    {
+      "object": "ScreeningCoverageItem",
+      "collection": "screeningCoverageItems",
+      "field": "blocking_reason_refs",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-POPULATION"
+    },
+    {
+      "object": "ScreeningCoverageItem",
+      "collection": "screeningCoverageItems",
+      "field": "business_validation_status",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-POPULATION"
+    },
+    {
+      "object": "ScreeningCoverageItem",
+      "collection": "screeningCoverageItems",
+      "field": "case_id",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-POPULATION"
+    },
+    {
+      "object": "ScreeningCoverageItem",
+      "collection": "screeningCoverageItems",
+      "field": "case_scope_id",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-POPULATION"
+    },
+    {
+      "object": "ScreeningCoverageItem",
+      "collection": "screeningCoverageItems",
+      "field": "category",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-POPULATION"
+    },
+    {
+      "object": "ScreeningCoverageItem",
+      "collection": "screeningCoverageItems",
+      "field": "created_at",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-POPULATION"
+    },
+    {
+      "object": "ScreeningCoverageItem",
+      "collection": "screeningCoverageItems",
+      "field": "currency_basis_refs",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-POPULATION"
+    },
+    {
+      "object": "ScreeningCoverageItem",
+      "collection": "screeningCoverageItems",
+      "field": "currency_status",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-POPULATION"
+    },
+    {
+      "object": "ScreeningCoverageItem",
+      "collection": "screeningCoverageItems",
+      "field": "execution_status",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-POPULATION"
+    },
+    {
+      "object": "ScreeningCoverageItem",
+      "collection": "screeningCoverageItems",
+      "field": "finding_refs",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-POPULATION"
+    },
+    {
+      "object": "ScreeningCoverageItem",
+      "collection": "screeningCoverageItems",
+      "field": "id",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-POPULATION"
+    },
+    {
+      "object": "ScreeningCoverageItem",
+      "collection": "screeningCoverageItems",
+      "field": "implementation_fidelity",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-POPULATION"
+    },
+    {
+      "object": "ScreeningCoverageItem",
+      "collection": "screeningCoverageItems",
+      "field": "outcome_status",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-POPULATION"
+    },
+    {
+      "object": "ScreeningCoverageItem",
+      "collection": "screeningCoverageItems",
+      "field": "population_ref",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-POPULATION"
+    },
+    {
+      "object": "ScreeningCoverageItem",
+      "collection": "screeningCoverageItems",
+      "field": "population_revision",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-POPULATION"
+    },
+    {
+      "object": "ScreeningCoverageItem",
+      "collection": "screeningCoverageItems",
+      "field": "provenance",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-POPULATION"
+    },
+    {
+      "object": "ScreeningCoverageItem",
+      "collection": "screeningCoverageItems",
+      "field": "query_scope_ref",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-POPULATION"
+    },
+    {
+      "object": "ScreeningCoverageItem",
+      "collection": "screeningCoverageItems",
+      "field": "review_status",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-POPULATION"
+    },
+    {
+      "object": "ScreeningCoverageItem",
+      "collection": "screeningCoverageItems",
+      "field": "revision",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-POPULATION"
+    },
+    {
+      "object": "ScreeningCoverageItem",
+      "collection": "screeningCoverageItems",
+      "field": "scope_revision",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-POPULATION"
+    },
+    {
+      "object": "ScreeningCoverageItem",
+      "collection": "screeningCoverageItems",
+      "field": "sensitivity",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-POPULATION"
+    },
+    {
+      "object": "ScreeningCoverageItem",
+      "collection": "screeningCoverageItems",
+      "field": "simulation_flag",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-POPULATION"
+    },
+    {
+      "object": "ScreeningCoverageItem",
+      "collection": "screeningCoverageItems",
+      "field": "source_refs",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-POPULATION"
+    },
+    {
+      "object": "ScreeningCoverageItem",
+      "collection": "screeningCoverageItems",
+      "field": "source_status",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-POPULATION"
+    },
+    {
+      "object": "ScreeningCoverageItem",
+      "collection": "screeningCoverageItems",
+      "field": "subject_ref",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-POPULATION"
+    },
+    {
+      "object": "ScreeningCoverageItem",
+      "collection": "screeningCoverageItems",
+      "field": "subject_revision",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-POPULATION"
+    },
+    {
+      "object": "ScreeningCoverageItem",
+      "collection": "screeningCoverageItems",
+      "field": "supporting_run_refs",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-POPULATION"
+    },
+    {
+      "object": "ScreeningCoverageItem",
+      "collection": "screeningCoverageItems",
+      "field": "synthetic",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-POPULATION"
+    },
+    {
+      "object": "ScreeningCoverageItem",
+      "collection": "screeningCoverageItems",
+      "field": "updated_at",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-POPULATION"
+    },
+    {
+      "object": "ProviderRecordSnapshot",
+      "collection": "providerRecordSnapshots",
+      "field": "alias_refs",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ProviderRecordSnapshot",
+      "collection": "providerRecordSnapshots",
+      "field": "business_validation_status",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ProviderRecordSnapshot",
+      "collection": "providerRecordSnapshots",
+      "field": "case_id",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ProviderRecordSnapshot",
+      "collection": "providerRecordSnapshots",
+      "field": "case_scope_id",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ProviderRecordSnapshot",
+      "collection": "providerRecordSnapshots",
+      "field": "category",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ProviderRecordSnapshot",
+      "collection": "providerRecordSnapshots",
+      "field": "claims",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ProviderRecordSnapshot",
+      "collection": "providerRecordSnapshots",
+      "field": "created_at",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ProviderRecordSnapshot",
+      "collection": "providerRecordSnapshots",
+      "field": "data_as_of",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ProviderRecordSnapshot",
+      "collection": "providerRecordSnapshots",
+      "field": "id",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ProviderRecordSnapshot",
+      "collection": "providerRecordSnapshots",
+      "field": "identifier_claim_refs",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ProviderRecordSnapshot",
+      "collection": "providerRecordSnapshots",
+      "field": "implementation_fidelity",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ProviderRecordSnapshot",
+      "collection": "providerRecordSnapshots",
+      "field": "narrative",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ProviderRecordSnapshot",
+      "collection": "providerRecordSnapshots",
+      "field": "programme_refs",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ProviderRecordSnapshot",
+      "collection": "providerRecordSnapshots",
+      "field": "provenance",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ProviderRecordSnapshot",
+      "collection": "providerRecordSnapshots",
+      "field": "provider_record_ref",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ProviderRecordSnapshot",
+      "collection": "providerRecordSnapshots",
+      "field": "record_completeness",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ProviderRecordSnapshot",
+      "collection": "providerRecordSnapshots",
+      "field": "revision",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ProviderRecordSnapshot",
+      "collection": "providerRecordSnapshots",
+      "field": "scope_revision",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ProviderRecordSnapshot",
+      "collection": "providerRecordSnapshots",
+      "field": "sensitivity",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ProviderRecordSnapshot",
+      "collection": "providerRecordSnapshots",
+      "field": "simulation_flag",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ProviderRecordSnapshot",
+      "collection": "providerRecordSnapshots",
+      "field": "source_refs",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ProviderRecordSnapshot",
+      "collection": "providerRecordSnapshots",
+      "field": "source_retrieved_at",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ProviderRecordSnapshot",
+      "collection": "providerRecordSnapshots",
+      "field": "source_status",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ProviderRecordSnapshot",
+      "collection": "providerRecordSnapshots",
+      "field": "synthetic",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ProviderRecordSnapshot",
+      "collection": "providerRecordSnapshots",
+      "field": "updated_at",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningFinding",
+      "collection": "screeningFindings",
+      "field": "assigned_role_ref",
+      "change": "additive_field_on_C_records",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningFinding",
+      "collection": "screeningFindings",
+      "field": "assignee_ref",
+      "change": "additive_field_on_C_records",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningFinding",
+      "collection": "screeningFindings",
+      "field": "business_validation_status",
+      "change": "additive_field_on_C_records",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningFinding",
+      "collection": "screeningFindings",
+      "field": "case_id",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningFinding",
+      "collection": "screeningFindings",
+      "field": "case_scope_id",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningFinding",
+      "collection": "screeningFindings",
+      "field": "category",
+      "change": "additive_field_on_C_records",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningFinding",
+      "collection": "screeningFindings",
+      "field": "comparison_refs",
+      "change": "additive_field_on_C_records",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningFinding",
+      "collection": "screeningFindings",
+      "field": "created_at",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningFinding",
+      "collection": "screeningFindings",
+      "field": "decision_ref",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningFinding",
+      "collection": "screeningFindings",
+      "field": "historical",
+      "change": "additive_field_on_C_records",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningFinding",
+      "collection": "screeningFindings",
+      "field": "hold_refs",
+      "change": "additive_field_on_C_records",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningFinding",
+      "collection": "screeningFindings",
+      "field": "id",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningFinding",
+      "collection": "screeningFindings",
+      "field": "implementation_fidelity",
+      "change": "additive_field_on_C_records",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningFinding",
+      "collection": "screeningFindings",
+      "field": "provenance",
+      "change": "additive_field_on_C_records",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningFinding",
+      "collection": "screeningFindings",
+      "field": "provider_record_ref",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningFinding",
+      "collection": "screeningFindings",
+      "field": "provider_snapshot_ref",
+      "change": "additive_field_on_C_records",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningFinding",
+      "collection": "screeningFindings",
+      "field": "related_finding_refs",
+      "change": "additive_field_on_C_records",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningFinding",
+      "collection": "screeningFindings",
+      "field": "restricted_detail_ref",
+      "change": "additive_field_on_C_records",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningFinding",
+      "collection": "screeningFindings",
+      "field": "review_status",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningFinding",
+      "collection": "screeningFindings",
+      "field": "revision",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningFinding",
+      "collection": "screeningFindings",
+      "field": "run_ref",
+      "change": "additive_field_on_C_records",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningFinding",
+      "collection": "screeningFindings",
+      "field": "scope_revision",
+      "change": "additive_field_on_C_records",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningFinding",
+      "collection": "screeningFindings",
+      "field": "sensitivity",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningFinding",
+      "collection": "screeningFindings",
+      "field": "simulation_flag",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningFinding",
+      "collection": "screeningFindings",
+      "field": "source_refs",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningFinding",
+      "collection": "screeningFindings",
+      "field": "source_status",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningFinding",
+      "collection": "screeningFindings",
+      "field": "subject_id",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningFinding",
+      "collection": "screeningFindings",
+      "field": "subject_ref",
+      "change": "additive_field_on_C_records",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningFinding",
+      "collection": "screeningFindings",
+      "field": "subject_snapshot_ref",
+      "change": "additive_field_on_C_records",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningFinding",
+      "collection": "screeningFindings",
+      "field": "synthetic",
+      "change": "additive_field_on_C_records",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningFinding",
+      "collection": "screeningFindings",
+      "field": "triage_status",
+      "change": "additive_field_on_C_records",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningFinding",
+      "collection": "screeningFindings",
+      "field": "updated_at",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "AttributeComparison",
+      "collection": "attributeComparisons",
+      "field": "attribute_code",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "AttributeComparison",
+      "collection": "attributeComparisons",
+      "field": "business_validation_status",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "AttributeComparison",
+      "collection": "attributeComparisons",
+      "field": "case_id",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "AttributeComparison",
+      "collection": "attributeComparisons",
+      "field": "case_scope_id",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "AttributeComparison",
+      "collection": "attributeComparisons",
+      "field": "comparison_basis",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "AttributeComparison",
+      "collection": "attributeComparisons",
+      "field": "comparison_result",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "AttributeComparison",
+      "collection": "attributeComparisons",
+      "field": "created_at",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "AttributeComparison",
+      "collection": "attributeComparisons",
+      "field": "date_precision",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "AttributeComparison",
+      "collection": "attributeComparisons",
+      "field": "finding_ref",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "AttributeComparison",
+      "collection": "attributeComparisons",
+      "field": "id",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "AttributeComparison",
+      "collection": "attributeComparisons",
+      "field": "implementation_fidelity",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "AttributeComparison",
+      "collection": "attributeComparisons",
+      "field": "provenance",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "AttributeComparison",
+      "collection": "attributeComparisons",
+      "field": "provider_claim_refs",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "AttributeComparison",
+      "collection": "attributeComparisons",
+      "field": "provider_value",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "AttributeComparison",
+      "collection": "attributeComparisons",
+      "field": "reviewer_status",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "AttributeComparison",
+      "collection": "attributeComparisons",
+      "field": "revision",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "AttributeComparison",
+      "collection": "attributeComparisons",
+      "field": "scope_revision",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "AttributeComparison",
+      "collection": "attributeComparisons",
+      "field": "sensitivity",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "AttributeComparison",
+      "collection": "attributeComparisons",
+      "field": "simulation_flag",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "AttributeComparison",
+      "collection": "attributeComparisons",
+      "field": "source_refs",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "AttributeComparison",
+      "collection": "attributeComparisons",
+      "field": "source_status",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "AttributeComparison",
+      "collection": "attributeComparisons",
+      "field": "subject_claim_refs",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "AttributeComparison",
+      "collection": "attributeComparisons",
+      "field": "subject_value",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "AttributeComparison",
+      "collection": "attributeComparisons",
+      "field": "synthetic",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "AttributeComparison",
+      "collection": "attributeComparisons",
+      "field": "unresolved_issue_refs",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "AttributeComparison",
+      "collection": "attributeComparisons",
+      "field": "updated_at",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningReviewDecision",
+      "collection": "screeningReviewDecisions",
+      "field": "additional_approval_ref",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningReviewDecision",
+      "collection": "screeningReviewDecisions",
+      "field": "authorised_by_ref",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningReviewDecision",
+      "collection": "screeningReviewDecisions",
+      "field": "basis_mode",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningReviewDecision",
+      "collection": "screeningReviewDecisions",
+      "field": "basis_policy_ref",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningReviewDecision",
+      "collection": "screeningReviewDecisions",
+      "field": "basis_refs",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningReviewDecision",
+      "collection": "screeningReviewDecisions",
+      "field": "business_validation_status",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningReviewDecision",
+      "collection": "screeningReviewDecisions",
+      "field": "case_id",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningReviewDecision",
+      "collection": "screeningReviewDecisions",
+      "field": "case_scope_id",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningReviewDecision",
+      "collection": "screeningReviewDecisions",
+      "field": "created_at",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningReviewDecision",
+      "collection": "screeningReviewDecisions",
+      "field": "currency_status",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningReviewDecision",
+      "collection": "screeningReviewDecisions",
+      "field": "decision_status",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningReviewDecision",
+      "collection": "screeningReviewDecisions",
+      "field": "decision_type",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningReviewDecision",
+      "collection": "screeningReviewDecisions",
+      "field": "disposition",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningReviewDecision",
+      "collection": "screeningReviewDecisions",
+      "field": "evaluated_action_scope",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningReviewDecision",
+      "collection": "screeningReviewDecisions",
+      "field": "evidence_use_assessment_refs",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningReviewDecision",
+      "collection": "screeningReviewDecisions",
+      "field": "expected_input_revision_refs",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningReviewDecision",
+      "collection": "screeningReviewDecisions",
+      "field": "finding_ref",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningReviewDecision",
+      "collection": "screeningReviewDecisions",
+      "field": "hold_evaluation_object_refs",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningReviewDecision",
+      "collection": "screeningReviewDecisions",
+      "field": "id",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningReviewDecision",
+      "collection": "screeningReviewDecisions",
+      "field": "implementation_fidelity",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningReviewDecision",
+      "collection": "screeningReviewDecisions",
+      "field": "permission_basis_ref",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningReviewDecision",
+      "collection": "screeningReviewDecisions",
+      "field": "population_revision",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningReviewDecision",
+      "collection": "screeningReviewDecisions",
+      "field": "provenance",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningReviewDecision",
+      "collection": "screeningReviewDecisions",
+      "field": "provider_revision",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningReviewDecision",
+      "collection": "screeningReviewDecisions",
+      "field": "rationale",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningReviewDecision",
+      "collection": "screeningReviewDecisions",
+      "field": "rationale_code",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningReviewDecision",
+      "collection": "screeningReviewDecisions",
+      "field": "recorded_at",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningReviewDecision",
+      "collection": "screeningReviewDecisions",
+      "field": "revision",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningReviewDecision",
+      "collection": "screeningReviewDecisions",
+      "field": "scope_revision",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningReviewDecision",
+      "collection": "screeningReviewDecisions",
+      "field": "sensitivity",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningReviewDecision",
+      "collection": "screeningReviewDecisions",
+      "field": "simulation_flag",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningReviewDecision",
+      "collection": "screeningReviewDecisions",
+      "field": "source_refs",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningReviewDecision",
+      "collection": "screeningReviewDecisions",
+      "field": "source_status",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningReviewDecision",
+      "collection": "screeningReviewDecisions",
+      "field": "subject_revision",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningReviewDecision",
+      "collection": "screeningReviewDecisions",
+      "field": "supersedes_decision_ref",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningReviewDecision",
+      "collection": "screeningReviewDecisions",
+      "field": "synthetic",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningReviewDecision",
+      "collection": "screeningReviewDecisions",
+      "field": "updated_at",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningReviewDraft",
+      "collection": "screeningReviewDrafts",
+      "field": "actor_ref",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningReviewDraft",
+      "collection": "screeningReviewDrafts",
+      "field": "business_validation_status",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningReviewDraft",
+      "collection": "screeningReviewDrafts",
+      "field": "case_id",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningReviewDraft",
+      "collection": "screeningReviewDrafts",
+      "field": "case_scope_id",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningReviewDraft",
+      "collection": "screeningReviewDrafts",
+      "field": "created_at",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningReviewDraft",
+      "collection": "screeningReviewDrafts",
+      "field": "expected_input_revision_refs",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningReviewDraft",
+      "collection": "screeningReviewDrafts",
+      "field": "finding_ref",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningReviewDraft",
+      "collection": "screeningReviewDrafts",
+      "field": "id",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningReviewDraft",
+      "collection": "screeningReviewDrafts",
+      "field": "implementation_fidelity",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningReviewDraft",
+      "collection": "screeningReviewDrafts",
+      "field": "provenance",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningReviewDraft",
+      "collection": "screeningReviewDrafts",
+      "field": "rationale",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningReviewDraft",
+      "collection": "screeningReviewDrafts",
+      "field": "revision",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningReviewDraft",
+      "collection": "screeningReviewDrafts",
+      "field": "scope_revision",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningReviewDraft",
+      "collection": "screeningReviewDrafts",
+      "field": "sensitivity",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningReviewDraft",
+      "collection": "screeningReviewDrafts",
+      "field": "simulation_flag",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningReviewDraft",
+      "collection": "screeningReviewDrafts",
+      "field": "source_refs",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningReviewDraft",
+      "collection": "screeningReviewDrafts",
+      "field": "source_status",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningReviewDraft",
+      "collection": "screeningReviewDrafts",
+      "field": "supersedes_ref",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningReviewDraft",
+      "collection": "screeningReviewDrafts",
+      "field": "synthetic",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningReviewDraft",
+      "collection": "screeningReviewDrafts",
+      "field": "text",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "ScreeningReviewDraft",
+      "collection": "screeningReviewDrafts",
+      "field": "updated_at",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "EDDApplicabilityAssessment",
+      "collection": "eddApplicabilityAssessments",
+      "field": "applicability",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-EDD / applicability and scoped pack"
+    },
+    {
+      "object": "EDDApplicabilityAssessment",
+      "collection": "eddApplicabilityAssessments",
+      "field": "business_validation_status",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-EDD / applicability and scoped pack"
+    },
+    {
+      "object": "EDDApplicabilityAssessment",
+      "collection": "eddApplicabilityAssessments",
+      "field": "case_id",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-EDD / applicability and scoped pack"
+    },
+    {
+      "object": "EDDApplicabilityAssessment",
+      "collection": "eddApplicabilityAssessments",
+      "field": "case_scope_id",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-EDD / applicability and scoped pack"
+    },
+    {
+      "object": "EDDApplicabilityAssessment",
+      "collection": "eddApplicabilityAssessments",
+      "field": "created_at",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-EDD / applicability and scoped pack"
+    },
+    {
+      "object": "EDDApplicabilityAssessment",
+      "collection": "eddApplicabilityAssessments",
+      "field": "decided_by_ref",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-EDD / applicability and scoped pack"
+    },
+    {
+      "object": "EDDApplicabilityAssessment",
+      "collection": "eddApplicabilityAssessments",
+      "field": "decision_ref",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-EDD / applicability and scoped pack"
+    },
+    {
+      "object": "EDDApplicabilityAssessment",
+      "collection": "eddApplicabilityAssessments",
+      "field": "id",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-EDD / applicability and scoped pack"
+    },
+    {
+      "object": "EDDApplicabilityAssessment",
+      "collection": "eddApplicabilityAssessments",
+      "field": "implementation_fidelity",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-EDD / applicability and scoped pack"
+    },
+    {
+      "object": "EDDApplicabilityAssessment",
+      "collection": "eddApplicabilityAssessments",
+      "field": "owner_ref",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-EDD / applicability and scoped pack"
+    },
+    {
+      "object": "EDDApplicabilityAssessment",
+      "collection": "eddApplicabilityAssessments",
+      "field": "permission_ref",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-EDD / applicability and scoped pack"
+    },
+    {
+      "object": "EDDApplicabilityAssessment",
+      "collection": "eddApplicabilityAssessments",
+      "field": "policy_basis_ref",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-EDD / applicability and scoped pack"
+    },
+    {
+      "object": "EDDApplicabilityAssessment",
+      "collection": "eddApplicabilityAssessments",
+      "field": "provenance",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-EDD / applicability and scoped pack"
+    },
+    {
+      "object": "EDDApplicabilityAssessment",
+      "collection": "eddApplicabilityAssessments",
+      "field": "question_ref",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-EDD / applicability and scoped pack"
+    },
+    {
+      "object": "EDDApplicabilityAssessment",
+      "collection": "eddApplicabilityAssessments",
+      "field": "review_status",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-EDD / applicability and scoped pack"
+    },
+    {
+      "object": "EDDApplicabilityAssessment",
+      "collection": "eddApplicabilityAssessments",
+      "field": "revision",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-EDD / applicability and scoped pack"
+    },
+    {
+      "object": "EDDApplicabilityAssessment",
+      "collection": "eddApplicabilityAssessments",
+      "field": "scope_revision",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-EDD / applicability and scoped pack"
+    },
+    {
+      "object": "EDDApplicabilityAssessment",
+      "collection": "eddApplicabilityAssessments",
+      "field": "sensitivity",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-EDD / applicability and scoped pack"
+    },
+    {
+      "object": "EDDApplicabilityAssessment",
+      "collection": "eddApplicabilityAssessments",
+      "field": "simulation_flag",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-EDD / applicability and scoped pack"
+    },
+    {
+      "object": "EDDApplicabilityAssessment",
+      "collection": "eddApplicabilityAssessments",
+      "field": "source_refs",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-EDD / applicability and scoped pack"
+    },
+    {
+      "object": "EDDApplicabilityAssessment",
+      "collection": "eddApplicabilityAssessments",
+      "field": "source_status",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-EDD / applicability and scoped pack"
+    },
+    {
+      "object": "EDDApplicabilityAssessment",
+      "collection": "eddApplicabilityAssessments",
+      "field": "synthetic",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-EDD / applicability and scoped pack"
+    },
+    {
+      "object": "EDDApplicabilityAssessment",
+      "collection": "eddApplicabilityAssessments",
+      "field": "trigger_reason_refs",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-EDD / applicability and scoped pack"
+    },
+    {
+      "object": "EDDApplicabilityAssessment",
+      "collection": "eddApplicabilityAssessments",
+      "field": "updated_at",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-EDD / applicability and scoped pack"
+    },
+    {
+      "object": "EDDAssessment",
+      "collection": "eddAssessments",
+      "field": "applicability_ref",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-EDD / applicability and scoped pack"
+    },
+    {
+      "object": "EDDAssessment",
+      "collection": "eddAssessments",
+      "field": "approval_refs",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-EDD / applicability and scoped pack"
+    },
+    {
+      "object": "EDDAssessment",
+      "collection": "eddAssessments",
+      "field": "approval_status",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-EDD / applicability and scoped pack"
+    },
+    {
+      "object": "EDDAssessment",
+      "collection": "eddAssessments",
+      "field": "condition_refs",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-EDD / applicability and scoped pack"
+    },
+    {
+      "object": "EDDAssessment",
+      "collection": "eddAssessments",
+      "field": "evidence_pack_revision",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-EDD / applicability and scoped pack"
+    },
+    {
+      "object": "EDDAssessment",
+      "collection": "eddAssessments",
+      "field": "measures",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-EDD / applicability and scoped pack"
+    },
+    {
+      "object": "EDDAssessment",
+      "collection": "eddAssessments",
+      "field": "open_issue_refs",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-EDD / applicability and scoped pack"
+    },
+    {
+      "object": "EDDAssessment",
+      "collection": "eddAssessments",
+      "field": "risk_question_refs",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-EDD / applicability and scoped pack"
+    },
+    {
+      "object": "EDDAssessment",
+      "collection": "eddAssessments",
+      "field": "status",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-EDD / applicability and scoped pack"
+    },
+    {
+      "object": "Hold",
+      "collection": "holds",
+      "field": "action_scope",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "Hold",
+      "collection": "holds",
+      "field": "basis_ref",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "Hold",
+      "collection": "holds",
+      "field": "object_scope_refs",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "Hold",
+      "collection": "holds",
+      "field": "release_condition_ref",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "Hold",
+      "collection": "holds",
+      "field": "release_decision_ref",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "Hold",
+      "collection": "holds",
+      "field": "status",
+      "change": "new_collection",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "EvidenceUseAssessment",
+      "collection": "evidenceUseAssessments",
+      "field": "assessed_at",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "EvidenceUseAssessment",
+      "collection": "evidenceUseAssessments",
+      "field": "assessed_by_ref",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "EvidenceUseAssessment",
+      "collection": "evidenceUseAssessments",
+      "field": "assessment_permission_ref",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "EvidenceUseAssessment",
+      "collection": "evidenceUseAssessments",
+      "field": "basis_refs",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "EvidenceUseAssessment",
+      "collection": "evidenceUseAssessments",
+      "field": "business_validation_status",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "EvidenceUseAssessment",
+      "collection": "evidenceUseAssessments",
+      "field": "case_id",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "EvidenceUseAssessment",
+      "collection": "evidenceUseAssessments",
+      "field": "case_scope_id",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "EvidenceUseAssessment",
+      "collection": "evidenceUseAssessments",
+      "field": "content_revision",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "EvidenceUseAssessment",
+      "collection": "evidenceUseAssessments",
+      "field": "created_at",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "EvidenceUseAssessment",
+      "collection": "evidenceUseAssessments",
+      "field": "currency",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "EvidenceUseAssessment",
+      "collection": "evidenceUseAssessments",
+      "field": "evidence_id",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "EvidenceUseAssessment",
+      "collection": "evidenceUseAssessments",
+      "field": "evidence_record_revision",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "EvidenceUseAssessment",
+      "collection": "evidenceUseAssessments",
+      "field": "evidence_revision",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "EvidenceUseAssessment",
+      "collection": "evidenceUseAssessments",
+      "field": "finding_ref",
+      "change": "additive_field_on_C_records",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "EvidenceUseAssessment",
+      "collection": "evidenceUseAssessments",
+      "field": "id",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "EvidenceUseAssessment",
+      "collection": "evidenceUseAssessments",
+      "field": "implementation_fidelity",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "EvidenceUseAssessment",
+      "collection": "evidenceUseAssessments",
+      "field": "principal_entity_id",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "EvidenceUseAssessment",
+      "collection": "evidenceUseAssessments",
+      "field": "provenance",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "EvidenceUseAssessment",
+      "collection": "evidenceUseAssessments",
+      "field": "purpose_code",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "EvidenceUseAssessment",
+      "collection": "evidenceUseAssessments",
+      "field": "rationale",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "EvidenceUseAssessment",
+      "collection": "evidenceUseAssessments",
+      "field": "reason_code",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "EvidenceUseAssessment",
+      "collection": "evidenceUseAssessments",
+      "field": "request_item_ref",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "EvidenceUseAssessment",
+      "collection": "evidenceUseAssessments",
+      "field": "requirement_id",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "EvidenceUseAssessment",
+      "collection": "evidenceUseAssessments",
+      "field": "revision",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "EvidenceUseAssessment",
+      "collection": "evidenceUseAssessments",
+      "field": "scope_revision",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "EvidenceUseAssessment",
+      "collection": "evidenceUseAssessments",
+      "field": "sensitivity",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "EvidenceUseAssessment",
+      "collection": "evidenceUseAssessments",
+      "field": "simulation_flag",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "EvidenceUseAssessment",
+      "collection": "evidenceUseAssessments",
+      "field": "source_refs",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "EvidenceUseAssessment",
+      "collection": "evidenceUseAssessments",
+      "field": "source_status",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "EvidenceUseAssessment",
+      "collection": "evidenceUseAssessments",
+      "field": "subject_id",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "EvidenceUseAssessment",
+      "collection": "evidenceUseAssessments",
+      "field": "subject_revision",
+      "change": "additive_field_on_C_records",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "EvidenceUseAssessment",
+      "collection": "evidenceUseAssessments",
+      "field": "sufficiency",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "EvidenceUseAssessment",
+      "collection": "evidenceUseAssessments",
+      "field": "synthetic",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "EvidenceUseAssessment",
+      "collection": "evidenceUseAssessments",
+      "field": "updated_at",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "WorkItem / BranchInstance",
+      "collection": "workItems",
+      "field": "active_task_ref",
+      "change": "additive_field_on_C_records",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "WorkItem / BranchInstance",
+      "collection": "workItems",
+      "field": "assignee_ref",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "WorkItem / BranchInstance",
+      "collection": "workItems",
+      "field": "attempt_count",
+      "change": "additive_field_on_C_records",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "WorkItem / BranchInstance",
+      "collection": "workItems",
+      "field": "blocked_action_refs",
+      "change": "additive_field_on_C_records",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "WorkItem / BranchInstance",
+      "collection": "workItems",
+      "field": "branch_instance_id",
+      "change": "additive_field_on_C_records",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "WorkItem / BranchInstance",
+      "collection": "workItems",
+      "field": "branch_type",
+      "change": "additive_field_on_C_records",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "WorkItem / BranchInstance",
+      "collection": "workItems",
+      "field": "business_validation_status",
+      "change": "additive_field_on_C_records",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "WorkItem / BranchInstance",
+      "collection": "workItems",
+      "field": "case_id",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "WorkItem / BranchInstance",
+      "collection": "workItems",
+      "field": "case_ref",
+      "change": "additive_field_on_C_records",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "WorkItem / BranchInstance",
+      "collection": "workItems",
+      "field": "case_scope_id",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "WorkItem / BranchInstance",
+      "collection": "workItems",
+      "field": "created_at",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "WorkItem / BranchInstance",
+      "collection": "workItems",
+      "field": "decision_basis_mode",
+      "change": "additive_field_on_C_records",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "WorkItem / BranchInstance",
+      "collection": "workItems",
+      "field": "decision_basis_policy_ref",
+      "change": "additive_field_on_C_records",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "WorkItem / BranchInstance",
+      "collection": "workItems",
+      "field": "decision_basis_refs",
+      "change": "additive_field_on_C_records",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "WorkItem / BranchInstance",
+      "collection": "workItems",
+      "field": "edd_assessment_ref",
+      "change": "additive_field_on_C_records",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "WorkItem / BranchInstance",
+      "collection": "workItems",
+      "field": "evaluated_action_scope",
+      "change": "additive_field_on_C_records",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "WorkItem / BranchInstance",
+      "collection": "workItems",
+      "field": "existing_evidence_review",
+      "change": "additive_field_on_C_records",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "WorkItem / BranchInstance",
+      "collection": "workItems",
+      "field": "finding_ref",
+      "change": "additive_field_on_C_records",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "WorkItem / BranchInstance",
+      "collection": "workItems",
+      "field": "fixed_return_target",
+      "change": "additive_field_on_C_records",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "WorkItem / BranchInstance",
+      "collection": "workItems",
+      "field": "hold_refs",
+      "change": "additive_field_on_C_records",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "WorkItem / BranchInstance",
+      "collection": "workItems",
+      "field": "hold_scope",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "WorkItem / BranchInstance",
+      "collection": "workItems",
+      "field": "hold_scope_status",
+      "change": "additive_field_on_C_records",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "WorkItem / BranchInstance",
+      "collection": "workItems",
+      "field": "id",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "WorkItem / BranchInstance",
+      "collection": "workItems",
+      "field": "implementation_fidelity",
+      "change": "additive_field_on_C_records",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "WorkItem / BranchInstance",
+      "collection": "workItems",
+      "field": "input_refs",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "WorkItem / BranchInstance",
+      "collection": "workItems",
+      "field": "origin_scene_ref",
+      "change": "additive_field_on_C_records",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "WorkItem / BranchInstance",
+      "collection": "workItems",
+      "field": "origin_task_ref",
+      "change": "additive_field_on_C_records",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "WorkItem / BranchInstance",
+      "collection": "workItems",
+      "field": "output_refs",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "WorkItem / BranchInstance",
+      "collection": "workItems",
+      "field": "owner_ref",
+      "change": "additive_field_on_C_records",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "WorkItem / BranchInstance",
+      "collection": "workItems",
+      "field": "owner_role",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "WorkItem / BranchInstance",
+      "collection": "workItems",
+      "field": "parent_branch_ref",
+      "change": "additive_field_on_C_records",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "WorkItem / BranchInstance",
+      "collection": "workItems",
+      "field": "population_ref",
+      "change": "additive_field_on_C_records",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "WorkItem / BranchInstance",
+      "collection": "workItems",
+      "field": "provenance",
+      "change": "additive_field_on_C_records",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "WorkItem / BranchInstance",
+      "collection": "workItems",
+      "field": "request_item_ref",
+      "change": "additive_field_on_C_records",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "WorkItem / BranchInstance",
+      "collection": "workItems",
+      "field": "request_item_refs",
+      "change": "additive_field_on_C_records",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "WorkItem / BranchInstance",
+      "collection": "workItems",
+      "field": "request_ref",
+      "change": "additive_field_on_C_records",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "WorkItem / BranchInstance",
+      "collection": "workItems",
+      "field": "resolution_event_ref",
+      "change": "additive_field_on_C_records",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "WorkItem / BranchInstance",
+      "collection": "workItems",
+      "field": "resume_basis_event_refs",
+      "change": "additive_field_on_C_records",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "WorkItem / BranchInstance",
+      "collection": "workItems",
+      "field": "resume_condition_ref",
+      "change": "additive_field_on_C_records",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "WorkItem / BranchInstance",
+      "collection": "workItems",
+      "field": "resume_predicate_ref",
+      "change": "additive_field_on_C_records",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "WorkItem / BranchInstance",
+      "collection": "workItems",
+      "field": "return_object_ref",
+      "change": "additive_field_on_C_records",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "WorkItem / BranchInstance",
+      "collection": "workItems",
+      "field": "return_scene_ref",
+      "change": "additive_field_on_C_records",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "WorkItem / BranchInstance",
+      "collection": "workItems",
+      "field": "return_task_selection_rule_ref",
+      "change": "additive_field_on_C_records",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "WorkItem / BranchInstance",
+      "collection": "workItems",
+      "field": "review_history",
+      "change": "additive_field_on_C_records",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "WorkItem / BranchInstance",
+      "collection": "workItems",
+      "field": "revision",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "WorkItem / BranchInstance",
+      "collection": "workItems",
+      "field": "scope_revision",
+      "change": "additive_field_on_C_records",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "WorkItem / BranchInstance",
+      "collection": "workItems",
+      "field": "sensitivity",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "WorkItem / BranchInstance",
+      "collection": "workItems",
+      "field": "simulation_flag",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "WorkItem / BranchInstance",
+      "collection": "workItems",
+      "field": "source_refs",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "WorkItem / BranchInstance",
+      "collection": "workItems",
+      "field": "source_status",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "WorkItem / BranchInstance",
+      "collection": "workItems",
+      "field": "status",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "WorkItem / BranchInstance",
+      "collection": "workItems",
+      "field": "synthetic",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "WorkItem / BranchInstance",
+      "collection": "workItems",
+      "field": "trigger_basis_refs",
+      "change": "additive_field_on_C_records",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "WorkItem / BranchInstance",
+      "collection": "workItems",
+      "field": "trigger_event_ref",
+      "change": "additive_field_on_C_records",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "WorkItem / BranchInstance",
+      "collection": "workItems",
+      "field": "updated_at",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "WorkItem / BranchInstance",
+      "collection": "workItems",
+      "field": "urgent",
+      "change": "additive_field_on_C_records",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "WorkItem / BranchInstance",
+      "collection": "workItems",
+      "field": "wait_reason",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "WorkItem / BranchInstance",
+      "collection": "workItems",
+      "field": "waiting_for",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "WorkItem / BranchInstance",
+      "collection": "workItems",
+      "field": "work_item_refs",
+      "change": "additive_field_on_C_records",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "WorkItem / BranchInstance",
+      "collection": "workItems",
+      "field": "work_type",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "InformationRequest",
+      "collection": "informationRequests",
+      "field": "business_validation_status",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "InformationRequest",
+      "collection": "informationRequests",
+      "field": "case_id",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "InformationRequest",
+      "collection": "informationRequests",
+      "field": "case_scope_id",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "InformationRequest",
+      "collection": "informationRequests",
+      "field": "client_summary",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "InformationRequest",
+      "collection": "informationRequests",
+      "field": "created_at",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "InformationRequest",
+      "collection": "informationRequests",
+      "field": "delivery_status",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "InformationRequest",
+      "collection": "informationRequests",
+      "field": "dispatch_policy_ref",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "InformationRequest",
+      "collection": "informationRequests",
+      "field": "dispatch_status",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "InformationRequest",
+      "collection": "informationRequests",
+      "field": "finding_ref",
+      "change": "additive_field_on_C_records",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "InformationRequest",
+      "collection": "informationRequests",
+      "field": "id",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "InformationRequest",
+      "collection": "informationRequests",
+      "field": "implementation_fidelity",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "InformationRequest",
+      "collection": "informationRequests",
+      "field": "item_refs",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "InformationRequest",
+      "collection": "informationRequests",
+      "field": "owner_ref",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "InformationRequest",
+      "collection": "informationRequests",
+      "field": "principal_entity_id",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "InformationRequest",
+      "collection": "informationRequests",
+      "field": "provenance",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "InformationRequest",
+      "collection": "informationRequests",
+      "field": "purpose_code",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "InformationRequest",
+      "collection": "informationRequests",
+      "field": "reference",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "InformationRequest",
+      "collection": "informationRequests",
+      "field": "review_ref",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "InformationRequest",
+      "collection": "informationRequests",
+      "field": "review_status",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "InformationRequest",
+      "collection": "informationRequests",
+      "field": "revision",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "InformationRequest",
+      "collection": "informationRequests",
+      "field": "scope_revision",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "InformationRequest",
+      "collection": "informationRequests",
+      "field": "sensitivity",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "InformationRequest",
+      "collection": "informationRequests",
+      "field": "sent_at",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "InformationRequest",
+      "collection": "informationRequests",
+      "field": "sent_revision_refs",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "InformationRequest",
+      "collection": "informationRequests",
+      "field": "simulation_flag",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "InformationRequest",
+      "collection": "informationRequests",
+      "field": "source_refs",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "InformationRequest",
+      "collection": "informationRequests",
+      "field": "source_status",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "InformationRequest",
+      "collection": "informationRequests",
+      "field": "status",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "InformationRequest",
+      "collection": "informationRequests",
+      "field": "synthetic",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "InformationRequest",
+      "collection": "informationRequests",
+      "field": "task_ref",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "InformationRequest",
+      "collection": "informationRequests",
+      "field": "updated_at",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "RequestItem",
+      "collection": "requestItems",
+      "field": "alias",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "RequestItem",
+      "collection": "requestItems",
+      "field": "business_validation_status",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "RequestItem",
+      "collection": "requestItems",
+      "field": "case_id",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "RequestItem",
+      "collection": "requestItems",
+      "field": "case_scope_id",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "RequestItem",
+      "collection": "requestItems",
+      "field": "client_reason",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "RequestItem",
+      "collection": "requestItems",
+      "field": "created_at",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "RequestItem",
+      "collection": "requestItems",
+      "field": "finding_ref",
+      "change": "additive_field_on_C_records",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "RequestItem",
+      "collection": "requestItems",
+      "field": "id",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "RequestItem",
+      "collection": "requestItems",
+      "field": "implementation_fidelity",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "RequestItem",
+      "collection": "requestItems",
+      "field": "linked_evidence_refs",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "RequestItem",
+      "collection": "requestItems",
+      "field": "linked_evidence_revisions",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "RequestItem",
+      "collection": "requestItems",
+      "field": "principal_entity_id",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "RequestItem",
+      "collection": "requestItems",
+      "field": "provenance",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "RequestItem",
+      "collection": "requestItems",
+      "field": "purpose_code",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "RequestItem",
+      "collection": "requestItems",
+      "field": "request_id",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "RequestItem",
+      "collection": "requestItems",
+      "field": "requested_fields",
+      "change": "additive_field_on_C_records",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "RequestItem",
+      "collection": "requestItems",
+      "field": "requirement_applicability",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "RequestItem",
+      "collection": "requestItems",
+      "field": "requirement_id",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "RequestItem",
+      "collection": "requestItems",
+      "field": "response_draft",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "RequestItem",
+      "collection": "requestItems",
+      "field": "response_status",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "RequestItem",
+      "collection": "requestItems",
+      "field": "restricted_reason",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "RequestItem",
+      "collection": "requestItems",
+      "field": "revision",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "RequestItem",
+      "collection": "requestItems",
+      "field": "scope_revision",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "RequestItem",
+      "collection": "requestItems",
+      "field": "sensitivity",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "RequestItem",
+      "collection": "requestItems",
+      "field": "simulation_flag",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "RequestItem",
+      "collection": "requestItems",
+      "field": "source_refs",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "RequestItem",
+      "collection": "requestItems",
+      "field": "source_status",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "RequestItem",
+      "collection": "requestItems",
+      "field": "subject_id",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "RequestItem",
+      "collection": "requestItems",
+      "field": "subject_revision",
+      "change": "additive_field_on_C_records",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "RequestItem",
+      "collection": "requestItems",
+      "field": "synthetic",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "RequestItem",
+      "collection": "requestItems",
+      "field": "updated_at",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "RequestRecipient",
+      "collection": "requestRecipients",
+      "field": "business_validation_status",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "RequestRecipient",
+      "collection": "requestRecipients",
+      "field": "case_id",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "RequestRecipient",
+      "collection": "requestRecipients",
+      "field": "case_scope_id",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "RequestRecipient",
+      "collection": "requestRecipients",
+      "field": "contact_review_ref",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "RequestRecipient",
+      "collection": "requestRecipients",
+      "field": "contributor_type",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "RequestRecipient",
+      "collection": "requestRecipients",
+      "field": "created_at",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "RequestRecipient",
+      "collection": "requestRecipients",
+      "field": "id",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "RequestRecipient",
+      "collection": "requestRecipients",
+      "field": "implementation_fidelity",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "RequestRecipient",
+      "collection": "requestRecipients",
+      "field": "permitted_item_refs",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "RequestRecipient",
+      "collection": "requestRecipients",
+      "field": "person_ref",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "RequestRecipient",
+      "collection": "requestRecipients",
+      "field": "provenance",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "RequestRecipient",
+      "collection": "requestRecipients",
+      "field": "request_id",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "RequestRecipient",
+      "collection": "requestRecipients",
+      "field": "revision",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "RequestRecipient",
+      "collection": "requestRecipients",
+      "field": "scope_revision",
+      "change": "additive_field_on_C_records",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "RequestRecipient",
+      "collection": "requestRecipients",
+      "field": "sensitivity",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "RequestRecipient",
+      "collection": "requestRecipients",
+      "field": "simulation_flag",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "RequestRecipient",
+      "collection": "requestRecipients",
+      "field": "source_refs",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "RequestRecipient",
+      "collection": "requestRecipients",
+      "field": "source_status",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "RequestRecipient",
+      "collection": "requestRecipients",
+      "field": "status",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "RequestRecipient",
+      "collection": "requestRecipients",
+      "field": "synthetic",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "RequestRecipient",
+      "collection": "requestRecipients",
+      "field": "updated_at",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "Submission",
+      "collection": "submissions",
+      "field": "artifact_refs",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "Submission",
+      "collection": "submissions",
+      "field": "business_validation_status",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "Submission",
+      "collection": "submissions",
+      "field": "case_id",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "Submission",
+      "collection": "submissions",
+      "field": "case_scope_id",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "Submission",
+      "collection": "submissions",
+      "field": "created_at",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "Submission",
+      "collection": "submissions",
+      "field": "duplicate_candidate_refs",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "Submission",
+      "collection": "submissions",
+      "field": "id",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "Submission",
+      "collection": "submissions",
+      "field": "implementation_fidelity",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "Submission",
+      "collection": "submissions",
+      "field": "on_behalf_of",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "Submission",
+      "collection": "submissions",
+      "field": "provenance",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "Submission",
+      "collection": "submissions",
+      "field": "purpose_class",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "Submission",
+      "collection": "submissions",
+      "field": "request_id",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "Submission",
+      "collection": "submissions",
+      "field": "request_item_refs",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "Submission",
+      "collection": "submissions",
+      "field": "request_revision",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "Submission",
+      "collection": "submissions",
+      "field": "response_text",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "Submission",
+      "collection": "submissions",
+      "field": "revision",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "Submission",
+      "collection": "submissions",
+      "field": "scope_revision",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "Submission",
+      "collection": "submissions",
+      "field": "sensitivity",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "Submission",
+      "collection": "submissions",
+      "field": "simulation_flag",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "Submission",
+      "collection": "submissions",
+      "field": "source_channel",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "Submission",
+      "collection": "submissions",
+      "field": "source_refs",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "Submission",
+      "collection": "submissions",
+      "field": "source_status",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "Submission",
+      "collection": "submissions",
+      "field": "staff_uploader_ref",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "Submission",
+      "collection": "submissions",
+      "field": "submitted_at",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "Submission",
+      "collection": "submissions",
+      "field": "submitted_by",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "Submission",
+      "collection": "submissions",
+      "field": "synthetic",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "Submission",
+      "collection": "submissions",
+      "field": "updated_at",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "EvidenceArtifact",
+      "collection": "evidence",
+      "field": "acquired_at",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "EvidenceArtifact",
+      "collection": "evidence",
+      "field": "alias",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "EvidenceArtifact",
+      "collection": "evidence",
+      "field": "business_validation_status",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "EvidenceArtifact",
+      "collection": "evidence",
+      "field": "case_id",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "EvidenceArtifact",
+      "collection": "evidence",
+      "field": "case_scope_id",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "EvidenceArtifact",
+      "collection": "evidence",
+      "field": "content_attributes",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "EvidenceArtifact",
+      "collection": "evidence",
+      "field": "content_ref",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "EvidenceArtifact",
+      "collection": "evidence",
+      "field": "content_revision",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "EvidenceArtifact",
+      "collection": "evidence",
+      "field": "covered_attributes",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "EvidenceArtifact",
+      "collection": "evidence",
+      "field": "created_at",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "EvidenceArtifact",
+      "collection": "evidence",
+      "field": "evidence_revision",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "EvidenceArtifact",
+      "collection": "evidence",
+      "field": "finding_ref",
+      "change": "additive_field_on_C_records",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "EvidenceArtifact",
+      "collection": "evidence",
+      "field": "id",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "EvidenceArtifact",
+      "collection": "evidence",
+      "field": "implementation_fidelity",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "EvidenceArtifact",
+      "collection": "evidence",
+      "field": "intake_security_status",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "EvidenceArtifact",
+      "collection": "evidence",
+      "field": "linked_item_refs",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "EvidenceArtifact",
+      "collection": "evidence",
+      "field": "original_source_ref",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "EvidenceArtifact",
+      "collection": "evidence",
+      "field": "original_submitter_ref",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "EvidenceArtifact",
+      "collection": "evidence",
+      "field": "provenance",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "EvidenceArtifact",
+      "collection": "evidence",
+      "field": "purpose_class",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "EvidenceArtifact",
+      "collection": "evidence",
+      "field": "receipt_status",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "EvidenceArtifact",
+      "collection": "evidence",
+      "field": "request_item_refs",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "EvidenceArtifact",
+      "collection": "evidence",
+      "field": "revision",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "EvidenceArtifact",
+      "collection": "evidence",
+      "field": "scope_revision",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "EvidenceArtifact",
+      "collection": "evidence",
+      "field": "sensitivity",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "EvidenceArtifact",
+      "collection": "evidence",
+      "field": "simulation_flag",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "EvidenceArtifact",
+      "collection": "evidence",
+      "field": "source_record_ref",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "EvidenceArtifact",
+      "collection": "evidence",
+      "field": "source_refs",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "EvidenceArtifact",
+      "collection": "evidence",
+      "field": "source_status",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "EvidenceArtifact",
+      "collection": "evidence",
+      "field": "status_reason",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "EvidenceArtifact",
+      "collection": "evidence",
+      "field": "subject_id",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "EvidenceArtifact",
+      "collection": "evidence",
+      "field": "subject_revision",
+      "change": "additive_field_on_C_records",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "EvidenceArtifact",
+      "collection": "evidence",
+      "field": "synthetic",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "EvidenceArtifact",
+      "collection": "evidence",
+      "field": "updated_at",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "EvidenceArtifact",
+      "collection": "evidence",
+      "field": "verification_status",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "AuditEvent",
+      "collection": "auditEvents",
+      "field": "actor_ref",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "AuditEvent",
+      "collection": "auditEvents",
+      "field": "actor_type",
+      "change": "additive_field_on_C_records",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "AuditEvent",
+      "collection": "auditEvents",
+      "field": "business_validation_status",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "AuditEvent",
+      "collection": "auditEvents",
+      "field": "case_id",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "AuditEvent",
+      "collection": "auditEvents",
+      "field": "case_scope_id",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "AuditEvent",
+      "collection": "auditEvents",
+      "field": "causation_ref",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "AuditEvent",
+      "collection": "auditEvents",
+      "field": "correlation_id",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "AuditEvent",
+      "collection": "auditEvents",
+      "field": "created_at",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "AuditEvent",
+      "collection": "auditEvents",
+      "field": "event_type",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "AuditEvent",
+      "collection": "auditEvents",
+      "field": "expected_input_revisions",
+      "change": "additive_field_on_C_records",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "AuditEvent",
+      "collection": "auditEvents",
+      "field": "expected_item_revision",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "AuditEvent",
+      "collection": "auditEvents",
+      "field": "expected_request_revision",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "AuditEvent",
+      "collection": "auditEvents",
+      "field": "expected_revision",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "AuditEvent",
+      "collection": "auditEvents",
+      "field": "expected_scope_revision",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "AuditEvent",
+      "collection": "auditEvents",
+      "field": "from_revision",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "AuditEvent",
+      "collection": "auditEvents",
+      "field": "id",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "AuditEvent",
+      "collection": "auditEvents",
+      "field": "idempotency_fingerprint",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "AuditEvent",
+      "collection": "auditEvents",
+      "field": "implementation_fidelity",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "AuditEvent",
+      "collection": "auditEvents",
+      "field": "object_ref",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "AuditEvent",
+      "collection": "auditEvents",
+      "field": "object_refs",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "AuditEvent",
+      "collection": "auditEvents",
+      "field": "occurred_at",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "AuditEvent",
+      "collection": "auditEvents",
+      "field": "provenance",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "AuditEvent",
+      "collection": "auditEvents",
+      "field": "purpose_class",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "AuditEvent",
+      "collection": "auditEvents",
+      "field": "rationale",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "AuditEvent",
+      "collection": "auditEvents",
+      "field": "request_id",
+      "change": "additive_field_on_C_records",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "AuditEvent",
+      "collection": "auditEvents",
+      "field": "revision",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "AuditEvent",
+      "collection": "auditEvents",
+      "field": "scope_revision",
+      "change": "additive_field_on_C_records",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "AuditEvent",
+      "collection": "auditEvents",
+      "field": "sensitivity",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "AuditEvent",
+      "collection": "auditEvents",
+      "field": "simulation_flag",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "AuditEvent",
+      "collection": "auditEvents",
+      "field": "source_refs",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "AuditEvent",
+      "collection": "auditEvents",
+      "field": "source_status",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "AuditEvent",
+      "collection": "auditEvents",
+      "field": "synthetic",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "AuditEvent",
+      "collection": "auditEvents",
+      "field": "to_revision",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    },
+    {
+      "object": "AuditEvent",
+      "collection": "auditEvents",
+      "field": "updated_at",
+      "change": "existing_field_reused",
+      "definition_ref": "field-dictionary.json",
+      "ui_binding": "SCN-MATCH / review, evidence or activity"
+    }
+  ],
+  "dependency_crosswalk": [
+    {
+      "source": "SRC-009:DEP-02",
+      "targets": [
+        "SRC-010:DEP-02",
+        "SRC-010:DEP-06"
+      ],
+      "meaning": "Separate preliminary and comprehensive query gates"
+    },
+    {
+      "source": "SRC-009:DEP-08",
+      "targets": [
+        "SRC-010:DEP-07",
+        "SRC-010:DEP-08"
+      ],
+      "meaning": "Separate finding review and independent EDD applicability"
+    },
+    {
+      "source": "SRC-009:DEP-07",
+      "targets": [],
+      "meaning": "Credit to Legal; not the D2 screening dependency"
+    },
+    {
+      "source": "SRC-010:DEP-12",
+      "targets": [
+        "Person T coverage projection",
+        "Independent EDD projection"
+      ],
+      "meaning": "C synthetic not-ready overlay; no new clearanceCondition writer"
+    },
+    {
+      "source": "SRC-010:DEP-14",
+      "targets": [
+        "read-only same-revision lenses",
+        "disabled shadow inject"
+      ],
+      "meaning": "Interface only; no Lab write-back"
+    }
+  ],
+  "downstream_interfaces": {
+    "identity": "New purpose-scoped B request; EV-ID-C01 allocated only on submission",
+    "population": "Upstream confirmed-inventory adapter unconfigured",
+    "disposition": "Disabled until separately reviewed exclusion fixture and oracle",
+    "edd": "Reviewed applicability and pack interfaces; approval writer not supplied",
+    "readiness": "Preserved legacy conditions plus explicit C profile overlay",
+    "media": "Read-only static views; video asset missing does not block task",
+    "lab": "No approved live inject; mainline independent"
+  },
+  "limitations": [
+    "Candidate dictionary metadata is not a production schema certification.",
+    "No independent third-party JSON Schema runtime was available.",
+    "Counts describe physical demo fields, not approved bank requirements."
+  ]
+}

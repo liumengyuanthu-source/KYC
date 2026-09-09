@@ -1,0 +1,172 @@
+{
+  "version": "v0.1",
+  "status": "prototype_field_contract_not_production_schema",
+  "source_ref": "SRC-015",
+  "collections": {
+    "requestItems": {
+      "logical_object": "RequestItem",
+      "reuses_existing": false,
+      "required": [
+        "id",
+        "case_id",
+        "revision",
+        "request_id",
+        "requirement_id",
+        "purpose_code",
+        "response_status"
+      ]
+    },
+    "businessContacts": {
+      "logical_object": "BusinessContact",
+      "reuses_existing": false,
+      "required": [
+        "id",
+        "case_id",
+        "revision",
+        "person_ref",
+        "principal_entity_ref",
+        "contact_routes",
+        "contact_review_ref"
+      ]
+    },
+    "interactionRecords": {
+      "logical_object": "InteractionRecord",
+      "reuses_existing": false,
+      "required": [
+        "id",
+        "case_id",
+        "revision",
+        "channel",
+        "participants",
+        "summary",
+        "reviewed_by"
+      ]
+    },
+    "requestRecipients": {
+      "logical_object": "RequestRecipient",
+      "reuses_existing": false,
+      "required": [
+        "id",
+        "case_id",
+        "revision",
+        "request_id",
+        "person_ref",
+        "permitted_item_refs",
+        "contact_review_ref"
+      ]
+    },
+    "requestAccessDecisions": {
+      "logical_object": "RequestAccessDecision",
+      "reuses_existing": false,
+      "required": [
+        "id",
+        "case_id",
+        "revision",
+        "recipient_ref",
+        "item_refs",
+        "basis_refs",
+        "reviewer_permission_ref",
+        "status"
+      ]
+    },
+    "notifications": {
+      "logical_object": "Notification",
+      "reuses_existing": false,
+      "required": [
+        "id",
+        "case_id",
+        "revision",
+        "request_revision",
+        "recipient_ref",
+        "channel",
+        "dispatch_status",
+        "delivery_status",
+        "adapter_event_ref"
+      ]
+    },
+    "portalInvitations": {
+      "logical_object": "PortalInvitation",
+      "reuses_existing": false,
+      "required": [
+        "id",
+        "case_id",
+        "revision",
+        "recipient_ref",
+        "request_scope",
+        "auth_policy_ref",
+        "expires_at",
+        "revoked_at",
+        "activated_at"
+      ]
+    },
+    "accessGrants": {
+      "logical_object": "AccessGrant",
+      "reuses_existing": false,
+      "required": [
+        "id",
+        "case_id",
+        "revision",
+        "user_ref",
+        "resource_scope",
+        "permitted_actions",
+        "provisioning_basis_ref",
+        "status",
+        "expires_at"
+      ]
+    },
+    "submissions": {
+      "logical_object": "Submission",
+      "reuses_existing": false,
+      "required": [
+        "id",
+        "case_id",
+        "revision",
+        "request_item_refs",
+        "submitted_by",
+        "on_behalf_of",
+        "staff_uploader_ref",
+        "source_channel",
+        "submitted_at",
+        "artifact_refs"
+      ]
+    },
+    "channelPolicies": {
+      "logical_object": "ChannelPolicy",
+      "reuses_existing": false,
+      "required": [
+        "id",
+        "case_id",
+        "revision",
+        "region_context",
+        "channel",
+        "allowed_purposes",
+        "disclosure_classes",
+        "capture_method",
+        "approval_status",
+        "simulation_adapter_ref"
+      ]
+    },
+    "contributorSessions": {
+      "logical_object": "ContributorSession",
+      "reuses_existing": false,
+      "required": [
+        "id",
+        "case_id",
+        "revision",
+        "user_ref",
+        "status",
+        "scope_revision",
+        "production_authentication_validated"
+      ]
+    }
+  },
+  "reused_collections": {
+    "informationRequests": "InformationRequest",
+    "requirements": "Requirement",
+    "evidence": "EvidenceArtifact (existing Evidence)",
+    "evidenceUseAssessments": "EvidenceUseAssessment",
+    "workItems": "WorkItem",
+    "auditEvents": "AuditEvent"
+  },
+  "limitations": "Logical extension contract only. Existing Batch A schema remains unchanged; this does not certify the combined case against a production or whole-case JSON Schema."
+}

@@ -1,0 +1,11 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import crypto from 'node:crypto';
+const root=process.cwd(),out=path.join(root,'00_governance/batch-d/baseline');
+if(fs.existsSync(path.join(out,'manifest.json')))throw Error('Baseline already captured');
+const files=['prototype/app.mjs','prototype/content.mjs','prototype/navigation.mjs','prototype/index.html','prototype/references/registry.json','prototype/references/registry.mjs','prototype/references.mjs','prototype/case-engine.mjs','prototype/collaboration-engine.mjs','prototype/screening-engine.mjs'];
+const manifest=files.map(file=>{const bytes=fs.readFileSync(file),dest=path.join(out,file);fs.mkdirSync(path.dirname(dest),{recursive:true});fs.writeFileSync(dest,bytes);return {file,sha256:crypto.createHash('sha256').update(bytes).digest('hex')};});
+fs.writeFileSync(path.join(out,'manifest.json'),JSON.stringify(manifest,null,2)+'\n');
+const source='/Users/christinaliu/Downloads/Clear_to_Trade_D2_Batch_D_Parallel_Specialist_Work_Final_v1.0.md';
+fs.writeFileSync('00_governance/batch-d/source-manifest.json',JSON.stringify({source_id:'SRC-019',path:source,sha256:crypto.createHash('sha256').update(fs.readFileSync(source)).digest('hex'),status:'approved_demo_design',bank_policy_status:'not_confirmed'},null,2)+'\n');
+console.log(`Captured ${files.length} baseline files; registered SRC-019.`);

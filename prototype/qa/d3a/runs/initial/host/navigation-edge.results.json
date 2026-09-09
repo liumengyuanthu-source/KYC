@@ -1,0 +1,62 @@
+{
+  "at": "2026-09-07T15:38:47.198Z",
+  "browser": "152.0.7977.76",
+  "results": [
+    {
+      "ids": [
+        "UX-15",
+        "UX-20"
+      ],
+      "name": "journey-camera-escape-focus",
+      "status": "failed",
+      "error": "Expected values to be strictly equal:\n\ntrue !== false\n",
+      "errors": []
+    },
+    {
+      "ids": [
+        "UX-18"
+      ],
+      "name": "removed-node-safe-fallback",
+      "status": "passed",
+      "screenshot": "prototype/qa/d3a/host/removed-node-safe-fallback.png",
+      "errors": []
+    },
+    {
+      "ids": [
+        "UX-24"
+      ],
+      "name": "ROLE-RM.safe-reader-print",
+      "status": "passed",
+      "screenshot": "prototype/qa/d3a/host/ROLE-RM.safe-reader-print.png",
+      "errors": []
+    },
+    {
+      "ids": [
+        "UX-24"
+      ],
+      "name": "ROLE-CLIENT.safe-reader-print",
+      "status": "passed",
+      "screenshot": "prototype/qa/d3a/host/ROLE-CLIENT.safe-reader-print.png",
+      "errors": []
+    },
+    {
+      "ids": [
+        "UX-24"
+      ],
+      "name": "client-product-return-safe-reader",
+      "status": "passed",
+      "screenshot": "prototype/qa/d3a/host/client-product-return-safe-reader.png",
+      "errors": []
+    },
+    {
+      "ids": [
+        "UX-25",
+        "UX-28"
+      ],
+      "name": "index-and-story-readonly",
+      "status": "passed",
+      "screenshot": "prototype/qa/d3a/host/index-and-story-readonly.png",
+      "errors": []
+    }
+  ]
+}

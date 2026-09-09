@@ -1,0 +1,149 @@
+{
+  "at": "2026-09-07T16:04:31.354Z",
+  "scope": "D3A T00-T03 PC01 local verification; T04 human calibration pending",
+  "suites": [
+    {
+      "file": "prototype/qa/d3a/unit-results.json",
+      "at": "2026-09-07T16:02:40.319Z",
+      "passed": 277,
+      "failed": [],
+      "notRun": [],
+      "sha256": "95af6632e819a94ef66848d3858008fd20669fe405ce1d662134e2af285cbffc"
+    },
+    {
+      "file": "prototype/qa/d3a/host/host-browser.results.json",
+      "at": "2026-09-07T16:03:02.897Z",
+      "passed": 16,
+      "failed": [],
+      "notRun": [],
+      "sha256": "eb0ed9b30773ae47af5d35f1009bd7dcee786218528f9e351887d8ecf81db089"
+    },
+    {
+      "file": "prototype/qa/d3a/host/navigation-edge.results.json",
+      "at": "2026-09-07T16:03:08.649Z",
+      "passed": 6,
+      "failed": [],
+      "notRun": [],
+      "sha256": "b971d90379de2a3371ed7a25a4b72688c0b7c301b9f5f6302776807523ab7a56"
+    },
+    {
+      "file": "prototype/qa/d3a/host/product-return.results.json",
+      "at": "2026-09-07T16:03:16.112Z",
+      "passed": 3,
+      "failed": [],
+      "notRun": [],
+      "sha256": "ce4b2d9ca998ebfb0a8ff7e1fbc1f3bb6da311ee94919613c52ad15ea1005853"
+    },
+    {
+      "file": "prototype/qa/d3a/host/chain-preview.results.json",
+      "at": "2026-09-07T16:03:12.161Z",
+      "passed": 3,
+      "failed": [],
+      "notRun": [],
+      "sha256": "c90a93630863b12c881732b7def3732b6ba89ecb3bdd5954559182ca38374c90"
+    },
+    {
+      "file": "prototype/qa/d3a/host/print-reentry.results.json",
+      "at": "2026-09-07T16:02:48.247Z",
+      "passed": 1,
+      "failed": [],
+      "notRun": [],
+      "sha256": "2a954a11f02a05f2e05db85a05660296a6f805b880c69be1842838f9dec633e8"
+    },
+    {
+      "file": "prototype/qa/d3a/print/results.json",
+      "at": "2026-09-07T16:03:23.741Z",
+      "passed": 9,
+      "failed": [],
+      "notRun": [],
+      "sha256": "8784dc0140e51ccf2ff9d9f2b668444a016dda43d0fa28a6723c9db1e7a916b7"
+    },
+    {
+      "file": "prototype/qa/d3a/print/pdf-audit.json",
+      "at": "2026-09-07T16:03:29.878Z",
+      "passed": 9,
+      "failed": [],
+      "notRun": [],
+      "sha256": "76563595d761f1426af64d3b0c90992164b3ca2654fd198744405c00fef9c1d5"
+    },
+    {
+      "file": "prototype/qa/d3a/a-regression/browser-results.json",
+      "at": "2026-09-07T16:03:18.296Z",
+      "passed": 21,
+      "failed": [],
+      "notRun": [
+        {
+          "id": "MH-20",
+          "name": "Safari / Firefox / native browser 200% zoom / assistive-technology audit",
+          "status": "not-run",
+          "reason": "Chromium host regression; 720 CSS-px layout approximates 1440px at 200%, not a native zoom or screen-reader certification."
+        }
+      ],
+      "sha256": "a45981cc51f219b2253d2436baf073f8cea8e714f74c42087369a9a6e736c456"
+    },
+    {
+      "file": "prototype/qa/d3a/b-regression/browser-results.json",
+      "at": null,
+      "passed": 13,
+      "failed": [],
+      "notRun": [],
+      "sha256": "908f47328b85e856184cf4de55ea694ae5f92e9c8193e48701e9789547db8e1f"
+    },
+    {
+      "file": "prototype/qa/d3a/c-regression/browser-results.json",
+      "at": "2026-09-07T16:03:45.388Z",
+      "passed": 18,
+      "failed": [],
+      "notRun": [],
+      "sha256": "ccfc8e2c75d3eec0111848d67c91cba1ad23a5ca11f6c56187f2e1d5f1d2ff94"
+    },
+    {
+      "file": "prototype/qa/d3a/d-regression/browser-results.json",
+      "at": "2026-09-07T16:03:50.342Z",
+      "passed": 8,
+      "failed": [],
+      "notRun": [],
+      "sha256": "9c43dc235a6ece357595b657749e0783e0f5660a21c8b86dd2454dc43b45ad08"
+    },
+    {
+      "file": "prototype/qa/d3a/d-regression/return-results.json",
+      "at": null,
+      "passed": 3,
+      "failed": [],
+      "notRun": [],
+      "sha256": "5d8fb269a3035cd83e524901201e86c9e063f736022d3c3fad288fddbde1befe"
+    },
+    {
+      "file": "prototype/qa/d3a/d-regression/scene-graph-results.json",
+      "at": null,
+      "passed": 2,
+      "failed": [],
+      "notRun": [],
+      "sha256": "2d2b48a2cc1aa60954ecd1f05e24ebf215e0ae84be2eeb644e0854b061082224"
+    }
+  ],
+  "codeHashes": {
+    "prototype/app.mjs": "6063138aede09badc16d6ae29ec398b192037763e210ca375341610d2bab5c7d",
+    "prototype/navigation.mjs": "e010d71e370e25fcf6c55d314364e831c91b697578f141b5e087cfb358fbac1e",
+    "prototype/index.html": "01e22254c0f7154e952c8bba0a096bea97c7b52bb7ad276752bc014a20a8f7b2",
+    "prototype/reconstruction-state.mjs": "b2e19def288dd2e5baa66fa9378d8420082c3293f9d837b27f59ebfbb76d000f",
+    "prototype/reconstruction-ui.mjs": "99fd1d7d4abb5f589264e2fec9765bf762b15d969d2f424e045267fd29d25291",
+    "prototype/reconstruction.css": "2c149ae7a04de1fbe42da9d07fc800495e0e97bbfffa95e247d7e16c7a085298",
+    "prototype/reconstruction/registry.mjs": "93e78b403f44a648feb8e1a9983d8e1caeb2c9cf1745fd277d63f0112c2b6b29",
+    "prototype/reconstruction/copy.mjs": "0e8a97a5ad633df6b928aa73bb828eec6e15f9971d512eb4c0f6286c795ce9a4",
+    "prototype/reconstruction/pc01.mjs": "85d52f01de420cf648804f50a920b8cb2d11e123b715170b4391d7124ed2a9cc",
+    "prototype/reconstruction/diagram-manifest.mjs": "9a37dc61402287b01a78f25ebc52a9dea7d8066c97b8d48b2be74bbe8ba1f1f4"
+  },
+  "ux": {
+    "passed": 25,
+    "failed": 0,
+    "notRun": [
+      "UX-06",
+      "UX-19",
+      "UX-20",
+      "UX-27",
+      "UX-29"
+    ],
+    "qualification": "Bounded scopes documented individually in 00_governance/d3a/ux-acceptance.md; not full D3A or bank approval"
+  }
+}

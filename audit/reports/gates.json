@@ -1,0 +1,57 @@
+[
+  {
+    "gate": "G0",
+    "result": "PASS",
+    "basis": "15 scenario contracts / 229 action mappings; full priority contracts. QA/PUBLISH runtime is explicitly absent."
+  },
+  {
+    "gate": "G1",
+    "result": "REVIEW",
+    "basis": "Role/state-specific guidance retested if fixed; real-user comprehension timing not tested."
+  },
+  {
+    "gate": "G2",
+    "result": "REVIEW",
+    "basis": "Actual C/B hero executed; QA remediation and publication success runtime NOT_RUN."
+  },
+  {
+    "gate": "G3",
+    "result": "REVIEW",
+    "basis": "Executed same-case navigation, locale, history and module-isolation subset PASS; mandatory full CTX-06 Lab Shadow NOT_RUN."
+  },
+  {
+    "gate": "G4",
+    "result": "PASS",
+    "basis": "Bounded engine/browser safety oracles; production RBAC, bank policy and live systems not validated."
+  },
+  {
+    "gate": "G5",
+    "result": "REVIEW",
+    "basis": "Time semantics and clock no-write pass; default time/next-owner visibility and long progress layout need user review."
+  },
+  {
+    "gate": "G6",
+    "result": "REVIEW",
+    "basis": "Tokens retained; first-viewport density and workshop chrome remain S2."
+  },
+  {
+    "gate": "G7",
+    "result": "PASS",
+    "basis": "12 width/language combinations; CSS text scaling only, not full native zoom coverage."
+  },
+  {
+    "gate": "G8",
+    "result": "REVIEW",
+    "basis": "23 axe scans; 0 serious/critical violation groups; heading outline moderate issues remain."
+  },
+  {
+    "gate": "G9",
+    "result": "REVIEW",
+    "basis": "15 provisional screenshot states; repeated-capture checks are not Christina visual approval. Archived/completed outcome fixtures absent."
+  },
+  {
+    "gate": "G10",
+    "result": "REVIEW",
+    "basis": "Fresh ordered screenshot heuristic review; installed ux-audit not executed this session; Product Design Audit method used."
+  }
+]

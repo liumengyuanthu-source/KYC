@@ -1,0 +1,114 @@
+{
+  "schema_version": 2,
+  "diagram_type": "workflow",
+  "meta": {
+    "title": "EDD 独立适用性 · 现状",
+    "locale": "zh-CN",
+    "quality_profile": "showcase",
+    "animation": "none"
+  },
+  "lanes": [
+    {
+      "id": "upper",
+      "label": "独立判断"
+    },
+    {
+      "id": "main",
+      "label": "人工工作与判断"
+    },
+    {
+      "id": "lower",
+      "label": "未决、保护与返回",
+      "variant": "exception"
+    }
+  ],
+  "mainPath": [
+    "context",
+    "required",
+    "impact"
+  ],
+  "nodes": [
+    {
+      "id": "context",
+      "col": 0,
+      "lane": "main",
+      "type": "frontend",
+      "label": "风险、范围与依据",
+      "width": 240
+    },
+    {
+      "id": "required",
+      "col": 1,
+      "lane": "main",
+      "type": "frontend",
+      "label": "必要的针对性工作",
+      "width": 240
+    },
+    {
+      "id": "notrequired",
+      "col": 1,
+      "lane": "upper",
+      "type": "frontend",
+      "label": "本范围不适用",
+      "width": 240
+    },
+    {
+      "id": "unknown",
+      "col": 1,
+      "lane": "lower",
+      "type": "frontend",
+      "label": "适用性仍待判断",
+      "width": 240
+    },
+    {
+      "id": "impact",
+      "col": 2,
+      "lane": "main",
+      "type": "frontend",
+      "label": "独立条件与准备状态",
+      "width": 240
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge0",
+      "from": "context",
+      "to": "required",
+      "label": "required · 有依据"
+    },
+    {
+      "id": "edge1",
+      "from": "context",
+      "to": "notrequired",
+      "label": "not_required · 当前有权",
+      "role": "branch"
+    },
+    {
+      "id": "edge2",
+      "from": "context",
+      "to": "unknown",
+      "label": "unknown / stale / 缺权限",
+      "role": "branch"
+    },
+    {
+      "id": "edge3",
+      "from": "required",
+      "to": "impact",
+      "label": "有权结果及未决条件"
+    },
+    {
+      "id": "edge4",
+      "from": "notrequired",
+      "to": "impact",
+      "label": "仅本适用性",
+      "role": "branch"
+    },
+    {
+      "id": "edge5",
+      "from": "unknown",
+      "to": "impact",
+      "label": "仍待判断，不关闭",
+      "role": "branch"
+    }
+  ]
+}

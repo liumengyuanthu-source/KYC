@@ -1,0 +1,509 @@
+{
+  "source_ref": "SRC-020",
+  "phase": "E implemented and independently accepted; F consolidation authorised to proceed",
+  "overall": "passed_with_disclosed_limits",
+  "f_gate": "open_after_task_2_review_round_1",
+  "native": {
+    "status": "passed",
+    "tests": 46,
+    "failed": 0,
+    "log": ".superpowers/sdd/2026-09-08-batch-e-f/task-1-fix-2-green.log",
+    "engine_sha256": "075188d9f2fee6ff87c0f557077d937ae83be1d9120f6f3bf8d37be71f5ece18",
+    "test_sha256": "f406c67c440b800679e42a0ed544fd03ada9295f9fad8a85d855dc8a8ab9c4ff",
+    "review": ".superpowers/sdd/2026-09-08-batch-e-f/task-1-review-round-2.md"
+  },
+  "schema": {
+    "candidate_validation": "passed",
+    "empty_applicator_regression": "passed",
+    "full_meta_schema_validation": "not_run",
+    "reason": "No JSON Schema validator installed in inspected default or bundled Node/Python runtimes; no new dependency installed.",
+    "sha256": "e11b4aedee31fe751d3e54624f9747863943ce2c90fa2cf06183f5a2857b5aa6"
+  },
+  "diagrams": {
+    "canonical_passed": 5,
+    "english_DG_E03": "failed_candidate_semantic_static_fallback",
+    "host_export_palette_checks": "passed",
+    "host_navigation_print": "passed"
+  },
+  "checks": [
+    {
+      "id": "RT-E01",
+      "title": "Remediation is not QA signoff",
+      "native": "passed",
+      "native_test_prefix": "RT-E01/E16",
+      "browser": "passed",
+      "browser_evidence": [
+        {
+          "check_id": "E-REMEDIATION",
+          "receipt": "prototype/qa/batch-e/evidence-fix-1-mainline-final/receipt.json",
+          "artifacts": [
+            "prototype/qa/batch-e/evidence-fix-1-mainline-final/remediation-completed.en-AU.png"
+          ]
+        }
+      ],
+      "qualification": "Native behavior passed; linked browser assertions cover this check's applicable host path. Real bank policy and authority remain unverified."
+    },
+    {
+      "id": "RT-E02",
+      "title": "QA signoff is not clearance",
+      "native": "passed",
+      "native_test_prefix": "RT-E02/E04/E05",
+      "browser": "passed",
+      "browser_evidence": [
+        {
+          "check_id": "E-QA-ALONE",
+          "receipt": "prototype/qa/batch-e/evidence-fix-1-mainline-final/receipt.json",
+          "artifacts": [
+            "prototype/qa/batch-e/evidence-fix-1-mainline-final/qa-signed-alone.png"
+          ]
+        }
+      ],
+      "qualification": "Native behavior passed; linked browser assertions cover this check's applicable host path. Real bank policy and authority remain unverified."
+    },
+    {
+      "id": "RT-E03",
+      "title": "Superseded Credit input blocks Legal readiness",
+      "native": "passed",
+      "native_test_prefix": "RT-E03",
+      "browser": "not_run",
+      "browser_evidence": [],
+      "qualification": "Native behavior passed; no dedicated browser assertion for this RT item was executed."
+    },
+    {
+      "id": "RT-E04",
+      "title": "Pending Conflicts remains blocking",
+      "native": "passed",
+      "native_test_prefix": "RT-E02/E04/E05",
+      "browser": "passed",
+      "browser_evidence": [
+        {
+          "check_id": "E-QA-ALONE",
+          "receipt": "prototype/qa/batch-e/evidence-fix-1-mainline-final/receipt.json",
+          "artifacts": [
+            "prototype/qa/batch-e/evidence-fix-1-mainline-final/qa-signed-alone.png"
+          ]
+        }
+      ],
+      "qualification": "Native behavior passed; linked browser assertions cover this check's applicable host path. Real bank policy and authority remain unverified."
+    },
+    {
+      "id": "RT-E05",
+      "title": "Incomplete applicable screening coverage blocks readiness",
+      "native": "passed",
+      "native_test_prefix": "RT-E02/E04/E05",
+      "browser": "passed",
+      "browser_evidence": [
+        {
+          "check_id": "E-QA-ALONE",
+          "receipt": "prototype/qa/batch-e/evidence-fix-1-mainline-final/receipt.json",
+          "artifacts": [
+            "prototype/qa/batch-e/evidence-fix-1-mainline-final/qa-signed-alone.png"
+          ]
+        }
+      ],
+      "qualification": "Native behavior passed; linked browser assertions cover this check's applicable host path. Real bank policy and authority remain unverified."
+    },
+    {
+      "id": "RT-E06",
+      "title": "Unknown applicability is not not-required",
+      "native": "passed",
+      "native_test_prefix": "RT-E06/E07",
+      "browser": "passed",
+      "browser_evidence": [
+        {
+          "check_id": "E-READY",
+          "receipt": "prototype/qa/batch-e/evidence-fix-1-mainline-final/receipt.json",
+          "artifacts": [
+            "prototype/qa/batch-e/evidence-fix-1-mainline-final/ready.en-US.png"
+          ]
+        }
+      ],
+      "qualification": "Native behavior passed; linked browser assertions cover this check's applicable host path. Real bank policy and authority remain unverified."
+    },
+    {
+      "id": "RT-E07",
+      "title": "Not-required is not approved",
+      "native": "passed",
+      "native_test_prefix": "RT-E06/E07",
+      "browser": "passed",
+      "browser_evidence": [
+        {
+          "check_id": "E-READY",
+          "receipt": "prototype/qa/batch-e/evidence-fix-1-mainline-final/receipt.json",
+          "artifacts": [
+            "prototype/qa/batch-e/evidence-fix-1-mainline-final/ready.en-US.png"
+          ]
+        }
+      ],
+      "qualification": "Native behavior passed; linked browser assertions cover this check's applicable host path. Real bank policy and authority remain unverified."
+    },
+    {
+      "id": "RT-E08",
+      "title": "Snapshot binds current scope revision",
+      "native": "passed",
+      "native_test_prefix": "RT-E08/E09",
+      "browser": "passed",
+      "browser_evidence": [
+        {
+          "check_id": "E-READY",
+          "receipt": "prototype/qa/batch-e/evidence-fix-1-mainline-final/receipt.json",
+          "artifacts": [
+            "prototype/qa/batch-e/evidence-fix-1-mainline-final/ready.en-US.png"
+          ]
+        }
+      ],
+      "qualification": "Native behavior passed; linked browser assertions cover this check's applicable host path. Real bank policy and authority remain unverified."
+    },
+    {
+      "id": "RT-E09",
+      "title": "Changed scope invalidates current clearance",
+      "native": "passed",
+      "native_test_prefix": "RT-E08/E09",
+      "browser": "passed",
+      "browser_evidence": [
+        {
+          "check_id": "E-INVALIDATION",
+          "receipt": "prototype/qa/batch-e/evidence-fix-1-mainline-final/receipt.json",
+          "artifacts": [
+            "prototype/qa/batch-e/evidence-fix-1-mainline-final/revise_scope-reload.png"
+          ]
+        }
+      ],
+      "qualification": "Native behavior passed; linked browser assertions cover this check's applicable host path. Real bank policy and authority remain unverified."
+    },
+    {
+      "id": "RT-E10",
+      "title": "Unconfigured authority cannot confirm",
+      "native": "passed",
+      "native_test_prefix": "RT-E10/E11",
+      "browser": "passed",
+      "browser_evidence": [
+        {
+          "check_id": "E-READY",
+          "receipt": "prototype/qa/batch-e/evidence-fix-1-mainline-final/receipt.json",
+          "artifacts": [
+            "prototype/qa/batch-e/evidence-fix-1-mainline-final/ready.en-US.png"
+          ]
+        }
+      ],
+      "qualification": "Native behavior passed; linked browser assertions cover this check's applicable host path. Real bank policy and authority remain unverified."
+    },
+    {
+      "id": "RT-E11",
+      "title": "Command guards are not production permission proof",
+      "native": "passed",
+      "native_test_prefix": "RT-E10/E11",
+      "browser": "passed",
+      "browser_evidence": [
+        {
+          "check_id": "E-READY",
+          "receipt": "prototype/qa/batch-e/evidence-fix-1-mainline-final/receipt.json",
+          "artifacts": [
+            "prototype/qa/batch-e/evidence-fix-1-mainline-final/ready.en-US.png"
+          ]
+        }
+      ],
+      "qualification": "Native behavior passed; linked browser assertions cover this check's applicable host path. Real bank policy and authority remain unverified."
+    },
+    {
+      "id": "RT-E12",
+      "title": "Decision is not publication success",
+      "native": "passed",
+      "native_test_prefix": "RT-E12/E13/E14",
+      "browser": "passed",
+      "browser_evidence": [
+        {
+          "check_id": "E-CONFIRMED",
+          "receipt": "prototype/qa/batch-e/evidence-fix-1-mainline-final/receipt.json",
+          "artifacts": [
+            "prototype/qa/batch-e/evidence-fix-1-mainline-final/cleared-not-published.png"
+          ]
+        }
+      ],
+      "qualification": "Native behavior passed; linked browser assertions cover this check's applicable host path. Real bank policy and authority remain unverified."
+    },
+    {
+      "id": "RT-E13",
+      "title": "Publication failure preserves decision",
+      "native": "passed",
+      "native_test_prefix": "RT-E12/E13/E14",
+      "browser": "passed",
+      "browser_evidence": [
+        {
+          "check_id": "E-PUBLICATION-FAILURE",
+          "receipt": "prototype/qa/batch-e/evidence-fix-1-mainline-final/receipt.json",
+          "artifacts": [
+            "prototype/qa/batch-e/evidence-fix-1-mainline-final/publication-failed.png"
+          ]
+        }
+      ],
+      "qualification": "Native behavior passed; linked browser assertions cover this check's applicable host path. Real bank policy and authority remain unverified."
+    },
+    {
+      "id": "RT-E14",
+      "title": "Publication never executes a trade",
+      "native": "passed",
+      "native_test_prefix": "RT-E12/E13/E14",
+      "browser": "passed",
+      "browser_evidence": [
+        {
+          "check_id": "E-PUBLISHED-RELOAD",
+          "receipt": "prototype/qa/batch-e/evidence-fix-1-mainline-final/receipt.json",
+          "artifacts": [
+            "prototype/qa/batch-e/evidence-fix-1-mainline-final/published.en-US.png"
+          ]
+        }
+      ],
+      "qualification": "Native behavior passed; linked browser assertions cover this check's applicable host path. Real bank policy and authority remain unverified."
+    },
+    {
+      "id": "RT-E15",
+      "title": "Restricted rationale is excluded from safe projections",
+      "native": "passed",
+      "native_test_prefix": "RT-E15",
+      "browser": "passed",
+      "browser_evidence": [
+        {
+          "check_id": "E-PRINT-COMPLETE",
+          "receipt": "prototype/qa/batch-e/evidence-fix-1-mainline-final/receipt.json",
+          "artifacts": [
+            "prototype/qa/batch-e/evidence-fix-1-mainline-final/complete-E.zh-CN.png"
+          ]
+        },
+        {
+          "check_id": "E-ROLE-SAFE",
+          "receipt": "prototype/qa/batch-e/evidence-fix-1-mainline-final/receipt.json",
+          "artifacts": [
+            "prototype/qa/batch-e/evidence-fix-1-mainline-final/client-safe.png"
+          ]
+        }
+      ],
+      "qualification": "Native behavior passed; linked browser assertions cover this check's applicable host path. Real bank policy and authority remain unverified."
+    },
+    {
+      "id": "RT-E16",
+      "title": "QA gap does not reopen unrelated Legal/Credit",
+      "native": "passed",
+      "native_test_prefix": "RT-E01/E16",
+      "browser": "passed",
+      "browser_evidence": [
+        {
+          "check_id": "E-REMEDIATION",
+          "receipt": "prototype/qa/batch-e/evidence-fix-1-mainline-final/receipt.json",
+          "artifacts": [
+            "prototype/qa/batch-e/evidence-fix-1-mainline-final/remediation-completed.en-AU.png"
+          ]
+        }
+      ],
+      "qualification": "Native behavior passed; linked browser assertions cover this check's applicable host path. Real bank policy and authority remain unverified."
+    },
+    {
+      "id": "RT-E17",
+      "title": "Relevant evidence changes re-evaluate readiness",
+      "native": "passed",
+      "native_test_prefix": "RT-E17",
+      "browser": "passed",
+      "browser_evidence": [
+        {
+          "check_id": "E-INVALIDATION",
+          "receipt": "prototype/qa/batch-e/evidence-fix-1-mainline-final/receipt.json",
+          "artifacts": [
+            "prototype/qa/batch-e/evidence-fix-1-mainline-final/revise_scope-reload.png"
+          ]
+        }
+      ],
+      "qualification": "Native behavior passed; linked browser assertions cover this check's applicable host path. Real bank policy and authority remain unverified."
+    },
+    {
+      "id": "RT-E18",
+      "title": "Studio/Product/Lab read one state",
+      "native": "passed",
+      "native_test_prefix": "RT-E18/E19/E20 state portions",
+      "browser": "passed",
+      "browser_evidence": [
+        {
+          "check_id": "E-ENTRY-READONLY",
+          "receipt": "prototype/qa/batch-e/evidence-fix-1-mainline-final/receipt.json",
+          "artifacts": [
+            "prototype/qa/batch-e/evidence-fix-1-mainline-final/entry-review.png"
+          ]
+        },
+        {
+          "check_id": "E-PUBLISHED-RELOAD",
+          "receipt": "prototype/qa/batch-e/evidence-fix-1-mainline-final/receipt.json",
+          "artifacts": [
+            "prototype/qa/batch-e/evidence-fix-1-mainline-final/published.en-US.png"
+          ]
+        },
+        {
+          "check_id": "E-STUDIO-LAB",
+          "receipt": "prototype/qa/batch-e/evidence-fix-1-mainline-final/receipt.json",
+          "artifacts": [
+            "prototype/qa/batch-e/evidence-fix-1-mainline-final/studio-E6.en-US.png"
+          ]
+        },
+        {
+          "check_id": "E-PRINT-COMPLETE",
+          "receipt": "prototype/qa/batch-e/evidence-fix-1-mainline-final/receipt.json",
+          "artifacts": [
+            "prototype/qa/batch-e/evidence-fix-1-mainline-final/complete-E.zh-CN.png"
+          ]
+        },
+        {
+          "check_id": "E-LAB-OFF",
+          "receipt": "prototype/qa/batch-e/evidence-fix-1-mainline-final/receipt.json",
+          "artifacts": []
+        }
+      ],
+      "qualification": "Native behavior passed; linked browser assertions cover this check's applicable host path. Real bank policy and authority remain unverified."
+    },
+    {
+      "id": "RT-E19",
+      "title": "Return restores semantic scene and correct snapshot",
+      "native": "passed",
+      "native_test_prefix": "RT-E18/E19/E20 state portions",
+      "browser": "passed",
+      "browser_evidence": [
+        {
+          "check_id": "E-DRAFT-EXITS",
+          "receipt": "prototype/qa/batch-e/evidence-fix-1-mainline-final/receipt.json",
+          "artifacts": []
+        },
+        {
+          "check_id": "E-SAVE-FAILURE",
+          "receipt": "prototype/qa/batch-e/evidence-fix-1-mainline-final/receipt.json",
+          "artifacts": [
+            "prototype/qa/batch-e/evidence-fix-1-mainline-final/draft-save-failed.png"
+          ]
+        },
+        {
+          "check_id": "E-DRAFT-SAVE",
+          "receipt": "prototype/qa/batch-e/evidence-fix-1-mainline-final/receipt.json",
+          "artifacts": []
+        },
+        {
+          "check_id": "E-BROWSER-BACK",
+          "receipt": "prototype/qa/batch-e/evidence-fix-1-mainline-final/receipt.json",
+          "artifacts": []
+        },
+        {
+          "check_id": "E-PUBLISHED-RELOAD",
+          "receipt": "prototype/qa/batch-e/evidence-fix-1-mainline-final/receipt.json",
+          "artifacts": [
+            "prototype/qa/batch-e/evidence-fix-1-mainline-final/published.en-US.png"
+          ]
+        },
+        {
+          "check_id": "E-REFERENCES-RETURN",
+          "receipt": "prototype/qa/batch-e/evidence-fix-1-mainline-final/receipt.json",
+          "artifacts": [
+            "prototype/qa/batch-e/evidence-fix-1-mainline-final/studio-E6.zh-CN.png"
+          ]
+        },
+        {
+          "check_id": "E-PRINT-COMPLETE",
+          "receipt": "prototype/qa/batch-e/evidence-fix-1-mainline-final/receipt.json",
+          "artifacts": [
+            "prototype/qa/batch-e/evidence-fix-1-mainline-final/complete-E.zh-CN.png"
+          ]
+        },
+        {
+          "check_id": "E-HISTORY-BOUNDARY",
+          "receipt": "prototype/qa/batch-e/evidence-fix-1-mainline-final/receipt.json",
+          "artifacts": [
+            "prototype/qa/batch-e/evidence-fix-1-mainline-final/legacy-readonly.png"
+          ]
+        },
+        {
+          "check_id": "E-RESTORE",
+          "receipt": "prototype/qa/batch-e/evidence-fix-1-mainline-final/receipt.json",
+          "artifacts": [
+            "prototype/qa/batch-e/evidence-fix-1-mainline-final/pre-E-restored.png"
+          ]
+        }
+      ],
+      "qualification": "Native behavior passed; linked browser assertions cover this check's applicable host path. Real bank policy and authority remain unverified."
+    },
+    {
+      "id": "RT-E20",
+      "title": "Story and diagram controls never write business state",
+      "native": "passed",
+      "native_test_prefix": "RT-E18/E19/E20 state portions",
+      "browser": "passed",
+      "browser_evidence": [
+        {
+          "check_id": "E-ENTRY-READONLY",
+          "receipt": "prototype/qa/batch-e/evidence-fix-1-mainline-final/receipt.json",
+          "artifacts": [
+            "prototype/qa/batch-e/evidence-fix-1-mainline-final/entry-review.png"
+          ]
+        },
+        {
+          "check_id": "E-STUDIO-LAB",
+          "receipt": "prototype/qa/batch-e/evidence-fix-1-mainline-final/receipt.json",
+          "artifacts": [
+            "prototype/qa/batch-e/evidence-fix-1-mainline-final/studio-E6.en-US.png"
+          ]
+        },
+        {
+          "check_id": "E-REFERENCES-RETURN",
+          "receipt": "prototype/qa/batch-e/evidence-fix-1-mainline-final/receipt.json",
+          "artifacts": [
+            "prototype/qa/batch-e/evidence-fix-1-mainline-final/studio-E6.zh-CN.png"
+          ]
+        },
+        {
+          "check_id": "E-PRINT-COMPLETE",
+          "receipt": "prototype/qa/batch-e/evidence-fix-1-mainline-final/receipt.json",
+          "artifacts": [
+            "prototype/qa/batch-e/evidence-fix-1-mainline-final/complete-E.zh-CN.png"
+          ]
+        }
+      ],
+      "qualification": "Native behavior passed; linked browser assertions cover this check's applicable host path. Real bank policy and authority remain unverified."
+    }
+  ],
+  "business_validation": "Actual bank roles, authority, policy, population/category applicability, signatory mandate, publication systems and failure ownership remain To Validate; synthetic approval is not bank validation.",
+  "browser": {
+    "status": "passed",
+    "checks": 22,
+    "failed": 0,
+    "date": "2026-09-07T20:58:57.706Z",
+    "receipt": "prototype/qa/batch-e/evidence-fix-1-mainline-final/receipt.json",
+    "harness": "prototype/qa/batch-e/host-browser.mjs",
+    "console_errors": []
+  },
+  "full_native": {
+    "status": "passed",
+    "tests": 390,
+    "failed": 0,
+    "log": ".superpowers/sdd/2026-09-08-batch-e-f/task-2-native-full.log",
+    "count_method": "390 successful dot-reporter tests; exit 0 recorded by implementer",
+    "qualification": "Historical full run before the narrow popstate fix. Fix covering native UI/navigation20 passed; engine remained byte-identical. Final F full run will be recorded separately."
+  },
+  "visual_review": "00_governance/batch-e/visual-print-review.md",
+  "history_role_regression": {
+    "status": "passed",
+    "checks": 6,
+    "failed": 0,
+    "receipt": "prototype/qa/batch-e/evidence-fix-1-green/receipt.json",
+    "log": ".superpowers/sdd/2026-09-08-batch-e-f/task-2-fix-1-green.log"
+  },
+  "fix_covering_native": {
+    "status": "passed",
+    "tests": 20,
+    "failed": 0,
+    "log": ".superpowers/sdd/2026-09-08-batch-e-f/task-2-fix-1-native.log"
+  },
+  "closed_implementation_review": {
+    "severity": "important",
+    "summary": "Browser Back restores visible role but can retain the previous role's selected action; engine rejects the mismatch. Fix and scoped re-review required.",
+    "report": ".superpowers/sdd/2026-09-08-batch-e-f/task-2-review-round-0.md",
+    "status": "closed",
+    "review": ".superpowers/sdd/2026-09-08-batch-e-f/task-2-review-round-1.md"
+  },
+  "deferred_minors": [
+    "QA gap_open needs specific localized label",
+    "Authored fixture time needs distinction from live demo-action time"
+  ]
+}

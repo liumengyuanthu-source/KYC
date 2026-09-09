@@ -1,0 +1,36 @@
+{
+  "at": "2026-09-07T17:44:50.232Z",
+  "browser": "152.0.7977.76",
+  "results": [
+    {
+      "ids": [
+        "D5-19",
+        "D5-40",
+        "D5-41",
+        "D5U-31",
+        "D5U-38"
+      ],
+      "name": "rm-request-entry-retains-safe-audience",
+      "status": "failed",
+      "error": "Expected values to be strictly equal:\n\n'ops' !== 'rm'\n",
+      "stack": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\n'ops' !== 'rm'\n\n    at probe.seed.seed (file:///Users/christinaliu/Documents/ChatGPT/Australia%20Bank/clear-to-trade-product/prototype/qa/d5/safe-request-proof.mjs:6:43)\n    at async probe (file:///Users/christinaliu/Documents/ChatGPT/Australia%20Bank/clear-to-trade-product/prototype/qa/d5/harness.mjs:17:95)\n    at async file:///Users/christinaliu/Documents/ChatGPT/Australia%20Bank/clear-to-trade-product/prototype/qa/d5/safe-request-proof.mjs:5:2",
+      "errors": [],
+      "remote": []
+    },
+    {
+      "ids": [
+        "D5-19",
+        "D5-40",
+        "D5-41",
+        "D5U-31",
+        "D5U-38"
+      ],
+      "name": "client-request-entry-retains-safe-audience",
+      "status": "failed",
+      "error": "Expected values to be strictly equal:\n\n'ops' !== 'client'\n",
+      "stack": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\n'ops' !== 'client'\n\n    at probe.seed.seed (file:///Users/christinaliu/Documents/ChatGPT/Australia%20Bank/clear-to-trade-product/prototype/qa/d5/safe-request-proof.mjs:6:43)\n    at async probe (file:///Users/christinaliu/Documents/ChatGPT/Australia%20Bank/clear-to-trade-product/prototype/qa/d5/harness.mjs:17:95)\n    at async file:///Users/christinaliu/Documents/ChatGPT/Australia%20Bank/clear-to-trade-product/prototype/qa/d5/safe-request-proof.mjs:5:2",
+      "errors": [],
+      "remote": []
+    }
+  ]
+}

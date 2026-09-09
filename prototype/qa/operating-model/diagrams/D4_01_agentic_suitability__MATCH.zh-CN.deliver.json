@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "ok": true,
+  "command": "deliver",
+  "type": "architecture",
+  "input": "/Users/christinaliu/Documents/ChatGPT/Australia Bank/clear-to-trade-product/04_operating_model/d4/diagrams/D4_01_agentic_suitability__MATCH.zh-CN.archify.json",
+  "output": "/Users/christinaliu/Documents/ChatGPT/Australia Bank/clear-to-trade-product/prototype/diagrams/operating-model/D4_01_agentic_suitability__MATCH.zh-CN.archify.html",
+  "specification": {
+    "sha256": "e8018f161ec0b8d99bf7766bada9432bdebfa6f3981f0e4e84961c796493a32a",
+    "bytes": 2846
+  },
+  "artifact": {
+    "sha256": "1ed85e3dd9f341afafacc958a3d9b3abbd18a18d9384390f7c012f245fe4c4d9",
+    "bytes": 706812
+  },
+  "validation": {
+    "checksPassed": 9,
+    "checkCount": 9,
+    "compositionProfile": "showcase",
+    "compositionStatus": "pass",
+    "errors": 0,
+    "warnings": 0
+  }
+}

@@ -1,0 +1,140 @@
+{
+  "at": "2026-09-07T15:39:07.517Z",
+  "results": [
+    {
+      "ids": [
+        "UX-08",
+        "UX-23",
+        "UX-26"
+      ],
+      "branchId": "BR-03",
+      "scene": "SCN-REQUIREMENTS",
+      "locale": "zh-CN",
+      "status": "passed",
+      "mappingCount": 2,
+      "pdf": "output/pdf/d3a/BR-03.zh-CN.pdf",
+      "businessStateUnchanged": true,
+      "visualStatus": "pending"
+    },
+    {
+      "ids": [
+        "UX-08",
+        "UX-23",
+        "UX-26"
+      ],
+      "branchId": "BR-03",
+      "scene": "SCN-REQUIREMENTS",
+      "locale": "en-AU",
+      "status": "passed",
+      "mappingCount": 2,
+      "pdf": "output/pdf/d3a/BR-03.en-AU.pdf",
+      "businessStateUnchanged": true,
+      "visualStatus": "pending"
+    },
+    {
+      "ids": [
+        "UX-08",
+        "UX-23",
+        "UX-26"
+      ],
+      "branchId": "BR-03",
+      "scene": "SCN-REQUIREMENTS",
+      "locale": "en-US",
+      "status": "passed",
+      "mappingCount": 2,
+      "pdf": "output/pdf/d3a/BR-03.en-US.pdf",
+      "businessStateUnchanged": true,
+      "visualStatus": "pending"
+    },
+    {
+      "ids": [
+        "UX-08",
+        "UX-23",
+        "UX-26"
+      ],
+      "branchId": "BR-04",
+      "scene": "SCN-SOURCE",
+      "locale": "zh-CN",
+      "status": "passed",
+      "mappingCount": 2,
+      "pdf": "output/pdf/d3a/BR-04.zh-CN.pdf",
+      "businessStateUnchanged": true,
+      "visualStatus": "pending"
+    },
+    {
+      "ids": [
+        "UX-08",
+        "UX-23",
+        "UX-26"
+      ],
+      "branchId": "BR-04",
+      "scene": "SCN-SOURCE",
+      "locale": "en-AU",
+      "status": "passed",
+      "mappingCount": 2,
+      "pdf": "output/pdf/d3a/BR-04.en-AU.pdf",
+      "businessStateUnchanged": true,
+      "visualStatus": "pending"
+    },
+    {
+      "ids": [
+        "UX-08",
+        "UX-23",
+        "UX-26"
+      ],
+      "branchId": "BR-04",
+      "scene": "SCN-SOURCE",
+      "locale": "en-US",
+      "status": "passed",
+      "mappingCount": 2,
+      "pdf": "output/pdf/d3a/BR-04.en-US.pdf",
+      "businessStateUnchanged": true,
+      "visualStatus": "pending"
+    },
+    {
+      "ids": [
+        "UX-08",
+        "UX-23",
+        "UX-26"
+      ],
+      "branchId": "BR-05",
+      "scene": "SCN-GAP",
+      "locale": "zh-CN",
+      "status": "passed",
+      "mappingCount": 3,
+      "pdf": "output/pdf/d3a/BR-05.zh-CN.pdf",
+      "businessStateUnchanged": true,
+      "visualStatus": "pending"
+    },
+    {
+      "ids": [
+        "UX-08",
+        "UX-23",
+        "UX-26"
+      ],
+      "branchId": "BR-05",
+      "scene": "SCN-GAP",
+      "locale": "en-AU",
+      "status": "passed",
+      "mappingCount": 3,
+      "pdf": "output/pdf/d3a/BR-05.en-AU.pdf",
+      "businessStateUnchanged": true,
+      "visualStatus": "pending"
+    },
+    {
+      "ids": [
+        "UX-08",
+        "UX-23",
+        "UX-26"
+      ],
+      "branchId": "BR-05",
+      "scene": "SCN-GAP",
+      "locale": "en-US",
+      "status": "passed",
+      "mappingCount": 3,
+      "pdf": "output/pdf/d3a/BR-05.en-US.pdf",
+      "businessStateUnchanged": true,
+      "visualStatus": "pending"
+    }
+  ]
+}

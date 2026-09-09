@@ -1,12 +1,1789 @@
-frame_code: F09
-segment: S2
-title: "Target Agentic End-to-End Journey — Pilot Segment"
-version: V0
-status: BLOCKED_SOURCE_NOT_VALIDATED
-missing_sources:
-  - "03_personas_journey/target_journey_matrix.csv"
-  - "04_operating_model/hitl_task_matrix.csv"
-  - "04_operating_model/state_transition_table.csv"
-items: []
-notes:
-  - "Agentic action, rules/tools, human boundary and state require validated source rows."
+{
+  "frame_code": "F09",
+  "segment": "S2",
+  "title": "Target S2 — Requirements and evidence",
+  "version": "V0.1",
+  "status": "MIRO_V0_CREATED_AWAITING_REVIEW",
+  "source_files": [
+    "03_personas_journey/target_journey_matrix.csv",
+    "03_personas_journey/journey_moments.csv",
+    "00_governance/assumption_register.csv"
+  ],
+  "canonical_journey_file": "03_personas_journey/journey_moments.csv",
+  "layout": {
+    "margin": 80,
+    "lane_label_width": 360,
+    "column_width": 340,
+    "column_gap": 24,
+    "row_height": 220,
+    "row_gap": 16,
+    "header_height": 240,
+    "width": 2316,
+    "height": 2916,
+    "note": "Draft geometry; text fit and native anchors must be verified after rendering in Miro. Wider cards than base token are a provisional S2 density adaptation."
+  },
+  "lanes": [
+    [
+      "L01",
+      "Journey moment"
+    ],
+    [
+      "L02",
+      "User objective / JTBD"
+    ],
+    [
+      "L03",
+      "Client / Sales-RM"
+    ],
+    [
+      "L04",
+      "Case Manager"
+    ],
+    [
+      "L05",
+      "KYC Operations"
+    ],
+    [
+      "L06",
+      "Product execution / rules"
+    ],
+    [
+      "L07",
+      "Systems / evidence"
+    ],
+    [
+      "L08",
+      "Handoff / dependency"
+    ],
+    [
+      "L09",
+      "Pain / root cause / value"
+    ],
+    [
+      "L10",
+      "Human authority / exception"
+    ],
+    [
+      "L11",
+      "State / open questions"
+    ]
+  ],
+  "items": [
+    {
+      "content_id": "F09-S2-C1-L01",
+      "component": "CMP-ACTION",
+      "lane": "L01",
+      "column": 1,
+      "title": "J-M2-01",
+      "body": "Determine applicable requirements",
+      "visible_tag": "PROCESS_MAP_DERIVED",
+      "journey_id": "J-M2-01",
+      "process_ids": [
+        "M2.1",
+        "M2.2",
+        "M2.3",
+        "M2.4"
+      ],
+      "source_refs": [
+        {
+          "source_id": "SRC-007",
+          "locator": "slide 1 shape 18; slide 2 shape 18"
+        }
+      ],
+      "assumption_ids": [
+        "ASM-001",
+        "ASM-003",
+        "ASM-004",
+        "ASM-005"
+      ],
+      "x": 440,
+      "y": 240,
+      "width": 340,
+      "height": 220
+    },
+    {
+      "content_id": "F09-S2-C1-L02",
+      "component": "CMP-ACTION",
+      "lane": "L02",
+      "column": 1,
+      "title": "User objective / JTBD",
+      "body": "Understand what is required and why.",
+      "visible_tag": "DESIGN_HYPOTHESIS",
+      "journey_id": "J-M2-01",
+      "process_ids": [
+        "M2.1",
+        "M2.2",
+        "M2.3",
+        "M2.4"
+      ],
+      "source_refs": [
+        {
+          "source_id": "SRC-007",
+          "locator": "slide 1 shape 18; slide 2 shape 18"
+        }
+      ],
+      "assumption_ids": [
+        "ASM-001",
+        "ASM-003",
+        "ASM-004",
+        "ASM-005"
+      ],
+      "x": 440,
+      "y": 476,
+      "width": 340,
+      "height": 220
+    },
+    {
+      "content_id": "F09-S2-C1-L03",
+      "component": "CMP-ACTION",
+      "lane": "L03",
+      "column": 1,
+      "title": "Client / Sales-RM",
+      "body": "Clarify relationship context when asked.",
+      "visible_tag": "DESIGN_HYPOTHESIS",
+      "journey_id": "J-M2-01",
+      "process_ids": [
+        "M2.1",
+        "M2.2",
+        "M2.3",
+        "M2.4"
+      ],
+      "source_refs": [
+        {
+          "source_id": "SRC-007",
+          "locator": "slide 1 shape 18; slide 2 shape 18"
+        }
+      ],
+      "assumption_ids": [
+        "ASM-001",
+        "ASM-003",
+        "ASM-004",
+        "ASM-005"
+      ],
+      "x": 440,
+      "y": 712,
+      "width": 340,
+      "height": 220
+    },
+    {
+      "content_id": "F09-S2-C1-L04",
+      "component": "CMP-ACTION",
+      "lane": "L04",
+      "column": 1,
+      "title": "Case Manager",
+      "body": "Coordinate unresolved context and specialist input.",
+      "visible_tag": "DESIGN_HYPOTHESIS",
+      "journey_id": "J-M2-01",
+      "process_ids": [
+        "M2.1",
+        "M2.2",
+        "M2.3",
+        "M2.4"
+      ],
+      "source_refs": [
+        {
+          "source_id": "SRC-007",
+          "locator": "slide 1 shape 18; slide 2 shape 18"
+        }
+      ],
+      "assumption_ids": [
+        "ASM-001",
+        "ASM-003",
+        "ASM-004",
+        "ASM-005"
+      ],
+      "x": 440,
+      "y": 948,
+      "width": 340,
+      "height": 220
+    },
+    {
+      "content_id": "F09-S2-C1-L05",
+      "component": "CMP-ACTION",
+      "lane": "L05",
+      "column": 1,
+      "title": "KYC Operations",
+      "body": "Determine and reconcile applicable requirements.",
+      "visible_tag": "DESIGN_HYPOTHESIS",
+      "journey_id": "J-M2-01",
+      "process_ids": [
+        "M2.1",
+        "M2.2",
+        "M2.3",
+        "M2.4"
+      ],
+      "source_refs": [
+        {
+          "source_id": "SRC-007",
+          "locator": "slide 1 shape 18; slide 2 shape 18"
+        }
+      ],
+      "assumption_ids": [
+        "ASM-001",
+        "ASM-003",
+        "ASM-004",
+        "ASM-005"
+      ],
+      "x": 440,
+      "y": 1184,
+      "width": 340,
+      "height": 220
+    },
+    {
+      "content_id": "F09-S2-C1-L06",
+      "component": "CMP-ACTION",
+      "lane": "L06",
+      "column": 1,
+      "title": "Product execution / rules",
+      "body": "Prepare a versioned requirements set with policy references and unresolved questions.\nGuardrail: Use approved policy versions; unknown applicability becomes an exception.",
+      "visible_tag": "DESIGN_HYPOTHESIS",
+      "journey_id": "J-M2-01",
+      "process_ids": [
+        "M2.1",
+        "M2.2",
+        "M2.3",
+        "M2.4"
+      ],
+      "source_refs": [
+        {
+          "source_id": "SRC-007",
+          "locator": "slide 1 shape 18; slide 2 shape 18"
+        }
+      ],
+      "assumption_ids": [
+        "ASM-001",
+        "ASM-003",
+        "ASM-004",
+        "ASM-005"
+      ],
+      "x": 440,
+      "y": 1420,
+      "width": 340,
+      "height": 220
+    },
+    {
+      "content_id": "F09-S2-C1-L07",
+      "component": "CMP-ACTION",
+      "lane": "L07",
+      "column": 1,
+      "title": "Systems / evidence",
+      "body": "Policy/CIP library and risk rules",
+      "visible_tag": "DESIGN_HYPOTHESIS",
+      "journey_id": "J-M2-01",
+      "process_ids": [
+        "M2.1",
+        "M2.2",
+        "M2.3",
+        "M2.4"
+      ],
+      "source_refs": [
+        {
+          "source_id": "SRC-007",
+          "locator": "slide 1 shape 18; slide 2 shape 18"
+        }
+      ],
+      "assumption_ids": [
+        "ASM-001",
+        "ASM-003",
+        "ASM-004",
+        "ASM-005"
+      ],
+      "x": 440,
+      "y": 1656,
+      "width": 340,
+      "height": 220
+    },
+    {
+      "content_id": "F09-S2-C1-L08",
+      "component": "CMP-ACTION",
+      "lane": "L08",
+      "column": 1,
+      "title": "Handoff / dependency",
+      "body": "Ask Legal about non-AML requirements when needed.",
+      "visible_tag": "DESIGN_HYPOTHESIS",
+      "journey_id": "J-M2-01",
+      "process_ids": [
+        "M2.1",
+        "M2.2",
+        "M2.3",
+        "M2.4"
+      ],
+      "source_refs": [
+        {
+          "source_id": "SRC-007",
+          "locator": "slide 1 shape 18; slide 2 shape 18"
+        }
+      ],
+      "assumption_ids": [
+        "ASM-001",
+        "ASM-003",
+        "ASM-004",
+        "ASM-005"
+      ],
+      "x": 440,
+      "y": 1892,
+      "width": 340,
+      "height": 220
+    },
+    {
+      "content_id": "F09-S2-C1-L09",
+      "component": "CMP-AGENTIC",
+      "lane": "L09",
+      "column": 1,
+      "title": "Pain / root cause / value",
+      "body": "Value hypothesis: Understand what is required and why.\nValidate against observed case handling.",
+      "visible_tag": "DESIGN_HYPOTHESIS",
+      "journey_id": "J-M2-01",
+      "process_ids": [
+        "M2.1",
+        "M2.2",
+        "M2.3",
+        "M2.4"
+      ],
+      "source_refs": [
+        {
+          "source_id": "SRC-007",
+          "locator": "slide 1 shape 18; slide 2 shape 18"
+        }
+      ],
+      "assumption_ids": [
+        "ASM-001",
+        "ASM-003",
+        "ASM-004",
+        "ASM-005"
+      ],
+      "x": 440,
+      "y": 2128,
+      "width": 340,
+      "height": 220
+    },
+    {
+      "content_id": "F09-S2-C1-L10",
+      "component": "CMP-HUMAN",
+      "lane": "L10",
+      "column": 1,
+      "title": "Human authority / exception",
+      "body": "MVP: confirm the requirements set. Target: standard execution only within approved authority; exceptions go to the designated expert.",
+      "visible_tag": "DESIGN_HYPOTHESIS",
+      "journey_id": "J-M2-01",
+      "process_ids": [
+        "M2.1",
+        "M2.2",
+        "M2.3",
+        "M2.4"
+      ],
+      "source_refs": [
+        {
+          "source_id": "SRC-007",
+          "locator": "slide 1 shape 18; slide 2 shape 18"
+        }
+      ],
+      "assumption_ids": [
+        "ASM-001",
+        "ASM-003",
+        "ASM-004",
+        "ASM-005"
+      ],
+      "x": 440,
+      "y": 2364,
+      "width": 340,
+      "height": 220
+    },
+    {
+      "content_id": "F09-S2-C1-L11",
+      "component": "CMP-STATE",
+      "lane": "L11",
+      "column": 1,
+      "title": "State / open questions",
+      "body": "ST-REQ-001: Requirements under review\nQ-003: confirm reopen rules.",
+      "visible_tag": "DESIGN_HYPOTHESIS",
+      "journey_id": "J-M2-01",
+      "process_ids": [
+        "M2.1",
+        "M2.2",
+        "M2.3",
+        "M2.4"
+      ],
+      "source_refs": [
+        {
+          "source_id": "SRC-007",
+          "locator": "slide 1 shape 18; slide 2 shape 18"
+        }
+      ],
+      "assumption_ids": [
+        "ASM-001",
+        "ASM-003",
+        "ASM-004",
+        "ASM-005"
+      ],
+      "x": 440,
+      "y": 2600,
+      "width": 340,
+      "height": 220
+    },
+    {
+      "content_id": "F09-S2-C2-L01",
+      "component": "CMP-ACTION",
+      "lane": "L01",
+      "column": 2,
+      "title": "J-M3-01",
+      "body": "Source existing evidence",
+      "visible_tag": "PROCESS_MAP_DERIVED",
+      "journey_id": "J-M3-01",
+      "process_ids": [
+        "M3.1"
+      ],
+      "source_refs": [
+        {
+          "source_id": "SRC-007",
+          "locator": "slide 1 shape 292 M3.1; slide 2 shape 292"
+        }
+      ],
+      "assumption_ids": [
+        "ASM-001",
+        "ASM-003",
+        "ASM-004",
+        "ASM-005"
+      ],
+      "x": 804,
+      "y": 240,
+      "width": 340,
+      "height": 220
+    },
+    {
+      "content_id": "F09-S2-C2-L02",
+      "component": "CMP-ACTION",
+      "lane": "L02",
+      "column": 2,
+      "title": "User objective / JTBD",
+      "body": "Reuse evidence before asking the client again.",
+      "visible_tag": "DESIGN_HYPOTHESIS",
+      "journey_id": "J-M3-01",
+      "process_ids": [
+        "M3.1"
+      ],
+      "source_refs": [
+        {
+          "source_id": "SRC-007",
+          "locator": "slide 1 shape 292 M3.1; slide 2 shape 292"
+        }
+      ],
+      "assumption_ids": [
+        "ASM-001",
+        "ASM-003",
+        "ASM-004",
+        "ASM-005"
+      ],
+      "x": 804,
+      "y": 476,
+      "width": 340,
+      "height": 220
+    },
+    {
+      "content_id": "F09-S2-C2-L03",
+      "component": "CMP-ACTION",
+      "lane": "L03",
+      "column": 2,
+      "title": "Client / Sales-RM",
+      "body": "No additional request until available evidence is checked.",
+      "visible_tag": "DESIGN_HYPOTHESIS",
+      "journey_id": "J-M3-01",
+      "process_ids": [
+        "M3.1"
+      ],
+      "source_refs": [
+        {
+          "source_id": "SRC-007",
+          "locator": "slide 1 shape 292 M3.1; slide 2 shape 292"
+        }
+      ],
+      "assumption_ids": [
+        "ASM-001",
+        "ASM-003",
+        "ASM-004",
+        "ASM-005"
+      ],
+      "x": 804,
+      "y": 712,
+      "width": 340,
+      "height": 220
+    },
+    {
+      "content_id": "F09-S2-C2-L04",
+      "component": "CMP-ACTION",
+      "lane": "L04",
+      "column": 2,
+      "title": "Case Manager",
+      "body": "Coordinate source access issues.",
+      "visible_tag": "DESIGN_HYPOTHESIS",
+      "journey_id": "J-M3-01",
+      "process_ids": [
+        "M3.1"
+      ],
+      "source_refs": [
+        {
+          "source_id": "SRC-007",
+          "locator": "slide 1 shape 292 M3.1; slide 2 shape 292"
+        }
+      ],
+      "assumption_ids": [
+        "ASM-001",
+        "ASM-003",
+        "ASM-004",
+        "ASM-005"
+      ],
+      "x": 804,
+      "y": 948,
+      "width": 340,
+      "height": 220
+    },
+    {
+      "content_id": "F09-S2-C2-L05",
+      "component": "CMP-ACTION",
+      "lane": "L05",
+      "column": 2,
+      "title": "KYC Operations",
+      "body": "Search approved sources and record relevant evidence.",
+      "visible_tag": "DESIGN_HYPOTHESIS",
+      "journey_id": "J-M3-01",
+      "process_ids": [
+        "M3.1"
+      ],
+      "source_refs": [
+        {
+          "source_id": "SRC-007",
+          "locator": "slide 1 shape 292 M3.1; slide 2 shape 292"
+        }
+      ],
+      "assumption_ids": [
+        "ASM-001",
+        "ASM-003",
+        "ASM-004",
+        "ASM-005"
+      ],
+      "x": 804,
+      "y": 1184,
+      "width": 340,
+      "height": 220
+    },
+    {
+      "content_id": "F09-S2-C2-L06",
+      "component": "CMP-ACTION",
+      "lane": "L06",
+      "column": 2,
+      "title": "Product execution / rules",
+      "body": "Retrieve permitted evidence and attach source, retrieval time and entity match.\nGuardrail: Use authorised sources and access controls; no unrestricted collection.",
+      "visible_tag": "DESIGN_HYPOTHESIS",
+      "journey_id": "J-M3-01",
+      "process_ids": [
+        "M3.1"
+      ],
+      "source_refs": [
+        {
+          "source_id": "SRC-007",
+          "locator": "slide 1 shape 292 M3.1; slide 2 shape 292"
+        }
+      ],
+      "assumption_ids": [
+        "ASM-001",
+        "ASM-003",
+        "ASM-004",
+        "ASM-005"
+      ],
+      "x": 804,
+      "y": 1420,
+      "width": 340,
+      "height": 220
+    },
+    {
+      "content_id": "F09-S2-C2-L07",
+      "component": "CMP-ACTION",
+      "lane": "L07",
+      "column": 2,
+      "title": "Systems / evidence",
+      "body": "External registries, data providers and evidence repository",
+      "visible_tag": "DESIGN_HYPOTHESIS",
+      "journey_id": "J-M3-01",
+      "process_ids": [
+        "M3.1"
+      ],
+      "source_refs": [
+        {
+          "source_id": "SRC-007",
+          "locator": "slide 1 shape 292 M3.1; slide 2 shape 292"
+        }
+      ],
+      "assumption_ids": [
+        "ASM-001",
+        "ASM-003",
+        "ASM-004",
+        "ASM-005"
+      ],
+      "x": 804,
+      "y": 1656,
+      "width": 340,
+      "height": 220
+    },
+    {
+      "content_id": "F09-S2-C2-L08",
+      "component": "CMP-ACTION",
+      "lane": "L08",
+      "column": 2,
+      "title": "Handoff / dependency",
+      "body": "Sourcing result goes to evidence/gap review.",
+      "visible_tag": "DESIGN_HYPOTHESIS",
+      "journey_id": "J-M3-01",
+      "process_ids": [
+        "M3.1"
+      ],
+      "source_refs": [
+        {
+          "source_id": "SRC-007",
+          "locator": "slide 1 shape 292 M3.1; slide 2 shape 292"
+        }
+      ],
+      "assumption_ids": [
+        "ASM-001",
+        "ASM-003",
+        "ASM-004",
+        "ASM-005"
+      ],
+      "x": 804,
+      "y": 1892,
+      "width": 340,
+      "height": 220
+    },
+    {
+      "content_id": "F09-S2-C2-L09",
+      "component": "CMP-AGENTIC",
+      "lane": "L09",
+      "column": 2,
+      "title": "Pain / root cause / value",
+      "body": "Value hypothesis: Reuse evidence before asking the client again.\nValidate against observed case handling.",
+      "visible_tag": "DESIGN_HYPOTHESIS",
+      "journey_id": "J-M3-01",
+      "process_ids": [
+        "M3.1"
+      ],
+      "source_refs": [
+        {
+          "source_id": "SRC-007",
+          "locator": "slide 1 shape 292 M3.1; slide 2 shape 292"
+        }
+      ],
+      "assumption_ids": [
+        "ASM-001",
+        "ASM-003",
+        "ASM-004",
+        "ASM-005"
+      ],
+      "x": 804,
+      "y": 2128,
+      "width": 340,
+      "height": 220
+    },
+    {
+      "content_id": "F09-S2-C2-L10",
+      "component": "CMP-HUMAN",
+      "lane": "L10",
+      "column": 2,
+      "title": "Human authority / exception",
+      "body": "MVP: review suggested entity matches and reuse. Target: ambiguous matches or access restrictions escalate.",
+      "visible_tag": "DESIGN_HYPOTHESIS",
+      "journey_id": "J-M3-01",
+      "process_ids": [
+        "M3.1"
+      ],
+      "source_refs": [
+        {
+          "source_id": "SRC-007",
+          "locator": "slide 1 shape 292 M3.1; slide 2 shape 292"
+        }
+      ],
+      "assumption_ids": [
+        "ASM-001",
+        "ASM-003",
+        "ASM-004",
+        "ASM-005"
+      ],
+      "x": 804,
+      "y": 2364,
+      "width": 340,
+      "height": 220
+    },
+    {
+      "content_id": "F09-S2-C2-L11",
+      "component": "CMP-STATE",
+      "lane": "L11",
+      "column": 2,
+      "title": "State / open questions",
+      "body": "ST-EVID-001: Evidence being sourced\nQ-003: confirm reopen rules.",
+      "visible_tag": "DESIGN_HYPOTHESIS",
+      "journey_id": "J-M3-01",
+      "process_ids": [
+        "M3.1"
+      ],
+      "source_refs": [
+        {
+          "source_id": "SRC-007",
+          "locator": "slide 1 shape 292 M3.1; slide 2 shape 292"
+        }
+      ],
+      "assumption_ids": [
+        "ASM-001",
+        "ASM-003",
+        "ASM-004",
+        "ASM-005"
+      ],
+      "x": 804,
+      "y": 2600,
+      "width": 340,
+      "height": 220
+    },
+    {
+      "content_id": "F09-S2-C3-L01",
+      "component": "CMP-ACTION",
+      "lane": "L01",
+      "column": 3,
+      "title": "J-M3-02",
+      "body": "Identify residual gaps",
+      "visible_tag": "PROCESS_MAP_DERIVED",
+      "journey_id": "J-M3-02",
+      "process_ids": [
+        "M3.2"
+      ],
+      "source_refs": [
+        {
+          "source_id": "SRC-007",
+          "locator": "slide 1 shape 292 M3.2; slide 2 shape 281"
+        }
+      ],
+      "assumption_ids": [
+        "ASM-001",
+        "ASM-003",
+        "ASM-004",
+        "ASM-005"
+      ],
+      "x": 1168,
+      "y": 240,
+      "width": 340,
+      "height": 220
+    },
+    {
+      "content_id": "F09-S2-C3-L02",
+      "component": "CMP-ACTION",
+      "lane": "L02",
+      "column": 3,
+      "title": "User objective / JTBD",
+      "body": "See what is still missing and what blocks progress.",
+      "visible_tag": "DESIGN_HYPOTHESIS",
+      "journey_id": "J-M3-02",
+      "process_ids": [
+        "M3.2"
+      ],
+      "source_refs": [
+        {
+          "source_id": "SRC-007",
+          "locator": "slide 1 shape 292 M3.2; slide 2 shape 281"
+        }
+      ],
+      "assumption_ids": [
+        "ASM-001",
+        "ASM-003",
+        "ASM-004",
+        "ASM-005"
+      ],
+      "x": 1168,
+      "y": 476,
+      "width": 340,
+      "height": 220
+    },
+    {
+      "content_id": "F09-S2-C3-L03",
+      "component": "CMP-ACTION",
+      "lane": "L03",
+      "column": 3,
+      "title": "Client / Sales-RM",
+      "body": "Avoid repeat requests for already available evidence.",
+      "visible_tag": "DESIGN_HYPOTHESIS",
+      "journey_id": "J-M3-02",
+      "process_ids": [
+        "M3.2"
+      ],
+      "source_refs": [
+        {
+          "source_id": "SRC-007",
+          "locator": "slide 1 shape 292 M3.2; slide 2 shape 281"
+        }
+      ],
+      "assumption_ids": [
+        "ASM-001",
+        "ASM-003",
+        "ASM-004",
+        "ASM-005"
+      ],
+      "x": 1168,
+      "y": 712,
+      "width": 340,
+      "height": 220
+    },
+    {
+      "content_id": "F09-S2-C3-L04",
+      "component": "CMP-ACTION",
+      "lane": "L04",
+      "column": 3,
+      "title": "Case Manager",
+      "body": "Coordinate gap ownership and priorities.",
+      "visible_tag": "DESIGN_HYPOTHESIS",
+      "journey_id": "J-M3-02",
+      "process_ids": [
+        "M3.2"
+      ],
+      "source_refs": [
+        {
+          "source_id": "SRC-007",
+          "locator": "slide 1 shape 292 M3.2; slide 2 shape 281"
+        }
+      ],
+      "assumption_ids": [
+        "ASM-001",
+        "ASM-003",
+        "ASM-004",
+        "ASM-005"
+      ],
+      "x": 1168,
+      "y": 948,
+      "width": 340,
+      "height": 220
+    },
+    {
+      "content_id": "F09-S2-C3-L05",
+      "component": "CMP-ACTION",
+      "lane": "L05",
+      "column": 3,
+      "title": "KYC Operations",
+      "body": "Assess missing or unresolved evidence.",
+      "visible_tag": "DESIGN_HYPOTHESIS",
+      "journey_id": "J-M3-02",
+      "process_ids": [
+        "M3.2"
+      ],
+      "source_refs": [
+        {
+          "source_id": "SRC-007",
+          "locator": "slide 1 shape 292 M3.2; slide 2 shape 281"
+        }
+      ],
+      "assumption_ids": [
+        "ASM-001",
+        "ASM-003",
+        "ASM-004",
+        "ASM-005"
+      ],
+      "x": 1168,
+      "y": 1184,
+      "width": 340,
+      "height": 220
+    },
+    {
+      "content_id": "F09-S2-C3-L06",
+      "component": "CMP-ACTION",
+      "lane": "L06",
+      "column": 3,
+      "title": "Product execution / rules",
+      "body": "Match evidence to requirements and propose a residual-gap list with owners and reasons.\nGuardrail: Unknown evidence sufficiency stays open; never infer that missing evidence is acceptable.",
+      "visible_tag": "DESIGN_HYPOTHESIS",
+      "journey_id": "J-M3-02",
+      "process_ids": [
+        "M3.2"
+      ],
+      "source_refs": [
+        {
+          "source_id": "SRC-007",
+          "locator": "slide 1 shape 292 M3.2; slide 2 shape 281"
+        }
+      ],
+      "assumption_ids": [
+        "ASM-001",
+        "ASM-003",
+        "ASM-004",
+        "ASM-005"
+      ],
+      "x": 1168,
+      "y": 1420,
+      "width": 340,
+      "height": 220
+    },
+    {
+      "content_id": "F09-S2-C3-L07",
+      "component": "CMP-ACTION",
+      "lane": "L07",
+      "column": 3,
+      "title": "Systems / evidence",
+      "body": "Requirements list and evidence repository",
+      "visible_tag": "DESIGN_HYPOTHESIS",
+      "journey_id": "J-M3-02",
+      "process_ids": [
+        "M3.2"
+      ],
+      "source_refs": [
+        {
+          "source_id": "SRC-007",
+          "locator": "slide 1 shape 292 M3.2; slide 2 shape 281"
+        }
+      ],
+      "assumption_ids": [
+        "ASM-001",
+        "ASM-003",
+        "ASM-004",
+        "ASM-005"
+      ],
+      "x": 1168,
+      "y": 1656,
+      "width": 340,
+      "height": 220
+    },
+    {
+      "content_id": "F09-S2-C3-L08",
+      "component": "CMP-ACTION",
+      "lane": "L08",
+      "column": 3,
+      "title": "Handoff / dependency",
+      "body": "Unresolved interpretation goes to the designated reviewer.",
+      "visible_tag": "DESIGN_HYPOTHESIS",
+      "journey_id": "J-M3-02",
+      "process_ids": [
+        "M3.2"
+      ],
+      "source_refs": [
+        {
+          "source_id": "SRC-007",
+          "locator": "slide 1 shape 292 M3.2; slide 2 shape 281"
+        }
+      ],
+      "assumption_ids": [
+        "ASM-001",
+        "ASM-003",
+        "ASM-004",
+        "ASM-005"
+      ],
+      "x": 1168,
+      "y": 1892,
+      "width": 340,
+      "height": 220
+    },
+    {
+      "content_id": "F09-S2-C3-L09",
+      "component": "CMP-AGENTIC",
+      "lane": "L09",
+      "column": 3,
+      "title": "Pain / root cause / value",
+      "body": "Value hypothesis: See what is still missing and what blocks progress.\nValidate against observed case handling.",
+      "visible_tag": "DESIGN_HYPOTHESIS",
+      "journey_id": "J-M3-02",
+      "process_ids": [
+        "M3.2"
+      ],
+      "source_refs": [
+        {
+          "source_id": "SRC-007",
+          "locator": "slide 1 shape 292 M3.2; slide 2 shape 281"
+        }
+      ],
+      "assumption_ids": [
+        "ASM-001",
+        "ASM-003",
+        "ASM-004",
+        "ASM-005"
+      ],
+      "x": 1168,
+      "y": 2128,
+      "width": 340,
+      "height": 220
+    },
+    {
+      "content_id": "F09-S2-C3-L10",
+      "component": "CMP-HUMAN",
+      "lane": "L10",
+      "column": 3,
+      "title": "Human authority / exception",
+      "body": "MVP: confirm the residual-gap list. Target: complex information gaps require human judgment.",
+      "visible_tag": "DESIGN_HYPOTHESIS",
+      "journey_id": "J-M3-02",
+      "process_ids": [
+        "M3.2"
+      ],
+      "source_refs": [
+        {
+          "source_id": "SRC-007",
+          "locator": "slide 1 shape 292 M3.2; slide 2 shape 281"
+        }
+      ],
+      "assumption_ids": [
+        "ASM-001",
+        "ASM-003",
+        "ASM-004",
+        "ASM-005"
+      ],
+      "x": 1168,
+      "y": 2364,
+      "width": 340,
+      "height": 220
+    },
+    {
+      "content_id": "F09-S2-C3-L11",
+      "component": "CMP-STATE",
+      "lane": "L11",
+      "column": 3,
+      "title": "State / open questions",
+      "body": "ST-EVID-002: Evidence gap open\nQ-003: confirm reopen rules.",
+      "visible_tag": "DESIGN_HYPOTHESIS",
+      "journey_id": "J-M3-02",
+      "process_ids": [
+        "M3.2"
+      ],
+      "source_refs": [
+        {
+          "source_id": "SRC-007",
+          "locator": "slide 1 shape 292 M3.2; slide 2 shape 281"
+        }
+      ],
+      "assumption_ids": [
+        "ASM-001",
+        "ASM-003",
+        "ASM-004",
+        "ASM-005"
+      ],
+      "x": 1168,
+      "y": 2600,
+      "width": 340,
+      "height": 220
+    },
+    {
+      "content_id": "F09-S2-C4-L01",
+      "component": "CMP-ACTION",
+      "lane": "L01",
+      "column": 4,
+      "title": "J-M3-03",
+      "body": "Request targeted information",
+      "visible_tag": "PROCESS_MAP_DERIVED",
+      "journey_id": "J-M3-03",
+      "process_ids": [
+        "M2.5",
+        "M3.3"
+      ],
+      "source_refs": [
+        {
+          "source_id": "SRC-007",
+          "locator": "slide 1 shapes 291 and 292 M3.3; slide 1 shape 9"
+        }
+      ],
+      "assumption_ids": [
+        "ASM-001",
+        "ASM-003",
+        "ASM-004",
+        "ASM-005"
+      ],
+      "x": 1532,
+      "y": 240,
+      "width": 340,
+      "height": 220
+    },
+    {
+      "content_id": "F09-S2-C4-L02",
+      "component": "CMP-ACTION",
+      "lane": "L02",
+      "column": 4,
+      "title": "User objective / JTBD",
+      "body": "Receive one clear request explaining the remaining information needed.",
+      "visible_tag": "DESIGN_HYPOTHESIS",
+      "journey_id": "J-M3-03",
+      "process_ids": [
+        "M2.5",
+        "M3.3"
+      ],
+      "source_refs": [
+        {
+          "source_id": "SRC-007",
+          "locator": "slide 1 shapes 291 and 292 M3.3; slide 1 shape 9"
+        }
+      ],
+      "assumption_ids": [
+        "ASM-001",
+        "ASM-003",
+        "ASM-004",
+        "ASM-005"
+      ],
+      "x": 1532,
+      "y": 476,
+      "width": 340,
+      "height": 220
+    },
+    {
+      "content_id": "F09-S2-C4-L03",
+      "component": "CMP-ACTION",
+      "lane": "L03",
+      "column": 4,
+      "title": "Client / Sales-RM",
+      "body": "Provide requested documents or explain why they are unavailable.",
+      "visible_tag": "DESIGN_HYPOTHESIS",
+      "journey_id": "J-M3-03",
+      "process_ids": [
+        "M2.5",
+        "M3.3"
+      ],
+      "source_refs": [
+        {
+          "source_id": "SRC-007",
+          "locator": "slide 1 shapes 291 and 292 M3.3; slide 1 shape 9"
+        }
+      ],
+      "assumption_ids": [
+        "ASM-001",
+        "ASM-003",
+        "ASM-004",
+        "ASM-005"
+      ],
+      "x": 1532,
+      "y": 712,
+      "width": 340,
+      "height": 220
+    },
+    {
+      "content_id": "F09-S2-C4-L04",
+      "component": "CMP-ACTION",
+      "lane": "L04",
+      "column": 4,
+      "title": "Case Manager",
+      "body": "Coordinate communications and follow-up; role split to validate.",
+      "visible_tag": "DESIGN_HYPOTHESIS",
+      "journey_id": "J-M3-03",
+      "process_ids": [
+        "M2.5",
+        "M3.3"
+      ],
+      "source_refs": [
+        {
+          "source_id": "SRC-007",
+          "locator": "slide 1 shapes 291 and 292 M3.3; slide 1 shape 9"
+        }
+      ],
+      "assumption_ids": [
+        "ASM-001",
+        "ASM-003",
+        "ASM-004",
+        "ASM-005"
+      ],
+      "x": 1532,
+      "y": 948,
+      "width": 340,
+      "height": 220
+    },
+    {
+      "content_id": "F09-S2-C4-L05",
+      "component": "CMP-ACTION",
+      "lane": "L05",
+      "column": 4,
+      "title": "KYC Operations",
+      "body": "Specify the missing evidence and explain the requirement.",
+      "visible_tag": "DESIGN_HYPOTHESIS",
+      "journey_id": "J-M3-03",
+      "process_ids": [
+        "M2.5",
+        "M3.3"
+      ],
+      "source_refs": [
+        {
+          "source_id": "SRC-007",
+          "locator": "slide 1 shapes 291 and 292 M3.3; slide 1 shape 9"
+        }
+      ],
+      "assumption_ids": [
+        "ASM-001",
+        "ASM-003",
+        "ASM-004",
+        "ASM-005"
+      ],
+      "x": 1532,
+      "y": 1184,
+      "width": 340,
+      "height": 220
+    },
+    {
+      "content_id": "F09-S2-C4-L06",
+      "component": "CMP-ACTION",
+      "lane": "L06",
+      "column": 4,
+      "title": "Product execution / rules",
+      "body": "Prepare a consolidated request containing only unresolved gaps and their rationale.\nGuardrail: Request minimum necessary data through an approved channel.",
+      "visible_tag": "DESIGN_HYPOTHESIS",
+      "journey_id": "J-M3-03",
+      "process_ids": [
+        "M2.5",
+        "M3.3"
+      ],
+      "source_refs": [
+        {
+          "source_id": "SRC-007",
+          "locator": "slide 1 shapes 291 and 292 M3.3; slide 1 shape 9"
+        }
+      ],
+      "assumption_ids": [
+        "ASM-001",
+        "ASM-003",
+        "ASM-004",
+        "ASM-005"
+      ],
+      "x": 1532,
+      "y": 1420,
+      "width": 340,
+      "height": 220
+    },
+    {
+      "content_id": "F09-S2-C4-L07",
+      "component": "CMP-ACTION",
+      "lane": "L07",
+      "column": 4,
+      "title": "Systems / evidence",
+      "body": "Client communication channel and case workspace",
+      "visible_tag": "DESIGN_HYPOTHESIS",
+      "journey_id": "J-M3-03",
+      "process_ids": [
+        "M2.5",
+        "M3.3"
+      ],
+      "source_refs": [
+        {
+          "source_id": "SRC-007",
+          "locator": "slide 1 shapes 291 and 292 M3.3; slide 1 shape 9"
+        }
+      ],
+      "assumption_ids": [
+        "ASM-001",
+        "ASM-003",
+        "ASM-004",
+        "ASM-005"
+      ],
+      "x": 1532,
+      "y": 1656,
+      "width": 340,
+      "height": 220
+    },
+    {
+      "content_id": "F09-S2-C4-L08",
+      "component": "CMP-ACTION",
+      "lane": "L08",
+      "column": 4,
+      "title": "Handoff / dependency",
+      "body": "Client response returns to evidence review; Sales/RM involvement to validate.",
+      "visible_tag": "DESIGN_HYPOTHESIS",
+      "journey_id": "J-M3-03",
+      "process_ids": [
+        "M2.5",
+        "M3.3"
+      ],
+      "source_refs": [
+        {
+          "source_id": "SRC-007",
+          "locator": "slide 1 shapes 291 and 292 M3.3; slide 1 shape 9"
+        }
+      ],
+      "assumption_ids": [
+        "ASM-001",
+        "ASM-003",
+        "ASM-004",
+        "ASM-005"
+      ],
+      "x": 1532,
+      "y": 1892,
+      "width": 340,
+      "height": 220
+    },
+    {
+      "content_id": "F09-S2-C4-L09",
+      "component": "CMP-AGENTIC",
+      "lane": "L09",
+      "column": 4,
+      "title": "Pain / root cause / value",
+      "body": "Value hypothesis: Receive one clear request explaining the remaining information needed.\nValidate against observed case handling.",
+      "visible_tag": "DESIGN_HYPOTHESIS",
+      "journey_id": "J-M3-03",
+      "process_ids": [
+        "M2.5",
+        "M3.3"
+      ],
+      "source_refs": [
+        {
+          "source_id": "SRC-007",
+          "locator": "slide 1 shapes 291 and 292 M3.3; slide 1 shape 9"
+        }
+      ],
+      "assumption_ids": [
+        "ASM-001",
+        "ASM-003",
+        "ASM-004",
+        "ASM-005"
+      ],
+      "x": 1532,
+      "y": 2128,
+      "width": 340,
+      "height": 220
+    },
+    {
+      "content_id": "F09-S2-C4-L10",
+      "component": "CMP-HUMAN",
+      "lane": "L10",
+      "column": 4,
+      "title": "Human authority / exception",
+      "body": "MVP: human approves external release. Target: automatic release remains disabled until explicit policy delegation.",
+      "visible_tag": "DESIGN_HYPOTHESIS",
+      "journey_id": "J-M3-03",
+      "process_ids": [
+        "M2.5",
+        "M3.3"
+      ],
+      "source_refs": [
+        {
+          "source_id": "SRC-007",
+          "locator": "slide 1 shapes 291 and 292 M3.3; slide 1 shape 9"
+        }
+      ],
+      "assumption_ids": [
+        "ASM-001",
+        "ASM-003",
+        "ASM-004",
+        "ASM-005"
+      ],
+      "x": 1532,
+      "y": 2364,
+      "width": 340,
+      "height": 220
+    },
+    {
+      "content_id": "F09-S2-C4-L11",
+      "component": "CMP-STATE",
+      "lane": "L11",
+      "column": 4,
+      "title": "State / open questions",
+      "body": "ST-EVID-003: Awaiting client evidence\nQ-003: confirm reopen rules.",
+      "visible_tag": "DESIGN_HYPOTHESIS",
+      "journey_id": "J-M3-03",
+      "process_ids": [
+        "M2.5",
+        "M3.3"
+      ],
+      "source_refs": [
+        {
+          "source_id": "SRC-007",
+          "locator": "slide 1 shapes 291 and 292 M3.3; slide 1 shape 9"
+        }
+      ],
+      "assumption_ids": [
+        "ASM-001",
+        "ASM-003",
+        "ASM-004",
+        "ASM-005"
+      ],
+      "x": 1532,
+      "y": 2600,
+      "width": 340,
+      "height": 220
+    },
+    {
+      "content_id": "F09-S2-C5-L01",
+      "component": "CMP-ACTION",
+      "lane": "L01",
+      "column": 5,
+      "title": "J-M3-04",
+      "body": "Validate and manage evidence",
+      "visible_tag": "PROCESS_MAP_DERIVED",
+      "journey_id": "J-M3-04",
+      "process_ids": [
+        "M3.4",
+        "M3.5"
+      ],
+      "source_refs": [
+        {
+          "source_id": "SRC-007",
+          "locator": "slide 1 shape 292 M3.4-M3.5; slide 2 shape 292"
+        }
+      ],
+      "assumption_ids": [
+        "ASM-001",
+        "ASM-003",
+        "ASM-004",
+        "ASM-005"
+      ],
+      "x": 1896,
+      "y": 240,
+      "width": 340,
+      "height": 220
+    },
+    {
+      "content_id": "F09-S2-C5-L02",
+      "component": "CMP-ACTION",
+      "lane": "L02",
+      "column": 5,
+      "title": "User objective / JTBD",
+      "body": "Know which gaps are closed and what happens next.",
+      "visible_tag": "DESIGN_HYPOTHESIS",
+      "journey_id": "J-M3-04",
+      "process_ids": [
+        "M3.4",
+        "M3.5"
+      ],
+      "source_refs": [
+        {
+          "source_id": "SRC-007",
+          "locator": "slide 1 shape 292 M3.4-M3.5; slide 2 shape 292"
+        }
+      ],
+      "assumption_ids": [
+        "ASM-001",
+        "ASM-003",
+        "ASM-004",
+        "ASM-005"
+      ],
+      "x": 1896,
+      "y": 476,
+      "width": 340,
+      "height": 220
+    },
+    {
+      "content_id": "F09-S2-C5-L03",
+      "component": "CMP-ACTION",
+      "lane": "L03",
+      "column": 5,
+      "title": "Client / Sales-RM",
+      "body": "Respond to specific follow-up questions if evidence remains insufficient.",
+      "visible_tag": "DESIGN_HYPOTHESIS",
+      "journey_id": "J-M3-04",
+      "process_ids": [
+        "M3.4",
+        "M3.5"
+      ],
+      "source_refs": [
+        {
+          "source_id": "SRC-007",
+          "locator": "slide 1 shape 292 M3.4-M3.5; slide 2 shape 292"
+        }
+      ],
+      "assumption_ids": [
+        "ASM-001",
+        "ASM-003",
+        "ASM-004",
+        "ASM-005"
+      ],
+      "x": 1896,
+      "y": 712,
+      "width": 340,
+      "height": 220
+    },
+    {
+      "content_id": "F09-S2-C5-L04",
+      "component": "CMP-ACTION",
+      "lane": "L04",
+      "column": 5,
+      "title": "Case Manager",
+      "body": "Track blockers and coordinate the next accountable action.",
+      "visible_tag": "DESIGN_HYPOTHESIS",
+      "journey_id": "J-M3-04",
+      "process_ids": [
+        "M3.4",
+        "M3.5"
+      ],
+      "source_refs": [
+        {
+          "source_id": "SRC-007",
+          "locator": "slide 1 shape 292 M3.4-M3.5; slide 2 shape 292"
+        }
+      ],
+      "assumption_ids": [
+        "ASM-001",
+        "ASM-003",
+        "ASM-004",
+        "ASM-005"
+      ],
+      "x": 1896,
+      "y": 948,
+      "width": 340,
+      "height": 220
+    },
+    {
+      "content_id": "F09-S2-C5-L05",
+      "component": "CMP-ACTION",
+      "lane": "L05",
+      "column": 5,
+      "title": "KYC Operations",
+      "body": "Assess received evidence and record unresolved gaps.",
+      "visible_tag": "DESIGN_HYPOTHESIS",
+      "journey_id": "J-M3-04",
+      "process_ids": [
+        "M3.4",
+        "M3.5"
+      ],
+      "source_refs": [
+        {
+          "source_id": "SRC-007",
+          "locator": "slide 1 shape 292 M3.4-M3.5; slide 2 shape 292"
+        }
+      ],
+      "assumption_ids": [
+        "ASM-001",
+        "ASM-003",
+        "ASM-004",
+        "ASM-005"
+      ],
+      "x": 1896,
+      "y": 1184,
+      "width": 340,
+      "height": 220
+    },
+    {
+      "content_id": "F09-S2-C5-L06",
+      "component": "CMP-ACTION",
+      "lane": "L06",
+      "column": 5,
+      "title": "Product execution / rules",
+      "body": "Check evidence completeness and provenance; propose closure or a reasoned rework loop.\nGuardrail: Record versions and decisions; changed context can reopen affected requirements.",
+      "visible_tag": "DESIGN_HYPOTHESIS",
+      "journey_id": "J-M3-04",
+      "process_ids": [
+        "M3.4",
+        "M3.5"
+      ],
+      "source_refs": [
+        {
+          "source_id": "SRC-007",
+          "locator": "slide 1 shape 292 M3.4-M3.5; slide 2 shape 292"
+        }
+      ],
+      "assumption_ids": [
+        "ASM-001",
+        "ASM-003",
+        "ASM-004",
+        "ASM-005"
+      ],
+      "x": 1896,
+      "y": 1420,
+      "width": 340,
+      "height": 220
+    },
+    {
+      "content_id": "F09-S2-C5-L07",
+      "component": "CMP-ACTION",
+      "lane": "L07",
+      "column": 5,
+      "title": "Systems / evidence",
+      "body": "Case workspace and evidence repository",
+      "visible_tag": "DESIGN_HYPOTHESIS",
+      "journey_id": "J-M3-04",
+      "process_ids": [
+        "M3.4",
+        "M3.5"
+      ],
+      "source_refs": [
+        {
+          "source_id": "SRC-007",
+          "locator": "slide 1 shape 292 M3.4-M3.5; slide 2 shape 292"
+        }
+      ],
+      "assumption_ids": [
+        "ASM-001",
+        "ASM-003",
+        "ASM-004",
+        "ASM-005"
+      ],
+      "x": 1896,
+      "y": 1656,
+      "width": 340,
+      "height": 220
+    },
+    {
+      "content_id": "F09-S2-C5-L08",
+      "component": "CMP-ACTION",
+      "lane": "L08",
+      "column": 5,
+      "title": "Handoff / dependency",
+      "body": "Make suitable evidence available downstream; keep unresolved blockers visible.",
+      "visible_tag": "DESIGN_HYPOTHESIS",
+      "journey_id": "J-M3-04",
+      "process_ids": [
+        "M3.4",
+        "M3.5"
+      ],
+      "source_refs": [
+        {
+          "source_id": "SRC-007",
+          "locator": "slide 1 shape 292 M3.4-M3.5; slide 2 shape 292"
+        }
+      ],
+      "assumption_ids": [
+        "ASM-001",
+        "ASM-003",
+        "ASM-004",
+        "ASM-005"
+      ],
+      "x": 1896,
+      "y": 1892,
+      "width": 340,
+      "height": 220
+    },
+    {
+      "content_id": "F09-S2-C5-L09",
+      "component": "CMP-AGENTIC",
+      "lane": "L09",
+      "column": 5,
+      "title": "Pain / root cause / value",
+      "body": "Value hypothesis: Know which gaps are closed and what happens next.\nValidate against observed case handling.",
+      "visible_tag": "DESIGN_HYPOTHESIS",
+      "journey_id": "J-M3-04",
+      "process_ids": [
+        "M3.4",
+        "M3.5"
+      ],
+      "source_refs": [
+        {
+          "source_id": "SRC-007",
+          "locator": "slide 1 shape 292 M3.4-M3.5; slide 2 shape 292"
+        }
+      ],
+      "assumption_ids": [
+        "ASM-001",
+        "ASM-003",
+        "ASM-004",
+        "ASM-005"
+      ],
+      "x": 1896,
+      "y": 2128,
+      "width": 340,
+      "height": 220
+    },
+    {
+      "content_id": "F09-S2-C5-L10",
+      "component": "CMP-HUMAN",
+      "lane": "L10",
+      "column": 5,
+      "title": "Human authority / exception",
+      "body": "MVP: designated reviewer accepts evidence or requests remediation. Target: ambiguous sufficiency or material change escalates; S2 cannot grant trade clearance.",
+      "visible_tag": "DESIGN_HYPOTHESIS",
+      "journey_id": "J-M3-04",
+      "process_ids": [
+        "M3.4",
+        "M3.5"
+      ],
+      "source_refs": [
+        {
+          "source_id": "SRC-007",
+          "locator": "slide 1 shape 292 M3.4-M3.5; slide 2 shape 292"
+        }
+      ],
+      "assumption_ids": [
+        "ASM-001",
+        "ASM-003",
+        "ASM-004",
+        "ASM-005"
+      ],
+      "x": 1896,
+      "y": 2364,
+      "width": 340,
+      "height": 220
+    },
+    {
+      "content_id": "F09-S2-C5-L11",
+      "component": "CMP-STATE",
+      "lane": "L11",
+      "column": 5,
+      "title": "State / open questions",
+      "body": "ST-EVID-004: Evidence under review\nQ-003: confirm reopen rules.",
+      "visible_tag": "DESIGN_HYPOTHESIS",
+      "journey_id": "J-M3-04",
+      "process_ids": [
+        "M3.4",
+        "M3.5"
+      ],
+      "source_refs": [
+        {
+          "source_id": "SRC-007",
+          "locator": "slide 1 shape 292 M3.4-M3.5; slide 2 shape 292"
+        }
+      ],
+      "assumption_ids": [
+        "ASM-001",
+        "ASM-003",
+        "ASM-004",
+        "ASM-005"
+      ],
+      "x": 1896,
+      "y": 2600,
+      "width": 340,
+      "height": 220
+    }
+  ],
+  "connectors": [
+    {
+      "content_id": "F09-SEQ-1",
+      "type": "CON-REQ",
+      "from": "F09-S2-C1-L01",
+      "to": "F09-S2-C2-L01",
+      "label": "Illustrative reading order; conditional branches apply",
+      "anchor_status": "PLANNED_NOT_MIRO_VERIFIED"
+    },
+    {
+      "content_id": "F09-SEQ-2",
+      "type": "CON-REQ",
+      "from": "F09-S2-C2-L01",
+      "to": "F09-S2-C3-L01",
+      "label": "Illustrative reading order; conditional branches apply",
+      "anchor_status": "PLANNED_NOT_MIRO_VERIFIED"
+    },
+    {
+      "content_id": "F09-SEQ-3",
+      "type": "CON-REQ",
+      "from": "F09-S2-C3-L01",
+      "to": "F09-S2-C4-L01",
+      "label": "Illustrative reading order; conditional branches apply",
+      "anchor_status": "PLANNED_NOT_MIRO_VERIFIED"
+    },
+    {
+      "content_id": "F09-SEQ-4",
+      "type": "CON-REQ",
+      "from": "F09-S2-C4-L01",
+      "to": "F09-S2-C5-L01",
+      "label": "Illustrative reading order; conditional branches apply",
+      "anchor_status": "PLANNED_NOT_MIRO_VERIFIED"
+    },
+    {
+      "content_id": "F09-SKIP",
+      "type": "CON-OPT",
+      "from": "F09-S2-C2-L01",
+      "to": "F09-S2-C5-L01",
+      "label": "Existing evidence may proceed directly to review",
+      "anchor_status": "PLANNED_NOT_MIRO_VERIFIED"
+    },
+    {
+      "content_id": "F09-REWORK",
+      "type": "CON-LOOP",
+      "from": "F09-S2-C5-L01",
+      "to": "F09-S2-C3-L01",
+      "label": "Insufficient evidence: reopen gap",
+      "anchor_status": "PLANNED_NOT_MIRO_VERIFIED"
+    },
+    {
+      "content_id": "F09-ESC",
+      "type": "CON-ESC",
+      "from": "F09-S2-C3-L06",
+      "to": "F09-S2-C3-L10",
+      "label": "Complex gap: human judgment",
+      "anchor_status": "PLANNED_NOT_MIRO_VERIFIED"
+    }
+  ],
+  "notes": [
+    "Eleven lanes are an explicit ASM-006 proposal, not certified parent-spec conformity.",
+    "S2 is a slice, not the full end-to-end journey.",
+    "2026-09-07: native items and connector references read back; detailed design calibration and client validation remain open."
+  ],
+  "miro_frame_id": "3458764682843412020",
+  "miro_url": "https://miro.com/app/board/uXjVHr-MAS8=/?moveToWidget=3458764682843412020",
+  "readback_managed_count": 75
+}

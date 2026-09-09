@@ -1,0 +1,29 @@
+{
+  "at": "2026-09-07T09:30:48.351Z",
+  "command": "node --test prototype/tests/*.test.mjs",
+  "exit_code": 0,
+  "counts": {
+    "tests": 100,
+    "pass": 100,
+    "fail": 0,
+    "skipped": 0
+  },
+  "browser": {
+    "passed": 21,
+    "failed": 0,
+    "not_run": 1,
+    "version": "152.0.7977.76"
+  },
+  "scope": "Fresh local mainline host checks; separate from historical standalone sample checks.",
+  "files": {
+    "prototype/app.mjs": "af6d82afd138dddabbe872d99649a0a0135377bc429c5450b087450eb036d0f0",
+    "prototype/batch-a-ui.mjs": "7e8a8e75fb5779bd987b8556647b520f3ab04e859554d41d87103592bebd170c",
+    "prototype/media-host.mjs": "5276c098bad87c94ec165b939d6b8f74fe2e670394da2c568f616834ce297ffb",
+    "prototype/media-static.mjs": "45a705aa0677c89e572a7bac051ae1ea8e1f6be33b00b636e1fab1cdb79afe3b",
+    "prototype/batch-a-media.mjs": "655179edba69ceee81d32230983cb9e033fe7134343604745a84b384e6ceb3b3",
+    "prototype/batch-a-media.css": "08eb1af594aed6c6540a9fbdede2373915bdce3618ce56ad478e0c04c99c8654",
+    "prototype/batch-a-engine.mjs": "1627092f7222e563a0a7408c44045c54f744274693f25453a0fb0d7e039aa315",
+    "prototype/collaboration-engine.mjs": "c371d64760044b50b4c85f65f98eb04ea3e4d1979ea0e3a47cfb51e346ad19bb",
+    "prototype/case-engine.mjs": "b6186ddb5725dcaea07a39a11c0d4b34e356885c9eb3189ca40f029622d8082c"
+  }
+}

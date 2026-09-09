@@ -1,0 +1,123 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "Reusable skills · separate responsibilities",
+    "locale": "en",
+    "animation": "none",
+    "quality_profile": "showcase",
+    "viewBox": [
+      1080,
+      640
+    ],
+    "legend": {
+      "mode": "hidden"
+    }
+  },
+  "components": [
+    {
+      "id": "SK-03",
+      "type": "frontend",
+      "label": "Compare identifiers",
+      "sublabel": "Claims + Record C01 + source versions",
+      "pos": [
+        60,
+        95
+      ],
+      "size": [
+        355,
+        96
+      ]
+    },
+    {
+      "id": "comparison",
+      "type": "frontend",
+      "label": "Cited attribute comparison",
+      "sublabel": "Unknown date is not a date mismatch",
+      "pos": [
+        665,
+        95
+      ],
+      "size": [
+        355,
+        96
+      ]
+    },
+    {
+      "id": "SK-06",
+      "type": "frontend",
+      "label": "Prepare a review pack",
+      "sublabel": "Facts, unknowns, conflicts and allowed actions",
+      "pos": [
+        60,
+        275
+      ],
+      "size": [
+        355,
+        96
+      ]
+    },
+    {
+      "id": "reviewer",
+      "type": "frontend",
+      "label": "Authorized reviewer",
+      "sublabel": "Skill supports · person makes judgment",
+      "pos": [
+        665,
+        275
+      ],
+      "size": [
+        355,
+        96
+      ]
+    },
+    {
+      "id": "reuse",
+      "type": "frontend",
+      "label": "Reuse the family",
+      "sublabel": "Use original action-to-skill references",
+      "pos": [
+        60,
+        455
+      ],
+      "size": [
+        355,
+        96
+      ]
+    },
+    {
+      "id": "boundary",
+      "type": "frontend",
+      "label": "Keep each purpose separate",
+      "sublabel": "Not a shared grant or professional standard",
+      "pos": [
+        665,
+        455
+      ],
+      "size": [
+        355,
+        96
+      ]
+    }
+  ],
+  "connections": [
+    {
+      "id": "relation-1",
+      "from": "SK-03",
+      "to": "comparison",
+      "label": "produces"
+    },
+    {
+      "id": "relation-2",
+      "from": "SK-06",
+      "to": "reviewer",
+      "label": "supports"
+    },
+    {
+      "id": "relation-3",
+      "from": "reuse",
+      "to": "boundary",
+      "label": "constrained by"
+    }
+  ]
+}

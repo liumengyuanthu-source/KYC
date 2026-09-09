@@ -1,0 +1,10 @@
+{
+  "status": "failed",
+  "phase": "Compact print first visual review",
+  "observations": [
+    "Scenario action titles and secondary source IDs now visible; running context present on English page 2.",
+    "Skill Brief English page 3 nested reuse table lacks the scenario/version/synthetic/legend running context.",
+    "Customer print remains an excessively repetitive 75-page document; compact layout requested."
+  ],
+  "notCompletionEvidence": true
+}

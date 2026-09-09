@@ -1,0 +1,715 @@
+# Review package
+Base HEAD: 1e202f5102aaf0726940e0ae8508341ad032b93a
+Head: same, no commits. Mainline prototype was already untracked before this task. Scope: approved DMO-A01/02 integration. app.mjs changes: media imports, media-only session/position initialization, direct preview and render lifecycle. Existing case/product/navigation code is preserved context, not new policy. batch-a-ui.mjs changes: media slot, all-cue print and latest live receipt wording. Existing business engines were not edited. All new modules/tests in this package are in scope.
+
+diff --git a/prototype/app.mjs b/prototype/app.mjs
+new file mode 100644
+index 0000000..334d771
+--- /dev/null
++++ b/prototype/app.mjs
+@@ -0,0 +1,199 @@
++import {createBatchB,collaborationAction,collaborationProjection,COLLAB_IDS} from './collaboration-engine.mjs';
++import {renderCollaboration} from './collaboration-ui.mjs';
++import {createMediaHost,previewNavigation,sanitiseSnapshot} from './media-host.mjs';
++import {preparePrintImages} from './print-ready.mjs';
++import {initialNavigation,navigate,route,stageFor} from './navigation.mjs';
++import {scenes,skeleton,stages,roles,byId,txt} from './content.mjs';
++import {act,readiness,id,find} from './case-engine.mjs';
++import {createBatchA,batchAction,mediaIntent,batchVersion} from './batch-a-engine.mjs';
++import {batchUI,batchSteps,batchScene,labels as batchLabels,bindBatchHelp} from './batch-a-ui.mjs';
++import {captureGlass,enhanceGlass,refineLayout} from './glass.mjs';
++const fixture=await fetch('../04_operating_model/round-a/synthetic-case-fixture.json').then(r=>{if(!r.ok)throw Error('Case fixture unavailable');return r.json()});
++const key='ctt-round-a-v1',app=document.querySelector('#app'),modal=document.querySelector('#scenario-dialog'),guard=document.querySelector('#dirty-dialog');
++let saved;try{saved=JSON.parse(sessionStorage.getItem(key))}catch{}
++const mediaKey='ctt-media-panel-first-r01';let mediaSaved={};try{mediaSaved=JSON.parse(sessionStorage.getItem(mediaKey))||{}}catch{}
++const mediaPositions=Object.create(null),sceneScroll=Object.create(null);let renderedScene=null;
++let mediaPreviewPending=new URLSearchParams(location.search).get('focus')==='media'&&['SCN-SCOPE','SCN-ENTITY'].includes(new URLSearchParams(location.search).get('scene'));
++for(const scene of ['SCN-SCOPE','SCN-ENTITY']){const safe=sanitiseSnapshot(scene,mediaSaved[scene]);if(safe)mediaPositions[scene]=safe;}
++const mediaHost=createMediaHost({read:scene=>mediaPositions[scene],write:(scene,value)=>{mediaPositions[scene]=value;try{sessionStorage.setItem(mediaKey,JSON.stringify(mediaPositions))}catch{}}});
++let n=saved?.navigation||initialNavigation(),data=saved?.data||createBatchA(fixture),versions=saved?.versions||[],drafts=saved?.drafts||{},draft='',dirty=false,pending=null,message='',error='',info=false,playing=false,timer,printOrigin=null,viewY=0;
++let archives=saved?.archives||[];
++let collabCtx=saved?.collabCtx||{audience:'ops',tab:'requirements',userId:null,sessionId:null,itemId:null};
++let collabEdit={caseRevision:data.case.revision,requestRevision:null,itemRevision:null};
++let scopeFields={},scopeEditRevision=data.scopes[0].revision,scopeCaseRevision=data.case.revision;
++const batch=()=>batchUI({data,n,L,button,fields:scopeFields,rationale:draft,dirty});
++if(n.page==='product')draft=drafts[n.step]||'';
++const urlLocale=new URLSearchParams(location.search).get('locale');if(urlLocale)n=navigate(n,{type:'LOCALE',value:urlLocale});
++if(new URLSearchParams(location.search).get('mode')==='print')n.mode='print';
++n=previewNavigation(n,new URLSearchParams(location.search).get('scene'));
++if(['SCN-SCOPE','SCN-ENTITY'].includes(new URLSearchParams(location.search).get('scene'))&&new URLSearchParams(location.search).get('mode')!=='print'&&n.mode==='print')n.mode='story';
++const L=(en,zh)=>n.locale==='zh-CN'?zh:n.locale==='en-US'?en.replaceAll('authorised','authorized').replaceAll('Authorised','Authorized').replaceAll('Authorisation','Authorization').replaceAll('authorisation','authorization'):en;
++const T=value=>txt(value,n.locale);
++const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
++const button=(label,action,value='',className='',extra='')=>`<button class="${className}" data-action="${action}" data-value="${esc(value)}" ${extra}>${label}</button>`;
++const badge=(label,type='')=>`<span class="badge ${type}">${label}</span>`;
++const obj=(collection,kind,slug)=>find(data,collection,id(kind,slug));
++const work=slug=>obj('workItems','work',slug);
++const stateLabels={draft:['Draft','草稿'],ready:['Ready for work','可开始工作'],review_required:['Review required','需复核'],awaiting_human:['Awaiting human review','等待人工复核'],awaiting_review:['Awaiting review','等待复核'],awaiting_input:['Awaiting input','等待输入'],awaiting_response:['Awaiting response','等待响应'],completed:['Task completed','任务完成'],satisfied:['Condition satisfied','条件已满足'],available:['Available','可获取'],received:['Received · review pending','已收到 · 待复核'],missing:['Not received','尚未收到'],not_assessed:['Not assessed','尚未评估'],sufficient:['Sufficient for this purpose','对此用途充分'],insufficient:['Insufficient for this purpose','对此用途不足'],unknown:['Unknown','未知'],not_required:['Not required','不适用'],required:['Required in demo','演示中适用'],awaiting_execution:['Awaiting execution','等待协议执行'],condition_pending:['Condition pending','条件未闭合'],pending:['Pending final review','等待最终复核'],resolved:['Disposition recorded','处置已记录'],awaiting_evidence:['Awaiting evidence','等待证据'],paused:['Paused','已暂停'],referred:['Referred for review','已转交复核'],not_requested:['Not published','尚未发布']};
++const label=code=>stateLabels[code]?L(...stateLabels[code]):esc(code);
++const roleLabel=r=>({'ROLE-KYCOPS':L('KYC Operations','KYC 运营'),'ROLE-CASEMGR':L('Case Manager','案件经理'),'ROLE-FINCRIME':L('Financial Crime reviewer','金融犯罪复核人员'),'ROLE-LEGAL':L('Legal','法务'),'ROLE-CREDIT':L('Credit','信贷'),'ROLE-QA':'QA','ROLE-CONFLICTS':L('Conflicts','利益冲突'),'ROLE-DEMO-AUTHOR':L('Demo author','演示编制者')})[r]||roles.find(x=>x[0]===r)?.[n.locale==='zh-CN'?2:1]||r;
++const domainLabel=c=>({evidence:L('Evidence','证据'),screening:L('Screening','筛查'),legal:L('Legal','法务'),credit:L('Credit','信贷'),qa:'QA',conflicts:L('Conflicts','利益冲突'),edd:'EDD'})[c.domain];
++const conditionReason=c=>data.demoConfig.batchA&&['legal','credit','conflicts'].includes(c.domain)?L('Not assessed in Batch A; applicability or outcome remains unresolved.','Batch A 尚未评估，适用性或结果仍未确定。'):({evidence:c.status==='satisfied'?L('Both purpose assessments are current.','两项用途评估已完成。'):L('Purpose-specific evidence review remains open.','特定用途证据仍待复核。'),screening:c.status==='satisfied'?L('Local disposition recorded; no whole-case approval.','已记录本项处置，不代表全案批准。'):L('A possible match needs evidence and a human decision.','疑似命中需要证据与人工决定。'),legal:L('The applicable agreement is not yet executed.','适用协议尚未执行。'),credit:L('An independent Credit condition remains unresolved.','一项独立信贷条件尚未闭合。'),qa:L('Final review and sign-off remain pending.','最终复核与签核尚未完成。'),conflicts:L('An independent synthetic outcome is retained.','保留独立的合成检查结果。'),edd:L('Applicability unknown; a separate risk rationale is required.','适用性未知，需独立风险理由。')})[c.domain];
++const stepTitle=step=>({scope:L('Scope','范围'),parties:L('Parties','主体'),authority:L('Authority','代表权限'),tasks:L('Tasks','任务'),requirements:L('Requirements','适用要求'),evidence:L('Evidence','证据'),gaps:L('Information request','信息请求'),validation:L('Evidence review','证据复核'),screening:L('Screening Review','筛查复核'),clearance:L('Clearance','准入状态'),activity:L('Activity','活动记录')})[step];
++const sceneStep=id=>({'SCN-SCOPE':'scope','SCN-ENTITY':'authority','SCN-REQUIREMENTS':'requirements','SCN-SOURCE':'evidence','SCN-GAP':'gaps','SCN-VALIDATE':'validation','SCN-MATCH':'screening','SCN-READINESS':'clearance'})[id]||'screening';
++const can=type=>n.trigger==='new-relationship'&&data.demoConfig.allowed_actions_by_role[n.role]?.includes(type);
++function persist(){try{sessionStorage.setItem(key,JSON.stringify({navigation:n,data,versions,drafts,archives,collabCtx}));}catch{message=L('Session storage unavailable. Keep this tab open.','会话存储不可用，请保留此标签页。')}}
++function camera(){const box=document.querySelector('.journey-scroll');if(!box)return;const columns=[...box.querySelectorAll('.stage-column')];const base=columns[0]?.offsetLeft||0;let col=columns[0];for(const c of columns)if(c.offsetLeft-base<=box.scrollLeft+80)col=c;
++ const intended=columns.find(c=>c.dataset.stage===byId(n.camera.anchor).stage);if(intended){const x=intended.offsetLeft-base;if(x>=box.scrollLeft-1&&x+intended.offsetWidth<=box.scrollLeft+box.clientWidth+1)col=intended;}
++ if(col)n=navigate(n,{type:'CAMERA',anchor:col.dataset.anchor,offset:box.scrollLeft-(col.offsetLeft-base),stage:col.dataset.stage});persist();}
++function restoreCamera(){const box=document.querySelector('.journey-scroll');if(!box)return;const scene=byId(n.camera.anchor);const col=box.querySelector(`[data-stage="${scene.stage}"]`);if(col)box.scrollLeft=col.offsetLeft-box.querySelector('.stage-column').offsetLeft+n.camera.offset;}
++function checkpoint(push=true){persist();const state={navigation:structuredClone(n)};const hash=n.mode==='print'?'#print':n.page==='product'?`#product/${n.step}`:n.modal?`#scenario/${n.scenario}`:'#studio';history[push?'pushState':'replaceState'](state,'',hash);}
++function stop(){playing=false;clearTimeout(timer);}
++function go(a,push=true){if(a.type==='PRODUCT'){a.scopeRevision=data.scopes[0].revision;scopeFields={};scopeEditRevision=data.scopes[0].revision;scopeCaseRevision=data.case.revision;}if(a.type!=='CAMERA')stop();if(a.type==='SCENE'||a.type==='PRODUCT')camera();if(a.type==='PRODUCT')viewY=window.scrollY;n=navigate(n,a);error='';info=false;if(a.type==='PRODUCT')draft=drafts[n.step]||'';dirty=false;if(a.type==='PRODUCT'&&n.step==='collaboration')prepareCollabEdit();checkpoint(push);render();if(a.type==='PRODUCT')window.scrollTo(0,0);if(a.type==='RETURN'){window.scrollTo(0,viewY);focusOrigin();}}
++function guarded(fn){if(!dirty){fn();return;}pending=fn;guard.innerHTML=`<div class="dirty-content"><h2 id="dirty-title">${L('Unsaved changes','有未保存的输入')}</h2><p>${L('Save this task draft, discard your edits, or stay here. No business decision is submitted by returning.','保存本任务草稿、放弃编辑，或留在当前页面。返回操作不会提交业务决定。')}</p><div class="dirty-actions">${button(L('Save draft','保存草稿'),'guard','save','primary')}${button(L('Discard changes','放弃编辑'),'guard','discard')}${button(L('Stay','留在当前'),'guard','stay')}</div></div>`;guard.showModal();enhanceGlass(captureGlass());}
++function saveDraft(){if(n.step==='collaboration'){if(collabCtx.audience==='ops'&&collabCtx.tab==='evidence'){drafts['collaboration:evidence']=draft;dirty=false;persist();return true;}return submitCollab(collabCtx.audience==='client'?'save_response':collabCtx.audience==='rm'?'record_note':'save_request',false);}if(n.step==='scope')return submitBatch('save_scope_draft',false);drafts[n.step]=draft;dirty=false;persist();message=L('Draft saved in this demo session. No disposition recorded.','草稿已保存到本演示会话，未记录处置。');}
++function focusOrigin(){const prior=document.activeElement,scenario=n.scenario;requestAnimationFrame(()=>{if(document.activeElement===prior&&!modal.open&&n.page==='studio'&&n.scenario===scenario)document.querySelector(`[data-scene="${scenario}"]`)?.focus({preventScroll:true});});}
++function diagram(kind){return `<img class="diagram" src="./diagrams/${kind}.${n.locale}${n.mode==='print'?'.print':''}.svg" alt="${esc(L(kind==='screening'?'Proposed screening collaboration: comparison, human review, local disposition and remaining blockers.':`${kind} high-level process: early conflicts and conditional specialist work converge at readiness.`,kind==='screening'?'拟议筛查协作：信息对照、人工复核、本项处置及剩余阻塞。':`${kind==='current'?'Current':'Target'} 高层流程：早启利益冲突及有条件的专业工作在准入汇合。`))}"><p class="figure-caption">${L('Archify 2.17 · static host embed · SRC-007, slides 1–2 · fields and authority proposed.','Archify 2.17 · 宿主静态嵌入 · SRC-007 第 1–2 页 · 字段与权限为设计提案。')} <a href="./diagrams/${kind}.${n.locale}.html" target="_blank" rel="noopener">${L('Open diagram viewer','打开独立图示查看器')} ↗</a></p>`;}
++
++function collabProjection(){return collaborationProjection(data,{audience:collabCtx.audience,userId:collabCtx.userId||COLLAB_IDS.personT,sessionId:collabCtx.sessionId});}
++function prepareCollabEdit(){
++ const p=data.demoConfig.batchB?collabProjection():{},item=p.items?.find(x=>x.id===collabCtx.itemId)||p.items?.[0];
++ collabCtx.itemId=item?.id||null;collabCtx.userId||=COLLAB_IDS.personT;
++ collabEdit={caseRevision:data.case.revision,requestRevision:p.request_revision,itemRevision:item?.revision};
++ draft=collabCtx.audience==='client'?(item?.response_draft||''):collabCtx.audience==='rm'?'':collabCtx.tab==='requests'?(p.request?.client_summary||''):drafts['collaboration:evidence']||'';
++ dirty=false;error='';message='';
++}
++function collaborationScene(){return `<section class="collab-scene"><span class="eyebrow">D2 Batch B · SRC-015 · ${L('Approved demo design','已批准演示设计')}</span><h3>${L('From a requirement to a reviewed response','从要求到经复核的响应')}</h3><div class="collab-route"><span>${L('Requirements / purpose','要求 / 用途')}</span> → <span>${L('Two residual items','两个残余项目')}</span> → <span>${L('Limited contribution','有限范围贡献')}</span> → <span>${L('Purpose review','用途复核')}</span></div><p>${L('Person T provides the authority item for Entity A. Ownership remains a separate item. Access, submission and purpose sufficiency are separate states; the case remains not ready.','Person T 提供针对 Entity A 的权限项目资料；ownership 保留为独立项目。访问、提交和用途充分性分别记录；案件仍未就绪。')}</p><details><summary>${L('Request / submission / assessment relationship','请求 / 提交 / 评估关系')}</summary><img class="collab-diagram" src="./diagrams/batch-b/client-collaboration.${n.locale}.svg" alt="${L('Requirement creates scoped request; limited contributor submits one item; Ops assesses its purpose; other conditions remain.','要求形成限定请求；贡献者提交一个项目；Ops 按用途评估；其他条件保持未决。')}"></details>${button(L('Open client collaboration','打开客户协作'),'collab-open','','primary')}</section>`;}
++async function startCollaboration(source){
++ try{
++  if(source==='snapshot'){
++   const snapshots=await fetch('../04_operating_model/round-a/batch-a-story-snapshots.json').then(r=>{if(!r.ok)throw Error('Snapshot unavailable');return r.json();});
++   const next=createBatchB(snapshots.snapshots['SNAP-A3']);
++   archives.push({data:structuredClone(data),drafts:structuredClone(drafts),navigation:structuredClone(n),archived_at:new Date().toISOString()});versions.push(data);data=next;
++  }else{const next=createBatchB(data);if(next!==data){versions.push(data);data=next;}}
++  collabCtx={audience:'ops',tab:'requirements',userId:COLLAB_IDS.personT,sessionId:null,itemId:COLLAB_IDS.authorityItem};prepareCollabEdit();render();
++ }catch(e){error=collaborationError(e);render();}
++}
++function collaborationError(e){const raw=e.message;return n.locale!=='zh-CN'?raw:L(raw,/revision|stale|scope/i.test(raw)?'记录版本或范围已变化。输入已保留，请重新检查后再提交。':/permission|grant|recipient|session|auth/i.test(raw)?'此模拟身份或访问范围不允许本操作。输入已保留；请检查会话、访问授权与收件人。':/rationale|text|draft|length|response/i.test(raw)?'请提供有效的合成响应或理由。输入已保留，请检查内容与长度。':/release|quarantine|intake|link/i.test(raw)?'资料尚未获准进入本用途评估，请检查模拟接收状态与证据关联。':'操作未完成。请检查请求审阅、渠道配置及所需输入。')+' ['+raw+']';}
++function submitCollab(type,draw=true,itemId){
++ try{
++  if(!data.demoConfig.batchB)throw Error('Open Batch B first');
++  const p=collabProjection(),item=p.items?.find(x=>x.id===(itemId||collabCtx.itemId))||p.items?.[0];
++  const isDraft=['save_request','save_response','submit_response'].includes(type),role=collabCtx.audience==='client'?'ROLE-CLIENT':collabCtx.audience==='rm'?'ROLE-RM':'ROLE-KYCOPS';
++  const artifact=data.evidence.filter(x=>x.request_item_refs?.includes(item?.id)).at(-1);
++  const submissionIdentity=JSON.stringify([collabCtx.userId||COLLAB_IDS.personT,item?.id,draft]);
++  if(type==='submit_response'&&collabCtx.submissionIdentity!==submissionIdentity){collabCtx.submissionIdentity=submissionIdentity;collabCtx.submissionKey=crypto.randomUUID();}
++const next=collaborationAction(data,{type,role,expectedRevision:isDraft?collabEdit.caseRevision:data.case.revision,expectedRequestRevision:isDraft?collabEdit.requestRevision:p.request_revision,expectedItemRevision:isDraft?collabEdit.itemRevision:item?.revision,itemId:item?.id,userId:collabCtx.userId||COLLAB_IDS.personT,sessionId:type==='start_session'?crypto.randomUUID():collabCtx.sessionId,recipientId:(collabCtx.userId||COLLAB_IDS.personT)===COLLAB_IDS.personT?COLLAB_IDS.recipientT:COLLAB_IDS.recipientOther,reference:['release_artifact','link_evidence','record_assessment'].includes(type)?artifact?.id:data.demoConfig.batchB.reference,expectedEvidenceRevision:artifact?.evidence_revision,channel:'official_site_reference',intakeStatus:'released',text:draft,rationale:draft,key:type==='submit_response'?collabCtx.submissionKey:`COLLAB:${type}:${data.case.revision}:${item?.id||'request'}`});
++  if(next!==data){versions.push(data);data=next;}
++  if(type==='start_session')collabCtx.sessionId=data.contributorSessions.at(-1)?.id;
++  prepareCollabEdit();message=L('Saved in this synthetic session.','已保存到本合成会话。');persist();if(draw)render();return true;
++ }catch(e){error=collaborationError(e);if(draw)render();return false;}
++}
++function collaborationWorkspace(){
++ const returns=`<div class="returnbar">${button('← '+L('Back to scenario','返回场景'),'return','scenario','ghost')}${button('↖ '+L('Back to journey','返回旅程'),'return','journey','ghost')}</div>`;
++ if(!data.demoConfig.batchB)return `<main id="main">${returns}<section class="collab-workspace collab-init"><span class="eyebrow">D2 Batch B · local_simulation</span><h1>${L('Client collaboration','客户协作')}</h1><p>${L('Continue from the recorded Batch A exit state. The earlier session is never silently replaced.','从 Batch A 已记录的退出状态继续，不会静默替换旧会话。')}</p><p>${L('Entity A requests FX forward. B is the reported parent; T’s specific authority, ownership/CDD, booking and other conditions remain unresolved.','Entity A 申请 FX forward；B 为声称的母公司。T 的具体权限、ownership/CDD、booking 及其他条件仍未解决。')}</p>${error?`<p role="alert" class="error">${esc(error)}</p>`:''}<div class="controls">${button(L('Continue current case','继续当前案件'),'collab-init','current','primary',data.scopes[0].scope_status!=='working_scope_recorded'?'disabled':'')}${button(L('Archive session & use approved A3 snapshot','归档当前会话并载入已批准 A3 快照'),'collab-init','snapshot')}</div></section></main>`;
++ const p=collabProjection();
++ const tools=`<aside class="workshop-tools" aria-label="Workshop controls"><span class="eyebrow">${L('Workshop tools · synthetic environment · local_simulation','Workshop 工具 · 合成环境 · local_simulation')}</span><label>${L('View','视角')}<select id="collab-audience">${[['ops','KYC Ops'],['rm','RM'],['client',L('Client','客户')]].map(([v,t])=>`<option value="${v}" ${v===collabCtx.audience?'selected':''}>${t}</option>`).join('')}</select></label>${collabCtx.audience==='client'?`<label>${L('Fixture identity','合成身份')}<select id="collab-user">${[[COLLAB_IDS.personT,'Person T'],[COLLAB_IDS.secondContributor,L('Second contributor','第二贡献者')]].map(([v,t])=>`<option value="${v}" ${v===collabCtx.userId?'selected':''}>${t}</option>`).join('')}</select></label><span class="small">Reference: ${esc(data.demoConfig.batchB.reference)} · ${L('Locator only; not a credential','仅用于定位，不是凭证')}</span>${button(L('Locate request','定位请求'),'collab-locate')}${button(L('Simulate authentication','模拟身份认证'),'collab-auth','','',collabCtx.located?'':'disabled')}`:`<span class="small">${L('No real email, OTP, file scan or bank authentication.','不连接真实邮件、OTP、文件扫描或银行认证。')}</span>`}${button(L('Print this view','打印此视图'),'collab-print')}</aside>`;
++ return `<main id="main">${returns}${tools}${renderCollaboration({projection:p,audience:collabCtx.audience,tab:collabCtx.tab,locale:n.locale,draftText:draft,selectedItemId:collabCtx.itemId,error,message})}</main>`;
++}
++function collaborationPrint(){
++ const p=collabProjection();return `<main id="main"><div class="no-print section-head">${button(L('Back to view','返回原视图'),'exit-print')}${button(L('Print / Save PDF','打印 / 保存 PDF'),'print','','primary')}</div><article class="print-sheet" data-print-scope="${collabCtx.audience==='client'?'client-authorised-items':'internal-collaboration'}"><p class="eyebrow">${L('Synthetic environment · local simulation','合成环境 · 本地模拟')}</p>${renderCollaboration({projection:p,audience:collabCtx.audience,tab:collabCtx.tab,locale:n.locale,selectedItemId:collabCtx.itemId,print:true,error})}</article></main>`;
++}
++
++function header(){return `<header class="topbar"><div class="wordmark"><span class="brand-mark" aria-hidden="true"></span><span>CLEAR<br>TO TRADE</span></div><nav class="topnav" aria-label="${L('Main navigation','主导航')}">${button(L('Journey / Scenario Studio','旅程 / 场景工作室'),'studio','',n.page==='studio'?'active':'')}${button(L('Product Prototype','产品原型'),'product','screening',n.page==='product'?'active':'')}</nav><span class="demo">${L('Demo environment · synthetic','演示环境 · 合成数据')}</span><select id="locale" aria-label="${L('Language','语言')}">${[['en-AU','English (AU)'],['en-US','English (US)'],['zh-CN','简体中文']].map(([v,t])=>`<option value="${v}" ${n.locale===v?'selected':''}>${t}</option>`).join('')}</select></header>`;}
++function caseStrip(){return `<section class="case-strip" aria-label="${L('Case scope','案件范围')}"><div><span class="eyebrow">${L('Synthetic case','合成案件')}</span><p class="case-name">${esc(data.case.id)}</p></div><div><span class="eyebrow">${L('Entity & purpose','主体与用途')}</span><p>${L('Entity A · institutional relationship','主体 A · 机构业务关系')}</p></div><div><span class="eyebrow">${L('Scope · revision','范围 · 版本')}</span><p>${L(data.demoConfig.batchA?'AU entity · FX forward':'AU context · demo product',data.demoConfig.batchA?'澳洲主体 · 外汇远期':'澳洲背景 · 演示产品')} · v${data.scopes[0].revision}</p></div><div>${badge(L('Not ready to trade','尚未具备交易条件'),'blocked')}<p class="small muted">${L('Case revision','案件版本')} ${data.case.revision} · ${L('Not published','尚未发布')}</p></div></section>`;}
++function modeControls(){return `<div class="segmented" aria-label="${L('Reading mode','阅读模式')}">${['story','explore','print'].map(m=>button(L(m[0].toUpperCase()+m.slice(1),{story:'故事',explore:'探索',print:'打印'}[m]),'mode',m,'',`aria-pressed="${n.mode===m}"`)).join('')}</div>`;}
++function comparison(){return `<div class="segmented">${['current','target'].map(c=>button(c==='current'?'Current':'Target','compare',c,'',`aria-pressed="${n.comparison===c}"`)).join('')}</div>`;}
++const shortGoals=[['Describe the intended relationship.','描述拟开展的业务关系。'],['Respond to a purpose-specific request.','回应针对具体用途的请求。'],['Clarify an identifying fact, if needed.','按需澄清主体识别信息。'],['Respond to a precise open item.','回应具体未决事项。'],['Receive the scoped outcome.','接收明确范围的结果。']];
++function matrix(){const primary=['SCN-SCOPE','SCN-REQUIREMENTS','SCN-MATCH','SCN-QA','SCN-READINESS'];
++ return `<div class="stage-rail" aria-label="${L('Stage location, not case progress','阶段定位，非案件进度')}">${stages.map(([s,en,zh],i)=>button(`<span class="mono">0${i+1}</span> &nbsp; ${L(en,zh)}`,'stage',s,'',`aria-pressed="${n.stage===s}"`)).join('')}</div>${n.zoom==='overview'?`<div class="overview-grid">${stages.map(([s,en,zh,ref],i)=>button(`<span class="eyebrow">${s} / ${ref}</span><h3>${L(en,zh)}</h3><p class="small muted">${L(...shortGoals[i])}</p>`,'stage',s)).join('')}</div>`:`<div class="journey-frame ${n.zoom==='focus'?'focus-mode':''}"><div class="role-column"><div class="role-title">${L('ROLE / VIEWPOINT','角色 / 视角')}</div>${roles.map((r,i)=>`<div class="role-label ${i===2?'ops':''}">${L(r[1],r[2])}</div>`).join('')}</div><div class="journey-scroll" tabindex="0" role="region" aria-label="${L('Horizontal journey. Drag blank space or use stage buttons.','横向旅程。拖动空白区域或使用阶段按钮。')}"><div class="journey-columns">${stages.map(([s,en,zh,ref],i)=>{const scene=byId(primary[i]);return `<section class="stage-column ${n.stage===s?'focus-stage':''}" data-stage="${s}" data-anchor="${primary[i]}"><header class="stage-heading"><span class="eyebrow">0${i+1} / ${ref}</span><h3>${L(en,zh)}</h3></header><div class="journey-cell">${L(...shortGoals[i])}</div><div class="journey-cell">${L(['Clarify the request and scope.','Understand what is still missing.','Coordinate focused clarification.','Know the blocker and its owner.','Communicate the permitted outcome.'][i],['澄清业务请求与范围。','了解真正缺少什么。','协调有针对性的澄清。','看清阻塞及其责任人。','沟通权限允许的结果。'][i])}</div><div class="journey-cell ops"><button class="scene-card ${n.scenario===scene.id?'selected':''}" data-action="scene" data-value="${scene.id}" data-scene="${scene.id}"><span class="mono">${scene.process}</span><span class="arrow" aria-hidden="true">↗</span><h3>${T(scene.title)}</h3><p>${scene.skeleton?L('Mainline structure · detailed workspace in a later batch.','主线结构 · 详细工作台将在后续批次制作。'):T(n.comparison==='current'?scene.current:scene.target)}</p></button>${i===0?`<div class="subscenes">${button(T(byId('SCN-ENTITY').title),'scene','SCN-ENTITY','',`data-scene="SCN-ENTITY"`)}</div>`:i===1?`<div class="subscenes">${['SCN-SOURCE','SCN-GAP','SCN-VALIDATE'].map(x=>button(T(byId(x).title),'scene',x,'',`data-scene="${x}"`)).join('')}</div>`:i===2?`<div class="subscenes">${button(L('Population','筛查群体'),'scene','SCN-POPULATION')}${button(L('EDD · conditional','EDD · 条件分支'),'scene','SCN-EDD')}</div>`:''}</div><div class="journey-cell">${L(['Clarify review applicability.','Resolve complex requirements.','Human judgment on ambiguity.','Review sufficiency and conditions.','Inspect decision and authority.'][i],['明确专业审查适用性。','处理复杂要求。','人工判断模糊事项。','复核充分性与条件。','检查决定及权限依据。'][i])}</div><div class="journey-cell">${i===0?button(L('Conflicts may start from intake','利益冲突可从受理早启'),'scene','SCN-CONFLICTS','ghost'):i===3?`<div class="controls">${button(L('Legal','法务'),'scene','SCN-LEGAL')}${button(L('Credit','信贷'),'scene','SCN-CREDIT')}</div>`:L(['','Proceed when own inputs allow.','Independent branch work continues.','','Provide branch-specific outcomes.'][i],['','自身输入具备时开展工作。','继续独立分支工作。','','提交各分支专属结果。'][i])}</div></section>`}).join('')}</div></div></div>`}<div class="matrix-caption"><span>${L('Five reading stages, not a sequential approval waterfall.','五个阅读阶段，并非串行审批瀑布。')} · <span id="camera-status">${n.stage}</span></span><div class="controls">${button('←','pan','-1','',`aria-label="${L('Previous stage','上一阶段')}"`)}${button('→','pan','1','',`aria-label="${L('Next stage','下一阶段')}"`)}${button(L('Overview','总览'),'zoom','overview')}${button(L('Read','阅读'),'zoom','read')}${button(n.zoom==='focus'?L('Exit focus','退出聚焦'):L('Focus stage','聚焦阶段'),'zoom',n.zoom==='focus'?'read':'focus')}</div></div>`;}
++function studio(){return `<main id="main"><section class="intro"><div><p class="eyebrow">${L('01 / JOURNEY & SCENARIOS','01 / 旅程与场景')}</p><h1>${L('One case.<br>A shared view of readiness.','一个案件。<br>共同看清准入条件。')}</h1><p class="intro-copy">${L('Follow the work from requirements to a human screening decision. Then see what still stands between local progress and clear-to-trade.','从适用要求走到人工筛查决定，再看清：完成局部工作后，距离整体交易准入还缺什么。')}</p></div><div class="method"><span class="eyebrow">${L('THE WORKSHOP METHOD','WORKSHOP 方法')}</span><div class="method-line"><span>${L('Process','流程')}</span><b>→</b><span>${L('Journey','旅程')}</span><b>→</b><span>${L('Work & decisions','工作与决定')}</span><b>→</b><span>${L('Product validation','产品验证')}</span></div><p class="small muted" style="margin:18px 0 0">${L('Project sources establish the activities. Proposed design and synthetic records make the proposition testable.','项目材料支撑业务活动；拟议设计与合成记录让方案可以被实际检验。')}</p></div></section>${caseStrip()}<section><div class="section-head"><h2><span class="section-count">02</span>${L('The institutional journey','机构业务旅程')}</h2><div class="controls">${comparison()}${modeControls()}</div></div><div class="contextbar"><label>${L('Trigger','触发')}<select id="trigger">${[['new-relationship','New relationship','新机构关系'],['product-extension','Product extension · not authored','产品扩展 · 尚未编制'],['material-change','Material change · not authored','重大变化 · 尚未编制']].map(([v,en,zh])=>`<option value="${v}" ${n.trigger===v?'selected':''}>${L(en,zh)}</option>`).join('')}</select></label><label>${L('Viewpoint','视角')}<select id="role">${[...roles,['ROLE-CASEMGR','Case Manager','案件经理']].map(([v,en,zh])=>`<option value="${v}" ${n.role===v?'selected':''}>${L(en,zh)}</option>`).join('')}</select></label><span class="location">${n.comparison==='current'?'Current':'Target'} / ${n.stage} / ${esc(n.scenario)}</span></div>${n.trigger!=='new-relationship'?`<div class="notice">${L('This trigger is not authored in Round A. The synthetic case remains a new relationship; no policy or case state has been changed. Return to New relationship to operate the slice.','该触发变体尚未在 Round A 编制。合成案件仍是新机构关系，未改变政策或案件状态。请切回新机构关系操作本切片。')}</div>`:''}<div class="storyrail" aria-label="${L('Authored story route','已编制故事路线')}">${route.map((r,i)=>button(`<span class="num">${L('SCENE','场景')} 0${i+1}</span><strong>${T(byId(r).title)}</strong>`,'scene',r,'',`aria-current="${n.storyCursor===i?'step':'false'}"`)).join('')}</div><div class="controls" style="margin-bottom:20px">${button(playing?L('Pause','暂停'):L('Play story','播放故事'),'play','','ghost')}${button(L('Previous beat','上一节点'),'previous','','ghost')}${button(L('Continue story','继续主线'),'continue','','ghost')}${n.mode==='explore'?button(L('Resume paused story','回到暂停的主线'),'resume','','ghost'):''}<span class="small muted">${L('Presentation only · pauses at human review','仅用于讲解 · 遇人工复核暂停')}</span></div>${matrix()}<div class="parallel-note"><strong>${L('Parallel, with conditions','有条件地并行')}</strong><span>${L('Conflicts can start from intake. Legal and Credit progress on their own inputs; Credit terms may feed Legal. A screening decision closes neither branch.','利益冲突可从受理早启。法务与信贷依据自身输入推进；信贷条款可能输入法务。筛查决定不会自动关闭这些分支。')}</span></div><details class="details-block"><summary>${L('High-level process · Current / Target','高层流程 · Current / Target')} <span class="small muted"> / Archify</span></summary>${diagram(n.comparison)}</details><details class="details-block"><summary>${L('Scope, source status & open questions','范围、来源状态与待确认问题')}</summary><p style="margin-top:18px">${L('D2 Batch A adds Scope and Entity to the existing six-scene slice. Seven scenarios remain structural; no full Lab or integration. Living Case Lab and real integrations are not enabled.','D2 Batch A 在原六场景切片上增加 Scope 与 Entity。其余七场景保留结构；未启用完整 Lab 或真实集成。')}</p><p>${L('Bank policy, source permissions, representative authority, final QA and publication authority remain unconfirmed. EDD applicability stays unknown until a separate risk rationale is reviewed.','银行政策、来源许可、代表权限、最终 QA 及发布权限尚未确认。EDD 适用性保留未知，需另行复核风险理由。')}</p><p class="small">SRC-009 / IA v0.4 · SRC-010 / Discussion 2 · SRC-007 / Process Map. ${L('Pain points are hypotheses, not measured bank facts.','痛点为假设，不是已测量的银行事实。')}</p></details></section>${footer()}</main>`;}
++function footer(){return `<footer class="foot"><span>Confidential Australian Banking Client · ${L('Internal design review only','仅限内部设计评审')}</span><span>Round A / v0.1 · ${L('Working blue tokens, not certified brand assets','蓝色为工作版 token，非已认证品牌资产')}</span></footer>`;}
++function showScene(){const s=byId(n.scenario);const full=!s.skeleton;modal.innerHTML=`<header class="modal-head"><div class="scene-kicker"><span class="mono">${s.stage} / ${s.process}</span>${badge(full?L('Proposed design','拟议设计'):L('Structure only','仅结构'))}${badge(n.comparison==='current'?'Current':'Target')}</div><h2 id="scene-title">${T(s.title)}</h2><select id="scene-locale" aria-label="${L('Scene language','场景语言')}">${[['en-AU','English (AU)'],['en-US','English (US)'],['zh-CN','简体中文']].map(([v,t])=>`<option value="${v}" ${n.locale===v?'selected':''}>${t}</option>`).join('')}</select>${button('×','close','','close',`aria-label="${L('Close scenario','关闭场景')}"`)}</header><div class="modal-body">${comparison()}${full?`<p class="scene-lead" style="margin-top:24px">${T(n.comparison==='current'?s.current:s.target)}</p><div class="scene-grid"><section><p class="eyebrow">${L('WAIT / REQUIRED INPUT','等待 / 所需输入')}</p><p>${T(s.wait)}</p></section><section><p class="eyebrow">${L('HUMAN BOUNDARY','人工职责边界')}</p><p>${T(s.human)}</p></section></div><section class="scene-output"><span class="eyebrow">${L('EXPECTED LOCAL RESULT · CASE CONSEQUENCE','预期本项结果 · 对案件的影响')}</span><p>${T(s.output)}</p></section>${batchScene(s.id)?batch().scene():s.id==='SCN-MATCH'?diagram('screening'):''}${['SCN-REQUIREMENTS','SCN-GAP','SCN-VALIDATE'].includes(s.id)?collaborationScene():''}<details class="modal-source"><summary>${L('Source, hypothesis & stable IDs','来源、假设与稳定编号')}</summary><p>SRC-007 · ${L('slide','第')} ${n.comparison==='current'?'1':'2'} · ${s.process}<br>SRC-010 §6 · ${s.id}<br>${s.journey?.join(' · ')||L('New scenario alias; no prior journey ID overwritten.','新增场景别名，未覆盖既有旅程编号。')}</p><p>${L('Activity: project-source. Workflow, fields and action permissions: design hypothesis. Case records: synthetic. Validate with the process owner before client release.','活动：项目来源；流程、字段和操作权限：设计假设；案件记录：合成数据。对外发布前需由流程责任人验证。')}</p></details>`:`<div class="notice">${L('This scenario is retained in the end-to-end structure. Its full interaction belongs to a later batch; no simulated approval is available here.','此场景保留在端到端结构中，完整交互属于后续批次，本处不提供模拟批准。')}</div><p>${L('Process source','流程来源')}: SRC-007 · ${s.process}</p>`}</div><footer class="modal-footer"><span class="small muted">${esc(data.case.id)} · ${roleLabel(n.role)}</span><div class="controls">${button(L('Continue story','继续主线'),'continue')}${full?button(L('Open product task','打开产品任务'),'product',sceneStep(s.id),'primary',n.trigger!=='new-relationship'?'disabled':''):''}</div></footer>`;if(!modal.open)modal.showModal();}
++function workSide(){return `<aside class="work-side"><h3>${L('Case conditions','案件条件')}</h3>${data.clearanceConditions.map(c=>`<div class="condition-mini"><strong>${domainLabel(c)}</strong><br>${badge(label(c.applicability==='unknown'?'unknown':c.status),c.status==='satisfied'?'complete':'')}<p>${roleLabel(c.owner_role)}</p></div>`).join('')}<p class="small muted" style="margin-top:22px">${L('No overall readiness percentage. Publication is a separate, unavailable action.','不使用总体就绪百分比；发布为独立且未开放的动作。')}</p></aside>`;}
++function rationaleField(){return `<label class="field" for="rationale">${L('Review rationale / request reason','复核理由 / 请求原因')}<textarea id="rationale" placeholder="${L('Record the evidence and purpose supporting this action…','记录支持本操作的证据与用途…')}">${esc(draft)}</textarea></label><span class="small muted">${dirty?L('Unsaved input','输入尚未保存'):drafts[n.step]?L('Saved draft','已保存草稿'):L('Required for evidence assessment, requests and decisions.','证据评估、请求与决定均须填写理由。')}</span>`;}
++function actionButton(type,title,extraDisabled=false){return button(title,'case-action',type,'primary',(!can(type)||extraDisabled)?'disabled':'');}
++function taskDetails(){let w=work(({requirements:'requirements',evidence:'reuse',gaps:'residual-request',validation:'review-receive',screening:'screening-review',clearance:'readiness'})[n.step]||'readiness');return `<div class="scene-kicker"><span class="mono">${esc(w.id.split('/').slice(-2).join('/'))}</span>${badge(label(w.status),w.status==='completed'?'complete':'')}<span class="small muted">${L('Assignee','责任人')}: ${roleLabel(w.owner_role)}</span></div>`;}
++function requirementsPanel(){return `${taskDetails()}<div class="records">${data.requirements.map(r=>`<article class="record"><header><h3>${r.purpose_code==='entity_identity'?L('Establish entity identity','确认主体身份'):L('Distinguish the screened subject','区分被筛查主体')}</h3>${badge(label(r.status),r.status==='satisfied'?'complete':'')}</header><p>${r.purpose_code==='entity_identity'?L('Use entity information for the identity purpose.','将主体信息用于身份确认。'):L('Obtain enough purpose-linked identifying evidence to support human screening review.','取得与用途关联的识别证据，支持人工筛查复核。')}</p><dl><dt>${L('Applicability','适用性')}</dt><dd>${label(r.applicability)}</dd><dt>${L('Basis','依据')}</dt><dd>${L('Authored demo rule · bank policy unconfirmed','编制的演示规则 · 银行政策未确认')}</dd><dt>${L('Stable reference','稳定引用')}</dt><dd class="mono">${esc(r.id)}</dd></dl></article>`).join('')}</div><div class="notice">${L('Requirements are confirmed only for this authored demonstration. Booking entity, policy profile and actual mandatory fields remain open.','仅在本编制演示中确认要求。Booking 主体、政策配置及真实必填字段仍待确认。')}</div><div class="work-actions">${actionButton('confirm_requirements',work('requirements').status==='completed'?L('Requirements confirmed','要求已确认'):L('Confirm demo requirements','确认演示要求'),work('requirements').status==='completed')}${button(L('Next: evidence','下一步：证据'),'step','evidence')}</div>`;}
++function evidencePanel(validation=false){const e=obj('evidence','evidence',validation?'supplement':'registry');const assessment=obj('evidenceUseAssessments','assessment',validation?'supplement-screening':'identity');return `${taskDetails()}<article class="record"><header><h3>${validation?L('Subject identifier supplement','主体识别补充资料'):L('Existing registry extract','已有登记摘录')}</h3>${badge(label(e.receipt_status))}</header><dl><dt>${L('Subject','主体')}</dt><dd>${L('Entity A · synthetic','主体 A · 合成')}</dd><dt>${L('Source record','来源记录')}</dt><dd class="mono">${esc(e.source_record_ref)}</dd><dt>${L('Evidence version','证据版本')}</dt><dd>v${e.evidence_revision}</dd><dt>${L('Received / as of','取得 / 截止时间')}</dt><dd>${e.acquired_at?new Date(e.acquired_at).toLocaleString(n.locale):L('Not received','尚未收到')}</dd><dt>${L('Purpose','用途')}</dt><dd>${validation?L('Screening identity disambiguation','筛查主体身份区分'):L('Entity identity','主体身份确认')}</dd><dt>${L('Use assessment','用途评估')}</dt><dd>${label(assessment.sufficiency)} · v${assessment.revision}</dd></dl></article><div class="notice">${validation?L('Receipt is not sufficiency. Review the response for this subject and purpose before recording an assessment.','收到资料不等于充分。记录评估前，须针对该主体与用途复核响应。'):L('This extract can support entity identity in the demo. It does not provide the distinguishing information needed for the screening finding.','该摘录可在演示中支持主体身份，但未提供筛查命中所需的区分信息。')}</div>${rationaleField()}<div class="work-actions">${button(L('Save draft','保存草稿'),'save')}${validation?actionButton('assess_supplement',L('Record purpose assessment','记录用途评估'),work('review-receive').status==='completed'):actionButton('reuse_identity',L('Confirm identity reuse','确认身份用途复用'),work('reuse').status==='completed')}${button(validation?L('Next: screening','下一步：筛查'):L('Next: residual gaps','下一步：剩余缺口'),'step',validation?'screening':'gaps')}</div>`;}
++function gapsPanel(){const e=obj('evidence','evidence','supplement');return `${taskDetails()}<article class="record"><span class="eyebrow">${L('ONE RESIDUAL REQUEST','一项剩余请求')}</span><h3 style="margin-top:13px">${L('A distinguishing subject identifier','可区分主体的识别信息')}</h3><p>${L('Provide the identifier supporting the distinction between Entity A and the possible provider record. The request is linked only to the screening purpose.','请提供支持区分主体 A 与疑似来源记录的识别信息。此请求仅关联筛查用途。')}</p><dl><dt>${L('Response owner','响应责任人')}</dt><dd>${L('Client contact via RM · demo only','客户联系人，经客户经理协调 · 仅演示')}</dd><dt>${L('Requirement','要求')}</dt><dd class="mono">requirement/screening-purpose</dd><dt>${L('Response status','响应状态')}</dt><dd>${label(e.receipt_status)}</dd></dl></article>${rationaleField()}<div class="work-actions">${button(L('Save draft','保存草稿'),'save')}${actionButton('send_residual_request',L('Record request · simulation','记录请求 · 模拟'),['awaiting_response','completed'].includes(work('residual-request').status))}${actionButton('receive_supplement',L('Load synthetic response','载入合成响应'),work('residual-request').status!=='awaiting_response')}${button(L('Open evidence review','打开证据复核'),'step','validation')}</div><p class="small muted" style="margin-top:20px">${L('No message is sent. The authored response is a local fixture, not a live client upload.','不实际发送消息。响应为本地编制数据，不是真实客户上传。')}</p>`;}
++function screeningPanel(){const f=data.screeningFindings[0],received=obj('evidence','evidence','supplement').receipt_status==='received',sufficient=obj('evidenceUseAssessments','assessment','supplement-screening').sufficiency==='sufficient';return `${taskDetails()}<div class="scene-kicker">${badge(label(f.review_status))}<span class="mono">${esc(f.provider_record_ref)}</span></div>${screeningComparison(received)}<p class="small muted">${L('Comparison uses authored records only. A similar name or one different attribute is not an automatic disposition rule.','仅对照编制记录。名称相似或单一属性不同均不构成自动处置规则。')}</p>${!can('record_disposition')?`<div class="notice">${L('Your current demo role cannot record a disposition. A configured Financial Crime reviewer must take over. Bank authority remains unconfirmed.','当前演示角色无权记录处置，须由配置的金融犯罪复核角色接手；银行实际权限仍未确认。')}</div>`:''}${f.decision_ref?`<section class="scene-output"><strong>${L('Disposition recorded','处置已记录')}</strong><p>${L('This synthetic finding is resolved. Legal, Credit, QA and unknown EDD applicability still prevent overall clearance.','本合成命中已完成处置。法务、信贷、QA 及未知 EDD 适用性仍阻止整体准入。')}</p><span class="mono">${esc(f.decision_ref)}</span></section>`:rationaleField()}<div class="work-actions">${!f.decision_ref?`${button(L('Save draft','保存草稿'),'save')}${actionButton('record_disposition',L('Record disposition','记录处置'))}${button(L('Request information','请求信息'),'case-action','request_evidence','',can('request_evidence')?'':'disabled')}${button(L('Refer for review','转交复核'),'case-action','refer','',can('refer')?'':'disabled')}${button(L('Pause task','暂停任务'),'case-action','pause','',can('pause')?'':'disabled')}`:''}${button(L('View overall clearance','查看整体准入'),'step','clearance')}</div>`;}
++function clearancePanel(){const r=readiness(data);return `<div class="scene-output"><span class="eyebrow">${L('SCOPE-SPECIFIC READINESS','针对当前范围的就绪状态')}</span><h3 style="margin:10px 0">${L('Not ready to trade','尚未具备交易条件')}</h3><p>${r.blocking_condition_ids.length} ${L('unresolved required conditions','项适用条件未闭合')} · ${r.unknown_condition_ids.length} ${L('unknown applicability','项适用性未知')}</p></div><div class="readiness-list">${data.clearanceConditions.map(c=>`<article class="readiness-row"><div><strong>${domainLabel(c)}</strong><p>${roleLabel(c.owner_role)}</p>${badge(label(c.status),c.status==='satisfied'?'complete':'')}</div><div><p>${conditionReason(c)}</p><span class="mono">${esc(c.id.split('/').slice(-2).join('/'))} · v${c.revision}</span></div>${['evidence','screening'].includes(c.domain)?button(L('Open task','打开任务'),'step',c.domain==='evidence'?'validation':'screening'):badge(L('Read-only in Round A','Round A 只读'))}</article>`).join('')}</div><div class="notice">${L('Booking entity and policy profile remain unconfirmed. Final bank authorisation is not configured. Conditions satisfied, authorised confirmation and publication are separate states. Real trades are outside the prototype.','Booking 主体与政策配置仍未确认。未配置银行最终授权。条件满足、授权确认与发布是独立状态，真实交易不属于原型范围。')}</div>${button(L('Publication unavailable','发布未开放'),'noop','','', 'disabled')}`;}
++function activityPanel(){return `<p class="small muted">${L('Local demo activity, not a production audit ledger. Previous case versions are retained in this tab session.','本地演示活动，非生产审计账本；旧案件版本保留在当前标签页会话中。')}</p>${[...data.auditEvents].reverse().map(e=>`<article class="activity"><time>${new Date(e.occurred_at).toLocaleString(n.locale)}</time><p><strong>${actionLabel(e.event_type)}</strong> · ${roleLabel(e.actor_ref)}</p><p>${e.from_revision??'—'} → ${e.to_revision} · <span class="mono">${esc(e.correlation_id)}</span></p>${e.rationale?`<p>${esc(e.rationale)}</p>`:''}</article>`).join('')}`;}
++function actionLabel(type){if(batchLabels[type])return L(...batchLabels[type]);return L(({synthetic_fixture_authored:'Synthetic baseline authored',confirm_requirements:'Requirements confirmed',reuse_identity:'Evidence reuse assessed',send_residual_request:'Residual request recorded',receive_supplement:'Synthetic response received',assess_supplement:'Purpose assessment recorded',record_disposition:'Screening disposition recorded',refer:'Referred for review',request_evidence:'Information requested',pause:'Task paused'})[type]||type,({synthetic_fixture_authored:'已编制合成基线',confirm_requirements:'已确认演示要求',reuse_identity:'已评估证据复用',send_residual_request:'已记录剩余信息请求',receive_supplement:'已收到合成响应',assess_supplement:'已记录用途评估',record_disposition:'已记录筛查处置',refer:'已转交复核',request_evidence:'已请求信息',pause:'已暂停任务'})[type]||type);}
++function product(){if(n.step==='collaboration')return collaborationWorkspace();const panel=({scope:()=>batch().panel(),parties:()=>batch().panel(),authority:()=>batch().panel(),tasks:()=>batch().panel(),requirements:requirementsPanel,evidence:()=>evidencePanel(false),gaps:gapsPanel,validation:()=>evidencePanel(true),screening:screeningPanel,clearance:clearancePanel,activity:activityPanel})[n.step]||screeningPanel;return `<main id="main"><div class="returnbar">${button('← '+L('Back to scenario','返回场景'),'return','scenario','ghost')}${button('↖ '+L('Back to journey','返回旅程'),'return','journey','ghost')}</div><div class="workspace-header"><div><span class="eyebrow">${L('PRODUCT PROTOTYPE / TARGET','产品原型 / TARGET')}</span><h1>${L('Case workspace','案件工作台')}</h1></div><label class="small muted">${L('Simulated role','模拟角色')} <select id="product-role">${!['ROLE-KYCOPS','ROLE-FINCRIME','ROLE-CASEMGR'].includes(n.role)?`<option value="${esc(n.role)}" selected>${esc(roleLabel(n.role))} · ${L('read-only','只读')}</option>`:''}${[['ROLE-KYCOPS','KYC Operations','KYC 运营'],['ROLE-FINCRIME','Financial Crime reviewer','金融犯罪复核人员'],['ROLE-CASEMGR','Case Manager · read-only','案件经理 · 只读']].map(([v,en,zh])=>`<option value="${v}" ${n.role===v?'selected':''}>${L(en,zh)}</option>`).join('')}</select></label></div>${caseStrip()}${n.trigger!=='new-relationship'?`<div class="notice">${L('This trigger is not authored. Business actions are unavailable; return to the journey and select New relationship to operate the synthetic case.','此触发变体尚未编制，业务操作不可用。请返回旅程并选择新机构关系，再操作本合成案件。')}</div>`:''}${message?`<div class="toast" role="status">${esc(message)}</div>`:''}<div class="work-layout"><nav class="work-nav" aria-label="${L('Case workspace','案件工作台')}"><span class="eyebrow">${L('CASE WORK','案件工作')}</span>${['scope','parties','authority','tasks','requirements','evidence','gaps','validation','screening','clearance'].map((s,i)=>button(`<span class="mono">0${i+1}</span> &nbsp; ${stepTitle(s)}`,'step',s,n.step===s?'active':'')).join('')}<span class="eyebrow">${L('RECORD','记录')}</span>${button(stepTitle('activity'),'step','activity',n.step==='activity'?'active':'')}</nav><section class="work-panel"><h2>${stepTitle(n.step)} ${button('i','info','','info',`aria-label="${L('About this view','关于此视图')}" aria-expanded="${info}"`)}</h2>${info?`<div class="info-box">${L('All records are synthetic. Evidence is assessed for a subject and purpose. A task action changes only its defined objects; it never approves the whole client.','所有记录均为合成数据。证据按主体及用途评估；任务动作仅改变已定义对象，不批准整个客户。')}</div>`:''}${error?`<div class="error" role="alert">${esc(error)}</div>`:''}${panel()}</section>${workSide()}</div>${footer()}</main>`;}
++function printView(){if(n.page==='product'&&n.step==='collaboration')return collaborationPrint();return `<main id="main"><div class="no-print section-head"><h2>${L('Print preview','打印预览')}</h2><div class="controls">${button(L('Back to view','返回原视图'),'exit-print')}${button(L('Print / Save PDF','打印 / 保存 PDF'),'print','','primary')}</div></div><article class="print-sheet" data-print-scope="round-a-all"><p class="eyebrow">CLEAR TO TRADE / ROUND A</p><h1>${L('Journey & first vertical slice','旅程与首个纵向切片')}</h1><div class="print-meta">${L('Internal review · synthetic data · not bank-approved policy','内部评审 · 合成数据 · 非银行已批准政策')}<br>DEMO-CTT-001 · ${n.locale} · ${L('Case revision','案件版本')} ${data.case.revision} · IA v0.4 / D2 v0.1</div><p>${L('Five reading stages:','五个阅读阶段：')} ${stages.map(s=>`${s[0]} ${L(s[1],s[2])}`).join(' / ')}</p><p>${L('Both Current and Target are printed for all eight authored scenarios, including content outside the screen viewport. Seven additional scenarios are listed as structural scope.','打印全部八个已编制场景的 Current 与 Target，包含屏幕之外的内容。另列七个结构场景。')}</p>${data.demoConfig.batchA?batch().print():''}${scenes.map((s,i)=>`<section class="print-scene"><span class="mono">0${i+1} · ${s.id} · ${s.stage} · ${s.process}</span><h2>${T(s.title)}</h2><div class="print-columns"><div><h3>Current</h3><p>${T(s.current)}</p></div><div><h3>Target</h3><p>${T(s.target)}</p></div></div><p><strong>${L('Wait / input','等待 / 输入')}:</strong> ${T(s.wait)}</p><p><strong>${L('Human boundary','人工边界')}:</strong> ${T(s.human)}</p><p><strong>${L('Expected result','预期结果')}:</strong> ${T(s.output)}</p><p class="small">SRC-007 · ${s.process} / SRC-010 §6 · ${L('Design hypothesis + synthetic record','设计假设 + 合成记录')} · ${s.journey?.join(', ')||s.id}</p></section>`).join('')}<section class="print-scene"><h2>${L('Additional journey structure','其余旅程结构')}</h2>${skeleton.map(x=>`<p><span class="mono">${x[0]} / ${x[4]}</span> — ${L(x[2],x[3])} · ${L('Not interactive in Round A','Round A 未制作完整交互')}</p>`).join('')}</section><section class="print-scene"><h2>${L('Readiness proof — not ready','就绪状态证明 — 尚未就绪')}</h2>${data.clearanceConditions.map(c=>`<p><strong>${domainLabel(c)} — ${label(c.status)}</strong> · ${roleLabel(c.owner_role)}<br>${conditionReason(c)}</p>`).join('')}<p>${L('Authority unconfirmed. Publication not requested. No transaction is executed.','最终权限未确认，未请求发布，不执行交易。')}</p></section>${['current','target','screening'].map(k=>`<section class="print-diagram"><h2>${k==='screening'?L('Screening collaboration','筛查协作'):k==='current'?'Current':'Target'}</h2>${diagram(k)}</section>`).join('')}<section class="print-scene"><h2>${L('Open validation questions','待验证问题')}</h2><p>${L('Validate source permissions, requirement applicability, evidence sufficiency, human authority, EDD rationale and final QA/publication mandates. No client KPI, policy threshold or production integration is assumed.','需验证来源许可、要求适用性、证据充分性、人工权限、EDD 理由及最终 QA / 发布职责。未假设客户 KPI、政策阈值或生产集成。')}</p></section></article></main>`;}
++function render(){
++ if(modal.open&&renderedScene)sceneScroll[renderedScene]=modal.scrollTop;
++ mediaHost.stop();
++ const previous=captureGlass(),active=document.activeElement;
++ const focus=active?.matches('button,select,input,textarea')?{id:active.id,action:active.dataset.action,value:active.dataset.value,dialog:active.closest('dialog')?.id}:null;
++ const modalWasOpen=modal.open,modalPosition=modal.scrollTop;
++ document.documentElement.lang=n.locale;app.innerHTML=header()+(n.mode==='print'?printView():n.page==='product'?product():studio());
++ if(n.modal&&n.page==='studio'&&n.mode!=='print')showScene();else{if(modal.open)modal.close();modal.innerHTML='';}
++ refineLayout(n.locale);enhanceGlass(previous);bindBatchHelp();restoreCamera();bindDrag();persist();
++ if(modal.open){const position=sceneScroll[n.scenario]??(modalWasOpen&&renderedScene===n.scenario?modalPosition:0);modal.scrollTop=position;const scene=n.scenario;
++  const restore=()=>{if(modal.open&&n.scenario===scene)modal.scrollTop=position;};
++  const slot=modal.querySelector('[data-media-scene]');if(slot)mediaHost.mount(slot,{scene,locale:n.locale,comparison:n.comparison}).then(()=>{restore();if(mediaPreviewPending&&slot.isConnected&&modal.open&&n.scenario===scene){mediaPreviewPending=false;const panel=slot.closest('.mainline-media'),head=modal.querySelector('.modal-head');modal.scrollTop+=panel.getBoundingClientRect().top-head.getBoundingClientRect().bottom-12;}});
++  renderedScene=scene;
++ }else renderedScene=null;
++ if(focus&&(!modal.open||focus.dialog==='scenario-dialog')&&!guard.open){const root=focus.dialog?document.getElementById(focus.dialog):app;
++  const target=focus.id?document.getElementById(focus.id):[...root.querySelectorAll('button')].find(b=>b.dataset.action===focus.action&&b.dataset.value===focus.value);
++  target?.focus({preventScroll:true});
++ }
++}
++function bindDrag(){const box=document.querySelector('.journey-scroll');if(!box)return;let start=null;box.addEventListener('pointerdown',e=>{if(e.target.closest('button,a,input,select'))return;start={x:e.clientX,left:box.scrollLeft};box.setPointerCapture(e.pointerId);box.classList.add('dragging')});box.addEventListener('pointermove',e=>{if(start)box.scrollLeft=start.left-(e.clientX-start.x)});const end=()=>{start=null;box.classList.remove('dragging');camera();};box.addEventListener('pointerup',end);box.addEventListener('pointercancel',end);box.addEventListener('scroll',()=>{camera();const c=document.querySelector('#camera-status');if(c)c.textContent=n.stage;},{passive:true});}
++function translatedError(e){const m=e.message;return n.locale!=='zh-CN'?m:/rationale/i.test(m)?'请填写支持该操作的理由。':/authority/i.test(m)?'当前角色未配置此操作的演示权限。':/requirements/i.test(m)?'请先确认演示要求。':/existing evidence/i.test(m)?'请求剩余缺口前，请先复核已有证据。':/received/i.test(m)?'尚未收到补充证据，请先记录请求并载入合成响应。':/revision/i.test(m)?'输入版本已变化，请复核当前输入后重新提交。':/evidence/i.test(m)?'需要充分且与用途关联的证据，请先完成证据复核。':/request/i.test(m)?'请先记录剩余信息请求。':/already/i.test(m)?'该处置已记录，本切片不开放重复处置。':'该操作当前不可执行，请检查输入和权限。';}
++function submitBatch(type,draw=true){try{const before=data;const next=batchAction(data,{type,role:n.role,fields:scopeFields,rationale:draft,expectedRevision:type==='save_scope_draft'?scopeCaseRevision:data.case.revision,expectedScopeRevision:type==='save_scope_draft'?scopeEditRevision:data.scopes[0].revision,key:`${type}:${data.case.revision}`});if(next!==data){versions.push(before);data=next;}scopeFields={};scopeEditRevision=data.scopes[0].revision;scopeCaseRevision=data.case.revision;dirty=false;error='';message=L('Saved in this synthetic session. Overall case: not ready.','已保存到合成会话。整体案件：尚未就绪。');persist();if(draw)render();return true;}catch(e){error=translatedError(e);if(draw)render();return false;}}
++function submit(type){try{const before=data;const next=act(data,{type,role:n.role,rationale:draft,expectedRevision:data.case.revision,key:`${type}:${data.case.revision}`,at:new Date().toISOString()});if(next!==data){versions.push(before);data=next;}drafts[n.step]='';draft='';dirty=false;error='';message=`${actionLabel(type)}. ${L('Overall case: not ready.','整体案件：尚未就绪。')}`;persist();render();}catch(e){error=translatedError(e);render();}}
++document.addEventListener('click',async e=>{const b=e.target.closest('[data-action]');if(!b||b.disabled)return;const a=b.dataset.action,v=b.dataset.value;
++ if(a==='collab-open'){guarded(()=>go({type:'PRODUCT',step:'collaboration'}));return;}
++ if(a==='collab-init'){guarded(()=>startCollaboration(v));return;}
++ if(a==='collab-tab'){guarded(()=>{collabCtx.tab=v;prepareCollabEdit();render();});return;}
++ if(a==='collab-action'){submitCollab(v,true,b.dataset.item);return;}
++ if(a==='collab-locate'){collabCtx.located=true;render();return;}
++ if(a==='collab-auth'){guarded(()=>submitCollab('start_session'));return;}
++ if(a==='collab-print'){guarded(()=>{printOrigin=structuredClone(n);n.mode='print';checkpoint();render();});return;}
++if(a==='guard'){guard.close();const f=pending;pending=null;if(v==='stay'){render();return;}if(v==='save'){if(saveDraft()===false){pending=f;guard.querySelector('[role="alert"]')?.remove();guard.insertAdjacentHTML('afterbegin',`<p role="alert">${esc(error)}</p>`);guard.showModal();return;}}else{draft=drafts[n.step]||'';scopeFields={};dirty=false;}f?.();return;}
++ if(a==='batch-start'){archives.push({data:structuredClone(data),drafts:structuredClone(drafts),navigation:structuredClone(n),archived_at:new Date().toISOString()});versions.push(structuredClone(data));data=createBatchA(fixture);drafts={};scopeFields={};n=initialNavigation();message=L('Previous session retained in version history. Approved Batch A baseline opened.','旧会话已保留在版本历史中，已打开批准的 Batch A 基线。');render();return;}
++ if(a==='batch-action'){if(n.step==='scope'&&dirty&&v!=='save_scope_draft')guarded(()=>submitBatch(v));else submitBatch(v);return;}
++ if(a==='batch-media'){n.batchBeats||={};n.batchBeats[n.scenario]=mediaIntent(n.batchBeats[n.scenario]||{beat:0},{type:v},n.scenario);render();return;}
++ if(a==='scene'){if(n.mode==='story'&&route.includes(v))n.storyCursor=route.indexOf(v);go({type:'SCENE',id:v,stage:byId(v).stage});return;}
++ if(a==='close'){go({type:'CLOSE'});focusOrigin();return;}
++ if(a==='product'){guarded(()=>go({type:'PRODUCT',step:v||'screening'}));return;}
++ if(a==='studio'){guarded(()=>n.page==='product'?go({type:'RETURN',destination:'journey'}):go({type:'CLOSE'}));return;}
++ if(a==='return'){guarded(()=>go({type:'RETURN',destination:v}));return;}
++ if(a==='compare'){camera();go({type:'COMPARE',value:v},false);return;}
++ if(a==='mode'){guarded(()=>{if(v==='print'){camera();printOrigin=structuredClone(n);n={...n,mode:'print',modal:false};checkpoint();render();window.scrollTo(0,0);}else go({type:'MODE',value:v});});return;}
++ if(a==='exit-print'){n={...(printOrigin||initialNavigation()),locale:n.locale};checkpoint();render();return;}
++ if(a==='print'){b.disabled=true;try{await preparePrintImages(document.querySelectorAll('.print-sheet img'),()=>window.print());}catch(e){error=L('A print diagram could not load. Retry before printing.','打印图示未能载入，请重试后打印。');render();}finally{b.disabled=false;}return;}
++ if(a==='zoom'){camera();go({type:'ZOOM',value:v},false);return;}
++ if(a==='stage'||a==='pan'){const index=a==='stage'?stages.findIndex(s=>s[0]===v):Math.max(0,Math.min(4,stages.findIndex(s=>s[0]===n.stage)+Number(v)));n.zoom='read';n.camera={anchor:['SCN-SCOPE','SCN-REQUIREMENTS','SCN-MATCH','SCN-QA','SCN-READINESS'][index],offset:0};n.stage=stages[index][0];render();return;}
++ if(a==='continue'||a==='resume'||a==='previous'){guarded(()=>{if(n.page==='product')n=navigate(n,{type:'RETURN',destination:'journey'});go({type:a==='continue'?'CONTINUE':a==='resume'?'RESUME':'PREVIOUS'});});return;}
++ if(a==='play'){if(playing){stop();render();return;}playing=true;const advance=()=>{if(!playing)return;if(n.storyCursor<=1||n.storyCursor>=6){stop();message=L('Human review boundary. Open the task to act; playback never records a decision.','已到人工复核边界，请打开任务操作；播放不会记录决定。');n.scenario=route[n.storyCursor];n.modal=true;render();return;}n=navigate(n,{type:'CONTINUE'});n.modal=false;render();timer=setTimeout(advance,2600)};render();timer=setTimeout(advance,2600);return;}
++ if(a==='step'){guarded(()=>{n.step=v;scopeFields={};scopeEditRevision=data.scopes[0].revision;scopeCaseRevision=data.case.revision;draft=drafts[v]||'';dirty=false;error='';info=false;checkpoint();render();document.querySelector('.work-panel')?.scrollIntoView({block:'start',behavior:'instant'});});return;}
++ if(a==='save'){saveDraft();render();return;}
++ if(a==='info'){info=!info;render();return;}
++ if(a==='case-action')submit(v);
++});
++document.addEventListener('input',e=>{if(e.target.id==='collab-text'){draft=e.target.value;dirty=true;}if(e.target.dataset.batchField){scopeFields[e.target.dataset.batchField]=e.target.value;dirty=true;}if(e.target.id==='rationale'){draft=e.target.value;dirty=draft!==(drafts[n.step]||'');}});
++document.addEventListener('change',e=>{if(['collab-audience','collab-user','collab-item'].includes(e.target.id)){const id=e.target.id,v=e.target.value;guarded(()=>{if(id==='collab-audience'){collabCtx.audience=v;collabCtx.tab=v==='client'?'tasks':v==='rm'?'requests':'requirements';}else if(id==='collab-user'){collabCtx.userId=v;collabCtx.sessionId=null;collabCtx.located=false;}else collabCtx.itemId=v;prepareCollabEdit();render();});return;}if(e.target.id==='locale'||e.target.id==='scene-locale'){message='';camera();const activeDraft=draft,wasDirty=dirty,scenePosition=modal.open?{top:modal.scrollTop,scenario:n.scenario,locale:e.target.value}:null;n=navigate(n,{type:'LOCALE',value:e.target.value});checkpoint(false);render();draft=activeDraft;dirty=wasDirty;if(scenePosition){const restore=()=>{if(modal.open&&n.scenario===scenePosition.scenario&&n.locale===scenePosition.locale)modal.scrollTop=Math.min(scenePosition.top,Math.max(0,modal.scrollHeight-modal.clientHeight));};restore();requestAnimationFrame(restore);modal.querySelectorAll('img').forEach(image=>{if(!image.complete)image.addEventListener('load',restore,{once:true});});}}
++ if(e.target.id==='trigger')go({type:'TRIGGER',value:e.target.value},false);
++ if(e.target.id==='role'||e.target.id==='product-role'){const value=e.target.value;guarded(()=>{n=navigate(n,{type:'ROLE',value});checkpoint(false);render()});}
++});
++modal.addEventListener('cancel',e=>{e.preventDefault();go({type:'CLOSE'});focusOrigin()});guard.addEventListener('cancel',()=>{pending=null;render()});
++window.addEventListener('keydown',e=>{if(e.key==='Escape'&&info){info=false;render();e.preventDefault();}});
++window.addEventListener('popstate',e=>{const destination=e.state?.navigation||initialNavigation();if(dirty){checkpoint();guarded(()=>{n={...destination,locale:n.locale};draft=drafts[n.step]||'';render();checkpoint(false)})}else{n={...destination,locale:n.locale};draft=drafts[n.step]||'';stop();render()}});
++window.addEventListener('beforeunload',e=>{if(dirty){e.preventDefault();e.returnValue=''}});
++window.addEventListener('beforeprint',()=>{if(n.mode!=='print'){printOrigin=structuredClone(n);n.mode='print';render()}});
++window.addEventListener('afterprint',()=>{if(printOrigin){n={...printOrigin,locale:n.locale};printOrigin=null;render()}});
++function screeningComparison(received){
++ const registry=obj('evidence','evidence','registry').content_attributes||{};
++ const supplement=received?(obj('evidence','evidence','supplement').content_attributes||{}):{};
++ const provider=data.screeningFindings[0].provider_attributes||{};
++ const rows=[['legal_name',L('Legal name','法定名称'),registry.legal_name,provider.legal_name,L('Similar name · review','名称相似 · 需复核')],['registration_reference',L('Registration reference','登记引用'),supplement.registration_reference,provider.registration_reference,received?L('Different demo references','演示引用不同'):L('Unknown until received','收到资料前未知')],['incorporation_jurisdiction',L('Incorporation context','注册背景'),registry.incorporation_jurisdiction,provider.incorporation_jurisdiction,L('Compare with source','结合来源核对')],['entity_type',L('Entity type','主体类型'),supplement.entity_type,provider.entity_type,received?L('Same demo type','相同演示类型'):L('Not yet evidenced','尚无支持证据')]];
++ const display=value=>value==='synthetic_corporation'?L('Corporation · synthetic','公司 · 合成'):esc(value);
++ return `<table class="compare-table"><thead><tr><th>${L('Attribute','属性')}</th><th>${L('Subject','被筛查主体')}</th><th>${L('Provider record','来源记录')}</th><th>${L('Assessment','对照')}</th></tr></thead><tbody>${rows.map(([key,name,a,b,result])=>`<tr><td>${name}</td><td>${a?display(a):L('Not provided','尚未提供')}</td><td>${b?display(b):L('Unknown','未知')}</td><td>${result}</td></tr>`).join('')}</tbody></table>`;
++}
++if(n.page==='product'&&n.step==='collaboration'&&data.demoConfig.batchB)prepareCollabEdit();
++checkpoint(false);render();
+
+diff --git a/prototype/batch-a-ui.mjs b/prototype/batch-a-ui.mjs
+new file mode 100644
+index 0000000..c447d65
+--- /dev/null
++++ b/prototype/batch-a-ui.mjs
+@@ -0,0 +1,49 @@
++import {mediaSlot,staticMediaStory} from './media-static.mjs';
++import {preparation,purposes} from './batch-a-engine.mjs';
++export const batchSteps=['scope','parties','authority','tasks'];
++export const batchScene=id=>['SCN-SCOPE','SCN-ENTITY'].includes(id);
++export const labels={coordinate_information:['Coordinate information','协调资料'],make_declarations:['Make declarations','作出声明'],execute_agreement:['Execute agreement','签署协议'],issue_trade_instruction:['Issue trade instruction','发出交易指令'],evidence_required:['Evidence required','需要证据'],not_established:['Not established','尚未建立'],not_assessed:['Not assessed','尚未评估'],clarification_required:['Clarification required','需要澄清'],draft:['Draft','草稿'],working_scope_recorded:['Working scope recorded','工作范围已记录'],unresolved:['Unresolved','未解决'],resolved_for_scope:['Resolved for scope','范围内主体已明确'],under_review:['Under review','复核中'],not_started:['Not started','尚未开始'],in_review:['In review','复核中'],requirements:['Requirements draft','要求草稿'],source:['Source preparation','来源准备'],conflicts:['Conflicts preparation','冲突检查准备'],pre_screen:['Preliminary screening preparation','初步筛查准备'],legal:['Legal preparation','法务准备'],credit:['Credit preparation','信贷准备'],client_request:['Client request','客户请求'],agreement_execution:['Agreement execution','协议签署'],publication:['Publication','发布'],ready_for_preparation:['Ready for preparation','可开展准备'],awaiting_input:['Awaiting input','等待输入'],scope_draft_saved:['Scope draft saved','已保存范围草稿'],counterparty_scope_clarified:['Counterparty scope clarified','已澄清交易主体'],working_scope_recorded:['Working scope recorded','工作范围已记录'],source_result_received:['Synthetic source received','已收到合成来源'],entity_context_reviewed:['Entity context reviewed','已复核主体背景'],evidence_use_assessed:['Purpose assessment recorded','已记录用途评估'],authority_gap_opened:['Authority gap opened','已建立权限缺口任务'],review_task_opened:['Review task opened','已建立复核任务'],clarification_draft_created:['Clarification draft created','已建立澄清草稿'],downstream_preparation_enabled:['Preparation gates evaluated','已评估准备工作门槛'],relationship_request_received:['Relationship request received','已收到关系请求']};
++const escape=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
++export function batchUI({data,n,L,button,fields={},rationale='',dirty=false}){
++ const sc=data.scopes[0],live=!!data.demoConfig.batchA,B=(en,zh)=>L(en,zh),label=v=>labels[v]?L(...labels[v]):escape(v),none=B('Not provided','尚未提供');
++ const can=a=>live&&n.trigger==='new-relationship'&&data.demoConfig.batchA.permissions[n.role]?.includes(a);
++ const action=(a,en,zh)=>button(B(en,zh),'batch-action',a,'',can(a)?'':'disabled');
++ const dl=rows=>`<dl class="batch-fields">${rows.map(([k,v])=>`<div><dt>${k}</dt><dd>${v??none}</dd></div>`).join('')}</dl>`;
++ const note=`<p class="notice batch-blocker">${B('Not ready · booking and product eligibility unresolved. Person T’s authority must be assessed per purpose; see the latest records. BO/CDD, Legal, Credit and final bank permissions remain separate.','尚未就绪 · Booking 与产品资格未确定。Person T 对 Entity A 的具体权限须按用途查看最新记录。受益所有权 / CDD、法务、信贷与银行最终权限保持独立。')}</p>`;
++ const help=`<span class="batch-help-wrap"><button type="button" class="batch-help" popovertarget="authority-help" aria-label="${B('Authority definition','权限定义')}" aria-expanded="false">i</button><span id="authority-help" popover="auto" role="note">${B('Employment at Entity B is not authority to act for Entity A. Assess each principal and purpose separately. Employee demo permission does not grant customer authority.','任职于 Entity B 不等于获准代表 Entity A。须按被代表主体与用途分别评估。员工演示操作权限不赋予客户代表权限。')} <button popovertarget="authority-help" popovertargetaction="hide" aria-label="${B('Close definition','关闭说明')}">×</button></span></span>`;
++ const authority=()=>`<h3>Person T ${help}</h3><p>${B('Employer: Entity B · Singapore / Claimed principal: Entity A · Australia','任职组织：Entity B · 新加坡 / 声称代表主体：Entity A · 澳大利亚')}</p><div class="table-scroll"><table class="compare-table authority-table"><thead><tr><th>${B('Purpose','用途')}</th><th>${B('Principal','被代表主体')}</th><th>${B('Status','状态')}</th></tr></thead><tbody>${purposes.map(p=>{const a=data.authorities.find(x=>x.action_type===p);return `<tr><td>${label(p)}</td><td>Entity A</td><td>${label(a?.status||'not_assessed')}</td></tr>`;}).join('')}</tbody></table></div><p>${B('EV-A03 supports employment at B; it does not itself establish the Entity A coordination scope.','EV-A03 支持在 B 任职的声明，但其本身不建立为 Entity A 协调资料的权限范围。')}</p><p class="live-evidence-status">EV-A05 · ${data.evidence.some(e=>e.alias==='EV-A05'&&e.receipt_status==='received')?B('Received in live session · receipt is not purpose sufficiency','实际会话已收到 · 收到不等于用途充分'):B('Not received in live session','实际会话尚未收到')}</p>${note}`;
++ const inputs=()=>`<label class="field">${B('Rationale / request reason','评估理由 / 请求原因')}<textarea id="rationale">${escape(rationale)}</textarea></label>`;
++ const gates=()=>`<section class="batch-gates"><h3>${B('Next work · per-task prerequisites','后续工作 · 各任务前置条件')}</h3>${preparation(data).map(g=>`<article data-gate="${g.id}"><div><strong>${label(g.id)}</strong><span class="badge">${label(g.status)}</span></div><p>${n.locale==='zh-CN'?({requirements:'已记录范围、明确产品及演示规则集；booking 相关适用性仍未知。',source:'主体可查询且具合成来源访问依据。',conflicts:'主体及业务请求可区分，并且没有适用暂停；仅准备。',pre_screen:'主体版本与预编制查询范围；不代表完整群体筛查。',legal:'协议适用性未知，不执行协议。',credit:'信贷适用性未知，不推断额度。',client_request:'收件人、披露与发送权限未知；只保存草稿。',agreement_execution:'尚未建立具体签署权限。',publication:'条件、booking 与最终银行权限未闭合。'})[g.id]:escape(g.basis)}${g.hold?' · '+B('Hold active / unresolved','暂停生效 / 未确认'):''}</p><small>${g.dependency} · ${B('Scope','范围')} v${g.scope_revision}</small></article>`).join('')}</section>`;
++ const parties=()=>`<div class="batch-parties">${data.entities.map(e=>`<article class="record"><span class="eyebrow">${escape(e.display_alias||e.legal_name)}</span><h3>${escape(e.legal_name)}</h3>${dl([[B('Incorporation','注册地'),e.incorporation_jurisdiction],[B('Relationship','关系'),e.incorporation_jurisdiction==='SG'?B('Reported parent · not counterparty / guarantor','声称的母公司 · 非交易主体 / 担保人'):B('Only proposed trading entity','唯一拟准入交易主体')],[B('Identity resolution','主体界定'),label(e.identity_resolution_status)],[B('Verification','核验'),label(e.verification_status)],[B('Beneficial ownership','受益所有权'),B('Unknown','未知')],[B('LEI / registration number','LEI / 注册编号'),none]])}</article>`).join('')}</div><article class="record"><h3>Person T</h3><p>${B('Employed by Entity B; claims to coordinate information for Entity A. Consult the separate current purpose assessments.','任职于 Entity B，声称为 Entity A 协调资料。具体权限请查看独立的当前用途评估。')}</p></article>`;
++ const taskList=()=>{const tasks=data.workItems.filter(x=>x.work_type);return `<h3>${B('Tasks','任务')}</h3>${tasks.length?tasks.map(t=>`<article class="record"><strong>${label(t.work_type==='authority_gap'?'coordinate_information':'awaiting_input')}</strong>${dl([[B('Principal / purpose','被代表主体 / 用途'),'Entity A / '+label(t.purpose_code)],[B('Owner','责任人'),B('Unassigned · role to be confirmed','未分派 · 待确认角色')],[B('Status','状态'),label(t.status)],[B('Waiting for','等待'),B('Entity A purpose-specific authority basis','针对 Entity A 具体用途的权限依据')],[B('Due date','截止日期'),none]])}<small>${escape(t.id)}</small></article>`).join(''):`<p>${B('No Batch A task created yet.','尚未建立本组任务。')}</p>`}<h3>${B('Request drafts','请求草稿')}</h3>${(data.informationRequests||[]).map(r=>`<article class="record"><strong>${B('Draft · not sent','草稿 · 未发送')}</strong><p>${escape(r.reason)}</p><small>${escape(r.id)}</small></article>`).join('')}${gates()}`;};
++ const panel=()=>!live?`<div class="notice">${B('This tab contains a preserved earlier session. Archive it before opening the approved Batch A baseline.','本标签页保留着之前的会话。请先归档，再打开已批准的 Batch A 基线。')}</div>${button(B('Archive session & start Batch A','归档会话并开始 Batch A'),'batch-start')}`:n.step==='scope'?`${dl([[B('Case / request','案件 / 请求'),data.case.id+' / EV-A01'],[B('Counterparty','交易主体'),sc.counterparty_entity_id?'Entity A':B('Unresolved — RM clarification required','尚未明确 — 需客户经理澄清')],[B('Product requested','申请产品'),'FX forward'],[B('Product eligibility','产品资格'),B('Not assessed','尚未评估')],[B('Booking entity / jurisdiction','Booking 主体 / 地区'),none],[B('DD level','尽调等级'),B('Not assessed','尚未评估')],[B('Scope status / revision','范围状态 / 版本'),label(sc.scope_status)+' / v'+sc.revision]])}<label class="field">${B('Group display name','集团展示名称')}<input id="batch-group" data-batch-field="group_display_name" value="${escape(fields.group_display_name??sc.group_display_name)}"></label><label class="field">${B('Business purpose','业务用途')}<textarea id="batch-purpose" data-batch-field="business_purpose">${escape(fields.business_purpose??sc.business_purpose)}</textarea></label><p class="small">${dirty?B('Unsaved changes','有未保存变更'):B('Saved session values','已保存的会话值')} · ${B('Source','来源')}: EV-A01 / SRC-013</p>${note}<div class="work-actions">${action('save_scope_draft','Save draft','保存草稿')}${action('clarify_counterparty','Record RM clarification: Entity A','记录客户经理澄清：Entity A')}${action('record_working_scope','Record working scope','记录工作范围')}${button(B('Parties','主体'),'step','parties')}</div>`:n.step==='parties'?`${parties()}<p>${B('EV-A04 registry source','EV-A04 登记来源')}: ${data.evidence.find(x=>x.alias==='EV-A04')?.receipt_status==='received'?B('Received · synthetic','已收到 · 合成'):B('Awaiting source result','等待来源结果')}</p>${inputs()}<div class="work-actions">${action('receive_registry','Receive synthetic registry result','接收合成登记来源结果')}${action('review_entity','Record entity review','记录主体复核')}${button(B('Authority','代表权限'),'step','authority')}</div>`:n.step==='authority'?`${authority()}${inputs()}<div class="work-actions">${button(B('Save draft','保存草稿'),'save')}${action('assess_authority','Assess EV-A03 for this purpose','评估 EV-A03 对此用途的支持')}${action('open_authority_gap','Open gap task','建立缺口任务')}${action('refer_authority','Refer for review','转交复核')}${action('request_clarification','Draft clarification request','起草澄清请求')}${button(B('Tasks','任务'),'step','tasks')}</div>`:taskList();
++ const figure=kind=>`<figure class="batch-diagram"><img src="./diagrams/batch-a/${kind}.${n.locale}${n.mode==='print'?'.print':''}.svg" alt="${B(kind==='DG-ENTITY-A'?'Entity B reported parent of A; Person T employed by B and claims coordination for A. Authority remains unestablished.':kind==='DG-SCOPE-A'?'Group display name is distinct from Entity A. Recorded working scope retains unknown booking and eligibility.':'Preparation requires task-specific inputs and no applicable hold. Signing and publication wait.',kind==='DG-ENTITY-A'?'Entity B 为 A 的声称母公司；Person T 任职于 B 并声称为 A 协调资料，具体权限未建立。':kind==='DG-SCOPE-A'?'集团展示名称与 Entity A 不同；记录工作范围后 booking 与资格仍未知。':'准备工作须满足各任务输入且没有适用暂停；签署及发布仍等待。')}"><figcaption>Archify 2.17 · SRC-013 · ${B('Synthetic static relationship model','合成静态关系模型')}</figcaption></figure>`;
++ const beats=n.scenario==='SCN-SCOPE'?[
++ ['A-01','SNAP-A0','Request received','收到业务请求','Group A is the display name. EV-A01–03 are available; booking and authority unknown.','Group A 是展示名称。仅有 EV-A01–03；booking 与权限未知。'],
++ ['A-02','SNAP-A0','Group ≠ legal entity','集团 ≠ 法人','Entity A and Entity B must not merge because their group name looks similar.','不能因集团名称相似而合并 Entity A 与 Entity B。'],
++ ['A-03','SNAP-A1','RM clarifies Entity A','客户经理澄清 Entity A','Authored RM clarification identifies A as the proposed counterparty, B as related only.','预编制的客户经理澄清将 A 指定为拟交易主体，B 仅为关联主体。'],
++ ['A-04','SNAP-A2','Record the working scope','记录工作范围','FX forward requested; booking, eligibility and DD remain open. Human action required.','申请 FX forward；booking、资格及尽调等级仍未确定。须人工操作。']
++ ]:[
++ ['B-01','SNAP-A2','Separate the records','分开对象记录','Entity A, Entity B and Person T retain separate identities and roles.','Entity A、Entity B 与 Person T 保留独立身份及角色。'],
++ ['B-02','SNAP-A2','Review the entity source','复核主体来源','EV-A04 appears only following its synthetic arrival event. BO/CDD is still unknown.','EV-A04 仅在合成来源到达事件后出现；受益所有权 / CDD 仍未知。'],
++ ['B-03','SNAP-A3','Locate the authority gap','定位具体权限缺口','EV-A03 supports employment at B, not the Entity A coordination purpose.','EV-A03 支持在 B 任职，但不支持为 Entity A 协调资料的具体用途。'],
++ ['B-04','SNAP-A3','Open targeted work','建立定向工作','Principal A; coordinate information; evidence required; owner Unassigned; request remains draft.','被代表主体 A；协调资料；需要证据；责任人未分派；请求仍为草稿。'],
++ ['B-05','SNAP-A3','Prepare where permitted','按门槛开展准备','Specific preparation may continue. Signing, trading authority and case clearance remain unresolved.','特定准备工作可继续。签署、交易权限及整体准入仍未解决。']];
++ const benchmarks=()=>`<details class="batch-benchmarks"><summary>${B('Design references · not bank policy','设计参考 · 非银行政策')}</summary>
++<p>B01 · <a href="https://www.austrac.gov.au/industry-and-business/obligations-and-guidance/your-amlctf-program/customer-due-diligence/initial-customer-due-diligence/overview-initial-customer-due-diligence" target="_blank" rel="noopener">AUSTRAC · Initial CDD</a> · INDUSTRY-BENCHMARK</p><p>${B('Adopt distinct customer, representative authority and beneficial-owner records. Adapt evidence purposes. Avoid treating this prototype as a bank-approved CDD policy.','采用客户、代表权限及受益所有权的独立记录；适配证据用途；不将原型视为银行已批准的 CDD 政策。')}</p>
++<p>B02 · <a href="https://www.gleif.org/en/lei-data/access-and-use-lei-data/level-2-data-who-owns-whom" target="_blank" rel="noopener">GLEIF · Level 2</a> · INDUSTRY-BENCHMARK</p><p>${B('Adopt sourced relationship records. Level 2 describes accounting-consolidating parents; avoid equating a parent record with natural-person beneficial ownership, complete KYC or vLEI authority.','采用带来源的关系记录。Level 2 描述会计合并母公司；不等同自然人受益所有权、完整 KYC 或 vLEI 权限。')}</p>
++<p>B03 · <a href="https://www.eurocontrol.int/publication/eurocontrol-specification-airport-collaborative-decision-making-cdm" target="_blank" rel="noopener">EUROCONTROL · A-CDM</a> · CROSS-INDUSTRY-PATTERN</p><p>${B('Adapt milestone-triggered downstream updates to versioned work dependencies. Avoid importing aviation safety rules, time estimates or SLAs into bank controls.','借鉴里程碑触发下游更新，用于有版本的工作依赖；不移植航空安全规则、时间估计或 SLA 到银行控制。')}</p><small>${B('Primary pages checked 2026-09-07. Design-transfer hypotheses; bank applicability unconfirmed.','一手网页核对日期：2026-09-07。属于设计迁移假设，银行适用性未确认。')}</small></details>`;
++ const scene=()=>{const i=Math.min(n.batchBeats?.[n.scenario]?.beat||0,beats.length-1),beat=beats[i],old=n.originScopeRevision;return `<section class="batch-context"><span class="eyebrow">S1 / ${n.scenario} · ${B('Scope','范围')} v${sc.revision}</span>${old&&old!==sc.revision?`<p class="notice">${B('Scope changed during work','工作期间范围已变更')}: v${old} → v${sc.revision}. ${B('Same case and source scene restored; latest session retained.','已恢复同一案件及来源场景，保留最新会话。')}</p>`:''}${mediaSlot(n.scenario,n.locale)}${benchmarks()}${figure(n.scenario==='SCN-SCOPE'?'DG-SCOPE-A':'DG-ENTITY-A')}<details class="batch-focus" open><summary>${B('Live session · latest saved business records','实际会话 · 最新已保存业务记录')}</summary>${n.scenario==='SCN-SCOPE'?dl([[B('Actual session scope','实际会话范围'),label(sc.scope_status)+' / v'+sc.revision],[B('Proposed counterparty','拟交易主体'),sc.counterparty_entity_id?'Entity A':B('Awaiting clarification','等待澄清')],[B('Requested product','申请产品'),'FX forward'],[B('Booking / eligibility','Booking / 资格'),B('Unknown / not assessed','未知 / 尚未评估')]]):authority()}</details><details><summary>${B('What can continue / what waits','哪些可继续 / 哪些需等待')}</summary>${gates()}${figure('DG-ENABLE-A')}</details><div class="batch-next"><strong>${B('Journey connection','旅程衔接')}</strong><p>${n.scenario==='SCN-SCOPE'?B('Scope outputs feed entity / authority review, then a requirements draft.','范围输出进入主体 / 代表权限复核，继而供要求草稿使用。'):B('Entity and authority outputs feed SCN-REQUIREMENTS. Unresolved authority stays attached; downstream work is not completed by continuing.','主体与权限输出进入 SCN-REQUIREMENTS。未解决权限随上下文保留；继续主线不会完成下游工作。')}</p>${button(B('Open next linked scene','打开下一关联场景'),'scene',n.scenario==='SCN-SCOPE'?'SCN-ENTITY':'SCN-REQUIREMENTS')}</div></section>`;};
++ const print=()=>`<section class="print-scene batch-print"><h2>D2 Batch A · ${B('Scope, parties and authority','范围、主体与权限')}</h2><p>DEMO-CTT-001 · SRC-013 Final v1.0 · SRC-014 Media Brief v1.0 · ${B('Scope','范围')} v${sc.revision} · ${B('Synthetic / reported / source reviewed / unknown are distinct','合成 / 声称 / 来源复核 / 未知为不同状态')}</p>${dl([[B('Request','请求'),'EV-A01 / FX forward / USD procurement'],[B('Group display','集团展示'),'Group A'],[B('Counterparty','交易主体'),sc.counterparty_entity_id?'Entity A':B('Unresolved','尚未明确')],[B('Booking / eligibility / DD','Booking / 资格 / 尽调等级'),B('Not provided / not assessed','尚未提供 / 尚未评估')],[B('Scope','范围'),label(sc.scope_status)]])}${parties()}${authority()}${taskList()}${['DG-SCOPE-A','DG-ENTITY-A','DG-ENABLE-A'].map(figure).join('')}${staticMediaStory('SCN-SCOPE',n.locale)}${staticMediaStory('SCN-ENTITY',n.locale)}</section>`;
++ return {panel,scene,print,gates,label};
++}
++let helpController;
++export function bindBatchHelp(){
++ helpController?.abort();helpController=new AbortController();
++ const root=document.querySelector('#scenario-dialog[open]')||document.querySelector('#app');
++ const trigger=root?.querySelector('.batch-help'),popover=root?.querySelector('#authority-help');if(!trigger||!popover)return;
++ let suppressed=false;const show=()=>{if(!suppressed&&!popover.matches(':popover-open')){popover.showPopover();trigger.setAttribute('aria-expanded','true');}};
++ trigger.addEventListener('mouseenter',()=>{suppressed=false;show();});trigger.addEventListener('focus',e=>{if(popover.contains(e.relatedTarget))return;suppressed=false;show();});
++ popover.addEventListener('toggle',()=>trigger.setAttribute('aria-expanded',String(popover.matches(':popover-open'))));
++ document.addEventListener('keydown',function dismiss(e){if(e.key==='Escape'&&popover.matches(':popover-open')){suppressed=true;popover.hidePopover();e.preventDefault();e.stopImmediatePropagation();}}, {capture:true,signal:helpController.signal});
++}
+
+diff --git a/prototype/batch-a.css b/prototype/batch-a.css
+new file mode 100644
+index 0000000..c474ba6
+--- /dev/null
++++ b/prototype/batch-a.css
+@@ -0,0 +1,13 @@
++.batch-fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin:22px 0}.batch-fields>div{border-bottom:1px solid #d9dde0;padding-bottom:12px}.batch-fields dt{font-size:12px;color:#58616a;margin-bottom:7px}.batch-fields dd{margin:0;overflow-wrap:anywhere}.batch-parties{display:grid;grid-template-columns:1fr 1fr;gap:18px}.batch-story-frame{margin:24px 0;padding:24px;border:1px solid #b7c5d2;border-radius:22px;background:#f4f6f8}.batch-story-frame h3{font-size:25px;margin:12px 0}.batch-story-frame small{display:block;margin-top:14px}.batch-diagram{margin:26px 0}.batch-diagram img{width:100%;height:auto;filter:grayscale(1)}.batch-diagram figcaption{font-size:12px;color:#56616a;margin:10px 0}.batch-gates article{border-top:1px solid #d8dce0;padding:15px 0}.batch-gates article>div{display:flex;justify-content:space-between;gap:12px}.batch-gates p{font-size:14px;margin:8px 0}.batch-gates small{color:#58616a}.batch-next{border-top:1px solid #d8dce0;padding-top:20px;margin-top:26px}.batch-context details{margin:20px 0}.batch-help{width:32px;height:32px;border-radius:50%;margin-left:8px}.batch-help-wrap [popover]{max-width:380px;padding:22px;border:1px solid #a9b5c0;border-radius:18px;background:#fff;box-shadow:0 12px 30px #1d304320;line-height:1.6}.batch-help-wrap [popover] button{float:right;margin:0 0 8px 12px}.table-scroll{max-width:100%;overflow:auto}.field input{width:100%;padding:14px;border:1px solid #aeb9c4;border-radius:12px;font:inherit;background:#fff}.storyrail{overflow-x:auto}.storyrail>*{min-width:175px}.batch-print .batch-help-wrap{display:none}@media(max-width:700px){.batch-fields,.batch-parties{grid-template-columns:1fr}.batch-gates article>div{display:block}.batch-gates .badge{margin-top:8px}.batch-story-frame{padding:18px}}@media print{.batch-print{break-before:page}.batch-print .batch-diagram{break-inside:avoid}.batch-print .batch-diagram img{width:100%}.batch-print .record,.batch-gates article{break-inside:avoid}.batch-print .notice{background:white!important;color:black!important}}
++/* Print uses monochrome SVG derivatives, not offscreen compositor filters. */
++@media print{.print-diagram{break-inside:avoid;page-break-inside:avoid}.print-sheet img{filter:none!important}}
++/* Selected r01 media is isolated; the host owns fallback, navigation and print. */
++.mainline-media{margin:20px 0;border:1px solid #cbd5df;border-radius:24px;padding:18px;background:#f7f8f9;color:#152735;min-width:0}
++.media-boundary{font-size:13px;line-height:1.6;color:#465866;margin:0 0 16px}
++.media-player-slot{min-width:0;max-width:100%;display:block;isolation:isolate}
++.media-fallback{margin:16px 0 0}.media-fallback>summary{cursor:pointer;font-size:14px}
++.media-static-story{font-size:14px;line-height:1.65;overflow-wrap:anywhere}
++.media-static-story h4{font-size:16px;margin:14px 0 4px}.media-static-story li{margin-bottom:12px}
++.media-static-story small{color:#4b6070}.media-static-story ol{padding-left:24px}
++@media(max-width:600px){.mainline-media{padding:10px;border-radius:16px}.media-static-story{font-size:13px}}
++@media print{.media-player-slot,.media-boundary{display:none}.media-static-story{display:block;break-before:page;font-size:10pt;line-height:1.45}.media-static-story li{break-inside:avoid;margin-bottom:6px}.media-static-story h3{font-size:16pt}.media-static-story h4{font-size:12pt;margin:8px 0 2px}.media-static-story p{margin:3px 0 6px}.media-static-story ul{margin:6px 0}}
+
+diff --git a/prototype/index.html b/prototype/index.html
+new file mode 100644
+index 0000000..8816136
+--- /dev/null
++++ b/prototype/index.html
+@@ -0,0 +1,4 @@
++<!doctype html>
++<html lang="en-AU"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light"><title>Clear to Trade — Scenario Studio</title><link rel="stylesheet" href="./studio.css"><link rel="stylesheet" href="./glass.css"><link rel="stylesheet" href="./batch-a.css">
++<link rel="stylesheet" href="./collaboration.css"></head>
++<body><a class="skip" href="#main">Skip to content</a><div id="app"><p class="loading">Loading the synthetic case…</p></div><dialog id="scenario-dialog" aria-labelledby="scene-title"></dialog><dialog id="dirty-dialog" aria-labelledby="dirty-title"></dialog><div id="announcer" class="sr-only" aria-live="polite"></div><noscript><section><h1>Clear to Trade · Static stories / 静态讲解</h1><p>JavaScript is disabled. The following local pages contain every approved read-only cue; no business actions are available.</p><ul><li><a href="./media/d2-batch-a/r01/print/DMO-A01__r01__zh-CN.html">DMO-A01 · zh-CN</a></li><li><a href="./media/d2-batch-a/r01/print/DMO-A02__r01__zh-CN.html">DMO-A02 · zh-CN</a></li><li><a href="./media/d2-batch-a/r01/print/DMO-A01__r01__en-AU.html">DMO-A01 · en-AU</a></li><li><a href="./media/d2-batch-a/r01/print/DMO-A02__r01__en-AU.html">DMO-A02 · en-AU</a></li><li><a href="./media/d2-batch-a/r01/print/DMO-A01__r01__en-US.html">DMO-A01 · en-US</a></li><li><a href="./media/d2-batch-a/r01/print/DMO-A02__r01__en-US.html">DMO-A02 · en-US</a></li></ul></section></noscript><script type="module" src="./app.mjs"></script></body></html>
+
+diff --git a/prototype/media-host.mjs b/prototype/media-host.mjs
+new file mode 100644
+index 0000000..3304f92
+--- /dev/null
++++ b/prototype/media-host.mjs
+@@ -0,0 +1,39 @@
++import {navigate} from './navigation.mjs';
++const assets={'SCN-SCOPE':'DMO-A01','SCN-ENTITY':'DMO-A02'};
++const times={'DMO-A01':[0,3,6,9.5,13],'DMO-A02':[0,3,6,9.5,13,16.5]};
++export function sanitiseSnapshot(scene,value){
++ const asset=Object.hasOwn(assets,scene)?assets[scene]:null;
++ if(!asset||!value||value.asset!==asset||value.revision!=='r01'||!Number.isFinite(value.time))return null;
++ const holdPassed=asset==='DMO-A02'&&value.holdPassed===true;
++ const time=Math.max(0,Math.min(value.time,asset==='DMO-A01'?16:holdPassed?20:9.5));
++ return {asset,revision:'r01',time,beat:times[asset].findLastIndex(t=>t<=time),holdPassed,playing:false};
++}
++export function previewNavigation(n,scene){
++ if(!Object.hasOwn(assets,scene))return n;
++ return {...navigate(n,{type:'SCENE',id:scene}),page:'studio',mode:n.mode==='print'?'print':n.mode,storyCursor:scene==='SCN-SCOPE'?0:1};
++}
++// Narrow presentation-only adapter: never receives a case/store/dispatch function.
++export function createMediaHost({read,write,load=()=>import('./batch-a-media.mjs')}){
++ let controller=null,ticket=0,activeScene=null,abort=null;
++ const stop=()=>{if(controller){controller.pause();const safe=sanitiseSnapshot(activeScene,controller.snapshot());if(safe)write(activeScene,safe);controller.destroy();controller=null;}ticket++;abort?.abort();abort=null;activeScene=null;};
++ return {
++  stop,
++  async mount(element,{scene,locale,comparison}){
++   stop();if(!element||!Object.hasOwn(assets,scene))return;
++   const own=++ticket;activeScene=scene;abort=new AbortController();const signal=abort.signal;const fallback=element.parentElement?.querySelector('.media-fallback');
++   try{
++    const module=await load();if(own!==ticket||!element.isConnected)return;
++    const instance=await module.mountMedia(element,{scene,locale,comparison,signal,snapshot:sanitiseSnapshot(scene,read(scene)),onChange:value=>{
++     if(own!==ticket||activeScene!==scene)return;const safe=sanitiseSnapshot(scene,value);if(safe)write(scene,safe);
++    }});
++    if(own!==ticket||!element.isConnected){instance.destroy();return;}
++    controller=instance;element.dataset.mediaStatus='ready';if(fallback)fallback.open=false;
++   }catch{
++    if(own!==ticket)return;element.dataset.mediaStatus='fallback';
++    const notice=locale==='zh-CN'?'播放器不可用；以下完整静态讲解仍可阅读与打印。':'Player unavailable; the complete static story below remains readable and printable.';
++    (element.shadowRoot||element).textContent=notice;
++    if(fallback)fallback.open=true;
++   }
++  }
++ };
++}
+
+diff --git a/prototype/media-static.mjs b/prototype/media-static.mjs
+new file mode 100644
+index 0000000..7fc2d14
+--- /dev/null
++++ b/prototype/media-static.mjs
+@@ -0,0 +1,11 @@
++import {story} from './batch-a-media-story.mjs';
++const esc=x=>String(x??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
++export function staticMediaStory(scene,locale='en-AU'){
++ const asset=scene==='SCN-SCOPE'?'DMO-A01':scene==='SCN-ENTITY'?'DMO-A02':null;if(!asset)return '';
++ const t=story.locales[locale]||story.locales['en-AU'];
++ const facts=[`Entity A · Australia / FX forward`,`Group A · ${t.group_not_key}`,`Entity B · Singapore / ${t.reported} / Person T · ${t.employer}: Entity B`,`${t.booking}: ${t.not_provided} / ${t.eligibility}: ${t.not_assessed}`,`${t.principal}: Entity A / ${t.coordinate}: ${t.evidence_required}`,`${t.declarations}: ${t.not_established} / ${t.agreements}: ${t.not_established} / ${t.trading}: ${t.not_assessed}`,`EV-A05: ${t.not_received} / ${t.owner}: ${t.unassigned}`,t.prep_gate,t.no_send,t.publication];
++ return `<section class="media-static-story" data-static-asset="${asset}" lang="${esc(locale)}"><h3>${asset} · panel-first / r01 · ${esc(t.read_only)}</h3><p>${esc(locale==='zh-CN'?'固定合成叙事，非当前案件记录；播放不更新业务状态。':'Frozen synthetic narrative, not the live case record; playback never updates business state.')}</p><ol>${story.cues[asset].map(c=>`<li data-media-cue="${c.id}"><h4>${c.id} · ${esc(t[c.title])}</h4><p>${esc(t[c.description])}</p><small>${esc(c.beat)} · ${esc(c.diagram)} · ${c.start}–${c.end}s</small></li>`).join('')}</ol><h4>${esc(t.not_ready)}</h4><ul>${facts.map(x=>`<li>${esc(x)}</li>`).join('')}</ul></section>`;
++}
++export function mediaSlot(scene,locale){
++ const zh=locale==='zh-CN';return `<section class="mainline-media" aria-label="${zh?'已批准只读讲解':'Approved read-only story'}"><p class="media-boundary">${zh?'已批准样片 · 只读故事层。下方「实际会话」独立保留最新业务记录。':'Approved sample · read-only story layer. The live session below retains its latest business records.'}</p><div class="media-player-slot" data-media-scene="${scene}" aria-label="${zh?'只读播放器':'Read-only player'}"></div><details class="media-fallback" open><summary>${zh?'完整静态讲解（所有节点）':'Complete static story (all cues)'}</summary>${staticMediaStory(scene,locale)}</details></section>`;
++}
+
+diff --git a/prototype/media/build-batch-a-r01.mjs b/prototype/media/build-batch-a-r01.mjs
+new file mode 100644
+index 0000000..4b8847e
+--- /dev/null
++++ b/prototype/media/build-batch-a-r01.mjs
+@@ -0,0 +1,34 @@
++// Deterministic, allowlisted copy of the user-approved frozen sample. No downloads.
++import {readFile,writeFile,mkdir,copyFile,readdir} from 'node:fs/promises';
++import {createHash} from 'node:crypto';
++import {fileURLToPath} from 'node:url';
++import path from 'node:path';
++const source=new URL('../../../experiments/d2-batch-a-media/',import.meta.url);
++const destination=new URL('./d2-batch-a/r01/',import.meta.url);
++const hash=b=>createHash('sha256').update(b).digest('hex');
++const selection=JSON.parse(await readFile(new URL('integration-selection.json',source)));
++for(const file of selection.source_manifests){if(hash(await readFile(new URL(file.path,source)))!==file.sha256)throw Error(`Selection hash mismatch: ${file.path}`);}
++const files=['src/content.js','src/views.js','src/player.js','styles/media.css','integration-selection.json','MAINLINE_INTEGRATION_HANDOFF.md','source/cue-manifest.json','source/diagram-contract.json','source/image-generation.md','source/Clear_to_Trade_D2_Batch_A_Scope_Entity_Final_v1.0.md','source/Clear_to_Trade_D2_Batch_A_Media_Format_and_Demo_Brief_v1.0.md',...selection.source_manifests.map(x=>x.path)];
++for(const locale of ['zh-CN','en-AU','en-US']){
++ files.push(`locales/${locale}.json`);
++ for(const asset of ['DMO-A01','DMO-A02'])files.push(`print/${asset}__r01__${locale}.html`,`assets/posters/${asset}__panel-first__r01__${locale}__C1.png`);
++}
++for(const p of await readdir(new URL('assets/personas/',source)))if(p.endsWith('.webp'))files.push(`assets/personas/${p}`);
++for(const kind of ['DG-SCOPE-A','DG-ENTITY-A','DG-ENABLE-A'])for(const locale of ['zh-CN','en-AU']){
++ files.push(`source/diagrams/${kind}__r01__${locale}.json`);
++ for(const ext of ['svg','html'])files.push(`assets/diagrams/${kind}__r01__${locale}.${ext}`);
++}
++const records=[];
++for(const file of [...new Set(files)].sort()){
++ const src=new URL(file,source),dst=new URL(file,destination),bytes=await readFile(src);
++ await mkdir(path.dirname(fileURLToPath(dst)),{recursive:true});await copyFile(src,dst);
++ if(hash(await readFile(dst))!==hash(bytes))throw Error(`Copy verification failed: ${file}`);
++ records.push({path:file,sha256:hash(bytes),bytes:bytes.length});
++}
++await writeFile(new URL('package-provenance.json',destination),JSON.stringify({selection_status:selection.selection_status,source:'experiments/d2-batch-a-media',runtime_origin:'same_origin_only',revision:'r01',files:records},null,2)+'\n');
++// Embed frozen text outside the optional media package. Blocking all media URLs
++// must not prevent the host or its complete text/print fallback from loading.
++const {contract,cues}=await import(new URL('src/content.js',source));const locales={};
++for(const l of ['zh-CN','en-AU','en-US'])locales[l]=JSON.parse(await readFile(new URL(`locales/${l}.json`,source)));
++await writeFile(new URL('../batch-a-media-story.mjs',import.meta.url),'// Generated by media/build-batch-a-r01.mjs from approved r01; do not hand edit.\nexport const story='+JSON.stringify({contract,cues,locales})+';\n');
++console.log(JSON.stringify({copied:records.length,bytes:records.reduce((n,r)=>n+r.bytes,0),selection_hashes_verified:selection.source_manifests.length}));
+
+diff --git a/prototype/tests/media-host.test.mjs b/prototype/tests/media-host.test.mjs
+new file mode 100644
+index 0000000..783b41a
+--- /dev/null
++++ b/prototype/tests/media-host.test.mjs
+@@ -0,0 +1,65 @@
++import test from 'node:test';
++import assert from 'node:assert/strict';
++import {sanitiseSnapshot,previewNavigation,createMediaHost} from '../media-host.mjs';
++import {staticMediaStory} from '../media-static.mjs';
++import {initialNavigation} from '../navigation.mjs';
++import {batchUI} from '../batch-a-ui.mjs';
++import {createBatchA} from '../batch-a-engine.mjs';
++import {readFileSync} from 'node:fs';
++test('host accepts only media fields and never restores playback',()=>{
++ const input={asset:'DMO-A01',revision:'r01',time:6,beat:2,playing:true,holdPassed:false,case:{ready:true}};
++ assert.deepEqual(sanitiseSnapshot('SCN-SCOPE',input),{asset:'DMO-A01',revision:'r01',time:6,beat:2,holdPassed:false,playing:false});
++ assert.equal(input.playing,true);
++ assert.equal(sanitiseSnapshot('SCN-ENTITY',input),null);
++ assert.equal(sanitiseSnapshot('__proto__',input),null);
++ assert.equal(sanitiseSnapshot('SCN-SCOPE',{...input,time:Infinity}),null);
++});
++test('frozen Entity narrative never replaces latest live receipt or authority',()=>{
++ const data=createBatchA(JSON.parse(readFileSync(new URL('../../04_operating_model/round-a/synthetic-case-fixture.json',import.meta.url))));
++ data.evidence.push({alias:'EV-A05',receipt_status:'received'});
++ data.authorities.find(a=>a.action_type==='coordinate_information').status='established_for_demo';
++ const n={...initialNavigation(),scenario:'SCN-ENTITY'},html=batchUI({data,n,L:en=>en,button:()=>''}).scene();
++ assert.ok(html.includes('EV-A05: Not received'));assert.ok(html.includes('Received in live session'));
++ assert.ok(html.includes('established_for_demo'));assert.ok(!html.includes('EV-A05 has not been received.'));
++});
++test('host ignores stale async completion and payloads, snapshots pause on stop',async()=>{
++ let complete,callback,destroyed=0,paused=0;const writes=[];
++ const valid={asset:'DMO-A01',revision:'r01',time:6,beat:2,playing:true,holdPassed:false};
++ const el={isConnected:true,dataset:{},parentElement:{querySelector:()=>({open:true})}};
++ const h=createMediaHost({read:()=>valid,write:(...x)=>writes.push(x),load:async()=>({mountMedia:async(_,options)=>{callback=options.onChange;await new Promise(r=>complete=r);return {pause(){paused++},destroy(){destroyed++},snapshot:()=>valid}}})});
++ const pending=h.mount(el,{scene:'SCN-SCOPE',locale:'en-AU',comparison:'current'});await new Promise(r=>setImmediate(r));
++ h.stop();callback(valid);complete();await pending;assert.equal(writes.length,0);assert.equal(destroyed,1);
++ const next=h.mount(el,{scene:'SCN-SCOPE',locale:'zh-CN',comparison:'target'});await new Promise(r=>setImmediate(r));complete();await next;
++ callback({...valid,case:{ready:true}});h.stop();assert.equal(paused,1);assert.equal(destroyed,2);assert.equal(writes.at(-1)[1].playing,false);assert.ok(!('case' in writes.at(-1)[1]));
++});
++test('optional module failure leaves readable static fallback open',async()=>{
++ const fallback={open:false},el={isConnected:true,dataset:{},parentElement:{querySelector:()=>fallback}};
++ const h=createMediaHost({read:()=>null,write:()=>assert.fail('No write on load failure'),load:async()=>{throw Error('blocked')}});
++ await h.mount(el,{scene:'SCN-ENTITY',locale:'zh-CN'});assert.equal(fallback.open,true);assert.equal(el.dataset.mediaStatus,'fallback');assert.ok(el.textContent.includes('静态'));
++});
++test('required resource failure displays notice inside an existing shadow root',async()=>{
++ const fallback={open:false},shadowRoot={},el={shadowRoot,isConnected:true,dataset:{},parentElement:{querySelector:()=>fallback}};
++ const h=createMediaHost({read:()=>null,write:()=>{},load:async()=>({mountMedia:async()=>{throw Error('Locale blocked after attaching shadow')}})});
++ await h.mount(el,{scene:'SCN-ENTITY',locale:'en-US'});assert.match(shadowRoot.textContent,/Player unavailable/);assert.equal(fallback.open,true);
++});
++test('unpassed A02 hold caps restored time, wrong revision ignored',()=>{
++ const x={asset:'DMO-A02',revision:'r01',time:20,beat:5,holdPassed:false};
++ assert.equal(sanitiseSnapshot('SCN-ENTITY',x).time,9.5);
++ assert.equal(sanitiseSnapshot('SCN-ENTITY',x).beat,3);
++ assert.equal(sanitiseSnapshot('SCN-ENTITY',{...x,revision:'future'}),null);
++});
++test('direct preview changes navigation only; existing case/role/locale preserved',()=>{
++ const n={...initialNavigation(),role:'ROLE-RM',locale:'en-US'};
++ const out=previewNavigation(n,'SCN-ENTITY');
++ assert.equal(out.modal,true);assert.equal(out.scenario,'SCN-ENTITY');assert.equal(out.role,n.role);assert.equal(out.locale,n.locale);
++ assert.deepEqual(previewNavigation(n,'<script>'),n);assert.equal(n.modal,false);
++});
++test('static fallback always contains all 5+6 cues in all locales, with guard facts',()=>{
++ for(const locale of ['zh-CN','en-AU','en-US']){
++  const html=staticMediaStory('SCN-SCOPE',locale)+staticMediaStory('SCN-ENTITY',locale);
++  assert.equal((html.match(/data-media-cue=/g)||[]).length,11);
++  for(const s of ['A01-C5','A02-C6','EV-A05','Entity A','Entity B','Person T','FX forward'])assert.ok(html.includes(s),s);
++  assert.ok(html.includes(locale==='zh-CN'?'尚未指派':'Unassigned'));
++  assert.ok(!html.includes('data-action='));
++ }
++});
+
+diff --git a/prototype/qa/media-mainline-browser.mjs b/prototype/qa/media-mainline-browser.mjs
+new file mode 100644
+index 0000000..b040a88
+--- /dev/null
++++ b/prototype/qa/media-mainline-browser.mjs
+@@ -0,0 +1,52 @@
++import {chromium} from '/Users/christinaliu/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright/index.mjs';
++import {mkdirSync,writeFileSync} from 'node:fs';
++import {fileURLToPath} from 'node:url';
++import assert from 'node:assert/strict';
++const dir=fileURLToPath(new URL('./media-mainline/',import.meta.url));mkdirSync(dir,{recursive:true});
++const browser=await chromium.launch({executablePath:'/Applications/Google Chrome.app/Contents/MacOS/Google Chrome',headless:true});
++const context=await browser.newContext({viewport:{width:1440,height:1000}}),page=await context.newPage();
++page.setDefaultTimeout(6000);
++const results=[],errors=[],requests=[],badResponses=[];
++page.on('pageerror',e=>errors.push(e.message));page.on('request',r=>requests.push(r.url()));page.on('response',r=>{if(r.status()>=400)badResponses.push({url:r.url(),status:r.status()})});
++const base='http://127.0.0.1:8765/prototype/';
++const state=()=>page.evaluate(()=>JSON.parse(sessionStorage.getItem('ctt-round-a-v1')));
++const media=()=>page.locator('.media-player-slot');
++const control=action=>media().locator(`[data-action="${action}"]`);
++const click=(action,value)=>page.locator(`#scenario-dialog[open] [data-action="${action}"]${value?`[data-value="${value}"]`:''}`).first().click();
++const hostClick=(action,value)=>page.locator(`#app [data-action="${action}"]${value?`[data-value="${value}"]`:''}`).filter({visible:true}).first().click();
++const ready=()=>page.waitForSelector('[data-media-status="ready"]');
++const position=async()=>({time:Number(await media().getAttribute('data-media-time')),beat:Number(await media().getAttribute('data-media-beat')),playing:await media().getAttribute('data-media-playing')});
++const scene=async(s,locale='en-AU')=>{await page.goto(`${base}?locale=${locale}&scene=${s}`);await ready();};
++async function check(id,name,fn){try{await fn();results.push({id,name,status:'passed'});console.log(`PASS ${id} ${name}`)}catch(e){results.push({id,name,status:'failed',error:e.message});console.log(`FAIL ${id} ${e.message}`)}}
++const shot=async(name)=>{await media().scrollIntoViewIfNeeded();await page.screenshot({path:dir+name+'.png'});};
++try{
++ await scene('SCN-SCOPE');
++ await check('MH-01','Mainline selected local r01; initially paused',async()=>{assert.equal(await media().getAttribute('data-media-asset'),'DMO-A01');assert.equal((await position()).playing,'false');assert.equal((await position()).time,0);assert.equal(await media().locator('img').count()>0,true);});
++ const before=(await state()).data;
++ await check('MH-02','Next / Previous / Replay are read-only; Replay stays paused',async()=>{await control('next').click();assert.equal((await position()).beat,1);await control('previous').click();assert.equal((await position()).beat,0);await control('next').click();await control('replay').click();assert.equal((await position()).time,0);assert.equal((await position()).playing,'false');assert.deepEqual((await state()).data,before);});
++ await check('MH-03','Play advances, Pause stops, end does not loop',async()=>{await control('play').click();await page.waitForTimeout(400);await control('play').click();const p=await position();assert.ok(p.time>0);await page.waitForTimeout(150);assert.equal((await position()).time,p.time);for(let i=0;i<5;i++)if(!await control('next').isDisabled())await control('next').click();await control('play').click();await page.waitForTimeout(3500);assert.equal((await position()).playing,'false');assert.equal((await position()).time,16);});
++ await check('MH-04','Current/Target and all 3 locales preserve cue and case',async()=>{await control('replay').click();await control('next').click();await control('next').click();for(const locale of ['zh-CN','en-US','en-AU'])for(const comparison of ['current','target']){await page.locator('#scene-locale').selectOption(locale);await ready();await click('compare',comparison);await ready();assert.equal((await position()).time,6);assert.equal((await state()).navigation.locale,locale);assert.equal((await state()).navigation.comparison,comparison);assert.equal((await position()).playing,'false');assert.deepEqual((await state()).data,before);}await shot('scope.en-AU');});
++ await check('MH-05','Close and reopen restores media position paused',async()=>{await click('close');assert.equal(await media().count(),0);await hostClick('scene','SCN-SCOPE');await ready();assert.equal((await position()).time,6);assert.equal((await position()).playing,'false');});
++ await check('MH-06','Current→Target Product→Scenario restores Current, locale, role, camera and scroll',async()=>{await click('compare','current');await ready();await media().scrollIntoViewIfNeeded();const origin=(await state()).navigation;await click('product','scope');const after=(await state()).navigation;assert.equal(after.comparison,'target');await page.locator('#locale').selectOption('zh-CN');await hostClick('return','scenario');await ready();const n=(await state()).navigation;assert.equal(n.comparison,'current');assert.equal(n.scenario,'SCN-SCOPE');assert.equal(n.locale,'zh-CN');assert.equal(n.role,origin.role);assert.deepEqual(n.camera,origin.camera);assert.equal((await position()).time,6);assert.ok(await page.locator('#scenario-dialog').evaluate(e=>e.scrollTop)>0);});
++ await check('MH-07','Dirty Stay / Discard / Save preserve correct return contract',async()=>{await click('product','scope');await page.locator('#batch-purpose').fill('Unsaved synthetic purpose');await hostClick('return','scenario');assert.ok(await page.locator('#dirty-dialog').isVisible());await page.locator('[data-action="guard"][data-value="stay"]').click();assert.equal(await page.locator('#batch-purpose').inputValue(),'Unsaved synthetic purpose');await hostClick('return','scenario');await page.locator('[data-action="guard"][data-value="discard"]').click();await ready();await click('product','scope');assert.notEqual(await page.locator('#batch-purpose').inputValue(),'Unsaved synthetic purpose');await page.locator('#batch-purpose').fill('Saved synthetic workshop purpose');await hostClick('return','scenario');await page.locator('[data-action="guard"][data-value="save"]').click();await ready();assert.equal((await state()).data.scopes[0].business_purpose,'Saved synthetic workshop purpose');assert.equal((await position()).time,6);});
++ await check('MH-08','Back to Journey and Continue Story retain business state; scene times independent',async()=>{const b=(await state()).data;await click('product','scope');await hostClick('return','journey');assert.equal(await media().count(),0);await hostClick('scene','SCN-SCOPE');await ready();await click('continue');await ready();assert.equal(await media().getAttribute('data-media-asset'),'DMO-A02');assert.equal((await position()).time,0);assert.deepEqual((await state()).data,b);});
++ await check('MH-09','A02 playback stops at 9.5s; Play cannot pass; Next alone unlocks preparation',async()=>{await control('play').click();await page.waitForTimeout(10100);assert.equal((await position()).time,9.5);assert.equal((await position()).playing,'false');if(!await control('play').isDisabled())await control('play').click();await page.waitForTimeout(200);assert.equal((await position()).time,9.5);await shot('entity-hold.zh-CN');await control('next').click();assert.equal((await position()).time,13);assert.match(await media().locator('.media-shell').innerText(),/准备|preparation/i);});
++ await check('MH-10','Malicious/repeated media messages and focus never change live business data',async()=>{const b=(await state()).data;await page.evaluate(()=>{for(let i=0;i<30;i++)for(const type of ['working_scope_recorded','authority_gap_opened','media_finished','open_product_requested','case_clearance_published'])window.postMessage({type,asset_id:'DMO-A02',asset_revision:'r01',trade_enabled:true,readiness:'ready',evidence:['EV-A05']},'*');});await page.waitForTimeout(100);await control('previous').click();await control('next').click();assert.deepEqual((await state()).data,b);assert.equal(b.case.id,'DEMO-CTT-001');});
++ await check('MH-11','Simulated blur / hidden lifecycle pause without autoplay on return',async()=>{await control('play').click();await page.waitForTimeout(120);await page.evaluate(()=>window.dispatchEvent(new Event('blur')));assert.equal((await position()).playing,'false');const t=(await position()).time;await page.waitForTimeout(150);assert.equal((await position()).time,t);await control('play').click();await page.evaluate(()=>{Object.defineProperty(document,'hidden',{configurable:true,value:true});document.dispatchEvent(new Event('visibilitychange'));delete document.hidden;document.dispatchEvent(new Event('visibilitychange'));});assert.equal((await position()).playing,'false');});
++ await check('MH-12','Keyboard help Escape does not close host; reduced motion gives static controls',async()=>{const help=media().locator('[data-help]');await help.focus();await help.click();if(!await media().locator('[data-help-content]').isVisible())await help.click();await page.keyboard.press('Escape');assert.ok(await page.locator('#scenario-dialog').isVisible());assert.ok(!await media().locator('[data-help-content]').isVisible());await help.click();await media().locator('[data-help-close]').click();assert.ok(!await media().locator('[data-help-content]').isVisible());await page.emulateMedia({reducedMotion:'reduce'});await control('replay').click();await control('play').click();const p=await position();await page.waitForTimeout(250);assert.equal((await position()).time,p.time);assert.equal((await position()).playing,'false');await control('next').click();assert.equal((await position()).beat,p.beat+1);});
++ await check('MH-13','1440 / 1366 / mobile and 200%-equivalent reflow: no component horizontal clipping',async()=>{for(const size of [{width:1440,height:1000},{width:1366,height:900},{width:390,height:844},{width:720,height:500}]){await page.setViewportSize(size);await media().scrollIntoViewIfNeeded();assert.ok(await media().evaluate(e=>e.scrollWidth<=e.clientWidth+1),`${size.width} outer overflow`);const bad=await media().evaluate(e=>[...e.shadowRoot.querySelectorAll('.stage,.stage-body,.work-surface')].filter(x=>x.scrollWidth>x.clientWidth+2).map(x=>x.className));assert.deepEqual(bad,[],`${size.width} inner overflow`);await shot(`entity.${size.width}`);}await page.setViewportSize({width:1440,height:1000});});
++ await check('MH-21','Horizontal journey drag→scene→close restores semantic camera and offset',async()=>{await click('close');const box=page.locator('.journey-scroll');await box.scrollIntoViewIfNeeded();const rect=await box.boundingBox();await page.mouse.move(rect.x+rect.width-150,rect.y+18);await page.mouse.down();await page.mouse.move(rect.x+200,rect.y+18,{steps:12});await page.mouse.up();const left=await box.evaluate(e=>e.scrollLeft);assert.ok(left>0,'drag should move journey');const camera=(await state()).navigation.camera;await hostClick('scene','SCN-SCOPE');await ready();await click('close');assert.ok(Math.abs(await box.evaluate(e=>e.scrollLeft)-left)<2);assert.deepEqual((await state()).navigation.camera,camera);});
++ await check('MH-14','Print all 11 cues in every locale, not just active beat',async()=>{const b=(await state()).data;for(const locale of ['zh-CN','en-AU','en-US']){await page.goto(`${base}?mode=print&locale=${locale}`);await page.waitForSelector('.print-sheet');assert.equal(await page.locator('[data-media-cue]').count(),11);assert.deepEqual((await state()).data,b);await page.pdf({path:dir+`mainline-print.${locale}.pdf`,format:'A4',printBackground:true});} });
++ await check('MH-15','Healthy runtime uses local packaged assets only with no 404/page errors',async()=>{assert.deepEqual(badResponses,[]);assert.deepEqual(errors,[]);assert.ok(requests.some(u=>u.includes('/media/d2-batch-a/r01/assets/personas/')));assert.ok(requests.every(u=>!u.includes(':4182')));});
++}finally{await context.close();}
++for(const [id,kind,pattern] of [['MH-16','module','**/batch-a-media.mjs'],['MH-17','all-media','**/media/d2-batch-a/r01/**'],['MH-18','visual-assets','**/media/d2-batch-a/r01/assets/**']]){
++ await check(id,`${kind} blocked: host, text, static print and return usable`,async()=>{
++  const ctx=await browser.newContext({viewport:{width:1366,height:900}}),p=await ctx.newPage();await p.route(pattern,r=>r.abort());
++  try{await p.goto(base+'?scene=SCN-ENTITY&locale=en-US');await p.waitForSelector('.media-fallback');await p.waitForTimeout(500);assert.equal(await p.locator('[data-media-cue]').count(),6);const text=await p.locator('.media-static-story').textContent();assert.match(text,/EV-A05/);assert.match(text,/Not ready/);if(kind!=='visual-assets')assert.equal(await p.locator('.media-fallback').getAttribute('open'),'');await p.screenshot({path:dir+`fallback.${kind}.png`});await p.locator('#scenario-dialog [data-action="product"]').click();assert.ok(await p.locator('#batch-purpose, .authority-table').count()>0);await p.locator('#app [data-action="return"][data-value="scenario"]').click();await p.waitForSelector('.media-fallback');await p.goto(base+'?mode=print&locale=en-US');await p.waitForSelector('.print-sheet');assert.equal(await p.locator('[data-media-cue]').count(),11);}finally{await ctx.close();}
++ });
++}
++await check('MH-19','JavaScript-disabled mainline offers local complete static pages',async()=>{const ctx=await browser.newContext({javaScriptEnabled:false}),p=await ctx.newPage();try{await p.goto(base);assert.equal(await p.locator('noscript a').count(),6);await p.locator('noscript a').first().click();assert.match(await p.locator('body').innerText(),/A01-C5/);}finally{await ctx.close()}});
++await check('MH-22','Both player stylesheets blocked: readable emergency layout and controls',async()=>{const ctx=await browser.newContext({viewport:{width:390,height:844}}),p=await ctx.newPage();try{await p.route('**/batch-a-media.css',r=>r.abort());await p.route('**/media/d2-batch-a/r01/styles/media.css',r=>r.abort());await p.goto(base+'?scene=SCN-ENTITY&locale=zh-CN');await p.waitForSelector('[data-media-status="ready"]');const slot=p.locator('.media-player-slot');assert.ok((await slot.locator('.media-shell').innerText()).includes('Entity A'));await slot.locator('[data-action="next"]').click();assert.equal(await slot.getAttribute('data-media-beat'),'1');assert.ok(await slot.evaluate(e=>e.scrollWidth<=e.clientWidth+2));await p.screenshot({path:dir+'fallback.styles.png'});}finally{await ctx.close()}});
++results.push({id:'MH-20',name:'Safari / Firefox / native browser 200% zoom / assistive-technology audit',status:'not-run',reason:'Chromium host regression; 720 CSS-px layout approximates 1440px at 200%, not a native zoom or screen-reader certification.'});
++writeFileSync(dir+'browser-results.json',JSON.stringify({at:new Date().toISOString(),browser:await browser.version(),results,errors,requests,badResponses},null,2)+'\n');await browser.close();
++console.log(JSON.stringify({passed:results.filter(r=>r.status==='passed').length,failed:results.filter(r=>r.status==='failed').length,not_run:results.filter(r=>r.status==='not-run').length}));if(results.some(r=>r.status==='failed'))process.exitCode=1;
+
+diff --git a/prototype/qa/media-preview-smoke.mjs b/prototype/qa/media-preview-smoke.mjs
+new file mode 100644
+index 0000000..9717f31
+--- /dev/null
++++ b/prototype/qa/media-preview-smoke.mjs
+@@ -0,0 +1,12 @@
++import {chromium} from '/Users/christinaliu/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright/index.mjs';
++import {writeFileSync} from 'node:fs';
++import assert from 'node:assert/strict';
++const browser=await chromium.launch({executablePath:'/Applications/Google Chrome.app/Contents/MacOS/Google Chrome',headless:true});
++const page=await browser.newPage({viewport:{width:1440,height:1000}}),results=[];
++try{for(const scene of ['SCN-SCOPE','SCN-ENTITY']){
++ await page.goto(`http://127.0.0.1:8765/prototype/?scene=${scene}&locale=zh-CN&focus=media`);await page.waitForSelector('[data-media-status="ready"]');
++ const geometry=await page.evaluate(()=>{const head=document.querySelector('.modal-head'),panel=document.querySelector('.mainline-media'),slot=document.querySelector('.media-player-slot');return {headBottom:head.getBoundingClientRect().bottom,panelTop:panel.getBoundingClientRect().top,transportPosition:getComputedStyle(slot.shadowRoot.querySelector('.transport')).position,time:slot.dataset.mediaTime};});
++ assert.ok(geometry.panelTop>=geometry.headBottom);assert.ok(geometry.panelTop<geometry.headBottom+24);assert.equal(geometry.transportPosition,'static');assert.equal(geometry.time,'0');
++ await page.screenshot({path:`prototype/qa/media-mainline/preview.${scene}.zh-CN.png`});
++ results.push({scene,status:'passed',geometry});
++}writeFileSync('prototype/qa/media-mainline/preview-smoke.json',JSON.stringify(results,null,2)+'\n');console.log(JSON.stringify(results));}finally{await browser.close()}
+
+diff --git a/prototype/qa/media-component-print.mjs b/prototype/qa/media-component-print.mjs
+new file mode 100644
+index 0000000..b33e831
+--- /dev/null
++++ b/prototype/qa/media-component-print.mjs
+@@ -0,0 +1,16 @@
++import {chromium} from '/Users/christinaliu/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright/index.mjs';
++import {writeFileSync} from 'node:fs';
++import assert from 'node:assert/strict';
++const browser=await chromium.launch({executablePath:'/Applications/Google Chrome.app/Contents/MacOS/Google Chrome',headless:true});
++const page=await browser.newPage({viewport:{width:1000,height:1200}}),results=[];
++try{await page.route('**/component-print-proof',r=>r.fulfill({contentType:'text/html',body:'<!doctype html><html><head><meta charset="utf-8"></head><body><div id="proof"></div></body></html>'}));
++ for(const scene of ['SCN-SCOPE','SCN-ENTITY']){
++  await page.goto('http://127.0.0.1:8765/prototype/component-print-proof');await page.evaluate(async scene=>{const {mountMedia}=await import('/prototype/batch-a-media.mjs');await mountMedia(document.querySelector('#proof'),{scene,locale:'en-AU'});},scene);
++  await page.emulateMedia({media:'print'});const articles=page.locator('#proof .static-story article');const count=scene==='SCN-SCOPE'?5:6;
++  assert.equal(await articles.count(),count);for(let i=0;i<count;i++)assert.ok(await articles.nth(i).isVisible(),`cue ${i} must render in print`);
++  const help=page.locator('#proof [data-help-content]');assert.equal(await help.getAttribute('role'),'dialog');const name=await help.getAttribute('aria-labelledby');assert.ok(name);assert.ok((await page.locator(`#proof #${name}`).textContent()).trim());
++  await page.locator('#proof .static-story').screenshot({path:`prototype/qa/media-mainline/component-print.${scene}.png`});
++  results.push({scene,status:'passed',visible_print_cues:count,help_role:'dialog'});
++ }
++ writeFileSync('prototype/qa/media-mainline/component-print-results.json',JSON.stringify(results,null,2)+'\n');console.log(JSON.stringify(results));
++}finally{await browser.close()}
+
+diff --git a/00_governance/media-mainline/verify.mjs b/00_governance/media-mainline/verify.mjs
+new file mode 100644
+index 0000000..b23c05a
+--- /dev/null
++++ b/00_governance/media-mainline/verify.mjs
+@@ -0,0 +1,26 @@
++import {spawnSync} from 'node:child_process';
++import {readFileSync,writeFileSync,readdirSync} from 'node:fs';
++import {createHash} from 'node:crypto';
++const root='00_governance/media-mainline/',pkg='prototype/media/d2-batch-a/r01/';
++const tests=readdirSync('prototype/tests').filter(f=>f.endsWith('.test.mjs')).map(f=>'prototype/tests/'+f);
++const run=spawnSync(process.execPath,['--test',...tests],{encoding:'utf8'});
++writeFileSync(root+'tests.tap',run.stdout+run.stderr);
++const counts=Object.fromEntries(['tests','pass','fail','skipped'].map(k=>[k,Number(run.stdout.match(new RegExp('# '+k+' (\\d+)'))?.[1]||0)]));
++const browser=JSON.parse(readFileSync('prototype/qa/media-mainline/browser-results.json'));
++const report={at:new Date().toISOString(),command:'node --test prototype/tests/*.test.mjs',exit_code:run.status,counts,browser:{passed:browser.results.filter(r=>r.status==='passed').length,failed:browser.results.filter(r=>r.status==='failed').length,not_run:browser.results.filter(r=>r.status==='not-run').length,version:browser.browser},scope:'Fresh local mainline host checks; separate from historical standalone sample checks.',files:Object.fromEntries(['prototype/app.mjs','prototype/batch-a-ui.mjs','prototype/media-host.mjs','prototype/media-static.mjs','prototype/batch-a-media.mjs','prototype/batch-a-media.css','prototype/batch-a-engine.mjs','prototype/collaboration-engine.mjs','prototype/case-engine.mjs'].map(p=>[p,createHash('sha256').update(readFileSync(p)).digest('hex')]))};
++writeFileSync(root+'verification-results.json',JSON.stringify(report,null,2)+'\n');
++console.log(JSON.stringify(report,null,2));
++if(run.status!==0||report.browser.failed||browser.errors.length){process.exitCode=1;}else{
++ const source=JSON.parse(readFileSync(pkg+'asset-manifest.json')).assets;
++ const provenance=JSON.parse(readFileSync(pkg+'package-provenance.json'));
++ const manifestPath='prototype/diagrams/batch-a/media-manifest.json';
++ const manifest=JSON.parse(readFileSync(manifestPath));
++ for(const item of manifest){
++  if(!['MED-A-PER-T','MED-A-PER-OPS','DMO-A01','DMO-A02'].includes(item.asset_id))continue;
++  const approved=source.find(x=>x.asset_id===item.asset_id);if(!approved)throw Error('Source metadata missing '+item.asset_id);
++  const demo=item.asset_id.startsWith('DMO-'),scene=item.asset_id==='DMO-A02'?'SCN-ENTITY':'SCN-SCOPE';
++  Object.assign(item,{variant_id:demo?'panel-first':'editorial',asset_revision:'r01',case_fixture_revision:approved.case_fixture_revision,source_snapshot_ref:pkg+approved.source_snapshot_ref,file_format:approved.file_format,dimensions:approved.dimensions,duration:demo?approved.duration:null,fps:null,source_files:provenance.files.filter(f=>demo?['src/content.js','src/views.js','styles/media.css','source/cue-manifest.json'].includes(f.path):f.path.startsWith('assets/personas/'+item.asset_id+'__')).map(f=>({...f,path:pkg+f.path})),scenario_refs:demo?[scene]:['SCN-SCOPE','SCN-ENTITY'],beat_refs:approved.beat_refs||[],diagram_refs:approved.diagram_refs||[],preview_file:demo?`prototype/?scene=${scene}&locale=zh-CN`:pkg+approved.preview_file,poster_file:approved.poster_file?pkg+approved.poster_file:null,static_fallback:'prototype/media-static.mjs (all frozen cues) + mainline live records',locale:['zh-CN','en-AU','en-US'],alt_text_refs:approved.alt_text_refs||[],motion_mode:demo?'opt_in_controlled_or_static':'static',controls_supported:demo?['play','pause','previous','next','replay','static','help']:[],allowed_intents:[],data_mutation_scope:'none',licence_or_generation_provenance:pkg+'source/image-generation.md',content_status:'approved_sample_direction; synthetic_not_bank_policy',visual_status:'received_user_selected',promotion_status:'integrated_locally_for_review',test_status:{host:root+'verification-results.json',browser:'prototype/qa/media-mainline/browser-results.json',source_tests:'Historical sample results in packaged source manifest; not counted as host evidence'},review_ref:'User approval + experiments/d2-batch-a-media/MAINLINE_INTEGRATION_HANDOFF.md',known_limitations:['No iframe/postMessage host command API; callback is sanitized media state only','Frozen story is not the latest live case record','Safari/Firefox, native zoom and full assistive-technology audit not run','No encoded video/audio, production system integration or remote publication']});
++  item.file_size=item.source_files.reduce((n,f)=>n+f.bytes,0);item.file_size_scope='Listed source files only; shared dependencies in package-provenance.json';
++ }
++ writeFileSync(manifestPath,JSON.stringify(manifest,null,2)+'\n');
++}
+
+diff --git a/00_governance/media-mainline/diagram-crosswalk.md b/00_governance/media-mainline/diagram-crosswalk.md
+new file mode 100644
+index 0000000..72c5e6f
+--- /dev/null
++++ b/00_governance/media-mainline/diagram-crosswalk.md
+@@ -0,0 +1,19 @@
++# Diagram and state crosswalk — approved panel-first/r01
++
++Source: `experiments/d2-batch-a-media/MAINLINE_INTEGRATION_HANDOFF.md`, `integration-selection.json`, `source/diagram-contract.json`; user approval in current task. Status: synthetic / approved design, not bank policy. Local Archify 2.17 frozen exports reused; no regeneration or altered SVG geometry.
++
++| Alias | Existing mainline (workflow schema 2) | Selected media (architecture schema 1) | Ruling |
++| --- | --- | --- | --- |
++| DG-SCOPE-A | request→group→entity→scope→unknown; group→entity labelled RM clarifies | request→group-a display label; request→entity-a pre-authored RM clarification; entity-a→scope | Keep existing mainline workflow. Embed separately versioned native media SVG; not identical topology. group↔group-a and entity↔entity-a are semantic mappings, not renamed record IDs. Media makes evidence/clarification relation explicit. |
++| DG-ENTITY-A | b/a/t/evidence/gap; EV-A03 evidence node supports role; gap→a unproven | entity-b/entity-a/person-t/authority; EV-A03 on role-claim edge, EV-A02 on reported-parent edge; principal remains not established | Preserve both artifacts. Map b↔entity-b, a↔entity-a, t↔person-t, gap↔authority. Employment is not authority; reported parent is not counterparty/guarantor. No claim that topology is identical. |
++| DG-ENABLE-A | scope→gate→prepare/wait; prepare→notready; task-specific permission/hold gate | context→requirements (sufficient inputs + no holds), context→authority, authority→external (waiting) | Media is narrower: only known-context requirements preparation shown as possible. No readiness inheritance from the more general mainline preparation branch. Other branches remain not assessed. |
++
++Source qualification: source/diagram-contract.json preserves business semantics outside renderer shape types; `external` is a neutral rendering type, not a real system integration. EV-A01–03 available in frozen narrative; EV-A04 appears at A02-C2 as a pre-authored source event; EV-A05 not received. RM clarification at A01-C3 is narrative content, not a submitted live action. No new DEP, entity, scenario or case IDs.
++
++Mainline files `prototype/diagrams/batch-a/*` are not overwritten. Media files are under `prototype/media/d2-batch-a/r01/assets/diagrams/`; each native SVG, native HTML viewer and typed JSON retains its source SHA-256 in package-provenance.json. English-US reuses English-AU diagram bytes as approved by the source contract, while UI/captions use en-US resources. Viewers are optional separate-tab explanatory surfaces; local focus chips/panels do not invoke host Journey navigation or update a store.
++
++## Cue / navigation mapping
++
++SCN-SCOPE: A01-C1…C4 map to existing A-01…A-04; A01-C5 is the authored `A-exit` summary. SCN-ENTITY: A02-C1…C5 map B-01…B-05; A02-C6 is `B-exit`. These are presentation cues, not new business milestones. The older `navigation.batchBeats` remains untouched for legacy sessions; r01 cue/time state lives exclusively under session key `ctt-media-panel-first-r01`. It is not copied into the business fixture, audit log, readiness, drafts or version history.
++
++Latest case state and locale remain owned by the host. Frozen story facts remain explicitly marked read-only, separate from the live-session details. User actions are required in Product to change business records. A02-C4 holds at 9.5s until Next; advancing to preparation supplies neither evidence nor permission.
+
+diff --git a/00_governance/media-mainline/review-resolution.md b/00_governance/media-mainline/review-resolution.md
+new file mode 100644
+index 0000000..6d18a3e
+--- /dev/null
++++ b/00_governance/media-mainline/review-resolution.md
+@@ -0,0 +1,19 @@
++# Mainline integration checks and fixes
++
++Only selected Scope/Entity media integration is in scope. Existing case/Batch A/Batch B engines were not edited.
++
++| Finding / evidence | Root cause | Resolution / regression |
++| --- | --- | --- |
++| First screenshot: media transport covered dialog heading and language | Standalone sticky transport created a second navigation layer inside sticky host chrome | Embedded transport static; host slot isolated stacking context. Both direct-preview geometry checks place media below header. |
++| Mandatory locale/source failure could render fallback English in another locale | Component initially maintained a second fallback narrative | Required content/views/locale now reject after cleanup; host-localized all-cue fallback is independent of optional media files. Module/all-media-blocked browser checks. |
++| Help close could reopen when focus returned to trigger | focusin opened help again after programmatic restore | Refocus suppression; keyboard Escape and explicit close checks pass without closing host modal. |
++| Async mount may finish after user leaves scene | Awaited imports/fetches outlive the original DOM | Host ticket + AbortSignal, component abort/disconnect check, stale callback rejection. Host unit tests cover stale completion. |
++| Next at story end could move 16→13 | Last-beat clamping sought the last cue start | Dedicated RED regression failed, reducer fixed, then GREEN; ending remains stopped at16. |
++| Frozen EV-A05 text could contradict a later live Batch B receipt | Existing live authority prose was hardcoded to Batch A opening state | Fixed live text reads actual receipt and purpose status; immutable story explicitly retains its snapshot. Unit test checks both side by side. |
++| Independent component review: closed details would not render all cue children in print | display:block on details does not open the native content | Internal all-cue copy is now a non-collapsible print-only section. Actual Chromium print-media check confirms 5/6 cue articles are individually visible. Host all-cue printing remains independent. |
++| Independent review: interactive close button used tooltip semantics | Tooltip ARIA pattern is non-interactive | Labelled/described non-modal dialog; keyboard behavior retained. Focused browser role/name and print-visible checks passed. |
++| First browser script read shadow-host innerText / closed details as empty, and expected static Play not to step | Test harness did not account for Shadow DOM or approved reduced-motion stepping | Read shadow component DOM / fallback textContent; assert paused stepped behavior. Corrected harness rerun, not counted as implementation success from the failed run. |
++
++Source diagram topology/ID mappings are documented in diagram-crosswalk.md. No bank policy or authority was inferred. Full data snapshots before/after controls and unsolicited media messages are compared, not just visible readiness labels.
++
++Fresh unit/browser evidence is stored alongside this report. Standalone sample test numbers are retained only as historical source metadata.
+
+diff --git a/07_output/2026-09-07-media-mainline-review.md b/07_output/2026-09-07-media-mainline-review.md
+new file mode 100644
+index 0000000..5f493a3
+--- /dev/null
++++ b/07_output/2026-09-07-media-mainline-review.md
+@@ -0,0 +1,49 @@
++# Scope / Entity：panel-first/r01 主线接入
++
++本次只接入已批准的 DMO-A01、DMO-A02；不展开其他 D2 场景、不改写整站、不 push、不发布远程服务。
++
++## 主线预览
++
++- [Scope · DMO-A01](http://127.0.0.1:8765/prototype/?scene=SCN-SCOPE&locale=zh-CN&focus=media)
++- [Entity · DMO-A02](http://127.0.0.1:8765/prototype/?scene=SCN-ENTITY&locale=zh-CN&focus=media)
++- [完整打印预览](http://127.0.0.1:8765/prototype/?mode=print&locale=zh-CN)
++
++以上为本机主线入口，依赖原有 127.0.0.1:8765 静态服务器；不依赖小样的 4182 服务。`focus=media` 只定位讲解区，不改业务状态。语言选择支持 zh-CN / en-AU / en-US。
++
++## 增量 / 边界
++
++| 交付层 | 增量 |
++| --- | --- |
++| 素材 | 51 个来源文件按白名单复制到 `prototype/media/d2-batch-a/r01/`；5 个交接来源哈希与所有复制文件逐一验证。未编辑实验目录。 |
++| 播放组件 | `batch-a-media.mjs` + CSS：Shadow DOM 隔离，复用冻结的 panel-first 视图、人物与 Archify SVG。默认暂停；Play、Previous、Next、Replay、键盘帮助、减少动态效果。 |
++| 宿主 | `media-host.mjs`：窄接口，只接收媒体位置；独立会话键，不接收案件 store 或业务 dispatch。导航、隐藏/失焦与卸载停止播放，异步旧挂载被取消。 |
++| 静态 / 打印 | `media-static.mjs` 与生成的故事文本：模块/媒体被阻断时仍有本地完整文本；打印包含 Scope 5 节点 + Entity 6 节点，不依赖当前帧。无 JavaScript 时提供 6 个本地静态页面入口。 |
++| 原有主线 | 仅 Scope/Entity 媒体区与返回生命周期接线；既有 Product、Current/Target、dirty guard 和案件引擎保留。播放器不再重复吸顶，避免遮挡场景标题与语言选择。 |
++
++同一 DEMO-CTT-001：Entity A / Australia / FX forward；Entity B / Singapore 为 reported parent；Person T 任职 B，A 的代表声明与具体用途权限独立。Group A 不是法人键；booking / eligibility 保持未知或未评估。播放 RM 澄清、EV-A04 到达、缺口或准备节点均不会提交对应业务事件。A02-C4 在 9.5 秒暂停，必须 Next 才到 13 秒的有限准备讲解；这不补证据、不授权、不发消息、不准入。
++
++固定故事与实时记录分开：样片中的 EV-A05 “尚未取得”、Owner “尚未指派”为冻结叙事；若当前 Batch B 会话已有 EV-A05，实际会话区显示最新收件状态和用途评估，不能被故事快照覆盖。收到资料也不自动代表用途充分。
++
++## 字段 / 依赖影响
++
++- Shared Case Spine、字段 schema、业务事件、实体/场景/DEP 编号：**无新增或重编号**。
++- 新增纯展示状态：`asset / revision / time / beat / holdPassed / playing`，存于 `ctt-media-panel-first-r01`。恢复时永不自动播放；原有 `navigation.batchBeats` 不被覆盖。
++- Archify 同名图不是同一拓扑。保留原主线 workflow 图，媒体使用独立 r01 architecture 图，不互相覆盖。详见 [来源限定的图与状态映射](../00_governance/media-mainline/diagram-crosswalk.md)。
++- 主线 media manifest 只提升两个已选人物资产与 DMO-A01/A02；DMO-A03、VID-A01 和未选静态资产保持原占位。来源历史测试不计入主线通过数。
++
++## 验证证据
++
++当前结果：100/100 Node 测试通过；21 项主线浏览器检查通过、0 失败、1 项环境验证未运行。另有 2 个直接预览入口冒烟检查与 2 个组件打印可见性检查通过。独立代码复核记录将在本报告最终交付时补齐。
++
++- [宿主汇总](../00_governance/media-mainline/verification-results.json) / [完整单测输出](../00_governance/media-mainline/tests.tap)
++- [逐项浏览器结果](../prototype/qa/media-mainline/browser-results.json) / [预览入口检查](../prototype/qa/media-mainline/preview-smoke.json) / [组件打印可见性](../prototype/qa/media-mainline/component-print-results.json)
++- [Scope 截图](../prototype/qa/media-mainline/preview.SCN-SCOPE.zh-CN.png) / [Entity 截图](../prototype/qa/media-mainline/preview.SCN-ENTITY.zh-CN.png)
++- QA 打印样张：`prototype/qa/media-mainline/mainline-print.{zh-CN,en-AU,en-US}.pdf`，每份 15 页；全文提取确认所有 11 个 cue；新增故事页经渲染检查，关键状态与未解决条件完整可读。它们是测试证据，不是新增银行正式材料。
++
++浏览器覆盖：Play/Pause/Previous/Next/Replay、9.5s hold、Current/Target 与三语言保位、Current→Target Product→原场景、Back to Journey、Continue Story、横向拖移后开关场景、Save/Discard/Stay、恶意/重复消息不写案件、受控 blur 生命周期、帮助 Escape 与关闭、1440/1366/390/720 CSS-px 布局、模块/全媒体/图片/SVG/样式阻断、无 JS 静态入口、全量打印。
++
++未运行：Safari、Firefox、原生浏览器 200% zoom、屏幕阅读器 / 完整辅助技术审核；720 CSS-px 只是 1440px 在 200% 下的布局等效检查，不冒充原生缩放测试。无生产权限、身份认证、真实文件安全扫描或系统集成认证。
++
++## 后续接口 / 未决问题
++
++SCN-ENTITY 仍通过主线控制进入 SCN-REQUIREMENTS，携带同案上下文；媒体不能自行跳转或完成下游任务。银行权限、booking、产品资格、收件/披露权限和最终准入发布仍沿用显式 demo config / 未决业务问题；本次没有新增银行政策假设。后续可改善 Journey 与场景的整体结构，但本次未扩展到该设计议题。

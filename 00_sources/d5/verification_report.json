@@ -1,0 +1,156 @@
+{
+  "type": "DOCUMENT_AND_BINDING_VERIFICATION_ONLY",
+  "version": "v0.2",
+  "checks_passed": 32,
+  "checks": [
+    {
+      "check": "15 scenario bindings preserved",
+      "passed": true
+    },
+    {
+      "check": "94 parent work count preserved",
+      "passed": true
+    },
+    {
+      "check": "229 action presentations unchanged",
+      "passed": true
+    },
+    {
+      "check": "12 original surfaces preserved",
+      "passed": true
+    },
+    {
+      "check": "15 progress mappings complete",
+      "passed": true
+    },
+    {
+      "check": "all workflow links inherited",
+      "passed": true
+    },
+    {
+      "check": "closure manifest unchanged",
+      "passed": true
+    },
+    {
+      "check": "source issues unchanged",
+      "passed": true
+    },
+    {
+      "check": "original 48 tests unchanged",
+      "passed": true
+    },
+    {
+      "check": "40 new test specifications unique",
+      "passed": true
+    },
+    {
+      "check": "all application tests NOT_RUN",
+      "passed": true
+    },
+    {
+      "check": "4 fixed core modules",
+      "passed": true
+    },
+    {
+      "check": "7 optional modules including nice-to-have email",
+      "passed": true
+    },
+    {
+      "check": "no added hex colour specifications",
+      "passed": true
+    },
+    {
+      "check": "old NTT palette directive removed",
+      "passed": true
+    },
+    {
+      "check": "no latest repo inspection claim",
+      "passed": true
+    },
+    {
+      "check": "module recall gap explicit",
+      "passed": true
+    },
+    {
+      "check": "email default and safe upload coexist",
+      "passed": true
+    },
+    {
+      "check": "no email real-send capability",
+      "passed": true
+    },
+    {
+      "check": "synthetic estimates not client commitment",
+      "passed": true
+    },
+    {
+      "check": "event time arithmetic elapsed=5h",
+      "passed": true
+    },
+    {
+      "check": "event time arithmetic wait=4h",
+      "passed": true
+    },
+    {
+      "check": "nonoverlap intervals sum=elapsed",
+      "passed": true
+    },
+    {
+      "check": "no human-effort inference",
+      "passed": true
+    },
+    {
+      "check": "history read-only and access checked",
+      "passed": true
+    },
+    {
+      "check": "customisation not permission",
+      "passed": true
+    },
+    {
+      "check": "lab isolation preserved",
+      "passed": true
+    },
+    {
+      "check": "29 ordered main headings (0-28)",
+      "passed": true
+    },
+    {
+      "check": "code fences balanced",
+      "passed": true
+    },
+    {
+      "check": "no unresolved generator tokens",
+      "passed": true
+    },
+    {
+      "check": "JSON round trip exact",
+      "passed": true
+    },
+    {
+      "check": "source metadata implementation claims remain false",
+      "passed": true
+    }
+  ],
+  "application_tests_executed": false,
+  "latest_codex_theme_inspected": false,
+  "base_md_sha256": "8b99a5482d894ecfd7c91a4cb2c3bd6a83446f0a18c4dd9c50c296e7ed480ab7",
+  "base_json_sha256": "e5024fc80297a1608f13fce586c67ed239d5ee58ae4ae902520da8c42153cc76",
+  "generated_files": [
+    {
+      "name": "Clear_to_Trade_D5_Product_Experience_Review_v0.2.md",
+      "bytes": 90017,
+      "sha256": "901c271a14c8e2d5703a3354f2afc623655fe56addaafc2ccf9237a758c805c5"
+    },
+    {
+      "name": "Clear_to_Trade_D5_Product_Experience_Bindings_v0.2.json",
+      "bytes": 813080,
+      "sha256": "896f760ceef1725b6a323dcefd559c86a0e0871fac0dcb58f2a91b80e0cb72a0"
+    },
+    {
+      "name": "README.md",
+      "bytes": 916,
+      "sha256": "445c04f5e14202ef437a48921c2716252881d286e21d558a213d0ff13dc6e3a2"
+    }
+  ]
+}

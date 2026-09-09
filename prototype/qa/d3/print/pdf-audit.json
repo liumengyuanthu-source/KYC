@@ -1,0 +1,76 @@
+{
+  "at": "2026-09-07T14:45:32.534Z",
+  "method": "Every PDF page text bounding box checked; representative first/middle/last pages rendered. Geometry alone is not visual acceptance.",
+  "results": [
+    {
+      "file": "SCN-GAP.en-AU.pdf",
+      "pages": 8,
+      "words": 1797,
+      "geometry_status": "passed",
+      "outside": [],
+      "samples": [
+        "prototype/qa/d3/print/SCN-GAP.en-AU.page-1.png",
+        "prototype/qa/d3/print/SCN-GAP.en-AU.page-4.png",
+        "prototype/qa/d3/print/SCN-GAP.en-AU.page-8.png"
+      ],
+      "visual_status": "sampled_review_passed_internal_proof_pagination_polish_deferred"
+    },
+    {
+      "file": "SCN-GAP.en-US.pdf",
+      "pages": 8,
+      "words": 1797,
+      "geometry_status": "passed",
+      "outside": [],
+      "samples": [],
+      "visual_status": "not_run_en_US_duplicate_copy"
+    },
+    {
+      "file": "SCN-GAP.zh-CN.pdf",
+      "pages": 7,
+      "words": 792,
+      "geometry_status": "passed",
+      "outside": [],
+      "samples": [
+        "prototype/qa/d3/print/SCN-GAP.zh-CN.page-1.png",
+        "prototype/qa/d3/print/SCN-GAP.zh-CN.page-4.png",
+        "prototype/qa/d3/print/SCN-GAP.zh-CN.page-7.png"
+      ],
+      "visual_status": "sampled_review_passed_internal_proof_pagination_polish_deferred"
+    },
+    {
+      "file": "SCN-MATCH.en-AU.pdf",
+      "pages": 23,
+      "words": 5764,
+      "geometry_status": "passed",
+      "outside": [],
+      "samples": [
+        "prototype/qa/d3/print/SCN-MATCH.en-AU.page-1.png",
+        "prototype/qa/d3/print/SCN-MATCH.en-AU.page-12.png",
+        "prototype/qa/d3/print/SCN-MATCH.en-AU.page-23.png"
+      ],
+      "visual_status": "sampled_review_passed_internal_proof_pagination_polish_deferred"
+    },
+    {
+      "file": "SCN-MATCH.en-US.pdf",
+      "pages": 23,
+      "words": 5764,
+      "geometry_status": "passed",
+      "outside": [],
+      "samples": [],
+      "visual_status": "not_run_en_US_duplicate_copy"
+    },
+    {
+      "file": "SCN-MATCH.zh-CN.pdf",
+      "pages": 21,
+      "words": 2754,
+      "geometry_status": "passed",
+      "outside": [],
+      "samples": [
+        "prototype/qa/d3/print/SCN-MATCH.zh-CN.page-1.png",
+        "prototype/qa/d3/print/SCN-MATCH.zh-CN.page-11.png",
+        "prototype/qa/d3/print/SCN-MATCH.zh-CN.page-21.png"
+      ],
+      "visual_status": "sampled_review_passed_internal_proof_pagination_polish_deferred"
+    }
+  ]
+}

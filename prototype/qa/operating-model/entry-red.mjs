@@ -1,0 +1,2 @@
+import assert from 'node:assert/strict';import {probe,finish}from './harness.mjs';
+await probe(['OM-01'],'initial-entry-red',async({page,state,before})=>{assert.equal((await state()).navigation.studioPage,'operating-model');assert.equal(await page.locator('.topnav button').count(),2);assert.match(await page.locator('#main').innerText(),/Authored example/);assert.deepEqual((await state()).data,before.data);});await finish();

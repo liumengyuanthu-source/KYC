@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>New Request — Clear-to-Trade Portal</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Roboto+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="intake">
+<div class="frame">
+  <header class="topbar">
+    <a class="brand" href="index.html"><span class="brand-mark">CT</span><span class="brand-name">Clear-to-Trade Portal<small>Client Workspace</small></span></a>
+    <div class="search">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#54453f" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      <input type="text" placeholder="Search cases, documents, requirements…">
+    </div>
+    <div class="topbar-spacer"></div>
+    <button class="icon-btn" onclick="toast('2 new updates from Aria')"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#54453f" stroke-width="1.8" stroke-linecap="round"><path d="M18 8a6 6 0 1 0-12 0c0 7-3 8-3 8h18s-3-1-3-8"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/></svg><span class="dot"></span></button>
+    <div class="avatar">AB</div>
+  </header>
+
+  <div class="shell">
+    <nav class="sidebar">
+      <a class="side-link" href="index.html"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg><span class="tip">Home</span></a>
+      <a class="side-link active" href="intake.html"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg><span class="tip">New request</span></a>
+      <a class="side-link" href="case.html"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><path d="M9 17l-5-5 5-5M15 7l5 5-5 5"/></svg><span class="tip">Case tracker</span></a>
+      <a class="side-link" href="documents.html"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6"/></svg><span class="tip">Documents</span></a>
+      <a class="side-link" href="edd.html"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><path d="M12 3 4 7v5c0 5 3.4 8 8 9 4.6-1 8-4 8-9V7z"/><path d="m9 12 2 2 4-4"/></svg><span class="tip">EDD info</span></a>
+    </nav>
+
+    <main class="main no-rail" style="max-width:1060px;margin:0 auto;width:100%">
+      <div class="reveal" style="margin-bottom:8px">
+        <span class="eyebrow">New onboarding request · M0 → M1</span>
+        <h1 class="display" style="margin-top:10px;font-size:clamp(26px,3vw,36px)">Tell us about the <em>relationship</em>.<br>Aria does the heavy lifting.</h1>
+        <p class="lede" style="margin-top:12px">Only what the booking model and risk rules genuinely require — registry data is pre-filled where available, and every field exists because a downstream check depends on it.</p>
+      </div>
+
+      <!-- wizard header -->
+      <div class="card reveal" style="margin:24px 0 20px;padding:18px 22px">
+        <div class="wizard-steps">
+          <div class="wstep"><span class="wnum">1</span><span class="wlbl">Request</span></div><span class="wstep-sep"></span>
+          <div class="wstep"><span class="wnum">2</span><span class="wlbl">Entity</span></div><span class="wstep-sep"></span>
+          <div class="wstep"><span class="wnum">3</span><span class="wlbl">Ownership</span></div><span class="wstep-sep"></span>
+          <div class="wstep"><span class="wnum">4</span><span class="wlbl">Products</span></div><span class="wstep-sep"></span>
+          <div class="wstep"><span class="wnum">5</span><span class="wlbl">Contacts</span></div><span class="wstep-sep"></span>
+          <div class="wstep"><span class="wnum">6</span><span class="wlbl">Review</span></div>
+        </div>
+        <div class="progress" style="margin-top:16px"><div class="fill" data-w-bar style="width:16%"></div></div>
+      </div>
+
+      <div data-wizard>
+        <!-- STEP 1 · request basics -->
+        <section class="wizard-pane">
+          <div class="card" style="padding:28px">
+            <h2 class="section-title" style="margin-bottom:4px">Request basics</h2>
+            <p style="font-size:12.5px;color:var(--muted);margin-bottom:22px">Drives M0 booking-model determination and M1 triage.</p>
+            <div class="field" style="margin-bottom:20px">
+              <label>What brings you here? <span class="req">*</span></label>
+              <div class="opt-group">
+                <label class="opt"><input type="radio" name="rtype" checked><span class="opt-face">New relationship</span></label>
+                <label class="opt"><input type="radio" name="rtype"><span class="opt-face">Product / service extension</span></label>
+                <label class="opt"><input type="radio" name="rtype"><span class="opt-face">Material client / ownership / risk change</span></label>
+                <label class="opt"><input type="radio" name="rtype"><span class="opt-face">Refresh / reassessment</span></label>
+              </div>
+            </div>
+            <div class="form-grid">
+              <div class="field">
+                <label>Sales location <span class="req">*</span></label>
+                <select class="control">
+                  <option>Hong Kong SAR</option><option>Singapore</option><option>United Kingdom</option><option>Japan</option><option>Australia</option><option>Germany</option><option>United States</option>
+                </select>
+                <div class="help">Where your relationship manager sits — determines applicable requirements.</div>
+              </div>
+              <div class="field">
+                <label>Preferred booking entity</label>
+                <select class="control">
+                  <option>Let Aria recommend</option><option>HK Branch</option><option>SG Branch</option><option>UK Ltd</option>
+                </select>
+                <div class="help">Aria validates against the approved product / service scope (M0.2).</div>
+              </div>
+              <div class="field">
+                <label>Relationship manager</label>
+                <input class="control" type="text" value="Daniel Cheung · APAC Corporates" readonly style="background:var(--cream)">
+                <div class="help">Pre-filled from your relationship record.</div>
+              </div>
+              <div class="field">
+                <label>Target start date</label>
+                <input class="control" type="date" value="2026-10-01">
+              </div>
+              <div class="field span-2">
+                <label>Anything we should know upfront?</label>
+                <textarea class="control" placeholder="e.g. time-sensitive trade cycle, group entities to be included, upcoming structural changes…"></textarea>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- STEP 2 · entity -->
+        <section class="wizard-pane">
+          <div class="card" style="padding:28px">
+            <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:4px;flex-wrap:wrap;gap:8px">
+              <h2 class="section-title">Legal entity details</h2>
+              <span class="chip chip-run"><span class="cdot"></span>Registry pre-fill available</span>
+            </div>
+            <p style="font-size:12.5px;color:var(--muted);margin-bottom:22px">Feeds M1.4 legal-name confirmation and M1.5 entity classification.</p>
+            <div class="form-grid">
+              <div class="field">
+                <label>Registered legal name <span class="req">*</span></label>
+                <input class="control" type="text" value="Meridian Holdings Limited">
+              </div>
+              <div class="field">
+                <label>Trading / former names</label>
+                <input class="control" type="text" placeholder="If any">
+              </div>
+              <div class="field">
+                <label>Entity type <span class="req">*</span></label>
+                <select class="control">
+                  <option>Private limited company</option><option>Public listed company</option><option>Partnership / LLP</option><option>Trust</option><option>Fund vehicle</option><option>Sovereign / public body</option><option>Other</option>
+                </select>
+              </div>
+              <div class="field">
+                <label>Jurisdiction of incorporation <span class="req">*</span></label>
+                <select class="control">
+                  <option>Hong Kong SAR</option><option>Singapore</option><option>British Virgin Islands</option><option>Cayman Islands</option><option>United Kingdom</option><option>Mainland China</option><option>Other</option>
+                </select>
+              </div>
+              <div class="field">
+                <label>Date of incorporation</label>
+                <input class="control" type="date" value="2011-04-18">
+              </div>
+              <div class="field">
+                <label>Company registration number <span class="req">*</span></label>
+                <input class="control" type="text" value="1592847" placeholder="e.g. CR No.">
+              </div>
+              <div class="field">
+                <label>LEI <span class="hint-tag">if held</span></label>
+                <input class="control" type="text" placeholder="20-char Legal Entity Identifier" maxlength="20">
+              </div>
+              <div class="field">
+                <label>Tax identification number</label>
+                <input class="control" type="text" placeholder="TIN / BR No.">
+              </div>
+              <div class="field span-2">
+                <label>Registered address <span class="req">*</span></label>
+                <input class="control" type="text" value="28/F, Harbour Centre, 25 Harbour Road, Wan Chai, Hong Kong">
+              </div>
+              <div class="field span-2">
+                <label>Principal place of business</label>
+                <input class="control" type="text" placeholder="If different from registered address">
+              </div>
+              <div class="field">
+                <label>Industry / sector</label>
+                <select class="control">
+                  <option>Import &amp; export trade</option><option>Manufacturing</option><option>Financial services</option><option>Real estate</option><option>Technology</option><option>Natural resources</option><option>Other</option>
+                </select>
+              </div>
+              <div class="field">
+                <label>Corporate website</label>
+                <input class="control" type="url" placeholder="https://">
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- STEP 3 · ownership -->
+        <section class="wizard-pane">
+          <div class="card" style="padding:28px">
+            <h2 class="section-title" style="margin-bottom:4px">Ownership &amp; control</h2>
+            <p style="font-size:12.5px;color:var(--muted);margin-bottom:22px">Establishes the screening population (M4.3) and EDD indicators (M2.4).</p>
+            <div class="form-grid" style="margin-bottom:22px">
+              <div class="field">
+                <label>Ownership structure <span class="req">*</span></label>
+                <div class="opt-group">
+                  <label class="opt"><input type="radio" name="struct" checked><span class="opt-face">Direct individuals</span></label>
+                  <label class="opt"><input type="radio" name="struct"><span class="opt-face">Via holding entities</span></label>
+                  <label class="opt"><input type="radio" name="struct"><span class="opt-face">Listed</span></label>
+                  <label class="opt"><input type="radio" name="struct"><span class="opt-face">State-owned</span></label>
+                </div>
+              </div>
+              <div class="field">
+                <label>Layers between you and ultimate owners</label>
+                <select class="control"><option>1</option><option>2</option><option>3+</option></select>
+                <div class="help">3+ layers may trigger enhanced due diligence.</div>
+              </div>
+            </div>
+
+            <div class="field">
+              <label>Ultimate beneficial owners (≥25% or controlling) <span class="req">*</span></label>
+              <div id="ubo-list" style="display:flex;flex-direction:column;gap:14px">
+                <div class="ubo-card card" style="background:var(--cream);padding:18px">
+                  <div style="display:flex;justify-content:space-between;margin-bottom:12px">
+                    <span class="badge-mono">UBO 1</span>
+                  </div>
+                  <div class="form-grid">
+                    <div class="field"><label>Full legal name</label><input class="control" type="text" value="Eleanor Vance"></div>
+                    <div class="field"><label>Date of birth</label><input class="control" type="date" value="1974-11-02"></div>
+                    <div class="field"><label>Nationality</label><input class="control" type="text" value="British"></div>
+                    <div class="field"><label>Country of residence</label><input class="control" type="text" value="Hong Kong SAR"></div>
+                    <div class="field"><label>Ownership %</label><input class="control" type="number" value="55" min="0" max="100"></div>
+                    <div class="field"><label>Role</label><select class="control"><option>Shareholder &amp; director</option><option>Shareholder only</option><option>Control via other means</option></select></div>
+                    <div class="field span-2">
+                      <label>Politically exposed person (PEP)?</label>
+                      <div class="opt-group">
+                        <label class="opt"><input type="radio" name="pep1" checked><span class="opt-face">No</span></label>
+                        <label class="opt"><input type="radio" name="pep1"><span class="opt-face">Yes — domestic</span></label>
+                        <label class="opt"><input type="radio" name="pep1"><span class="opt-face">Yes — foreign</span></label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <template id="ubo-tpl">
+                <div class="ubo-card card" style="background:var(--cream);padding:18px">
+                  <div style="display:flex;justify-content:space-between;margin-bottom:12px;align-items:center">
+                    <span class="badge-mono">UBO</span>
+                    <button type="button" class="btn btn-ghost btn-sm" data-rm-ubo>Remove</button>
+                  </div>
+                  <div class="form-grid">
+                    <div class="field"><label>Full legal name</label><input class="control" type="text"></div>
+                    <div class="field"><label>Date of birth</label><input class="control" type="date"></div>
+                    <div class="field"><label>Nationality</label><input class="control" type="text"></div>
+                    <div class="field"><label>Country of residence</label><input class="control" type="text"></div>
+                    <div class="field"><label>Ownership %</label><input class="control" type="number" min="0" max="100"></div>
+                    <div class="field"><label>Role</label><select class="control"><option>Shareholder &amp; director</option><option>Shareholder only</option><option>Control via other means</option></select></div>
+                  </div>
+                </div>
+              </template>
+              <button type="button" class="btn btn-soft btn-sm" data-add-ubo style="margin-top:12px;align-self:flex-start">+ Add another owner</button>
+            </div>
+          </div>
+        </section>
+
+        <!-- STEP 4 · products -->
+        <section class="wizard-pane">
+          <div class="card" style="padding:28px">
+            <h2 class="section-title" style="margin-bottom:4px">Products &amp; expected activity</h2>
+            <p style="font-size:12.5px;color:var(--muted);margin-bottom:22px">Validated against the approved product scope (M0.2); calibrates the requirement set (M2).</p>
+            <div class="field" style="margin-bottom:20px">
+              <label>Products &amp; services requested <span class="req">*</span></label>
+              <div class="opt-group">
+                <label class="opt"><input type="checkbox" checked><span class="opt-face">Cash management</span></label>
+                <label class="opt"><input type="checkbox" checked><span class="opt-face">FX spot / forward</span></label>
+                <label class="opt"><input type="checkbox" checked><span class="opt-face">Trade finance</span></label>
+                <label class="opt"><input type="checkbox"><span class="opt-face">Corporate lending</span></label>
+                <label class="opt"><input type="checkbox"><span class="opt-face">Rates / hedging</span></label>
+                <label class="opt"><input type="checkbox"><span class="opt-face">Derivatives (ISDA)</span></label>
+                <label class="opt"><input type="checkbox"><span class="opt-face">Securities services</span></label>
+                <label class="opt"><input type="checkbox"><span class="opt-face">e-Banking / API channel</span></label>
+              </div>
+            </div>
+            <div class="form-grid">
+              <div class="field">
+                <label>Expected monthly transaction volume</label>
+                <select class="control"><option>&lt; USD 1m</option><option selected>USD 1–10m</option><option>USD 10–50m</option><option>&gt; USD 50m</option></select>
+              </div>
+              <div class="field">
+                <label>Primary currencies</label>
+                <input class="control" type="text" value="USD, HKD, EUR">
+              </div>
+              <div class="field span-2">
+                <label>Key trade corridors / counterparty countries</label>
+                <input class="control" type="text" placeholder="e.g. Mainland China, Vietnam, Germany">
+              </div>
+              <div class="field span-2">
+                <label>Purpose of the relationship</label>
+                <textarea class="control" placeholder="What will you use these products for, in your own words?"></textarea>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- STEP 5 · contacts -->
+        <section class="wizard-pane">
+          <div class="card" style="padding:28px">
+            <h2 class="section-title" style="margin-bottom:4px">Contacts &amp; communication</h2>
+            <p style="font-size:12.5px;color:var(--muted);margin-bottom:22px">Who Aria talks to when something needs a human answer — and in which language.</p>
+            <div class="form-grid">
+              <div class="field"><label>Primary contact name <span class="req">*</span></label><input class="control" type="text" value="Annette Black"></div>
+              <div class="field"><label>Title / role</label><input class="control" type="text" value="Group Treasurer"></div>
+              <div class="field"><label>Email <span class="req">*</span></label><input class="control" type="email" value="annette.black@meridian-h.com"></div>
+              <div class="field"><label>Phone</label><input class="control" type="tel" value="+852 3911 2048"></div>
+              <div class="field">
+                <label>Preferred language</label>
+                <select class="control">
+                  <option>English</option><option>中文（简体）</option><option>中文（繁體）</option><option>日本語</option><option>Deutsch</option>
+                </select>
+                <div class="help">Aria responds and issues requirements in this language.</div>
+              </div>
+              <div class="field">
+                <label>Preferred channel</label>
+                <div class="opt-group">
+                  <label class="opt"><input type="radio" name="chan" checked><span class="opt-face">Portal</span></label>
+                  <label class="opt"><input type="radio" name="chan"><span class="opt-face">Email</span></label>
+                </div>
+              </div>
+              <div class="field span-2">
+                <label>Authorised signatories for this request</label>
+                <textarea class="control" placeholder="Names &amp; titles, one per line"></textarea>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- STEP 6 · review -->
+        <section class="wizard-pane">
+          <div class="card" style="padding:28px">
+            <h2 class="section-title" style="margin-bottom:4px">Review &amp; submit</h2>
+            <p style="font-size:12.5px;color:var(--muted);margin-bottom:22px">Aria will confirm the booking model, derive your requirement set, and issue only what's needed.</p>
+            <div class="grid-2" style="margin-bottom:22px">
+              <div class="card" style="background:var(--cream)">
+                <span class="eyebrow" style="margin-bottom:12px">Request</span>
+                <dl class="kv">
+                  <dt>Type</dt><dd>New relationship</dd>
+                  <dt>Sales loc.</dt><dd>Hong Kong SAR</dd>
+                  <dt>Booking</dt><dd>Aria to recommend</dd>
+                  <dt>RM</dt><dd>Daniel Cheung</dd>
+                </dl>
+              </div>
+              <div class="card" style="background:var(--cream)">
+                <span class="eyebrow" style="margin-bottom:12px">Entity</span>
+                <dl class="kv">
+                  <dt>Name</dt><dd>Meridian Holdings Ltd</dd>
+                  <dt>Type</dt><dd>Private limited</dd>
+                  <dt>Juris.</dt><dd>Hong Kong SAR</dd>
+                  <dt>CR No.</dt><dd>1592847</dd>
+                </dl>
+              </div>
+              <div class="card" style="background:var(--cream)">
+                <span class="eyebrow" style="margin-bottom:12px">Ownership</span>
+                <dl class="kv">
+                  <dt>Structure</dt><dd>Direct individuals</dd>
+                  <dt>UBOs</dt><dd>1 declared · E. Vance 55%</dd>
+                  <dt>PEP</dt><dd>None declared</dd>
+                </dl>
+              </div>
+              <div class="card" style="background:var(--cream)">
+                <span class="eyebrow" style="margin-bottom:12px">Products</span>
+                <dl class="kv">
+                  <dt>Scope</dt><dd>Cash, FX, Trade finance</dd>
+                  <dt>Volume</dt><dd>USD 1–10m / month</dd>
+                  <dt>Ccy</dt><dd>USD · HKD · EUR</dd>
+                </dl>
+              </div>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:14px">
+              <label class="check-row"><input type="checkbox" checked><span class="box"></span><span class="check-text">I confirm the information provided is true and complete to the best of my knowledge, and I will notify the bank of material changes.</span></label>
+              <label class="check-row"><input type="checkbox" checked><span class="box"></span><span class="check-text">I consent to the bank sourcing information about the entity and its related parties from public and commercial data providers.</span></label>
+              <label class="check-row"><input type="checkbox"><span class="box"></span><span class="check-text">I consent to electronic communication and document exchange through this portal.</span></label>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- wizard nav -->
+      <div style="display:flex;justify-content:space-between;margin-top:22px;gap:12px">
+        <button class="btn btn-ghost" data-w-back>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" style="transform:rotate(180deg)"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          Back</button>
+        <button class="btn btn-primary" data-w-next>Continue
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+      </div>
+    </main>
+  </div>
+</div>
+
+<!-- success overlay -->
+<div class="overlay">
+  <div class="overlay-card">
+    <div class="success-mark"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#1f7a52" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m4.5 12.5 5 5 10-11"/></svg></div>
+    <h2 class="section-title" style="font-size:24px">Request submitted</h2>
+    <p style="font-size:13.5px;line-height:1.65;margin:12px 0 24px;color:var(--body)">Aria is creating your onboarding case now — booking model, requirement set and document sourcing start within minutes. You'll see the live tracker as soon as it's up.</p>
+    <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap">
+      <a class="btn btn-primary" href="case.html">Open live tracker
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <button class="btn btn-ghost" data-overlay-close>Stay here</button>
+    </div>
+  </div>
+</div>
+
+<!-- chat -->
+<button class="chat-fab"><span class="mini-orb"></span>Ask Aria</button>
+<div class="chat-drawer">
+  <div class="chat-head">
+    <span class="mini-orb"></span>
+    <div><div class="ch-title">Aria</div><div class="ch-sub"><span class="live"></span>Onboarding agent · online</div></div>
+    <button class="chat-close">✕</button>
+  </div>
+  <div class="chat-body"></div>
+  <div class="chat-chips">
+    <button class="pill">Why do you need my LEI?</button>
+    <button class="pill">Which fields are mandatory?</button>
+    <button class="pill">Can I save a draft?</button>
+  </div>
+  <div class="chat-input">
+    <input type="text" placeholder="Ask about any field…">
+    <button class="chat-send" aria-label="Send"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M22 2 11 13M22 2l-7 20-4-9-9-4z"/></svg></button>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

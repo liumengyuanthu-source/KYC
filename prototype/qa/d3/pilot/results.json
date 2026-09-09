@@ -1,0 +1,93 @@
+{
+  "at": "2026-09-07T14:42:20.344Z",
+  "results": [
+    {
+      "name": "SCN-GAP.en-AU.comparison",
+      "scene": "SCN-GAP",
+      "locale": "en-AU",
+      "status": "passed",
+      "screenshot": "prototype/qa/d3/pilot/SCN-GAP.en-AU.comparison.png",
+      "errors": []
+    },
+    {
+      "name": "SCN-MATCH.en-AU.comparison",
+      "scene": "SCN-MATCH",
+      "locale": "en-AU",
+      "status": "passed",
+      "screenshot": "prototype/qa/d3/pilot/SCN-MATCH.en-AU.comparison.png",
+      "errors": []
+    },
+    {
+      "name": "SCN-GAP.en-US.comparison",
+      "scene": "SCN-GAP",
+      "locale": "en-US",
+      "status": "passed",
+      "screenshot": "prototype/qa/d3/pilot/SCN-GAP.en-US.comparison.png",
+      "errors": []
+    },
+    {
+      "name": "SCN-MATCH.en-US.comparison",
+      "scene": "SCN-MATCH",
+      "locale": "en-US",
+      "status": "passed",
+      "screenshot": "prototype/qa/d3/pilot/SCN-MATCH.en-US.comparison.png",
+      "errors": []
+    },
+    {
+      "name": "SCN-GAP.zh-CN.comparison",
+      "scene": "SCN-GAP",
+      "locale": "zh-CN",
+      "status": "passed",
+      "screenshot": "prototype/qa/d3/pilot/SCN-GAP.zh-CN.comparison.png",
+      "errors": []
+    },
+    {
+      "name": "SCN-MATCH.zh-CN.comparison",
+      "scene": "SCN-MATCH",
+      "locale": "zh-CN",
+      "status": "passed",
+      "screenshot": "prototype/qa/d3/pilot/SCN-MATCH.zh-CN.comparison.png",
+      "errors": []
+    },
+    {
+      "name": "references-return",
+      "scene": "SCN-GAP",
+      "locale": "en-AU",
+      "status": "passed",
+      "screenshot": "prototype/qa/d3/pilot/references-return.png",
+      "errors": []
+    },
+    {
+      "name": "gap-product-return",
+      "scene": "SCN-GAP",
+      "locale": "en-AU",
+      "status": "passed",
+      "screenshot": "prototype/qa/d3/pilot/gap-product-return.png",
+      "errors": []
+    },
+    {
+      "name": "match-reference-cross-scene",
+      "scene": "SCN-MATCH",
+      "locale": "en-AU",
+      "status": "passed",
+      "screenshot": "prototype/qa/d3/pilot/match-reference-cross-scene.png",
+      "errors": []
+    },
+    {
+      "name": "SCN-GAP.mobile-fallback",
+      "scene": "SCN-GAP",
+      "locale": "zh-CN",
+      "status": "passed",
+      "screenshot": "prototype/qa/d3/pilot/SCN-GAP.mobile-fallback.png",
+      "errors": []
+    },
+    {
+      "name": "SCN-MATCH.mobile-fallback",
+      "scene": "SCN-MATCH",
+      "locale": "zh-CN",
+      "status": "passed",
+      "screenshot": "prototype/qa/d3/pilot/SCN-MATCH.mobile-fallback.png",
+      "errors": []
+    }
+  ]
+}

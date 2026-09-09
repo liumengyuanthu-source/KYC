@@ -1,0 +1,145 @@
+{
+  "at": "2026-09-07T14:34:23.321Z",
+  "command": "node prototype/qa/d3/mainline-browser.mjs",
+  "browser": "152.0.7977.76",
+  "results": [
+    {
+      "ids": [
+        "RT-D15"
+      ],
+      "name": "Opening specialist scenario and switching Current/Target do not load a demo case",
+      "status": "passed",
+      "before": {
+        "caseRevision": 1,
+        "hash": "6ba945b1589e5874ae7742e6fca762e786c6b8db04a7a6d026cb1ce575ad1f05"
+      },
+      "after": {
+        "caseRevision": 1,
+        "hash": "6ba945b1589e5874ae7742e6fca762e786c6b8db04a7a6d026cb1ce575ad1f05"
+      },
+      "evidence": "d-scenario.entry.en-AU.png"
+    },
+    {
+      "ids": [
+        "RT-D01",
+        "RT-D02",
+        "RT-D03",
+        "RT-D04",
+        "RT-D09",
+        "RT-D10",
+        "RT-D11"
+      ],
+      "name": "Explicit D fixture retains A/B/C, scoped conditions and an archived prior session",
+      "status": "passed",
+      "before": {
+        "caseRevision": 35,
+        "hash": "b1bb5c301225b8420fe180a0e75f7ba4781efd3ef5c1a95f294451471d0c8f5e"
+      },
+      "after": {
+        "caseRevision": 35,
+        "hash": "b1bb5c301225b8420fe180a0e75f7ba4781efd3ef5c1a95f294451471d0c8f5e"
+      },
+      "evidence": "d-condition.en-AU.png"
+    },
+    {
+      "ids": [
+        "RT-D14",
+        "RT-D15"
+      ],
+      "name": "Dependency focus and playback return to the same condition, case and revision without business writes",
+      "status": "passed",
+      "before": {
+        "caseRevision": 35,
+        "hash": "b1bb5c301225b8420fe180a0e75f7ba4781efd3ef5c1a95f294451471d0c8f5e"
+      },
+      "after": {
+        "caseRevision": 35,
+        "hash": "b1bb5c301225b8420fe180a0e75f7ba4781efd3ef5c1a95f294451471d0c8f5e"
+      },
+      "evidence": "d-dependency.en-AU.png"
+    },
+    {
+      "ids": [
+        "RT-D14"
+      ],
+      "name": "Latest language survives Product → Current scenario return and D1–D5 are presentation only",
+      "status": "passed",
+      "before": {
+        "caseRevision": 35,
+        "hash": "b1bb5c301225b8420fe180a0e75f7ba4781efd3ef5c1a95f294451471d0c8f5e"
+      },
+      "after": {
+        "caseRevision": 35,
+        "hash": "b1bb5c301225b8420fe180a0e75f7ba4781efd3ef5c1a95f294451471d0c8f5e"
+      },
+      "evidence": "d-readiness.zh-CN.png"
+    },
+    {
+      "ids": [
+        "RT-D12"
+      ],
+      "name": "RM and client condition views and print contain no restricted conflict detail",
+      "status": "passed",
+      "before": {
+        "caseRevision": 35,
+        "hash": "b1bb5c301225b8420fe180a0e75f7ba4781efd3ef5c1a95f294451471d0c8f5e"
+      },
+      "after": {
+        "caseRevision": 35,
+        "hash": "b1bb5c301225b8420fe180a0e75f7ba4781efd3ef5c1a95f294451471d0c8f5e"
+      },
+      "evidence": "d-client.zh-CN.png"
+    },
+    {
+      "ids": [
+        "RT-D07",
+        "RT-D18",
+        "RT-D11"
+      ],
+      "name": "Explicit Credit revision preserves historical Legal input and Not Ready",
+      "status": "passed",
+      "before": {
+        "caseRevision": 35,
+        "hash": "b1bb5c301225b8420fe180a0e75f7ba4781efd3ef5c1a95f294451471d0c8f5e"
+      },
+      "after": {
+        "caseRevision": 36,
+        "hash": "45f44beebfc9303608900f9ffa6b8394339c9c15cda5f4b552c4bae681da8834"
+      },
+      "evidence": "d-credit.changed.en-AU.png"
+    },
+    {
+      "ids": [
+        "RT-D15"
+      ],
+      "name": "Upstream legacy commands cannot write a D session",
+      "status": "passed",
+      "before": {
+        "caseRevision": 36,
+        "hash": "45f44beebfc9303608900f9ffa6b8394339c9c15cda5f4b552c4bae681da8834"
+      },
+      "after": {
+        "caseRevision": 36,
+        "hash": "45f44beebfc9303608900f9ffa6b8394339c9c15cda5f4b552c4bae681da8834"
+      },
+      "evidence": "Four actual host-dispatched legacy command families rejected"
+    },
+    {
+      "ids": [
+        "RT-D14"
+      ],
+      "name": "Explicit restore recovers the archived session and latest locale",
+      "status": "passed",
+      "before": {
+        "caseRevision": 36,
+        "hash": "45f44beebfc9303608900f9ffa6b8394339c9c15cda5f4b552c4bae681da8834"
+      },
+      "after": {
+        "caseRevision": 1,
+        "hash": "6ba945b1589e5874ae7742e6fca762e786c6b8db04a7a6d026cb1ce575ad1f05"
+      },
+      "evidence": "d-restored.en-US.png"
+    }
+  ],
+  "errors": []
+}

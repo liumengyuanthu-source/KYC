@@ -1,0 +1,1471 @@
+{
+  "at": "2026-09-07T14:37:42.959Z",
+  "results": [
+    {
+      "scene": "SCN-SCOPE",
+      "status": "passed",
+      "checks": [
+        "route",
+        "modal overflow",
+        "read-only",
+        "JS exceptions"
+      ],
+      "metrics": {
+        "title": "明确本次关系范围",
+        "overflow": false,
+        "headings": [
+          "明确本次关系范围",
+          "DMO-A01 · panel-first / r01 · 只读故事",
+          "后续工作 · 各任务前置条件"
+        ],
+        "metadata": [
+          {
+            "text": "S1 / M0.1–M0.4 · M1.1",
+            "font": "12px"
+          }
+        ]
+      },
+      "screenshot": "prototype/qa/d3/scenarios/SCN-SCOPE.png",
+      "visualInspection": "not_run"
+    },
+    {
+      "scene": "SCN-ENTITY",
+      "status": "passed",
+      "checks": [
+        "route",
+        "modal overflow",
+        "read-only",
+        "JS exceptions"
+      ],
+      "metrics": {
+        "title": "确认主体与代表权限",
+        "overflow": false,
+        "headings": [
+          "确认主体与代表权限",
+          "DMO-A02 · panel-first / r01 · 只读故事",
+          "Person T i任职于 Entity B 不等于获准代表 Entity A。须按被代表主体与用途分别评估。员工演示操作权限不赋予客户代表权限。 ×",
+          "后续工作 · 各任务前置条件"
+        ],
+        "metadata": [
+          {
+            "text": "S1 / M1.3–M1.5 · M3.4",
+            "font": "12px"
+          }
+        ]
+      },
+      "screenshot": "prototype/qa/d3/scenarios/SCN-ENTITY.png",
+      "visualInspection": "not_run"
+    },
+    {
+      "scene": "SCN-REQUIREMENTS",
+      "status": "passed",
+      "checks": [
+        "route",
+        "modal overflow",
+        "read-only",
+        "JS exceptions"
+      ],
+      "metrics": {
+        "title": "明确适用要求",
+        "overflow": false,
+        "headings": [
+          "明确适用要求",
+          "从要求到经复核的响应"
+        ],
+        "metadata": [
+          {
+            "text": "S2 / M2.1–M2.5",
+            "font": "12px"
+          },
+          {
+            "text": "拟议协作产品 · Batch B · SRC-015",
+            "font": "12px"
+          }
+        ]
+      },
+      "screenshot": "prototype/qa/d3/scenarios/SCN-REQUIREMENTS.png",
+      "visualInspection": "not_run"
+    },
+    {
+      "scene": "SCN-SOURCE",
+      "status": "passed",
+      "checks": [
+        "route",
+        "modal overflow",
+        "read-only",
+        "JS exceptions"
+      ],
+      "metrics": {
+        "title": "复用已有证据",
+        "overflow": false,
+        "headings": [
+          "复用已有证据"
+        ],
+        "metadata": [
+          {
+            "text": "S2 / M3.1–M3.2",
+            "font": "12px"
+          }
+        ]
+      },
+      "screenshot": "prototype/qa/d3/scenarios/SCN-SOURCE.png",
+      "visualInspection": "not_run"
+    },
+    {
+      "scene": "SCN-GAP",
+      "status": "passed",
+      "checks": [
+        "route",
+        "modal overflow",
+        "read-only",
+        "JS exceptions"
+      ],
+      "metrics": {
+        "title": "只询问剩余缺口",
+        "overflow": false,
+        "headings": [
+          "只询问剩余缺口",
+          "把内部缺口组织成可回应的请求",
+          "从要求到经复核的响应"
+        ],
+        "metadata": [
+          {
+            "text": "S2 / M2.5 · M3.2–M3.3",
+            "font": "12px"
+          },
+          {
+            "text": "Current M3.2识别residual gaps，M3.3向客户要信息；M2.5发要求，RM/Client有澄清动作。源图未确认客户渠道。",
+            "font": "12px"
+          },
+          {
+            "text": "Target M3.2/.3产品执行；有限贡献者、安全网页、通知与资料提交分离来自获批设计与案例启发。",
+            "font": "12px"
+          },
+          {
+            "text": "DEMO-CTT-001 · 范围版本 1 · 案件版本 1",
+            "font": "12px"
+          },
+          {
+            "text": "强化",
+            "font": "12px"
+          },
+          {
+            "text": "D3-GAP-01",
+            "font": "12px"
+          },
+          {
+            "text": "Sanitised Process Map(1).pptx · 页 1 · 形状 292 · PPT-S1-SH292-A2",
+            "font": "12px"
+          },
+          {
+            "text": "Sanitised Process Map(1).pptx · 页 2 · 形状 292 · PPT-S2-SH292-A2",
+            "font": "12px"
+          },
+          {
+            "text": "Gap.requirement_refGap.subject_refGap.purpose_codeGap.reason_codeGap.origin_assessment_ref",
+            "font": "12px"
+          },
+          {
+            "text": "强化",
+            "font": "12px"
+          },
+          {
+            "text": "D3-GAP-02",
+            "font": "12px"
+          },
+          {
+            "text": "Sanitised Process Map(1).pptx · 页 1 · 形状 291 · PPT-S1-SH291-A1",
+            "font": "12px"
+          },
+          {
+            "text": "Sanitised Process Map(1).pptx · 页 1 · 形状 292 · PPT-S1-SH292-A3",
+            "font": "12px"
+          },
+          {
+            "text": "Sanitised Process Map(1).pptx · 页 1 · 形状 9 · PPT-S1-SH9-A1",
+            "font": "12px"
+          },
+          {
+            "text": "Sanitised Process Map(1).pptx · 页 2 · 形状 18 · PPT-S2-SH18-A5",
+            "font": "12px"
+          },
+          {
+            "text": "Sanitised Process Map(1).pptx · 页 2 · 形状 292 · PPT-S2-SH292-A3",
+            "font": "12px"
+          },
+          {
+            "text": "official_content_checked_2026-09-07 · 沿用核验记录；本视图未新增核验",
+            "font": "12px"
+          },
+          {
+            "text": "RequestItem.gap_refsRequestItem.client_reasonRequestItem.response_optionsInformationRequest.revision",
+            "font": "12px"
+          },
+          {
+            "text": "拟议新增",
+            "font": "12px"
+          },
+          {
+            "text": "D3-GAP-03",
+            "font": "12px"
+          },
+          {
+            "text": "Sanitised Process Map(1).pptx · 页 1 · 形状 292 · PPT-S1-SH292-A3",
+            "font": "12px"
+          },
+          {
+            "text": "Sanitised Process Map(1).pptx · 页 1 · 形状 9 · PPT-S1-SH9-A1",
+            "font": "12px"
+          },
+          {
+            "text": "Sanitised Process Map(1).pptx · 页 2 · 形状 292 · PPT-S2-SH292-A3",
+            "font": "12px"
+          },
+          {
+            "text": "official_content_checked_2026-09-07 · 沿用核验记录；本视图未新增核验",
+            "font": "12px"
+          },
+          {
+            "text": "RequestRecipient.person_refAccessGrant.resource_scopeAccessGrant.provisioning_basis_refDisclosureRev",
+            "font": "12px"
+          },
+          {
+            "text": "拟议新增",
+            "font": "12px"
+          },
+          {
+            "text": "D3-GAP-04",
+            "font": "12px"
+          },
+          {
+            "text": "Sanitised Process Map(1).pptx · 页 1 · 形状 292 · PPT-S1-SH292-A3",
+            "font": "12px"
+          },
+          {
+            "text": "Sanitised Process Map(1).pptx · 页 1 · 形状 9 · PPT-S1-SH9-A1",
+            "font": "12px"
+          },
+          {
+            "text": "Sanitised Process Map(1).pptx · 页 2 · 形状 292 · PPT-S2-SH292-A3",
+            "font": "12px"
+          },
+          {
+            "text": "official_content_checked_2026-09-07 · 沿用核验记录；本视图未新增核验",
+            "font": "12px"
+          },
+          {
+            "text": "RequestReview.statusNotification.dispatch_statusNotification.delivery_statusInformationRequest.sent_",
+            "font": "12px"
+          },
+          {
+            "text": "强化",
+            "font": "12px"
+          },
+          {
+            "text": "D3-GAP-05",
+            "font": "12px"
+          },
+          {
+            "text": "Sanitised Process Map(1).pptx · 页 1 · 形状 292 · PPT-S1-SH292-A3",
+            "font": "12px"
+          },
+          {
+            "text": "Sanitised Process Map(1).pptx · 页 1 · 形状 9 · PPT-S1-SH9-A1",
+            "font": "12px"
+          },
+          {
+            "text": "Sanitised Process Map(1).pptx · 页 1 · 形状 292 · PPT-S1-SH292-A4",
+            "font": "12px"
+          },
+          {
+            "text": "Sanitised Process Map(1).pptx · 页 2 · 形状 292 · PPT-S2-SH292-A3",
+            "font": "12px"
+          },
+          {
+            "text": "Sanitised Process Map(1).pptx · 页 2 · 形状 292 · PPT-S2-SH292-A4",
+            "font": "12px"
+          },
+          {
+            "text": "official_content_checked_2026-09-07 · 沿用核验记录；本视图未新增核验",
+            "font": "12px"
+          },
+          {
+            "text": "official_content_checked_2026-09-07 · 沿用核验记录；本视图未新增核验",
+            "font": "12px"
+          },
+          {
+            "text": "Submission.request_item_refsSubmission.submitted_bySubmission.on_behalf_ofRequestItem.response_statu",
+            "font": "12px"
+          },
+          {
+            "text": "拟议新增",
+            "font": "12px"
+          },
+          {
+            "text": "D3-GAP-06",
+            "font": "12px"
+          },
+          {
+            "text": "Sanitised Process Map(1).pptx · 页 1 · 形状 292 · PPT-S1-SH292-A3",
+            "font": "12px"
+          },
+          {
+            "text": "Sanitised Process Map(1).pptx · 页 1 · 形状 9 · PPT-S1-SH9-A1",
+            "font": "12px"
+          },
+          {
+            "text": "Sanitised Process Map(1).pptx · 页 1 · 形状 292 · PPT-S1-SH292-A5",
+            "font": "12px"
+          },
+          {
+            "text": "Sanitised Process Map(1).pptx · 页 2 · 形状 292 · PPT-S2-SH292-A3",
+            "font": "12px"
+          },
+          {
+            "text": "Sanitised Process Map(1).pptx · 页 2 · 形状 292 · PPT-S2-SH292-A5",
+            "font": "12px"
+          },
+          {
+            "text": "internal_file_reviewed; not_public; no_deployment_claim · 沿用核验记录；本视图未新增核验",
+            "font": "12px"
+          },
+          {
+            "text": "InteractionRecord.source_refInteractionRecord.reviewed_bySubmission.original_submitter_refSubmission",
+            "font": "12px"
+          },
+          {
+            "text": "拟议协作产品 · Batch B · SRC-015",
+            "font": "12px"
+          }
+        ]
+      },
+      "screenshot": "prototype/qa/d3/scenarios/SCN-GAP.png",
+      "visualInspection": "not_run"
+    },
+    {
+      "scene": "SCN-VALIDATE",
+      "status": "passed",
+      "checks": [
+        "route",
+        "modal overflow",
+        "read-only",
+        "JS exceptions"
+      ],
+      "metrics": {
+        "title": "按用途评估证据",
+        "overflow": false,
+        "headings": [
+          "按用途评估证据",
+          "从要求到经复核的响应"
+        ],
+        "metadata": [
+          {
+            "text": "S2 / M3.4–M3.5",
+            "font": "12px"
+          },
+          {
+            "text": "拟议协作产品 · Batch B · SRC-015",
+            "font": "12px"
+          }
+        ]
+      },
+      "screenshot": "prototype/qa/d3/scenarios/SCN-VALIDATE.png",
+      "visualInspection": "not_run"
+    },
+    {
+      "scene": "SCN-POPULATION",
+      "status": "passed",
+      "checks": [
+        "route",
+        "modal overflow",
+        "read-only",
+        "JS exceptions"
+      ],
+      "metrics": {
+        "title": "明确筛查群体",
+        "overflow": false,
+        "headings": [
+          "明确筛查群体"
+        ],
+        "metadata": [
+          {
+            "text": "S3 / M4.1–M4.4",
+            "font": "12px"
+          },
+          {
+            "text": "只读判断依据 · DG-C-POPULATION · Archify 2.17",
+            "font": "12px"
+          },
+          {
+            "text": "P01",
+            "font": "12px"
+          },
+          {
+            "text": "P02",
+            "font": "12px"
+          },
+          {
+            "text": "P03",
+            "font": "12px"
+          },
+          {
+            "text": "P04",
+            "font": "12px"
+          },
+          {
+            "text": "P05",
+            "font": "12px"
+          },
+          {
+            "text": "P06",
+            "font": "12px"
+          },
+          {
+            "text": "P07",
+            "font": "12px"
+          },
+          {
+            "text": "P08",
+            "font": "12px"
+          },
+          {
+            "text": "P09",
+            "font": "12px"
+          },
+          {
+            "text": "P10",
+            "font": "12px"
+          },
+          {
+            "text": "P11",
+            "font": "12px"
+          },
+          {
+            "text": "P12",
+            "font": "12px"
+          },
+          {
+            "text": "P01",
+            "font": "12px"
+          },
+          {
+            "text": "P02",
+            "font": "12px"
+          },
+          {
+            "text": "P03",
+            "font": "12px"
+          },
+          {
+            "text": "P04",
+            "font": "12px"
+          },
+          {
+            "text": "P05",
+            "font": "12px"
+          },
+          {
+            "text": "P06",
+            "font": "12px"
+          },
+          {
+            "text": "P07",
+            "font": "12px"
+          },
+          {
+            "text": "P08",
+            "font": "12px"
+          },
+          {
+            "text": "P09",
+            "font": "12px"
+          },
+          {
+            "text": "P10",
+            "font": "12px"
+          },
+          {
+            "text": "P11",
+            "font": "12px"
+          },
+          {
+            "text": "P12",
+            "font": "12px"
+          }
+        ]
+      },
+      "screenshot": "prototype/qa/d3/scenarios/SCN-POPULATION.png",
+      "visualInspection": "not_run"
+    },
+    {
+      "scene": "SCN-MATCH",
+      "status": "passed",
+      "checks": [
+        "route",
+        "modal overflow",
+        "read-only",
+        "JS exceptions"
+      ],
+      "metrics": {
+        "title": "处理疑似筛查命中",
+        "overflow": false,
+        "headings": [
+          "处理疑似筛查命中",
+          "用相同证据处理Person T的一条疑似命中"
+        ],
+        "metadata": [
+          {
+            "text": "S3 / M4.5–M4.7",
+            "font": "12px"
+          },
+          {
+            "text": "Current M4.5在Ops；M4.6/.7在Financial Crime/Risk/Compliance；Current已做adjudication和risk decision。",
+            "font": "12px"
+          },
+          {
+            "text": "Target M4.5–.7在Agentic lane，同时Ops review ambiguous、Financial Crime adjudicate material；记录执行与判断责任重叠须澄",
+            "font": "12px"
+          },
+          {
+            "text": "DEMO-CTT-001 · 范围版本 1 · 案件版本 1",
+            "font": "12px"
+          },
+          {
+            "text": "职责调整",
+            "font": "12px"
+          },
+          {
+            "text": "D3-MATCH-01",
+            "font": "12px"
+          },
+          {
+            "text": "Sanitised Process Map(1).pptx · 页 1 · 形状 296 · PPT-S1-SH296-A5",
+            "font": "12px"
+          },
+          {
+            "text": "Sanitised Process Map(1).pptx · 页 2 · 形状 296 · PPT-S2-SH296-A5",
+            "font": "12px"
+          },
+          {
+            "text": "Sanitised Process Map(1).pptx · 页 2 · 形状 376 · PPT-S2-SH376-EX",
+            "font": "12px"
+          },
+          {
+            "text": "official_content_checked_2026-09-07 · 沿用核验记录；本视图未新增核验",
+            "font": "12px"
+          },
+          {
+            "text": "ScreeningFinding.run_refScreeningFinding.subject_snapshot_refScreeningFinding.provider_snapshot_refS",
+            "font": "12px"
+          },
+          {
+            "text": "强化",
+            "font": "12px"
+          },
+          {
+            "text": "D3-MATCH-02",
+            "font": "12px"
+          },
+          {
+            "text": "Sanitised Process Map(1).pptx · 页 1 · 形状 296 · PPT-S1-SH296-A5",
+            "font": "12px"
+          },
+          {
+            "text": "Sanitised Process Map(1).pptx · 页 2 · 形状 296 · PPT-S2-SH296-A5",
+            "font": "12px"
+          },
+          {
+            "text": "Sanitised Process Map(1).pptx · 页 2 · 形状 376 · PPT-S2-SH376-EX",
+            "font": "12px"
+          },
+          {
+            "text": "official_content_checked_2026-09-07 · 沿用核验记录；本视图未新增核验",
+            "font": "12px"
+          },
+          {
+            "text": "AttributeComparison.subject_claim_refsAttributeComparison.provider_claim_refsAttributeComparison.pre",
+            "font": "12px"
+          },
+          {
+            "text": "强化",
+            "font": "12px"
+          },
+          {
+            "text": "D3-MATCH-03",
+            "font": "12px"
+          },
+          {
+            "text": "Sanitised Process Map(1).pptx · 页 1 · 形状 296 · PPT-S1-SH296-A5",
+            "font": "12px"
+          },
+          {
+            "text": "Sanitised Process Map(1).pptx · 页 1 · 形状 292 · PPT-S1-SH292-A3",
+            "font": "12px"
+          },
+          {
+            "text": "Sanitised Process Map(1).pptx · 页 1 · 形状 9 · PPT-S1-SH9-A1",
+            "font": "12px"
+          },
+          {
+            "text": "Sanitised Process Map(1).pptx · 页 1 · 形状 292 · PPT-S1-SH292-A4",
+            "font": "12px"
+          },
+          {
+            "text": "Sanitised Process Map(1).pptx · 页 2 · 形状 296 · PPT-S2-SH296-A5",
+            "font": "12px"
+          },
+          {
+            "text": "Sanitised Process Map(1).pptx · 页 2 · 形状 292 · PPT-S2-SH292-A3",
+            "font": "12px"
+          },
+          {
+            "text": "Sanitised Process Map(1).pptx · 页 2 · 形状 292 · PPT-S2-SH292-A4",
+            "font": "12px"
+          },
+          {
+            "text": "Sanitised Process Map(1).pptx · 页 2 · 形状 392 · PPT-S2-SH392-EX",
+            "font": "12px"
+          },
+          {
+            "text": "official_content_checked_2026-09-07 · 沿用核验记录；本视图未新增核验",
+            "font": "12px"
+          },
+          {
+            "text": "internal_file_reviewed; not_public; no_deployment_claim · 沿用核验记录；本视图未新增核验",
+            "font": "12px"
+          },
+          {
+            "text": "RequestItem.finding_refRequestItem.purpose_codeAccessGrant.resource_scopeEvidenceUseAssessment.subje",
+            "font": "12px"
+          },
+          {
+            "text": "强化",
+            "font": "12px"
+          },
+          {
+            "text": "D3-MATCH-04",
+            "font": "12px"
+          },
+          {
+            "text": "Sanitised Process Map(1).pptx · 页 1 · 形状 296 · PPT-S1-SH296-A5",
+            "font": "12px"
+          },
+          {
+            "text": "Sanitised Process Map(1).pptx · 页 2 · 形状 296 · PPT-S2-SH296-A5",
+            "font": "12px"
+          },
+          {
+            "text": "Sanitised Process Map(1).pptx · 页 2 · 形状 376 · PPT-S2-SH376-EX",
+            "font": "12px"
+          },
+          {
+            "text": "internal_file_reviewed; not_public; no_deployment_claim · 沿用核验记录；本视图未新增核验",
+            "font": "12px"
+          },
+          {
+            "text": "official_content_checked_2026-09-07 · 沿用核验记录；本视图未新增核验",
+            "font": "12px"
+          },
+          {
+            "text": "ReviewPack.input_manifestReviewPack.unresolved_refsReviewPack.prepared_by_typeRecommendation.basis_r",
+            "font": "12px"
+          },
+          {
+            "text": "保留",
+            "font": "12px"
+          },
+          {
+            "text": "D3-MATCH-05",
+            "font": "12px"
+          },
+          {
+            "text": "Sanitised Process Map(1).pptx · 页 1 · 形状 177 · PPT-S1-SH177-A1",
+            "font": "12px"
+          },
+          {
+            "text": "Sanitised Process Map(1).pptx · 页 2 · 形状 296 · PPT-S2-SH296-A6",
+            "font": "12px"
+          },
+          {
+            "text": "Sanitised Process Map(1).pptx · 页 2 · 形状 409 · PPT-S2-SH409-EX",
+            "font": "12px"
+          },
+          {
+            "text": "official_content_checked_2026-09-07 · 沿用核验记录；本视图未新增核验",
+            "font": "12px"
+          },
+          {
+            "text": "RiskReview.materiality_statusRiskReview.permission_refHold.action_scopeHold.basis_ref",
+            "font": "12px"
+          },
+          {
+            "text": "强化",
+            "font": "12px"
+          },
+          {
+            "text": "D3-MATCH-06",
+            "font": "12px"
+          },
+          {
+            "text": "Sanitised Process Map(1).pptx · 页 1 · 形状 177 · PPT-S1-SH177-A2",
+            "font": "12px"
+          },
+          {
+            "text": "Sanitised Process Map(1).pptx · 页 2 · 形状 296 · PPT-S2-SH296-A7",
+            "font": "12px"
+          },
+          {
+            "text": "Sanitised Process Map(1).pptx · 页 2 · 形状 409 · PPT-S2-SH409-EX",
+            "font": "12px"
+          },
+          {
+            "text": "official_content_checked_2026-09-07 · 沿用核验记录；本视图未新增核验",
+            "font": "12px"
+          },
+          {
+            "text": "official_content_checked_2026-09-07 · 沿用核验记录；本视图未新增核验",
+            "font": "12px"
+          },
+          {
+            "text": "ScreeningReviewDecision.dispositionScreeningReviewDecision.input_revision_refsScreeningReviewDecisio",
+            "font": "12px"
+          },
+          {
+            "text": "强化",
+            "font": "12px"
+          },
+          {
+            "text": "D3-MATCH-07",
+            "font": "12px"
+          },
+          {
+            "text": "Sanitised Process Map(1).pptx · 页 1 · 形状 177 · PPT-S1-SH177-A2",
+            "font": "12px"
+          },
+          {
+            "text": "Sanitised Process Map(1).pptx · 页 1 · 形状 65 · PPT-S1-SH65-A1",
+            "font": "12px"
+          },
+          {
+            "text": "Sanitised Process Map(1).pptx · 页 2 · 形状 296 · PPT-S2-SH296-A7",
+            "font": "12px"
+          },
+          {
+            "text": "Sanitised Process Map(1).pptx · 页 2 · 形状 65 · PPT-S2-SH65-A1",
+            "font": "12px"
+          },
+          {
+            "text": "official_content_checked_2026-09-07 · 沿用核验记录；本视图未新增核验",
+            "font": "12px"
+          },
+          {
+            "text": "ScreeningCoverageItem.finding_refsDecision.currency_statusReadinessSnapshot.blocking_refsAuditEvent.",
+            "font": "12px"
+          },
+          {
+            "text": "只读判断依据 · DG-C-MATCH · Archify 2.17",
+            "font": "12px"
+          },
+          {
+            "text": "M01",
+            "font": "12px"
+          },
+          {
+            "text": "M02",
+            "font": "12px"
+          },
+          {
+            "text": "M03",
+            "font": "12px"
+          },
+          {
+            "text": "M04",
+            "font": "12px"
+          },
+          {
+            "text": "M05",
+            "font": "12px"
+          },
+          {
+            "text": "M06",
+            "font": "12px"
+          },
+          {
+            "text": "M07",
+            "font": "12px"
+          },
+          {
+            "text": "M08",
+            "font": "12px"
+          },
+          {
+            "text": "M09",
+            "font": "12px"
+          },
+          {
+            "text": "M10",
+            "font": "12px"
+          },
+          {
+            "text": "M11",
+            "font": "12px"
+          },
+          {
+            "text": "M12",
+            "font": "12px"
+          },
+          {
+            "text": "M01",
+            "font": "12px"
+          },
+          {
+            "text": "M02",
+            "font": "12px"
+          },
+          {
+            "text": "M03",
+            "font": "12px"
+          },
+          {
+            "text": "M04",
+            "font": "12px"
+          },
+          {
+            "text": "M05",
+            "font": "12px"
+          },
+          {
+            "text": "M06",
+            "font": "12px"
+          },
+          {
+            "text": "M07",
+            "font": "12px"
+          },
+          {
+            "text": "M08",
+            "font": "12px"
+          },
+          {
+            "text": "M09",
+            "font": "12px"
+          },
+          {
+            "text": "M10",
+            "font": "12px"
+          },
+          {
+            "text": "M11",
+            "font": "12px"
+          },
+          {
+            "text": "M12",
+            "font": "12px"
+          }
+        ]
+      },
+      "screenshot": "prototype/qa/d3/scenarios/SCN-MATCH.png",
+      "visualInspection": "not_run"
+    },
+    {
+      "scene": "SCN-EDD",
+      "status": "passed",
+      "checks": [
+        "route",
+        "modal overflow",
+        "read-only",
+        "JS exceptions"
+      ],
+      "metrics": {
+        "title": "按适用性进入 EDD",
+        "overflow": false,
+        "headings": [
+          "按适用性进入 EDD"
+        ],
+        "metadata": [
+          {
+            "text": "S3 / M5",
+            "font": "12px"
+          },
+          {
+            "text": "只读判断依据 · DG-C-EDD · Archify 2.17",
+            "font": "12px"
+          },
+          {
+            "text": "E01",
+            "font": "12px"
+          },
+          {
+            "text": "E02",
+            "font": "12px"
+          },
+          {
+            "text": "E03",
+            "font": "12px"
+          },
+          {
+            "text": "E04",
+            "font": "12px"
+          },
+          {
+            "text": "E05",
+            "font": "12px"
+          },
+          {
+            "text": "E06",
+            "font": "12px"
+          },
+          {
+            "text": "E07",
+            "font": "12px"
+          },
+          {
+            "text": "E08",
+            "font": "12px"
+          },
+          {
+            "text": "E09",
+            "font": "12px"
+          },
+          {
+            "text": "E10",
+            "font": "12px"
+          },
+          {
+            "text": "E11",
+            "font": "12px"
+          },
+          {
+            "text": "E12",
+            "font": "12px"
+          },
+          {
+            "text": "E01",
+            "font": "12px"
+          },
+          {
+            "text": "E02",
+            "font": "12px"
+          },
+          {
+            "text": "E03",
+            "font": "12px"
+          },
+          {
+            "text": "E04",
+            "font": "12px"
+          },
+          {
+            "text": "E05",
+            "font": "12px"
+          },
+          {
+            "text": "E06",
+            "font": "12px"
+          },
+          {
+            "text": "E07",
+            "font": "12px"
+          },
+          {
+            "text": "E08",
+            "font": "12px"
+          },
+          {
+            "text": "E09",
+            "font": "12px"
+          },
+          {
+            "text": "E10",
+            "font": "12px"
+          },
+          {
+            "text": "E11",
+            "font": "12px"
+          },
+          {
+            "text": "E12",
+            "font": "12px"
+          }
+        ]
+      },
+      "screenshot": "prototype/qa/d3/scenarios/SCN-EDD.png",
+      "visualInspection": "not_run"
+    },
+    {
+      "scene": "SCN-CONFLICTS",
+      "status": "passed",
+      "checks": [
+        "route",
+        "modal overflow",
+        "read-only",
+        "JS exceptions"
+      ],
+      "metrics": {
+        "title": "尽早启动利益冲突检查",
+        "overflow": false,
+        "headings": [
+          "尽早启动利益冲突检查",
+          "利益冲突尽早启动且边界清晰",
+          "并行专业工作",
+          "专业条线并行复核"
+        ],
+        "metadata": [
+          {
+            "text": "S1 / M1 → M7",
+            "font": "12px"
+          },
+          {
+            "text": "D2 · 编制预览 · 尚未载入 · Target",
+            "font": "12px"
+          },
+          {
+            "text": "M1 → M7",
+            "font": "12px"
+          },
+          {
+            "text": "SRC-009:DEP-01/05/06/11",
+            "font": "12px"
+          },
+          {
+            "text": "DG-D01 · Archify 2.17",
+            "font": "12px"
+          },
+          {
+            "text": "D01-SCOPE",
+            "font": "12px"
+          },
+          {
+            "text": "D01-CONFLICTS",
+            "font": "12px"
+          },
+          {
+            "text": "D01-CREDIT",
+            "font": "12px"
+          },
+          {
+            "text": "D01-LEGAL",
+            "font": "12px"
+          },
+          {
+            "text": "D01-KYC",
+            "font": "12px"
+          },
+          {
+            "text": "D01-READY",
+            "font": "12px"
+          },
+          {
+            "text": "D01-SCOPE",
+            "font": "12px"
+          },
+          {
+            "text": "D01-CONFLICTS",
+            "font": "12px"
+          },
+          {
+            "text": "D01-CREDIT",
+            "font": "12px"
+          },
+          {
+            "text": "D01-LEGAL",
+            "font": "12px"
+          },
+          {
+            "text": "D01-KYC",
+            "font": "12px"
+          },
+          {
+            "text": "D01-READY",
+            "font": "12px"
+          },
+          {
+            "text": "BATCH D · SRC-019 · 编制预览",
+            "font": "12px"
+          }
+        ]
+      },
+      "screenshot": "prototype/qa/d3/scenarios/SCN-CONFLICTS.png",
+      "visualInspection": "not_run"
+    },
+    {
+      "scene": "SCN-CREDIT",
+      "status": "passed",
+      "checks": [
+        "route",
+        "modal overflow",
+        "read-only",
+        "JS exceptions"
+      ],
+      "metrics": {
+        "title": "解决信贷条件",
+        "overflow": false,
+        "headings": [
+          "解决信贷条件",
+          "信贷生成版本化条件",
+          "信贷至协议的版本链",
+          "专业条线并行复核"
+        ],
+        "metadata": [
+          {
+            "text": "S4 / C2.1–C2.3",
+            "font": "12px"
+          },
+          {
+            "text": "D3 · 编制预览 · 尚未载入 · Target",
+            "font": "12px"
+          },
+          {
+            "text": "C2.1–C2.3",
+            "font": "12px"
+          },
+          {
+            "text": "SRC-009:DEP-07",
+            "font": "12px"
+          },
+          {
+            "text": "DG-D02 · Archify 2.17",
+            "font": "12px"
+          },
+          {
+            "text": "D02-ASSESS",
+            "font": "12px"
+          },
+          {
+            "text": "D02-DECISION",
+            "font": "12px"
+          },
+          {
+            "text": "D02-CONDITION",
+            "font": "12px"
+          },
+          {
+            "text": "D02-INPUT",
+            "font": "12px"
+          },
+          {
+            "text": "D02-REVISION",
+            "font": "12px"
+          },
+          {
+            "text": "D02-REVIEW",
+            "font": "12px"
+          },
+          {
+            "text": "D02-APPROVAL",
+            "font": "12px"
+          },
+          {
+            "text": "D02-EXECUTION",
+            "font": "12px"
+          },
+          {
+            "text": "D02-ASSESS",
+            "font": "12px"
+          },
+          {
+            "text": "D02-DECISION",
+            "font": "12px"
+          },
+          {
+            "text": "D02-CONDITION",
+            "font": "12px"
+          },
+          {
+            "text": "D02-INPUT",
+            "font": "12px"
+          },
+          {
+            "text": "D02-REVISION",
+            "font": "12px"
+          },
+          {
+            "text": "D02-REVIEW",
+            "font": "12px"
+          },
+          {
+            "text": "D02-APPROVAL",
+            "font": "12px"
+          },
+          {
+            "text": "D02-EXECUTION",
+            "font": "12px"
+          },
+          {
+            "text": "BATCH D · SRC-019 · 编制预览",
+            "font": "12px"
+          }
+        ]
+      },
+      "screenshot": "prototype/qa/d3/scenarios/SCN-CREDIT.png",
+      "visualInspection": "not_run"
+    },
+    {
+      "scene": "SCN-LEGAL",
+      "status": "passed",
+      "checks": [
+        "route",
+        "modal overflow",
+        "read-only",
+        "JS exceptions"
+      ],
+      "metrics": {
+        "title": "完成适用协议",
+        "overflow": false,
+        "headings": [
+          "完成适用协议",
+          "法务使用明确版本的信贷输入",
+          "信贷至协议的版本链",
+          "专业条线并行复核"
+        ],
+        "metadata": [
+          {
+            "text": "S4 / C1.1–C1.3",
+            "font": "12px"
+          },
+          {
+            "text": "D4 · 编制预览 · 尚未载入 · Target",
+            "font": "12px"
+          },
+          {
+            "text": "C1.1–C1.3",
+            "font": "12px"
+          },
+          {
+            "text": "SRC-009:DEP-07",
+            "font": "12px"
+          },
+          {
+            "text": "DG-D02 · Archify 2.17",
+            "font": "12px"
+          },
+          {
+            "text": "D02-ASSESS",
+            "font": "12px"
+          },
+          {
+            "text": "D02-DECISION",
+            "font": "12px"
+          },
+          {
+            "text": "D02-CONDITION",
+            "font": "12px"
+          },
+          {
+            "text": "D02-INPUT",
+            "font": "12px"
+          },
+          {
+            "text": "D02-REVISION",
+            "font": "12px"
+          },
+          {
+            "text": "D02-REVIEW",
+            "font": "12px"
+          },
+          {
+            "text": "D02-APPROVAL",
+            "font": "12px"
+          },
+          {
+            "text": "D02-EXECUTION",
+            "font": "12px"
+          },
+          {
+            "text": "D02-ASSESS",
+            "font": "12px"
+          },
+          {
+            "text": "D02-DECISION",
+            "font": "12px"
+          },
+          {
+            "text": "D02-CONDITION",
+            "font": "12px"
+          },
+          {
+            "text": "D02-INPUT",
+            "font": "12px"
+          },
+          {
+            "text": "D02-REVISION",
+            "font": "12px"
+          },
+          {
+            "text": "D02-REVIEW",
+            "font": "12px"
+          },
+          {
+            "text": "D02-APPROVAL",
+            "font": "12px"
+          },
+          {
+            "text": "D02-EXECUTION",
+            "font": "12px"
+          },
+          {
+            "text": "BATCH D · SRC-019 · 编制预览",
+            "font": "12px"
+          }
+        ]
+      },
+      "screenshot": "prototype/qa/d3/scenarios/SCN-LEGAL.png",
+      "visualInspection": "not_run"
+    },
+    {
+      "scene": "SCN-READINESS",
+      "status": "passed",
+      "checks": [
+        "route",
+        "modal overflow",
+        "read-only",
+        "JS exceptions"
+      ],
+      "metrics": {
+        "title": "明确还剩哪些条件",
+        "overflow": false,
+        "headings": [
+          "明确还剩哪些条件",
+          "就绪状态保留每项未决条件",
+          "限定范围的暂停",
+          "专业条线并行复核"
+        ],
+        "metadata": [
+          {
+            "text": "S5 / M8.1",
+            "font": "12px"
+          },
+          {
+            "text": "D5 · 编制预览 · 尚未载入 · Target",
+            "font": "12px"
+          },
+          {
+            "text": "M1 · C2 · C1 · M8",
+            "font": "12px"
+          },
+          {
+            "text": "DG-D03 · Archify 2.17",
+            "font": "12px"
+          },
+          {
+            "text": "D03-ISSUE",
+            "font": "12px"
+          },
+          {
+            "text": "D03-IMPACT",
+            "font": "12px"
+          },
+          {
+            "text": "D03-TASK",
+            "font": "12px"
+          },
+          {
+            "text": "D03-BRANCH",
+            "font": "12px"
+          },
+          {
+            "text": "D03-CASE",
+            "font": "12px"
+          },
+          {
+            "text": "D03-UNKNOWN",
+            "font": "12px"
+          },
+          {
+            "text": "D03-AFFECTED",
+            "font": "12px"
+          },
+          {
+            "text": "D03-UNAFFECTED",
+            "font": "12px"
+          },
+          {
+            "text": "D03-DEPS",
+            "font": "12px"
+          },
+          {
+            "text": "D03-RESOLVE",
+            "font": "12px"
+          },
+          {
+            "text": "D03-ISSUE",
+            "font": "12px"
+          },
+          {
+            "text": "D03-IMPACT",
+            "font": "12px"
+          },
+          {
+            "text": "D03-TASK",
+            "font": "12px"
+          },
+          {
+            "text": "D03-BRANCH",
+            "font": "12px"
+          },
+          {
+            "text": "D03-CASE",
+            "font": "12px"
+          },
+          {
+            "text": "D03-UNKNOWN",
+            "font": "12px"
+          },
+          {
+            "text": "D03-AFFECTED",
+            "font": "12px"
+          },
+          {
+            "text": "D03-UNAFFECTED",
+            "font": "12px"
+          },
+          {
+            "text": "D03-DEPS",
+            "font": "12px"
+          },
+          {
+            "text": "D03-RESOLVE",
+            "font": "12px"
+          },
+          {
+            "text": "BATCH D · SRC-019 · 编制预览",
+            "font": "12px"
+          }
+        ]
+      },
+      "screenshot": "prototype/qa/d3/scenarios/SCN-READINESS.png",
+      "visualInspection": "not_run"
+    },
+    {
+      "scene": "SCN-QA",
+      "status": "passed",
+      "checks": [
+        "route",
+        "modal overflow",
+        "read-only",
+        "JS exceptions"
+      ],
+      "metrics": {
+        "title": "关闭具体质量缺口",
+        "overflow": false,
+        "headings": [
+          "关闭具体质量缺口"
+        ],
+        "metadata": [
+          {
+            "text": "S4 / M6",
+            "font": "12px"
+          }
+        ]
+      },
+      "screenshot": "prototype/qa/d3/scenarios/SCN-QA.png",
+      "visualInspection": "not_run"
+    },
+    {
+      "scene": "SCN-PUBLISH",
+      "status": "not-run",
+      "reason": "Existing publication structural placeholder has no clickable mainline entry; no E/F publication route created by D3.",
+      "visualInspection": "not_run"
+    }
+  ]
+}

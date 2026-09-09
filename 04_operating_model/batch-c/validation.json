@@ -1,0 +1,48 @@
+{
+  "status": "additive_candidate_not_production_merged_schema",
+  "valid": true,
+  "snapshots": [
+    {
+      "snapshot": "C-entry",
+      "status": "additive_candidate_not_production_merged_schema",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "snapshot": "C-pending",
+      "status": "additive_candidate_not_production_merged_schema",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "snapshot": "C-result",
+      "status": "additive_candidate_not_production_merged_schema",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "snapshot": "C-gap",
+      "status": "additive_candidate_not_production_merged_schema",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "snapshot": "C-identity-received",
+      "status": "additive_candidate_not_production_merged_schema",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "snapshot": "C-unresolved",
+      "status": "additive_candidate_not_production_merged_schema",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "snapshot": "C-referred",
+      "status": "additive_candidate_not_production_merged_schema",
+      "valid": true,
+      "errors": []
+    }
+  ]
+}

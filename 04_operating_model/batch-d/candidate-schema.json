@@ -1,0 +1,1202 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Batch D additive candidate schema",
+  "status": "additive_candidate_not_production_merged_schema",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "conflictReviews",
+    "conflictFindings",
+    "creditAssessments",
+    "creditConditions",
+    "legalAgreements",
+    "clearanceConditions",
+    "dependencies",
+    "holds",
+    "agreementInputs",
+    "decisions"
+  ],
+  "properties": {
+    "conflictReviews": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "if": {
+          "required": [
+            "source_refs"
+          ],
+          "properties": {
+            "source_refs": {
+              "contains": {
+                "const": "SRC-019"
+              }
+            }
+          }
+        },
+        "then": {
+          "required": [
+            "id",
+            "case_id",
+            "case_scope_id",
+            "revision",
+            "case_scope_ref",
+            "party_refs",
+            "trigger_basis_ref",
+            "search_scope_ref",
+            "finding_refs",
+            "review_status",
+            "decision_ref",
+            "clearance_status",
+            "hold_refs"
+          ],
+          "additionalProperties": true,
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "case_id": {
+              "const": "DEMO-CTT-001"
+            },
+            "revision": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "applicability": {
+              "enum": [
+                "required",
+                "not_required",
+                "unknown"
+              ]
+            },
+            "hold_scope": {
+              "enum": [
+                "task",
+                "branch",
+                "case",
+                "unknown"
+              ]
+            },
+            "search_status": {
+              "enum": [
+                "complete",
+                "pending",
+                "unknown"
+              ]
+            },
+            "clearance_status": {
+              "enum": [
+                "pending",
+                "recorded",
+                "unknown"
+              ]
+            },
+            "assessment_status": {
+              "enum": [
+                "complete",
+                "pending",
+                "unknown"
+              ]
+            },
+            "approval_status": {
+              "enum": [
+                "approved_subject_to_condition",
+                "internally_approved",
+                "pending",
+                "unknown"
+              ]
+            },
+            "execution_status": {
+              "enum": [
+                "pending",
+                "executed",
+                "unknown"
+              ]
+            },
+            "validation_status": {
+              "enum": [
+                "reviewed_for_demo",
+                "unknown"
+              ]
+            },
+            "materiality_status": {
+              "enum": [
+                "unknown",
+                "under_review"
+              ]
+            },
+            "resolution_status": {
+              "enum": [
+                "open",
+                "resolved",
+                "unknown"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "conflictFindings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "if": {
+          "required": [
+            "source_refs"
+          ],
+          "properties": {
+            "source_refs": {
+              "contains": {
+                "const": "SRC-019"
+              }
+            }
+          }
+        },
+        "then": {
+          "required": [
+            "id",
+            "case_id",
+            "case_scope_id",
+            "revision",
+            "conflict_review_ref",
+            "finding_type",
+            "source_ref",
+            "summary",
+            "materiality_status",
+            "assigned_role_ref",
+            "resolution_status",
+            "decision_ref",
+            "restricted_detail_ref"
+          ],
+          "additionalProperties": true,
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "case_id": {
+              "const": "DEMO-CTT-001"
+            },
+            "revision": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "applicability": {
+              "enum": [
+                "required",
+                "not_required",
+                "unknown"
+              ]
+            },
+            "hold_scope": {
+              "enum": [
+                "task",
+                "branch",
+                "case",
+                "unknown"
+              ]
+            },
+            "search_status": {
+              "enum": [
+                "complete",
+                "pending",
+                "unknown"
+              ]
+            },
+            "clearance_status": {
+              "enum": [
+                "pending",
+                "recorded",
+                "unknown"
+              ]
+            },
+            "assessment_status": {
+              "enum": [
+                "complete",
+                "pending",
+                "unknown"
+              ]
+            },
+            "approval_status": {
+              "enum": [
+                "approved_subject_to_condition",
+                "internally_approved",
+                "pending",
+                "unknown"
+              ]
+            },
+            "execution_status": {
+              "enum": [
+                "pending",
+                "executed",
+                "unknown"
+              ]
+            },
+            "validation_status": {
+              "enum": [
+                "reviewed_for_demo",
+                "unknown"
+              ]
+            },
+            "materiality_status": {
+              "enum": [
+                "unknown",
+                "under_review"
+              ]
+            },
+            "resolution_status": {
+              "enum": [
+                "open",
+                "resolved",
+                "unknown"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "creditAssessments": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "if": {
+          "required": [
+            "source_refs"
+          ],
+          "properties": {
+            "source_refs": {
+              "contains": {
+                "const": "SRC-019"
+              }
+            }
+          }
+        },
+        "then": {
+          "required": [
+            "id",
+            "case_id",
+            "case_scope_id",
+            "revision",
+            "case_scope_ref",
+            "counterparty_ref",
+            "product_scope_ref",
+            "applicability",
+            "financial_data_refs",
+            "exposure_data_refs",
+            "assessment_status",
+            "decision_ref",
+            "condition_refs",
+            "approval_ref"
+          ],
+          "additionalProperties": true,
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "case_id": {
+              "const": "DEMO-CTT-001"
+            },
+            "revision": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "applicability": {
+              "enum": [
+                "required",
+                "not_required",
+                "unknown"
+              ]
+            },
+            "hold_scope": {
+              "enum": [
+                "task",
+                "branch",
+                "case",
+                "unknown"
+              ]
+            },
+            "search_status": {
+              "enum": [
+                "complete",
+                "pending",
+                "unknown"
+              ]
+            },
+            "clearance_status": {
+              "enum": [
+                "pending",
+                "recorded",
+                "unknown"
+              ]
+            },
+            "assessment_status": {
+              "enum": [
+                "complete",
+                "pending",
+                "unknown"
+              ]
+            },
+            "approval_status": {
+              "enum": [
+                "approved_subject_to_condition",
+                "internally_approved",
+                "pending",
+                "unknown"
+              ]
+            },
+            "execution_status": {
+              "enum": [
+                "pending",
+                "executed",
+                "unknown"
+              ]
+            },
+            "validation_status": {
+              "enum": [
+                "reviewed_for_demo",
+                "unknown"
+              ]
+            },
+            "materiality_status": {
+              "enum": [
+                "unknown",
+                "under_review"
+              ]
+            },
+            "resolution_status": {
+              "enum": [
+                "open",
+                "resolved",
+                "unknown"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "creditConditions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "if": {
+          "required": [
+            "source_refs"
+          ],
+          "properties": {
+            "source_refs": {
+              "contains": {
+                "const": "SRC-019"
+              }
+            }
+          }
+        },
+        "then": {
+          "required": [
+            "id",
+            "case_id",
+            "case_scope_id",
+            "revision",
+            "credit_assessment_ref",
+            "condition_type",
+            "condition_text",
+            "applicability",
+            "status",
+            "effective_scope",
+            "agreement_input_required",
+            "satisfied_by_refs"
+          ],
+          "additionalProperties": true,
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "case_id": {
+              "const": "DEMO-CTT-001"
+            },
+            "revision": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "applicability": {
+              "enum": [
+                "required",
+                "not_required",
+                "unknown"
+              ]
+            },
+            "hold_scope": {
+              "enum": [
+                "task",
+                "branch",
+                "case",
+                "unknown"
+              ]
+            },
+            "search_status": {
+              "enum": [
+                "complete",
+                "pending",
+                "unknown"
+              ]
+            },
+            "clearance_status": {
+              "enum": [
+                "pending",
+                "recorded",
+                "unknown"
+              ]
+            },
+            "assessment_status": {
+              "enum": [
+                "complete",
+                "pending",
+                "unknown"
+              ]
+            },
+            "approval_status": {
+              "enum": [
+                "approved_subject_to_condition",
+                "internally_approved",
+                "pending",
+                "unknown"
+              ]
+            },
+            "execution_status": {
+              "enum": [
+                "pending",
+                "executed",
+                "unknown"
+              ]
+            },
+            "validation_status": {
+              "enum": [
+                "reviewed_for_demo",
+                "unknown"
+              ]
+            },
+            "materiality_status": {
+              "enum": [
+                "unknown",
+                "under_review"
+              ]
+            },
+            "resolution_status": {
+              "enum": [
+                "open",
+                "resolved",
+                "unknown"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "legalAgreements": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "if": {
+          "required": [
+            "source_refs"
+          ],
+          "properties": {
+            "source_refs": {
+              "contains": {
+                "const": "SRC-019"
+              }
+            }
+          }
+        },
+        "then": {
+          "required": [
+            "id",
+            "case_id",
+            "case_scope_id",
+            "revision",
+            "case_scope_ref",
+            "agreement_type",
+            "party_refs",
+            "product_scope_refs",
+            "agreement_revision",
+            "credit_input_revision",
+            "draft_status",
+            "review_status",
+            "approval_status",
+            "execution_status",
+            "signatory_authority_refs",
+            "executed_document_ref"
+          ],
+          "additionalProperties": true,
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "case_id": {
+              "const": "DEMO-CTT-001"
+            },
+            "revision": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "applicability": {
+              "enum": [
+                "required",
+                "not_required",
+                "unknown"
+              ]
+            },
+            "hold_scope": {
+              "enum": [
+                "task",
+                "branch",
+                "case",
+                "unknown"
+              ]
+            },
+            "search_status": {
+              "enum": [
+                "complete",
+                "pending",
+                "unknown"
+              ]
+            },
+            "clearance_status": {
+              "enum": [
+                "pending",
+                "recorded",
+                "unknown"
+              ]
+            },
+            "assessment_status": {
+              "enum": [
+                "complete",
+                "pending",
+                "unknown"
+              ]
+            },
+            "approval_status": {
+              "enum": [
+                "approved_subject_to_condition",
+                "internally_approved",
+                "pending",
+                "unknown"
+              ]
+            },
+            "execution_status": {
+              "enum": [
+                "pending",
+                "executed",
+                "unknown"
+              ]
+            },
+            "validation_status": {
+              "enum": [
+                "reviewed_for_demo",
+                "unknown"
+              ]
+            },
+            "materiality_status": {
+              "enum": [
+                "unknown",
+                "under_review"
+              ]
+            },
+            "resolution_status": {
+              "enum": [
+                "open",
+                "resolved",
+                "unknown"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "clearanceConditions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "if": {
+          "required": [
+            "source_refs"
+          ],
+          "properties": {
+            "source_refs": {
+              "contains": {
+                "const": "SRC-019"
+              }
+            }
+          }
+        },
+        "then": {
+          "required": [
+            "id",
+            "case_id",
+            "case_scope_id",
+            "revision",
+            "domain",
+            "applicability",
+            "status",
+            "blocking_scope",
+            "owner_role",
+            "dependency_refs",
+            "decision_refs",
+            "evidence_refs",
+            "updated_at"
+          ],
+          "additionalProperties": true,
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "case_id": {
+              "const": "DEMO-CTT-001"
+            },
+            "revision": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "applicability": {
+              "enum": [
+                "required",
+                "not_required",
+                "unknown"
+              ]
+            },
+            "hold_scope": {
+              "enum": [
+                "task",
+                "branch",
+                "case",
+                "unknown"
+              ]
+            },
+            "search_status": {
+              "enum": [
+                "complete",
+                "pending",
+                "unknown"
+              ]
+            },
+            "clearance_status": {
+              "enum": [
+                "pending",
+                "recorded",
+                "unknown"
+              ]
+            },
+            "assessment_status": {
+              "enum": [
+                "complete",
+                "pending",
+                "unknown"
+              ]
+            },
+            "approval_status": {
+              "enum": [
+                "approved_subject_to_condition",
+                "internally_approved",
+                "pending",
+                "unknown"
+              ]
+            },
+            "execution_status": {
+              "enum": [
+                "pending",
+                "executed",
+                "unknown"
+              ]
+            },
+            "validation_status": {
+              "enum": [
+                "reviewed_for_demo",
+                "unknown"
+              ]
+            },
+            "materiality_status": {
+              "enum": [
+                "unknown",
+                "under_review"
+              ]
+            },
+            "resolution_status": {
+              "enum": [
+                "open",
+                "resolved",
+                "unknown"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "dependencies": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "if": {
+          "required": [
+            "source_refs"
+          ],
+          "properties": {
+            "source_refs": {
+              "contains": {
+                "const": "SRC-019"
+              }
+            }
+          }
+        },
+        "then": {
+          "required": [
+            "id",
+            "case_id",
+            "case_scope_id",
+            "revision",
+            "from_object_ref",
+            "from_revision",
+            "to_object_ref",
+            "to_revision",
+            "dependency_type",
+            "dependency_condition",
+            "impact_scope",
+            "status",
+            "created_from_ref",
+            "validation_status"
+          ],
+          "additionalProperties": true,
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "case_id": {
+              "const": "DEMO-CTT-001"
+            },
+            "revision": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "applicability": {
+              "enum": [
+                "required",
+                "not_required",
+                "unknown"
+              ]
+            },
+            "hold_scope": {
+              "enum": [
+                "task",
+                "branch",
+                "case",
+                "unknown"
+              ]
+            },
+            "search_status": {
+              "enum": [
+                "complete",
+                "pending",
+                "unknown"
+              ]
+            },
+            "clearance_status": {
+              "enum": [
+                "pending",
+                "recorded",
+                "unknown"
+              ]
+            },
+            "assessment_status": {
+              "enum": [
+                "complete",
+                "pending",
+                "unknown"
+              ]
+            },
+            "approval_status": {
+              "enum": [
+                "approved_subject_to_condition",
+                "internally_approved",
+                "pending",
+                "unknown"
+              ]
+            },
+            "execution_status": {
+              "enum": [
+                "pending",
+                "executed",
+                "unknown"
+              ]
+            },
+            "validation_status": {
+              "enum": [
+                "reviewed_for_demo",
+                "unknown"
+              ]
+            },
+            "materiality_status": {
+              "enum": [
+                "unknown",
+                "under_review"
+              ]
+            },
+            "resolution_status": {
+              "enum": [
+                "open",
+                "resolved",
+                "unknown"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "holds": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "if": {
+          "required": [
+            "source_refs"
+          ],
+          "properties": {
+            "source_refs": {
+              "contains": {
+                "const": "SRC-019"
+              }
+            }
+          }
+        },
+        "then": {
+          "required": [
+            "id",
+            "case_id",
+            "case_scope_id",
+            "revision",
+            "case_scope_ref",
+            "target_object_ref",
+            "hold_scope",
+            "reason_code",
+            "trigger_ref",
+            "owner_role_ref",
+            "applied_at",
+            "release_condition",
+            "released_at",
+            "release_decision_ref"
+          ],
+          "additionalProperties": true,
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "case_id": {
+              "const": "DEMO-CTT-001"
+            },
+            "revision": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "applicability": {
+              "enum": [
+                "required",
+                "not_required",
+                "unknown"
+              ]
+            },
+            "hold_scope": {
+              "enum": [
+                "task",
+                "branch",
+                "case",
+                "unknown"
+              ]
+            },
+            "search_status": {
+              "enum": [
+                "complete",
+                "pending",
+                "unknown"
+              ]
+            },
+            "clearance_status": {
+              "enum": [
+                "pending",
+                "recorded",
+                "unknown"
+              ]
+            },
+            "assessment_status": {
+              "enum": [
+                "complete",
+                "pending",
+                "unknown"
+              ]
+            },
+            "approval_status": {
+              "enum": [
+                "approved_subject_to_condition",
+                "internally_approved",
+                "pending",
+                "unknown"
+              ]
+            },
+            "execution_status": {
+              "enum": [
+                "pending",
+                "executed",
+                "unknown"
+              ]
+            },
+            "validation_status": {
+              "enum": [
+                "reviewed_for_demo",
+                "unknown"
+              ]
+            },
+            "materiality_status": {
+              "enum": [
+                "unknown",
+                "under_review"
+              ]
+            },
+            "resolution_status": {
+              "enum": [
+                "open",
+                "resolved",
+                "unknown"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "agreementInputs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "if": {
+          "required": [
+            "source_refs"
+          ],
+          "properties": {
+            "source_refs": {
+              "contains": {
+                "const": "SRC-019"
+              }
+            }
+          }
+        },
+        "then": {
+          "required": [
+            "id",
+            "case_id",
+            "case_scope_id",
+            "revision",
+            "credit_decision_ref",
+            "credit_decision_revision",
+            "credit_condition_ref",
+            "credit_condition_revision",
+            "condition_text",
+            "agreement_ref",
+            "status"
+          ],
+          "additionalProperties": true,
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "case_id": {
+              "const": "DEMO-CTT-001"
+            },
+            "revision": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "applicability": {
+              "enum": [
+                "required",
+                "not_required",
+                "unknown"
+              ]
+            },
+            "hold_scope": {
+              "enum": [
+                "task",
+                "branch",
+                "case",
+                "unknown"
+              ]
+            },
+            "search_status": {
+              "enum": [
+                "complete",
+                "pending",
+                "unknown"
+              ]
+            },
+            "clearance_status": {
+              "enum": [
+                "pending",
+                "recorded",
+                "unknown"
+              ]
+            },
+            "assessment_status": {
+              "enum": [
+                "complete",
+                "pending",
+                "unknown"
+              ]
+            },
+            "approval_status": {
+              "enum": [
+                "approved_subject_to_condition",
+                "internally_approved",
+                "pending",
+                "unknown"
+              ]
+            },
+            "execution_status": {
+              "enum": [
+                "pending",
+                "executed",
+                "unknown"
+              ]
+            },
+            "validation_status": {
+              "enum": [
+                "reviewed_for_demo",
+                "unknown"
+              ]
+            },
+            "materiality_status": {
+              "enum": [
+                "unknown",
+                "under_review"
+              ]
+            },
+            "resolution_status": {
+              "enum": [
+                "open",
+                "resolved",
+                "unknown"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "decisions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "if": {
+          "required": [
+            "source_refs"
+          ],
+          "properties": {
+            "source_refs": {
+              "contains": {
+                "const": "SRC-019"
+              }
+            }
+          }
+        },
+        "then": {
+          "required": [
+            "id",
+            "case_id",
+            "case_scope_id",
+            "revision",
+            "decision_type",
+            "outcome",
+            "record_status",
+            "approval_role_ref",
+            "demo_role_ref",
+            "bank_authority_ref",
+            "input_revisions"
+          ],
+          "additionalProperties": true,
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "case_id": {
+              "const": "DEMO-CTT-001"
+            },
+            "revision": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "applicability": {
+              "enum": [
+                "required",
+                "not_required",
+                "unknown"
+              ]
+            },
+            "hold_scope": {
+              "enum": [
+                "task",
+                "branch",
+                "case",
+                "unknown"
+              ]
+            },
+            "search_status": {
+              "enum": [
+                "complete",
+                "pending",
+                "unknown"
+              ]
+            },
+            "clearance_status": {
+              "enum": [
+                "pending",
+                "recorded",
+                "unknown"
+              ]
+            },
+            "assessment_status": {
+              "enum": [
+                "complete",
+                "pending",
+                "unknown"
+              ]
+            },
+            "approval_status": {
+              "enum": [
+                "approved_subject_to_condition",
+                "internally_approved",
+                "pending",
+                "unknown"
+              ]
+            },
+            "execution_status": {
+              "enum": [
+                "pending",
+                "executed",
+                "unknown"
+              ]
+            },
+            "validation_status": {
+              "enum": [
+                "reviewed_for_demo",
+                "unknown"
+              ]
+            },
+            "materiality_status": {
+              "enum": [
+                "unknown",
+                "under_review"
+              ]
+            },
+            "resolution_status": {
+              "enum": [
+                "open",
+                "resolved",
+                "unknown"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

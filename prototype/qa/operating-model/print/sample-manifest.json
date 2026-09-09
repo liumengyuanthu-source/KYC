@@ -1,0 +1,128 @@
+[
+  {
+    "pdf": "output/pdf/operating-model/customer.en-AU.pdf",
+    "page": 1,
+    "image": "prototype/qa/operating-model/print/customer.en-AU.page1.png",
+    "perceptualReview": "passed — root visually inspected this rendered first/middle/last sample; not a claim to inspect every page"
+  },
+  {
+    "pdf": "output/pdf/operating-model/customer.en-AU.pdf",
+    "page": 19,
+    "image": "prototype/qa/operating-model/print/customer.en-AU.page19.png",
+    "perceptualReview": "passed — root visually inspected this rendered first/middle/last sample; not a claim to inspect every page"
+  },
+  {
+    "pdf": "output/pdf/operating-model/customer.en-AU.pdf",
+    "page": 38,
+    "image": "prototype/qa/operating-model/print/customer.en-AU.page38.png",
+    "perceptualReview": "passed — root visually inspected this rendered first/middle/last sample; not a claim to inspect every page"
+  },
+  {
+    "pdf": "output/pdf/operating-model/scenario.en-AU.pdf",
+    "page": 1,
+    "image": "prototype/qa/operating-model/print/scenario.en-AU.page1.png",
+    "perceptualReview": "passed — root visually inspected this rendered first/middle/last sample; not a claim to inspect every page"
+  },
+  {
+    "pdf": "output/pdf/operating-model/scenario.en-AU.pdf",
+    "page": 13,
+    "image": "prototype/qa/operating-model/print/scenario.en-AU.page13.png",
+    "perceptualReview": "passed — root visually inspected this rendered first/middle/last sample; not a claim to inspect every page"
+  },
+  {
+    "pdf": "output/pdf/operating-model/scenario.en-AU.pdf",
+    "page": 25,
+    "image": "prototype/qa/operating-model/print/scenario.en-AU.page25.png",
+    "perceptualReview": "passed — root visually inspected this rendered first/middle/last sample; not a claim to inspect every page"
+  },
+  {
+    "pdf": "output/pdf/operating-model/scenario.en-US.pdf",
+    "page": 1,
+    "image": "prototype/qa/operating-model/print/scenario.en-US.page1.png",
+    "perceptualReview": "passed — root visually inspected this rendered first/middle/last sample; not a claim to inspect every page"
+  },
+  {
+    "pdf": "output/pdf/operating-model/scenario.en-US.pdf",
+    "page": 13,
+    "image": "prototype/qa/operating-model/print/scenario.en-US.page13.png",
+    "perceptualReview": "passed — root visually inspected this rendered first/middle/last sample; not a claim to inspect every page"
+  },
+  {
+    "pdf": "output/pdf/operating-model/scenario.en-US.pdf",
+    "page": 25,
+    "image": "prototype/qa/operating-model/print/scenario.en-US.page25.png",
+    "perceptualReview": "passed — root visually inspected this rendered first/middle/last sample; not a claim to inspect every page"
+  },
+  {
+    "pdf": "output/pdf/operating-model/scenario.zh-CN.pdf",
+    "page": 1,
+    "image": "prototype/qa/operating-model/print/scenario.zh-CN.page1.png",
+    "perceptualReview": "passed — root visually inspected this rendered first/middle/last sample; not a claim to inspect every page"
+  },
+  {
+    "pdf": "output/pdf/operating-model/scenario.zh-CN.pdf",
+    "page": 11,
+    "image": "prototype/qa/operating-model/print/scenario.zh-CN.page11.png",
+    "perceptualReview": "passed — root visually inspected this rendered first/middle/last sample; not a claim to inspect every page"
+  },
+  {
+    "pdf": "output/pdf/operating-model/scenario.zh-CN.pdf",
+    "page": 22,
+    "image": "prototype/qa/operating-model/print/scenario.zh-CN.page22.png",
+    "perceptualReview": "passed — root visually inspected this rendered first/middle/last sample; not a claim to inspect every page"
+  },
+  {
+    "pdf": "output/pdf/operating-model/skill.en-AU.pdf",
+    "page": 1,
+    "image": "prototype/qa/operating-model/print/skill.en-AU.page1.png",
+    "perceptualReview": "passed — root visually inspected this rendered first/middle/last sample; not a claim to inspect every page"
+  },
+  {
+    "pdf": "output/pdf/operating-model/skill.en-AU.pdf",
+    "page": 4,
+    "image": "prototype/qa/operating-model/print/skill.en-AU.page4.png",
+    "perceptualReview": "passed — root visually inspected this rendered first/middle/last sample; not a claim to inspect every page"
+  },
+  {
+    "pdf": "output/pdf/operating-model/skill.en-AU.pdf",
+    "page": 7,
+    "image": "prototype/qa/operating-model/print/skill.en-AU.page7.png",
+    "perceptualReview": "passed — root visually inspected this rendered first/middle/last sample; not a claim to inspect every page"
+  },
+  {
+    "pdf": "output/pdf/operating-model/skill.en-US.pdf",
+    "page": 1,
+    "image": "prototype/qa/operating-model/print/skill.en-US.page1.png",
+    "perceptualReview": "passed — root visually inspected this rendered first/middle/last sample; not a claim to inspect every page"
+  },
+  {
+    "pdf": "output/pdf/operating-model/skill.en-US.pdf",
+    "page": 4,
+    "image": "prototype/qa/operating-model/print/skill.en-US.page4.png",
+    "perceptualReview": "passed — root visually inspected this rendered first/middle/last sample; not a claim to inspect every page"
+  },
+  {
+    "pdf": "output/pdf/operating-model/skill.en-US.pdf",
+    "page": 7,
+    "image": "prototype/qa/operating-model/print/skill.en-US.page7.png",
+    "perceptualReview": "passed — root visually inspected this rendered first/middle/last sample; not a claim to inspect every page"
+  },
+  {
+    "pdf": "output/pdf/operating-model/skill.zh-CN.pdf",
+    "page": 1,
+    "image": "prototype/qa/operating-model/print/skill.zh-CN.page1.png",
+    "perceptualReview": "passed — root visually inspected this rendered first/middle/last sample; not a claim to inspect every page"
+  },
+  {
+    "pdf": "output/pdf/operating-model/skill.zh-CN.pdf",
+    "page": 4,
+    "image": "prototype/qa/operating-model/print/skill.zh-CN.page4.png",
+    "perceptualReview": "passed — root visually inspected this rendered first/middle/last sample; not a claim to inspect every page"
+  },
+  {
+    "pdf": "output/pdf/operating-model/skill.zh-CN.pdf",
+    "page": 7,
+    "image": "prototype/qa/operating-model/print/skill.zh-CN.page7.png",
+    "perceptualReview": "passed — root visually inspected this rendered first/middle/last sample; not a claim to inspect every page"
+  }
+]

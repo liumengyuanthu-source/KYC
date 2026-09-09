@@ -1,0 +1,579 @@
+{
+  "at": "2026-09-07T19:06:39.743Z",
+  "browser": "152.0.7977.76",
+  "results": [
+    {
+      "name": "responsive-1920-en-AU",
+      "status": "passed",
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "locale": "en-AU",
+      "detail": {
+        "width": 1920,
+        "scroll": 1920,
+        "evidence": {
+          "x": 187.59375,
+          "y": 685.125,
+          "width": 991.140625,
+          "height": 609.6875
+        },
+        "actions": {
+          "x": 1210.734375,
+          "y": 685.125,
+          "width": 521.671875,
+          "height": 609.6875
+        },
+        "core": 4,
+        "font": "14px"
+      },
+      "screenshot": "audit/screenshots/actual/surfaces/responsive-1920-en-AU.png"
+    },
+    {
+      "name": "responsive-1920-zh-CN",
+      "status": "passed",
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "locale": "zh-CN",
+      "detail": {
+        "width": 1920,
+        "scroll": 1920,
+        "evidence": {
+          "x": 187.59375,
+          "y": 685.125,
+          "width": 991.140625,
+          "height": 588
+        },
+        "actions": {
+          "x": 1210.734375,
+          "y": 685.125,
+          "width": 521.671875,
+          "height": 588
+        },
+        "core": 4,
+        "font": "14px"
+      },
+      "screenshot": "audit/screenshots/actual/surfaces/responsive-1920-zh-CN.png"
+    },
+    {
+      "name": "responsive-1440-en-AU",
+      "status": "passed",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "locale": "en-AU",
+      "detail": {
+        "width": 1440,
+        "scroll": 1440,
+        "evidence": {
+          "x": 43.1875,
+          "y": 685.125,
+          "width": 865.890625,
+          "height": 704.375
+        },
+        "actions": {
+          "x": 941.078125,
+          "y": 685.125,
+          "width": 455.71875,
+          "height": 704.375
+        },
+        "core": 4,
+        "font": "14px"
+      },
+      "screenshot": "audit/screenshots/actual/surfaces/responsive-1440-en-AU.png"
+    },
+    {
+      "name": "responsive-1440-zh-CN",
+      "status": "passed",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "locale": "zh-CN",
+      "detail": {
+        "width": 1440,
+        "scroll": 1440,
+        "evidence": {
+          "x": 43.1875,
+          "y": 685.125,
+          "width": 865.890625,
+          "height": 588
+        },
+        "actions": {
+          "x": 941.078125,
+          "y": 685.125,
+          "width": 455.71875,
+          "height": 588
+        },
+        "core": 4,
+        "font": "14px"
+      },
+      "screenshot": "audit/screenshots/actual/surfaces/responsive-1440-zh-CN.png"
+    },
+    {
+      "name": "responsive-1366-en-AU",
+      "status": "passed",
+      "viewport": {
+        "width": 1366,
+        "height": 768
+      },
+      "locale": "en-AU",
+      "detail": {
+        "width": 1366,
+        "scroll": 1366,
+        "evidence": {
+          "x": 40.96875,
+          "y": 685.125,
+          "width": 820.3125,
+          "height": 704.375
+        },
+        "actions": {
+          "x": 893.28125,
+          "y": 685.125,
+          "width": 431.734375,
+          "height": 704.375
+        },
+        "core": 4,
+        "font": "14px"
+      },
+      "screenshot": "audit/screenshots/actual/surfaces/responsive-1366-en-AU.png"
+    },
+    {
+      "name": "responsive-1366-zh-CN",
+      "status": "passed",
+      "viewport": {
+        "width": 1366,
+        "height": 768
+      },
+      "locale": "zh-CN",
+      "detail": {
+        "width": 1366,
+        "scroll": 1366,
+        "evidence": {
+          "x": 40.96875,
+          "y": 685.125,
+          "width": 820.3125,
+          "height": 609.6875
+        },
+        "actions": {
+          "x": 893.28125,
+          "y": 685.125,
+          "width": 431.734375,
+          "height": 609.6875
+        },
+        "core": 4,
+        "font": "14px"
+      },
+      "screenshot": "audit/screenshots/actual/surfaces/responsive-1366-zh-CN.png"
+    },
+    {
+      "name": "responsive-1280-en-AU",
+      "status": "passed",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "locale": "en-AU",
+      "detail": {
+        "width": 1280,
+        "scroll": 1280,
+        "evidence": {
+          "x": 38.390625,
+          "y": 685.125,
+          "width": 767.34375,
+          "height": 704.375
+        },
+        "actions": {
+          "x": 837.734375,
+          "y": 685.125,
+          "width": 403.875,
+          "height": 704.375
+        },
+        "core": 4,
+        "font": "14px"
+      },
+      "screenshot": "audit/screenshots/actual/surfaces/responsive-1280-en-AU.png"
+    },
+    {
+      "name": "responsive-1280-zh-CN",
+      "status": "passed",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "locale": "zh-CN",
+      "detail": {
+        "width": 1280,
+        "scroll": 1280,
+        "evidence": {
+          "x": 38.390625,
+          "y": 685.125,
+          "width": 767.34375,
+          "height": 609.6875
+        },
+        "actions": {
+          "x": 837.734375,
+          "y": 685.125,
+          "width": 403.875,
+          "height": 609.6875
+        },
+        "core": 4,
+        "font": "14px"
+      },
+      "screenshot": "audit/screenshots/actual/surfaces/responsive-1280-zh-CN.png"
+    },
+    {
+      "name": "responsive-1024-en-AU",
+      "status": "passed",
+      "viewport": {
+        "width": 1024,
+        "height": 768
+      },
+      "locale": "en-AU",
+      "detail": {
+        "width": 1024,
+        "scroll": 1024,
+        "evidence": {
+          "x": 30.71875,
+          "y": 760.125,
+          "width": 609.671875,
+          "height": 872.0625
+        },
+        "actions": {
+          "x": 672.390625,
+          "y": 760.125,
+          "width": 320.875,
+          "height": 872.0625
+        },
+        "core": 4,
+        "font": "14px"
+      },
+      "screenshot": "audit/screenshots/actual/surfaces/responsive-1024-en-AU.png"
+    },
+    {
+      "name": "responsive-1024-zh-CN",
+      "status": "passed",
+      "viewport": {
+        "width": 1024,
+        "height": 768
+      },
+      "locale": "zh-CN",
+      "detail": {
+        "width": 1024,
+        "scroll": 1024,
+        "evidence": {
+          "x": 30.71875,
+          "y": 685.125,
+          "width": 609.671875,
+          "height": 682.6875
+        },
+        "actions": {
+          "x": 672.390625,
+          "y": 685.125,
+          "width": 320.875,
+          "height": 682.6875
+        },
+        "core": 4,
+        "font": "14px"
+      },
+      "screenshot": "audit/screenshots/actual/surfaces/responsive-1024-zh-CN.png"
+    },
+    {
+      "name": "responsive-390-en-AU",
+      "status": "passed",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "locale": "en-AU",
+      "detail": {
+        "width": 390,
+        "scroll": 390,
+        "evidence": {
+          "x": 16,
+          "y": 1534.1875,
+          "width": 358,
+          "height": 670.46875
+        },
+        "actions": {
+          "x": 16,
+          "y": 2224.65625,
+          "width": 358,
+          "height": 740.375
+        },
+        "core": 4,
+        "font": "16px"
+      },
+      "screenshot": "audit/screenshots/actual/surfaces/responsive-390-en-AU.png"
+    },
+    {
+      "name": "responsive-390-zh-CN",
+      "status": "passed",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "locale": "zh-CN",
+      "detail": {
+        "width": 390,
+        "scroll": 390,
+        "evidence": {
+          "x": 16,
+          "y": 1432.6875,
+          "width": 358,
+          "height": 543.78125
+        },
+        "actions": {
+          "x": 16,
+          "y": 1996.46875,
+          "width": 358,
+          "height": 645.6875
+        },
+        "core": 4,
+        "font": "16px"
+      },
+      "screenshot": "audit/screenshots/actual/surfaces/responsive-390-zh-CN.png"
+    },
+    {
+      "name": "journey-current",
+      "status": "passed",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "locale": "en-AU",
+      "screenshot": "audit/screenshots/actual/surfaces/journey-current.png"
+    },
+    {
+      "name": "journey-target",
+      "status": "passed",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "locale": "en-AU",
+      "screenshot": "audit/screenshots/actual/surfaces/journey-target.png"
+    },
+    {
+      "name": "scenario-modal-keyboard",
+      "status": "passed",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "locale": "en-AU",
+      "detail": {
+        "focus": [
+          {
+            "inside": true,
+            "tag": "BUTTON",
+            "label": "Close scenario"
+          },
+          {
+            "inside": true,
+            "tag": "BUTTON",
+            "label": "How this work runs"
+          },
+          {
+            "inside": true,
+            "tag": "BUTTON",
+            "label": "Current"
+          },
+          {
+            "inside": true,
+            "tag": "BUTTON",
+            "label": "Target"
+          },
+          {
+            "inside": true,
+            "tag": "BUTTON",
+            "label": "Compare Current / Target"
+          },
+          {
+            "inside": true,
+            "tag": "SUMMARY",
+            "label": "Same input · authored comparison checkpoint"
+          },
+          {
+            "inside": true,
+            "tag": "SUMMARY",
+            "label": "01Bind the finding to its original queryReassigned"
+          },
+          {
+            "inside": true,
+            "tag": "SUMMARY",
+            "label": "02Compare identifying attributesEnhanced"
+          },
+          {
+            "inside": true,
+            "tag": "SUMMARY",
+            "label": "03Request specific distinguishing evidenceEnhanced"
+          },
+          {
+            "inside": true,
+            "tag": "SUMMARY",
+            "label": "04Prepare the review packEnhanced"
+          },
+          {
+            "inside": true,
+            "tag": "SUMMARY",
+            "label": "05Assess risk and materialityRetained"
+          },
+          {
+            "inside": true,
+            "tag": "SUMMARY",
+            "label": "06Record a disposition for bounded inputsEnhanced"
+          },
+          {
+            "inside": true,
+            "tag": "SUMMARY",
+            "label": "07Separate the local result from whole-case impactEnhanced"
+          },
+          {
+            "inside": true,
+            "tag": "BUTTON",
+            "label": "All decisions"
+          },
+          {
+            "inside": true,
+            "tag": "BUTTON",
+            "label": "Receive possible matchM01"
+          },
+          {
+            "inside": true,
+            "tag": "BUTTON",
+            "label": "Need immediate specialist/hold action?M02"
+          },
+          {
+            "inside": true,
+            "tag": "BUTTON",
+            "label": "Prepare comparison & issuesM03"
+          },
+          {
+            "inside": true,
+            "tag": "BUTTON",
+            "label": "Evidence supports an in-scope review?M04"
+          },
+          {
+            "inside": true,
+            "tag": "BUTTON",
+            "label": "Source / request specific evidenceM05"
+          },
+          {
+            "inside": true,
+            "tag": "BUTTON",
+            "label": "Reviewer has required authority?M06"
+          }
+        ],
+        "focus_return": true
+      },
+      "screenshot": "audit/screenshots/actual/surfaces/scenario-modal-keyboard.png"
+    },
+    {
+      "name": "cases-active",
+      "status": "passed",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "locale": "en-AU",
+      "detail": {
+        "outcomeFixtures": "live readonly record"
+      },
+      "screenshot": "audit/screenshots/actual/surfaces/cases-active.png"
+    },
+    {
+      "name": "cases-my_completed_work",
+      "status": "passed",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "locale": "en-AU",
+      "detail": {
+        "outcomeFixtures": "empty approved outcome fixtures"
+      },
+      "screenshot": "audit/screenshots/actual/surfaces/cases-my_completed_work.png"
+    },
+    {
+      "name": "cases-archived",
+      "status": "passed",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "locale": "en-AU",
+      "detail": {
+        "outcomeFixtures": "empty approved outcome fixtures"
+      },
+      "screenshot": "audit/screenshots/actual/surfaces/cases-archived.png"
+    },
+    {
+      "name": "layout-changed",
+      "status": "passed",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "locale": "en-AU",
+      "screenshot": "audit/screenshots/actual/surfaces/layout-changed.png"
+    },
+    {
+      "name": "readiness-not-ready",
+      "status": "passed",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "locale": "en-AU",
+      "screenshot": "audit/screenshots/actual/surfaces/readiness-not-ready.png"
+    },
+    {
+      "name": "role-ROLE-RM",
+      "status": "passed",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "locale": "en-AU",
+      "screenshot": "audit/screenshots/actual/surfaces/role-ROLE-RM.png"
+    },
+    {
+      "name": "role-ROLE-CLIENT",
+      "status": "passed",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "locale": "en-AU",
+      "screenshot": "audit/screenshots/actual/surfaces/role-ROLE-CLIENT.png"
+    },
+    {
+      "name": "role-ROLE-REVIEWER",
+      "status": "passed",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "locale": "en-AU",
+      "screenshot": "audit/screenshots/actual/surfaces/role-ROLE-REVIEWER.png"
+    },
+    {
+      "name": "text-scale-200",
+      "status": "passed",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "locale": "en-AU",
+      "detail": {
+        "method": "CSS root/body 200% text scaling; not OS screen-reader or native browser zoom certification"
+      },
+      "screenshot": "audit/screenshots/actual/surfaces/text-scale-200.png"
+    }
+  ]
+}

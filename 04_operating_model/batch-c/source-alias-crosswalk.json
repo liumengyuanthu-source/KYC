@@ -1,0 +1,17 @@
+{
+  "source_ref": "SRC-016",
+  "aliases": {
+    "EV-ID-C01": "DEMO-CTT-001/evidence/collaboration-2",
+    "Person T": "DEMO-CTT-001/person/person-t",
+    "SYN-PROVIDER-RECORD-C01": "DEMO-CTT-001/provider-snapshot/c-1"
+  },
+  "preserved": {
+    "EV-A05": "DEMO-CTT-001/evidence/collaboration-1",
+    "B request": "DEMO-CTT-001/request/authority_gap",
+    "Entity A legacy finding": "DEMO-CTT-001/finding/possible-match"
+  },
+  "semantic_qualification": {
+    "SRC-009:DEP-08": "Split to SRC-010:DEP-07 screening review and SRC-010:DEP-08 independent EDD",
+    "SRC-009:DEP-07": "Credit→Legal, not SRC-010:DEP-07 screening"
+  }
+}

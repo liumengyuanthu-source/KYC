@@ -1,0 +1,15 @@
+{
+  "version":"D2-D-Final-1.0",
+  "archify_version":"2.17",
+  "type":"workflow",
+  "families":["DG-D01","DG-D02","DG-D03"],
+  "locales":["zh-CN","en-AU","en-US"],
+  "active_suffix":"r02",
+  "host_metadata":"model.mjs",
+  "static_export":"canonical-export-receipts.json",
+  "browser_summary":"browser-summary.json",
+  "comparison_contract":"Current/Target scene narratives share the explicit dependency topology; graphs are read-only and do not claim implementation of bank rules.",
+  "prior_unsuffixed_artifacts":"development drafts only; not selected by host",
+  "visual_review_scope":"Representative actual r02 light/dark English/Chinese screenshots inspected; all nine canonical viewers have automated four-viewport receipts.",
+  "business_writes":false
+}

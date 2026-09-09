@@ -1,0 +1,170 @@
+[
+  {
+    "id": "CH-01",
+    "status": "passed",
+    "evidence": "Engine targeted test and local fixture assertions; see tests.tap and engine-report.md.",
+    "fidelity": "local_simulation"
+  },
+  {
+    "id": "CH-02",
+    "status": "passed",
+    "evidence": "Engine targeted test and local fixture assertions; see tests.tap and engine-report.md.",
+    "fidelity": "local_simulation"
+  },
+  {
+    "id": "CH-03",
+    "status": "passed",
+    "evidence": "Engine targeted test and local fixture assertions; see tests.tap and engine-report.md.",
+    "fidelity": "local_simulation"
+  },
+  {
+    "id": "CH-04",
+    "status": "passed",
+    "evidence": "Engine targeted test and local fixture assertions; see tests.tap and engine-report.md.",
+    "fidelity": "local_simulation"
+  },
+  {
+    "id": "CH-05",
+    "status": "passed",
+    "evidence": "Engine targeted test and local fixture assertions; see tests.tap and engine-report.md.",
+    "fidelity": "local_simulation"
+  },
+  {
+    "id": "CH-06",
+    "status": "not-run",
+    "evidence": "Email adapter disabled; no preview-bot experiment or real token path.",
+    "fidelity": "local_simulation"
+  },
+  {
+    "id": "CH-07",
+    "status": "passed",
+    "evidence": "Engine targeted test and local fixture assertions; see tests.tap and engine-report.md.",
+    "fidelity": "local_simulation"
+  },
+  {
+    "id": "CH-08",
+    "status": "passed",
+    "evidence": "Engine targeted test and local fixture assertions; see tests.tap and engine-report.md.",
+    "fidelity": "local_simulation"
+  },
+  {
+    "id": "CH-09",
+    "status": "passed",
+    "evidence": "Engine targeted test and local fixture assertions; see tests.tap and engine-report.md.",
+    "fidelity": "local_simulation"
+  },
+  {
+    "id": "CH-10",
+    "status": "passed",
+    "evidence": "Engine targeted test and local fixture assertions; see tests.tap and engine-report.md.",
+    "fidelity": "local_simulation"
+  },
+  {
+    "id": "CH-11",
+    "status": "passed",
+    "evidence": "Engine targeted test and local fixture assertions; see tests.tap and engine-report.md.",
+    "fidelity": "local_simulation"
+  },
+  {
+    "id": "CH-12",
+    "status": "passed",
+    "evidence": "Engine targeted test and local fixture assertions; see tests.tap and engine-report.md.",
+    "fidelity": "local_simulation"
+  },
+  {
+    "id": "CH-13",
+    "status": "passed",
+    "evidence": "Engine targeted test and local fixture assertions; see tests.tap and engine-report.md.",
+    "fidelity": "local_simulation"
+  },
+  {
+    "id": "CH-14",
+    "status": "passed",
+    "evidence": "Engine targeted test and local fixture assertions; see tests.tap and engine-report.md.",
+    "fidelity": "local_simulation"
+  },
+  {
+    "id": "CH-15",
+    "status": "passed",
+    "evidence": "Engine targeted test and local fixture assertions; see tests.tap and engine-report.md.",
+    "fidelity": "local_simulation"
+  },
+  {
+    "id": "CH-16",
+    "status": "passed",
+    "evidence": "Engine targeted test and local fixture assertions; see tests.tap and engine-report.md.",
+    "fidelity": "local_simulation"
+  },
+  {
+    "id": "CH-17",
+    "status": "passed",
+    "evidence": "Engine targeted test and local fixture assertions; see tests.tap and engine-report.md.",
+    "fidelity": "local_simulation"
+  },
+  {
+    "id": "CH-18",
+    "status": "passed",
+    "evidence": "Engine targeted test and local fixture assertions; see tests.tap and engine-report.md.",
+    "fidelity": "local_simulation"
+  },
+  {
+    "id": "CH-19",
+    "status": "passed",
+    "evidence": "Engine targeted test and local fixture assertions; see tests.tap and engine-report.md.",
+    "fidelity": "local_simulation"
+  },
+  {
+    "id": "CH-20",
+    "status": "passed",
+    "evidence": "Engine targeted test and local fixture assertions; see tests.tap and engine-report.md.",
+    "fidelity": "local_simulation"
+  },
+  {
+    "id": "CH-21",
+    "status": "passed",
+    "evidence": "Browser Continue Story through last beat preserves full case and collaboration session.",
+    "fidelity": "local_simulation"
+  },
+  {
+    "id": "CH-22",
+    "status": "passed",
+    "evidence": "Browser restores Current SCN-GAP and latest locale; existing navigation tests cover role and semantic camera.",
+    "fidelity": "local_simulation"
+  },
+  {
+    "id": "CH-23",
+    "status": "passed",
+    "evidence": "Browser failed save retains current editor and shows alert in dirty dialog.",
+    "fidelity": "local_simulation"
+  },
+  {
+    "id": "CH-24",
+    "status": "passed",
+    "evidence": "Allowlisted print DOM excludes other item and internal reasons; browser proof plus exported client PDF when EXPORT_PDF=1.",
+    "fidelity": "local_simulation"
+  },
+  {
+    "id": "CH-25",
+    "status": "not-run",
+    "evidence": "Living Case Lab is not implemented/enabled. Mainline works independently; no Shadow State action can be exercised.",
+    "fidelity": "local_simulation"
+  },
+  {
+    "id": "CH-26",
+    "status": "passed",
+    "evidence": "Engine targeted test and local fixture assertions; see tests.tap and engine-report.md.",
+    "fidelity": "local_simulation"
+  },
+  {
+    "id": "CH-27",
+    "status": "passed",
+    "evidence": "Adversarial fixture sets all local items/tasks complete; unresolved case conditions still return not_ready.",
+    "fidelity": "local_simulation"
+  },
+  {
+    "id": "CH-28",
+    "status": "passed",
+    "evidence": "Engine targeted test and local fixture assertions; see tests.tap and engine-report.md.",
+    "fidelity": "local_simulation"
+  }
+]

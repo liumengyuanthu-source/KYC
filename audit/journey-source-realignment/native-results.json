@@ -1,0 +1,7 @@
+{
+  "command": "node --test prototype/tests/*.test.mjs",
+  "at": "2026-09-08T00:27:06.244Z",
+  "sourceLog": "/tmp/journey-realignment-final-native.tap",
+  "sha256": "af9d0ab9f023c4e2116ab19f831788ffb7dc9e04c16738f3e3278dfeb36fc17e",
+  "summary": "1..528\n# tests 528\n# suites 0\n# pass 528\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 106164.353375\n"
+}

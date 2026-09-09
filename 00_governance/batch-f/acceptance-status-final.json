@@ -1,0 +1,33 @@
+{
+  "scope": "Approved E then F local increment; not D6 or full Workshop acceptance",
+  "status": "code_increment_accepted_with_unmet_graphical_acceptance",
+  "independent_review": {"critical_open": 0, "runtime_important_open": 0, "graphical_important_open": 1, "five_presentation_minors": "addressed", "report": ".superpowers/sdd/2026-09-08-batch-e-f/final-scoped-review.md"},
+  "source_refs": ["SRC-020", "SRC-021"],
+  "historical_acceptance_qualification": "Earlier E acceptance and F 406-test receipts predate the final provenance finding. Preserved as history, not the final code verdict.",
+  "native": {"status": "passed", "tests": 506, "failed": 0, "skipped": 0, "exit_code": 0, "receipt": "00_governance/batch-f/final-fix-verification/verification-inventory.json"},
+  "browser": {
+    "e_mainline": {"status": "passed", "checks": 22, "receipt": "prototype/qa/batch-e/final-fix-mainline/receipt.json"},
+    "e_history_role": {"status": "passed", "checks": 6, "receipt": "prototype/qa/batch-e/final-fix-history-role/receipt.json"},
+    "f_host": {"status": "passed", "checks": 7, "receipt": "prototype/qa/batch-f/final-fix-host/receipt.json"},
+    "qualification": "Installed local Chrome. No universal browser or production permission certification. RT-E03 has native coverage but no dedicated browser assertion."
+  },
+  "red_team": {"status": "executed_cases_passed_not_exhaustive", "receipt": "00_governance/batch-f/final-fix-verification/red-team-master.json"},
+  "print": {"status": "root_inspected_no_clipping_or_overlap_observed", "e_zh_pages": 10, "f_zh_pages": 18, "f_en_pages": 22, "report": "00_governance/batch-f/final-fix-visual-print-review.md"},
+  "schema": {"status": "additive_candidate_v0.1", "snapshots_checked": 10, "fields": 275, "actions": 17, "targeted_checks": "passed", "full_meta_validation": "not_run"},
+  "graphics": {
+    "acceptance": "unmet",
+    "e_english_dg_e03": "failed_candidate_with_explicit_semantic_fallback",
+    "f_dg_f02_both_locales": "failed_routing_at_archify_repair_cap_with_explicit_semantic_fallback",
+    "f_dg_f01_f03": "deterministic_delivery_and_static_host_passed; standalone_vertical_containment_failed",
+    "scope": "Static and host/PDF results do not supersede canonical diagram failures"
+  },
+  "existing_residuals": ["D5 UX-010 permission configuration variants", "Bank authority, policy, real applicability and downstream systems require business validation"],
+  "legacy_e_sessions": "No automatic provenance migration. Missing new bindings means Not Ready/current review required. Explicit pre-E archive restore and reviewed reload supported when archive exists; absent archive is not fabricated.",
+  "root_integrity_check": {"preserved_inventory_paths": 31, "mismatches": 0, "native_test_files": 42, "test_hash_drift": 0},
+  "runtime_hashes": {
+    "clearance_engine": "d0c5fe66854c0a2963603081fc74851761a7f7c99a34ec931681609c2c607ffb",
+    "consolidation": "f646dc284b7237c38ddcc0d159af3030a52f9f1d810a31bb651702f36abd1a23",
+    "candidate_schema": "c14e53110c0526d5b9dcabf4843c289c502a33c84fb42fb6122f5f14bf7b1e0a"
+  },
+  "publication": "local_only_no_commit_no_push_no_remote_deployment"
+}

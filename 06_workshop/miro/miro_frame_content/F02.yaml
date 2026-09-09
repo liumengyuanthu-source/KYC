@@ -1,9 +1,246 @@
-frame_code: F02
-title: "Journey Architecture"
-version: V0
-status: BLOCKED_SOURCE_NOT_VALIDATED
-missing_sources:
-  - "03_personas_journey/journey_moments_master.csv"
-items: []
-notes:
-  - "Do not populate from scope documents."
+{
+  "frame_code": "F02",
+  "title": "Journey architecture — working S2 pilot",
+  "version": "V0.1",
+  "status": "MIRO_V0_CREATED_AWAITING_REVIEW",
+  "source_files": [
+    "01_process/process_decomposition.md",
+    "03_personas_journey/journey_moments.csv"
+  ],
+  "layout": {
+    "width": 1980,
+    "height": 1100,
+    "margin": 80
+  },
+  "items": [
+    {
+      "content_id": "F02-S1",
+      "component": "CMP-STAGE",
+      "title": "S1 · Initiate and scope",
+      "body": "M0–M1",
+      "visible_tag": "WRITTEN_BRIEF_CONFIRMED",
+      "source_refs": [
+        {
+          "source_id": "SRC-001",
+          "locator": "Principle 5"
+        }
+      ],
+      "x": 80,
+      "y": 180,
+      "width": 340,
+      "height": 170
+    },
+    {
+      "content_id": "F02-S2",
+      "component": "CMP-STAGE",
+      "title": "S2 · Determine requirements and source evidence",
+      "body": "M2–M3",
+      "visible_tag": "WRITTEN_BRIEF_CONFIRMED",
+      "source_refs": [
+        {
+          "source_id": "SRC-001",
+          "locator": "Principle 5"
+        }
+      ],
+      "x": 444,
+      "y": 180,
+      "width": 340,
+      "height": 170
+    },
+    {
+      "content_id": "F02-S3",
+      "component": "CMP-STAGE",
+      "title": "S3 · Screen and assess",
+      "body": "M4–M5",
+      "visible_tag": "WRITTEN_BRIEF_CONFIRMED",
+      "source_refs": [
+        {
+          "source_id": "SRC-001",
+          "locator": "Principle 5"
+        }
+      ],
+      "x": 808,
+      "y": 180,
+      "width": 340,
+      "height": 170
+    },
+    {
+      "content_id": "F02-S4",
+      "component": "CMP-STAGE",
+      "title": "S4 · Assure, resolve and approve",
+      "body": "M6 and closure of applicable dependencies",
+      "visible_tag": "WRITTEN_BRIEF_CONFIRMED",
+      "source_refs": [
+        {
+          "source_id": "SRC-001",
+          "locator": "Principle 5"
+        }
+      ],
+      "x": 1172,
+      "y": 180,
+      "width": 340,
+      "height": 170
+    },
+    {
+      "content_id": "F02-S5",
+      "component": "CMP-STAGE",
+      "title": "S5 · Clear to trade",
+      "body": "M8",
+      "visible_tag": "WRITTEN_BRIEF_CONFIRMED",
+      "source_refs": [
+        {
+          "source_id": "SRC-001",
+          "locator": "Principle 5"
+        }
+      ],
+      "x": 1536,
+      "y": 180,
+      "width": 340,
+      "height": 170
+    },
+    {
+      "content_id": "F02-L0",
+      "component": "CMP-ACTION",
+      "title": "L0 · Executive stages",
+      "body": "Five-stage narrative; S2 highlighted. Not a serial execution rule.",
+      "visible_tag": "DESIGN_HYPOTHESIS",
+      "source_refs": [
+        {
+          "source_id": "SRC-004",
+          "locator": "Journey hierarchy and common-lane calibration"
+        }
+      ],
+      "assumption_ids": [
+        "ASM-006"
+      ],
+      "x": 80,
+      "y": 420,
+      "width": 340,
+      "height": 220
+    },
+    {
+      "content_id": "F02-L1",
+      "component": "CMP-ACTION",
+      "title": "L1 · Journey moments",
+      "body": "S2 pilot: determine requirements; source evidence; identify gaps; request information; validate evidence.",
+      "visible_tag": "DESIGN_HYPOTHESIS",
+      "source_refs": [
+        {
+          "source_id": "SRC-004",
+          "locator": "Journey hierarchy and common-lane calibration"
+        }
+      ],
+      "assumption_ids": [
+        "ASM-006"
+      ],
+      "x": 444,
+      "y": 420,
+      "width": 340,
+      "height": 220
+    },
+    {
+      "content_id": "F02-L2",
+      "component": "CMP-ACTION",
+      "title": "L2 · Atomic actions",
+      "body": "M2.1–M2.5 and M3.1–M3.5 retain original process references.",
+      "visible_tag": "DESIGN_HYPOTHESIS",
+      "source_refs": [
+        {
+          "source_id": "SRC-004",
+          "locator": "Journey hierarchy and common-lane calibration"
+        }
+      ],
+      "assumption_ids": [
+        "ASM-006"
+      ],
+      "x": 808,
+      "y": 420,
+      "width": 340,
+      "height": 220
+    },
+    {
+      "content_id": "F02-PAR",
+      "component": "CMP-HANDOFF",
+      "title": "Parallel / conditional work",
+      "body": "M7 conflicts can start from M1. Legal C1 and Credit C2 progress when applicable; final clearance reconciles dependencies.",
+      "visible_tag": "PROCESS_MAP_DERIVED",
+      "source_refs": [
+        {
+          "source_id": "SRC-007",
+          "locator": "slide 1 conflicts / Legal / Credit lanes"
+        }
+      ],
+      "assumption_ids": [],
+      "x": 1172,
+      "y": 420,
+      "width": 340,
+      "height": 220
+    },
+    {
+      "content_id": "F02-GAP",
+      "component": "CMP-QUESTION",
+      "title": "Open layout decision",
+      "body": "L0/L1/L2 definitions and eleven common lanes are proposed under ASM-006; align with missing parent specification (Q-004).",
+      "visible_tag": "DESIGN_HYPOTHESIS",
+      "source_refs": [
+        {
+          "source_id": "SRC-004",
+          "locator": "Journey hierarchy and common-lane calibration"
+        }
+      ],
+      "assumption_ids": [
+        "ASM-006"
+      ],
+      "x": 1536,
+      "y": 420,
+      "width": 340,
+      "height": 220
+    },
+    {
+      "content_id": "F02-NAV",
+      "component": "NAVIGATION",
+      "title": "Open Current / Target S2 and component library",
+      "visible_tag": "PILOT_NAVIGATION",
+      "source_refs": [
+        {
+          "source_id": "SRC-003",
+          "locator": "Pilot deliverables"
+        }
+      ],
+      "x": 80,
+      "y": 690,
+      "width": 1800,
+      "height": 62
+    },
+    {
+      "content_id": "F02-SYNTHETIC-CASE",
+      "component": "CMP-VARIANT",
+      "title": "Synthetic pilot case — new institutional relationship",
+      "body": "Registry extract available; ownership explanation missing. Human approves the targeted request. Insufficient reply reopens the gap. S2 acceptance is not trade clearance.",
+      "visible_tag": "DESIGN_HYPOTHESIS",
+      "assumption_ids": [
+        "ASM-003",
+        "ASM-004",
+        "ASM-005"
+      ],
+      "source_refs": [
+        {
+          "source_id": "SRC-007",
+          "locator": "M2/M3 activities; synthetic sequence is a design hypothesis"
+        }
+      ],
+      "x": 80,
+      "y": 800,
+      "width": 1800,
+      "height": 220
+    }
+  ],
+  "connectors": [],
+  "notes": [
+    "Parallel track timings are conceptual; not client-validated workflow rules.",
+    "2026-09-07: native items and connector references read back; detailed design calibration and client validation remain open."
+  ],
+  "miro_frame_id": "3458764682843351902",
+  "miro_url": "https://miro.com/app/board/uXjVHr-MAS8=/?moveToWidget=3458764682843351902",
+  "readback_managed_count": 14
+}

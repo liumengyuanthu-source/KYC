@@ -1,0 +1,38 @@
+{
+  "at": "2026-09-07T15:51:30.255Z",
+  "browser": "152.0.7977.76",
+  "results": [
+    {
+      "ids": [
+        "UX-01",
+        "UX-02",
+        "UX-10",
+        "UX-25"
+      ],
+      "name": "pc01-chain-context",
+      "status": "passed",
+      "screenshot": "prototype/qa/d3a/host/pc01-chain-context.png",
+      "errors": []
+    },
+    {
+      "ids": [
+        "UX-10",
+        "UX-15"
+      ],
+      "name": "global-references-escape-after-pc01",
+      "status": "failed",
+      "error": "Expected values to be strictly equal:\n+ actual - expected\n\n+ {\n+   kind: null,\n+   node: null,\n+   origin: {\n+     agreementRevision: null,\n+     branchIndex: false,\n+     camera: {\n+       anchor: 'SCN-SCOPE',\n+       offset: 0\n+     },\n+     comparison: 'target',\n+     conditionDomain: 'conflicts',\n+     dGraph: {\n+       cursor: 0,\n+       focus: null,\n+       graph: 'DG-D01',\n+       playing: false\n+     },\n+     dependency: null,\n+     graph: {\n+       branch: null,\n+       focus: null,\n+       scene: null\n+     },\n+     liveAgreementRevision: null,\n+     liveCaseRevision: null,\n+     locale: 'en-AU',\n+     modal: false,\n+     mode: 'story',\n+     node: null,\n+     page: 'studio',\n+     productScroll: 0,\n+     reconstruction: {\n+       branchChoice: null,\n+       branchId: 'BR-03',\n+       filter: '',\n+       mappingId: 'MAP-D3-REQUIREMENTS-01',\n+       mode: 'compare',\n+       nodeId: null,\n+       notice: null,\n+       originSceneId: 'SCN-REQUIREMENTS',\n+       panel: 'comparison',\n+       returnPanel: 'comparison',\n+       revision: 'd3a-pc01-author-r1',\n+       sceneId: 'SCN-REQUIREMENTS',\n+       view: 'read'\n+     },\n+     reconstructionTrail: [],\n+     reference: null,\n+     returnToken: null,\n+     role: 'ROLE-KYCOPS',\n+     routeId: 'ROUTE-NEW-REL-01',\n+     scenario: 'SCN-REQUIREMENTS',\n+     specialistBeat: null,\n+     stage: 'S2',\n+     step: 'requirements',\n+     storyCursor: 2,\n+     transformation: {\n+       compare: false,\n+       diagramFocus: null,\n+       openChanges: [],\n+       selectedChange: null\n+     },\n+     trigger: 'new-relationship',\n+     zoom: 'read'\n+   },\n+   query: '',\n+   scene: null,\n+   selected: null\n+ }\n- null\n",
+      "errors": []
+    },
+    {
+      "ids": [
+        "UX-10",
+        "UX-14"
+      ],
+      "name": "nested-branch-return-trail",
+      "status": "failed",
+      "error": "Expected values to be strictly equal:\n+ actual - expected\n\n+ 'SCN-GAP'\n- 'SCN-REQUIREMENTS'\n       ^\n",
+      "errors": []
+    }
+  ]
+}

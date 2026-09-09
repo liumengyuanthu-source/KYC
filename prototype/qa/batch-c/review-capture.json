@@ -1,0 +1,12 @@
+{
+  "at": "2026-09-07T12:17:08.255Z",
+  "status": "passed",
+  "kind": "actual_saved_host_state_not_video",
+  "case_revision": 32,
+  "scope_revision": 3,
+  "images": [
+    "review-mainline.zh-CN.png",
+    "review-decisions.zh-CN.png"
+  ],
+  "business_unchanged": true
+}

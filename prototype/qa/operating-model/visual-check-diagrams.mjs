@@ -1,0 +1,3 @@
+import fs from 'node:fs';import {spawnSync} from 'node:child_process';
+const {manifest}=JSON.parse(fs.readFileSync('prototype/qa/operating-model/diagrams/build-manifest.json'));const results=[];
+for(const asset of manifest.filter(x=>!process.argv[2]||x.view===process.argv[2])){const r=spawnSync(process.execPath,['/Users/christinaliu/.codex/skills/archify/bin/archify.mjs','visual-check',asset.output,'--json'],{encoding:'utf8',maxBuffer:10e6});const receipt=JSON.parse(r.stdout);results.push({id:asset.id,locale:asset.locale,exit:r.status,...receipt});fs.writeFileSync(`prototype/qa/operating-model/diagrams/visual-summary${process.argv[2]?'-'+process.argv[2]:''}.json`,JSON.stringify(results,null,2));console.log(asset.id,asset.locale,r.status);if(r.status)process.exitCode=1;}

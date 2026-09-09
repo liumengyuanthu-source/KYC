@@ -1,0 +1,178 @@
+{
+  "schema_version": 2,
+  "diagram_type": "workflow",
+  "meta": {
+    "title": "Parallel specialist work",
+    "locale": "en",
+    "quality_profile": "showcase",
+    "views": [
+      {
+        "id": "parallel",
+        "label": "Independent starts",
+        "focus": [
+          "D01-SCOPE",
+          "D01-CONFLICTS",
+          "D01-CREDIT",
+          "D01-KYC"
+        ]
+      },
+      {
+        "id": "dependency",
+        "label": "Credit and Legal",
+        "focus": [
+          "D01-CREDIT",
+          "D01-LEGAL"
+        ]
+      },
+      {
+        "id": "readiness",
+        "label": "Readiness contributions",
+        "focus": [
+          "D01-READY"
+        ]
+      }
+    ],
+    "legend": {
+      "mode": "auto",
+      "entries": {
+        "external": {
+          "label": "Read-only work nodes"
+        }
+      }
+    }
+  },
+  "lanes": [
+    {
+      "id": "conflicts",
+      "label": "Conflicts"
+    },
+    {
+      "id": "specialist",
+      "label": "Credit and Legal"
+    },
+    {
+      "id": "kyc",
+      "label": "KYC and screening"
+    }
+  ],
+  "mainPath": [
+    "D01-SCOPE",
+    "D01-CREDIT",
+    "D01-LEGAL",
+    "D01-READY"
+  ],
+  "nodes": [
+    {
+      "id": "D01-SCOPE",
+      "lane": "specialist",
+      "col": 0,
+      "type": "external",
+      "label": "Scope / requirements",
+      "sublabel": "Start against own inputs",
+      "width": 170
+    },
+    {
+      "id": "D01-CONFLICTS",
+      "lane": "conflicts",
+      "col": 2,
+      "type": "external",
+      "label": "Conflicts review",
+      "sublabel": "Search done · review pending",
+      "width": 170
+    },
+    {
+      "id": "D01-CREDIT",
+      "lane": "specialist",
+      "col": 2,
+      "type": "external",
+      "label": "Credit condition",
+      "sublabel": "Conditional approval · synthetic",
+      "width": 170
+    },
+    {
+      "id": "D01-LEGAL",
+      "lane": "specialist",
+      "col": 3,
+      "type": "external",
+      "label": "Legal agreement",
+      "sublabel": "Approved · execution pending",
+      "width": 170
+    },
+    {
+      "id": "D01-KYC",
+      "lane": "kyc",
+      "col": 2,
+      "type": "external",
+      "label": "KYC and screening",
+      "sublabel": "Scoped result · coverage open",
+      "width": 170
+    },
+    {
+      "id": "D01-READY",
+      "lane": "specialist",
+      "col": 5,
+      "type": "external",
+      "label": "Readiness",
+      "sublabel": "Not ready · not authorisation",
+      "width": 170
+    }
+  ],
+  "edges": [
+    {
+      "id": "D01-E01",
+      "from": "D01-SCOPE",
+      "to": "D01-CONFLICTS",
+      "label": "Start condition",
+      "variant": "default",
+      "width": 1.2
+    },
+    {
+      "id": "D01-E02",
+      "from": "D01-SCOPE",
+      "to": "D01-CREDIT",
+      "label": "Start condition",
+      "variant": "default",
+      "width": 1.2
+    },
+    {
+      "id": "D01-E03",
+      "from": "D01-SCOPE",
+      "to": "D01-KYC",
+      "label": "Start condition",
+      "variant": "default",
+      "width": 1.2
+    },
+    {
+      "id": "D01-E04",
+      "from": "D01-CREDIT",
+      "to": "D01-LEGAL",
+      "label": "Version dependency",
+      "variant": "default",
+      "width": 2
+    },
+    {
+      "id": "D01-E05",
+      "from": "D01-CONFLICTS",
+      "to": "D01-READY",
+      "label": "Contribution",
+      "variant": "default",
+      "width": 1.2
+    },
+    {
+      "id": "D01-E06",
+      "from": "D01-LEGAL",
+      "to": "D01-READY",
+      "label": "Contribution",
+      "variant": "default",
+      "width": 1.2
+    },
+    {
+      "id": "D01-E07",
+      "from": "D01-KYC",
+      "to": "D01-READY",
+      "label": "Contribution",
+      "variant": "default",
+      "width": 1.2
+    }
+  ]
+}

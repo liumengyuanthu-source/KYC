@@ -1,0 +1,353 @@
+{
+  "source_ref": "SRC-020",
+  "status": "additive_candidate_v0.1_not_production_schema",
+  "api": {
+    "createBatchE": "Explicit additive D-entry continuation; returns input unchanged on valid E re-entry",
+    "clearanceProjection": "Single safe projection for role; unavailable or malformed context is NOT_READY",
+    "clearanceLenses": "outcome/work/assurance clones of same projection, readOnly=true",
+    "clearanceAction": "Returns new immutable state; same identical command key replays input; errors throw Error with stable .code"
+  },
+  "review_provenance": {
+    "event": "Existing auditEvents gain output_bindings: [{id, revision, fingerprint}]. Expected configured human actor, action, current case/scope and matching scope alias, named synthetic package, referenced output and reviewed version are required; bank_authority_ref remains null.",
+    "assessments": "Sufficient E purpose assessments gain review_event_ref; configured KYC assessor and existing purpose permission are required. Signatory assessment uses ROLE-LEGAL and the establishment event.",
+    "qa": "QA rereview_ref/rereview_revision retain the exact passed review version; signed QA also requires its bound signoff event and ROLE-QA reviewer.",
+    "edd": "Independent EDD applicability requires its scoped decision_ref event, ROLE-FINCRIME and SYNTHETIC-E-EDD-REVIEW-v1 permission.",
+    "legacy": "No automatic migration or provenance fabrication. Existing unbound E sessions remain readable but NOT_READY/current review required. Use explicit reviewed archive/load entry for a fresh authored path; historical records are retained."
+  },
+  "reviewed_input_integrity": {
+    "screening": "Coverage review binds exact current run/result/subject/finding records, identities, categories, result dispositions and content fingerprints; changed/new inputs require review",
+    "legal": "Execution decision binds current document revision/evidence/content revision, content fingerprint, purpose and released intake plus the executed agreement",
+    "dependencies": "All current additional applicable edges are checked; eight exact historical legacy/D contribution records have source-qualified exclusions; changed or copied records do not inherit exclusion",
+    "clearance_scope": "Decision and referenced ready snapshot must match current entity/product/scope revision and configured authority. Publication consumes only validated current decision"
+  },
+  "host_guard": "Use clearanceAction exclusively in E sessions. Do not invoke legacy A/B/C/D writers, candidate_ready, or infer readiness in UI. Navigation/story/printing/Lab call projections only.",
+  "required_fields": [
+    "type",
+    "role",
+    "caseId",
+    "scopeId",
+    "expectedRevision",
+    "expectedScopeRevision",
+    "expectedInputRevisions",
+    "key",
+    "rationale",
+    "at"
+  ],
+  "package_action_field": {
+    "packageRef": "SYNTHETIC-E-CLOSURE-v1"
+  },
+  "supported_writers": [
+    "open_qa_gap",
+    "submit_remediation",
+    "complete_remediation",
+    "qa_rereview",
+    "qa_signoff",
+    "record_demo_context",
+    "review_kyc_evidence",
+    "resolve_conflicts",
+    "confirm_screening_coverage",
+    "record_edd_applicability",
+    "establish_signatory_authority",
+    "execute_legal",
+    "confirm_clearance",
+    "publish_outcome",
+    "revise_evidence",
+    "revise_scope",
+    "save_draft"
+  ],
+  "action_roles": {
+    "open_qa_gap": [
+      "ROLE-QA"
+    ],
+    "submit_remediation": [
+      "ROLE-KYCOPS"
+    ],
+    "complete_remediation": [
+      "ROLE-KYCOPS"
+    ],
+    "qa_rereview": [
+      "ROLE-QA"
+    ],
+    "qa_signoff": [
+      "ROLE-QA"
+    ],
+    "record_demo_context": [
+      "ROLE-CASEMGR"
+    ],
+    "review_kyc_evidence": [
+      "ROLE-KYCOPS"
+    ],
+    "resolve_conflicts": [
+      "ROLE-CONFLICTS"
+    ],
+    "confirm_screening_coverage": [
+      "ROLE-FINCRIME"
+    ],
+    "record_edd_applicability": [
+      "ROLE-FINCRIME"
+    ],
+    "establish_signatory_authority": [
+      "ROLE-LEGAL"
+    ],
+    "execute_legal": [
+      "ROLE-LEGAL"
+    ],
+    "confirm_clearance": [
+      "ROLE-CLEARANCE-REVIEWER"
+    ],
+    "publish_outcome": [
+      "ROLE-CASEMGR"
+    ],
+    "revise_evidence": [
+      "ROLE-FACILITATOR"
+    ],
+    "revise_scope": [
+      "ROLE-FACILITATOR"
+    ],
+    "save_draft": [
+      "ROLE-QA",
+      "ROLE-KYCOPS",
+      "ROLE-CASEMGR",
+      "ROLE-CONFLICTS",
+      "ROLE-FINCRIME",
+      "ROLE-LEGAL",
+      "ROLE-CLEARANCE-REVIEWER",
+      "ROLE-FACILITATOR"
+    ]
+  },
+  "actions": {
+    "open_qa_gap": {
+      "roles": [
+        "ROLE-QA"
+      ],
+      "extra_fields": [
+        "packageRef"
+      ]
+    },
+    "submit_remediation": {
+      "roles": [
+        "ROLE-KYCOPS"
+      ],
+      "extra_fields": [
+        "packageRef"
+      ]
+    },
+    "complete_remediation": {
+      "roles": [
+        "ROLE-KYCOPS"
+      ],
+      "extra_fields": [
+        "packageRef"
+      ]
+    },
+    "qa_rereview": {
+      "roles": [
+        "ROLE-QA"
+      ],
+      "extra_fields": [
+        "packageRef"
+      ]
+    },
+    "qa_signoff": {
+      "roles": [
+        "ROLE-QA"
+      ],
+      "extra_fields": [
+        "packageRef"
+      ]
+    },
+    "record_demo_context": {
+      "roles": [
+        "ROLE-CASEMGR"
+      ],
+      "extra_fields": [
+        "packageRef"
+      ]
+    },
+    "review_kyc_evidence": {
+      "roles": [
+        "ROLE-KYCOPS"
+      ],
+      "extra_fields": [
+        "packageRef"
+      ]
+    },
+    "resolve_conflicts": {
+      "roles": [
+        "ROLE-CONFLICTS"
+      ],
+      "extra_fields": [
+        "packageRef"
+      ]
+    },
+    "confirm_screening_coverage": {
+      "roles": [
+        "ROLE-FINCRIME"
+      ],
+      "extra_fields": [
+        "packageRef"
+      ]
+    },
+    "record_edd_applicability": {
+      "roles": [
+        "ROLE-FINCRIME"
+      ],
+      "extra_fields": [
+        "packageRef"
+      ]
+    },
+    "establish_signatory_authority": {
+      "roles": [
+        "ROLE-LEGAL"
+      ],
+      "extra_fields": [
+        "packageRef"
+      ]
+    },
+    "execute_legal": {
+      "roles": [
+        "ROLE-LEGAL"
+      ],
+      "extra_fields": [
+        "packageRef"
+      ]
+    },
+    "confirm_clearance": {
+      "roles": [
+        "ROLE-CLEARANCE-REVIEWER"
+      ],
+      "extra_fields": [
+        "authorityRef",
+        "snapshotFingerprint"
+      ]
+    },
+    "publish_outcome": {
+      "roles": [
+        "ROLE-CASEMGR"
+      ],
+      "extra_fields": [
+        "targetSystemRefs",
+        "outcome"
+      ]
+    },
+    "revise_evidence": {
+      "roles": [
+        "ROLE-FACILITATOR"
+      ],
+      "extra_fields": [
+        "packageRef"
+      ]
+    },
+    "revise_scope": {
+      "roles": [
+        "ROLE-FACILITATOR"
+      ],
+      "extra_fields": [
+        "packageRef"
+      ]
+    },
+    "save_draft": {
+      "roles": [
+        "ROLE-QA",
+        "ROLE-KYCOPS",
+        "ROLE-CASEMGR",
+        "ROLE-CONFLICTS",
+        "ROLE-FINCRIME",
+        "ROLE-LEGAL",
+        "ROLE-CLEARANCE-REVIEWER",
+        "ROLE-FACILITATOR"
+      ],
+      "extra_fields": [
+        "draftAction",
+        "draftRationale"
+      ]
+    }
+  },
+  "confirm": {
+    "authorityRef": "DEMO-CTT-001/authority/e-clearance-reviewer",
+    "role": "ROLE-CLEARANCE-REVIEWER",
+    "role_label": "Authorised Clearance Reviewer",
+    "snapshotFingerprint": "projection.readiness.fingerprint; must also match latest READY snapshot",
+    "bank_authority": "TO_VALIDATE"
+  },
+  "publication": {
+    "permitted_target_refs": [
+      "SYNTHETIC-E-OUTCOME-REGISTER"
+    ],
+    "outcomes": [
+      "succeeded",
+      "failed"
+    ],
+    "failure_preserves_decision": true,
+    "trade_execution": "NOT_PART_OF_PROTOTYPE"
+  },
+  "draft": {
+    "store": "workItems, work_type=e_action_draft, one versioned logical id per role",
+    "projection": "projection.draft",
+    "draftAction": "An action configured for the saving role; save_draft itself forbidden",
+    "draftRationale": "String, 0..2000 characters",
+    "effects": "New draft and audit/readiness snapshot only. No condition, dependency, submission, confirmation or publication changes. Not included in business fingerprint."
+  },
+  "prerequisites": "Nonempty literal expected requirements, source-qualified expected dependencies, actual purpose/current evidence, scope, coverage, EDD and specialist outputs. Unknown fails closed.",
+  "source_alias_chain": [
+    {
+      "source_alias": "SRC-020:REQ-B05",
+      "raw_alias": "REQ-B05",
+      "object_ref": "DEMO-CTT-001/requirement/ownership-control",
+      "collection": "requirements",
+      "mapping": "reuse_existing_B_ownership_control"
+    },
+    {
+      "source_alias": "SRC-020:EUA-05",
+      "raw_alias": "EUA-05",
+      "object_ref": "DEMO-CTT-001/assessment/e-ownership",
+      "collection": "evidenceUseAssessments",
+      "mapping": "new_purpose_assessment"
+    },
+    {
+      "source_alias": "SRC-020:QA-04",
+      "raw_alias": "QA-04",
+      "object_ref": "DEMO-CTT-001/qa-check/e-04",
+      "collection": "qaChecks",
+      "mapping": "new"
+    },
+    {
+      "source_alias": "SRC-020:GAP-QA-01",
+      "raw_alias": "GAP-QA-01",
+      "object_ref": "DEMO-CTT-001/gap/e-qa-01",
+      "collection": "qaFindings",
+      "mapping": "new"
+    },
+    {
+      "source_alias": "SRC-020:RT-01",
+      "raw_alias": "RT-01",
+      "object_ref": "DEMO-CTT-001/work/e-remediation-01",
+      "collection": "workItems",
+      "mapping": "reuse_work_store"
+    }
+  ],
+  "history": "Versioned records append in existing stores; conditions retain before-images in conditionHistory. Original B/C decisions and findings remain intact.",
+  "ui_state_portions": "RT18–20 core reads verified by native suite; browser/UI portions NOT_RUN until Task 2",
+  "availability": "projection.actionEligibility[type] gives allowed and reasons; permissions are checked again by writer, never inferred from enabled UI",
+  "projection_fields": [
+    "available",
+    "caseId",
+    "scopeId",
+    "revision",
+    "scopeRevision",
+    "scope",
+    "conditions",
+    "prerequisites",
+    "readiness",
+    "qa",
+    "clearance",
+    "publication",
+    "draft",
+    "snapshot_ref",
+    "activity",
+    "inputRevisions",
+    "actionEligibility",
+    "bank_authority_status",
+    "trade_execution"
+  ]
+}

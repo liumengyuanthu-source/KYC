@@ -1,0 +1,153 @@
+--- a/prototype/product-experience/ui.mjs
++++ b/prototype/product-experience/ui.mjs
+@@ -13,11 +13,12 @@
+ export function currentGuidance(g,locale='en-AU'){
+  const L=(en,zh)=>localise(locale,en,zh),p=g?.projection,f=p?.finding;
+  if(!f||g.safe)return null;
+- const decisions=p.decisions.filter(d=>d.finding_ref===f.id),gap=p.branches.find(b=>b.branch_type==='information_gap'&&b.finding_ref===f.id),assessment=p.assessments.filter(a=>a.finding_ref===f.id).at(-1),hasEvidence=p.evidence.length>0,dispatched=g.events.some(e=>e.type==='notification_dispatched'),resumed=gap?.status==='in_review';
++ const decisions=p.decisions.filter(d=>d.finding_ref===f.id),gap=p.branches.find(b=>b.branch_type==='information_gap'&&b.finding_ref===f.id),assessment=p.assessments.filter(a=>a.finding_ref===f.id).at(-1),gapStep=g.steps?.[2],stale=gapStep?.semantics?.freshness==='stale',resumeBasis=p.predicates?.resume,currentBasis=resumeBasis?.branch_ref===gap?.id&&resumeBasis?.finding_ref===f.id&&resumeBasis?.basis_event_refs?.length>0&&!stale,hasEvidence=p.evidence.length>0,dispatched=g.events.some(e=>e.type==='notification_dispatched'),resumed=gap?.status==='in_review';
+  let problem,nextActor='Unassigned',action=null,navigation=null,recommendation,reason;
+  if(decisions.length){problem=L('an unresolved local identity result is recorded','身份未决的本项结果已记录');recommendation=L('Await a configured follow-up owner','等待配置后续责任方');reason=L('The recorded local result is not repeated and does not clear the case.','不重复记录已有本项结果，且该结果不构成本案准入。');}
++ else if(stale){problem=L('identity evidence inputs changed after the last assessment','上次评估后身份资料输入已变更');nextActor='ROLE-KYCOPS';recommendation=L('Recheck intake release, evidence linking and reassess for this purpose','重新核验接收放行、证据关联并按本用途重新评估');reason=L('The earlier assessment is not current for the changed input; no review outcome or clearance is suggested.','先前评估不再适用于已变更输入；不建议复核结果或案件准入。');}
+  else if(resumed){problem=L('identity remains inconclusive after the current assessment','依据当前评估，身份仍无法确定');nextActor=p.actions.record_unresolved?.allowed?g.role:p.actions.refer?.allowed?g.role:'Unassigned';action=p.actions.record_unresolved?.allowed?'record_unresolved':p.actions.refer?.allowed?'refer':null;recommendation=action==='record_unresolved'?L('Record unresolved','记录为未决'):action==='refer'?L('Refer to specialist','转交专业复核'):L('Await a configured reviewer','等待配置复核人员');reason=L('Only a configured reviewer may record unresolved or referral; this does not clear the case.','仅已配置的复核人员可记录未决或转交；这不构成本案准入。');}
+- else if(assessment?.sufficiency==='insufficient'){problem=L('the current purpose assessment is insufficient','当前用途评估仍不充分');nextActor=p.actions.resume_branch?.allowed?g.role:'Unassigned';action=p.actions.resume_branch?.allowed?'resume_branch':null;recommendation=action?L('Resume review','恢复复核'):L('Await an authorised reviewer','等待有权复核人员');reason=L('Resume uses the recorded current assessment; it does not request the same information again or clear the case.','恢复复核使用已记录的当前评估；不会重复请求同一资料，也不构成本案准入。');}
++ else if(currentBasis){problem=assessment?.sufficiency==='unknown'?L('the current purpose assessment records an Unknown outcome','当前用途评估记录为未知结果'):L('the current purpose assessment is insufficient','当前用途评估仍不充分');nextActor=p.actions.resume_branch?.allowed?g.role:(gapStep?.next_actor_ref||'ROLE-KYCOPS');action=p.actions.resume_branch?.allowed?'resume_branch':null;recommendation=action?L('Resume review','恢复复核'):L('Await a configured operations reviewer','等待已配置的运营复核人员');reason=L('Resume uses the current, validated assessment; it does not request the same information again or clear the case.','恢复复核使用当前已核验的评估；不会重复请求同一资料，也不构成本案准入。');}
+  else if(hasEvidence){problem=p.actions.assess_identity?.allowed?L('received identity evidence needs a current purpose assessment','已收到的身份资料需要当前用途评估'):L('received identity evidence is not yet ready for a current purpose assessment','已收到的身份资料尚未具备当前用途评估条件');nextActor=p.actions.assess_identity?.allowed?g.role:'ROLE-KYCOPS';navigation=p.actions.assess_identity?.allowed?'screening-evidence':null;recommendation=navigation?L('Review evidence and choose the explicit assessment outcome','复核资料并明确选择评估结果'):L('Check intake release and evidence linking','核验接收放行与证据关联');reason=L('Receipt alone is not an assessment; do not request the same information again.','仅收到资料不等于完成评估；不要重复请求同一资料。');}
+  else if(gap&&dispatched){problem=L('the identity request is awaiting the client response','身份请求正在等待客户响应');nextActor='ROLE-CLIENT';recommendation=L('Wait for the response to the dispatched request','等待已派发请求的响应');reason=L('The existing request remains the current task; do not send it again.','现有请求仍是当前任务；不要重复发送。');}
+  else {problem=L('identity remains inconclusive','身份仍无法确定');nextActor=p.actions.request_identity?.allowed?g.role:'Unassigned';action=p.actions.request_identity?.allowed?'request_identity':null;recommendation=action?L('Prepare the precise identity request','准备精确的身份请求'):L('Await an assigned owner','等待分配责任方');reason=L('The precise identity gap must be addressed before a supported local result; this does not clear the case.','在记录有依据的本项结果前须处理精确身份缺口；这不构成本案准入。');}
+--- a/prototype/tests/product-experience-guidance.test.mjs
++++ b/prototype/tests/product-experience-guidance.test.mjs
+@@ -2,12 +2,15 @@
+ import assert from 'node:assert/strict';
+ import {readFileSync} from 'node:fs';
+ import {productProgress} from '../product-experience/projection.mjs';
+-import {screeningAction,screeningProjection} from '../screening-engine.mjs';
++import {screeningAction,screeningProjection,C_IDS} from '../screening-engine.mjs';
++import {collaborationAction} from '../collaboration-engine.mjs';
+ import {productWorkspaceHtml} from '../product-experience/ui.mjs';
+ 
+ const journey=name=>JSON.parse(readFileSync(new URL(`../../audit/screenshots/actual/journey/${name}.en-AU.state.json`,import.meta.url))).data;
+ const render=(data,role='ROLE-KYCOPS',locale='en-AU')=>productWorkspaceHtml({progress:productProgress(data,{role}),role,locale,preference:{enabled:[],order:[],collapsed:[]}});
+ const primaryCount=html=>(html.match(/class="primary"/g)||[]).length;
++const hero=html=>html.match(/<div class="d5-issue">[\s\S]*?<\/div>/)?.[0]||'';
++const quarantine=(data,evidenceId,at,key)=>collaborationAction(data,{type:'release_artifact',role:'ROLE-KYCOPS',requestId:C_IDS.request,itemId:C_IDS.identityItem,reference:evidenceId,intakeStatus:'quarantined',expectedRevision:data.case.revision,expectedRequestRevision:data.informationRequests.find(x=>x.id===C_IDS.request).revision,expectedItemRevision:data.requestItems.find(x=>x.id===C_IDS.identityItem).revision,key,rationale:'Recheck intake against the changed artifact',now:at});
+ 
+ test('guidance requests the precise gap only before an identity branch exists',()=>{
+  const data=journey('match.scene'),before=structuredClone(data),html=render(data);
+@@ -82,3 +85,31 @@
+  assert.doesNotMatch(html,/data-action="c-action" data-value="assess_identity"/);
+  assert.match(html,/data-action="c-back-review" data-value="screening-evidence"/);
+ });
++
++test('quarantined evidence invalidates the old assessment in the rendered hero',()=>{
++ const data=journey('identity.assessed'),evidenceId=data.evidence.at(-1).id,stale=quarantine(data,evidenceId,'2026-09-08T11:30:00Z','GUIDANCE-STALE-BEFORE'),html=render(stale);
++ assert.match(html,/Current problem: identity evidence inputs changed after the last assessment/);
++ assert.match(html,/Next actor: KYC Operations/);assert.match(html,/Recheck intake release, evidence linking and reassess for this purpose/);
++ assert.doesNotMatch(html,/current purpose assessment is insufficient|Await an authorised reviewer/);assert.equal(primaryCount(html),0);
++ assert.match(render(stale,'ROLE-KYCOPS','zh-CN'),/上次评估后身份资料输入已变更/);
++});
++
++test('quarantine after resume supersedes reviewer outcome guidance in the rendered hero',()=>{
++ const data=journey('identity.assessed'),evidenceId=data.evidence.at(-1).id,branchId=data.workItems.find(x=>x.branch_type==='information_gap').id;
++ const resumed=screeningAction(data,{type:'resume_branch',role:'ROLE-KYCOPS',branchId,key:'GUIDANCE-RESUME-BEFORE-STALE',expectedRevision:data.case.revision,expectedScopeRevision:data.scopes[0].revision,expectedInputRevisions:screeningProjection(data,{role:'ROLE-KYCOPS'}).inputRevisions,rationale:'Resume against current assessed input',at:'2026-09-08T12:00:00Z'});
++ const stale=quarantine(resumed,evidenceId,'2026-09-08T12:30:00Z','GUIDANCE-STALE-AFTER'),html=render(stale,'ROLE-FINCRIME'),guidance=hero(html);
++ assert.match(guidance,/identity evidence inputs changed after the last assessment/);assert.match(guidance,/Next actor: KYC Operations/);
++ assert.doesNotMatch(guidance,/identity remains inconclusive after the current assessment|Refer to specialist|Resume review/);assert.equal(primaryCount(html),0);
++});
++
++test('current explicit Unknown assessment retains native Resume guidance',()=>{
++ const data=journey('identity.assessed'),evidenceId=data.evidence.at(-1).id,branchId=data.workItems.find(x=>x.branch_type==='information_gap').id;
++ const unknown=screeningAction(data,{type:'assess_identity',role:'ROLE-KYCOPS',branchId,evidenceId,sufficiency:'unknown',key:'GUIDANCE-CURRENT-UNKNOWN',expectedRevision:data.case.revision,expectedScopeRevision:data.scopes[0].revision,expectedInputRevisions:screeningProjection(data,{role:'ROLE-KYCOPS'}).inputRevisions,rationale:'Record the explicit current Unknown outcome for this purpose',at:'2026-09-08T11:30:00Z'}),html=render(unknown);
++ assert.equal(screeningProjection(unknown,{role:'ROLE-KYCOPS',branchId,evidenceId}).actions.resume_branch.allowed,true);
++ assert.match(html,/Current problem: the current purpose assessment records an Unknown outcome/);assert.match(html,/data-value="resume_branch"[^>]*class="primary"/);
++ assert.doesNotMatch(html,/needs a current purpose assessment/);assert.equal(primaryCount(html),1);
++ assert.match(render(unknown,'ROLE-KYCOPS','zh-CN'),/当前用途评估记录为未知结果/);
++ const progress=productProgress(unknown,{role:'ROLE-KYCOPS'});progress.projection.actions.resume_branch={...progress.projection.actions.resume_branch,allowed:false,outcome:'denied',reason_codes:['ROLE_NOT_ALLOWED']};
++ const denied=productWorkspaceHtml({progress,role:'ROLE-REVIEWER',locale:'en-AU',preference:{enabled:[],order:[],collapsed:[]}});
++ assert.match(hero(denied),/current purpose assessment records an Unknown outcome/);assert.match(hero(denied),/Await a configured operations reviewer/);assert.doesNotMatch(hero(denied),/needs a current purpose assessment/);assert.equal(primaryCount(denied),0);
++});
+--- a/audit/scripts/report.mjs
++++ b/audit/scripts/report.mjs
+@@ -7,7 +7,7 @@
+ const violations=scans.flatMap(s=>s.violations.map(v=>({file:s.file,id:v.id,impact:v.impact,nodes:v.nodes.map(n=>({target:n.target,summary:n.failureSummary}))}))),serious=violations.filter(v=>['serious','critical'].includes(v.impact));
+ const fixes=fs.existsSync('audit/reports/fix-review-verdict.json')?json('audit/reports/fix-review-verdict.json'):{guidance:'open',readiness:'open',keyboard:'open',review:'pending'};
+ const ready=fixes.guidance==='fixed'&&fixes.readiness==='fixed'&&fixes.keyboard==='fixed'&&!serious.length&&!checks.some(c=>c.status==='failed');
+-const gates=[['G0','PASS','15 scenario contracts / 229 action mappings; full priority contracts. QA/PUBLISH runtime is explicitly absent.'],['G1',fixes.guidance==='fixed'?'REVIEW':'FAIL','Role/state-specific guidance retested if fixed; real-user comprehension timing not tested.'],['G2',fixes.readiness==='fixed'?'REVIEW':'FAIL','Actual C/B hero executed; QA remediation and publication success runtime NOT_RUN.'],['G3',checks.filter(c=>c.name?.includes('horizontal')).some(c=>c.status==='failed')?'FAIL':'PASS','Same-case navigation, locale, history and module isolation; full Lab Shadow NOT_RUN.'],['G4','PASS','Bounded engine/browser safety oracles; production RBAC, bank policy and live systems not validated.'],['G5','REVIEW','Time semantics and clock no-write pass; default time/next-owner visibility and long progress layout need user review.'],['G6','REVIEW','Tokens retained; first-viewport density and workshop chrome remain S2.'],['G7',surfaces.results.filter(c=>c.name.startsWith('responsive')).some(c=>c.status==='failed')?'FAIL':'PASS','12 width/language combinations; CSS text scaling only, not full native zoom coverage.'],['G8',serious.length?'FAIL':'REVIEW',`${scans.length} axe scans; ${serious.length} serious/critical violation groups; heading outline moderate issues remain.`],['G9','REVIEW','15 provisional screenshot states; repeated-capture checks are not Christina visual approval. Archived/completed outcome fixtures absent.'],['G10','REVIEW','Fresh ordered screenshot heuristic review; installed ux-audit not executed this session; Product Design Audit method used.']];
++const gates=[['G0','PASS','15 scenario contracts / 229 action mappings; full priority contracts. QA/PUBLISH runtime is explicitly absent.'],['G1',fixes.guidance==='fixed'?'REVIEW':'FAIL','Role/state-specific guidance retested if fixed; real-user comprehension timing not tested.'],['G2',fixes.readiness==='fixed'?'REVIEW':'FAIL','Actual C/B hero executed; QA remediation and publication success runtime NOT_RUN.'],['G3',checks.filter(c=>c.name?.includes('horizontal')).some(c=>c.status==='failed')?'FAIL':'REVIEW','Executed same-case navigation, locale, history and module-isolation subset PASS; mandatory full CTX-06 Lab Shadow NOT_RUN.'],['G4','PASS','Bounded engine/browser safety oracles; production RBAC, bank policy and live systems not validated.'],['G5','REVIEW','Time semantics and clock no-write pass; default time/next-owner visibility and long progress layout need user review.'],['G6','REVIEW','Tokens retained; first-viewport density and workshop chrome remain S2.'],['G7',surfaces.results.filter(c=>c.name.startsWith('responsive')).some(c=>c.status==='failed')?'FAIL':'PASS','12 width/language combinations; CSS text scaling only, not full native zoom coverage.'],['G8',serious.length?'FAIL':'REVIEW',`${scans.length} axe scans; ${serious.length} serious/critical violation groups; heading outline moderate issues remain.`],['G9','REVIEW','15 provisional screenshot states; repeated-capture checks are not Christina visual approval. Archived/completed outcome fixtures absent.'],['G10','REVIEW','Fresh ordered screenshot heuristic review; installed ux-audit not executed this session; Product Design Audit method used.']];
+ const findings=[
+  ['UX-001','S1','G1/G2','KYC Ops / Reviewer','SCN-MATCH','PX-09','Summary and action emphasis do not follow receipt, purpose assessment or recorded result.','screenshots/actual/journey/review.pack.en-AU.text.txt','Current-state guidance with one permitted next step.','Avoid unnecessary repeated collection and repeated local decisions.','Use existing projection and guarded actions, no new business writes.','M',fixes.guidance,'controlled-fix-report.md','Quality Gate P1/P5/P6; D5 §18.2/20.2'],
+  ['UX-002','S1','G2/G3','KYC Ops','SCN-READINESS','PX-12 entry','Current C case Readiness route leads to Batch D fixture-load preview.','reports/surfaces-initial.json; screenshots/actual/surfaces/readiness-not-ready.failure.png','Readonly readiness of the same case without loading another fixture.','Breaks the end-to-end current-case story.','Reuse current safe projection; keep D fixture entry separate.','M',fixes.readiness,'surfaces-results.json; controlled-fix-report.md','Quality Gate P7/P8 and CTX-01'],
+@@ -41,7 +41,7 @@
+ ];
+ const attacks=vectors.map(([attack,pattern,classification,oracle],i)=>{const matches=units.tests.filter(t=>t.name.startsWith(pattern));return {id:`ERT-${String(i+1).padStart(2,'0')}`,attack,classification,oracle,result:matches.length&&matches.every(t=>t.status==='passed')?'PASS bounded oracle':'NOT_RUN',tests:matches.map(x=>x.name)};});
+ put('red-team.json',attacks);put('EXPERIENCE_RED_TEAM_REPORT.md','# Experience Red Team\n\n15 attack vectors mapped to fresh native tests and browser receipts. PASS applies only to each stated local oracle; it is not production security or regulatory validation. Partial/unimplemented variants are named. No new bank facts or test-success data were created.\n\n'+attacks.map(a=>`## ${a.id} ${a.attack}\n\n- Result: ${a.result}; classification: ${a.classification}; reproduced severity: none in this bounded oracle.\n- Expected / scope: ${a.oracle}\n- Evidence: unit-results.json / unit-results.tap; ${a.tests.join('; ')||'No matching test'}\n`).join('\n')+'\nUX-001 and UX-002 are S1 experience defects uncovered by the real journey, separately tracked with controlled retests. Lab Shadow, conflicting uploaded documents and withdrawal-specific commands remain NOT_RUN.\n');
+-put('UX_TRACEABILITY_MATRIX.md',`# Traceability\n\n| Scenario | Surface / persona | Intent | Test / result | Finding |\n|---|---|---|---|---|\n| SCN-MATCH | PX-09 / Ops, Reviewer | Evidence-grounded bounded human outcome | journey.mjs P1–P8; CHK01–04; unit-results; context/host/time checks | UX-001,003,004,006,008 |\n| SCN-GAP | PX-06→PX-04→PX-07 / Ops, Client | Scoped draft→dispatch→receipt→purpose assessment | actual journey request/client/received/assessed receipts PASS | UX-004,005 |\n| SCN-READINESS | PX-12 / Ops | Same-case honest Not Ready | surfaces-results readiness-not-ready: ${surfaces.results.find(x=>x.name==='readiness-not-ready')?.status}; engine False Green PASS | UX-002,007 |\n| SCN-QA | PX-11 / QA | Remediation and independent re-review | Full workflow NOT_RUN; source contract mapped | UX-007 |\n| SCN-PUBLISH | PX-12 / authorised reviewer | Decision ≠ publication ≠ trading | Success runtime NOT_RUN; unavailable action/engine no-publication tested | UX-007 |\n\nOther ten scenes have thin contracts with exact inherited action and PPT source locators in contracts/D5_SCENARIO_PRODUCT_CONTRACTS.json. This is not 15 complete workspaces.\n`);
++put('UX_TRACEABILITY_MATRIX.md',`# Traceability\n\n| Scenario | Surface / persona | Intent | Test / result | Finding |\n|---|---|---|---|---|\n| SCN-MATCH | PX-09 / Ops, Reviewer | Evidence-grounded bounded human outcome | journey.mjs P1–P8; CHK01–04; unit-results; context/host/time checks | UX-001,003,004,006,008 |\n| SCN-GAP | PX-06→PX-04→PX-07 / Ops, Client | Scoped draft→dispatch→receipt→purpose assessment | actual journey request/client/assessed browser receipts PASS; received/unassessed is native rendered-test coverage | UX-004,005 |\n| SCN-READINESS | PX-12 / Ops | Same-case honest Not Ready | surfaces-results readiness-not-ready: ${surfaces.results.find(x=>x.name==='readiness-not-ready')?.status}; engine False Green PASS | UX-002,007 |\n| SCN-QA | PX-11 / QA | Remediation and independent re-review | Full workflow NOT_RUN; source contract mapped | UX-007 |\n| SCN-PUBLISH | PX-12 / authorised reviewer | Decision ≠ publication ≠ trading | Success runtime NOT_RUN; unavailable action/engine no-publication tested | UX-007 |\n\nOther ten scenes have thin contracts with exact inherited action and PPT source locators in contracts/D5_SCENARIO_PRODUCT_CONTRACTS.json. This is not 15 complete workspaces.\n`);
+ const summary=`# D5 UX/UI quality gate — review summary\n\n**Overall: ${ready?'READY WITH KNOWN LIMITATIONS — bounded Person T pilot':'NOT READY — open gate / retest remains'}.** Not bank sign-off, formal accessibility conformance or real-user validation. No S0 reproduced in the tested fixtures.\n\n${units.tests.filter(t=>t.status==='passed').length}/${units.tests.length} native tests and ${checks.filter(t=>t.status==='passed').length}/${checks.length} browser probes passed in this audit namespace. Counts are probes, not independent user tasks.\n\n## Gates\n\n| Gate | Result | Qualification |\n|---|---|---|\n${gates.map(g=>`| ${g.join(' | ')} |`).join('\n')}\n\n## Five leading risks\n\n1. Current-state guidance needed an S1 correction; status: ${fixes.guidance}.\n2. Current-case Readiness route needed an S1 continuity correction; status: ${fixes.readiness}.\n3. Dense header / progress leaves little task content on a laptop first screen.\n4. Client-facing request is visually subordinate to facilitator tools; IDs and mixed-language prose remain.\n5. QA/publication/history outcome fixtures and user-tested comprehension remain incomplete.\n\n## Five strengths\n\n1. Same Person T case and scoped request/evidence chain is genuinely operable.\n2. Received, assessed, unresolved and whole-case clearance remain distinct.\n3. RM/client projection and local command guards prevent tested role escalation.\n4. Current/Target, language, drafts, history and layout have executable state-preservation checks.\n5. Black/blue/white warm-glass tokens retained; keyboard focus and no-page-overflow checks pass on tested surfaces.\n\n## Fix order / stop\n\nReview the S1 fixes and their focused diff first. Then approve one compact-header / client-tools / metadata pass (S2), followed by semantic headings. Do not bulk-expand all 15 workspaces. This round stops for Christina review; no push, publish or fixture auto-load.\n\nReal validation still needed: observed Ops/reviewer/client task sessions; exact decision comprehension and recipient confidence; role/policy ownership; real evidence integration; screen-reader and zoom users; complete downstream fixtures. No completion-time or KPI claim.\n`;
+ put('UX_EXECUTIVE_SUMMARY.md',summary);
+ const before=json('audit/environment/pre-audit-hashes.json').product;const changed=Object.entries(before).filter(([f,h])=>fs.existsSync(f)&&createHash('sha256').update(fs.readFileSync(f)).digest('hex')!==h).map(([f])=>f);put('change-impact.json',{at:new Date().toISOString(),changed_existing_product_files:changed,engine_changes:changed.filter(f=>/engine\.mjs$/.test(f)),css_changes:changed.filter(f=>f.endsWith('.css')),note:'New files and controlled diff are listed in controlled-fix-report.md. No git mutations or remote publication.'});
+--- a/audit/reports/FIRST_ROUND_ACCEPTANCE.md
++++ b/audit/reports/FIRST_ROUND_ACCEPTANCE.md
+@@ -26,8 +26,8 @@
+ | Visual baseline reviewed | REVIEW | controller inspected fresh candidates and retained diff; Christina approval pending |
+ | Heuristic screenshot audit | PASS bounded | HEURISTIC_JOURNEY_REVIEW; not a real-user study |
+ | Automated Experience Red Team | PASS bounded | 15 named local oracles; absent withdrawal/conflicting-upload/Lab variants NOT_RUN |
+-| S0/S1 fixed or explicitly blocked | REVIEW | final review identified stale hero guidance; final fix and re-review must resolve before handoff |
+-| Impacted gates rerun | REVIEW | general tests passed; final stale-guidance fix needs covering verification |
++| S0/S1 fixed or explicitly blocked | PASS bounded | final stale/Unknown hero fix implemented with native freshness/action projections; independent final re-review remains a handoff step |
++| Impacted gates rerun | PASS tested subset / REVIEW overall G3 | focused rendered hero and full native tests pass; targeted browser receipt added; mandatory full CTX-06 Lab Shadow remains NOT_RUN |
+ | Executive summary | PASS produced | UX_EXECUTIVE_SUMMARY; qualification must reflect final review |
+ | Traceability matrix | PASS produced | UX_TRACEABILITY_MATRIX |
+ | Stop before uncontrolled redesign | PASS scope | no S2/S3 implementation, no remote publication; stop at review handoff |
+--- a/audit/reports/controlled-fix-report.md
++++ b/audit/reports/controlled-fix-report.md
+@@ -179,3 +179,26 @@
+ ```
+ 
+ No engine, reducer, projection permission, policy, SLA, D fixture, or state model was broadened in fix round 1. No final root capture was modified by the new browser regression; it writes only `audit/reports/readiness-guidance-fix1-results.json`.
++
++## Final review wave — validated basis and freshness
++
++Final review reproduced three S1 presentation contradictions: quarantine after assessment, quarantine after Resume, and an explicit current Unknown assessment. The hero had read the latest assessment's `sufficiency` directly, so it could present stale assessment content as current or send a current Unknown outcome back to assessment.
++
++The bounded correction uses only existing native projections. `g.steps[2].semantics.freshness` makes changed input the first priority, while `projection.predicates.resume` supplies the validated finding/branch/basis relationship independently of role permission. `projection.actions.resume_branch.allowed` remains only the CTA guard. Stale states direct KYC Operations to intake release, evidence linking and reassessment with no primary action. Current Unknown keeps Resume when allowed and otherwise waits for a configured operations reviewer. No engine, guard, state model, policy, permission, owner rule, or business write changed.
++
++### Final-wave RED / GREEN
++
++RED: `node --test prototype/tests/product-experience-guidance.test.mjs` produced `13` tests, `10` pass, `3` fail after the three rendered regressions were added. The failures reproduced both stale hero contradictions and the Unknown path.
++
++Fresh GREEN evidence:
++
++- `node --test prototype/tests/product-experience-guidance.test.mjs` — `13/13` pass.
++- `node --test prototype/tests/*.test.mjs` — `333/333` pass, `0` fail, `0` skipped.
++- `node audit/tests/guidance-final-wave.mjs` — PASS. The live product rendered changed-input guidance with KYC Operations as next actor after Resume then quarantine; session data remained exactly equal through page open/render.
++- `node --check audit/scripts/report.mjs && node --check audit/tests/guidance-final-wave.mjs` — PASS.
++
++The isolated browser evidence is `audit/screenshots/actual/final-guidance/quarantined-after-resume.png` and `quarantined-after-resume.json`; no baseline was overwritten.
++
++The report generator now records G3 as `REVIEW`: its executed navigation/locale/history/module-isolation subset passes, but mandatory full CTX-06 Lab Shadow remains `NOT_RUN`. Traceability now distinguishes the assessed browser fixture from received/unassessed native rendered-test coverage. `FIRST_ROUND_ACCEPTANCE.md` records the tested subset as PASS without turning overall G3 into a blanket pass.
++
++Pre-final copies are under `audit/environment/final-wave-pre-fix/`. The exact wave patch is `audit/reports/controlled-fix-final-wave.diff`; `audit/reports/controlled-fix.diff` is cumulative. Independent final re-review remains a handoff step; S2 density, headings, metadata and client-tool hierarchy remain parked.
+--- a/audit/tests/guidance-final-wave.mjs
++++ b/audit/tests/guidance-final-wave.mjs
+@@ -0,0 +1,20 @@
++import {chromium} from '../tooling/node_modules/playwright/index.mjs';
++import fs from 'node:fs';
++import assert from 'node:assert/strict';
++import {screeningAction,screeningProjection,C_IDS} from '../../prototype/screening-engine.mjs';
++import {collaborationAction} from '../../prototype/collaboration-engine.mjs';
++
++let seed=JSON.parse(fs.readFileSync('audit/screenshots/actual/journey/identity.assessed.en-AU.state.json'));
++const original=structuredClone(seed.data),evidenceId=seed.data.evidence.at(-1).id,branchId=seed.data.workItems.find(x=>x.branch_type==='information_gap').id;
++seed.data=screeningAction(seed.data,{type:'resume_branch',role:'ROLE-KYCOPS',branchId,key:'FINAL-GUIDANCE-RESUME',expectedRevision:seed.data.case.revision,expectedScopeRevision:seed.data.scopes[0].revision,expectedInputRevisions:screeningProjection(seed.data,{role:'ROLE-KYCOPS'}).inputRevisions,rationale:'Resume against current assessed input',at:'2026-09-08T12:00:00Z'});
++seed.data=collaborationAction(seed.data,{type:'release_artifact',role:'ROLE-KYCOPS',requestId:C_IDS.request,itemId:C_IDS.identityItem,reference:evidenceId,intakeStatus:'quarantined',expectedRevision:seed.data.case.revision,expectedRequestRevision:seed.data.informationRequests.find(x=>x.id===C_IDS.request).revision,expectedItemRevision:seed.data.requestItems.find(x=>x.id===C_IDS.identityItem).revision,key:'FINAL-GUIDANCE-QUARANTINE',rationale:'Recheck intake after changed artifact input',now:'2026-09-08T12:30:00Z'});
++seed.navigation={...seed.navigation,page:'product',modal:false,locale:'en-AU',step:'screening',role:'ROLE-FINCRIME',d5:{}};
++const expected=structuredClone(seed.data),browser=await chromium.launch({executablePath:'/Applications/Google Chrome.app/Contents/MacOS/Google Chrome',headless:true}),context=await browser.newContext({viewport:{width:1366,height:768},reducedMotion:'reduce'});
++await context.addInitScript(value=>sessionStorage.setItem('ctt-round-a-v1',JSON.stringify(value)),seed);
++const page=await context.newPage();await page.goto('http://127.0.0.1:8765/prototype/');
++const hero=await page.locator('.d5-issue').innerText(),saved=await page.evaluate(()=>JSON.parse(sessionStorage.getItem('ctt-round-a-v1')));
++assert.match(hero,/identity evidence inputs changed after the last assessment/);assert.match(hero,/Next actor: KYC Operations/);assert.match(hero,/Recheck intake release, evidence linking and reassess for this purpose/);assert.doesNotMatch(hero,/Refer to specialist|Resume review|current purpose assessment is insufficient/);assert.deepEqual(saved.data,expected);assert.equal(saved.data.case.id,original.case.id);
++await page.locator('.d5-issue').screenshot({path:'audit/screenshots/actual/final-guidance/quarantined-after-resume.png'});
++const receipt={at:new Date().toISOString(),status:'passed',case_id:saved.data.case.id,case_revision:saved.data.case.revision,source_revision:original.case.revision,data_equal_after_render:true,hero};
++fs.writeFileSync('audit/screenshots/actual/final-guidance/quarantined-after-resume.json',JSON.stringify(receipt,null,2));
++await browser.close();console.log(receipt);

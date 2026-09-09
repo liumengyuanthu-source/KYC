@@ -1,0 +1,89 @@
+{
+  "at": "2026-09-07T16:20:45.887Z",
+  "results": [
+    {
+      "html": "prototype/diagrams/operating-model/D4_04_operating_architecture__MATCH.en-AU.archify.html",
+      "svg": "prototype/diagrams/operating-model/D4_04_operating_architecture__MATCH.en-AU.svg",
+      "status": "passed",
+      "sha256": "2143715b873df0c756348c8295ff2a13cfcff5c567e7f7e4c950dccbcf938a13",
+      "bytes": 48790
+    },
+    {
+      "html": "prototype/diagrams/operating-model/D4_04_operating_architecture__MATCH.en-US.archify.html",
+      "svg": "prototype/diagrams/operating-model/D4_04_operating_architecture__MATCH.en-US.svg",
+      "status": "passed",
+      "sha256": "df33e3655eed40677e7076e3ca3cb711350239b92a11f0425f6fdb9bcebbece9",
+      "bytes": 48786
+    },
+    {
+      "html": "prototype/diagrams/operating-model/D4_04_operating_architecture__MATCH.zh-CN.archify.html",
+      "svg": "prototype/diagrams/operating-model/D4_04_operating_architecture__MATCH.zh-CN.svg",
+      "status": "passed",
+      "sha256": "52ff969c7fab8ff2563c68e363995fdb4d05eee276b0a6d4cd55fa6291138e19",
+      "bytes": 48425
+    },
+    {
+      "html": "prototype/diagrams/operating-model/D4_01_agentic_suitability__MATCH.en-AU.archify.html",
+      "svg": "prototype/diagrams/operating-model/D4_01_agentic_suitability__MATCH.en-AU.svg",
+      "status": "passed",
+      "sha256": "4f310af07b09b2353d709711ad0f05cf97a39db93c0f589eb7bc1652501130bb",
+      "bytes": 52028
+    },
+    {
+      "html": "prototype/diagrams/operating-model/D4_01_agentic_suitability__MATCH.en-US.archify.html",
+      "svg": "prototype/diagrams/operating-model/D4_01_agentic_suitability__MATCH.en-US.svg",
+      "status": "passed",
+      "sha256": "82872b949f6b43f57e13c528af4233aea700695e03903835462b01efe9a797b9",
+      "bytes": 52024
+    },
+    {
+      "html": "prototype/diagrams/operating-model/D4_01_agentic_suitability__MATCH.zh-CN.archify.html",
+      "svg": "prototype/diagrams/operating-model/D4_01_agentic_suitability__MATCH.zh-CN.svg",
+      "status": "passed",
+      "sha256": "bea9ad255c3dfc82e1004cbff30d4449d59ce67a871ea2d11ee38d5030808e53",
+      "bytes": 51561
+    },
+    {
+      "html": "prototype/diagrams/operating-model/D4_02_agent_matrix__MATCH.en-AU.archify.html",
+      "svg": "prototype/diagrams/operating-model/D4_02_agent_matrix__MATCH.en-AU.svg",
+      "status": "passed",
+      "sha256": "759f8e9e65d660fc13c224cb0e2cd72450b3ea874fbd06149c519dd5b24adca6",
+      "bytes": 48659
+    },
+    {
+      "html": "prototype/diagrams/operating-model/D4_02_agent_matrix__MATCH.en-US.archify.html",
+      "svg": "prototype/diagrams/operating-model/D4_02_agent_matrix__MATCH.en-US.svg",
+      "status": "passed",
+      "sha256": "adf910edd48ae405863af819e74da234f8f5444ce9f9947bedb88a67d7f2230f",
+      "bytes": 48655
+    },
+    {
+      "html": "prototype/diagrams/operating-model/D4_02_agent_matrix__MATCH.zh-CN.archify.html",
+      "svg": "prototype/diagrams/operating-model/D4_02_agent_matrix__MATCH.zh-CN.svg",
+      "status": "passed",
+      "sha256": "e38f7f7fd523f24b9e2403b90c062d8cbc6b399cf381c79d0e4e9dfffcf55320",
+      "bytes": 48320
+    },
+    {
+      "html": "prototype/diagrams/operating-model/D4_03_human_agent_collaboration__MATCH.en-AU.archify.html",
+      "svg": "prototype/diagrams/operating-model/D4_03_human_agent_collaboration__MATCH.en-AU.svg",
+      "status": "passed",
+      "sha256": "2bebab493f165b00572442bec95f8c3970400a46b3999ed23de0cd5bebd47f36",
+      "bytes": 48966
+    },
+    {
+      "html": "prototype/diagrams/operating-model/D4_03_human_agent_collaboration__MATCH.en-US.archify.html",
+      "svg": "prototype/diagrams/operating-model/D4_03_human_agent_collaboration__MATCH.en-US.svg",
+      "status": "passed",
+      "sha256": "2bebab493f165b00572442bec95f8c3970400a46b3999ed23de0cd5bebd47f36",
+      "bytes": 48966
+    },
+    {
+      "html": "prototype/diagrams/operating-model/D4_03_human_agent_collaboration__MATCH.zh-CN.archify.html",
+      "svg": "prototype/diagrams/operating-model/D4_03_human_agent_collaboration__MATCH.zh-CN.svg",
+      "status": "passed",
+      "sha256": "722475304a9abef5b6ec359d6c6f08975a72d967a2e9fb92812ad72e65c40ad1",
+      "bytes": 48633
+    }
+  ]
+}

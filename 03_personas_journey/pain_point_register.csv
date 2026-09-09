@@ -1,1 +1,6 @@
 Pain_Point_ID,Journey_ID,Process_ID,Observation,Root_Cause_Category,Evidence_Status,Source_ID,Assumption_ID,Validation_Status
+PP-001,J-M2-01,M2.1|M2.2|M2.3|M2.4,Case-by-case interpretation may produce inconsistent requests.,Policy context and rationale may be fragmented.,DESIGN_HYPOTHESIS,SRC-005|SRC-007,ASM-002,CLIENT_VALIDATION_REQUIRED
+PP-002,J-M3-01,M3.1,Users may switch tools and gather the same information repeatedly.,Source access and evidence context may be fragmented.,DESIGN_HYPOTHESIS,SRC-005|SRC-007,ASM-002,CLIENT_VALIDATION_REQUIRED
+PP-003,J-M3-02,M3.2,Missing provenance or unclear ownership may prolong gap resolution.,Requirements and evidence may not share a consistent link.,DESIGN_HYPOTHESIS,SRC-005|SRC-007,ASM-002,CLIENT_VALIDATION_REQUIRED
+PP-004,J-M3-03,M2.5|M3.3,Repeated or unclear requests may create avoidable client effort.,Request ownership and requirement rationale may be dispersed.,DESIGN_HYPOTHESIS,SRC-005|SRC-007,ASM-002,CLIENT_VALIDATION_REQUIRED
+PP-005,J-M3-04,M3.4|M3.5,Remediation may restart work when prior decisions and versions are hard to find.,Weak version/context links may obscure why a gap was reopened.,DESIGN_HYPOTHESIS,SRC-005|SRC-007,ASM-002,CLIENT_VALIDATION_REQUIRED

@@ -1,0 +1,99 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "缺口与客户协作 · Current",
+    "locale": "zh-CN",
+    "quality_profile": "showcase",
+    "animation": "none",
+    "viewBox": [
+      1380,
+      620
+    ],
+    "legend": {
+      "mode": "hidden"
+    }
+  },
+  "components": [
+    {
+      "id": "ROOT-BR-05-current",
+      "type": "external",
+      "label": "缺口与客户协作",
+      "sublabel": "工作归组 · 非执行顺序",
+      "pos": [
+        60,
+        266
+      ],
+      "size": [
+        400,
+        88
+      ]
+    },
+    {
+      "id": "CURRENT-BR04-M3-4-CAPTURE-VALIDATE-EVIDENCE",
+      "type": "external",
+      "label": "捕获并验证资料",
+      "pos": [
+        850,
+        70
+      ],
+      "size": [
+        500,
+        92
+      ]
+    },
+    {
+      "id": "CURRENT-BR05-M3-2-IDENTIFY-RESIDUAL-GAPS",
+      "type": "external",
+      "label": "识别残余缺口",
+      "pos": [
+        850,
+        264
+      ],
+      "size": [
+        500,
+        92
+      ]
+    },
+    {
+      "id": "CURRENT-BR05-M3-3-REQUEST-INFORMATION",
+      "type": "external",
+      "label": "向客户请求资料",
+      "pos": [
+        850,
+        458
+      ],
+      "size": [
+        500,
+        92
+      ]
+    }
+  ],
+  "connections": [
+    {
+      "id": "CONTAINS-BR-05-current-1",
+      "from": "ROOT-BR-05-current",
+      "to": "CURRENT-BR04-M3-4-CAPTURE-VALIDATE-EVIDENCE",
+      "label": "包含工作",
+      "variant": "default"
+    },
+    {
+      "id": "CONTAINS-BR-05-current-2",
+      "from": "ROOT-BR-05-current",
+      "to": "CURRENT-BR05-M3-2-IDENTIFY-RESIDUAL-GAPS",
+      "label": "包含工作",
+      "variant": "default",
+      "labelAt": [
+        755,
+        310
+      ]
+    },
+    {
+      "id": "CONTAINS-BR-05-current-3",
+      "from": "ROOT-BR-05-current",
+      "to": "CURRENT-BR05-M3-3-REQUEST-INFORMATION",
+      "label": "包含工作",
+      "variant": "default"
+    }
+  ]
+}

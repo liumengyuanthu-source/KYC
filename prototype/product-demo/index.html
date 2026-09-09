@@ -1,0 +1,20 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Clear-to-Trade · Workspace</title><link rel="stylesheet" href="source.css"><link rel="stylesheet" href="theme.css"><link rel="stylesheet" href="smart-forms.css"><link rel="stylesheet" href="../i18n/language.css"></head><body><div class="app">
+  <aside class="sidebar">
+    <div class="logo"><div class="logo-mark">∞</div><span class="word">Clear-to-Trade</span></div>
+    <div class="nav">
+      <button data-view="home" class="active"><span class="ico">⌂</span><span class="label">Workspace</span></button>
+      <button data-view="cases"><span class="ico">▣</span><span class="label">Cases</span></button>
+      <button data-view="tasks"><span class="ico">☑</span><span class="label">Tasks</span></button>
+      <button data-view="insights"><span class="ico">◫</span><span class="label">Insights</span></button>
+      <button data-view="messages"><span class="ico">✉</span><span class="label">Messages</span></button>
+    </div>
+    <div class="sidebar-footer"><button class="studio-return" data-act="studio">← Journey Studio</button><span>Local synthetic workspace</span></div><div class="rolebox">
+      <div class="rolepill"><small>Working as</small><select id="roleSelect"><option value="ops">KYC Operations</option><option value="rm">Relationship Manager</option><option value="specialist">Financial Crime Specialist</option><option value="client">Client</option><option value="executive">Executive</option></select></div>
+    </div>
+  </aside>
+  <main class="main">
+    <header class="topbar">
+      <div class="search"><span>⌕</span><input id="globalSearch" placeholder="Search cases or clients…"/></div>
+      <div class="top-actions"><button class="iconbtn" id="notifyBtn">♢</button><div class="userchip"><div class="avatar" id="userInitial">A</div><div><b id="userName">Alex Morgan</b><small id="userRole" style="display:block;color:#6f859a">KYC Operations</small></div></div></div>
+    </header>
+<div class="content" id="workspace"></div></main></div><div class="toast" id="toast" role="status"></div><dialog id="detailDialog"><form method="dialog"><button class="secondary">Close ×</button></form><div id="dialogContent"></div></dialog><script type="module" src="app.mjs"></script><script type="module" src="../i18n/runtime.mjs"></script></body></html>

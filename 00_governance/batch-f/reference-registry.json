@@ -1,0 +1,2410 @@
+{
+  "derived": true,
+  "runtime_store": false,
+  "source_ref": "SRC-021",
+  "case_id": "DEMO-CTT-001",
+  "validation_status": "approved_demo_design_not_bank_validation",
+  "generator": "04_operating_model/batch-f/build-consolidation.mjs",
+  "canonical_source": "prototype/references.mjs#selectReferences",
+  "deduplication_key": "official URL + source version + region context + segment context; null URLs retain source ID",
+  "verification_note": "Observation verification is inherited unchanged. Root official-link-check receipts are separate and do not prove media review.",
+  "references": [
+    {
+      "reference_id": "REFSRC-c87950d327fe",
+      "title": "ING Wholesale — Direct Online Onboarding Request (DOOR)",
+      "type": "industry_benchmark",
+      "official_source_url": "https://www.ingwb.com/en/insidebusiness/self-service/onboarding",
+      "source_version": null,
+      "context": {
+        "region": "2026-02-26；欧洲列明市场；Wholesale",
+        "segment": "2026-02-26；欧洲列明市场；Wholesale"
+      },
+      "source_status": "已读取官方页面；教程直链已发现，未播放核对",
+      "source_aliases": [
+        "REFSRC-c87950d327fe"
+      ],
+      "observations": [
+        {
+          "observation_id": "SRC-017:R01",
+          "source_ref": "REFSRC-c87950d327fe",
+          "supported_statement": "InsideBusiness 中可处理实体 onboarding、填写资料及上传文件。新 KYC representative 的访问可由 Relationship Manager 安排。页面允许多名代表，但不同时操作。",
+          "supported_statement_en": "Entity onboarding, information and document submission; representative access is arranged through the RM. Multiple representatives do not imply simultaneous editing.",
+          "locator": {
+            "source_document": "SRC-017",
+            "section": "R01"
+          },
+          "verification_status": "已读取官方页面；教程直链已发现，未播放核对",
+          "verified_at": null,
+          "verification_origin": "inherited_research",
+          "verification_evidence_ref": "SRC-017#R01",
+          "why_it_matters": "A bounded pattern for SCN-GAP, SCN-VALIDATE",
+          "adopt": "借鉴：RM 发起与协调、指定贡献者完成任务。不能把多代表写成实时共同编辑，也不推导澳洲部署或相同权限。",
+          "adapt": "Project-specific objects, permissions and tests; bank applicability remains to be validated.",
+          "avoid": "借鉴：RM 发起与协调、指定贡献者完成任务。不能把多代表写成实时共同编辑，也不推导澳洲部署或相同权限。"
+        }
+      ],
+      "mapped_scene_refs": [
+        "SCN-GAP",
+        "SCN-VALIDATE"
+      ],
+      "mapped_diagram_node_refs": [],
+      "mapped_requirement_refs": [
+        "CTT-REQ-003",
+        "CTT-REQ-004",
+        "CTT-REQ-010"
+      ],
+      "verification": "inherited; link-check receipt is separate"
+    },
+    {
+      "reference_id": "REFSRC-3f0c51e665c8",
+      "title": "ANZ — KYC SecureReply",
+      "type": "industry_benchmark",
+      "official_source_url": "https://www.anz.com.au/support/business/secure-reply/",
+      "source_version": null,
+      "context": {
+        "region": "页面未标明确发布日期；澳洲部分商业客户资料更新",
+        "segment": "页面未标明确发布日期；澳洲部分商业客户资料更新"
+      },
+      "source_status": "已读取官方页面；未登录服务",
+      "source_aliases": [
+        "REFSRC-3f0c51e665c8"
+      ],
+      "observations": [
+        {
+          "observation_id": "SRC-017:R02",
+          "source_ref": "REFSRC-3f0c51e665c8",
+          "supported_statement": "通过 Reference Number 与已登记联系方式的 OTP 进入更新流程；支持保存、续填和多联系人。建议从官网自行导航，沟通中不提供链接。部分个人信息受可见性限制。",
+          "supported_statement_en": "A reference number and OTP to registered contact details support specified Australian business KYC updates, with save/resume and contact visibility limits.",
+          "locator": {
+            "source_document": "SRC-017",
+            "section": "R02"
+          },
+          "verification_status": "已读取官方页面；未登录服务",
+          "verified_at": null,
+          "verification_origin": "inherited_research",
+          "verification_evidence_ref": "SRC-017#R02",
+          "why_it_matters": "A bounded pattern for SCN-GAP, SCN-VALIDATE",
+          "adopt": "借鉴：官网入口、分项贡献与提交/复核分离。不是全部新机构客户的 trading onboarding；不能复制其认证或时限为本银行要求。",
+          "adapt": "Project-specific objects, permissions and tests; bank applicability remains to be validated.",
+          "avoid": "借鉴：官网入口、分项贡献与提交/复核分离。不是全部新机构客户的 trading onboarding；不能复制其认证或时限为本银行要求。"
+        }
+      ],
+      "mapped_scene_refs": [
+        "SCN-GAP",
+        "SCN-VALIDATE"
+      ],
+      "mapped_diagram_node_refs": [],
+      "mapped_requirement_refs": [
+        "CTT-REQ-003",
+        "CTT-REQ-004",
+        "CTT-REQ-010"
+      ],
+      "verification": "inherited; link-check receipt is separate"
+    },
+    {
+      "reference_id": "REFSRC-fc2a14663b0d",
+      "title": "HSBC Bermuda — SmartServe",
+      "type": "industry_benchmark",
+      "official_source_url": "https://www.business.hsbc.bm/en-gb/smartserve",
+      "source_version": null,
+      "context": {
+        "region": "页面未标明确发布日期；Bermuda Corporate & Institutional",
+        "segment": "页面未标明确发布日期；Bermuda Corporate & Institutional"
+      },
+      "source_status": "已读取官方页面；未进入已认证工作区",
+      "source_aliases": [
+        "REFSRC-fc2a14663b0d"
+      ],
+      "observations": [
+        {
+          "observation_id": "SRC-017:R03",
+          "source_ref": "REFSRC-fc2a14663b0d",
+          "supported_statement": "已有客户可用 HSBCnet 凭证，新客户可用 OTP；公开介绍动态表单、文件处理及进度。页面同时说明，获准代表某组织与特定 HSBC 实体沟通的用户可访问相应交换内容。",
+          "supported_statement_en": "SmartServe describes different existing/new-user entry paths and organisation-related communication access; per-item isolation is not established.",
+          "locator": {
+            "source_document": "SRC-017",
+            "section": "R03"
+          },
+          "verification_status": "已读取官方页面；未进入已认证工作区",
+          "verified_at": null,
+          "verification_origin": "inherited_research",
+          "verification_evidence_ref": "SRC-017#R03",
+          "why_it_matters": "A bounded pattern for SCN-GAP, SCN-VALIDATE",
+          "adopt": "借鉴：新用户与既有用户的不同入口。特别注意：不能据此证明它采用逐 Request Item 隔离，更不能将其组织级共享直接照搬。",
+          "adapt": "Project-specific objects, permissions and tests; bank applicability remains to be validated.",
+          "avoid": "借鉴：新用户与既有用户的不同入口。特别注意：不能据此证明它采用逐 Request Item 隔离，更不能将其组织级共享直接照搬。"
+        }
+      ],
+      "mapped_scene_refs": [
+        "SCN-GAP",
+        "SCN-VALIDATE"
+      ],
+      "mapped_diagram_node_refs": [],
+      "mapped_requirement_refs": [
+        "CTT-REQ-003",
+        "CTT-REQ-004",
+        "CTT-REQ-010"
+      ],
+      "verification": "inherited; link-check receipt is separate"
+    },
+    {
+      "reference_id": "REFSRC-6cc73c38d7be",
+      "title": "HSBC Singapore — International business / SmartServe",
+      "type": "industry_benchmark",
+      "official_source_url": "https://www.business.hsbc.com.sg/en-sg/campaigns/international-business",
+      "source_version": null,
+      "context": {
+        "region": "页面未标明确发布日期；Singapore corporate/institutional",
+        "segment": "页面未标明确发布日期；Singapore corporate/institutional"
+      },
+      "source_status": "已读取官方页面",
+      "source_aliases": [
+        "REFSRC-6cc73c38d7be"
+      ],
+      "observations": [
+        {
+          "observation_id": "SRC-017:R04",
+          "source_ref": "REFSRC-6cc73c38d7be",
+          "supported_statement": "页面介绍可通过桌面或移动设备使用 SmartServe。",
+          "supported_statement_en": "Singapore SmartServe is described as available on desktop and mobile. Detailed Bermuda authentication settings cannot be transferred.",
+          "locator": {
+            "source_document": "SRC-017",
+            "section": "R04"
+          },
+          "verification_status": "已读取官方页面",
+          "verified_at": null,
+          "verification_origin": "inherited_research",
+          "verification_evidence_ref": "SRC-017#R04",
+          "why_it_matters": "A bounded pattern for SCN-GAP, SCN-VALIDATE",
+          "adopt": "借鉴：响应式网页可作为移动完成任务的载体；不据此声称需要新建 App，或将 Bermuda 的详细认证配置直接套到 Singapore。",
+          "adapt": "Project-specific objects, permissions and tests; bank applicability remains to be validated.",
+          "avoid": "借鉴：响应式网页可作为移动完成任务的载体；不据此声称需要新建 App，或将 Bermuda 的详细认证配置直接套到 Singapore。"
+        }
+      ],
+      "mapped_scene_refs": [
+        "SCN-GAP",
+        "SCN-VALIDATE"
+      ],
+      "mapped_diagram_node_refs": [],
+      "mapped_requirement_refs": [
+        "CTT-REQ-003",
+        "CTT-REQ-004",
+        "CTT-REQ-010"
+      ],
+      "verification": "inherited; link-check receipt is separate"
+    },
+    {
+      "reference_id": "REFSRC-5007fcbd71dc",
+      "title": "Citi — APAC institutional digital onboarding launch",
+      "type": "industry_benchmark",
+      "official_source_url": "https://www.citigroup.com/global/news/press-release/2019/citi-launches-digital-onboarding-for-institutional-clients-in-asia-pacific",
+      "source_version": null,
+      "context": {
+        "region": "2019-04-11；APAC institutional；历史案例",
+        "segment": "2019-04-11；APAC institutional；历史案例"
+      },
+      "source_status": "已读取官方发布",
+      "source_aliases": [
+        "REFSRC-5007fcbd71dc"
+      ],
+      "observations": [
+        {
+          "observation_id": "SRC-017:R05",
+          "source_ref": "REFSRC-5007fcbd71dc",
+          "supported_statement": "历史发布介绍 Portal、已有信息预填、电子文件交换与电子签名的 onboarding 方式。",
+          "supported_statement_en": "The 2019 APAC institutional release describes prefill, electronic exchange and signatures. Historical claims are not this project’s benefit estimates.",
+          "locator": {
+            "source_document": "SRC-017",
+            "section": "R05"
+          },
+          "verification_status": "已读取官方发布",
+          "verified_at": null,
+          "verification_origin": "inherited_research",
+          "verification_evidence_ref": "SRC-017#R05",
+          "why_it_matters": "A bounded pattern for SCN-GAP, SCN-VALIDATE",
+          "adopt": "借鉴：关系支持与数字完成可结合。保留历史日期；不将发布中的时效、节省或文件减少数字移入我们的 business case。",
+          "adapt": "Project-specific objects, permissions and tests; bank applicability remains to be validated.",
+          "avoid": "借鉴：关系支持与数字完成可结合。保留历史日期；不将发布中的时效、节省或文件减少数字移入我们的 business case。"
+        }
+      ],
+      "mapped_scene_refs": [
+        "SCN-GAP",
+        "SCN-VALIDATE"
+      ],
+      "mapped_diagram_node_refs": [],
+      "mapped_requirement_refs": [
+        "CTT-REQ-003",
+        "CTT-REQ-004",
+        "CTT-REQ-010"
+      ],
+      "verification": "inherited; link-check receipt is separate"
+    },
+    {
+      "reference_id": "REFSRC-593eb3d2134d",
+      "title": "Citi — CitiDirect BE Digital Onboarding video",
+      "type": "industry_benchmark",
+      "official_source_url": "https://www.citigroup.com/global/insights/citidirect-be-digital-onboarding",
+      "source_version": null,
+      "context": {
+        "region": "页面未显示明确发布时间；产品演示入口",
+        "segment": "页面未显示明确发布时间；产品演示入口"
+      },
+      "source_status": "官方视频落地页已发现；播放器/帧未核验",
+      "source_aliases": [
+        "REFSRC-593eb3d2134d"
+      ],
+      "observations": [
+        {
+          "observation_id": "SRC-017:R06",
+          "source_ref": "REFSRC-593eb3d2134d",
+          "supported_statement": "官方页面提供同名产品视频入口。",
+          "supported_statement_en": "An official onboarding video entry exists; its actual frames and timestamps have not been verified.",
+          "locator": {
+            "source_document": "SRC-017",
+            "section": "R06"
+          },
+          "verification_status": "官方视频落地页已发现；播放器/帧未核验",
+          "verified_at": null,
+          "verification_origin": "inherited_research",
+          "verification_evidence_ref": "SRC-017#R06",
+          "why_it_matters": "A bounded pattern for SCN-GAP, SCN-VALIDATE",
+          "adopt": "仅作为取图入口。视频实际出现哪些界面、时间戳与版本，由制作者观看后记录；不能预写已看到某个 Dashboard。",
+          "adapt": "Project-specific objects, permissions and tests; bank applicability remains to be validated.",
+          "avoid": "仅作为取图入口。视频实际出现哪些界面、时间戳与版本，由制作者观看后记录；不能预写已看到某个 Dashboard。"
+        }
+      ],
+      "mapped_scene_refs": [
+        "SCN-GAP",
+        "SCN-VALIDATE"
+      ],
+      "mapped_diagram_node_refs": [],
+      "mapped_requirement_refs": [
+        "CTT-REQ-003",
+        "CTT-REQ-004",
+        "CTT-REQ-010"
+      ],
+      "verification": "inherited; link-check receipt is separate"
+    },
+    {
+      "reference_id": "REFSRC-609062df61e2",
+      "title": "Citi — CitiDirect Commercial Banking enhancements",
+      "type": "industry_benchmark",
+      "official_source_url": "https://www.citigroup.com/global/news/press-release/2025/citi-global-roll-out-enhancements-citidirect-commercial-banking-platform",
+      "source_version": null,
+      "context": {
+        "region": "2025-08-13；mid-sized corporate/commercial；本轮新增核验",
+        "segment": "2025-08-13；mid-sized corporate/commercial；本轮新增核验"
+      },
+      "source_status": "已读取官方发布",
+      "source_aliases": [
+        "REFSRC-609062df61e2"
+      ],
+      "observations": [
+        {
+          "observation_id": "SRC-017:R07",
+          "source_ref": "REFSRC-609062df61e2",
+          "supported_statement": "发布介绍客户关系统一视图、onboarding/servicing 及 KYC renewal 的改进，包括预填和避免重复填写。",
+          "supported_statement_en": "The 2025 commercial banking release describes relationship views and onboarding/servicing improvements. It is distinct from the 2019 institutional release.",
+          "locator": {
+            "source_document": "SRC-017",
+            "section": "R07"
+          },
+          "verification_status": "已读取官方发布",
+          "verified_at": null,
+          "verification_origin": "inherited_research",
+          "verification_evidence_ref": "SRC-017#R07",
+          "why_it_matters": "A bounded pattern for SCN-GAP, SCN-VALIDATE",
+          "adopt": "借鉴：同一关系中的服务任务与资料重用。与 2019 institutional 案例分开标市场、客户群与版本；不合成为同一张“现在全部能力”的清单。",
+          "adapt": "Project-specific objects, permissions and tests; bank applicability remains to be validated.",
+          "avoid": "借鉴：同一关系中的服务任务与资料重用。与 2019 institutional 案例分开标市场、客户群与版本；不合成为同一张“现在全部能力”的清单。"
+        }
+      ],
+      "mapped_scene_refs": [
+        "SCN-GAP",
+        "SCN-VALIDATE"
+      ],
+      "mapped_diagram_node_refs": [],
+      "mapped_requirement_refs": [
+        "CTT-REQ-003",
+        "CTT-REQ-004",
+        "CTT-REQ-010"
+      ],
+      "verification": "inherited; link-check receipt is separate"
+    },
+    {
+      "reference_id": "REFSRC-7d39967abdab",
+      "title": "Citi — CitiDirect Commercial Banking product video page",
+      "type": "industry_benchmark",
+      "official_source_url": "https://www.citigroup.com/global/insights/citidirect-commercial-banking-delivering-the-power-of-citi-on-a-single-platform",
+      "source_version": null,
+      "context": {
+        "region": "2024-01-01 页面日期；Commercial Banking",
+        "segment": "2024-01-01 页面日期；Commercial Banking"
+      },
+      "source_status": "已读取视频说明页；视频帧未核验",
+      "source_aliases": [
+        "REFSRC-7d39967abdab"
+      ],
+      "observations": [
+        {
+          "observation_id": "SRC-017:R08",
+          "source_ref": "REFSRC-7d39967abdab",
+          "supported_statement": "页面介绍将 Cash、Loans、Trade、FX、Servicing 和 Onboarding 集合于同一平台的客户关系视图。",
+          "supported_statement_en": "A commercial banking platform video description mentions several product areas. Generic Cash/Trade screens are not KYC review evidence.",
+          "locator": {
+            "source_document": "SRC-017",
+            "section": "R08"
+          },
+          "verification_status": "已读取视频说明页；视频帧未核验",
+          "verified_at": null,
+          "verification_origin": "inherited_research",
+          "verification_evidence_ref": "SRC-017#R08",
+          "why_it_matters": "A bounded pattern for SCN-GAP, SCN-VALIDATE",
+          "adopt": "作产品外观与导航参考，不用通用 cash/trade 页面冒充 KYC 证据复核界面。",
+          "adapt": "Project-specific objects, permissions and tests; bank applicability remains to be validated.",
+          "avoid": "作产品外观与导航参考，不用通用 cash/trade 页面冒充 KYC 证据复核界面。"
+        }
+      ],
+      "mapped_scene_refs": [
+        "SCN-GAP",
+        "SCN-VALIDATE"
+      ],
+      "mapped_diagram_node_refs": [],
+      "mapped_requirement_refs": [
+        "CTT-REQ-003",
+        "CTT-REQ-004",
+        "CTT-REQ-010"
+      ],
+      "verification": "inherited; link-check receipt is separate"
+    },
+    {
+      "reference_id": "REFSRC-3691009688e5",
+      "title": "NatWest Business — Mitek identity verification",
+      "type": "industry_benchmark",
+      "official_source_url": "https://www.natwest.com/business/bank-accounts/what-is-mitek.html",
+      "source_version": null,
+      "context": {
+        "region": "页面未标明确发布日期；英国 Business Banking 的身份验证子步骤",
+        "segment": "页面未标明确发布日期；英国 Business Banking 的身份验证子步骤"
+      },
+      "source_status": "已读取官方操作说明",
+      "source_aliases": [
+        "REFSRC-3691009688e5"
+      ],
+      "observations": [
+        {
+          "observation_id": "SRC-017:R09",
+          "source_ref": "REFSRC-3691009688e5",
+          "supported_statement": "邮件或短信链接进入身份验证任务，无单独传统登录步骤；后续任务仍包含身份材料及相关验证。",
+          "supported_statement_en": "A narrow identity-verification task may start from email/text without a separate traditional login. This does not remove identity checks or grant case access.",
+          "locator": {
+            "source_document": "SRC-017",
+            "section": "R09"
+          },
+          "verification_status": "已读取官方操作说明",
+          "verified_at": null,
+          "verification_origin": "inherited_research",
+          "verification_evidence_ref": "SRC-017#R09",
+          "why_it_matters": "A bounded pattern for SCN-GAP, SCN-VALIDATE",
+          "adopt": "借鉴：窄任务可以有低摩擦入口。无单独登录不等于无身份验证，更不等于持链接即可查看整个企业案件。",
+          "adapt": "Project-specific objects, permissions and tests; bank applicability remains to be validated.",
+          "avoid": "借鉴：窄任务可以有低摩擦入口。无单独登录不等于无身份验证，更不等于持链接即可查看整个企业案件。"
+        }
+      ],
+      "mapped_scene_refs": [
+        "SCN-GAP",
+        "SCN-VALIDATE"
+      ],
+      "mapped_diagram_node_refs": [],
+      "mapped_requirement_refs": [
+        "CTT-REQ-003",
+        "CTT-REQ-004",
+        "CTT-REQ-010"
+      ],
+      "verification": "inherited; link-check receipt is separate"
+    },
+    {
+      "reference_id": "REFSRC-1e88f1a0dc43",
+      "title": "HSBC Hong Kong — Chat with your Relationship Manager",
+      "type": "industry_benchmark",
+      "official_source_url": "https://www.hsbc.com.hk/ways-to-bank/chat-with-relationship-manager/",
+      "source_version": null,
+      "context": {
+        "region": "页面未标明确发布日期；香港 Premier / Premier Elite 零售财富",
+        "segment": "页面未标明确发布日期；香港 Premier / Premier Elite 零售财富"
+      },
+      "source_status": "已读取官方页面；4 个教程图片直链已发现，未下载",
+      "source_aliases": [
+        "REFSRC-1e88f1a0dc43"
+      ],
+      "observations": [
+        {
+          "observation_id": "SRC-017:R10",
+          "source_ref": "REFSRC-1e88f1a0dc43",
+          "supported_statement": "注册后的合资格客户可通过银行渠道及 WhatsApp/WeChat 进行限定范围的 RM 沟通。官网提供注册与使用步骤图。",
+          "supported_statement_en": "Registered, eligible Hong Kong Premier customers have bounded RM communication channels. This is not Australian institutional KYC document collection.",
+          "locator": {
+            "source_document": "SRC-017",
+            "section": "R10"
+          },
+          "verification_status": "已读取官方页面；4 个教程图片直链已发现，未下载",
+          "verified_at": null,
+          "verification_origin": "inherited_research",
+          "verification_evidence_ref": "SRC-017#R10",
+          "why_it_matters": "A bounded pattern for SCN-GAP, SCN-VALIDATE",
+          "adopt": "借鉴：正式注册的关系沟通渠道。不是澳洲机构 KYC 文档提交案例；不支持员工个人 WhatsApp 无记录收件。",
+          "adapt": "Project-specific objects, permissions and tests; bank applicability remains to be validated.",
+          "avoid": "借鉴：正式注册的关系沟通渠道。不是澳洲机构 KYC 文档提交案例；不支持员工个人 WhatsApp 无记录收件。"
+        }
+      ],
+      "mapped_scene_refs": [
+        "SCN-GAP",
+        "SCN-VALIDATE"
+      ],
+      "mapped_diagram_node_refs": [],
+      "mapped_requirement_refs": [
+        "CTT-REQ-003",
+        "CTT-REQ-004",
+        "CTT-REQ-010"
+      ],
+      "verification": "inherited; link-check receipt is separate"
+    },
+    {
+      "reference_id": "REFSRC-58eef49f44a6",
+      "title": "SWIFT — KYC Registry opens to corporates",
+      "type": "industry_benchmark",
+      "official_source_url": "https://www.swift.com/news-events/press-releases/swift-opens-its-kyc-registry-corporates",
+      "source_version": null,
+      "context": {
+        "region": "2019-12-16；企业与金融机构 KYC 资料交换；历史发布",
+        "segment": "2019-12-16；企业与金融机构 KYC 资料交换；历史发布"
+      },
+      "source_status": "已读取官方发布",
+      "source_aliases": [
+        "REFSRC-58eef49f44a6"
+      ],
+      "observations": [
+        {
+          "observation_id": "SRC-017:R11",
+          "source_ref": "REFSRC-58eef49f44a6",
+          "supported_statement": "向适用企业扩展标准化 KYC 信息及文档共享，并保留数据拥有方对访问的控制。",
+          "supported_statement_en": "Standard KYC information exchange retains data-owner access control. Eligibility, connection and case-specific assessment are separate.",
+          "locator": {
+            "source_document": "SRC-017",
+            "section": "R11"
+          },
+          "verification_status": "已读取官方发布",
+          "verified_at": null,
+          "verification_origin": "inherited_research",
+          "verification_evidence_ref": "SRC-017#R11",
+          "why_it_matters": "A bounded pattern for SCN-REQUIREMENTS",
+          "adopt": "借鉴：baseline information 与 case-specific needs 分开。不能假定本案公司已具备 Registry 资格或数据连接；不替代银行独立适用性判断。",
+          "adapt": "Project-specific objects, permissions and tests; bank applicability remains to be validated.",
+          "avoid": "借鉴：baseline information 与 case-specific needs 分开。不能假定本案公司已具备 Registry 资格或数据连接；不替代银行独立适用性判断。"
+        }
+      ],
+      "mapped_scene_refs": [
+        "SCN-REQUIREMENTS"
+      ],
+      "mapped_diagram_node_refs": [],
+      "mapped_requirement_refs": [
+        "CTT-REQ-002"
+      ],
+      "verification": "inherited; link-check receipt is separate"
+    },
+    {
+      "reference_id": "REFSRC-c48c6d8deca0",
+      "title": "Wolfsberg Group — Correspondent Banking / CBDDQ resources",
+      "type": "industry_benchmark",
+      "official_source_url": "https://wolfsberg-group.org/resources/correspondent-banking/",
+      "source_version": null,
+      "context": {
+        "region": "金融机构对应行尽调资源；页面资源版本以实际下载为准",
+        "segment": "金融机构对应行尽调资源；页面资源版本以实际下载为准"
+      },
+      "source_status": "已读取官方资源页；未审阅整个问卷文件",
+      "source_aliases": [
+        "REFSRC-c48c6d8deca0"
+      ],
+      "observations": [
+        {
+          "observation_id": "SRC-017:R12",
+          "source_ref": "REFSRC-c48c6d8deca0",
+          "supported_statement": "提供对应行尽调问卷及配套 guidance/glossary 等资源。",
+          "supported_statement_en": "Correspondent-banking questionnaires and guidance provide baseline patterns, not a ready-made corporate customer checklist.",
+          "locator": {
+            "source_document": "SRC-017",
+            "section": "R12"
+          },
+          "verification_status": "已读取官方资源页；未审阅整个问卷文件",
+          "verified_at": null,
+          "verification_origin": "inherited_research",
+          "verification_evidence_ref": "SRC-017#R12",
+          "why_it_matters": "A bounded pattern for SCN-REQUIREMENTS",
+          "adopt": "借鉴：标准 baseline 问题集与解释口径。不能把金融机构 CBDDQ 原样变成 Entity A 企业客户清单。",
+          "adapt": "Project-specific objects, permissions and tests; bank applicability remains to be validated.",
+          "avoid": "借鉴：标准 baseline 问题集与解释口径。不能把金融机构 CBDDQ 原样变成 Entity A 企业客户清单。"
+        }
+      ],
+      "mapped_scene_refs": [
+        "SCN-REQUIREMENTS"
+      ],
+      "mapped_diagram_node_refs": [],
+      "mapped_requirement_refs": [
+        "CTT-REQ-002"
+      ],
+      "verification": "inherited; link-check receipt is separate"
+    },
+    {
+      "reference_id": "REFSRC-08762a0163df",
+      "title": "GLEIF — Level 2 Data: Who Owns Whom",
+      "type": "industry_benchmark",
+      "official_source_url": "https://www.gleif.org/en/lei-data/access-and-use-lei-data/level-2-data-who-owns-whom",
+      "source_version": null,
+      "context": {
+        "region": "法人识别与组织关系；无特定银行市场",
+        "segment": "法人识别与组织关系；无特定银行市场"
+      },
+      "source_status": "已读取官方说明",
+      "source_aliases": [
+        "REFSRC-08762a0163df"
+      ],
+      "observations": [
+        {
+          "observation_id": "SRC-017:R13",
+          "source_ref": "REFSRC-08762a0163df",
+          "supported_statement": "Level 1 法人身份参考信息与 Level 2 直接/最终会计合并母公司关系是不同内容。",
+          "supported_statement_en": "Legal entity identity and accounting-consolidation parent relationships are distinct; parent data does not establish all natural-person beneficial owners.",
+          "locator": {
+            "source_document": "SRC-017",
+            "section": "R13"
+          },
+          "verification_status": "已读取官方说明",
+          "verified_at": null,
+          "verification_origin": "inherited_research",
+          "verification_evidence_ref": "SRC-017#R13",
+          "why_it_matters": "A bounded pattern for SCN-ENTITY",
+          "adopt": "借鉴：LegalEntity 与 PartyRelationship 分离。会计合并母公司不是完整自然人受益所有人结论；存在 LEI 不等于 KYC 完成。",
+          "adapt": "Project-specific objects, permissions and tests; bank applicability remains to be validated.",
+          "avoid": "借鉴：LegalEntity 与 PartyRelationship 分离。会计合并母公司不是完整自然人受益所有人结论；存在 LEI 不等于 KYC 完成。"
+        }
+      ],
+      "mapped_scene_refs": [
+        "SCN-ENTITY"
+      ],
+      "mapped_diagram_node_refs": [],
+      "mapped_requirement_refs": [
+        "CTT-REQ-001",
+        "CTT-REQ-007"
+      ],
+      "verification": "inherited; link-check receipt is separate"
+    },
+    {
+      "reference_id": "REFSRC-4f617c2d4b50",
+      "title": "GLEIF — The verifiable LEI (vLEI)",
+      "type": "industry_benchmark",
+      "official_source_url": "https://www.gleif.org/en/organizational-identity/lei-vlei/the-verifiable-lei-vlei",
+      "source_version": null,
+      "context": {
+        "region": "组织数字身份及相关角色；适用部署另验",
+        "segment": "组织数字身份及相关角色；适用部署另验"
+      },
+      "source_status": "已读取官方说明",
+      "source_aliases": [
+        "REFSRC-4f617c2d4b50"
+      ],
+      "observations": [
+        {
+          "observation_id": "SRC-017:R14",
+          "source_ref": "REFSRC-4f617c2d4b50",
+          "supported_statement": "vLEI 的组织身份及角色凭证机制用于可验证的组织及代表关系。",
+          "supported_statement_en": "vLEI provides patterns for verifiable organisational roles. It does not grant this bank’s signing or trading authority.",
+          "locator": {
+            "source_document": "SRC-017",
+            "section": "R14"
+          },
+          "verification_status": "已读取官方说明",
+          "verified_at": null,
+          "verification_origin": "inherited_research",
+          "verification_evidence_ref": "SRC-017#R14",
+          "why_it_matters": "A bounded pattern for SCN-ENTITY",
+          "adopt": "作为 AuthorityRecord 与身份/角色分离的模式参考；不假定客户已持有 vLEI，也不据此自动授予银行产品签约或交易权限。",
+          "adapt": "Project-specific objects, permissions and tests; bank applicability remains to be validated.",
+          "avoid": "作为 AuthorityRecord 与身份/角色分离的模式参考；不假定客户已持有 vLEI，也不据此自动授予银行产品签约或交易权限。"
+        }
+      ],
+      "mapped_scene_refs": [
+        "SCN-ENTITY"
+      ],
+      "mapped_diagram_node_refs": [],
+      "mapped_requirement_refs": [
+        "CTT-REQ-001",
+        "CTT-REQ-007"
+      ],
+      "verification": "inherited; link-check receipt is separate"
+    },
+    {
+      "reference_id": "REFSRC-2f2f723a6c8c",
+      "title": "ISDA — DRR and CDM documentation",
+      "type": "industry_benchmark",
+      "official_source_url": "https://drr-docs.isda.org/docs/get-started/drr-and-cdm/",
+      "source_version": null,
+      "context": {
+        "region": "金融产品、生命周期及数字监管报告",
+        "segment": "金融产品、生命周期及数字监管报告"
+      },
+      "source_status": "已读取官方文档；未审阅完整标准",
+      "source_aliases": [
+        "REFSRC-2f2f723a6c8c"
+      ],
+      "observations": [
+        {
+          "observation_id": "SRC-017:R15",
+          "source_ref": "REFSRC-2f2f723a6c8c",
+          "supported_statement": "说明 Common Domain Model 与可执行监管报告规则的关系，涉及标准化产品、事件与生命周期表达。",
+          "supported_statement_en": "ISDA event/state/rule expression is a modelling reference, not adoption of CDM or an official KYC schema.",
+          "locator": {
+            "source_document": "SRC-017",
+            "section": "R15"
+          },
+          "verification_status": "已读取官方文档；未审阅完整标准",
+          "verified_at": null,
+          "verification_origin": "inherited_research",
+          "verification_evidence_ref": "SRC-017#R15",
+          "why_it_matters": "A bounded pattern for SCN-SCOPE",
+          "adopt": "借鉴：将对象、事件、状态和规则引用分开。不是推荐把 CDM 整套作为 KYC Schema，也不说明所有 FX 产品都使用同一协议。",
+          "adapt": "Project-specific objects, permissions and tests; bank applicability remains to be validated.",
+          "avoid": "借鉴：将对象、事件、状态和规则引用分开。不是推荐把 CDM 整套作为 KYC Schema，也不说明所有 FX 产品都使用同一协议。"
+        }
+      ],
+      "mapped_scene_refs": [
+        "SCN-SCOPE"
+      ],
+      "mapped_diagram_node_refs": [],
+      "mapped_requirement_refs": [
+        "CTT-REQ-001",
+        "CTT-REQ-010"
+      ],
+      "verification": "inherited; link-check receipt is separate"
+    },
+    {
+      "reference_id": "REFSRC-278ac9ad8738",
+      "title": "EUROCONTROL — Airport Collaborative Decision Making specification",
+      "type": "cross_industry_benchmark",
+      "official_source_url": "https://www.eurocontrol.int/publication/eurocontrol-specification-airport-collaborative-decision-making-cdm",
+      "source_version": null,
+      "context": {
+        "region": "2025-01-30；航空运营；Edition 1",
+        "segment": "2025-01-30；航空运营；Edition 1"
+      },
+      "source_status": "已读取官方发布页；未逐图查看 PDF",
+      "source_aliases": [
+        "REFSRC-278ac9ad8738"
+      ],
+      "observations": [
+        {
+          "observation_id": "SRC-017:R16",
+          "source_ref": "REFSRC-278ac9ad8738",
+          "supported_statement": "用重要事件里程碑组织协同并触发下游估计、告警和通知更新。",
+          "supported_statement_en": "A-CDM milestones can inform downstream updates. Aviation notification mechanisms are not bank approval or SLA rules.",
+          "locator": {
+            "source_document": "SRC-017",
+            "section": "R16"
+          },
+          "verification_status": "已读取官方发布页；未逐图查看 PDF",
+          "verified_at": null,
+          "verification_origin": "inherited_research",
+          "verification_evidence_ref": "SRC-017#R16",
+          "why_it_matters": "A bounded pattern for SCN-MATCH, SCN-READINESS",
+          "adopt": "借鉴：工作事件影响具体依赖与下一责任人。航空里程碑不等于银行批准，不迁移航空 SLA 或安全授权。",
+          "adapt": "Project-specific objects, permissions and tests; bank applicability remains to be validated.",
+          "avoid": "借鉴：工作事件影响具体依赖与下一责任人。航空里程碑不等于银行批准，不迁移航空 SLA 或安全授权。"
+        }
+      ],
+      "mapped_scene_refs": [
+        "SCN-MATCH",
+        "SCN-READINESS",
+        "SCN-CONFLICTS",
+        "SCN-CREDIT",
+        "SCN-LEGAL"
+      ],
+      "mapped_diagram_node_refs": [
+        "D01-READY",
+        "D02-INPUT",
+        "D02-REVISION"
+      ],
+      "mapped_requirement_refs": [
+        "CTT-REQ-005",
+        "CTT-REQ-006",
+        "CTT-REQ-007",
+        "CTT-REQ-008",
+        "CTT-REQ-009",
+        "CTT-REQ-010"
+      ],
+      "verification": "inherited; link-check receipt is separate"
+    },
+    {
+      "reference_id": "REFSRC-31432d782d31",
+      "title": "IATA — ONE Record",
+      "type": "cross_industry_benchmark",
+      "official_source_url": "https://www.iata.org/one-record/",
+      "source_version": null,
+      "context": {
+        "region": "航空货运信息交换；公开说明及工具链接",
+        "segment": "航空货运信息交换；公开说明及工具链接"
+      },
+      "source_status": "已读取官方页面；可视化工具链接已发现，未运行",
+      "source_aliases": [
+        "REFSRC-31432d782d31"
+      ],
+      "observations": [
+        {
+          "observation_id": "SRC-017:R17",
+          "source_ref": "REFSRC-31432d782d31",
+          "supported_statement": "以共享数据模型、API 和数据拥有者控制构建货运记录视图；官方页面链接模型可视化器与 demonstrator。",
+          "supported_statement_en": "ONE Record is a shared-data/access pattern in cargo; its model tools are not bank products.",
+          "locator": {
+            "source_document": "SRC-017",
+            "section": "R17"
+          },
+          "verification_status": "已读取官方页面；可视化工具链接已发现，未运行",
+          "verified_at": null,
+          "verification_origin": "inherited_research",
+          "verification_evidence_ref": "SRC-017#R17",
+          "why_it_matters": "A bounded pattern for SCN-MATCH, SCN-READINESS",
+          "adopt": "借鉴：Shared Case Spine 与受控贡献。不能说所有参与方看同一份无权限区分的资料；不是银行产品案例。",
+          "adapt": "Project-specific objects, permissions and tests; bank applicability remains to be validated.",
+          "avoid": "借鉴：Shared Case Spine 与受控贡献。不能说所有参与方看同一份无权限区分的资料；不是银行产品案例。"
+        }
+      ],
+      "mapped_scene_refs": [
+        "SCN-MATCH",
+        "SCN-READINESS"
+      ],
+      "mapped_diagram_node_refs": [],
+      "mapped_requirement_refs": [
+        "CTT-REQ-005",
+        "CTT-REQ-007",
+        "CTT-REQ-009",
+        "CTT-REQ-010"
+      ],
+      "verification": "inherited; link-check receipt is separate"
+    },
+    {
+      "reference_id": "REFSRC-3e10e7311eba",
+      "title": "GS1 — Global Traceability Standard explanation",
+      "type": "cross_industry_benchmark",
+      "official_source_url": "https://support.gs1.org/support/solutions/articles/43000734535-what-is-the-gs1-traceability-standard-",
+      "source_version": null,
+      "context": {
+        "region": "2024-08-22 更新；供应链标准",
+        "segment": "2024-08-22 更新；供应链标准"
+      },
+      "source_status": "官方搜索结果已核验；主站直接抓取受限",
+      "source_aliases": [
+        "REFSRC-3e10e7311eba"
+      ],
+      "observations": [
+        {
+          "observation_id": "SRC-017:R18",
+          "source_ref": "REFSRC-3e10e7311eba",
+          "supported_statement": "将可追溯性组织为 Critical Tracking Events 与描述事件实例的 Key Data Elements。",
+          "supported_statement_en": "GS1 traceability distinguishes events and key data elements; banking fields remain this project’s interpretation.",
+          "locator": {
+            "source_document": "SRC-017",
+            "section": "R18"
+          },
+          "verification_status": "官方搜索结果已核验；主站直接抓取受限",
+          "verified_at": null,
+          "verification_origin": "inherited_research",
+          "verification_evidence_ref": "SRC-017#R18",
+          "why_it_matters": "A bounded pattern for SCN-MATCH, SCN-READINESS",
+          "adopt": "借鉴：收到、提交、评估、补正等关键事件同时保存对象、参与者、时点与用途；不用货运条码字段替代银行业务对象。",
+          "adapt": "Project-specific objects, permissions and tests; bank applicability remains to be validated.",
+          "avoid": "借鉴：收到、提交、评估、补正等关键事件同时保存对象、参与者、时点与用途；不用货运条码字段替代银行业务对象。"
+        }
+      ],
+      "mapped_scene_refs": [
+        "SCN-MATCH",
+        "SCN-READINESS",
+        "SCN-QA",
+        "SCN-PUBLISH"
+      ],
+      "mapped_diagram_node_refs": [
+        "E01-check",
+        "E01-gap",
+        "E01-remediate",
+        "E01-rereview",
+        "E01-signoff",
+        "E02-scope",
+        "E02-prerequisites",
+        "E02-evaluate",
+        "E02-ready",
+        "E02-notready",
+        "E03-ready",
+        "E03-confirm",
+        "E03-decision",
+        "E03-publish",
+        "E03-communicate",
+        "E03-failure",
+        "F01-evidence",
+        "F01-decision",
+        "F02-change",
+        "F02-reassess"
+      ],
+      "mapped_requirement_refs": [
+        "CTT-REQ-005",
+        "CTT-REQ-007",
+        "CTT-REQ-008",
+        "CTT-REQ-009",
+        "CTT-REQ-010"
+      ],
+      "verification": "inherited; link-check receipt is separate"
+    },
+    {
+      "reference_id": "REFSRC-e1fe72472bf9",
+      "title": "NIST — Digital Thread for Manufacturing",
+      "type": "cross_industry_benchmark",
+      "official_source_url": "https://www.nist.gov/programs-projects/digital-thread-manufacturing",
+      "source_version": null,
+      "context": {
+        "region": "制造业数字线程；公开研究项目",
+        "segment": "制造业数字线程；公开研究项目"
+      },
+      "source_status": "已读取官方项目页",
+      "source_aliases": [
+        "REFSRC-e1fe72472bf9"
+      ],
+      "observations": [
+        {
+          "observation_id": "SRC-017:R19",
+          "source_ref": "REFSRC-e1fe72472bf9",
+          "supported_statement": "研究跨生命周期工程信息的连接、可追溯性和相关语义/可信交换。",
+          "supported_statement_en": "NIST digital-thread work informs version and change traceability; manufacturing rules are not transferred.",
+          "locator": {
+            "source_document": "SRC-017",
+            "section": "R19"
+          },
+          "verification_status": "已读取官方项目页",
+          "verified_at": null,
+          "verification_origin": "inherited_research",
+          "verification_evidence_ref": "SRC-017#R19",
+          "why_it_matters": "A bounded pattern for SCN-MATCH, SCN-READINESS",
+          "adopt": "借鉴：对象版本与下游使用关系持续连接；不是本案已经建立数字孪生或实现自动影响分析的证据。",
+          "adapt": "Project-specific objects, permissions and tests; bank applicability remains to be validated.",
+          "avoid": "借鉴：对象版本与下游使用关系持续连接；不是本案已经建立数字孪生或实现自动影响分析的证据。"
+        }
+      ],
+      "mapped_scene_refs": [
+        "SCN-MATCH",
+        "SCN-READINESS",
+        "SCN-CONFLICTS",
+        "SCN-CREDIT",
+        "SCN-LEGAL"
+      ],
+      "mapped_diagram_node_refs": [
+        "D02-ASSESS",
+        "D02-DECISION",
+        "D02-CONDITION",
+        "D02-INPUT",
+        "D02-REVISION",
+        "D02-REVIEW",
+        "D02-APPROVAL",
+        "D02-EXECUTION",
+        "D03-CASE",
+        "D03-UNKNOWN",
+        "D03-DEPS",
+        "D03-RESOLVE"
+      ],
+      "mapped_requirement_refs": [
+        "CTT-REQ-005",
+        "CTT-REQ-006",
+        "CTT-REQ-007",
+        "CTT-REQ-008",
+        "CTT-REQ-009",
+        "CTT-REQ-010"
+      ],
+      "verification": "inherited; link-check receipt is separate"
+    },
+    {
+      "reference_id": "REFSRC-f9e731b2c4ac",
+      "title": "HL7 FHIR R4 — Provenance",
+      "type": "cross_industry_benchmark",
+      "official_source_url": "https://hl7.org/fhir/R4/provenance.html",
+      "source_version": "R4",
+      "context": {
+        "region": "FHIR R4 4.0.1；医疗标准；明确不是最新版本声明",
+        "segment": "FHIR R4 4.0.1；医疗标准；明确不是最新版本声明"
+      },
+      "source_status": "已读取指定版本官方文档",
+      "source_aliases": [
+        "REFSRC-f9e731b2c4ac"
+      ],
+      "observations": [
+        {
+          "observation_id": "SRC-017:R20",
+          "source_ref": "REFSRC-f9e731b2c4ac",
+          "supported_statement": "Provenance 记录针对资源的相关活动、目标、参与者和来源实体。",
+          "supported_statement_en": "FHIR R4 Provenance is a version-specific target/agent/source pattern, not implementation of a healthcare standard.",
+          "locator": {
+            "source_document": "SRC-017",
+            "section": "R20"
+          },
+          "verification_status": "已读取指定版本官方文档",
+          "verified_at": null,
+          "verification_origin": "inherited_research",
+          "verification_evidence_ref": "SRC-017#R20",
+          "why_it_matters": "A bounded pattern for SCN-MATCH, SCN-READINESS",
+          "adopt": "借鉴：记录谁基于哪份输入产生哪个版本。只借 lineage 模式，不把医疗字段与权限直接搬到银行。",
+          "adapt": "Project-specific objects, permissions and tests; bank applicability remains to be validated.",
+          "avoid": "借鉴：记录谁基于哪份输入产生哪个版本。只借 lineage 模式，不把医疗字段与权限直接搬到银行。"
+        }
+      ],
+      "mapped_scene_refs": [
+        "SCN-MATCH",
+        "SCN-READINESS",
+        "SCN-QA",
+        "SCN-PUBLISH"
+      ],
+      "mapped_diagram_node_refs": [
+        "E01-check",
+        "E01-gap",
+        "E01-remediate",
+        "E01-rereview",
+        "E01-signoff",
+        "E02-scope",
+        "E02-prerequisites",
+        "E02-evaluate",
+        "E02-ready",
+        "E02-notready",
+        "E03-ready",
+        "E03-confirm",
+        "E03-decision",
+        "E03-publish",
+        "E03-communicate",
+        "E03-failure",
+        "F02-change",
+        "F02-dependency",
+        "F02-scope",
+        "F02-task",
+        "F02-branch",
+        "F02-case",
+        "F02-unknown",
+        "F02-affected",
+        "F02-unaffected",
+        "F02-unknowns",
+        "F02-reassess",
+        "F02-readiness"
+      ],
+      "mapped_requirement_refs": [
+        "CTT-REQ-005",
+        "CTT-REQ-007",
+        "CTT-REQ-008",
+        "CTT-REQ-009",
+        "CTT-REQ-010"
+      ],
+      "verification": "inherited; link-check receipt is separate"
+    },
+    {
+      "reference_id": "REFSRC-a69324ba5269",
+      "title": "FDA / ICH — Q9(R1) Quality Risk Management",
+      "type": "cross_industry_benchmark",
+      "official_source_url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/q9r1-quality-risk-management",
+      "source_version": null,
+      "context": {
+        "region": "2023-05；药品质量风险管理",
+        "segment": "2023-05；药品质量风险管理"
+      },
+      "source_status": "官方概要已核验；完整指南未逐项映射",
+      "source_aliases": [
+        "REFSRC-a69324ba5269"
+      ],
+      "observations": [
+        {
+          "observation_id": "SRC-017:R21",
+          "source_ref": "REFSRC-a69324ba5269",
+          "supported_statement": "指南修订讨论风险决策、主观性和质量风险管理方法。",
+          "supported_statement_en": "ICH Q9(R1) discusses risk decisions, subjectivity and quality risk-management methods in pharmaceuticals; banking QA mapping is not established.",
+          "locator": {
+            "source_document": "SRC-017",
+            "section": "R21"
+          },
+          "verification_status": "官方概要已核验；完整指南未逐项映射",
+          "verified_at": null,
+          "verification_origin": "inherited_research",
+          "verification_evidence_ref": "SRC-017#R21",
+          "why_it_matters": "A bounded pattern for SCN-QA",
+          "adopt": "作为 Assurance 研究延伸，不宣称已完成银行 QA 控制映射；不将它当金融法规。",
+          "adapt": "Project-specific objects, permissions and tests; bank applicability remains to be validated.",
+          "avoid": "作为 Assurance 研究延伸，不宣称已完成银行 QA 控制映射；不将它当金融法规。"
+        }
+      ],
+      "mapped_scene_refs": [
+        "SCN-QA"
+      ],
+      "mapped_diagram_node_refs": [],
+      "mapped_requirement_refs": [
+        "CTT-REQ-008",
+        "CTT-REQ-009",
+        "CTT-REQ-010"
+      ],
+      "verification": "inherited; link-check receipt is separate"
+    },
+    {
+      "reference_id": "REFSRC-cc616f5c6867",
+      "title": "FDA / ICH — Q10 Pharmaceutical Quality System",
+      "type": "cross_industry_benchmark",
+      "official_source_url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/q10-pharmaceutical-quality-system",
+      "source_version": null,
+      "context": {
+        "region": "2009-05；药品质量体系",
+        "segment": "2009-05；药品质量体系"
+      },
+      "source_status": "已读取官方概要页；完整指南未逐项映射",
+      "source_aliases": [
+        "REFSRC-cc616f5c6867"
+      ],
+      "observations": [
+        {
+          "observation_id": "SRC-017:R22",
+          "source_ref": "REFSRC-cc616f5c6867",
+          "supported_statement": "提供 Pharmaceutical Quality System 的指导框架。",
+          "supported_statement_en": "ICH Q10 provides a pharmaceutical quality-system framework. Its summary does not prove a specific bank remediation process.",
+          "locator": {
+            "source_document": "SRC-017",
+            "section": "R22"
+          },
+          "verification_status": "已读取官方概要页；完整指南未逐项映射",
+          "verified_at": null,
+          "verification_origin": "inherited_research",
+          "verification_evidence_ref": "SRC-017#R22",
+          "why_it_matters": "A bounded pattern for SCN-QA",
+          "adopt": "列为质量变更/补正机制的后续研究入口，本轮不以此页证明任何具体银行流程已经实施。",
+          "adapt": "Project-specific objects, permissions and tests; bank applicability remains to be validated.",
+          "avoid": "列为质量变更/补正机制的后续研究入口，本轮不以此页证明任何具体银行流程已经实施。"
+        }
+      ],
+      "mapped_scene_refs": [
+        "SCN-QA",
+        "SCN-READINESS",
+        "SCN-PUBLISH"
+      ],
+      "mapped_diagram_node_refs": [
+        "E01-check",
+        "E01-gap",
+        "E01-remediate",
+        "E01-rereview",
+        "E01-signoff",
+        "E02-scope",
+        "E02-prerequisites",
+        "E02-evaluate",
+        "E02-ready",
+        "E02-notready",
+        "E03-ready",
+        "E03-confirm",
+        "E03-decision",
+        "E03-publish",
+        "E03-communicate",
+        "E03-failure",
+        "F01-case",
+        "F01-party",
+        "F01-authority",
+        "F01-requirement",
+        "F01-evidence",
+        "F01-work",
+        "F01-specialist",
+        "F01-prerequisite",
+        "F01-readiness",
+        "F01-decision",
+        "F01-publication",
+        "F03-spine",
+        "F03-studio",
+        "F03-product",
+        "F03-lab",
+        "F03-print"
+      ],
+      "mapped_requirement_refs": [
+        "CTT-REQ-007",
+        "CTT-REQ-008",
+        "CTT-REQ-009",
+        "CTT-REQ-010"
+      ],
+      "verification": "inherited; link-check receipt is separate"
+    },
+    {
+      "reference_id": "REFSRC-c507f2d5fad0",
+      "title": "SEC — Off-channel communications enforcement, 2023-91",
+      "type": "industry_benchmark",
+      "official_source_url": "https://www.sec.gov/newsroom/press-releases/2023-91",
+      "source_version": null,
+      "context": {
+        "region": "2023-05-11；美国受监管 broker-dealers",
+        "segment": "2023-05-11；美国受监管 broker-dealers"
+      },
+      "source_status": "已读取官方执法发布",
+      "source_aliases": [
+        "REFSRC-c507f2d5fad0"
+      ],
+      "observations": [
+        {
+          "observation_id": "SRC-017:R23",
+          "source_ref": "REFSRC-c507f2d5fad0",
+          "supported_statement": "案件涉及业务电子通讯未被保存或监督，包括个人设备上的 WhatsApp 等非正式渠道。",
+          "supported_statement_en": "The 2023 SEC release concerns retention and supervision of business electronic communications by US broker-dealers; it is not a global WhatsApp ban.",
+          "locator": {
+            "source_document": "SRC-017",
+            "section": "R23"
+          },
+          "verification_status": "已读取官方执法发布",
+          "verified_at": null,
+          "verification_origin": "inherited_research",
+          "verification_evidence_ref": "SRC-017#R23",
+          "why_it_matters": "A bounded pattern for SCN-GAP, SCN-VALIDATE",
+          "adopt": "借鉴：批准、留存与监督比渠道品牌更重要。不是全球 WhatsApp 禁令，也不是澳大利亚法律结论。",
+          "adapt": "Project-specific objects, permissions and tests; bank applicability remains to be validated.",
+          "avoid": "借鉴：批准、留存与监督比渠道品牌更重要。不是全球 WhatsApp 禁令，也不是澳大利亚法律结论。"
+        }
+      ],
+      "mapped_scene_refs": [
+        "SCN-GAP",
+        "SCN-VALIDATE"
+      ],
+      "mapped_diagram_node_refs": [],
+      "mapped_requirement_refs": [
+        "CTT-REQ-003",
+        "CTT-REQ-004",
+        "CTT-REQ-010"
+      ],
+      "verification": "inherited; link-check receipt is separate"
+    },
+    {
+      "reference_id": "REFSRC-8bde3fcd6188",
+      "title": "NIST SP 800-63B-4 — Authentication and authenticator management",
+      "type": "design_interpretation",
+      "official_source_url": "https://pages.nist.gov/800-63-4/sp800-63b/authenticators/",
+      "source_version": null,
+      "context": {
+        "region": "美国数字身份技术指南；按该标准适用范围理解",
+        "segment": "美国数字身份技术指南；按该标准适用范围理解"
+      },
+      "source_status": "已读取官方技术文档",
+      "source_aliases": [
+        "REFSRC-8bde3fcd6188"
+      ],
+      "observations": [
+        {
+          "observation_id": "SRC-017:R24",
+          "source_ref": "REFSRC-8bde3fcd6188",
+          "supported_statement": "区分邮箱确认与认证；其 out-of-band authentication 规则不接受电子邮件作为该认证方式。",
+          "supported_statement_en": "NIST distinguishes email confirmation from authentication; its out-of-band method does not accept email. A link and OTP to the same mailbox do not automatically constitute MFA.",
+          "locator": {
+            "source_document": "SRC-017",
+            "section": "R24"
+          },
+          "verification_status": "已读取官方技术文档",
+          "verified_at": null,
+          "verification_origin": "inherited_research",
+          "verification_evidence_ref": "SRC-017#R24",
+          "why_it_matters": "A bounded pattern for SCN-GAP, SCN-VALIDATE",
+          "adopt": "提醒：同一邮箱的链接和 OTP 不自动构成多因素。不能仅据公开页面否定某银行完整安全方案，也不是澳洲统一强制 UI。",
+          "adapt": "Project-specific objects, permissions and tests; bank applicability remains to be validated.",
+          "avoid": "提醒：同一邮箱的链接和 OTP 不自动构成多因素。不能仅据公开页面否定某银行完整安全方案，也不是澳洲统一强制 UI。"
+        }
+      ],
+      "mapped_scene_refs": [
+        "SCN-GAP",
+        "SCN-VALIDATE"
+      ],
+      "mapped_diagram_node_refs": [],
+      "mapped_requirement_refs": [
+        "CTT-REQ-003",
+        "CTT-REQ-004",
+        "CTT-REQ-010"
+      ],
+      "verification": "inherited; link-check receipt is separate"
+    },
+    {
+      "reference_id": "REFSRC-653e4d1a3bb2",
+      "title": "OWASP — File Upload Cheat Sheet",
+      "type": "design_interpretation",
+      "official_source_url": "https://cheatsheetseries.owasp.org/cheatsheets/File_Upload_Cheat_Sheet.html",
+      "source_version": null,
+      "context": {
+        "region": "应用安全实现指导",
+        "segment": "应用安全实现指导"
+      },
+      "source_status": "已读取官方技术资料",
+      "source_aliases": [
+        "REFSRC-653e4d1a3bb2"
+      ],
+      "observations": [
+        {
+          "observation_id": "SRC-017:R25",
+          "source_ref": "REFSRC-653e4d1a3bb2",
+          "supported_statement": "上传处理涉及文件验证、权限、存储和恶意内容控制。",
+          "supported_statement_en": "Upload security guidance informs intake separation; receipt is not evidence sufficiency.",
+          "locator": {
+            "source_document": "SRC-017",
+            "section": "R25"
+          },
+          "verification_status": "已读取官方技术资料",
+          "verified_at": null,
+          "verification_origin": "inherited_research",
+          "verification_evidence_ref": "SRC-017#R25",
+          "why_it_matters": "A bounded pattern for SCN-GAP, SCN-VALIDATE",
+          "adopt": "借鉴：收到文件、安全检查、业务充分性分别记录。做出上传按钮不等于安全措施已实现。",
+          "adapt": "Project-specific objects, permissions and tests; bank applicability remains to be validated.",
+          "avoid": "借鉴：收到文件、安全检查、业务充分性分别记录。做出上传按钮不等于安全措施已实现。"
+        }
+      ],
+      "mapped_scene_refs": [
+        "SCN-GAP",
+        "SCN-VALIDATE"
+      ],
+      "mapped_diagram_node_refs": [],
+      "mapped_requirement_refs": [
+        "CTT-REQ-003",
+        "CTT-REQ-004",
+        "CTT-REQ-010"
+      ],
+      "verification": "inherited; link-check receipt is separate"
+    },
+    {
+      "reference_id": "REFSRC-0c59d273e815",
+      "title": "AUSTRAC — Initial CDD for body corporate, partnership or unincorporated association",
+      "type": "industry_benchmark",
+      "official_source_url": "https://www.austrac.gov.au/industry-and-business/obligations-and-guidance/your-amlctf-program/customer-due-diligence/initial-customer-due-diligence/initial-customer-due-diligence-guides-customer-type/initial-cdd-body-corporate-partnership-or-unincorporated-association",
+      "source_version": null,
+      "context": {
+        "region": "澳大利亚；适用情况与过渡安排需专业判断",
+        "segment": "澳大利亚；适用情况与过渡安排需专业判断"
+      },
+      "source_status": "已读取官方 guidance",
+      "source_aliases": [
+        "REFSRC-0c59d273e815"
+      ],
+      "observations": [
+        {
+          "observation_id": "SRC-017:R26",
+          "source_ref": "REFSRC-0c59d273e815",
+          "supported_statement": "分别处理客户身份、代表者身份与权限、受益所有人及业务关系目的，并给出情境相关的信息/验证路径。",
+          "supported_statement_en": "AUSTRAC guidance distinguishes customer identity, representative identity and authority, beneficial owners and relationship purpose; specific obligations require contextual validation.",
+          "locator": {
+            "source_document": "SRC-017",
+            "section": "R26"
+          },
+          "verification_status": "已读取官方 guidance",
+          "verified_at": null,
+          "verification_origin": "inherited_research",
+          "verification_evidence_ref": "SRC-017#R26",
+          "why_it_matters": "A bounded pattern for SCN-GAP, SCN-VALIDATE",
+          "adopt": "支持 Entity、Representative、Authority 与用途证据分离。本文不据此确定所有法定必填字段、例外或有限贡献者权限。",
+          "adapt": "Project-specific objects, permissions and tests; bank applicability remains to be validated.",
+          "avoid": "支持 Entity、Representative、Authority 与用途证据分离。本文不据此确定所有法定必填字段、例外或有限贡献者权限。"
+        }
+      ],
+      "mapped_scene_refs": [
+        "SCN-GAP",
+        "SCN-VALIDATE",
+        "SCN-QA",
+        "SCN-READINESS",
+        "SCN-PUBLISH"
+      ],
+      "mapped_diagram_node_refs": [
+        "E01-check",
+        "E01-gap",
+        "E01-remediate",
+        "E01-rereview",
+        "E01-signoff",
+        "E02-scope",
+        "E02-prerequisites",
+        "E02-evaluate",
+        "E02-ready",
+        "E02-notready",
+        "E03-ready",
+        "E03-confirm",
+        "E03-decision",
+        "E03-publish",
+        "E03-communicate",
+        "E03-failure",
+        "F01-authority",
+        "F01-decision",
+        "F01-publication"
+      ],
+      "mapped_requirement_refs": [
+        "CTT-REQ-003",
+        "CTT-REQ-004",
+        "CTT-REQ-007",
+        "CTT-REQ-008",
+        "CTT-REQ-009",
+        "CTT-REQ-010"
+      ],
+      "verification": "inherited; link-check receipt is separate"
+    },
+    {
+      "reference_id": "REFSRC-7e03129fa2bc",
+      "title": "AUSTRAC — Source of funds and source of wealth",
+      "type": "industry_benchmark",
+      "official_source_url": "https://www.austrac.gov.au/industry-and-business/obligations-and-guidance/your-amlctf-program/customer-due-diligence/source-funds-and-source-wealth",
+      "source_version": null,
+      "context": {
+        "region": "澳大利亚 CDD；与适用风险相关",
+        "segment": "澳大利亚 CDD；与适用风险相关"
+      },
+      "source_status": "已读取官方 guidance",
+      "source_aliases": [
+        "REFSRC-7e03129fa2bc"
+      ],
+      "observations": [
+        {
+          "observation_id": "SRC-017:R27",
+          "source_ref": "REFSRC-7e03129fa2bc",
+          "supported_statement": "资金来源和财富来源是相关但不同的尽调问题。",
+          "supported_statement_en": "Source-of-funds/wealth guidance is a distinct due-diligence topic, not a universal document requirement derived from empty fields.",
+          "locator": {
+            "source_document": "SRC-017",
+            "section": "R27"
+          },
+          "verification_status": "已读取官方 guidance",
+          "verified_at": null,
+          "verification_origin": "inherited_research",
+          "verification_evidence_ref": "SRC-017#R27",
+          "why_it_matters": "A bounded pattern for SCN-EDD",
+          "adopt": "借鉴：Requirement 的问题与用途应具体，不用更多上传文件数量代表控制充分。",
+          "adapt": "Project-specific objects, permissions and tests; bank applicability remains to be validated.",
+          "avoid": "借鉴：Requirement 的问题与用途应具体，不用更多上传文件数量代表控制充分。"
+        }
+      ],
+      "mapped_scene_refs": [
+        "SCN-EDD"
+      ],
+      "mapped_diagram_node_refs": [],
+      "mapped_requirement_refs": [
+        "CTT-REQ-005"
+      ],
+      "verification": "inherited; link-check receipt is separate"
+    },
+    {
+      "reference_id": "REFSRC-2c963446a9c8",
+      "title": "AUSTRAC — Enhanced customer due diligence",
+      "type": "industry_benchmark",
+      "official_source_url": "https://www.austrac.gov.au/industry-and-business/obligations-and-guidance/your-amlctf-program/customer-due-diligence/enhanced-customer-due-diligence",
+      "source_version": null,
+      "context": {
+        "region": "澳大利亚；适用强化尽调情境",
+        "segment": "澳大利亚；适用强化尽调情境"
+      },
+      "source_status": "已读取官方 guidance",
+      "source_aliases": [
+        "REFSRC-2c963446a9c8"
+      ],
+      "observations": [
+        {
+          "observation_id": "SRC-017:R28",
+          "source_ref": "REFSRC-2c963446a9c8",
+          "supported_statement": "说明相应情境中的强化尽调工作与风险考虑。",
+          "supported_statement_en": "Enhanced due diligence depends on defined circumstances and targeted measures, not every screening alert.",
+          "locator": {
+            "source_document": "SRC-017",
+            "section": "R28"
+          },
+          "verification_status": "已读取官方 guidance",
+          "verified_at": null,
+          "verification_origin": "inherited_research",
+          "verification_evidence_ref": "SRC-017#R28",
+          "why_it_matters": "A bounded pattern for SCN-EDD",
+          "adopt": "EDD 是有适用原因的分支，不为展示功能硬塞入每一案件；具体授权与规则仍待银行确认。",
+          "adapt": "Project-specific objects, permissions and tests; bank applicability remains to be validated.",
+          "avoid": "EDD 是有适用原因的分支，不为展示功能硬塞入每一案件；具体授权与规则仍待银行确认。"
+        },
+        {
+          "observation_id": "SRC-016:R-C03",
+          "source_ref": "REFSRC-2c963446a9c8",
+          "supported_statement": "guidance 讨论适用情境与针对性强化工作",
+          "supported_statement_en": "Guidance describes defined EDD circumstances and targeted enhanced work.",
+          "locator": {
+            "source_document": "SRC-016",
+            "section": "R-C03"
+          },
+          "verification_status": "Inherited limited research statement; Final performed no new website verification.",
+          "verified_at": null,
+          "verification_origin": "inherited_research",
+          "verification_evidence_ref": "SRC-016#R-C03",
+          "why_it_matters": "A bounded pattern for SCN-EDD",
+          "adopt": "理由/范围/措施明确。",
+          "adapt": "Project-specific objects, permissions and tests; bank applicability remains to be validated.",
+          "avoid": "每个alert都做EDD或EDD覆盖制裁限制"
+        }
+      ],
+      "mapped_scene_refs": [
+        "SCN-EDD",
+        "SCN-QA",
+        "SCN-READINESS",
+        "SCN-PUBLISH"
+      ],
+      "mapped_diagram_node_refs": [
+        "E01-check",
+        "E01-gap",
+        "E01-remediate",
+        "E01-rereview",
+        "E01-signoff",
+        "E02-scope",
+        "E02-prerequisites",
+        "E02-evaluate",
+        "E02-ready",
+        "E02-notready",
+        "E03-ready",
+        "E03-confirm",
+        "E03-decision",
+        "E03-publish",
+        "E03-communicate",
+        "E03-failure",
+        "E01",
+        "E02",
+        "E06",
+        "E08"
+      ],
+      "mapped_requirement_refs": [
+        "CTT-REQ-005",
+        "CTT-REQ-007",
+        "CTT-REQ-008",
+        "CTT-REQ-009",
+        "CTT-REQ-010"
+      ],
+      "verification": "inherited; link-check receipt is separate"
+    },
+    {
+      "reference_id": "REFSRC-930e9fabf23c",
+      "title": "Basel Committee — Guidelines for counterparty credit risk management",
+      "type": "industry_benchmark",
+      "official_source_url": "https://www.bis.org/publications/202412-guidelines-final-guidelines-counterparty-credit-risk-management",
+      "source_version": null,
+      "context": {
+        "region": "2024-12；Counterparty Credit Risk",
+        "segment": "2024-12；Counterparty Credit Risk"
+      },
+      "source_status": "已读取官方发布页；未将完整指南配置成规则",
+      "source_aliases": [
+        "REFSRC-930e9fabf23c"
+      ],
+      "observations": [
+        {
+          "observation_id": "SRC-017:R29",
+          "source_ref": "REFSRC-930e9fabf23c",
+          "supported_statement": "指导交易对手信用风险管理，包括尽调、风险缓释、额度和治理。",
+          "supported_statement_en": "Counterparty credit-risk guidance supports treating Credit separately from KYC; local implementation and bank adoption are not established.",
+          "locator": {
+            "source_document": "SRC-017",
+            "section": "R29"
+          },
+          "verification_status": "已读取官方发布页；未将完整指南配置成规则",
+          "verified_at": null,
+          "verification_origin": "inherited_research",
+          "verification_evidence_ref": "SRC-017#R29",
+          "why_it_matters": "A bounded pattern for SCN-CREDIT",
+          "adopt": "支持把 Credit 与 KYC 条件分开讨论；不是各国已完整实施或本银行已采纳的证明。",
+          "adapt": "Project-specific objects, permissions and tests; bank applicability remains to be validated.",
+          "avoid": "支持把 Credit 与 KYC 条件分开讨论；不是各国已完整实施或本银行已采纳的证明。"
+        }
+      ],
+      "mapped_scene_refs": [
+        "SCN-CREDIT",
+        "SCN-CONFLICTS",
+        "SCN-LEGAL"
+      ],
+      "mapped_diagram_node_refs": [
+        "D01-CREDIT",
+        "D01-LEGAL",
+        "D02-ASSESS",
+        "D02-DECISION",
+        "D02-CONDITION",
+        "D02-INPUT",
+        "D02-REVISION",
+        "D02-REVIEW",
+        "D02-APPROVAL",
+        "D02-EXECUTION"
+      ],
+      "mapped_requirement_refs": [
+        "CTT-REQ-006",
+        "CTT-REQ-008"
+      ],
+      "verification": "inherited; link-check receipt is separate"
+    },
+    {
+      "reference_id": "REFSRC-6dd2afd31911",
+      "title": "DFAT — Consolidated List",
+      "type": "industry_benchmark",
+      "official_source_url": "https://www.dfat.gov.au/international-relations/security/sanctions/consolidated-list",
+      "source_version": null,
+      "context": {
+        "region": "澳大利亚制裁名单信息；动态来源",
+        "segment": "澳大利亚制裁名单信息；动态来源"
+      },
+      "source_status": "已读取官方说明；未提取真实命中放入演示",
+      "source_aliases": [
+        "REFSRC-6dd2afd31911"
+      ],
+      "observations": [
+        {
+          "observation_id": "SRC-017:R30",
+          "source_ref": "REFSRC-6dd2afd31911",
+          "supported_statement": "提供澳大利亚相关名单与使用说明。",
+          "supported_statement_en": "The Australian consolidated-list page is a dynamic source reference, not every applicable list or synthetic identity evidence.",
+          "locator": {
+            "source_document": "SRC-017",
+            "section": "R30"
+          },
+          "verification_status": "已读取官方说明；未提取真实命中放入演示",
+          "verified_at": null,
+          "verification_origin": "inherited_research",
+          "verification_evidence_ref": "SRC-017#R30",
+          "why_it_matters": "A bounded pattern for SCN-POPULATION, SCN-MATCH",
+          "adopt": "筛查范围需要标来源与时点；不要从真实名单挑一人充当合成命中，也不要把该名单说成全球所有适用名单。",
+          "adapt": "Project-specific objects, permissions and tests; bank applicability remains to be validated.",
+          "avoid": "筛查范围需要标来源与时点；不要从真实名单挑一人充当合成命中，也不要把该名单说成全球所有适用名单。"
+        }
+      ],
+      "mapped_scene_refs": [
+        "SCN-POPULATION",
+        "SCN-MATCH"
+      ],
+      "mapped_diagram_node_refs": [],
+      "mapped_requirement_refs": [
+        "CTT-REQ-005"
+      ],
+      "verification": "inherited; link-check receipt is separate"
+    },
+    {
+      "reference_id": "REFSRC-2870f362d315",
+      "title": "Wolfsberg Group — Guidance on Sanctions Screening",
+      "type": "industry_benchmark",
+      "official_source_url": "https://db.wolfsberg-group.org/assets/4b6c2db6-696d-492e-bdd5-c51552708597/Wolfsberg%20Guidance%20on%20Sanctions%20Screening.pdf",
+      "source_version": "2019",
+      "context": {
+        "region": "2019；行业 guidance",
+        "segment": "2019；行业 guidance"
+      },
+      "source_status": "本 session 前轮已研究；本轮未重新打开 PDF",
+      "source_aliases": [
+        "REFSRC-2870f362d315"
+      ],
+      "observations": [
+        {
+          "observation_id": "SRC-017:R31",
+          "source_ref": "REFSRC-2870f362d315",
+          "supported_statement": "前轮研究支持：筛查 alert 需结合上下文评估，不能直接当作最终风险结论。",
+          "supported_statement_en": "Earlier research described contextual review of screening alerts. The 2019 PDF has not been reopened in this research round.",
+          "locator": {
+            "source_document": "SRC-017",
+            "section": "R31"
+          },
+          "verification_status": "本 session 前轮已研究；本轮未重新打开 PDF",
+          "verified_at": null,
+          "verification_origin": "inherited_research",
+          "verification_evidence_ref": "SRC-017#R31",
+          "why_it_matters": "A bounded pattern for SCN-POPULATION, SCN-MATCH",
+          "adopt": "作为 SCN-MATCH 参考；制作人需要重新打开 PDF 并核对引用位置，不预填页码或取图编号。",
+          "adapt": "Project-specific objects, permissions and tests; bank applicability remains to be validated.",
+          "avoid": "作为 SCN-MATCH 参考；制作人需要重新打开 PDF 并核对引用位置，不预填页码或取图编号。"
+        }
+      ],
+      "mapped_scene_refs": [
+        "SCN-POPULATION",
+        "SCN-MATCH"
+      ],
+      "mapped_diagram_node_refs": [],
+      "mapped_requirement_refs": [
+        "CTT-REQ-005"
+      ],
+      "verification": "inherited; link-check receipt is separate"
+    },
+    {
+      "reference_id": "REFSRC-9a64ff203519",
+      "title": "Apple — Meet Liquid Glass",
+      "type": "design_interpretation",
+      "official_source_url": "https://developer.apple.com/videos/play/wwdc2025/219/",
+      "source_version": null,
+      "context": {
+        "region": "WWDC25；Apple原生设计指导，HTML只作视觉借鉴。",
+        "segment": "WWDC25；Apple原生设计指导，HTML只作视觉借鉴。"
+      },
+      "source_status": "已读取官方视频文字与章节列表；未截视频帧。",
+      "source_aliases": [
+        "REFSRC-9a64ff203519"
+      ],
+      "observations": [
+        {
+          "observation_id": "SRC-017:R32",
+          "source_ref": "REFSRC-9a64ff203519",
+          "supported_statement": "将玻璃材质放在导航/控制层，并强调与内容层区分和可读性。",
+          "supported_statement_en": "Apple material guidance separates navigation/control from readable content; HTML blur is not native Liquid Glass optical refraction.",
+          "locator": {
+            "source_document": "SRC-017",
+            "section": "R32"
+          },
+          "verification_status": "已读取官方视频文字与章节列表；未截视频帧。",
+          "verified_at": null,
+          "verification_origin": "inherited_research",
+          "verification_evidence_ref": "SRC-017#R32",
+          "why_it_matters": "A bounded pattern for Studio interaction",
+          "adopt": "轻导航、实内容；不宣称网页实现了原生Apple材质，也不为装饰牺牲证据阅读。官网列出Principles章节10:31，这是官方章节入口而非本轮实截帧时间。",
+          "adapt": "Project-specific objects, permissions and tests; bank applicability remains to be validated.",
+          "avoid": "轻导航、实内容；不宣称网页实现了原生Apple材质，也不为装饰牺牲证据阅读。官网列出Principles章节10:31，这是官方章节入口而非本轮实截帧时间。"
+        }
+      ],
+      "mapped_scene_refs": [],
+      "mapped_diagram_node_refs": [],
+      "mapped_requirement_refs": [],
+      "verification": "inherited; link-check receipt is separate"
+    },
+    {
+      "reference_id": "REFSRC-ced9cf672600",
+      "title": "W3C — Modal Dialog Pattern",
+      "type": "design_interpretation",
+      "official_source_url": "https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/",
+      "source_version": null,
+      "context": {
+        "region": "Not specified in source record",
+        "segment": "Not specified"
+      },
+      "source_status": "已读取官方交互模式。",
+      "source_aliases": [
+        "REFSRC-ced9cf672600"
+      ],
+      "observations": [
+        {
+          "observation_id": "SRC-017:R33",
+          "source_ref": "REFSRC-ced9cf672600",
+          "supported_statement": "模态窗口需管理内部键盘焦点、关闭及合理焦点恢复。",
+          "supported_statement_en": "Modal guidance calls for keyboard focus management and restoration; our implementation must still be tested.",
+          "locator": {
+            "source_document": "SRC-017",
+            "section": "R33"
+          },
+          "verification_status": "已读取官方交互模式。",
+          "verified_at": null,
+          "verification_origin": "inherited_research",
+          "verification_evidence_ref": "SRC-017#R33",
+          "why_it_matters": "A bounded pattern for Studio interaction",
+          "adopt": "把返回同一场景做成可测试行为，不只是画一个Back图标。模式参考不证明我们的HTML已达可访问性要求。",
+          "adapt": "Project-specific objects, permissions and tests; bank applicability remains to be validated.",
+          "avoid": "把返回同一场景做成可测试行为，不只是画一个Back图标。模式参考不证明我们的HTML已达可访问性要求。"
+        }
+      ],
+      "mapped_scene_refs": [],
+      "mapped_diagram_node_refs": [],
+      "mapped_requirement_refs": [],
+      "verification": "inherited; link-check receipt is separate"
+    },
+    {
+      "reference_id": "REFSRC-a6041f5d6736",
+      "title": "W3C — Content on Hover or Focus",
+      "type": "design_interpretation",
+      "official_source_url": "https://www.w3.org/WAI/WCAG22/Understanding/content-on-hover-or-focus.html",
+      "source_version": null,
+      "context": {
+        "region": "Not specified in source record",
+        "segment": "Not specified"
+      },
+      "source_status": "已读取官方解释。",
+      "source_aliases": [
+        "REFSRC-a6041f5d6736"
+      ],
+      "observations": [
+        {
+          "observation_id": "SRC-017:R34",
+          "source_ref": "REFSRC-a6041f5d6736",
+          "supported_statement": "额外悬浮内容需满足适用的关闭、可悬停与持续显示要求。",
+          "supported_statement_en": "Hover/focus content must remain accessible and dismissible where applicable; critical blockers stay visible.",
+          "locator": {
+            "source_document": "SRC-017",
+            "section": "R34"
+          },
+          "verification_status": "已读取官方解释。",
+          "verified_at": null,
+          "verification_origin": "inherited_research",
+          "verification_evidence_ref": "SRC-017#R34",
+          "why_it_matters": "A bounded pattern for Studio interaction",
+          "adopt": "标题i可以解释定义，但同时支持focus/tap；关键错误与阻塞不能藏在这里。",
+          "adapt": "Project-specific objects, permissions and tests; bank applicability remains to be validated.",
+          "avoid": "标题i可以解释定义，但同时支持focus/tap；关键错误与阻塞不能藏在这里。"
+        }
+      ],
+      "mapped_scene_refs": [],
+      "mapped_diagram_node_refs": [],
+      "mapped_requirement_refs": [],
+      "verification": "inherited; link-check receipt is separate"
+    },
+    {
+      "reference_id": "REFSRC-1644eed6024a",
+      "title": "W3C — Dragging Movements",
+      "type": "design_interpretation",
+      "official_source_url": "https://www.w3.org/WAI/WCAG22/Understanding/dragging-movements.html",
+      "source_version": null,
+      "context": {
+        "region": "Not specified in source record",
+        "segment": "Not specified"
+      },
+      "source_status": "已读取官方解释。",
+      "source_aliases": [
+        "REFSRC-1644eed6024a"
+      ],
+      "observations": [
+        {
+          "observation_id": "SRC-017:R35",
+          "source_ref": "REFSRC-1644eed6024a",
+          "supported_statement": "拖动操作一般须有不要求拖动的单指针替代路径，特定例外另判。",
+          "supported_statement_en": "Dragging guidance supports non-drag alternatives such as stage and previous/next controls.",
+          "locator": {
+            "source_document": "SRC-017",
+            "section": "R35"
+          },
+          "verification_status": "已读取官方解释。",
+          "verified_at": null,
+          "verification_origin": "inherited_research",
+          "verification_evidence_ref": "SRC-017#R35",
+          "why_it_matters": "A bounded pattern for Studio interaction",
+          "adopt": "长Journey同时提供点击阶段、上一/下一、回选中场景，不只靠拖拉/缩放。",
+          "adapt": "Project-specific objects, permissions and tests; bank applicability remains to be validated.",
+          "avoid": "长Journey同时提供点击阶段、上一/下一、回选中场景，不只靠拖拉/缩放。"
+        }
+      ],
+      "mapped_scene_refs": [],
+      "mapped_diagram_node_refs": [],
+      "mapped_requirement_refs": [],
+      "verification": "inherited; link-check receipt is separate"
+    },
+    {
+      "reference_id": "REFSRC-72049fdc31f1",
+      "title": "Australian Government Style Manual — Spelling",
+      "type": "design_interpretation",
+      "official_source_url": "https://www.stylemanual.gov.au/grammar-punctuation-and-conventions/spelling",
+      "source_version": null,
+      "context": {
+        "region": "Not specified in source record",
+        "segment": "Not specified"
+      },
+      "source_status": "已读取官方写作说明。",
+      "source_aliases": [
+        "REFSRC-72049fdc31f1"
+      ],
+      "observations": [
+        {
+          "observation_id": "SRC-017:R36",
+          "source_ref": "REFSRC-72049fdc31f1",
+          "supported_statement": "推荐一致的Australian English拼写依据。",
+          "supported_statement_en": "Australian spelling guidance supports consistent language; locale switching cannot change business policy or jurisdiction.",
+          "locator": {
+            "source_document": "SRC-017",
+            "section": "R36"
+          },
+          "verification_status": "已读取官方写作说明。",
+          "verified_at": null,
+          "verification_origin": "inherited_research",
+          "verification_evidence_ref": "SRC-017#R36",
+          "why_it_matters": "A bounded pattern for Studio interaction",
+          "adopt": "内部可用zh-CN/en-AU/en-US；切语言不能修改案件主体、业务地区或policy。不要把澳大利亚语言标签写成英国业务规则。",
+          "adapt": "Project-specific objects, permissions and tests; bank applicability remains to be validated.",
+          "avoid": "内部可用zh-CN/en-AU/en-US；切语言不能修改案件主体、业务地区或policy。不要把澳大利亚语言标签写成英国业务规则。"
+        }
+      ],
+      "mapped_scene_refs": [],
+      "mapped_diagram_node_refs": [],
+      "mapped_requirement_refs": [],
+      "verification": "inherited; link-check receipt is separate"
+    },
+    {
+      "reference_id": "REFSRC-f6ba73964d9b",
+      "title": "Wolfsberg — Sanctions Screening Guidance",
+      "type": "industry_benchmark",
+      "official_source_url": "https://wolfsberg-group.org/resources/legacy/53",
+      "source_version": null,
+      "context": {
+        "region": "Not specified in source record",
+        "segment": "Not specified"
+      },
+      "source_status": "Inherited limited research statement; Final performed no new website verification.",
+      "source_aliases": [
+        "REFSRC-f6ba73964d9b"
+      ],
+      "observations": [
+        {
+          "observation_id": "SRC-016:R-C01",
+          "source_ref": "REFSRC-f6ba73964d9b",
+          "supported_statement": "筛查提示需要相关信息和上下文，复核理由需保留；行业 guidance，不是本行配置",
+          "supported_statement_en": "Screening alerts need context, relevant information and retained review rationale; guidance is not bank configuration.",
+          "locator": {
+            "source_document": "SRC-016",
+            "section": "R-C01"
+          },
+          "verification_status": "Inherited limited research statement; Final performed no new website verification.",
+          "verified_at": null,
+          "verification_origin": "inherited_research",
+          "verification_evidence_ref": "SRC-016#R-C01",
+          "why_it_matters": "A bounded pattern for SCN-POPULATION, SCN-MATCH",
+          "adopt": "以证据和问题组织工作。",
+          "adapt": "Project-specific objects, permissions and tests; bank applicability remains to be validated.",
+          "avoid": "把供应商分数或单字段差异当批准"
+        }
+      ],
+      "mapped_scene_refs": [
+        "SCN-POPULATION",
+        "SCN-MATCH"
+      ],
+      "mapped_diagram_node_refs": [
+        "P06",
+        "M01",
+        "M03",
+        "M07"
+      ],
+      "mapped_requirement_refs": [
+        "CTT-REQ-005"
+      ],
+      "verification": "inherited; link-check receipt is separate"
+    },
+    {
+      "reference_id": "REFSRC-5572948bb336",
+      "title": "DFAT — Guide to Australia's Consolidated List",
+      "type": "industry_benchmark",
+      "official_source_url": "https://www.dfat.gov.au/international-relations/security/sanctions/consolidated-list/guide-australias-consolidated-list",
+      "source_version": null,
+      "context": {
+        "region": "Not specified in source record",
+        "segment": "Not specified"
+      },
+      "source_status": "Inherited limited research statement; Final performed no new website verification.",
+      "source_aliases": [
+        "REFSRC-5572948bb336"
+      ],
+      "observations": [
+        {
+          "observation_id": "SRC-016:R-C02",
+          "source_ref": "REFSRC-5572948bb336",
+          "supported_statement": "记录有不同名称/别名、身份属性、精度和未知；不是所有记录都有完整字段",
+          "supported_statement_en": "List records may contain aliases, multiple identity attributes, varying precision and unknowns.",
+          "locator": {
+            "source_document": "SRC-016",
+            "section": "R-C02"
+          },
+          "verification_status": "Inherited limited research statement; Final performed no new website verification.",
+          "verified_at": null,
+          "verification_origin": "inherited_research",
+          "verification_evidence_ref": "SRC-016#R-C02",
+          "why_it_matters": "A bounded pattern for SCN-POPULATION, SCN-MATCH",
+          "adopt": "typed claims、source/precision。",
+          "adapt": "Project-specific objects, permissions and tests; bank applicability remains to be validated.",
+          "avoid": "这份名单等于所有适用名单或每字段都是客户必填"
+        }
+      ],
+      "mapped_scene_refs": [
+        "SCN-POPULATION",
+        "SCN-MATCH"
+      ],
+      "mapped_diagram_node_refs": [
+        "P02",
+        "M03"
+      ],
+      "mapped_requirement_refs": [
+        "CTT-REQ-005"
+      ],
+      "verification": "inherited; link-check receipt is separate"
+    },
+    {
+      "reference_id": "REFSRC-40253f160832",
+      "title": "AUSTRAC — Politically exposed persons",
+      "type": "industry_benchmark",
+      "official_source_url": "https://www.austrac.gov.au/industry-and-business/obligations-and-guidance/your-amlctf-program/customer-due-diligence/politically-exposed-persons-pep",
+      "source_version": null,
+      "context": {
+        "region": "Not specified in source record",
+        "segment": "Not specified"
+      },
+      "source_status": "Inherited limited research statement; Final performed no new website verification.",
+      "source_aliases": [
+        "REFSRC-40253f160832"
+      ],
+      "observations": [
+        {
+          "observation_id": "SRC-016:R-C04",
+          "source_ref": "REFSRC-40253f160832",
+          "supported_statement": "PEP 类别应与 sanctions/adverse media 区分，不以身份本身推导违法",
+          "supported_statement_en": "PEP status is distinct from sanctions or adverse media and does not itself imply unlawful activity.",
+          "locator": {
+            "source_document": "SRC-016",
+            "section": "R-C04"
+          },
+          "verification_status": "Inherited limited research statement; Final performed no new website verification.",
+          "verified_at": null,
+          "verification_origin": "inherited_research",
+          "verification_evidence_ref": "SRC-016#R-C04",
+          "why_it_matters": "A bounded pattern for SCN-POPULATION, SCN-EDD",
+          "adopt": "分类与处理依据分开。",
+          "adapt": "Project-specific objects, permissions and tests; bank applicability remains to be validated.",
+          "avoid": "把 Person T 写成PEP或默认高风险"
+        }
+      ],
+      "mapped_scene_refs": [
+        "SCN-POPULATION",
+        "SCN-EDD"
+      ],
+      "mapped_diagram_node_refs": [
+        "P02",
+        "E01"
+      ],
+      "mapped_requirement_refs": [
+        "CTT-REQ-005"
+      ],
+      "verification": "inherited; link-check receipt is separate"
+    },
+    {
+      "reference_id": "REFSRC-251cbc0d0dec",
+      "title": "HL7 FHIR R5 — Provenance",
+      "type": "cross_industry_benchmark",
+      "official_source_url": "https://hl7.org/fhir/R5/provenance.html",
+      "source_version": "R5",
+      "context": {
+        "region": "Not specified in source record",
+        "segment": "Not specified"
+      },
+      "source_status": "Inherited limited research statement; Final performed no new website verification.",
+      "source_aliases": [
+        "REFSRC-251cbc0d0dec"
+      ],
+      "observations": [
+        {
+          "observation_id": "SRC-016:R-C05",
+          "source_ref": "REFSRC-251cbc0d0dec",
+          "supported_statement": "指定 R5 版本中描述 target/activity/agent/source 的追溯模式",
+          "supported_statement_en": "FHIR R5 Provenance relates a target to an activity, agent and source entities.",
+          "locator": {
+            "source_document": "SRC-016",
+            "section": "R-C05"
+          },
+          "verification_status": "Inherited limited research statement; Final performed no new website verification.",
+          "verified_at": null,
+          "verification_origin": "inherited_research",
+          "verification_evidence_ref": "SRC-016#R-C05",
+          "why_it_matters": "A bounded pattern for SCN-MATCH, SCN-EDD",
+          "adopt": "记录谁基于哪些版本做了什么。",
+          "adapt": "Project-specific objects, permissions and tests; bank applicability remains to be validated.",
+          "avoid": "宣称实现医疗标准或以其为银行法规"
+        }
+      ],
+      "mapped_scene_refs": [
+        "SCN-MATCH",
+        "SCN-EDD"
+      ],
+      "mapped_diagram_node_refs": [
+        "M09",
+        "M11",
+        "E10"
+      ],
+      "mapped_requirement_refs": [
+        "CTT-REQ-005"
+      ],
+      "verification": "inherited; link-check receipt is separate"
+    },
+    {
+      "reference_id": "SRC-016:INT-C01",
+      "title": "Population and coverage are separate",
+      "type": "design_interpretation",
+      "official_source_url": null,
+      "source_version": "Final 1.0",
+      "context": {
+        "region": "Approved synthetic demo design; bank applicability not established",
+        "segment": null
+      },
+      "source_status": "Approved design interpretation, not external source verification",
+      "source_aliases": [
+        "SRC-016:INT-C01"
+      ],
+      "observations": [
+        {
+          "observation_id": "SRC-016:INT-C01",
+          "supported_statement": "已知子集可以准备，全体群体仍可能不完整；空集、失败或过时覆盖不能通过。",
+          "supported_statement_en": "Known subsets may be prepared while the full inventory remains incomplete. Empty, failed or stale coverage cannot pass.",
+          "verification_status": "Approved design interpretation, not external source verification",
+          "verification_origin": "approved_design",
+          "verified_at": null,
+          "why_it_matters": "Known subsets may be prepared while the full inventory remains incomplete. Empty, failed or stale coverage cannot pass.",
+          "adopt": "Known subsets may be prepared while the full inventory remains incomplete. Empty, failed or stale coverage cannot pass.",
+          "adapt": "Use existing A/B objects and action-time guards.",
+          "avoid": "Do not present this design as bank-confirmed policy."
+        }
+      ],
+      "mapped_scene_refs": [
+        "SCN-POPULATION"
+      ],
+      "mapped_diagram_node_refs": [
+        "P03",
+        "P05",
+        "P07",
+        "P08",
+        "P09",
+        "P10",
+        "P11"
+      ],
+      "mapped_requirement_refs": [
+        "CTT-REQ-005"
+      ],
+      "verification": "inherited; link-check receipt is separate"
+    },
+    {
+      "reference_id": "SRC-016:INT-C02",
+      "title": "Human authority, evidence use and versions",
+      "type": "design_interpretation",
+      "official_source_url": null,
+      "source_version": "Final 1.0",
+      "context": {
+        "region": "Approved synthetic demo design; bank applicability not established",
+        "segment": null
+      },
+      "source_status": "Approved design interpretation, not external source verification",
+      "source_aliases": [
+        "SRC-016:INT-C02"
+      ],
+      "observations": [
+        {
+          "observation_id": "SRC-016:INT-C02",
+          "supported_statement": "准备、补件、移交与处置是不同动作。未知证据或权限不构成处置授权。",
+          "supported_statement_en": "Prepare, request, refer and decide are different actions. Unknown evidence or permission does not authorise a disposition.",
+          "verification_status": "Approved design interpretation, not external source verification",
+          "verification_origin": "approved_design",
+          "verified_at": null,
+          "why_it_matters": "Prepare, request, refer and decide are different actions. Unknown evidence or permission does not authorise a disposition.",
+          "adopt": "Prepare, request, refer and decide are different actions. Unknown evidence or permission does not authorise a disposition.",
+          "adapt": "Use existing A/B objects and action-time guards.",
+          "avoid": "Do not present this design as bank-confirmed policy."
+        }
+      ],
+      "mapped_scene_refs": [
+        "SCN-MATCH"
+      ],
+      "mapped_diagram_node_refs": [
+        "M02",
+        "M04",
+        "M06",
+        "M08",
+        "M10"
+      ],
+      "mapped_requirement_refs": [
+        "CTT-REQ-005"
+      ],
+      "verification": "inherited; link-check receipt is separate"
+    },
+    {
+      "reference_id": "SRC-016:INT-C03",
+      "title": "EDD has three applicability outcomes",
+      "type": "design_interpretation",
+      "official_source_url": null,
+      "source_version": "Final 1.0",
+      "context": {
+        "region": "Approved synthetic demo design; bank applicability not established",
+        "segment": null
+      },
+      "source_status": "Approved design interpretation, not external source verification",
+      "source_aliases": [
+        "SRC-016:INT-C03"
+      ],
+      "observations": [
+        {
+          "observation_id": "SRC-016:INT-C03",
+          "supported_statement": "适用、不适用与未知分别按范围处理，未知不能被跳过。",
+          "supported_statement_en": "Required, not required and unknown need separate scope-aware handling. Unknown cannot be skipped.",
+          "verification_status": "Approved design interpretation, not external source verification",
+          "verification_origin": "approved_design",
+          "verified_at": null,
+          "why_it_matters": "Required, not required and unknown need separate scope-aware handling. Unknown cannot be skipped.",
+          "adopt": "Required, not required and unknown need separate scope-aware handling. Unknown cannot be skipped.",
+          "adapt": "Use existing A/B objects and action-time guards.",
+          "avoid": "Do not present this design as bank-confirmed policy."
+        }
+      ],
+      "mapped_scene_refs": [
+        "SCN-EDD"
+      ],
+      "mapped_diagram_node_refs": [
+        "E02",
+        "E03",
+        "E04",
+        "E07",
+        "E09"
+      ],
+      "mapped_requirement_refs": [
+        "CTT-REQ-005"
+      ],
+      "verification": "inherited; link-check receipt is separate"
+    },
+    {
+      "reference_id": "SRC-016:INT-C04",
+      "title": "Evidence-use changes affect linked work",
+      "type": "design_interpretation",
+      "official_source_url": null,
+      "source_version": "Final 1.0",
+      "context": {
+        "region": "Approved synthetic demo design; bank applicability not established",
+        "segment": null
+      },
+      "source_status": "Approved design interpretation, not external source verification",
+      "source_aliases": [
+        "SRC-016:INT-C04"
+      ],
+      "observations": [
+        {
+          "observation_id": "SRC-016:INT-C04",
+          "supported_statement": "保留历史输入与决定，重评当前关联依赖，不允许 Lab 直接回写。",
+          "supported_statement_en": "Retain historical inputs and decisions; re-evaluate affected current dependencies without a direct Lab write-back.",
+          "verification_status": "Approved design interpretation, not external source verification",
+          "verification_origin": "approved_design",
+          "verified_at": null,
+          "why_it_matters": "Retain historical inputs and decisions; re-evaluate affected current dependencies without a direct Lab write-back.",
+          "adopt": "Retain historical inputs and decisions; re-evaluate affected current dependencies without a direct Lab write-back.",
+          "adapt": "Use existing A/B objects and action-time guards.",
+          "avoid": "Do not present this design as bank-confirmed policy."
+        }
+      ],
+      "mapped_scene_refs": [
+        "SCN-MATCH",
+        "SCN-READINESS"
+      ],
+      "mapped_diagram_node_refs": [
+        "M11"
+      ],
+      "mapped_requirement_refs": [
+        "CTT-REQ-005",
+        "CTT-REQ-007",
+        "CTT-REQ-009",
+        "CTT-REQ-010"
+      ],
+      "verification": "inherited; link-check receipt is separate"
+    },
+    {
+      "reference_id": "SRC-007",
+      "title": "Process context: screening and parallel specialist work",
+      "type": "client_source",
+      "official_source_url": null,
+      "source_version": "Original source version not specified; supplied filename differs from the cited (1) name",
+      "context": {
+        "region": "Approved synthetic workshop summary; internal original excluded",
+        "segment": null
+      },
+      "source_status": "Original process source mapped at high level only; no exact node/page locator or byte-identity claim.",
+      "source_aliases": [
+        "SRC-007"
+      ],
+      "observations": [
+        {
+          "observation_id": "SRC-016:S-C01",
+          "supported_statement": "源流程包含 M1→M7、Credit C2 和 Legal C1 并行工作；D 图节点为已批准演示推导，不是银行规则逐字重现。",
+          "supported_statement_en": "The source process includes M1→M7, Credit C2 and Legal C1 parallel work. Batch D graph nodes are approved demo interpretations, not verbatim bank rules.",
+          "verification_status": "Original process source mapped at high level only; no exact node/page locator or byte-identity claim.",
+          "verification_origin": "approved_final_summary_only",
+          "verified_at": null,
+          "why_it_matters": "本组已批准设计保留筛查复核与 EDD 的独立工作；图节点是项目推导，不是银行流程逐字重现。",
+          "adopt": "The approved Batch C design retains screening review and EDD as distinct work. Graph nodes are project interpretations, not verbatim bank process steps.",
+          "adapt": "Apply only to the approved local synthetic scope and preserve source status.",
+          "avoid": "Do not infer bank policy, source verification or access to the internal original."
+        }
+      ],
+      "mapped_scene_refs": [
+        "SCN-POPULATION",
+        "SCN-MATCH",
+        "SCN-EDD",
+        "SCN-CONFLICTS",
+        "SCN-CREDIT",
+        "SCN-LEGAL"
+      ],
+      "mapped_diagram_node_refs": [
+        "P01",
+        "P02",
+        "P03",
+        "P04",
+        "P07",
+        "P08",
+        "P11",
+        "M01",
+        "M04",
+        "M06",
+        "M09",
+        "M10",
+        "E01",
+        "E05",
+        "E06",
+        "E08",
+        "E09",
+        "E10",
+        "D01-SCOPE",
+        "D01-CONFLICTS",
+        "D01-CREDIT",
+        "D01-LEGAL",
+        "D01-KYC",
+        "D01-READY",
+        "D02-ASSESS",
+        "D02-DECISION",
+        "D02-CONDITION",
+        "D02-INPUT",
+        "D02-REVISION",
+        "D02-REVIEW",
+        "D02-APPROVAL",
+        "D02-EXECUTION"
+      ],
+      "mapped_requirement_refs": [
+        "CTT-REQ-005",
+        "CTT-REQ-006",
+        "CTT-REQ-008"
+      ],
+      "verification": "inherited; link-check receipt is separate"
+    },
+    {
+      "reference_id": "SRC-015",
+      "title": "Approved Batch B collaboration boundary",
+      "type": "client_source",
+      "official_source_url": null,
+      "source_version": "Approved Addendum 1.0",
+      "context": {
+        "region": "Approved synthetic workshop summary; internal original excluded",
+        "segment": null
+      },
+      "source_status": "Source read; approved demo contract, not bank policy verification.",
+      "source_aliases": [
+        "SRC-015"
+      ],
+      "observations": [
+        {
+          "observation_id": "SRC-016:S-C03",
+          "supported_statement": "身份补件复用既有请求、接收人、授权、提交与证据用途合同；原协调和所有权事项保留各自状态。",
+          "supported_statement_en": "Identity collection reuses the existing request, recipient, grant, submission and evidence-use contracts. Existing coordination and ownership items must retain their own states.",
+          "verification_status": "Source read; approved demo contract, not bank policy verification.",
+          "verification_origin": "approved_final_summary_only",
+          "verified_at": null,
+          "why_it_matters": "身份补件复用既有请求、接收人、授权、提交与证据用途合同；原协调和所有权事项保留各自状态。",
+          "adopt": "Identity collection reuses the existing request, recipient, grant, submission and evidence-use contracts. Existing coordination and ownership items must retain their own states.",
+          "adapt": "Apply only to the approved local synthetic scope and preserve source status.",
+          "avoid": "Do not infer bank policy, source verification or access to the internal original."
+        }
+      ],
+      "mapped_scene_refs": [
+        "SCN-POPULATION",
+        "SCN-MATCH",
+        "SCN-EDD"
+      ],
+      "mapped_diagram_node_refs": [
+        "P12",
+        "M05",
+        "E12"
+      ],
+      "mapped_requirement_refs": [
+        "CTT-REQ-005"
+      ],
+      "verification": "inherited; link-check receipt is separate"
+    },
+    {
+      "reference_id": "SRC-016:S-C06",
+      "title": "P0/P1 boundary — original source unavailable",
+      "type": "client_source",
+      "official_source_url": null,
+      "source_version": "Original P0/P1 version unavailable",
+      "context": {
+        "region": "Approved synthetic workshop summary; internal original excluded",
+        "segment": null
+      },
+      "source_status": "Original P0/P1 document not found; only the approved Final restatement is available. No independent source verification.",
+      "source_aliases": [
+        "SRC-016:S-C06"
+      ],
+      "observations": [
+        {
+          "observation_id": "SRC-016:S-C06",
+          "supported_statement": "Final 重述要求完整返回和真实准备状态：可见任务完成不关闭其他或未知条件。缺少原始文件仍是来源问题。",
+          "supported_statement_en": "The Final restatement requires full return paths and honest readiness: completing a visible task does not close unrelated or unknown conditions. The missing original remains a source question.",
+          "verification_status": "Original P0/P1 document not found; only the approved Final restatement is available. No independent source verification.",
+          "verification_origin": "approved_final_summary_only",
+          "verified_at": null,
+          "why_it_matters": "Final 重述要求完整返回和真实准备状态：可见任务完成不关闭其他或未知条件。缺少原始文件仍是来源问题。",
+          "adopt": "The Final restatement requires full return paths and honest readiness: completing a visible task does not close unrelated or unknown conditions. The missing original remains a source question.",
+          "adapt": "Apply only to the approved local synthetic scope and preserve source status.",
+          "avoid": "Do not infer bank policy, source verification or access to the internal original."
+        }
+      ],
+      "mapped_scene_refs": [
+        "SCN-MATCH",
+        "SCN-EDD"
+      ],
+      "mapped_diagram_node_refs": [
+        "M12",
+        "E04",
+        "E11"
+      ],
+      "mapped_requirement_refs": [
+        "CTT-REQ-005"
+      ],
+      "verification": "inherited; link-check receipt is separate"
+    },
+    {
+      "reference_id": "SRC-007",
+      "title": "Process context: M6 QA and M8 clearance",
+      "type": "client_source",
+      "official_source_url": null,
+      "source_version": "Original source version not specified; E Final v1.0 summary",
+      "context": {
+        "region": "Approved synthetic workshop summary; restricted original excluded",
+        "segment": null
+      },
+      "source_status": "Approved Final summary only; original byte identity and exact source locator not independently verified.",
+      "source_aliases": [
+        "SRC-007"
+      ],
+      "observations": [
+        {
+          "observation_id": "SRC-020:M6-M8",
+          "supported_statement": "已批准 E Final 保留 M6.1–M6.8 的要求、完整性、来源、充分性、筛查／EDD、缺口、重新复核与 QA 签核，以及 M8.1–M8.5 的前提核对、案件汇集、准入确认、时间戳和结果传达。图节点是合成设计推导，不是已验证的银行权限。",
+          "supported_statement_en": "The approved E Final retains M6.1–M6.8 requirements, completeness, sources, sufficiency, screening / EDD, gaps, re-review and QA sign-off, and M8.1–M8.5 prerequisite review, case finalisation, clearance confirmation, timestamp and permitted communication. Diagram nodes are synthetic design interpretations, not verified bank authority.",
+          "verification_status": "Approved Final summary only; original byte identity and exact source locator not independently verified.",
+          "verification_origin": "approved_final_summary_only",
+          "verified_at": null,
+          "why_it_matters": "具体补正、当前版本就绪与单独授权／发布分别记录。",
+          "adopt": "Preserve precise remediation and separate readiness, authority and publication.",
+          "adapt": "Apply only to the approved synthetic scope; bank responsibilities remain To Validate.",
+          "avoid": "Do not expose the restricted original or infer bank policy and production permissions."
+        }
+      ],
+      "mapped_scene_refs": [
+        "SCN-QA",
+        "SCN-READINESS",
+        "SCN-PUBLISH"
+      ],
+      "mapped_diagram_node_refs": [
+        "E01-check",
+        "E01-gap",
+        "E01-remediate",
+        "E01-rereview",
+        "E01-signoff",
+        "E02-scope",
+        "E02-prerequisites",
+        "E02-evaluate",
+        "E02-ready",
+        "E02-notready",
+        "E03-ready",
+        "E03-confirm",
+        "E03-decision",
+        "E03-publish",
+        "E03-communicate",
+        "E03-failure",
+        "F01-work",
+        "F01-prerequisite",
+        "F01-readiness",
+        "F01-decision",
+        "F01-publication",
+        "F02-reassess",
+        "F02-readiness"
+      ],
+      "mapped_requirement_refs": [
+        "CTT-REQ-007",
+        "CTT-REQ-008",
+        "CTT-REQ-009",
+        "CTT-REQ-010"
+      ],
+      "verification": "inherited; link-check receipt is separate"
+    }
+  ]
+}

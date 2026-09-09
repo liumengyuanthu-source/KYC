@@ -1,0 +1,174 @@
+{
+  "at": "2026-09-07T17:32:39.362Z",
+  "browser": "152.0.7977.76",
+  "command": "node prototype/qa/d5/regression/c-regression/mainline-browser.mjs",
+  "results": [
+    {
+      "ids": [
+        "RT-C27",
+        "RT-C33"
+      ],
+      "name": "C scene URL and static explanation do not create business records",
+      "steps": "Open Population deep link; inspect central scene and case",
+      "status": "passed",
+      "case_before": {
+        "revision": 1,
+        "sha256": "6ba945b1589e5874ae7742e6fca762e786c6b8db04a7a6d026cb1ce575ad1f05"
+      },
+      "case_after": {
+        "revision": 1,
+        "sha256": "6ba945b1589e5874ae7742e6fca762e786c6b8db04a7a6d026cb1ce575ad1f05"
+      },
+      "screenshot": "population.scene.en-AU.png"
+    },
+    {
+      "ids": [
+        "RT-C01",
+        "RT-C03",
+        "RT-C04",
+        "RT-C37",
+        "RT-C38",
+        "RT-C47",
+        "RT-C66"
+      ],
+      "name": "Explicit C fixture entry preserves B and gates preliminary versus comprehensive",
+      "steps": "Explicit archive/partial fixture; inspect population and disabled actions; compare P04 guard",
+      "status": "passed",
+      "case_before": {
+        "revision": 17,
+        "sha256": "4bc899e5c2fdd9e27d1ef2142278243bbfcdd017c5b3eefe3f7ab67ab623351b"
+      },
+      "case_after": {
+        "revision": 17,
+        "sha256": "4bc899e5c2fdd9e27d1ef2142278243bbfcdd017c5b3eefe3f7ab67ab623351b"
+      }
+    },
+    {
+      "ids": [
+        "RT-C07",
+        "RT-C08",
+        "RT-C09",
+        "RT-C34"
+      ],
+      "name": "Person T result retains uncertainty and scoped input identity",
+      "steps": "Prepare/query/receive explicit synthetic result; open Review",
+      "status": "passed",
+      "case_before": {
+        "revision": 20,
+        "sha256": "a02347eb68357c358d76ce42d9bb680c10436356ae3975d395b3bf95597fcdd3"
+      },
+      "case_after": {
+        "revision": 20,
+        "sha256": "a02347eb68357c358d76ce42d9bb680c10436356ae3975d395b3bf95597fcdd3"
+      },
+      "screenshot": "review.result.en-AU.png"
+    },
+    {
+      "ids": [],
+      "name": "Review draft is saved by a real synthetic action",
+      "steps": "Save review draft; inspect recorded draft and no disposition",
+      "status": "passed",
+      "case_before": {
+        "revision": 21,
+        "sha256": "f047a93a7b1cf9b2bf41b875b5da2b3e2975d876fef563fe35c91396826860b6"
+      },
+      "case_after": {
+        "revision": 21,
+        "sha256": "f047a93a7b1cf9b2bf41b875b5da2b3e2975d876fef563fe35c91396826860b6"
+      },
+      "screenshot": "review.saved.en-AU.png"
+    },
+    {
+      "ids": [
+        "RT-C12",
+        "RT-C67"
+      ],
+      "name": "New identity collection uses separate B contract without expanding old items/grants",
+      "steps": "Create gap then open its request; compare original B records",
+      "status": "passed",
+      "case_before": {
+        "revision": 22,
+        "sha256": "2b30d012c494b1503e8c03b7e9f61555d48342c55c67268c04193b7cbaa9c73d"
+      },
+      "case_after": {
+        "revision": 22,
+        "sha256": "2b30d012c494b1503e8c03b7e9f61555d48342c55c67268c04193b7cbaa9c73d"
+      }
+    },
+    {
+      "ids": [
+        "RT-C13",
+        "RT-C58"
+      ],
+      "name": "Identity client DOM contains only its granted task and no internal provider details",
+      "steps": "Authenticate synthetic Person T against newly scoped grant",
+      "status": "passed",
+      "case_before": {
+        "revision": 26,
+        "sha256": "dbc890dee4b45c62f85f42d3b12f445a6175486d01528aab90487e1f229e09f0"
+      },
+      "case_after": {
+        "revision": 26,
+        "sha256": "dbc890dee4b45c62f85f42d3b12f445a6175486d01528aab90487e1f229e09f0"
+      },
+      "screenshot": "identity.client.en-AU.png"
+    },
+    {
+      "ids": [
+        "RT-C10",
+        "RT-C11"
+      ],
+      "name": "Receipt allocates EV-ID-C01 but does not imply usable or sufficient identity",
+      "steps": "Client submits real synthetic response; inspect resulting artifact",
+      "status": "passed",
+      "case_before": {
+        "revision": 27,
+        "sha256": "842f4d508e28f546dff62b8a9ea56cc62294e4dae48c148e10c2287f7984573b"
+      },
+      "case_after": {
+        "revision": 27,
+        "sha256": "842f4d508e28f546dff62b8a9ea56cc62294e4dae48c148e10c2287f7984573b"
+      }
+    },
+    {
+      "ids": [
+        "RT-C10",
+        "RT-C11",
+        "RT-C36"
+      ],
+      "name": "Released identity use remains insufficient and whole case not ready",
+      "steps": "Release/link via B; assess identity insufficient through C",
+      "status": "passed",
+      "case_before": {
+        "revision": 30,
+        "sha256": "f098a8512ade6dfcbe31493b53b542d5d0c48a9984dd9d7325d3021052de677c"
+      },
+      "case_after": {
+        "revision": 30,
+        "sha256": "f098a8512ade6dfcbe31493b53b542d5d0c48a9984dd9d7325d3021052de677c"
+      },
+      "screenshot": "identity.assessed.en-AU.png"
+    },
+    {
+      "ids": [
+        "RT-C14",
+        "RT-C15",
+        "RT-C17",
+        "RT-C36",
+        "RT-C66",
+        "RT-C68"
+      ],
+      "name": "Double-click records one authorised unresolved decision and does not clear the case",
+      "steps": "Select configured synthetic Financial Crime actor; double-click Record unresolved",
+      "status": "failed",
+      "error": "Expected values to be strictly equal:\n\n2 !== 1\n"
+    },
+    {
+      "ids": [],
+      "name": "Mainline workflow completion",
+      "status": "failed",
+      "error": "Expected values to be strictly equal:\n\n2 !== 1\n"
+    }
+  ],
+  "errors": []
+}

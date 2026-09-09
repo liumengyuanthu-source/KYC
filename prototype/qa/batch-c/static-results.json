@@ -1,0 +1,112 @@
+{
+  "results": [
+    {
+      "scene": "SCN-POPULATION",
+      "locale": "en-AU",
+      "status": "passed",
+      "assertions": [
+        "24 Current/Target nodes",
+        "no script/player/business control",
+        "visible source footnotes",
+        "canonical SVG loaded"
+      ]
+    },
+    {
+      "scene": "SCN-POPULATION",
+      "locale": "en-US",
+      "status": "passed",
+      "assertions": [
+        "24 Current/Target nodes",
+        "no script/player/business control",
+        "visible source footnotes",
+        "canonical SVG loaded"
+      ]
+    },
+    {
+      "scene": "SCN-POPULATION",
+      "locale": "zh-CN",
+      "status": "passed",
+      "assertions": [
+        "24 Current/Target nodes",
+        "no script/player/business control",
+        "visible source footnotes",
+        "canonical SVG loaded"
+      ]
+    },
+    {
+      "scene": "SCN-MATCH",
+      "locale": "en-AU",
+      "status": "passed",
+      "assertions": [
+        "24 Current/Target nodes",
+        "no script/player/business control",
+        "visible source footnotes",
+        "canonical SVG loaded"
+      ]
+    },
+    {
+      "scene": "SCN-MATCH",
+      "locale": "en-US",
+      "status": "passed",
+      "assertions": [
+        "24 Current/Target nodes",
+        "no script/player/business control",
+        "visible source footnotes",
+        "canonical SVG loaded"
+      ]
+    },
+    {
+      "scene": "SCN-MATCH",
+      "locale": "zh-CN",
+      "status": "passed",
+      "assertions": [
+        "24 Current/Target nodes",
+        "no script/player/business control",
+        "visible source footnotes",
+        "canonical SVG loaded"
+      ]
+    },
+    {
+      "scene": "SCN-EDD",
+      "locale": "en-AU",
+      "status": "passed",
+      "assertions": [
+        "24 Current/Target nodes",
+        "no script/player/business control",
+        "visible source footnotes",
+        "canonical SVG loaded"
+      ]
+    },
+    {
+      "scene": "SCN-EDD",
+      "locale": "en-US",
+      "status": "passed",
+      "assertions": [
+        "24 Current/Target nodes",
+        "no script/player/business control",
+        "visible source footnotes",
+        "canonical SVG loaded"
+      ]
+    },
+    {
+      "scene": "SCN-EDD",
+      "locale": "zh-CN",
+      "status": "passed",
+      "assertions": [
+        "24 Current/Target nodes",
+        "no script/player/business control",
+        "visible source footnotes",
+        "canonical SVG loaded"
+      ]
+    },
+    {
+      "scene": "SCN-MATCH",
+      "locale": "en-AU",
+      "status": "passed",
+      "assertions": [
+        "SVG blocked and JavaScript disabled: full decision content remains"
+      ]
+    }
+  ],
+  "scope": "static fallback only; not interactive mainline proof"
+}

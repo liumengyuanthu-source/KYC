@@ -1,0 +1,74 @@
+[
+  {
+    "name": "current.en-AU",
+    "method": "Archify viewer Export → SVG",
+    "canonical": true,
+    "sourceSha256": "60bdb39b0c7bd205e446b42cd781c49949dfa011ebe5fed30eb1f65c3e8f0795",
+    "svgSha256": "22d78aba2cdbde91fa43271832353f7b62e073b64b7fc9ab6b1c829913b44f24",
+    "bytes": 60473
+  },
+  {
+    "name": "target.en-AU",
+    "method": "Archify viewer Export → SVG",
+    "canonical": true,
+    "sourceSha256": "34c258b3d4926663365d2715692dab86eafbcbca58f109b84cfe21730c9255eb",
+    "svgSha256": "59430b16206ab3185f249724e9c331775befea6da5e30e606511c04913b14d3c",
+    "bytes": 60472
+  },
+  {
+    "name": "screening.en-AU",
+    "method": "Archify viewer Export → SVG",
+    "canonical": true,
+    "sourceSha256": "7ddd44fcac3f5b5260bd5e8ffaab4bba736f90bbb79b89263cf83f09ee9c52fe",
+    "svgSha256": "72a507930147bfcf8375360e2bf30c1c0d4d7a6b63cfc878665bd4f0e78692ca",
+    "bytes": 48452
+  },
+  {
+    "name": "current.zh-CN",
+    "method": "Archify viewer Export → SVG",
+    "canonical": true,
+    "sourceSha256": "cafd085abebcc0139646ae7e94fa6e33df32fea622bf9948d73643a0aca6f7eb",
+    "svgSha256": "5ee34ca081ca12e4a2655b572a1cfef9397f8d7ae715228f1e8aa99d5d538065",
+    "bytes": 60275
+  },
+  {
+    "name": "target.zh-CN",
+    "method": "Archify viewer Export → SVG",
+    "canonical": true,
+    "sourceSha256": "9302c41126052ae6175b26633ae146a6f88a6dd5cc540316baddf3bf7ce67f0f",
+    "svgSha256": "fc034a3355108867e1ff769b8b9e9bf3ac38799c978a66a22352794bb337beeb",
+    "bytes": 60275
+  },
+  {
+    "name": "screening.zh-CN",
+    "method": "Archify viewer Export → SVG",
+    "canonical": true,
+    "sourceSha256": "c6d94954e6479c728d8ffc9037887695d9d0523597deae18afa7650b3fccc704",
+    "svgSha256": "dab653e4ba67f5456cd6aef3f33eceba649671b2b51840c02c6b6bc04500c260",
+    "bytes": 48278
+  },
+  {
+    "name": "current.en-US",
+    "method": "Archify viewer Export → SVG",
+    "canonical": true,
+    "sourceSha256": "8d5ac99f72d0cbad55354dd5a3a1b6257e35be1bc5a68a8189e8ae1d4df0e96b",
+    "svgSha256": "d8e83180ca548c1b9b5f4c6d763b3b7b5d87f50bccecaa2a33f3c9e92754734a",
+    "bytes": 60473
+  },
+  {
+    "name": "target.en-US",
+    "method": "Archify viewer Export → SVG",
+    "canonical": true,
+    "sourceSha256": "7f938874b7d4956dfba374da49415cd4d8db82fd102e779faae6bf55ca98337a",
+    "svgSha256": "d0992275132c9bc7a8f807378587cae62909fcbad48ba76dbeef78d40473193e",
+    "bytes": 60472
+  },
+  {
+    "name": "screening.en-US",
+    "method": "Archify viewer Export → SVG",
+    "canonical": true,
+    "sourceSha256": "f8a61bc0680f2817b3065872ba373a226468da4676108826a7b4728d6c581810",
+    "svgSha256": "59f0a4bfcbcdaac56c23d45fc5b149efd19d5a681887d56a94f212ecab931e16",
+    "bytes": 48452
+  }
+]

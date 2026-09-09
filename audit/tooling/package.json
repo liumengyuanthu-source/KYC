@@ -1,0 +1,10 @@
+{
+  "name": "clear-to-trade-local-experience-audit",
+  "private": true,
+  "type": "module",
+  "description": "Isolated audit-only dependencies; not part of the product runtime.",
+  "dependencies": {
+    "@axe-core/playwright": "4.13.0",
+    "@playwright/test": "1.63.0"
+  }
+}

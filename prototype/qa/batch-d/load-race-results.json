@@ -1,0 +1,22 @@
+{
+  "results": [
+    {
+      "ids": [
+        "RT-D14",
+        "RT-D15"
+      ],
+      "name": "delayed-double-start",
+      "status": "passed",
+      "fixtureRequests": 1
+    },
+    {
+      "ids": [
+        "RT-D14",
+        "RT-D15"
+      ],
+      "name": "failed-load-retry",
+      "status": "passed",
+      "fixtureRequests": 2
+    }
+  ]
+}

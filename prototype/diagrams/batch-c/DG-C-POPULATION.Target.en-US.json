@@ -1,0 +1,107 @@
+{
+  "schema_version": 2,
+  "diagram_type": "workflow",
+  "meta": {
+    "title": "Population and coverage · Target",
+    "locale": "en",
+    "quality_profile": "showcase",
+    "animation": "none"
+  },
+  "lanes": [
+    {
+      "id": "upper",
+      "label": "Independent assessment"
+    },
+    {
+      "id": "main",
+      "label": "Product preparation · rule checks · human decisions"
+    },
+    {
+      "id": "lower",
+      "label": "Unresolved, protection and return",
+      "variant": "exception"
+    }
+  ],
+  "mainPath": [
+    "context",
+    "preliminary",
+    "coverage"
+  ],
+  "nodes": [
+    {
+      "id": "context",
+      "col": 0,
+      "lane": "main",
+      "type": "security",
+      "label": "Scope and membership",
+      "width": 240
+    },
+    {
+      "id": "preliminary",
+      "col": 1,
+      "lane": "main",
+      "type": "security",
+      "label": "Known-subset query",
+      "width": 240
+    },
+    {
+      "id": "comprehensive",
+      "col": 1,
+      "lane": "upper",
+      "type": "security",
+      "label": "Full-plan assessment",
+      "width": 240
+    },
+    {
+      "id": "coverage",
+      "col": 2,
+      "lane": "main",
+      "type": "security",
+      "label": "Scoped coverage result",
+      "width": 240
+    },
+    {
+      "id": "waiting",
+      "col": 1,
+      "lane": "lower",
+      "type": "security",
+      "label": "Named gaps and waits",
+      "width": 240
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge0",
+      "from": "context",
+      "to": "preliminary",
+      "label": "Named inputs / permission"
+    },
+    {
+      "id": "edge1",
+      "from": "context",
+      "to": "comprehensive",
+      "label": "Independent completeness",
+      "role": "branch"
+    },
+    {
+      "id": "edge2",
+      "from": "context",
+      "to": "waiting",
+      "label": "Missing / unknown / held",
+      "role": "branch"
+    },
+    {
+      "id": "edge3",
+      "from": "preliminary",
+      "to": "coverage",
+      "label": "Reassess, not auto-clear"
+    },
+    {
+      "id": "edge4",
+      "from": "comprehensive",
+      "to": "coverage",
+      "label": "Confirmed plan / reuse",
+      "role": "branch"
+    }
+  ]
+}

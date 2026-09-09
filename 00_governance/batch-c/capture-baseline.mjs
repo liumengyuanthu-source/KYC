@@ -1,0 +1,12 @@
+import {readFileSync,writeFileSync,mkdirSync,existsSync,copyFileSync} from 'node:fs';
+import {createHash} from 'node:crypto';
+import {execFileSync} from 'node:child_process';
+const root=new URL('../../',import.meta.url),out=new URL('./baseline/',import.meta.url);
+mkdirSync(out,{recursive:true});
+const owned=['prototype/app.mjs','prototype/case-engine.mjs','prototype/batch-a-engine.mjs','prototype/collaboration-engine.mjs','prototype/collaboration-ui.mjs','prototype/content.mjs','prototype/navigation.mjs','prototype/index.html','prototype/media-host.mjs'];
+const hash=bytes=>createHash('sha256').update(bytes).digest('hex');
+const manifest=owned.map(path=>{const bytes=readFileSync(new URL(path,root));const dest=new URL(path,out);mkdirSync(new URL('./',dest),{recursive:true});if(!existsSync(dest))copyFileSync(new URL(path,root),dest);return {path,sha256:hash(readFileSync(dest))};});
+const sources=[['SRC-016','/Users/christinaliu/Downloads/Clear_to_Trade_D2_Batch_C_Screening_Review_and_EDD_Final_v1.0.md'],['SRC-017','/Users/christinaliu/Downloads/Clear_to_Trade_Session_Research_Kimi_PPT_Brief_v1.0.md'],['SRC-018','/Users/christinaliu/Downloads/Clear_to_Trade_Public_Product_Visual_Links_v1.0.md']].map(([source_id,path])=>({source_id,path,sha256:hash(readFileSync(path)),availability:'available',status:source_id==='SRC-016'?'approved_demo_design':'inherited_research_not_reverified',bank_policy_status:'not_confirmed'}));
+writeFileSync(new URL('manifest.json',out),JSON.stringify({at:new Date().toISOString(),git_head:execFileSync('git',['rev-parse','HEAD'],{cwd:root,encoding:'utf8'}).trim(),files:manifest},null,2)+'\n');
+writeFileSync(new URL('./source-manifest.json',import.meta.url),JSON.stringify({sources,read_scope:'C Final complete; IA v0.4 complete; B addendum complete; A and D2 relevant business/schema/dependency/return chapters; current A/B code and registry; research imported with its recorded verification scope'},null,2)+'\n');
+console.log(JSON.stringify({baseline:manifest.length,sources:sources.map(x=>x.source_id)}));

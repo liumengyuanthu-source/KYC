@@ -1,0 +1,18 @@
+{
+  "status": "additive_candidate_not_production_merged_schema",
+  "valid": true,
+  "snapshots": [
+    {
+      "snapshot": "D-entry",
+      "status": "additive_candidate_not_production_merged_schema",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "snapshot": "D-credit-changed",
+      "status": "additive_candidate_not_production_merged_schema",
+      "valid": true,
+      "errors": []
+    }
+  ]
+}

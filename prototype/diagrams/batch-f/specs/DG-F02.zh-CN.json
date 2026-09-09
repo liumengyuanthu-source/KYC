@@ -1,0 +1,259 @@
+{
+  "schema_version": 2,
+  "diagram_type": "workflow",
+  "meta": {
+    "title": "依赖与暂停影响",
+    "locale": "zh-CN",
+    "quality_profile": "showcase",
+    "animation": "none",
+    "legend": {
+      "mode": "auto",
+      "entries": {
+        "frontend": {
+          "label": "只读结构说明"
+        }
+      }
+    }
+  },
+  "lanes": [
+    {
+      "id": "identify",
+      "label": "识别当前影响"
+    },
+    {
+      "id": "scope",
+      "label": "暂停范围"
+    },
+    {
+      "id": "result",
+      "label": "影响"
+    },
+    {
+      "id": "review",
+      "label": "复核当前就绪状态"
+    }
+  ],
+  "mainPath": [
+    "F02-change",
+    "F02-dependency",
+    "F02-scope"
+  ],
+  "nodes": [
+    {
+      "id": "F02-change",
+      "lane": "identify",
+      "col": 0,
+      "width": 180,
+      "height": 100,
+      "type": "frontend",
+      "label": "变更 / 问题",
+      "sublabel": "有版本的输入"
+    },
+    {
+      "id": "F02-dependency",
+      "lane": "identify",
+      "col": 1,
+      "width": 180,
+      "height": 100,
+      "type": "frontend",
+      "label": "识别依赖",
+      "sublabel": "当前关系与依据"
+    },
+    {
+      "id": "F02-scope",
+      "lane": "identify",
+      "col": 2,
+      "width": 180,
+      "height": 100,
+      "type": "frontend",
+      "label": "判断范围",
+      "sublabel": "不推断独立"
+    },
+    {
+      "id": "F02-task",
+      "lane": "scope",
+      "col": 0,
+      "width": 180,
+      "height": 100,
+      "type": "frontend",
+      "label": "任务级",
+      "sublabel": "指定工作项"
+    },
+    {
+      "id": "F02-branch",
+      "lane": "scope",
+      "col": 1,
+      "width": 180,
+      "height": 100,
+      "type": "frontend",
+      "label": "分支级",
+      "sublabel": "指定分支"
+    },
+    {
+      "id": "F02-case",
+      "lane": "scope",
+      "col": 2,
+      "width": 180,
+      "height": 100,
+      "type": "frontend",
+      "label": "案件级",
+      "sublabel": "当前适用范围"
+    },
+    {
+      "id": "F02-unknown",
+      "lane": "scope",
+      "col": 3,
+      "width": 180,
+      "height": 100,
+      "type": "frontend",
+      "label": "未知",
+      "sublabel": "需要复核"
+    },
+    {
+      "id": "F02-affected",
+      "lane": "result",
+      "col": 0,
+      "width": 180,
+      "height": 100,
+      "type": "frontend",
+      "label": "受影响工作",
+      "sublabel": "已记录的依赖"
+    },
+    {
+      "id": "F02-unaffected",
+      "lane": "result",
+      "col": 1,
+      "width": 180,
+      "height": 100,
+      "type": "frontend",
+      "label": "可继续工作",
+      "sublabel": "明确的当前依据"
+    },
+    {
+      "id": "F02-unknowns",
+      "lane": "result",
+      "col": 2,
+      "width": 180,
+      "height": 100,
+      "type": "frontend",
+      "label": "未知依赖",
+      "sublabel": "不等于独立"
+    },
+    {
+      "id": "F02-reassess",
+      "lane": "review",
+      "col": 1,
+      "width": 180,
+      "height": 100,
+      "type": "frontend",
+      "label": "解决 / 重评",
+      "sublabel": "已复核当前输入"
+    },
+    {
+      "id": "F02-readiness",
+      "lane": "review",
+      "col": 2,
+      "width": 180,
+      "height": 100,
+      "type": "frontend",
+      "label": "重评就绪状态",
+      "sublabel": "按相关范围"
+    }
+  ],
+  "edges": [
+    {
+      "from": "F02-change",
+      "to": "F02-dependency"
+    },
+    {
+      "from": "F02-dependency",
+      "to": "F02-scope"
+    },
+    {
+      "from": "F02-scope",
+      "to": "F02-task",
+      "role": "branch"
+    },
+    {
+      "from": "F02-scope",
+      "to": "F02-branch",
+      "role": "branch"
+    },
+    {
+      "from": "F02-scope",
+      "to": "F02-case",
+      "role": "branch"
+    },
+    {
+      "from": "F02-scope",
+      "to": "F02-unknown",
+      "role": "branch"
+    },
+    {
+      "from": "F02-task",
+      "to": "F02-affected"
+    },
+    {
+      "from": "F02-branch",
+      "to": "F02-affected"
+    },
+    {
+      "from": "F02-case",
+      "to": "F02-affected",
+      "via": [
+        [
+          554,
+          374
+        ],
+        [
+          138,
+          374
+        ]
+      ]
+    },
+    {
+      "from": "F02-unknown",
+      "to": "F02-unknowns"
+    },
+    {
+      "from": "F02-dependency",
+      "to": "F02-unaffected",
+      "label": "可继续依据",
+      "role": "branch",
+      "via": [
+        [
+          346,
+          20
+        ],
+        [
+          900,
+          20
+        ],
+        [
+          900,
+          394
+        ],
+        [
+          346,
+          394
+        ]
+      ]
+    },
+    {
+      "from": "F02-affected",
+      "to": "F02-reassess"
+    },
+    {
+      "from": "F02-unaffected",
+      "to": "F02-reassess"
+    },
+    {
+      "from": "F02-unknowns",
+      "to": "F02-reassess"
+    },
+    {
+      "from": "F02-reassess",
+      "to": "F02-readiness"
+    }
+  ]
+}

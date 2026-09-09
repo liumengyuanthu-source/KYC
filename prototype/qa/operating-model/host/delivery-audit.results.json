@@ -1,0 +1,29 @@
+{
+  "at": "2026-09-07T16:53:00.805Z",
+  "command": "node /Users/christinaliu/Documents/ChatGPT/Australia Bank/clear-to-trade-product/prototype/qa/operating-model/delivery-audit.mjs",
+  "browser": "152.0.7977.76",
+  "results": [
+    {
+      "ids": [
+        "OM-12",
+        "OM-23",
+        "OM-30"
+      ],
+      "name": "seventeen-source-mappings-and-status",
+      "status": "passed",
+      "screenshot": "prototype/qa/operating-model/host/seventeen-source-mappings-and-status.png",
+      "errors": [],
+      "remote": []
+    },
+    {
+      "ids": [
+        "OM-24"
+      ],
+      "name": "touch-target-selection-without-hover",
+      "status": "passed",
+      "screenshot": "prototype/qa/operating-model/host/touch-target-selection-without-hover.png",
+      "errors": [],
+      "remote": []
+    }
+  ]
+}

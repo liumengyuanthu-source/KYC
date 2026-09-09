@@ -1,0 +1,123 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "预编制故事 · 不是执行日志",
+    "locale": "zh-CN",
+    "animation": "none",
+    "quality_profile": "showcase",
+    "viewBox": [
+      1080,
+      640
+    ],
+    "legend": {
+      "mode": "hidden"
+    }
+  },
+  "components": [
+    {
+      "id": "OM-F1",
+      "type": "frontend",
+      "label": "1 · 同一命中与版本",
+      "sublabel": "Person T · 保持原主体与查询",
+      "pos": [
+        60,
+        95
+      ],
+      "size": [
+        355,
+        96
+      ]
+    },
+    {
+      "id": "OM-F2",
+      "type": "frontend",
+      "label": "2 · 对照并保留未知",
+      "sublabel": "作者能力样例 · 不判断身份",
+      "pos": [
+        665,
+        95
+      ],
+      "size": [
+        355,
+        96
+      ]
+    },
+    {
+      "id": "OM-F3",
+      "type": "frontend",
+      "label": "3 · 资料缺口 — 暂停",
+      "sublabel": "讲解暂停 · 不创建业务限制",
+      "pos": [
+        60,
+        275
+      ],
+      "size": [
+        355,
+        96
+      ]
+    },
+    {
+      "id": "OM-F4",
+      "type": "frontend",
+      "label": "4 · 人的决策包 — 暂停",
+      "sublabel": "下一步不是批准 · 权限仍须核对",
+      "pos": [
+        665,
+        275
+      ],
+      "size": [
+        355,
+        96
+      ]
+    },
+    {
+      "id": "OM-F5",
+      "type": "frontend",
+      "label": "5 · 显式预览后续示例",
+      "sublabel": "作者后续示例 · 不是你刚作的决定",
+      "pos": [
+        60,
+        455
+      ],
+      "size": [
+        355,
+        96
+      ]
+    },
+    {
+      "id": "OM-F6",
+      "type": "frontend",
+      "label": "6 · 局部结果与未决条件",
+      "sublabel": "所有权、覆盖与法务仍有未决",
+      "pos": [
+        665,
+        455
+      ],
+      "size": [
+        355,
+        96
+      ]
+    }
+  ],
+  "connections": [
+    {
+      "id": "relation-1",
+      "from": "OM-F1",
+      "to": "OM-F2",
+      "label": "阅读背景"
+    },
+    {
+      "id": "relation-2",
+      "from": "OM-F3",
+      "to": "OM-F4",
+      "label": "复核背景"
+    },
+    {
+      "id": "relation-3",
+      "from": "OM-F5",
+      "to": "OM-F6",
+      "label": "仅为作者讲解"
+    }
+  ]
+}

@@ -1,0 +1,149 @@
+{
+  "at": "2026-09-07T15:56:15.769Z",
+  "results": [
+    {
+      "path": "prototype/reconstruction/diagrams/br-03-current-zh-CN-r3.html",
+      "bytes": 698303,
+      "sha256": "cc292e3fad5e4ac52ebf8b078394f442990cd052c89ce8824690990d903f0518",
+      "status": "passed"
+    },
+    {
+      "path": "prototype/reconstruction/diagrams/br-03-current-zh-CN-r3.svg",
+      "bytes": 43424,
+      "sha256": "af534c10dc274fcc5961e00bc20331d73032055c263d14633bb9c801784dad04",
+      "status": "passed"
+    },
+    {
+      "path": "prototype/reconstruction/diagrams/br-03-target-zh-CN-r3.html",
+      "bytes": 699983,
+      "sha256": "803836940224f74e208b8a6ca578789fd3807b07e4a6b438ce5552e782ab0712",
+      "status": "passed"
+    },
+    {
+      "path": "prototype/reconstruction/diagrams/br-03-target-zh-CN-r3.svg",
+      "bytes": 45086,
+      "sha256": "4fb2c75ea08db3d8a149b9269ea8d75cac55bace7242311ba07abeaf71faade6",
+      "status": "passed"
+    },
+    {
+      "path": "prototype/reconstruction/diagrams/br-03-current-en-AU-r3.html",
+      "bytes": 698906,
+      "sha256": "3ddbc871c660878420063dd3f257414f20370083aeeb015fe8207a04f588020f",
+      "status": "passed"
+    },
+    {
+      "path": "prototype/reconstruction/diagrams/br-03-current-en-AU-r3.svg",
+      "bytes": 43688,
+      "sha256": "5f2334a3b9e8df1bfe540a798316b3040e88b01cae1b492cb7eea13b9bb79699",
+      "status": "passed"
+    },
+    {
+      "path": "prototype/reconstruction/diagrams/br-03-target-en-AU-r3.html",
+      "bytes": 700594,
+      "sha256": "39bfbcb7cfd02205363e578fa243dac545e4c155365850a3cef6e3deec79e7d5",
+      "status": "passed"
+    },
+    {
+      "path": "prototype/reconstruction/diagrams/br-03-target-en-AU-r3.svg",
+      "bytes": 45358,
+      "sha256": "52dbd06d00062b659081a2b140188445aecc508771d5bed5dae3d03d01b2267f",
+      "status": "passed"
+    },
+    {
+      "path": "prototype/reconstruction/diagrams/br-04-current-zh-CN-r3.html",
+      "bytes": 698476,
+      "sha256": "efe89c5e00f8eb1505fed1762275cbd0d20d9c0b7aae4431d11ee60d1a9ef0c6",
+      "status": "passed"
+    },
+    {
+      "path": "prototype/reconstruction/diagrams/br-04-current-zh-CN-r3.svg",
+      "bytes": 43567,
+      "sha256": "73ca657f678ecbeb5b51ebb9871d3448ee2cf7a7cf4cafe4ec9116748fa8f4f4",
+      "status": "passed"
+    },
+    {
+      "path": "prototype/reconstruction/diagrams/br-04-target-zh-CN-r3.html",
+      "bytes": 702356,
+      "sha256": "acf9bf49c724740ee98b28733767f893168a0190d559d5fed44b3f16c3e6fc05",
+      "status": "passed"
+    },
+    {
+      "path": "prototype/reconstruction/diagrams/br-04-target-zh-CN-r3.svg",
+      "bytes": 47407,
+      "sha256": "026d82a02bef318da9609c6790f9325d769039d4d0e4738b2f919584e796e9b2",
+      "status": "passed"
+    },
+    {
+      "path": "prototype/reconstruction/diagrams/br-04-current-en-AU-r3.html",
+      "bytes": 699022,
+      "sha256": "9171556a716d5e21f65f46fe9f721b94c954f21fea104f4317aeb4cc76bed0ef",
+      "status": "passed"
+    },
+    {
+      "path": "prototype/reconstruction/diagrams/br-04-current-en-AU-r3.svg",
+      "bytes": 43780,
+      "sha256": "149d7b98ff365e6f2f30d8c45a51f4d3e101a54918cc33928849748a38dfb656",
+      "status": "passed"
+    },
+    {
+      "path": "prototype/reconstruction/diagrams/br-04-target-en-AU-r3.html",
+      "bytes": 703070,
+      "sha256": "6bc676babfd925f67a5ff1ca5474b12ea82c388326494caf86845079f78c6076",
+      "status": "passed"
+    },
+    {
+      "path": "prototype/reconstruction/diagrams/br-04-target-en-AU-r3.svg",
+      "bytes": 47788,
+      "sha256": "0331c3735eeb2b1a9a3f0ff7e61e4ddd27e66d15ee1b2945515e1a60b3a332fd",
+      "status": "passed"
+    },
+    {
+      "path": "prototype/reconstruction/diagrams/br-05-current-zh-CN-r3.html",
+      "bytes": 700134,
+      "sha256": "ad29dadcd7c089b3aa57477aba7d08d48e3078694ecd183806d2accf54e42798",
+      "status": "passed"
+    },
+    {
+      "path": "prototype/reconstruction/diagrams/br-05-current-zh-CN-r3.svg",
+      "bytes": 45215,
+      "sha256": "2eb4ad6dddb0c1d4da99263e12e94c89adce09b60693f9e7d7176a655c2280d4",
+      "status": "passed"
+    },
+    {
+      "path": "prototype/reconstruction/diagrams/br-05-target-zh-CN-r3.html",
+      "bytes": 702202,
+      "sha256": "cf69126f85fc367a96bf239578c4c1384556f6b1ae6a1695e650dc66c502012f",
+      "status": "passed"
+    },
+    {
+      "path": "prototype/reconstruction/diagrams/br-05-target-zh-CN-r3.svg",
+      "bytes": 47265,
+      "sha256": "b18ea94162c0c826e68f6e7418469388fa5f9d6c62bdd0975e1b720aceb67eb7",
+      "status": "passed"
+    },
+    {
+      "path": "prototype/reconstruction/diagrams/br-05-current-en-AU-r3.html",
+      "bytes": 700812,
+      "sha256": "fcd87c857b415ad3a4d1a97d7720f280c18108306253f3d0ac681138bad4ded8",
+      "status": "passed"
+    },
+    {
+      "path": "prototype/reconstruction/diagrams/br-05-current-en-AU-r3.svg",
+      "bytes": 45544,
+      "sha256": "dc8c5c09f4f1b559a5f5cd855b0d467a398fae286cb82ecb49fd2899414ee7fd",
+      "status": "passed"
+    },
+    {
+      "path": "prototype/reconstruction/diagrams/br-05-target-en-AU-r3.html",
+      "bytes": 702916,
+      "sha256": "09b5ba5f798c5bec08eef3b38b640587a629c01cdc7b44067d5d352a02ff1d47",
+      "status": "passed"
+    },
+    {
+      "path": "prototype/reconstruction/diagrams/br-05-target-en-AU-r3.svg",
+      "bytes": 47630,
+      "sha256": "e72d71838987d01e3c7814f99c9563e3a3ea70e08ad7dc50eb5f19186bffc3fc",
+      "status": "passed"
+    }
+  ]
+}

@@ -1,0 +1,2877 @@
+// Inherited research; Batch D adds bindings only, no network re-verification.
+export default {
+  "version": "1.0",
+  "sources": [
+    {
+      "source_id": "REFSRC-c87950d327fe",
+      "title": "ING Wholesale — Direct Online Onboarding Request (DOOR)",
+      "publisher": "ING Wholesale",
+      "source_kind": "industry_reference",
+      "canonical_url": "https://www.ingwb.com/en/insidebusiness/self-service/onboarding",
+      "source_version": null,
+      "publication_date": "2026-02-26",
+      "date_precision": "day",
+      "region_scope": "2026-02-26；欧洲列明市场；Wholesale",
+      "customer_segment": "2026-02-26；欧洲列明市场；Wholesale",
+      "source_language": "en"
+    },
+    {
+      "source_id": "REFSRC-3f0c51e665c8",
+      "title": "ANZ — KYC SecureReply",
+      "publisher": "ANZ",
+      "source_kind": "industry_reference",
+      "canonical_url": "https://www.anz.com.au/support/business/secure-reply/",
+      "source_version": null,
+      "publication_date": null,
+      "date_precision": "not_specified",
+      "region_scope": "页面未标明确发布日期；澳洲部分商业客户资料更新",
+      "customer_segment": "页面未标明确发布日期；澳洲部分商业客户资料更新",
+      "source_language": "en"
+    },
+    {
+      "source_id": "REFSRC-fc2a14663b0d",
+      "title": "HSBC Bermuda — SmartServe",
+      "publisher": "HSBC Bermuda",
+      "source_kind": "industry_reference",
+      "canonical_url": "https://www.business.hsbc.bm/en-gb/smartserve",
+      "source_version": null,
+      "publication_date": null,
+      "date_precision": "not_specified",
+      "region_scope": "页面未标明确发布日期；Bermuda Corporate & Institutional",
+      "customer_segment": "页面未标明确发布日期；Bermuda Corporate & Institutional",
+      "source_language": "en"
+    },
+    {
+      "source_id": "REFSRC-6cc73c38d7be",
+      "title": "HSBC Singapore — International business / SmartServe",
+      "publisher": "HSBC Singapore",
+      "source_kind": "industry_reference",
+      "canonical_url": "https://www.business.hsbc.com.sg/en-sg/campaigns/international-business",
+      "source_version": null,
+      "publication_date": null,
+      "date_precision": "not_specified",
+      "region_scope": "页面未标明确发布日期；Singapore corporate/institutional",
+      "customer_segment": "页面未标明确发布日期；Singapore corporate/institutional",
+      "source_language": "en"
+    },
+    {
+      "source_id": "REFSRC-5007fcbd71dc",
+      "title": "Citi — APAC institutional digital onboarding launch",
+      "publisher": "Citi",
+      "source_kind": "industry_reference",
+      "canonical_url": "https://www.citigroup.com/global/news/press-release/2019/citi-launches-digital-onboarding-for-institutional-clients-in-asia-pacific",
+      "source_version": null,
+      "publication_date": "2019-04-11",
+      "date_precision": "day",
+      "region_scope": "2019-04-11；APAC institutional；历史案例",
+      "customer_segment": "2019-04-11；APAC institutional；历史案例",
+      "source_language": "en"
+    },
+    {
+      "source_id": "REFSRC-593eb3d2134d",
+      "title": "Citi — CitiDirect BE Digital Onboarding video",
+      "publisher": "Citi",
+      "source_kind": "industry_reference",
+      "canonical_url": "https://www.citigroup.com/global/insights/citidirect-be-digital-onboarding",
+      "source_version": null,
+      "publication_date": null,
+      "date_precision": "not_specified",
+      "region_scope": "页面未显示明确发布时间；产品演示入口",
+      "customer_segment": "页面未显示明确发布时间；产品演示入口",
+      "source_language": "en"
+    },
+    {
+      "source_id": "REFSRC-609062df61e2",
+      "title": "Citi — CitiDirect Commercial Banking enhancements",
+      "publisher": "Citi",
+      "source_kind": "industry_reference",
+      "canonical_url": "https://www.citigroup.com/global/news/press-release/2025/citi-global-roll-out-enhancements-citidirect-commercial-banking-platform",
+      "source_version": null,
+      "publication_date": "2025-08-13",
+      "date_precision": "day",
+      "region_scope": "2025-08-13；mid-sized corporate/commercial；本轮新增核验",
+      "customer_segment": "2025-08-13；mid-sized corporate/commercial；本轮新增核验",
+      "source_language": "en"
+    },
+    {
+      "source_id": "REFSRC-7d39967abdab",
+      "title": "Citi — CitiDirect Commercial Banking product video page",
+      "publisher": "Citi",
+      "source_kind": "industry_reference",
+      "canonical_url": "https://www.citigroup.com/global/insights/citidirect-commercial-banking-delivering-the-power-of-citi-on-a-single-platform",
+      "source_version": null,
+      "publication_date": "2024-01-01",
+      "date_precision": "day",
+      "region_scope": "2024-01-01 页面日期；Commercial Banking",
+      "customer_segment": "2024-01-01 页面日期；Commercial Banking",
+      "source_language": "en"
+    },
+    {
+      "source_id": "REFSRC-3691009688e5",
+      "title": "NatWest Business — Mitek identity verification",
+      "publisher": "NatWest Business",
+      "source_kind": "industry_reference",
+      "canonical_url": "https://www.natwest.com/business/bank-accounts/what-is-mitek.html",
+      "source_version": null,
+      "publication_date": null,
+      "date_precision": "not_specified",
+      "region_scope": "页面未标明确发布日期；英国 Business Banking 的身份验证子步骤",
+      "customer_segment": "页面未标明确发布日期；英国 Business Banking 的身份验证子步骤",
+      "source_language": "en"
+    },
+    {
+      "source_id": "REFSRC-1e88f1a0dc43",
+      "title": "HSBC Hong Kong — Chat with your Relationship Manager",
+      "publisher": "HSBC Hong Kong",
+      "source_kind": "industry_reference",
+      "canonical_url": "https://www.hsbc.com.hk/ways-to-bank/chat-with-relationship-manager/",
+      "source_version": null,
+      "publication_date": null,
+      "date_precision": "not_specified",
+      "region_scope": "页面未标明确发布日期；香港 Premier / Premier Elite 零售财富",
+      "customer_segment": "页面未标明确发布日期；香港 Premier / Premier Elite 零售财富",
+      "source_language": "en"
+    },
+    {
+      "source_id": "REFSRC-58eef49f44a6",
+      "title": "SWIFT — KYC Registry opens to corporates",
+      "publisher": "SWIFT",
+      "source_kind": "industry_reference",
+      "canonical_url": "https://www.swift.com/news-events/press-releases/swift-opens-its-kyc-registry-corporates",
+      "source_version": null,
+      "publication_date": "2019-12-16",
+      "date_precision": "day",
+      "region_scope": "2019-12-16；企业与金融机构 KYC 资料交换；历史发布",
+      "customer_segment": "2019-12-16；企业与金融机构 KYC 资料交换；历史发布",
+      "source_language": "en"
+    },
+    {
+      "source_id": "REFSRC-c48c6d8deca0",
+      "title": "Wolfsberg Group — Correspondent Banking / CBDDQ resources",
+      "publisher": "Wolfsberg Group",
+      "source_kind": "industry_reference",
+      "canonical_url": "https://wolfsberg-group.org/resources/correspondent-banking/",
+      "source_version": null,
+      "publication_date": null,
+      "date_precision": "not_specified",
+      "region_scope": "金融机构对应行尽调资源；页面资源版本以实际下载为准",
+      "customer_segment": "金融机构对应行尽调资源；页面资源版本以实际下载为准",
+      "source_language": "en"
+    },
+    {
+      "source_id": "REFSRC-08762a0163df",
+      "title": "GLEIF — Level 2 Data: Who Owns Whom",
+      "publisher": "GLEIF",
+      "source_kind": "industry_reference",
+      "canonical_url": "https://www.gleif.org/en/lei-data/access-and-use-lei-data/level-2-data-who-owns-whom",
+      "source_version": null,
+      "publication_date": null,
+      "date_precision": "not_specified",
+      "region_scope": "法人识别与组织关系；无特定银行市场",
+      "customer_segment": "法人识别与组织关系；无特定银行市场",
+      "source_language": "en"
+    },
+    {
+      "source_id": "REFSRC-4f617c2d4b50",
+      "title": "GLEIF — The verifiable LEI (vLEI)",
+      "publisher": "GLEIF",
+      "source_kind": "industry_reference",
+      "canonical_url": "https://www.gleif.org/en/organizational-identity/lei-vlei/the-verifiable-lei-vlei",
+      "source_version": null,
+      "publication_date": null,
+      "date_precision": "not_specified",
+      "region_scope": "组织数字身份及相关角色；适用部署另验",
+      "customer_segment": "组织数字身份及相关角色；适用部署另验",
+      "source_language": "en"
+    },
+    {
+      "source_id": "REFSRC-2f2f723a6c8c",
+      "title": "ISDA — DRR and CDM documentation",
+      "publisher": "ISDA",
+      "source_kind": "industry_reference",
+      "canonical_url": "https://drr-docs.isda.org/docs/get-started/drr-and-cdm/",
+      "source_version": null,
+      "publication_date": null,
+      "date_precision": "not_specified",
+      "region_scope": "金融产品、生命周期及数字监管报告",
+      "customer_segment": "金融产品、生命周期及数字监管报告",
+      "source_language": "en"
+    },
+    {
+      "source_id": "REFSRC-278ac9ad8738",
+      "title": "EUROCONTROL — Airport Collaborative Decision Making specification",
+      "publisher": "EUROCONTROL",
+      "source_kind": "cross_industry_pattern",
+      "canonical_url": "https://www.eurocontrol.int/publication/eurocontrol-specification-airport-collaborative-decision-making-cdm",
+      "source_version": null,
+      "publication_date": "2025-01-30",
+      "date_precision": "day",
+      "region_scope": "2025-01-30；航空运营；Edition 1",
+      "customer_segment": "2025-01-30；航空运营；Edition 1",
+      "source_language": "en"
+    },
+    {
+      "source_id": "REFSRC-31432d782d31",
+      "title": "IATA — ONE Record",
+      "publisher": "IATA",
+      "source_kind": "cross_industry_pattern",
+      "canonical_url": "https://www.iata.org/one-record/",
+      "source_version": null,
+      "publication_date": null,
+      "date_precision": "not_specified",
+      "region_scope": "航空货运信息交换；公开说明及工具链接",
+      "customer_segment": "航空货运信息交换；公开说明及工具链接",
+      "source_language": "en"
+    },
+    {
+      "source_id": "REFSRC-3e10e7311eba",
+      "title": "GS1 — Global Traceability Standard explanation",
+      "publisher": "GS1",
+      "source_kind": "cross_industry_pattern",
+      "canonical_url": "https://support.gs1.org/support/solutions/articles/43000734535-what-is-the-gs1-traceability-standard-",
+      "source_version": null,
+      "publication_date": "2024-08-22",
+      "date_precision": "day",
+      "region_scope": "2024-08-22 更新；供应链标准",
+      "customer_segment": "2024-08-22 更新；供应链标准",
+      "source_language": "en"
+    },
+    {
+      "source_id": "REFSRC-e1fe72472bf9",
+      "title": "NIST — Digital Thread for Manufacturing",
+      "publisher": "NIST",
+      "source_kind": "cross_industry_pattern",
+      "canonical_url": "https://www.nist.gov/programs-projects/digital-thread-manufacturing",
+      "source_version": null,
+      "publication_date": null,
+      "date_precision": "not_specified",
+      "region_scope": "制造业数字线程；公开研究项目",
+      "customer_segment": "制造业数字线程；公开研究项目",
+      "source_language": "en"
+    },
+    {
+      "source_id": "REFSRC-f9e731b2c4ac",
+      "title": "HL7 FHIR R4 — Provenance",
+      "publisher": "HL7 FHIR R4",
+      "source_kind": "cross_industry_pattern",
+      "canonical_url": "https://hl7.org/fhir/R4/provenance.html",
+      "source_version": "R4",
+      "publication_date": null,
+      "date_precision": "not_specified",
+      "region_scope": "FHIR R4 4.0.1；医疗标准；明确不是最新版本声明",
+      "customer_segment": "FHIR R4 4.0.1；医疗标准；明确不是最新版本声明",
+      "source_language": "en"
+    },
+    {
+      "source_id": "REFSRC-a69324ba5269",
+      "title": "FDA / ICH — Q9(R1) Quality Risk Management",
+      "publisher": "FDA / ICH",
+      "source_kind": "cross_industry_pattern",
+      "canonical_url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/q9r1-quality-risk-management",
+      "source_version": null,
+      "publication_date": null,
+      "date_precision": "not_specified",
+      "region_scope": "2023-05；药品质量风险管理",
+      "customer_segment": "2023-05；药品质量风险管理",
+      "source_language": "en"
+    },
+    {
+      "source_id": "REFSRC-cc616f5c6867",
+      "title": "FDA / ICH — Q10 Pharmaceutical Quality System",
+      "publisher": "FDA / ICH",
+      "source_kind": "cross_industry_pattern",
+      "canonical_url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/q10-pharmaceutical-quality-system",
+      "source_version": null,
+      "publication_date": null,
+      "date_precision": "not_specified",
+      "region_scope": "2009-05；药品质量体系",
+      "customer_segment": "2009-05；药品质量体系",
+      "source_language": "en"
+    },
+    {
+      "source_id": "REFSRC-c507f2d5fad0",
+      "title": "SEC — Off-channel communications enforcement, 2023-91",
+      "publisher": "SEC",
+      "source_kind": "industry_reference",
+      "canonical_url": "https://www.sec.gov/newsroom/press-releases/2023-91",
+      "source_version": null,
+      "publication_date": "2023-05-11",
+      "date_precision": "day",
+      "region_scope": "2023-05-11；美国受监管 broker-dealers",
+      "customer_segment": "2023-05-11；美国受监管 broker-dealers",
+      "source_language": "en"
+    },
+    {
+      "source_id": "REFSRC-8bde3fcd6188",
+      "title": "NIST SP 800-63B-4 — Authentication and authenticator management",
+      "publisher": "NIST SP 800-63B-4",
+      "source_kind": "technical_design_reference",
+      "canonical_url": "https://pages.nist.gov/800-63-4/sp800-63b/authenticators/",
+      "source_version": null,
+      "publication_date": null,
+      "date_precision": "not_specified",
+      "region_scope": "美国数字身份技术指南；按该标准适用范围理解",
+      "customer_segment": "美国数字身份技术指南；按该标准适用范围理解",
+      "source_language": "en"
+    },
+    {
+      "source_id": "REFSRC-653e4d1a3bb2",
+      "title": "OWASP — File Upload Cheat Sheet",
+      "publisher": "OWASP",
+      "source_kind": "technical_design_reference",
+      "canonical_url": "https://cheatsheetseries.owasp.org/cheatsheets/File_Upload_Cheat_Sheet.html",
+      "source_version": null,
+      "publication_date": null,
+      "date_precision": "not_specified",
+      "region_scope": "应用安全实现指导",
+      "customer_segment": "应用安全实现指导",
+      "source_language": "en"
+    },
+    {
+      "source_id": "REFSRC-0c59d273e815",
+      "title": "AUSTRAC — Initial CDD for body corporate, partnership or unincorporated association",
+      "publisher": "AUSTRAC",
+      "source_kind": "industry_reference",
+      "canonical_url": "https://www.austrac.gov.au/industry-and-business/obligations-and-guidance/your-amlctf-program/customer-due-diligence/initial-customer-due-diligence/initial-customer-due-diligence-guides-customer-type/initial-cdd-body-corporate-partnership-or-unincorporated-association",
+      "source_version": null,
+      "publication_date": null,
+      "date_precision": "not_specified",
+      "region_scope": "澳大利亚；适用情况与过渡安排需专业判断",
+      "customer_segment": "澳大利亚；适用情况与过渡安排需专业判断",
+      "source_language": "en"
+    },
+    {
+      "source_id": "REFSRC-7e03129fa2bc",
+      "title": "AUSTRAC — Source of funds and source of wealth",
+      "publisher": "AUSTRAC",
+      "source_kind": "industry_reference",
+      "canonical_url": "https://www.austrac.gov.au/industry-and-business/obligations-and-guidance/your-amlctf-program/customer-due-diligence/source-funds-and-source-wealth",
+      "source_version": null,
+      "publication_date": null,
+      "date_precision": "not_specified",
+      "region_scope": "澳大利亚 CDD；与适用风险相关",
+      "customer_segment": "澳大利亚 CDD；与适用风险相关",
+      "source_language": "en"
+    },
+    {
+      "source_id": "REFSRC-2c963446a9c8",
+      "title": "AUSTRAC — Enhanced customer due diligence",
+      "publisher": "AUSTRAC",
+      "source_kind": "industry_reference",
+      "canonical_url": "https://www.austrac.gov.au/industry-and-business/obligations-and-guidance/your-amlctf-program/customer-due-diligence/enhanced-customer-due-diligence",
+      "source_version": null,
+      "publication_date": null,
+      "date_precision": "not_specified",
+      "region_scope": "澳大利亚；适用强化尽调情境",
+      "customer_segment": "澳大利亚；适用强化尽调情境",
+      "source_language": "en"
+    },
+    {
+      "source_id": "REFSRC-930e9fabf23c",
+      "title": "Basel Committee — Guidelines for counterparty credit risk management",
+      "publisher": "Basel Committee",
+      "source_kind": "industry_reference",
+      "canonical_url": "https://www.bis.org/publications/202412-guidelines-final-guidelines-counterparty-credit-risk-management",
+      "source_version": null,
+      "publication_date": null,
+      "date_precision": "not_specified",
+      "region_scope": "2024-12；Counterparty Credit Risk",
+      "customer_segment": "2024-12；Counterparty Credit Risk",
+      "source_language": "en"
+    },
+    {
+      "source_id": "REFSRC-6dd2afd31911",
+      "title": "DFAT — Consolidated List",
+      "publisher": "DFAT",
+      "source_kind": "industry_reference",
+      "canonical_url": "https://www.dfat.gov.au/international-relations/security/sanctions/consolidated-list",
+      "source_version": null,
+      "publication_date": null,
+      "date_precision": "not_specified",
+      "region_scope": "澳大利亚制裁名单信息；动态来源",
+      "customer_segment": "澳大利亚制裁名单信息；动态来源",
+      "source_language": "en"
+    },
+    {
+      "source_id": "REFSRC-2870f362d315",
+      "title": "Wolfsberg Group — Guidance on Sanctions Screening",
+      "publisher": "Wolfsberg Group",
+      "source_kind": "industry_reference",
+      "canonical_url": "https://db.wolfsberg-group.org/assets/4b6c2db6-696d-492e-bdd5-c51552708597/Wolfsberg%20Guidance%20on%20Sanctions%20Screening.pdf",
+      "source_version": "2019",
+      "publication_date": null,
+      "date_precision": "not_specified",
+      "region_scope": "2019；行业 guidance",
+      "customer_segment": "2019；行业 guidance",
+      "source_language": "en"
+    },
+    {
+      "source_id": "REFSRC-9a64ff203519",
+      "title": "Apple — Meet Liquid Glass",
+      "publisher": "Apple",
+      "source_kind": "technical_design_reference",
+      "canonical_url": "https://developer.apple.com/videos/play/wwdc2025/219/",
+      "source_version": null,
+      "publication_date": null,
+      "date_precision": "not_specified",
+      "region_scope": "WWDC25；Apple原生设计指导，HTML只作视觉借鉴。",
+      "customer_segment": "WWDC25；Apple原生设计指导，HTML只作视觉借鉴。",
+      "source_language": "en"
+    },
+    {
+      "source_id": "REFSRC-ced9cf672600",
+      "title": "W3C — Modal Dialog Pattern",
+      "publisher": "W3C",
+      "source_kind": "technical_design_reference",
+      "canonical_url": "https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/",
+      "source_version": null,
+      "publication_date": null,
+      "date_precision": "not_specified",
+      "region_scope": "Not specified in source record",
+      "customer_segment": "Not specified",
+      "source_language": "en"
+    },
+    {
+      "source_id": "REFSRC-a6041f5d6736",
+      "title": "W3C — Content on Hover or Focus",
+      "publisher": "W3C",
+      "source_kind": "technical_design_reference",
+      "canonical_url": "https://www.w3.org/WAI/WCAG22/Understanding/content-on-hover-or-focus.html",
+      "source_version": null,
+      "publication_date": null,
+      "date_precision": "not_specified",
+      "region_scope": "Not specified in source record",
+      "customer_segment": "Not specified",
+      "source_language": "en"
+    },
+    {
+      "source_id": "REFSRC-1644eed6024a",
+      "title": "W3C — Dragging Movements",
+      "publisher": "W3C",
+      "source_kind": "technical_design_reference",
+      "canonical_url": "https://www.w3.org/WAI/WCAG22/Understanding/dragging-movements.html",
+      "source_version": null,
+      "publication_date": null,
+      "date_precision": "not_specified",
+      "region_scope": "Not specified in source record",
+      "customer_segment": "Not specified",
+      "source_language": "en"
+    },
+    {
+      "source_id": "REFSRC-72049fdc31f1",
+      "title": "Australian Government Style Manual — Spelling",
+      "publisher": "Australian Government Style Manual",
+      "source_kind": "technical_design_reference",
+      "canonical_url": "https://www.stylemanual.gov.au/grammar-punctuation-and-conventions/spelling",
+      "source_version": null,
+      "publication_date": null,
+      "date_precision": "not_specified",
+      "region_scope": "Not specified in source record",
+      "customer_segment": "Not specified",
+      "source_language": "en"
+    },
+    {
+      "source_id": "REFSRC-f6ba73964d9b",
+      "title": "Wolfsberg — Sanctions Screening Guidance",
+      "publisher": "Wolfsberg",
+      "source_kind": "industry_reference",
+      "canonical_url": "https://wolfsberg-group.org/resources/legacy/53",
+      "source_version": null,
+      "publication_date": null,
+      "date_precision": "not_specified",
+      "region_scope": "Not specified in source record",
+      "customer_segment": "Not specified",
+      "source_language": "en"
+    },
+    {
+      "source_id": "REFSRC-5572948bb336",
+      "title": "DFAT — Guide to Australia's Consolidated List",
+      "publisher": "DFAT",
+      "source_kind": "industry_reference",
+      "canonical_url": "https://www.dfat.gov.au/international-relations/security/sanctions/consolidated-list/guide-australias-consolidated-list",
+      "source_version": null,
+      "publication_date": null,
+      "date_precision": "not_specified",
+      "region_scope": "Not specified in source record",
+      "customer_segment": "Not specified",
+      "source_language": "en"
+    },
+    {
+      "source_id": "REFSRC-40253f160832",
+      "title": "AUSTRAC — Politically exposed persons",
+      "publisher": "AUSTRAC",
+      "source_kind": "industry_reference",
+      "canonical_url": "https://www.austrac.gov.au/industry-and-business/obligations-and-guidance/your-amlctf-program/customer-due-diligence/politically-exposed-persons-pep",
+      "source_version": null,
+      "publication_date": null,
+      "date_precision": "not_specified",
+      "region_scope": "Not specified in source record",
+      "customer_segment": "Not specified",
+      "source_language": "en"
+    },
+    {
+      "source_id": "REFSRC-251cbc0d0dec",
+      "title": "HL7 FHIR R5 — Provenance",
+      "publisher": "HL7 FHIR R5",
+      "source_kind": "cross_industry_pattern",
+      "canonical_url": "https://hl7.org/fhir/R5/provenance.html",
+      "source_version": "R5",
+      "publication_date": null,
+      "date_precision": "not_specified",
+      "region_scope": "Not specified in source record",
+      "customer_segment": "Not specified",
+      "source_language": "en"
+    }
+  ],
+  "observations": [
+    {
+      "observation_id": "SRC-017:R01",
+      "source_ref": "REFSRC-c87950d327fe",
+      "supported_statement": "InsideBusiness 中可处理实体 onboarding、填写资料及上传文件。新 KYC representative 的访问可由 Relationship Manager 安排。页面允许多名代表，但不同时操作。",
+      "supported_statement_en": "Entity onboarding, information and document submission; representative access is arranged through the RM. Multiple representatives do not imply simultaneous editing.",
+      "locator": {
+        "source_document": "SRC-017",
+        "section": "R01"
+      },
+      "verification_status": "已读取官方页面；教程直链已发现，未播放核对",
+      "verified_at": null,
+      "verification_origin": "inherited_research",
+      "verification_evidence_ref": "SRC-017#R01"
+    },
+    {
+      "observation_id": "SRC-017:R02",
+      "source_ref": "REFSRC-3f0c51e665c8",
+      "supported_statement": "通过 Reference Number 与已登记联系方式的 OTP 进入更新流程；支持保存、续填和多联系人。建议从官网自行导航，沟通中不提供链接。部分个人信息受可见性限制。",
+      "supported_statement_en": "A reference number and OTP to registered contact details support specified Australian business KYC updates, with save/resume and contact visibility limits.",
+      "locator": {
+        "source_document": "SRC-017",
+        "section": "R02"
+      },
+      "verification_status": "已读取官方页面；未登录服务",
+      "verified_at": null,
+      "verification_origin": "inherited_research",
+      "verification_evidence_ref": "SRC-017#R02"
+    },
+    {
+      "observation_id": "SRC-017:R03",
+      "source_ref": "REFSRC-fc2a14663b0d",
+      "supported_statement": "已有客户可用 HSBCnet 凭证，新客户可用 OTP；公开介绍动态表单、文件处理及进度。页面同时说明，获准代表某组织与特定 HSBC 实体沟通的用户可访问相应交换内容。",
+      "supported_statement_en": "SmartServe describes different existing/new-user entry paths and organisation-related communication access; per-item isolation is not established.",
+      "locator": {
+        "source_document": "SRC-017",
+        "section": "R03"
+      },
+      "verification_status": "已读取官方页面；未进入已认证工作区",
+      "verified_at": null,
+      "verification_origin": "inherited_research",
+      "verification_evidence_ref": "SRC-017#R03"
+    },
+    {
+      "observation_id": "SRC-017:R04",
+      "source_ref": "REFSRC-6cc73c38d7be",
+      "supported_statement": "页面介绍可通过桌面或移动设备使用 SmartServe。",
+      "supported_statement_en": "Singapore SmartServe is described as available on desktop and mobile. Detailed Bermuda authentication settings cannot be transferred.",
+      "locator": {
+        "source_document": "SRC-017",
+        "section": "R04"
+      },
+      "verification_status": "已读取官方页面",
+      "verified_at": null,
+      "verification_origin": "inherited_research",
+      "verification_evidence_ref": "SRC-017#R04"
+    },
+    {
+      "observation_id": "SRC-017:R05",
+      "source_ref": "REFSRC-5007fcbd71dc",
+      "supported_statement": "历史发布介绍 Portal、已有信息预填、电子文件交换与电子签名的 onboarding 方式。",
+      "supported_statement_en": "The 2019 APAC institutional release describes prefill, electronic exchange and signatures. Historical claims are not this project’s benefit estimates.",
+      "locator": {
+        "source_document": "SRC-017",
+        "section": "R05"
+      },
+      "verification_status": "已读取官方发布",
+      "verified_at": null,
+      "verification_origin": "inherited_research",
+      "verification_evidence_ref": "SRC-017#R05"
+    },
+    {
+      "observation_id": "SRC-017:R06",
+      "source_ref": "REFSRC-593eb3d2134d",
+      "supported_statement": "官方页面提供同名产品视频入口。",
+      "supported_statement_en": "An official onboarding video entry exists; its actual frames and timestamps have not been verified.",
+      "locator": {
+        "source_document": "SRC-017",
+        "section": "R06"
+      },
+      "verification_status": "官方视频落地页已发现；播放器/帧未核验",
+      "verified_at": null,
+      "verification_origin": "inherited_research",
+      "verification_evidence_ref": "SRC-017#R06"
+    },
+    {
+      "observation_id": "SRC-017:R07",
+      "source_ref": "REFSRC-609062df61e2",
+      "supported_statement": "发布介绍客户关系统一视图、onboarding/servicing 及 KYC renewal 的改进，包括预填和避免重复填写。",
+      "supported_statement_en": "The 2025 commercial banking release describes relationship views and onboarding/servicing improvements. It is distinct from the 2019 institutional release.",
+      "locator": {
+        "source_document": "SRC-017",
+        "section": "R07"
+      },
+      "verification_status": "已读取官方发布",
+      "verified_at": null,
+      "verification_origin": "inherited_research",
+      "verification_evidence_ref": "SRC-017#R07"
+    },
+    {
+      "observation_id": "SRC-017:R08",
+      "source_ref": "REFSRC-7d39967abdab",
+      "supported_statement": "页面介绍将 Cash、Loans、Trade、FX、Servicing 和 Onboarding 集合于同一平台的客户关系视图。",
+      "supported_statement_en": "A commercial banking platform video description mentions several product areas. Generic Cash/Trade screens are not KYC review evidence.",
+      "locator": {
+        "source_document": "SRC-017",
+        "section": "R08"
+      },
+      "verification_status": "已读取视频说明页；视频帧未核验",
+      "verified_at": null,
+      "verification_origin": "inherited_research",
+      "verification_evidence_ref": "SRC-017#R08"
+    },
+    {
+      "observation_id": "SRC-017:R09",
+      "source_ref": "REFSRC-3691009688e5",
+      "supported_statement": "邮件或短信链接进入身份验证任务，无单独传统登录步骤；后续任务仍包含身份材料及相关验证。",
+      "supported_statement_en": "A narrow identity-verification task may start from email/text without a separate traditional login. This does not remove identity checks or grant case access.",
+      "locator": {
+        "source_document": "SRC-017",
+        "section": "R09"
+      },
+      "verification_status": "已读取官方操作说明",
+      "verified_at": null,
+      "verification_origin": "inherited_research",
+      "verification_evidence_ref": "SRC-017#R09"
+    },
+    {
+      "observation_id": "SRC-017:R10",
+      "source_ref": "REFSRC-1e88f1a0dc43",
+      "supported_statement": "注册后的合资格客户可通过银行渠道及 WhatsApp/WeChat 进行限定范围的 RM 沟通。官网提供注册与使用步骤图。",
+      "supported_statement_en": "Registered, eligible Hong Kong Premier customers have bounded RM communication channels. This is not Australian institutional KYC document collection.",
+      "locator": {
+        "source_document": "SRC-017",
+        "section": "R10"
+      },
+      "verification_status": "已读取官方页面；4 个教程图片直链已发现，未下载",
+      "verified_at": null,
+      "verification_origin": "inherited_research",
+      "verification_evidence_ref": "SRC-017#R10"
+    },
+    {
+      "observation_id": "SRC-017:R11",
+      "source_ref": "REFSRC-58eef49f44a6",
+      "supported_statement": "向适用企业扩展标准化 KYC 信息及文档共享，并保留数据拥有方对访问的控制。",
+      "supported_statement_en": "Standard KYC information exchange retains data-owner access control. Eligibility, connection and case-specific assessment are separate.",
+      "locator": {
+        "source_document": "SRC-017",
+        "section": "R11"
+      },
+      "verification_status": "已读取官方发布",
+      "verified_at": null,
+      "verification_origin": "inherited_research",
+      "verification_evidence_ref": "SRC-017#R11"
+    },
+    {
+      "observation_id": "SRC-017:R12",
+      "source_ref": "REFSRC-c48c6d8deca0",
+      "supported_statement": "提供对应行尽调问卷及配套 guidance/glossary 等资源。",
+      "supported_statement_en": "Correspondent-banking questionnaires and guidance provide baseline patterns, not a ready-made corporate customer checklist.",
+      "locator": {
+        "source_document": "SRC-017",
+        "section": "R12"
+      },
+      "verification_status": "已读取官方资源页；未审阅整个问卷文件",
+      "verified_at": null,
+      "verification_origin": "inherited_research",
+      "verification_evidence_ref": "SRC-017#R12"
+    },
+    {
+      "observation_id": "SRC-017:R13",
+      "source_ref": "REFSRC-08762a0163df",
+      "supported_statement": "Level 1 法人身份参考信息与 Level 2 直接/最终会计合并母公司关系是不同内容。",
+      "supported_statement_en": "Legal entity identity and accounting-consolidation parent relationships are distinct; parent data does not establish all natural-person beneficial owners.",
+      "locator": {
+        "source_document": "SRC-017",
+        "section": "R13"
+      },
+      "verification_status": "已读取官方说明",
+      "verified_at": null,
+      "verification_origin": "inherited_research",
+      "verification_evidence_ref": "SRC-017#R13"
+    },
+    {
+      "observation_id": "SRC-017:R14",
+      "source_ref": "REFSRC-4f617c2d4b50",
+      "supported_statement": "vLEI 的组织身份及角色凭证机制用于可验证的组织及代表关系。",
+      "supported_statement_en": "vLEI provides patterns for verifiable organisational roles. It does not grant this bank’s signing or trading authority.",
+      "locator": {
+        "source_document": "SRC-017",
+        "section": "R14"
+      },
+      "verification_status": "已读取官方说明",
+      "verified_at": null,
+      "verification_origin": "inherited_research",
+      "verification_evidence_ref": "SRC-017#R14"
+    },
+    {
+      "observation_id": "SRC-017:R15",
+      "source_ref": "REFSRC-2f2f723a6c8c",
+      "supported_statement": "说明 Common Domain Model 与可执行监管报告规则的关系，涉及标准化产品、事件与生命周期表达。",
+      "supported_statement_en": "ISDA event/state/rule expression is a modelling reference, not adoption of CDM or an official KYC schema.",
+      "locator": {
+        "source_document": "SRC-017",
+        "section": "R15"
+      },
+      "verification_status": "已读取官方文档；未审阅完整标准",
+      "verified_at": null,
+      "verification_origin": "inherited_research",
+      "verification_evidence_ref": "SRC-017#R15"
+    },
+    {
+      "observation_id": "SRC-017:R16",
+      "source_ref": "REFSRC-278ac9ad8738",
+      "supported_statement": "用重要事件里程碑组织协同并触发下游估计、告警和通知更新。",
+      "supported_statement_en": "A-CDM milestones can inform downstream updates. Aviation notification mechanisms are not bank approval or SLA rules.",
+      "locator": {
+        "source_document": "SRC-017",
+        "section": "R16"
+      },
+      "verification_status": "已读取官方发布页；未逐图查看 PDF",
+      "verified_at": null,
+      "verification_origin": "inherited_research",
+      "verification_evidence_ref": "SRC-017#R16"
+    },
+    {
+      "observation_id": "SRC-017:R17",
+      "source_ref": "REFSRC-31432d782d31",
+      "supported_statement": "以共享数据模型、API 和数据拥有者控制构建货运记录视图；官方页面链接模型可视化器与 demonstrator。",
+      "supported_statement_en": "ONE Record is a shared-data/access pattern in cargo; its model tools are not bank products.",
+      "locator": {
+        "source_document": "SRC-017",
+        "section": "R17"
+      },
+      "verification_status": "已读取官方页面；可视化工具链接已发现，未运行",
+      "verified_at": null,
+      "verification_origin": "inherited_research",
+      "verification_evidence_ref": "SRC-017#R17"
+    },
+    {
+      "observation_id": "SRC-017:R18",
+      "source_ref": "REFSRC-3e10e7311eba",
+      "supported_statement": "将可追溯性组织为 Critical Tracking Events 与描述事件实例的 Key Data Elements。",
+      "supported_statement_en": "GS1 traceability distinguishes events and key data elements; banking fields remain this project’s interpretation.",
+      "locator": {
+        "source_document": "SRC-017",
+        "section": "R18"
+      },
+      "verification_status": "官方搜索结果已核验；主站直接抓取受限",
+      "verified_at": null,
+      "verification_origin": "inherited_research",
+      "verification_evidence_ref": "SRC-017#R18"
+    },
+    {
+      "observation_id": "SRC-017:R19",
+      "source_ref": "REFSRC-e1fe72472bf9",
+      "supported_statement": "研究跨生命周期工程信息的连接、可追溯性和相关语义/可信交换。",
+      "supported_statement_en": "NIST digital-thread work informs version and change traceability; manufacturing rules are not transferred.",
+      "locator": {
+        "source_document": "SRC-017",
+        "section": "R19"
+      },
+      "verification_status": "已读取官方项目页",
+      "verified_at": null,
+      "verification_origin": "inherited_research",
+      "verification_evidence_ref": "SRC-017#R19"
+    },
+    {
+      "observation_id": "SRC-017:R20",
+      "source_ref": "REFSRC-f9e731b2c4ac",
+      "supported_statement": "Provenance 记录针对资源的相关活动、目标、参与者和来源实体。",
+      "supported_statement_en": "FHIR R4 Provenance is a version-specific target/agent/source pattern, not implementation of a healthcare standard.",
+      "locator": {
+        "source_document": "SRC-017",
+        "section": "R20"
+      },
+      "verification_status": "已读取指定版本官方文档",
+      "verified_at": null,
+      "verification_origin": "inherited_research",
+      "verification_evidence_ref": "SRC-017#R20"
+    },
+    {
+      "observation_id": "SRC-017:R21",
+      "source_ref": "REFSRC-a69324ba5269",
+      "supported_statement": "指南修订讨论风险决策、主观性和质量风险管理方法。",
+      "supported_statement_en": "ICH Q9(R1) discusses risk decisions, subjectivity and quality risk-management methods in pharmaceuticals; banking QA mapping is not established.",
+      "locator": {
+        "source_document": "SRC-017",
+        "section": "R21"
+      },
+      "verification_status": "官方概要已核验；完整指南未逐项映射",
+      "verified_at": null,
+      "verification_origin": "inherited_research",
+      "verification_evidence_ref": "SRC-017#R21"
+    },
+    {
+      "observation_id": "SRC-017:R22",
+      "source_ref": "REFSRC-cc616f5c6867",
+      "supported_statement": "提供 Pharmaceutical Quality System 的指导框架。",
+      "supported_statement_en": "ICH Q10 provides a pharmaceutical quality-system framework. Its summary does not prove a specific bank remediation process.",
+      "locator": {
+        "source_document": "SRC-017",
+        "section": "R22"
+      },
+      "verification_status": "已读取官方概要页；完整指南未逐项映射",
+      "verified_at": null,
+      "verification_origin": "inherited_research",
+      "verification_evidence_ref": "SRC-017#R22"
+    },
+    {
+      "observation_id": "SRC-017:R23",
+      "source_ref": "REFSRC-c507f2d5fad0",
+      "supported_statement": "案件涉及业务电子通讯未被保存或监督，包括个人设备上的 WhatsApp 等非正式渠道。",
+      "supported_statement_en": "The 2023 SEC release concerns retention and supervision of business electronic communications by US broker-dealers; it is not a global WhatsApp ban.",
+      "locator": {
+        "source_document": "SRC-017",
+        "section": "R23"
+      },
+      "verification_status": "已读取官方执法发布",
+      "verified_at": null,
+      "verification_origin": "inherited_research",
+      "verification_evidence_ref": "SRC-017#R23"
+    },
+    {
+      "observation_id": "SRC-017:R24",
+      "source_ref": "REFSRC-8bde3fcd6188",
+      "supported_statement": "区分邮箱确认与认证；其 out-of-band authentication 规则不接受电子邮件作为该认证方式。",
+      "supported_statement_en": "NIST distinguishes email confirmation from authentication; its out-of-band method does not accept email. A link and OTP to the same mailbox do not automatically constitute MFA.",
+      "locator": {
+        "source_document": "SRC-017",
+        "section": "R24"
+      },
+      "verification_status": "已读取官方技术文档",
+      "verified_at": null,
+      "verification_origin": "inherited_research",
+      "verification_evidence_ref": "SRC-017#R24"
+    },
+    {
+      "observation_id": "SRC-017:R25",
+      "source_ref": "REFSRC-653e4d1a3bb2",
+      "supported_statement": "上传处理涉及文件验证、权限、存储和恶意内容控制。",
+      "supported_statement_en": "Upload security guidance informs intake separation; receipt is not evidence sufficiency.",
+      "locator": {
+        "source_document": "SRC-017",
+        "section": "R25"
+      },
+      "verification_status": "已读取官方技术资料",
+      "verified_at": null,
+      "verification_origin": "inherited_research",
+      "verification_evidence_ref": "SRC-017#R25"
+    },
+    {
+      "observation_id": "SRC-017:R26",
+      "source_ref": "REFSRC-0c59d273e815",
+      "supported_statement": "分别处理客户身份、代表者身份与权限、受益所有人及业务关系目的，并给出情境相关的信息/验证路径。",
+      "supported_statement_en": "AUSTRAC guidance distinguishes customer identity, representative identity and authority, beneficial owners and relationship purpose; specific obligations require contextual validation.",
+      "locator": {
+        "source_document": "SRC-017",
+        "section": "R26"
+      },
+      "verification_status": "已读取官方 guidance",
+      "verified_at": null,
+      "verification_origin": "inherited_research",
+      "verification_evidence_ref": "SRC-017#R26"
+    },
+    {
+      "observation_id": "SRC-017:R27",
+      "source_ref": "REFSRC-7e03129fa2bc",
+      "supported_statement": "资金来源和财富来源是相关但不同的尽调问题。",
+      "supported_statement_en": "Source-of-funds/wealth guidance is a distinct due-diligence topic, not a universal document requirement derived from empty fields.",
+      "locator": {
+        "source_document": "SRC-017",
+        "section": "R27"
+      },
+      "verification_status": "已读取官方 guidance",
+      "verified_at": null,
+      "verification_origin": "inherited_research",
+      "verification_evidence_ref": "SRC-017#R27"
+    },
+    {
+      "observation_id": "SRC-017:R28",
+      "source_ref": "REFSRC-2c963446a9c8",
+      "supported_statement": "说明相应情境中的强化尽调工作与风险考虑。",
+      "supported_statement_en": "Enhanced due diligence depends on defined circumstances and targeted measures, not every screening alert.",
+      "locator": {
+        "source_document": "SRC-017",
+        "section": "R28"
+      },
+      "verification_status": "已读取官方 guidance",
+      "verified_at": null,
+      "verification_origin": "inherited_research",
+      "verification_evidence_ref": "SRC-017#R28"
+    },
+    {
+      "observation_id": "SRC-017:R29",
+      "source_ref": "REFSRC-930e9fabf23c",
+      "supported_statement": "指导交易对手信用风险管理，包括尽调、风险缓释、额度和治理。",
+      "supported_statement_en": "Counterparty credit-risk guidance supports treating Credit separately from KYC; local implementation and bank adoption are not established.",
+      "locator": {
+        "source_document": "SRC-017",
+        "section": "R29"
+      },
+      "verification_status": "已读取官方发布页；未将完整指南配置成规则",
+      "verified_at": null,
+      "verification_origin": "inherited_research",
+      "verification_evidence_ref": "SRC-017#R29"
+    },
+    {
+      "observation_id": "SRC-017:R30",
+      "source_ref": "REFSRC-6dd2afd31911",
+      "supported_statement": "提供澳大利亚相关名单与使用说明。",
+      "supported_statement_en": "The Australian consolidated-list page is a dynamic source reference, not every applicable list or synthetic identity evidence.",
+      "locator": {
+        "source_document": "SRC-017",
+        "section": "R30"
+      },
+      "verification_status": "已读取官方说明；未提取真实命中放入演示",
+      "verified_at": null,
+      "verification_origin": "inherited_research",
+      "verification_evidence_ref": "SRC-017#R30"
+    },
+    {
+      "observation_id": "SRC-017:R31",
+      "source_ref": "REFSRC-2870f362d315",
+      "supported_statement": "前轮研究支持：筛查 alert 需结合上下文评估，不能直接当作最终风险结论。",
+      "supported_statement_en": "Earlier research described contextual review of screening alerts. The 2019 PDF has not been reopened in this research round.",
+      "locator": {
+        "source_document": "SRC-017",
+        "section": "R31"
+      },
+      "verification_status": "本 session 前轮已研究；本轮未重新打开 PDF",
+      "verified_at": null,
+      "verification_origin": "inherited_research",
+      "verification_evidence_ref": "SRC-017#R31"
+    },
+    {
+      "observation_id": "SRC-017:R32",
+      "source_ref": "REFSRC-9a64ff203519",
+      "supported_statement": "将玻璃材质放在导航/控制层，并强调与内容层区分和可读性。",
+      "supported_statement_en": "Apple material guidance separates navigation/control from readable content; HTML blur is not native Liquid Glass optical refraction.",
+      "locator": {
+        "source_document": "SRC-017",
+        "section": "R32"
+      },
+      "verification_status": "已读取官方视频文字与章节列表；未截视频帧。",
+      "verified_at": null,
+      "verification_origin": "inherited_research",
+      "verification_evidence_ref": "SRC-017#R32"
+    },
+    {
+      "observation_id": "SRC-017:R33",
+      "source_ref": "REFSRC-ced9cf672600",
+      "supported_statement": "模态窗口需管理内部键盘焦点、关闭及合理焦点恢复。",
+      "supported_statement_en": "Modal guidance calls for keyboard focus management and restoration; our implementation must still be tested.",
+      "locator": {
+        "source_document": "SRC-017",
+        "section": "R33"
+      },
+      "verification_status": "已读取官方交互模式。",
+      "verified_at": null,
+      "verification_origin": "inherited_research",
+      "verification_evidence_ref": "SRC-017#R33"
+    },
+    {
+      "observation_id": "SRC-017:R34",
+      "source_ref": "REFSRC-a6041f5d6736",
+      "supported_statement": "额外悬浮内容需满足适用的关闭、可悬停与持续显示要求。",
+      "supported_statement_en": "Hover/focus content must remain accessible and dismissible where applicable; critical blockers stay visible.",
+      "locator": {
+        "source_document": "SRC-017",
+        "section": "R34"
+      },
+      "verification_status": "已读取官方解释。",
+      "verified_at": null,
+      "verification_origin": "inherited_research",
+      "verification_evidence_ref": "SRC-017#R34"
+    },
+    {
+      "observation_id": "SRC-017:R35",
+      "source_ref": "REFSRC-1644eed6024a",
+      "supported_statement": "拖动操作一般须有不要求拖动的单指针替代路径，特定例外另判。",
+      "supported_statement_en": "Dragging guidance supports non-drag alternatives such as stage and previous/next controls.",
+      "locator": {
+        "source_document": "SRC-017",
+        "section": "R35"
+      },
+      "verification_status": "已读取官方解释。",
+      "verified_at": null,
+      "verification_origin": "inherited_research",
+      "verification_evidence_ref": "SRC-017#R35"
+    },
+    {
+      "observation_id": "SRC-017:R36",
+      "source_ref": "REFSRC-72049fdc31f1",
+      "supported_statement": "推荐一致的Australian English拼写依据。",
+      "supported_statement_en": "Australian spelling guidance supports consistent language; locale switching cannot change business policy or jurisdiction.",
+      "locator": {
+        "source_document": "SRC-017",
+        "section": "R36"
+      },
+      "verification_status": "已读取官方写作说明。",
+      "verified_at": null,
+      "verification_origin": "inherited_research",
+      "verification_evidence_ref": "SRC-017#R36"
+    },
+    {
+      "observation_id": "SRC-016:R-C01",
+      "source_ref": "REFSRC-f6ba73964d9b",
+      "supported_statement": "筛查提示需要相关信息和上下文，复核理由需保留；行业 guidance，不是本行配置",
+      "supported_statement_en": "Screening alerts need context, relevant information and retained review rationale; guidance is not bank configuration.",
+      "locator": {
+        "source_document": "SRC-016",
+        "section": "R-C01"
+      },
+      "verification_status": "Inherited limited research statement; Final performed no new website verification.",
+      "verified_at": null,
+      "verification_origin": "inherited_research",
+      "verification_evidence_ref": "SRC-016#R-C01"
+    },
+    {
+      "observation_id": "SRC-016:R-C02",
+      "source_ref": "REFSRC-5572948bb336",
+      "supported_statement": "记录有不同名称/别名、身份属性、精度和未知；不是所有记录都有完整字段",
+      "supported_statement_en": "List records may contain aliases, multiple identity attributes, varying precision and unknowns.",
+      "locator": {
+        "source_document": "SRC-016",
+        "section": "R-C02"
+      },
+      "verification_status": "Inherited limited research statement; Final performed no new website verification.",
+      "verified_at": null,
+      "verification_origin": "inherited_research",
+      "verification_evidence_ref": "SRC-016#R-C02"
+    },
+    {
+      "observation_id": "SRC-016:R-C03",
+      "source_ref": "REFSRC-2c963446a9c8",
+      "supported_statement": "guidance 讨论适用情境与针对性强化工作",
+      "supported_statement_en": "Guidance describes defined EDD circumstances and targeted enhanced work.",
+      "locator": {
+        "source_document": "SRC-016",
+        "section": "R-C03"
+      },
+      "verification_status": "Inherited limited research statement; Final performed no new website verification.",
+      "verified_at": null,
+      "verification_origin": "inherited_research",
+      "verification_evidence_ref": "SRC-016#R-C03"
+    },
+    {
+      "observation_id": "SRC-016:R-C04",
+      "source_ref": "REFSRC-40253f160832",
+      "supported_statement": "PEP 类别应与 sanctions/adverse media 区分，不以身份本身推导违法",
+      "supported_statement_en": "PEP status is distinct from sanctions or adverse media and does not itself imply unlawful activity.",
+      "locator": {
+        "source_document": "SRC-016",
+        "section": "R-C04"
+      },
+      "verification_status": "Inherited limited research statement; Final performed no new website verification.",
+      "verified_at": null,
+      "verification_origin": "inherited_research",
+      "verification_evidence_ref": "SRC-016#R-C04"
+    },
+    {
+      "observation_id": "SRC-016:R-C05",
+      "source_ref": "REFSRC-251cbc0d0dec",
+      "supported_statement": "指定 R5 版本中描述 target/activity/agent/source 的追溯模式",
+      "supported_statement_en": "FHIR R5 Provenance relates a target to an activity, agent and source entities.",
+      "locator": {
+        "source_document": "SRC-016",
+        "section": "R-C05"
+      },
+      "verification_status": "Inherited limited research statement; Final performed no new website verification.",
+      "verified_at": null,
+      "verification_origin": "inherited_research",
+      "verification_evidence_ref": "SRC-016#R-C05"
+    }
+  ],
+  "interpretations": [
+    {
+      "interpretation_id": "SRC-017:R01:design",
+      "supporting_observation_refs": [
+        "SRC-017:R01"
+      ],
+      "why_it_matters": "A bounded pattern for SCN-GAP, SCN-VALIDATE",
+      "adopt": "借鉴：RM 发起与协调、指定贡献者完成任务。不能把多代表写成实时共同编辑，也不推导澳洲部署或相同权限。",
+      "adapt": "Project-specific objects, permissions and tests; bank applicability remains to be validated.",
+      "avoid": "借鉴：RM 发起与协调、指定贡献者完成任务。不能把多代表写成实时共同编辑，也不推导澳洲部署或相同权限。",
+      "author": "Clear to Trade project",
+      "validation_status": "design_interpretation_not_bank_policy"
+    },
+    {
+      "interpretation_id": "SRC-017:R02:design",
+      "supporting_observation_refs": [
+        "SRC-017:R02"
+      ],
+      "why_it_matters": "A bounded pattern for SCN-GAP, SCN-VALIDATE",
+      "adopt": "借鉴：官网入口、分项贡献与提交/复核分离。不是全部新机构客户的 trading onboarding；不能复制其认证或时限为本银行要求。",
+      "adapt": "Project-specific objects, permissions and tests; bank applicability remains to be validated.",
+      "avoid": "借鉴：官网入口、分项贡献与提交/复核分离。不是全部新机构客户的 trading onboarding；不能复制其认证或时限为本银行要求。",
+      "author": "Clear to Trade project",
+      "validation_status": "design_interpretation_not_bank_policy"
+    },
+    {
+      "interpretation_id": "SRC-017:R03:design",
+      "supporting_observation_refs": [
+        "SRC-017:R03"
+      ],
+      "why_it_matters": "A bounded pattern for SCN-GAP, SCN-VALIDATE",
+      "adopt": "借鉴：新用户与既有用户的不同入口。特别注意：不能据此证明它采用逐 Request Item 隔离，更不能将其组织级共享直接照搬。",
+      "adapt": "Project-specific objects, permissions and tests; bank applicability remains to be validated.",
+      "avoid": "借鉴：新用户与既有用户的不同入口。特别注意：不能据此证明它采用逐 Request Item 隔离，更不能将其组织级共享直接照搬。",
+      "author": "Clear to Trade project",
+      "validation_status": "design_interpretation_not_bank_policy"
+    },
+    {
+      "interpretation_id": "SRC-017:R04:design",
+      "supporting_observation_refs": [
+        "SRC-017:R04"
+      ],
+      "why_it_matters": "A bounded pattern for SCN-GAP, SCN-VALIDATE",
+      "adopt": "借鉴：响应式网页可作为移动完成任务的载体；不据此声称需要新建 App，或将 Bermuda 的详细认证配置直接套到 Singapore。",
+      "adapt": "Project-specific objects, permissions and tests; bank applicability remains to be validated.",
+      "avoid": "借鉴：响应式网页可作为移动完成任务的载体；不据此声称需要新建 App，或将 Bermuda 的详细认证配置直接套到 Singapore。",
+      "author": "Clear to Trade project",
+      "validation_status": "design_interpretation_not_bank_policy"
+    },
+    {
+      "interpretation_id": "SRC-017:R05:design",
+      "supporting_observation_refs": [
+        "SRC-017:R05"
+      ],
+      "why_it_matters": "A bounded pattern for SCN-GAP, SCN-VALIDATE",
+      "adopt": "借鉴：关系支持与数字完成可结合。保留历史日期；不将发布中的时效、节省或文件减少数字移入我们的 business case。",
+      "adapt": "Project-specific objects, permissions and tests; bank applicability remains to be validated.",
+      "avoid": "借鉴：关系支持与数字完成可结合。保留历史日期；不将发布中的时效、节省或文件减少数字移入我们的 business case。",
+      "author": "Clear to Trade project",
+      "validation_status": "design_interpretation_not_bank_policy"
+    },
+    {
+      "interpretation_id": "SRC-017:R06:design",
+      "supporting_observation_refs": [
+        "SRC-017:R06"
+      ],
+      "why_it_matters": "A bounded pattern for SCN-GAP, SCN-VALIDATE",
+      "adopt": "仅作为取图入口。视频实际出现哪些界面、时间戳与版本，由制作者观看后记录；不能预写已看到某个 Dashboard。",
+      "adapt": "Project-specific objects, permissions and tests; bank applicability remains to be validated.",
+      "avoid": "仅作为取图入口。视频实际出现哪些界面、时间戳与版本，由制作者观看后记录；不能预写已看到某个 Dashboard。",
+      "author": "Clear to Trade project",
+      "validation_status": "design_interpretation_not_bank_policy"
+    },
+    {
+      "interpretation_id": "SRC-017:R07:design",
+      "supporting_observation_refs": [
+        "SRC-017:R07"
+      ],
+      "why_it_matters": "A bounded pattern for SCN-GAP, SCN-VALIDATE",
+      "adopt": "借鉴：同一关系中的服务任务与资料重用。与 2019 institutional 案例分开标市场、客户群与版本；不合成为同一张“现在全部能力”的清单。",
+      "adapt": "Project-specific objects, permissions and tests; bank applicability remains to be validated.",
+      "avoid": "借鉴：同一关系中的服务任务与资料重用。与 2019 institutional 案例分开标市场、客户群与版本；不合成为同一张“现在全部能力”的清单。",
+      "author": "Clear to Trade project",
+      "validation_status": "design_interpretation_not_bank_policy"
+    },
+    {
+      "interpretation_id": "SRC-017:R08:design",
+      "supporting_observation_refs": [
+        "SRC-017:R08"
+      ],
+      "why_it_matters": "A bounded pattern for SCN-GAP, SCN-VALIDATE",
+      "adopt": "作产品外观与导航参考，不用通用 cash/trade 页面冒充 KYC 证据复核界面。",
+      "adapt": "Project-specific objects, permissions and tests; bank applicability remains to be validated.",
+      "avoid": "作产品外观与导航参考，不用通用 cash/trade 页面冒充 KYC 证据复核界面。",
+      "author": "Clear to Trade project",
+      "validation_status": "design_interpretation_not_bank_policy"
+    },
+    {
+      "interpretation_id": "SRC-017:R09:design",
+      "supporting_observation_refs": [
+        "SRC-017:R09"
+      ],
+      "why_it_matters": "A bounded pattern for SCN-GAP, SCN-VALIDATE",
+      "adopt": "借鉴：窄任务可以有低摩擦入口。无单独登录不等于无身份验证，更不等于持链接即可查看整个企业案件。",
+      "adapt": "Project-specific objects, permissions and tests; bank applicability remains to be validated.",
+      "avoid": "借鉴：窄任务可以有低摩擦入口。无单独登录不等于无身份验证，更不等于持链接即可查看整个企业案件。",
+      "author": "Clear to Trade project",
+      "validation_status": "design_interpretation_not_bank_policy"
+    },
+    {
+      "interpretation_id": "SRC-017:R10:design",
+      "supporting_observation_refs": [
+        "SRC-017:R10"
+      ],
+      "why_it_matters": "A bounded pattern for SCN-GAP, SCN-VALIDATE",
+      "adopt": "借鉴：正式注册的关系沟通渠道。不是澳洲机构 KYC 文档提交案例；不支持员工个人 WhatsApp 无记录收件。",
+      "adapt": "Project-specific objects, permissions and tests; bank applicability remains to be validated.",
+      "avoid": "借鉴：正式注册的关系沟通渠道。不是澳洲机构 KYC 文档提交案例；不支持员工个人 WhatsApp 无记录收件。",
+      "author": "Clear to Trade project",
+      "validation_status": "design_interpretation_not_bank_policy"
+    },
+    {
+      "interpretation_id": "SRC-017:R11:design",
+      "supporting_observation_refs": [
+        "SRC-017:R11"
+      ],
+      "why_it_matters": "A bounded pattern for SCN-REQUIREMENTS",
+      "adopt": "借鉴：baseline information 与 case-specific needs 分开。不能假定本案公司已具备 Registry 资格或数据连接；不替代银行独立适用性判断。",
+      "adapt": "Project-specific objects, permissions and tests; bank applicability remains to be validated.",
+      "avoid": "借鉴：baseline information 与 case-specific needs 分开。不能假定本案公司已具备 Registry 资格或数据连接；不替代银行独立适用性判断。",
+      "author": "Clear to Trade project",
+      "validation_status": "design_interpretation_not_bank_policy"
+    },
+    {
+      "interpretation_id": "SRC-017:R12:design",
+      "supporting_observation_refs": [
+        "SRC-017:R12"
+      ],
+      "why_it_matters": "A bounded pattern for SCN-REQUIREMENTS",
+      "adopt": "借鉴：标准 baseline 问题集与解释口径。不能把金融机构 CBDDQ 原样变成 Entity A 企业客户清单。",
+      "adapt": "Project-specific objects, permissions and tests; bank applicability remains to be validated.",
+      "avoid": "借鉴：标准 baseline 问题集与解释口径。不能把金融机构 CBDDQ 原样变成 Entity A 企业客户清单。",
+      "author": "Clear to Trade project",
+      "validation_status": "design_interpretation_not_bank_policy"
+    },
+    {
+      "interpretation_id": "SRC-017:R13:design",
+      "supporting_observation_refs": [
+        "SRC-017:R13"
+      ],
+      "why_it_matters": "A bounded pattern for SCN-ENTITY",
+      "adopt": "借鉴：LegalEntity 与 PartyRelationship 分离。会计合并母公司不是完整自然人受益所有人结论；存在 LEI 不等于 KYC 完成。",
+      "adapt": "Project-specific objects, permissions and tests; bank applicability remains to be validated.",
+      "avoid": "借鉴：LegalEntity 与 PartyRelationship 分离。会计合并母公司不是完整自然人受益所有人结论；存在 LEI 不等于 KYC 完成。",
+      "author": "Clear to Trade project",
+      "validation_status": "design_interpretation_not_bank_policy"
+    },
+    {
+      "interpretation_id": "SRC-017:R14:design",
+      "supporting_observation_refs": [
+        "SRC-017:R14"
+      ],
+      "why_it_matters": "A bounded pattern for SCN-ENTITY",
+      "adopt": "作为 AuthorityRecord 与身份/角色分离的模式参考；不假定客户已持有 vLEI，也不据此自动授予银行产品签约或交易权限。",
+      "adapt": "Project-specific objects, permissions and tests; bank applicability remains to be validated.",
+      "avoid": "作为 AuthorityRecord 与身份/角色分离的模式参考；不假定客户已持有 vLEI，也不据此自动授予银行产品签约或交易权限。",
+      "author": "Clear to Trade project",
+      "validation_status": "design_interpretation_not_bank_policy"
+    },
+    {
+      "interpretation_id": "SRC-017:R15:design",
+      "supporting_observation_refs": [
+        "SRC-017:R15"
+      ],
+      "why_it_matters": "A bounded pattern for SCN-SCOPE",
+      "adopt": "借鉴：将对象、事件、状态和规则引用分开。不是推荐把 CDM 整套作为 KYC Schema，也不说明所有 FX 产品都使用同一协议。",
+      "adapt": "Project-specific objects, permissions and tests; bank applicability remains to be validated.",
+      "avoid": "借鉴：将对象、事件、状态和规则引用分开。不是推荐把 CDM 整套作为 KYC Schema，也不说明所有 FX 产品都使用同一协议。",
+      "author": "Clear to Trade project",
+      "validation_status": "design_interpretation_not_bank_policy"
+    },
+    {
+      "interpretation_id": "SRC-017:R16:design",
+      "supporting_observation_refs": [
+        "SRC-017:R16"
+      ],
+      "why_it_matters": "A bounded pattern for SCN-MATCH, SCN-READINESS",
+      "adopt": "借鉴：工作事件影响具体依赖与下一责任人。航空里程碑不等于银行批准，不迁移航空 SLA 或安全授权。",
+      "adapt": "Project-specific objects, permissions and tests; bank applicability remains to be validated.",
+      "avoid": "借鉴：工作事件影响具体依赖与下一责任人。航空里程碑不等于银行批准，不迁移航空 SLA 或安全授权。",
+      "author": "Clear to Trade project",
+      "validation_status": "design_interpretation_not_bank_policy"
+    },
+    {
+      "interpretation_id": "SRC-017:R17:design",
+      "supporting_observation_refs": [
+        "SRC-017:R17"
+      ],
+      "why_it_matters": "A bounded pattern for SCN-MATCH, SCN-READINESS",
+      "adopt": "借鉴：Shared Case Spine 与受控贡献。不能说所有参与方看同一份无权限区分的资料；不是银行产品案例。",
+      "adapt": "Project-specific objects, permissions and tests; bank applicability remains to be validated.",
+      "avoid": "借鉴：Shared Case Spine 与受控贡献。不能说所有参与方看同一份无权限区分的资料；不是银行产品案例。",
+      "author": "Clear to Trade project",
+      "validation_status": "design_interpretation_not_bank_policy"
+    },
+    {
+      "interpretation_id": "SRC-017:R18:design",
+      "supporting_observation_refs": [
+        "SRC-017:R18"
+      ],
+      "why_it_matters": "A bounded pattern for SCN-MATCH, SCN-READINESS",
+      "adopt": "借鉴：收到、提交、评估、补正等关键事件同时保存对象、参与者、时点与用途；不用货运条码字段替代银行业务对象。",
+      "adapt": "Project-specific objects, permissions and tests; bank applicability remains to be validated.",
+      "avoid": "借鉴：收到、提交、评估、补正等关键事件同时保存对象、参与者、时点与用途；不用货运条码字段替代银行业务对象。",
+      "author": "Clear to Trade project",
+      "validation_status": "design_interpretation_not_bank_policy"
+    },
+    {
+      "interpretation_id": "SRC-017:R19:design",
+      "supporting_observation_refs": [
+        "SRC-017:R19"
+      ],
+      "why_it_matters": "A bounded pattern for SCN-MATCH, SCN-READINESS",
+      "adopt": "借鉴：对象版本与下游使用关系持续连接；不是本案已经建立数字孪生或实现自动影响分析的证据。",
+      "adapt": "Project-specific objects, permissions and tests; bank applicability remains to be validated.",
+      "avoid": "借鉴：对象版本与下游使用关系持续连接；不是本案已经建立数字孪生或实现自动影响分析的证据。",
+      "author": "Clear to Trade project",
+      "validation_status": "design_interpretation_not_bank_policy"
+    },
+    {
+      "interpretation_id": "SRC-017:R20:design",
+      "supporting_observation_refs": [
+        "SRC-017:R20"
+      ],
+      "why_it_matters": "A bounded pattern for SCN-MATCH, SCN-READINESS",
+      "adopt": "借鉴：记录谁基于哪份输入产生哪个版本。只借 lineage 模式，不把医疗字段与权限直接搬到银行。",
+      "adapt": "Project-specific objects, permissions and tests; bank applicability remains to be validated.",
+      "avoid": "借鉴：记录谁基于哪份输入产生哪个版本。只借 lineage 模式，不把医疗字段与权限直接搬到银行。",
+      "author": "Clear to Trade project",
+      "validation_status": "design_interpretation_not_bank_policy"
+    },
+    {
+      "interpretation_id": "SRC-017:R21:design",
+      "supporting_observation_refs": [
+        "SRC-017:R21"
+      ],
+      "why_it_matters": "A bounded pattern for SCN-QA",
+      "adopt": "作为 Assurance 研究延伸，不宣称已完成银行 QA 控制映射；不将它当金融法规。",
+      "adapt": "Project-specific objects, permissions and tests; bank applicability remains to be validated.",
+      "avoid": "作为 Assurance 研究延伸，不宣称已完成银行 QA 控制映射；不将它当金融法规。",
+      "author": "Clear to Trade project",
+      "validation_status": "design_interpretation_not_bank_policy"
+    },
+    {
+      "interpretation_id": "SRC-017:R22:design",
+      "supporting_observation_refs": [
+        "SRC-017:R22"
+      ],
+      "why_it_matters": "A bounded pattern for SCN-QA",
+      "adopt": "列为质量变更/补正机制的后续研究入口，本轮不以此页证明任何具体银行流程已经实施。",
+      "adapt": "Project-specific objects, permissions and tests; bank applicability remains to be validated.",
+      "avoid": "列为质量变更/补正机制的后续研究入口，本轮不以此页证明任何具体银行流程已经实施。",
+      "author": "Clear to Trade project",
+      "validation_status": "design_interpretation_not_bank_policy"
+    },
+    {
+      "interpretation_id": "SRC-017:R23:design",
+      "supporting_observation_refs": [
+        "SRC-017:R23"
+      ],
+      "why_it_matters": "A bounded pattern for SCN-GAP, SCN-VALIDATE",
+      "adopt": "借鉴：批准、留存与监督比渠道品牌更重要。不是全球 WhatsApp 禁令，也不是澳大利亚法律结论。",
+      "adapt": "Project-specific objects, permissions and tests; bank applicability remains to be validated.",
+      "avoid": "借鉴：批准、留存与监督比渠道品牌更重要。不是全球 WhatsApp 禁令，也不是澳大利亚法律结论。",
+      "author": "Clear to Trade project",
+      "validation_status": "design_interpretation_not_bank_policy"
+    },
+    {
+      "interpretation_id": "SRC-017:R24:design",
+      "supporting_observation_refs": [
+        "SRC-017:R24"
+      ],
+      "why_it_matters": "A bounded pattern for SCN-GAP, SCN-VALIDATE",
+      "adopt": "提醒：同一邮箱的链接和 OTP 不自动构成多因素。不能仅据公开页面否定某银行完整安全方案，也不是澳洲统一强制 UI。",
+      "adapt": "Project-specific objects, permissions and tests; bank applicability remains to be validated.",
+      "avoid": "提醒：同一邮箱的链接和 OTP 不自动构成多因素。不能仅据公开页面否定某银行完整安全方案，也不是澳洲统一强制 UI。",
+      "author": "Clear to Trade project",
+      "validation_status": "design_interpretation_not_bank_policy"
+    },
+    {
+      "interpretation_id": "SRC-017:R25:design",
+      "supporting_observation_refs": [
+        "SRC-017:R25"
+      ],
+      "why_it_matters": "A bounded pattern for SCN-GAP, SCN-VALIDATE",
+      "adopt": "借鉴：收到文件、安全检查、业务充分性分别记录。做出上传按钮不等于安全措施已实现。",
+      "adapt": "Project-specific objects, permissions and tests; bank applicability remains to be validated.",
+      "avoid": "借鉴：收到文件、安全检查、业务充分性分别记录。做出上传按钮不等于安全措施已实现。",
+      "author": "Clear to Trade project",
+      "validation_status": "design_interpretation_not_bank_policy"
+    },
+    {
+      "interpretation_id": "SRC-017:R26:design",
+      "supporting_observation_refs": [
+        "SRC-017:R26"
+      ],
+      "why_it_matters": "A bounded pattern for SCN-GAP, SCN-VALIDATE",
+      "adopt": "支持 Entity、Representative、Authority 与用途证据分离。本文不据此确定所有法定必填字段、例外或有限贡献者权限。",
+      "adapt": "Project-specific objects, permissions and tests; bank applicability remains to be validated.",
+      "avoid": "支持 Entity、Representative、Authority 与用途证据分离。本文不据此确定所有法定必填字段、例外或有限贡献者权限。",
+      "author": "Clear to Trade project",
+      "validation_status": "design_interpretation_not_bank_policy"
+    },
+    {
+      "interpretation_id": "SRC-017:R27:design",
+      "supporting_observation_refs": [
+        "SRC-017:R27"
+      ],
+      "why_it_matters": "A bounded pattern for SCN-EDD",
+      "adopt": "借鉴：Requirement 的问题与用途应具体，不用更多上传文件数量代表控制充分。",
+      "adapt": "Project-specific objects, permissions and tests; bank applicability remains to be validated.",
+      "avoid": "借鉴：Requirement 的问题与用途应具体，不用更多上传文件数量代表控制充分。",
+      "author": "Clear to Trade project",
+      "validation_status": "design_interpretation_not_bank_policy"
+    },
+    {
+      "interpretation_id": "SRC-017:R28:design",
+      "supporting_observation_refs": [
+        "SRC-017:R28"
+      ],
+      "why_it_matters": "A bounded pattern for SCN-EDD",
+      "adopt": "EDD 是有适用原因的分支，不为展示功能硬塞入每一案件；具体授权与规则仍待银行确认。",
+      "adapt": "Project-specific objects, permissions and tests; bank applicability remains to be validated.",
+      "avoid": "EDD 是有适用原因的分支，不为展示功能硬塞入每一案件；具体授权与规则仍待银行确认。",
+      "author": "Clear to Trade project",
+      "validation_status": "design_interpretation_not_bank_policy"
+    },
+    {
+      "interpretation_id": "SRC-017:R29:design",
+      "supporting_observation_refs": [
+        "SRC-017:R29"
+      ],
+      "why_it_matters": "A bounded pattern for SCN-CREDIT",
+      "adopt": "支持把 Credit 与 KYC 条件分开讨论；不是各国已完整实施或本银行已采纳的证明。",
+      "adapt": "Project-specific objects, permissions and tests; bank applicability remains to be validated.",
+      "avoid": "支持把 Credit 与 KYC 条件分开讨论；不是各国已完整实施或本银行已采纳的证明。",
+      "author": "Clear to Trade project",
+      "validation_status": "design_interpretation_not_bank_policy"
+    },
+    {
+      "interpretation_id": "SRC-017:R30:design",
+      "supporting_observation_refs": [
+        "SRC-017:R30"
+      ],
+      "why_it_matters": "A bounded pattern for SCN-POPULATION, SCN-MATCH",
+      "adopt": "筛查范围需要标来源与时点；不要从真实名单挑一人充当合成命中，也不要把该名单说成全球所有适用名单。",
+      "adapt": "Project-specific objects, permissions and tests; bank applicability remains to be validated.",
+      "avoid": "筛查范围需要标来源与时点；不要从真实名单挑一人充当合成命中，也不要把该名单说成全球所有适用名单。",
+      "author": "Clear to Trade project",
+      "validation_status": "design_interpretation_not_bank_policy"
+    },
+    {
+      "interpretation_id": "SRC-017:R31:design",
+      "supporting_observation_refs": [
+        "SRC-017:R31"
+      ],
+      "why_it_matters": "A bounded pattern for SCN-POPULATION, SCN-MATCH",
+      "adopt": "作为 SCN-MATCH 参考；制作人需要重新打开 PDF 并核对引用位置，不预填页码或取图编号。",
+      "adapt": "Project-specific objects, permissions and tests; bank applicability remains to be validated.",
+      "avoid": "作为 SCN-MATCH 参考；制作人需要重新打开 PDF 并核对引用位置，不预填页码或取图编号。",
+      "author": "Clear to Trade project",
+      "validation_status": "design_interpretation_not_bank_policy"
+    },
+    {
+      "interpretation_id": "SRC-017:R32:design",
+      "supporting_observation_refs": [
+        "SRC-017:R32"
+      ],
+      "why_it_matters": "A bounded pattern for Studio interaction",
+      "adopt": "轻导航、实内容；不宣称网页实现了原生Apple材质，也不为装饰牺牲证据阅读。官网列出Principles章节10:31，这是官方章节入口而非本轮实截帧时间。",
+      "adapt": "Project-specific objects, permissions and tests; bank applicability remains to be validated.",
+      "avoid": "轻导航、实内容；不宣称网页实现了原生Apple材质，也不为装饰牺牲证据阅读。官网列出Principles章节10:31，这是官方章节入口而非本轮实截帧时间。",
+      "author": "Clear to Trade project",
+      "validation_status": "design_interpretation_not_bank_policy"
+    },
+    {
+      "interpretation_id": "SRC-017:R33:design",
+      "supporting_observation_refs": [
+        "SRC-017:R33"
+      ],
+      "why_it_matters": "A bounded pattern for Studio interaction",
+      "adopt": "把返回同一场景做成可测试行为，不只是画一个Back图标。模式参考不证明我们的HTML已达可访问性要求。",
+      "adapt": "Project-specific objects, permissions and tests; bank applicability remains to be validated.",
+      "avoid": "把返回同一场景做成可测试行为，不只是画一个Back图标。模式参考不证明我们的HTML已达可访问性要求。",
+      "author": "Clear to Trade project",
+      "validation_status": "design_interpretation_not_bank_policy"
+    },
+    {
+      "interpretation_id": "SRC-017:R34:design",
+      "supporting_observation_refs": [
+        "SRC-017:R34"
+      ],
+      "why_it_matters": "A bounded pattern for Studio interaction",
+      "adopt": "标题i可以解释定义，但同时支持focus/tap；关键错误与阻塞不能藏在这里。",
+      "adapt": "Project-specific objects, permissions and tests; bank applicability remains to be validated.",
+      "avoid": "标题i可以解释定义，但同时支持focus/tap；关键错误与阻塞不能藏在这里。",
+      "author": "Clear to Trade project",
+      "validation_status": "design_interpretation_not_bank_policy"
+    },
+    {
+      "interpretation_id": "SRC-017:R35:design",
+      "supporting_observation_refs": [
+        "SRC-017:R35"
+      ],
+      "why_it_matters": "A bounded pattern for Studio interaction",
+      "adopt": "长Journey同时提供点击阶段、上一/下一、回选中场景，不只靠拖拉/缩放。",
+      "adapt": "Project-specific objects, permissions and tests; bank applicability remains to be validated.",
+      "avoid": "长Journey同时提供点击阶段、上一/下一、回选中场景，不只靠拖拉/缩放。",
+      "author": "Clear to Trade project",
+      "validation_status": "design_interpretation_not_bank_policy"
+    },
+    {
+      "interpretation_id": "SRC-017:R36:design",
+      "supporting_observation_refs": [
+        "SRC-017:R36"
+      ],
+      "why_it_matters": "A bounded pattern for Studio interaction",
+      "adopt": "内部可用zh-CN/en-AU/en-US；切语言不能修改案件主体、业务地区或policy。不要把澳大利亚语言标签写成英国业务规则。",
+      "adapt": "Project-specific objects, permissions and tests; bank applicability remains to be validated.",
+      "avoid": "内部可用zh-CN/en-AU/en-US；切语言不能修改案件主体、业务地区或policy。不要把澳大利亚语言标签写成英国业务规则。",
+      "author": "Clear to Trade project",
+      "validation_status": "design_interpretation_not_bank_policy"
+    },
+    {
+      "interpretation_id": "SRC-016:R-C01:design",
+      "supporting_observation_refs": [
+        "SRC-016:R-C01"
+      ],
+      "why_it_matters": "A bounded pattern for SCN-POPULATION, SCN-MATCH",
+      "adopt": "以证据和问题组织工作。",
+      "adapt": "Project-specific objects, permissions and tests; bank applicability remains to be validated.",
+      "avoid": "把供应商分数或单字段差异当批准",
+      "author": "Clear to Trade project",
+      "validation_status": "design_interpretation_not_bank_policy"
+    },
+    {
+      "interpretation_id": "SRC-016:R-C02:design",
+      "supporting_observation_refs": [
+        "SRC-016:R-C02"
+      ],
+      "why_it_matters": "A bounded pattern for SCN-POPULATION, SCN-MATCH",
+      "adopt": "typed claims、source/precision。",
+      "adapt": "Project-specific objects, permissions and tests; bank applicability remains to be validated.",
+      "avoid": "这份名单等于所有适用名单或每字段都是客户必填",
+      "author": "Clear to Trade project",
+      "validation_status": "design_interpretation_not_bank_policy"
+    },
+    {
+      "interpretation_id": "SRC-016:R-C03:design",
+      "supporting_observation_refs": [
+        "SRC-016:R-C03"
+      ],
+      "why_it_matters": "A bounded pattern for SCN-EDD",
+      "adopt": "理由/范围/措施明确。",
+      "adapt": "Project-specific objects, permissions and tests; bank applicability remains to be validated.",
+      "avoid": "每个alert都做EDD或EDD覆盖制裁限制",
+      "author": "Clear to Trade project",
+      "validation_status": "design_interpretation_not_bank_policy"
+    },
+    {
+      "interpretation_id": "SRC-016:R-C04:design",
+      "supporting_observation_refs": [
+        "SRC-016:R-C04"
+      ],
+      "why_it_matters": "A bounded pattern for SCN-POPULATION, SCN-EDD",
+      "adopt": "分类与处理依据分开。",
+      "adapt": "Project-specific objects, permissions and tests; bank applicability remains to be validated.",
+      "avoid": "把 Person T 写成PEP或默认高风险",
+      "author": "Clear to Trade project",
+      "validation_status": "design_interpretation_not_bank_policy"
+    },
+    {
+      "interpretation_id": "SRC-016:R-C05:design",
+      "supporting_observation_refs": [
+        "SRC-016:R-C05"
+      ],
+      "why_it_matters": "A bounded pattern for SCN-MATCH, SCN-EDD",
+      "adopt": "记录谁基于哪些版本做了什么。",
+      "adapt": "Project-specific objects, permissions and tests; bank applicability remains to be validated.",
+      "avoid": "宣称实现医疗标准或以其为银行法规",
+      "author": "Clear to Trade project",
+      "validation_status": "design_interpretation_not_bank_policy"
+    }
+  ],
+  "bindings": [
+    {
+      "binding_id": "SRC-017:R01:binding",
+      "source_ref": "REFSRC-c87950d327fe",
+      "observation_ref": "SRC-017:R01",
+      "interpretation_ref": "SRC-017:R01:design",
+      "scenario_refs": [
+        "SCN-GAP",
+        "SCN-VALIDATE"
+      ],
+      "semantic_node_refs": [],
+      "field_refs": [],
+      "support_kind": "design_interpretation",
+      "binding_rationale": "Source observation informs design, not executable bank authority."
+    },
+    {
+      "binding_id": "SRC-017:R02:binding",
+      "source_ref": "REFSRC-3f0c51e665c8",
+      "observation_ref": "SRC-017:R02",
+      "interpretation_ref": "SRC-017:R02:design",
+      "scenario_refs": [
+        "SCN-GAP",
+        "SCN-VALIDATE"
+      ],
+      "semantic_node_refs": [],
+      "field_refs": [],
+      "support_kind": "design_interpretation",
+      "binding_rationale": "Source observation informs design, not executable bank authority."
+    },
+    {
+      "binding_id": "SRC-017:R03:binding",
+      "source_ref": "REFSRC-fc2a14663b0d",
+      "observation_ref": "SRC-017:R03",
+      "interpretation_ref": "SRC-017:R03:design",
+      "scenario_refs": [
+        "SCN-GAP",
+        "SCN-VALIDATE"
+      ],
+      "semantic_node_refs": [],
+      "field_refs": [],
+      "support_kind": "design_interpretation",
+      "binding_rationale": "Source observation informs design, not executable bank authority."
+    },
+    {
+      "binding_id": "SRC-017:R04:binding",
+      "source_ref": "REFSRC-6cc73c38d7be",
+      "observation_ref": "SRC-017:R04",
+      "interpretation_ref": "SRC-017:R04:design",
+      "scenario_refs": [
+        "SCN-GAP",
+        "SCN-VALIDATE"
+      ],
+      "semantic_node_refs": [],
+      "field_refs": [],
+      "support_kind": "design_interpretation",
+      "binding_rationale": "Source observation informs design, not executable bank authority."
+    },
+    {
+      "binding_id": "SRC-017:R05:binding",
+      "source_ref": "REFSRC-5007fcbd71dc",
+      "observation_ref": "SRC-017:R05",
+      "interpretation_ref": "SRC-017:R05:design",
+      "scenario_refs": [
+        "SCN-GAP",
+        "SCN-VALIDATE"
+      ],
+      "semantic_node_refs": [],
+      "field_refs": [],
+      "support_kind": "design_interpretation",
+      "binding_rationale": "Source observation informs design, not executable bank authority."
+    },
+    {
+      "binding_id": "SRC-017:R06:binding",
+      "source_ref": "REFSRC-593eb3d2134d",
+      "observation_ref": "SRC-017:R06",
+      "interpretation_ref": "SRC-017:R06:design",
+      "scenario_refs": [
+        "SCN-GAP",
+        "SCN-VALIDATE"
+      ],
+      "semantic_node_refs": [],
+      "field_refs": [],
+      "support_kind": "design_interpretation",
+      "binding_rationale": "Source observation informs design, not executable bank authority."
+    },
+    {
+      "binding_id": "SRC-017:R07:binding",
+      "source_ref": "REFSRC-609062df61e2",
+      "observation_ref": "SRC-017:R07",
+      "interpretation_ref": "SRC-017:R07:design",
+      "scenario_refs": [
+        "SCN-GAP",
+        "SCN-VALIDATE"
+      ],
+      "semantic_node_refs": [],
+      "field_refs": [],
+      "support_kind": "design_interpretation",
+      "binding_rationale": "Source observation informs design, not executable bank authority."
+    },
+    {
+      "binding_id": "SRC-017:R08:binding",
+      "source_ref": "REFSRC-7d39967abdab",
+      "observation_ref": "SRC-017:R08",
+      "interpretation_ref": "SRC-017:R08:design",
+      "scenario_refs": [
+        "SCN-GAP",
+        "SCN-VALIDATE"
+      ],
+      "semantic_node_refs": [],
+      "field_refs": [],
+      "support_kind": "design_interpretation",
+      "binding_rationale": "Source observation informs design, not executable bank authority."
+    },
+    {
+      "binding_id": "SRC-017:R09:binding",
+      "source_ref": "REFSRC-3691009688e5",
+      "observation_ref": "SRC-017:R09",
+      "interpretation_ref": "SRC-017:R09:design",
+      "scenario_refs": [
+        "SCN-GAP",
+        "SCN-VALIDATE"
+      ],
+      "semantic_node_refs": [],
+      "field_refs": [],
+      "support_kind": "design_interpretation",
+      "binding_rationale": "Source observation informs design, not executable bank authority."
+    },
+    {
+      "binding_id": "SRC-017:R10:binding",
+      "source_ref": "REFSRC-1e88f1a0dc43",
+      "observation_ref": "SRC-017:R10",
+      "interpretation_ref": "SRC-017:R10:design",
+      "scenario_refs": [
+        "SCN-GAP",
+        "SCN-VALIDATE"
+      ],
+      "semantic_node_refs": [],
+      "field_refs": [],
+      "support_kind": "design_interpretation",
+      "binding_rationale": "Source observation informs design, not executable bank authority."
+    },
+    {
+      "binding_id": "SRC-017:R11:binding",
+      "source_ref": "REFSRC-58eef49f44a6",
+      "observation_ref": "SRC-017:R11",
+      "interpretation_ref": "SRC-017:R11:design",
+      "scenario_refs": [
+        "SCN-REQUIREMENTS"
+      ],
+      "semantic_node_refs": [],
+      "field_refs": [],
+      "support_kind": "design_interpretation",
+      "binding_rationale": "Source observation informs design, not executable bank authority."
+    },
+    {
+      "binding_id": "SRC-017:R12:binding",
+      "source_ref": "REFSRC-c48c6d8deca0",
+      "observation_ref": "SRC-017:R12",
+      "interpretation_ref": "SRC-017:R12:design",
+      "scenario_refs": [
+        "SCN-REQUIREMENTS"
+      ],
+      "semantic_node_refs": [],
+      "field_refs": [],
+      "support_kind": "design_interpretation",
+      "binding_rationale": "Source observation informs design, not executable bank authority."
+    },
+    {
+      "binding_id": "SRC-017:R13:binding",
+      "source_ref": "REFSRC-08762a0163df",
+      "observation_ref": "SRC-017:R13",
+      "interpretation_ref": "SRC-017:R13:design",
+      "scenario_refs": [
+        "SCN-ENTITY"
+      ],
+      "semantic_node_refs": [],
+      "field_refs": [],
+      "support_kind": "design_interpretation",
+      "binding_rationale": "Source observation informs design, not executable bank authority."
+    },
+    {
+      "binding_id": "SRC-017:R14:binding",
+      "source_ref": "REFSRC-4f617c2d4b50",
+      "observation_ref": "SRC-017:R14",
+      "interpretation_ref": "SRC-017:R14:design",
+      "scenario_refs": [
+        "SCN-ENTITY"
+      ],
+      "semantic_node_refs": [],
+      "field_refs": [],
+      "support_kind": "design_interpretation",
+      "binding_rationale": "Source observation informs design, not executable bank authority."
+    },
+    {
+      "binding_id": "SRC-017:R15:binding",
+      "source_ref": "REFSRC-2f2f723a6c8c",
+      "observation_ref": "SRC-017:R15",
+      "interpretation_ref": "SRC-017:R15:design",
+      "scenario_refs": [
+        "SCN-SCOPE"
+      ],
+      "semantic_node_refs": [],
+      "field_refs": [],
+      "support_kind": "design_interpretation",
+      "binding_rationale": "Source observation informs design, not executable bank authority."
+    },
+    {
+      "binding_id": "SRC-017:R16:binding",
+      "source_ref": "REFSRC-278ac9ad8738",
+      "observation_ref": "SRC-017:R16",
+      "interpretation_ref": "SRC-017:R16:design",
+      "scenario_refs": [
+        "SCN-MATCH",
+        "SCN-READINESS",
+        "SCN-CONFLICTS",
+        "SCN-CREDIT",
+        "SCN-LEGAL"
+      ],
+      "semantic_node_refs": [
+        "D01-READY",
+        "D02-INPUT",
+        "D02-REVISION"
+      ],
+      "field_refs": [],
+      "support_kind": "transferable_pattern",
+      "binding_rationale": "Source observation informs design, not executable bank authority. Batch D source-qualified binding (SRC-019): version/dependency or downstream-update design inspiration; not bank policy."
+    },
+    {
+      "binding_id": "SRC-017:R17:binding",
+      "source_ref": "REFSRC-31432d782d31",
+      "observation_ref": "SRC-017:R17",
+      "interpretation_ref": "SRC-017:R17:design",
+      "scenario_refs": [
+        "SCN-MATCH",
+        "SCN-READINESS"
+      ],
+      "semantic_node_refs": [],
+      "field_refs": [],
+      "support_kind": "transferable_pattern",
+      "binding_rationale": "Source observation informs design, not executable bank authority."
+    },
+    {
+      "binding_id": "SRC-017:R18:binding",
+      "source_ref": "REFSRC-3e10e7311eba",
+      "observation_ref": "SRC-017:R18",
+      "interpretation_ref": "SRC-017:R18:design",
+      "scenario_refs": [
+        "SCN-MATCH",
+        "SCN-READINESS"
+      ],
+      "semantic_node_refs": [],
+      "field_refs": [],
+      "support_kind": "transferable_pattern",
+      "binding_rationale": "Source observation informs design, not executable bank authority."
+    },
+    {
+      "binding_id": "SRC-017:R19:binding",
+      "source_ref": "REFSRC-e1fe72472bf9",
+      "observation_ref": "SRC-017:R19",
+      "interpretation_ref": "SRC-017:R19:design",
+      "scenario_refs": [
+        "SCN-MATCH",
+        "SCN-READINESS",
+        "SCN-CONFLICTS",
+        "SCN-CREDIT",
+        "SCN-LEGAL"
+      ],
+      "semantic_node_refs": [
+        "D02-ASSESS",
+        "D02-DECISION",
+        "D02-CONDITION",
+        "D02-INPUT",
+        "D02-REVISION",
+        "D02-REVIEW",
+        "D02-APPROVAL",
+        "D02-EXECUTION",
+        "D03-CASE",
+        "D03-UNKNOWN",
+        "D03-DEPS",
+        "D03-RESOLVE"
+      ],
+      "field_refs": [],
+      "support_kind": "transferable_pattern",
+      "binding_rationale": "Source observation informs design, not executable bank authority. Batch D source-qualified binding (SRC-019): version/dependency or downstream-update design inspiration; not bank policy."
+    },
+    {
+      "binding_id": "SRC-017:R20:binding",
+      "source_ref": "REFSRC-f9e731b2c4ac",
+      "observation_ref": "SRC-017:R20",
+      "interpretation_ref": "SRC-017:R20:design",
+      "scenario_refs": [
+        "SCN-MATCH",
+        "SCN-READINESS"
+      ],
+      "semantic_node_refs": [],
+      "field_refs": [],
+      "support_kind": "transferable_pattern",
+      "binding_rationale": "Source observation informs design, not executable bank authority."
+    },
+    {
+      "binding_id": "SRC-017:R21:binding",
+      "source_ref": "REFSRC-a69324ba5269",
+      "observation_ref": "SRC-017:R21",
+      "interpretation_ref": "SRC-017:R21:design",
+      "scenario_refs": [
+        "SCN-QA"
+      ],
+      "semantic_node_refs": [],
+      "field_refs": [],
+      "support_kind": "transferable_pattern",
+      "binding_rationale": "Source observation informs design, not executable bank authority."
+    },
+    {
+      "binding_id": "SRC-017:R22:binding",
+      "source_ref": "REFSRC-cc616f5c6867",
+      "observation_ref": "SRC-017:R22",
+      "interpretation_ref": "SRC-017:R22:design",
+      "scenario_refs": [
+        "SCN-QA"
+      ],
+      "semantic_node_refs": [],
+      "field_refs": [],
+      "support_kind": "transferable_pattern",
+      "binding_rationale": "Source observation informs design, not executable bank authority."
+    },
+    {
+      "binding_id": "SRC-017:R23:binding",
+      "source_ref": "REFSRC-c507f2d5fad0",
+      "observation_ref": "SRC-017:R23",
+      "interpretation_ref": "SRC-017:R23:design",
+      "scenario_refs": [
+        "SCN-GAP",
+        "SCN-VALIDATE"
+      ],
+      "semantic_node_refs": [],
+      "field_refs": [],
+      "support_kind": "design_interpretation",
+      "binding_rationale": "Source observation informs design, not executable bank authority."
+    },
+    {
+      "binding_id": "SRC-017:R24:binding",
+      "source_ref": "REFSRC-8bde3fcd6188",
+      "observation_ref": "SRC-017:R24",
+      "interpretation_ref": "SRC-017:R24:design",
+      "scenario_refs": [
+        "SCN-GAP",
+        "SCN-VALIDATE"
+      ],
+      "semantic_node_refs": [],
+      "field_refs": [],
+      "support_kind": "design_interpretation",
+      "binding_rationale": "Source observation informs design, not executable bank authority."
+    },
+    {
+      "binding_id": "SRC-017:R25:binding",
+      "source_ref": "REFSRC-653e4d1a3bb2",
+      "observation_ref": "SRC-017:R25",
+      "interpretation_ref": "SRC-017:R25:design",
+      "scenario_refs": [
+        "SCN-GAP",
+        "SCN-VALIDATE"
+      ],
+      "semantic_node_refs": [],
+      "field_refs": [],
+      "support_kind": "design_interpretation",
+      "binding_rationale": "Source observation informs design, not executable bank authority."
+    },
+    {
+      "binding_id": "SRC-017:R26:binding",
+      "source_ref": "REFSRC-0c59d273e815",
+      "observation_ref": "SRC-017:R26",
+      "interpretation_ref": "SRC-017:R26:design",
+      "scenario_refs": [
+        "SCN-GAP",
+        "SCN-VALIDATE"
+      ],
+      "semantic_node_refs": [],
+      "field_refs": [],
+      "support_kind": "design_interpretation",
+      "binding_rationale": "Source observation informs design, not executable bank authority."
+    },
+    {
+      "binding_id": "SRC-017:R27:binding",
+      "source_ref": "REFSRC-7e03129fa2bc",
+      "observation_ref": "SRC-017:R27",
+      "interpretation_ref": "SRC-017:R27:design",
+      "scenario_refs": [
+        "SCN-EDD"
+      ],
+      "semantic_node_refs": [],
+      "field_refs": [],
+      "support_kind": "design_interpretation",
+      "binding_rationale": "Source observation informs design, not executable bank authority."
+    },
+    {
+      "binding_id": "SRC-017:R28:binding",
+      "source_ref": "REFSRC-2c963446a9c8",
+      "observation_ref": "SRC-017:R28",
+      "interpretation_ref": "SRC-017:R28:design",
+      "scenario_refs": [
+        "SCN-EDD"
+      ],
+      "semantic_node_refs": [],
+      "field_refs": [],
+      "support_kind": "design_interpretation",
+      "binding_rationale": "Source observation informs design, not executable bank authority."
+    },
+    {
+      "binding_id": "SRC-017:R29:binding",
+      "source_ref": "REFSRC-930e9fabf23c",
+      "observation_ref": "SRC-017:R29",
+      "interpretation_ref": "SRC-017:R29:design",
+      "scenario_refs": [
+        "SCN-CREDIT",
+        "SCN-CONFLICTS",
+        "SCN-LEGAL"
+      ],
+      "semantic_node_refs": [
+        "D01-CREDIT",
+        "D01-LEGAL",
+        "D02-ASSESS",
+        "D02-DECISION",
+        "D02-CONDITION",
+        "D02-INPUT",
+        "D02-REVISION",
+        "D02-REVIEW",
+        "D02-APPROVAL",
+        "D02-EXECUTION"
+      ],
+      "field_refs": [],
+      "support_kind": "design_interpretation",
+      "binding_rationale": "Source observation informs design, not executable bank authority. Batch D source-qualified binding (SRC-019): version/dependency or downstream-update design inspiration; not bank policy."
+    },
+    {
+      "binding_id": "SRC-017:R30:binding",
+      "source_ref": "REFSRC-6dd2afd31911",
+      "observation_ref": "SRC-017:R30",
+      "interpretation_ref": "SRC-017:R30:design",
+      "scenario_refs": [
+        "SCN-POPULATION",
+        "SCN-MATCH"
+      ],
+      "semantic_node_refs": [],
+      "field_refs": [],
+      "support_kind": "design_interpretation",
+      "binding_rationale": "Source observation informs design, not executable bank authority."
+    },
+    {
+      "binding_id": "SRC-017:R31:binding",
+      "source_ref": "REFSRC-2870f362d315",
+      "observation_ref": "SRC-017:R31",
+      "interpretation_ref": "SRC-017:R31:design",
+      "scenario_refs": [
+        "SCN-POPULATION",
+        "SCN-MATCH"
+      ],
+      "semantic_node_refs": [],
+      "field_refs": [],
+      "support_kind": "design_interpretation",
+      "binding_rationale": "Source observation informs design, not executable bank authority."
+    },
+    {
+      "binding_id": "SRC-017:R32:binding",
+      "source_ref": "REFSRC-9a64ff203519",
+      "observation_ref": "SRC-017:R32",
+      "interpretation_ref": "SRC-017:R32:design",
+      "scenario_refs": [],
+      "semantic_node_refs": [],
+      "field_refs": [],
+      "support_kind": "design_interpretation",
+      "binding_rationale": "Source observation informs design, not executable bank authority."
+    },
+    {
+      "binding_id": "SRC-017:R33:binding",
+      "source_ref": "REFSRC-ced9cf672600",
+      "observation_ref": "SRC-017:R33",
+      "interpretation_ref": "SRC-017:R33:design",
+      "scenario_refs": [],
+      "semantic_node_refs": [],
+      "field_refs": [],
+      "support_kind": "design_interpretation",
+      "binding_rationale": "Source observation informs design, not executable bank authority."
+    },
+    {
+      "binding_id": "SRC-017:R34:binding",
+      "source_ref": "REFSRC-a6041f5d6736",
+      "observation_ref": "SRC-017:R34",
+      "interpretation_ref": "SRC-017:R34:design",
+      "scenario_refs": [],
+      "semantic_node_refs": [],
+      "field_refs": [],
+      "support_kind": "design_interpretation",
+      "binding_rationale": "Source observation informs design, not executable bank authority."
+    },
+    {
+      "binding_id": "SRC-017:R35:binding",
+      "source_ref": "REFSRC-1644eed6024a",
+      "observation_ref": "SRC-017:R35",
+      "interpretation_ref": "SRC-017:R35:design",
+      "scenario_refs": [],
+      "semantic_node_refs": [],
+      "field_refs": [],
+      "support_kind": "design_interpretation",
+      "binding_rationale": "Source observation informs design, not executable bank authority."
+    },
+    {
+      "binding_id": "SRC-017:R36:binding",
+      "source_ref": "REFSRC-72049fdc31f1",
+      "observation_ref": "SRC-017:R36",
+      "interpretation_ref": "SRC-017:R36:design",
+      "scenario_refs": [],
+      "semantic_node_refs": [],
+      "field_refs": [],
+      "support_kind": "design_interpretation",
+      "binding_rationale": "Source observation informs design, not executable bank authority."
+    },
+    {
+      "binding_id": "SRC-016:R-C01:binding",
+      "source_ref": "REFSRC-f6ba73964d9b",
+      "observation_ref": "SRC-016:R-C01",
+      "interpretation_ref": "SRC-016:R-C01:design",
+      "scenario_refs": [
+        "SCN-POPULATION",
+        "SCN-MATCH"
+      ],
+      "semantic_node_refs": [
+        "P06",
+        "M01",
+        "M03",
+        "M07"
+      ],
+      "field_refs": [],
+      "support_kind": "design_interpretation",
+      "binding_rationale": "Source observation informs design, not executable bank authority."
+    },
+    {
+      "binding_id": "SRC-016:R-C02:binding",
+      "source_ref": "REFSRC-5572948bb336",
+      "observation_ref": "SRC-016:R-C02",
+      "interpretation_ref": "SRC-016:R-C02:design",
+      "scenario_refs": [
+        "SCN-POPULATION",
+        "SCN-MATCH"
+      ],
+      "semantic_node_refs": [
+        "P02",
+        "M03"
+      ],
+      "field_refs": [],
+      "support_kind": "design_interpretation",
+      "binding_rationale": "Source observation informs design, not executable bank authority."
+    },
+    {
+      "binding_id": "SRC-016:R-C03:binding",
+      "source_ref": "REFSRC-2c963446a9c8",
+      "observation_ref": "SRC-016:R-C03",
+      "interpretation_ref": "SRC-016:R-C03:design",
+      "scenario_refs": [
+        "SCN-EDD"
+      ],
+      "semantic_node_refs": [
+        "E01",
+        "E02",
+        "E06",
+        "E08"
+      ],
+      "field_refs": [],
+      "support_kind": "design_interpretation",
+      "binding_rationale": "Source observation informs design, not executable bank authority."
+    },
+    {
+      "binding_id": "SRC-016:R-C04:binding",
+      "source_ref": "REFSRC-40253f160832",
+      "observation_ref": "SRC-016:R-C04",
+      "interpretation_ref": "SRC-016:R-C04:design",
+      "scenario_refs": [
+        "SCN-POPULATION",
+        "SCN-EDD"
+      ],
+      "semantic_node_refs": [
+        "P02",
+        "E01"
+      ],
+      "field_refs": [],
+      "support_kind": "design_interpretation",
+      "binding_rationale": "Source observation informs design, not executable bank authority."
+    },
+    {
+      "binding_id": "SRC-016:R-C05:binding",
+      "source_ref": "REFSRC-251cbc0d0dec",
+      "observation_ref": "SRC-016:R-C05",
+      "interpretation_ref": "SRC-016:R-C05:design",
+      "scenario_refs": [
+        "SCN-MATCH",
+        "SCN-EDD"
+      ],
+      "semantic_node_refs": [
+        "M09",
+        "M11",
+        "E10"
+      ],
+      "field_refs": [],
+      "support_kind": "transferable_pattern",
+      "binding_rationale": "Source observation informs design, not executable bank authority."
+    }
+  ],
+  "aliases": [
+    {
+      "source_document": "SRC-017",
+      "source_document_version": "1.0",
+      "local_ref_id": "R01",
+      "canonical_source_ref": "REFSRC-c87950d327fe",
+      "relationship_type": "source_record"
+    },
+    {
+      "source_document": "SRC-017",
+      "source_document_version": "1.0",
+      "local_ref_id": "R02",
+      "canonical_source_ref": "REFSRC-3f0c51e665c8",
+      "relationship_type": "source_record"
+    },
+    {
+      "source_document": "SRC-017",
+      "source_document_version": "1.0",
+      "local_ref_id": "R03",
+      "canonical_source_ref": "REFSRC-fc2a14663b0d",
+      "relationship_type": "source_record"
+    },
+    {
+      "source_document": "SRC-017",
+      "source_document_version": "1.0",
+      "local_ref_id": "R04",
+      "canonical_source_ref": "REFSRC-6cc73c38d7be",
+      "relationship_type": "source_record"
+    },
+    {
+      "source_document": "SRC-017",
+      "source_document_version": "1.0",
+      "local_ref_id": "R05",
+      "canonical_source_ref": "REFSRC-5007fcbd71dc",
+      "relationship_type": "source_record"
+    },
+    {
+      "source_document": "SRC-017",
+      "source_document_version": "1.0",
+      "local_ref_id": "R06",
+      "canonical_source_ref": "REFSRC-593eb3d2134d",
+      "relationship_type": "source_record"
+    },
+    {
+      "source_document": "SRC-017",
+      "source_document_version": "1.0",
+      "local_ref_id": "R07",
+      "canonical_source_ref": "REFSRC-609062df61e2",
+      "relationship_type": "source_record"
+    },
+    {
+      "source_document": "SRC-017",
+      "source_document_version": "1.0",
+      "local_ref_id": "R08",
+      "canonical_source_ref": "REFSRC-7d39967abdab",
+      "relationship_type": "source_record"
+    },
+    {
+      "source_document": "SRC-017",
+      "source_document_version": "1.0",
+      "local_ref_id": "R09",
+      "canonical_source_ref": "REFSRC-3691009688e5",
+      "relationship_type": "source_record"
+    },
+    {
+      "source_document": "SRC-017",
+      "source_document_version": "1.0",
+      "local_ref_id": "R10",
+      "canonical_source_ref": "REFSRC-1e88f1a0dc43",
+      "relationship_type": "source_record"
+    },
+    {
+      "source_document": "SRC-017",
+      "source_document_version": "1.0",
+      "local_ref_id": "R11",
+      "canonical_source_ref": "REFSRC-58eef49f44a6",
+      "relationship_type": "source_record"
+    },
+    {
+      "source_document": "SRC-017",
+      "source_document_version": "1.0",
+      "local_ref_id": "R12",
+      "canonical_source_ref": "REFSRC-c48c6d8deca0",
+      "relationship_type": "source_record"
+    },
+    {
+      "source_document": "SRC-017",
+      "source_document_version": "1.0",
+      "local_ref_id": "R13",
+      "canonical_source_ref": "REFSRC-08762a0163df",
+      "relationship_type": "source_record"
+    },
+    {
+      "source_document": "SRC-017",
+      "source_document_version": "1.0",
+      "local_ref_id": "R14",
+      "canonical_source_ref": "REFSRC-4f617c2d4b50",
+      "relationship_type": "source_record"
+    },
+    {
+      "source_document": "SRC-017",
+      "source_document_version": "1.0",
+      "local_ref_id": "R15",
+      "canonical_source_ref": "REFSRC-2f2f723a6c8c",
+      "relationship_type": "source_record"
+    },
+    {
+      "source_document": "SRC-017",
+      "source_document_version": "1.0",
+      "local_ref_id": "R16",
+      "canonical_source_ref": "REFSRC-278ac9ad8738",
+      "relationship_type": "source_record"
+    },
+    {
+      "source_document": "SRC-017",
+      "source_document_version": "1.0",
+      "local_ref_id": "R17",
+      "canonical_source_ref": "REFSRC-31432d782d31",
+      "relationship_type": "source_record"
+    },
+    {
+      "source_document": "SRC-017",
+      "source_document_version": "1.0",
+      "local_ref_id": "R18",
+      "canonical_source_ref": "REFSRC-3e10e7311eba",
+      "relationship_type": "source_record"
+    },
+    {
+      "source_document": "SRC-017",
+      "source_document_version": "1.0",
+      "local_ref_id": "R19",
+      "canonical_source_ref": "REFSRC-e1fe72472bf9",
+      "relationship_type": "source_record"
+    },
+    {
+      "source_document": "SRC-017",
+      "source_document_version": "1.0",
+      "local_ref_id": "R20",
+      "canonical_source_ref": "REFSRC-f9e731b2c4ac",
+      "relationship_type": "source_record"
+    },
+    {
+      "source_document": "SRC-017",
+      "source_document_version": "1.0",
+      "local_ref_id": "R21",
+      "canonical_source_ref": "REFSRC-a69324ba5269",
+      "relationship_type": "source_record"
+    },
+    {
+      "source_document": "SRC-017",
+      "source_document_version": "1.0",
+      "local_ref_id": "R22",
+      "canonical_source_ref": "REFSRC-cc616f5c6867",
+      "relationship_type": "source_record"
+    },
+    {
+      "source_document": "SRC-017",
+      "source_document_version": "1.0",
+      "local_ref_id": "R23",
+      "canonical_source_ref": "REFSRC-c507f2d5fad0",
+      "relationship_type": "source_record"
+    },
+    {
+      "source_document": "SRC-017",
+      "source_document_version": "1.0",
+      "local_ref_id": "R24",
+      "canonical_source_ref": "REFSRC-8bde3fcd6188",
+      "relationship_type": "source_record"
+    },
+    {
+      "source_document": "SRC-017",
+      "source_document_version": "1.0",
+      "local_ref_id": "R25",
+      "canonical_source_ref": "REFSRC-653e4d1a3bb2",
+      "relationship_type": "source_record"
+    },
+    {
+      "source_document": "SRC-017",
+      "source_document_version": "1.0",
+      "local_ref_id": "R26",
+      "canonical_source_ref": "REFSRC-0c59d273e815",
+      "relationship_type": "source_record"
+    },
+    {
+      "source_document": "SRC-017",
+      "source_document_version": "1.0",
+      "local_ref_id": "R27",
+      "canonical_source_ref": "REFSRC-7e03129fa2bc",
+      "relationship_type": "source_record"
+    },
+    {
+      "source_document": "SRC-017",
+      "source_document_version": "1.0",
+      "local_ref_id": "R28",
+      "canonical_source_ref": "REFSRC-2c963446a9c8",
+      "relationship_type": "source_record"
+    },
+    {
+      "source_document": "SRC-017",
+      "source_document_version": "1.0",
+      "local_ref_id": "R29",
+      "canonical_source_ref": "REFSRC-930e9fabf23c",
+      "relationship_type": "source_record"
+    },
+    {
+      "source_document": "SRC-017",
+      "source_document_version": "1.0",
+      "local_ref_id": "R30",
+      "canonical_source_ref": "REFSRC-6dd2afd31911",
+      "relationship_type": "source_record"
+    },
+    {
+      "source_document": "SRC-017",
+      "source_document_version": "1.0",
+      "local_ref_id": "R31",
+      "canonical_source_ref": "REFSRC-2870f362d315",
+      "relationship_type": "source_record"
+    },
+    {
+      "source_document": "SRC-017",
+      "source_document_version": "1.0",
+      "local_ref_id": "R32",
+      "canonical_source_ref": "REFSRC-9a64ff203519",
+      "relationship_type": "source_record"
+    },
+    {
+      "source_document": "SRC-017",
+      "source_document_version": "1.0",
+      "local_ref_id": "R33",
+      "canonical_source_ref": "REFSRC-ced9cf672600",
+      "relationship_type": "source_record"
+    },
+    {
+      "source_document": "SRC-017",
+      "source_document_version": "1.0",
+      "local_ref_id": "R34",
+      "canonical_source_ref": "REFSRC-a6041f5d6736",
+      "relationship_type": "source_record"
+    },
+    {
+      "source_document": "SRC-017",
+      "source_document_version": "1.0",
+      "local_ref_id": "R35",
+      "canonical_source_ref": "REFSRC-1644eed6024a",
+      "relationship_type": "source_record"
+    },
+    {
+      "source_document": "SRC-017",
+      "source_document_version": "1.0",
+      "local_ref_id": "R36",
+      "canonical_source_ref": "REFSRC-72049fdc31f1",
+      "relationship_type": "source_record"
+    },
+    {
+      "source_document": "SRC-016",
+      "source_document_version": "1.0",
+      "local_ref_id": "R-C01",
+      "canonical_source_ref": "REFSRC-f6ba73964d9b",
+      "relationship_type": "source_record"
+    },
+    {
+      "source_document": "SRC-016",
+      "source_document_version": "1.0",
+      "local_ref_id": "R-C02",
+      "canonical_source_ref": "REFSRC-5572948bb336",
+      "relationship_type": "source_record"
+    },
+    {
+      "source_document": "SRC-016",
+      "source_document_version": "1.0",
+      "local_ref_id": "R-C03",
+      "canonical_source_ref": "REFSRC-2c963446a9c8",
+      "relationship_type": "same_url_and_version"
+    },
+    {
+      "source_document": "SRC-016",
+      "source_document_version": "1.0",
+      "local_ref_id": "R-C04",
+      "canonical_source_ref": "REFSRC-40253f160832",
+      "relationship_type": "source_record"
+    },
+    {
+      "source_document": "SRC-016",
+      "source_document_version": "1.0",
+      "local_ref_id": "R-C05",
+      "canonical_source_ref": "REFSRC-251cbc0d0dec",
+      "relationship_type": "source_record"
+    }
+  ],
+  "assets": [
+    {
+      "asset_id": "SRC-018:V01",
+      "source_ref": "REFSRC-c87950d327fe",
+      "title": "ING DOOR 官方操作教程",
+      "asset_kind": "OFFICIAL_VIDEO_TO_CAPTURE",
+      "public_url": "https://assets.ing.com/m/2a57c3a64b42dc9a/original/DOOR-guidelines.mp4",
+      "local_path": null,
+      "capture_status": "not_captured",
+      "inherited_status": "视频 URL 已从官方页面提取；当前未播放、未确认时间戳。失败则截图 R01 的操作 FAQ，并标注说明页。",
+      "captured_at": null,
+      "page_or_timestamp": null,
+      "version": "1.0",
+      "caption_locales": {
+        "zh-CN": "ING DOOR 官方操作教程",
+        "en-AU": "Pending source asset V01",
+        "en-US": "Pending source asset V01"
+      },
+      "alt_text_locales": {},
+      "display_permission_status": "not_established"
+    },
+    {
+      "asset_id": "SRC-018:V02",
+      "source_ref": "REFSRC-1e88f1a0dc43",
+      "title": "HSBC HK RM Chat 教程 Step 1",
+      "asset_kind": "OFFICIAL_UI_TUTORIAL_LINK",
+      "public_url": "https://www.hsbc.com.hk/content/dam/hsbc/hk/images/mass/way-to-bank/screenshots/19594-chat-with-rm-step1-whatsapp-en-1600x900.jpg",
+      "local_path": null,
+      "capture_status": "not_captured",
+      "inherited_status": "官方教程资产链接已提取；未下载。必须保留香港 Premier/Premier Elite 零售财富边界。",
+      "captured_at": null,
+      "page_or_timestamp": null,
+      "version": "1.0",
+      "caption_locales": {
+        "zh-CN": "HSBC HK RM Chat 教程 Step 1",
+        "en-AU": "Pending source asset V02",
+        "en-US": "Pending source asset V02"
+      },
+      "alt_text_locales": {},
+      "display_permission_status": "not_established"
+    },
+    {
+      "asset_id": "SRC-018:V03",
+      "source_ref": "REFSRC-1e88f1a0dc43",
+      "title": "HSBC HK RM Chat 教程 Step 2",
+      "asset_kind": "OFFICIAL_UI_TUTORIAL_LINK",
+      "public_url": "https://www.hsbc.com.hk/content/dam/hsbc/hk/images/mass/way-to-bank/screenshots/19594-chat-with-rm-step2-whatsapp-wechat-en-1600x900.jpg",
+      "local_path": null,
+      "capture_status": "not_captured",
+      "inherited_status": "官方链接已提取；未下载、未做像素核验。",
+      "captured_at": null,
+      "page_or_timestamp": null,
+      "version": "1.0",
+      "caption_locales": {
+        "zh-CN": "HSBC HK RM Chat 教程 Step 2",
+        "en-AU": "Pending source asset V03",
+        "en-US": "Pending source asset V03"
+      },
+      "alt_text_locales": {},
+      "display_permission_status": "not_established"
+    },
+    {
+      "asset_id": "SRC-018:V04",
+      "source_ref": "REFSRC-1e88f1a0dc43",
+      "title": "HSBC HK RM Chat 教程 Step 3",
+      "asset_kind": "OFFICIAL_UI_TUTORIAL_LINK",
+      "public_url": "https://www.hsbc.com.hk/content/dam/hsbc/hk/images/mass/way-to-bank/screenshots/19594-chat-with-rm-step3-whatsapp-en-1600x900.jpg",
+      "local_path": null,
+      "capture_status": "not_captured",
+      "inherited_status": "官方链接已提取；无本地截图。",
+      "captured_at": null,
+      "page_or_timestamp": null,
+      "version": "1.0",
+      "caption_locales": {
+        "zh-CN": "HSBC HK RM Chat 教程 Step 3",
+        "en-AU": "Pending source asset V04",
+        "en-US": "Pending source asset V04"
+      },
+      "alt_text_locales": {},
+      "display_permission_status": "not_established"
+    },
+    {
+      "asset_id": "SRC-018:V05",
+      "source_ref": "REFSRC-1e88f1a0dc43",
+      "title": "HSBC HK RM Chat 教程 Step 4",
+      "asset_kind": "OFFICIAL_UI_TUTORIAL_LINK",
+      "public_url": "https://www.hsbc.com.hk/content/dam/hsbc/hk/images/mass/way-to-bank/screenshots/19594-chat-with-rm-step4-whatsapp-en-1600x900.jpg",
+      "local_path": null,
+      "capture_status": "not_captured",
+      "inherited_status": "官方链接已提取；无本地截图。",
+      "captured_at": null,
+      "page_or_timestamp": null,
+      "version": "1.0",
+      "caption_locales": {
+        "zh-CN": "HSBC HK RM Chat 教程 Step 4",
+        "en-AU": "Pending source asset V05",
+        "en-US": "Pending source asset V05"
+      },
+      "alt_text_locales": {},
+      "display_permission_status": "not_established"
+    },
+    {
+      "asset_id": "SRC-018:V06",
+      "source_ref": "REFSRC-593eb3d2134d",
+      "title": "CitiDirect BE Digital Onboarding 视频入口",
+      "asset_kind": "OFFICIAL_VIDEO_PAGE",
+      "public_url": "https://www.citigroup.com/global/insights/citidirect-be-digital-onboarding",
+      "local_path": null,
+      "capture_status": "not_captured",
+      "inherited_status": "视频落地页已核验，嵌入播放器抓取失败；不提供猜测的 MP4 URL 或时间戳。",
+      "captured_at": null,
+      "page_or_timestamp": null,
+      "version": "1.0",
+      "caption_locales": {
+        "zh-CN": "CitiDirect BE Digital Onboarding 视频入口",
+        "en-AU": "Pending source asset V06",
+        "en-US": "Pending source asset V06"
+      },
+      "alt_text_locales": {},
+      "display_permission_status": "not_established"
+    },
+    {
+      "asset_id": "SRC-018:V07",
+      "source_ref": "REFSRC-7d39967abdab",
+      "title": "CitiDirect Commercial Banking 产品视频入口",
+      "asset_kind": "OFFICIAL_VIDEO_PAGE",
+      "public_url": "https://www.citigroup.com/global/insights/citidirect-commercial-banking-delivering-the-power-of-citi-on-a-single-platform",
+      "local_path": null,
+      "capture_status": "not_captured",
+      "inherited_status": "页面日期为2024-01-01；视频未观看。",
+      "captured_at": null,
+      "page_or_timestamp": null,
+      "version": "1.0",
+      "caption_locales": {
+        "zh-CN": "CitiDirect Commercial Banking 产品视频入口",
+        "en-AU": "Pending source asset V07",
+        "en-US": "Pending source asset V07"
+      },
+      "alt_text_locales": {},
+      "display_permission_status": "not_established"
+    },
+    {
+      "asset_id": "SRC-018:V08",
+      "source_ref": "REFSRC-3f0c51e665c8",
+      "title": "ANZ KYC SecureReply 官方说明",
+      "asset_kind": "REFERENCE_PAGE",
+      "public_url": "https://www.anz.com.au/support/business/secure-reply/",
+      "local_path": null,
+      "capture_status": "not_captured",
+      "inherited_status": "公开页面可读；已认证表单未访问。此图应标“官方操作说明”，不是后台 screenshot。",
+      "captured_at": null,
+      "page_or_timestamp": null,
+      "version": "1.0",
+      "caption_locales": {
+        "zh-CN": "ANZ KYC SecureReply 官方说明",
+        "en-AU": "Pending source asset V08",
+        "en-US": "Pending source asset V08"
+      },
+      "alt_text_locales": {},
+      "display_permission_status": "not_established"
+    },
+    {
+      "asset_id": "SRC-018:V09",
+      "source_ref": "REFSRC-fc2a14663b0d",
+      "title": "HSBC SmartServe 登录与功能说明",
+      "asset_kind": "REFERENCE_PAGE",
+      "public_url": "https://www.business.hsbc.bm/en-gb/smartserve",
+      "local_path": null,
+      "capture_status": "not_captured",
+      "inherited_status": "页面公开功能图标不是产品后台截图；不生成假界面填空。",
+      "captured_at": null,
+      "page_or_timestamp": null,
+      "version": "1.0",
+      "caption_locales": {
+        "zh-CN": "HSBC SmartServe 登录与功能说明",
+        "en-AU": "Pending source asset V09",
+        "en-US": "Pending source asset V09"
+      },
+      "alt_text_locales": {},
+      "display_permission_status": "not_established"
+    },
+    {
+      "asset_id": "SRC-018:V10",
+      "source_ref": "REFSRC-3691009688e5",
+      "title": "NatWest Mitek 窄任务入口说明",
+      "asset_kind": "REFERENCE_PAGE",
+      "public_url": "https://www.natwest.com/business/bank-accounts/what-is-mitek.html",
+      "local_path": null,
+      "capture_status": "not_captured",
+      "inherited_status": "不登录、不用真实ID/手机号；不将它扩张为完整企业Portal能力。",
+      "captured_at": null,
+      "page_or_timestamp": null,
+      "version": "1.0",
+      "caption_locales": {
+        "zh-CN": "NatWest Mitek 窄任务入口说明",
+        "en-AU": "Pending source asset V10",
+        "en-US": "Pending source asset V10"
+      },
+      "alt_text_locales": {},
+      "display_permission_status": "not_established"
+    },
+    {
+      "asset_id": "SRC-018:V11",
+      "source_ref": "REFSRC-31432d782d31",
+      "title": "IATA ONE Record 模型可视化器",
+      "asset_kind": "PUBLIC_INTERACTIVE_REFERENCE",
+      "public_url": "https://iata-cargo.github.io/ontology_visualizer/",
+      "local_path": null,
+      "capture_status": "not_captured",
+      "inherited_status": "入口及URL已发现；JS界面未在本环境运行。属于模型工具，不是银行产品。",
+      "captured_at": null,
+      "page_or_timestamp": null,
+      "version": "1.0",
+      "caption_locales": {
+        "zh-CN": "IATA ONE Record 模型可视化器",
+        "en-AU": "Pending source asset V11",
+        "en-US": "Pending source asset V11"
+      },
+      "alt_text_locales": {},
+      "display_permission_status": "not_established"
+    },
+    {
+      "asset_id": "SRC-018:V12",
+      "source_ref": "REFSRC-31432d782d31",
+      "title": "IATA ONE Record demonstrator",
+      "asset_kind": "PUBLIC_DEMONSTRATOR_SOURCE",
+      "public_url": "https://github.com/IATA-Cargo/one-record-demonstrator",
+      "local_path": null,
+      "capture_status": "not_captured",
+      "inherited_status": "仓库公开可读；未部署或运行。源码地址不是已运行产品的证明。",
+      "captured_at": null,
+      "page_or_timestamp": null,
+      "version": "1.0",
+      "caption_locales": {
+        "zh-CN": "IATA ONE Record demonstrator",
+        "en-AU": "Pending source asset V12",
+        "en-US": "Pending source asset V12"
+      },
+      "alt_text_locales": {},
+      "display_permission_status": "not_established"
+    },
+    {
+      "asset_id": "SRC-018:V13",
+      "source_ref": "REFSRC-3e10e7311eba",
+      "title": "GS1 CTE/KDE 标准参考图",
+      "asset_kind": "STANDARD_REFERENCE_PAGE",
+      "public_url": "https://www.gs1.org/standards/gs1-global-traceability-standard/current-standard",
+      "local_path": null,
+      "capture_status": "not_captured",
+      "inherited_status": "官方搜索返回对应条目，主站直连可能受限；备用为R18官方解释页。尚未截图。",
+      "captured_at": null,
+      "page_or_timestamp": null,
+      "version": "1.0",
+      "caption_locales": {
+        "zh-CN": "GS1 CTE/KDE 标准参考图",
+        "en-AU": "Pending source asset V13",
+        "en-US": "Pending source asset V13"
+      },
+      "alt_text_locales": {},
+      "display_permission_status": "not_established"
+    },
+    {
+      "asset_id": "SRC-018:V14",
+      "source_ref": "REFSRC-278ac9ad8738",
+      "title": "EUROCONTROL A-CDM 标准",
+      "asset_kind": "STANDARD_REFERENCE_PAGE",
+      "public_url": "https://www.eurocontrol.int/publication/eurocontrol-specification-airport-collaborative-decision-making-cdm",
+      "local_path": null,
+      "capture_status": "not_captured",
+      "inherited_status": "未逐页读PDF，不能预写“第X页是某图”。不可用机场航站楼照片代替机制图。",
+      "captured_at": null,
+      "page_or_timestamp": null,
+      "version": "1.0",
+      "caption_locales": {
+        "zh-CN": "EUROCONTROL A-CDM 标准",
+        "en-AU": "Pending source asset V14",
+        "en-US": "Pending source asset V14"
+      },
+      "alt_text_locales": {},
+      "display_permission_status": "not_established"
+    },
+    {
+      "asset_id": "SRC-018:V15",
+      "source_ref": "REFSRC-08762a0163df",
+      "title": "GLEIF identity/parent references",
+      "asset_kind": "REFERENCE_PAGE",
+      "public_url": "https://www.gleif.org/en/lei-data/access-and-use-lei-data/level-2-data-who-owns-whom",
+      "local_path": null,
+      "capture_status": "not_captured",
+      "inherited_status": "不搜索或推测本客户身份，不展示与本案件混淆的真实公司查询结果。",
+      "captured_at": null,
+      "page_or_timestamp": null,
+      "version": "1.0",
+      "caption_locales": {
+        "zh-CN": "GLEIF identity/parent references",
+        "en-AU": "Pending source asset V15",
+        "en-US": "Pending source asset V15"
+      },
+      "alt_text_locales": {},
+      "display_permission_status": "not_established"
+    },
+    {
+      "asset_id": "SRC-018:V16",
+      "source_ref": "REFSRC-c48c6d8deca0",
+      "title": "Wolfsberg 标准问卷资源",
+      "asset_kind": "REFERENCE_PAGE_OR_PUBLIC_FORM",
+      "public_url": "https://wolfsberg-group.org/resources/correspondent-banking/",
+      "local_path": null,
+      "capture_status": "not_captured",
+      "inherited_status": "未审阅全部问卷；问卷属于对应行/FI，不是本案企业KYC清单。",
+      "captured_at": null,
+      "page_or_timestamp": null,
+      "version": "1.0",
+      "caption_locales": {
+        "zh-CN": "Wolfsberg 标准问卷资源",
+        "en-AU": "Pending source asset V16",
+        "en-US": "Pending source asset V16"
+      },
+      "alt_text_locales": {},
+      "display_permission_status": "not_established"
+    },
+    {
+      "asset_id": "SRC-018:V17",
+      "source_ref": "REFSRC-f9e731b2c4ac",
+      "title": "HL7 FHIR Provenance 数据结构",
+      "asset_kind": "STANDARD_REFERENCE_PAGE",
+      "public_url": "https://hl7.org/fhir/R4/provenance.html",
+      "local_path": null,
+      "capture_status": "not_captured",
+      "inherited_status": "数据标准不是医疗系统界面，更不是银行系统截图。",
+      "captured_at": null,
+      "page_or_timestamp": null,
+      "version": "1.0",
+      "caption_locales": {
+        "zh-CN": "HL7 FHIR Provenance 数据结构",
+        "en-AU": "Pending source asset V17",
+        "en-US": "Pending source asset V17"
+      },
+      "alt_text_locales": {},
+      "display_permission_status": "not_established"
+    },
+    {
+      "asset_id": "SRC-018:V18",
+      "source_ref": "REFSRC-e1fe72472bf9",
+      "title": "NIST Digital Thread 项目资料",
+      "asset_kind": "REFERENCE_PAGE",
+      "public_url": "https://www.nist.gov/programs-projects/digital-thread-manufacturing",
+      "local_path": null,
+      "capture_status": "not_captured",
+      "inherited_status": "不将制造业图去Logo后当银行架构。",
+      "captured_at": null,
+      "page_or_timestamp": null,
+      "version": "1.0",
+      "caption_locales": {
+        "zh-CN": "NIST Digital Thread 项目资料",
+        "en-AU": "Pending source asset V18",
+        "en-US": "Pending source asset V18"
+      },
+      "alt_text_locales": {},
+      "display_permission_status": "not_established"
+    },
+    {
+      "asset_id": "SRC-018:V19",
+      "source_ref": null,
+      "title": "我们建议的RM/客户/Ops界面",
+      "asset_kind": "OUR_CONCEPT_PENDING",
+      "public_url": null,
+      "local_path": null,
+      "capture_status": "not_captured",
+      "inherited_status": "本轮尚未生成。没有应用画面时，允许标注Concept wireframe的静态版式，但不声称真实银行产品或已实现。",
+      "captured_at": null,
+      "page_or_timestamp": null,
+      "version": "1.0",
+      "caption_locales": {
+        "zh-CN": "我们建议的RM/客户/Ops界面",
+        "en-AU": "Pending source asset V19",
+        "en-US": "Pending source asset V19"
+      },
+      "alt_text_locales": {},
+      "display_permission_status": "not_established"
+    }
+  ],
+  "notes": [
+    "Inherited user-supplied research, not newly verified bank policy.",
+    "No media acquired; no restricted project-source body or download included."
+  ]
+};

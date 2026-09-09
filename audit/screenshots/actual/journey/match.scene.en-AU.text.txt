@@ -1,0 +1,414 @@
+Skip to content
+CLEAR
+TO TRADE
+Journey / Scenario Studio
+Product Prototype
+References
+Demo environment · synthetic
+English (AU)
+English (US)
+简体中文
+Process branches
+Operating Model
+A shared view of readiness.
+
+From requirements to human decisions. See how each task affects the whole case.
+
+Workshop method
+SYNTHETIC CASE
+
+New institutional relationship
+
+DEMO-CTT-001
+ENTITY & PURPOSE
+
+Entity A · institutional relationship
+
+SCOPE · REVISION
+
+AU entity · FX forward · v3
+
+Not ready to trade
+
+Case revision 20 · Not published
+
+The institutional journey
+Current
+Target
+Story
+Explore
+Print
+Trigger
+New relationship
+Product extension · not authored
+Material change · not authored
+Viewpoint
+Client
+Relationship Manager
+Case Manager / KYC Ops
+Risk / Financial Crime / QA
+Legal / Credit / Conflicts
+Case Manager
+Resolve a possible match
+Current · S3 · SCN-MATCH
+SCENE 01
+Define the relationship
+SCENE 02
+Establish entity and authority
+SCENE 03
+Make requirements explicit
+SCENE 04
+Use evidence already available
+SCENE 05
+Ask only for remaining gaps
+SCENE 06
+Assess evidence for its purpose
+SCENE 07
+Screen the right subjects
+SCENE 08
+Resolve a possible match
+SCENE 09
+Assess elevated risk, if applicable
+D1 · STORY
+Start conflicts early
+D2 · STORY
+Start conflicts early
+D3 · STORY
+Resolve credit conditions
+D4 · STORY
+Complete applicable agreements
+D5 · STORY
+Know exactly what remains
+Play story
+Previous beat
+Continue story
+Presentation only · pauses at human review
+01   Initiate & scope
+02   Determine & source
+03   Screen & assess
+04   Assure & resolve
+05   Clear to trade
+ROLE / VIEWPOINT
+Client
+Relationship Manager
+Case Manager / KYC Ops
+Risk / Financial Crime / QA
+Legal / Credit / Conflicts
+01 / M0 · M1
+Initiate & scope
+Describe the intended relationship.
+Clarify the request and scope.
+M0.1–M0.4 · M1.1
+Define the relationship
+
+RM and Ops clarify the requested relationship, proposed legal entity, product and booking context. Current already performs this work.
+
+Establish entity and authority
+Clarify review applicability.
+Conflicts may start from intake
+02 / M2 · M3
+Determine & source
+Respond to a purpose-specific request.
+Understand what is still missing.
+M2.1–M2.5
+Make requirements explicit
+
+Determine AML and non-AML requirements, exceptions and risk indicators for the relationship.
+
+Use evidence already available
+Ask only for remaining gaps
+Assess evidence for its purpose
+Resolve complex requirements.
+Proceed when own inputs allow.
+03 / M4 · M5
+Screen & assess
+Clarify an identifying fact, if needed.
+Coordinate focused clarification.
+M4.5–M4.7
+Resolve a possible match
+
+Adjudicate possible hits, assess materiality and record the screening outcome.
+
+Population
+EDD · conditional
+Human judgment on ambiguity.
+Independent branch work continues.
+04 / M6 · C1 · C2 · M7
+Assure & resolve
+Respond to a precise open item.
+Know the blocker and its owner.
+M6
+Close a specific quality gap
+
+Mainline structure · detailed workspace in a later batch.
+
+Review sufficiency and conditions.
+Legal
+Credit
+05 / M8
+Clear to trade
+Receive the scoped outcome.
+Communicate the permitted outcome.
+M8.1
+Know exactly what remains
+
+Confirm completion of all applicable clearance prerequisites.
+
+Inspect decision and authority.
+Provide branch-specific outcomes.
+Five reading stages, not a sequential approval waterfall. · S3
+←
+→
+Overview
+Read
+Focus stage
+Cross-stage specialist bridge
+Conflicts begins at intake. Credit progresses in parallel. Legal prepares on its own inputs, then consumes the current versioned Credit condition before execution.
+Parallel, with conditions
+Conflicts can start from intake. Legal and Credit progress on their own inputs; Credit terms may feed Legal. A screening decision closes neither branch.
+High-level process · Current / Target / Archify
+Scope, source status & open questions
+Confidential Australian Banking Client · Internal design review only
+Black · blue · white / Web glass approximation, not optical refraction
+S3 / M4.5–M4.7
+Proposed design
+Current
+Resolve a possible match
+English (AU)
+English (US)
+简体中文
+×
+How this work runs
+Current
+Target
+
+WORK TRANSFORMATION · PILOT
+
+Review one possible match for Person T using the same evidence
+Compare Current / Target
+
+Open a work item to inspect the activity, proposed change and human control.
+
+Same input · authored comparison checkpoint
+
+Wait and resume Return an information-gap branch to the same finding. Where authority is insufficient, refer the same review task. EDD handling cannot replace a material sanctions restriction.
+
+Always preserved A source comparison is not verified identity. Excluding this record is not a permanent whitelist. A local disposition is not complete coverage.
+
+01
+Bind the finding to its original query
+Reassigned
+02
+Compare identifying attributes
+Enhanced
+03
+Request specific distinguishing evidence
+Enhanced
+04
+Prepare the review pack
+Enhanced
+05
+Assess risk and materiality
+Retained
+06
+Record a disposition for bounded inputs
+Enhanced
+07
+Separate the local result from whole-case impact
+Enhanced
+
+Validate with users Does the work stop correctly when evidence is missing? Does selecting Target avoid automatically excluding a match when the input is unchanged?
+
+Adjudicate possible hits, assess materiality and record the screening outcome.
+
+WAIT / REQUIRED INPUT
+
+Sufficient current evidence, rationale and explicit simulated authority. Similarity is not a decision.
+
+HUMAN BOUNDARY
+
+Only a configured reviewer may record the permitted unresolved outcome. Exclusion is disabled; there is no autonomous approval or automatic EDD.
+
+EXPECTED LOCAL RESULT · CASE CONSEQUENCE
+
+A bounded decision records unresolved or referral against current inputs. Identity, population, EDD and other case conditions remain separately visible.
+
+Read-only decision detail · DG-C-MATCH · Archify 2.17
+
+Connections explain the design; they do not execute business actions. All branches, permission and wait conditions remain below.
+
+All decisions
+Receive possible match
+M01
+Need immediate specialist/hold action?
+M02
+Prepare comparison & issues
+M03
+Evidence supports an in-scope review?
+M04
+Source / request specific evidence
+M05
+Reviewer has required authority?
+M06
+Human reviews and proposes action
+M07
+Record guards satisfied now?
+M08
+Record scoped disposition
+M09
+Refer / maintain unresolved
+M10
+Reassess linked impact
+M11
+Return to case with remaining conditions
+M12
+Receive possible match M01
+
+Bind the finding to its run and immutable subject/provider snapshots.
+
+Current fact: not_evaluated
+
+Related action guard (not automatic node adjudication): allowed ·
+
+review · Our interpretation, not approved bank policy
+R
+M01 → M02: Result belongs to the correct case and input versions.
+Need immediate specialist/hold action? M02
+
+Apply only the named demo concern/hold policy. Missing policy is not permission for unlimited work.
+
+Current fact: not_evaluated
+
+Related action guard (not automatic node adjudication): allowed ·
+
+referral · Our interpretation, not approved bank policy
+R
+M02 → M10: Material concern, immediate escalation policy or specialist protection judgement.
+M02 → M03: Bounded preparation is allowed; do not delay necessary escalation.
+Prepare comparison & issues M03
+
+Prepare similar, different and inconclusive comparisons with provenance, precision and unknowns; do not auto-adjudicate.
+
+Current fact: not_evaluated
+
+Related action guard (not automatic node adjudication): allowed ·
+
+review · Our interpretation, not approved bank policy
+R
+M03 → M04: Comparison and issues prepared; preparation grants no recording authority.
+Evidence supports an in-scope review? M04
+
+Assess evidence for the intended use and unresolved contradictions. Unknown is not sufficient; request only a precise permissible gap.
+
+Current fact: not_assessed
+
+Related action guard (not automatic node adjudication): unknown · RELEASED_LINKED_IDENTITY_EVIDENCE_REQUIRED
+
+identity · Our interpretation, not approved bank policy
+R
+M04 → M05: A specific gap can be described and permissibly obtained.
+M04 → M06: Evidence supports review by the appropriate role, not a predetermined conclusion.
+M04 → M10: Sufficiency/action boundaries remain unknown, collection is inappropriate or concern is material.
+Source / request specific evidence M05
+
+Reuse Batch B request, grant, intake and assessment objects. Keep the same finding.
+
+Current fact: not_evaluated
+
+Related action guard (not automatic node adjudication): allowed ·
+
+request · Our interpretation, not approved bank policy
+R
+M05 → M03: Relevant evidence arrives and intake/use prerequisites permit rebuilding comparison; otherwise wait.
+Reviewer has required authority? M06
+
+Check actor, action and case scope plus required approval policy. Unknown authority cannot record a disposition.
+
+Current fact: not_evaluated
+
+Related action guard (not automatic node adjudication): allowed ·
+
+review · Our interpretation, not approved bank policy
+R
+M06 → M07: Authority explicitly permits this review/proposal.
+M06 → M10: No authority, wrong scope, unknown permission or another role required.
+Human reviews and proposes action M07
+
+An authorised human proposes a scoped outcome, further information or referral, with rationale and current inputs.
+
+Current fact: not_evaluated
+
+Related action guard (not automatic node adjudication): unknown · PERMISSION_REQUIRED
+
+review · Our interpretation, not approved bank policy
+R
+M07 → M05: An authorised reviewer requests further specific evidence.
+M07 → M10: Still uncertain, material concern or referral proposed.
+M07 → M08: A scoped disposition proposal is submitted for action-time guards.
+Record guards satisfied now? M08
+
+Recheck revisions, evidence, rationale, permissions, required approvals and holds at the moment of recording.
+
+Current fact: not_evaluated
+
+Related action guard (not automatic node adjudication): unknown · PERMISSION_REQUIRED / EXCLUSION_DISABLED_PENDING_FIXTURE_REVIEW
+
+disposition · Our interpretation, not approved bank policy
+R
+M08 → M09: Every required guard passes; synthetic action limited to configured scope.
+M08 → M10: Independent review/approval outstanding, insufficient authority or specialist judgement needed.
+M08 → M03: Inputs stale: keep draft, show changes and re-review.
+M08 → M07: Correctable rationale/field gap: stay in task without claiming a recorded outcome.
+Record scoped disposition M09
+
+Append a scoped decision, audit event and finding result only after guards pass. No other business authority is granted.
+
+Current fact: not_evaluated
+
+Related action guard (not automatic node adjudication): unknown · PERMISSION_REQUIRED / EXCLUSION_DISABLED_PENDING_FIXTURE_REVIEW
+
+disposition · Our interpretation, not approved bank policy
+R
+M09 → M11: A successful decision-recorded event exists.
+Refer / maintain unresolved M10
+
+Record reason, next owner and held actions. An unresolved or referred finding is a valid discussion exit, not an exclusion.
+
+Current fact: not_evaluated
+
+Related action guard (not automatic node adjudication): allowed ·
+
+referral · Our interpretation, not approved bank policy
+R
+M10 → M11: Unresolved/referral/hold event exists; never create an exclusion.
+M10 → M03: An authorised successor or relevant input permits same-finding resume; navigation alone does not.
+Reassess linked impact M11
+
+Reassess finding, coverage and QA/readiness dependencies. Keep unknown dependencies, original evidence and history.
+
+Current fact: not_evaluated
+
+Related action guard (not automatic node adjudication): allowed ·
+
+coverage · Our interpretation, not approved bank policy
+R
+M11 → M12: Refresh linked objects and current blockers.
+Return to case with remaining conditions M12
+
+Show the scoped result and remaining population, independent EDD, Legal, Credit and QA conditions. Do not approve the whole case.
+
+Current fact: incomplete
+
+Related action guard (not automatic node adjudication): allowed ·
+
+coverage · Our interpretation, not approved bank policy
+R
+References / research
+
+Open the shared read-only library for this scene. Research is not case evidence.
+
+Source, hypothesis & stable IDs
+DEMO-CTT-001 · KYC Operations
+Print selected scene
+Continue story
+View target product

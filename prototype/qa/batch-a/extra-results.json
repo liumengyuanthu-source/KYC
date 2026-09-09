@@ -1,0 +1,49 @@
+[
+  {
+    "ids": [
+      "RT-A16"
+    ],
+    "name": "Real horizontal drag then scene close restores pixel and semantic position",
+    "status": "passed"
+  },
+  {
+    "ids": [
+      "RT-A09"
+    ],
+    "name": "Discard only unsaved input; saved value and revision retained",
+    "status": "passed"
+  },
+  {
+    "ids": [
+      "RT-A19"
+    ],
+    "name": "Rejected form submission retains user input and creates no false save",
+    "status": "passed"
+  },
+  {
+    "ids": [
+      "RT-A13"
+    ],
+    "name": "Read-only simulated role cannot assess authority",
+    "status": "passed"
+  },
+  {
+    "ids": [
+      "RT-A25"
+    ],
+    "name": "Chinese print includes offscreen scope and all diagrams",
+    "status": "passed"
+  },
+  {
+    "ids": [
+      "RT-A23"
+    ],
+    "name": "Touch help opens and closes under reduced motion",
+    "status": "passed"
+  },
+  {
+    "ids": [],
+    "name": "Legacy session migration is explicit and preserves saved drafts",
+    "status": "passed"
+  }
+]

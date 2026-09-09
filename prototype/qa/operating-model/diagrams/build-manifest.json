@@ -1,0 +1,240 @@
+{
+  "version": "Archify 2.17",
+  "at": "2026-09-07T16:19:20.199Z",
+  "manifest": [
+    {
+      "view": "overview",
+      "id": "D4_04_operating_architecture__MATCH",
+      "parentId": "D4_04_operating_architecture",
+      "locale": "en-AU",
+      "input": "04_operating_model/d4/diagrams/D4_04_operating_architecture__MATCH.en-AU.archify.json",
+      "output": "prototype/diagrams/operating-model/D4_04_operating_architecture__MATCH.en-AU.archify.html",
+      "src": "./diagrams/operating-model/D4_04_operating_architecture__MATCH.en-AU.svg",
+      "nodeRefs": [
+        "OM-MATCH-G1",
+        "OM-MATCH-G2",
+        "OM-MATCH-G3",
+        "OM-MATCH-G4",
+        "OM-MATCH-G5",
+        "OM-MATCH-G6"
+      ],
+      "alt": "Screening review · work and responsibility",
+      "semantics": "Selected input/output and responsibility relationships, not a compulsory six-stage execution order"
+    },
+    {
+      "view": "overview",
+      "id": "D4_04_operating_architecture__MATCH",
+      "parentId": "D4_04_operating_architecture",
+      "locale": "en-US",
+      "input": "04_operating_model/d4/diagrams/D4_04_operating_architecture__MATCH.en-US.archify.json",
+      "output": "prototype/diagrams/operating-model/D4_04_operating_architecture__MATCH.en-US.archify.html",
+      "src": "./diagrams/operating-model/D4_04_operating_architecture__MATCH.en-US.svg",
+      "nodeRefs": [
+        "OM-MATCH-G1",
+        "OM-MATCH-G2",
+        "OM-MATCH-G3",
+        "OM-MATCH-G4",
+        "OM-MATCH-G5",
+        "OM-MATCH-G6"
+      ],
+      "alt": "Screening review · work and responsibility",
+      "semantics": "Selected input/output and responsibility relationships, not a compulsory six-stage execution order"
+    },
+    {
+      "view": "overview",
+      "id": "D4_04_operating_architecture__MATCH",
+      "parentId": "D4_04_operating_architecture",
+      "locale": "zh-CN",
+      "input": "04_operating_model/d4/diagrams/D4_04_operating_architecture__MATCH.zh-CN.archify.json",
+      "output": "prototype/diagrams/operating-model/D4_04_operating_architecture__MATCH.zh-CN.archify.html",
+      "src": "./diagrams/operating-model/D4_04_operating_architecture__MATCH.zh-CN.svg",
+      "nodeRefs": [
+        "OM-MATCH-G1",
+        "OM-MATCH-G2",
+        "OM-MATCH-G3",
+        "OM-MATCH-G4",
+        "OM-MATCH-G5",
+        "OM-MATCH-G6"
+      ],
+      "alt": "筛查复核 · 工作与责任",
+      "semantics": "Selected input/output and responsibility relationships, not a compulsory six-stage execution order"
+    },
+    {
+      "view": "execution-choice",
+      "id": "D4_01_agentic_suitability__MATCH",
+      "parentId": "D4_01_agentic_suitability",
+      "locale": "en-AU",
+      "input": "04_operating_model/d4/diagrams/D4_01_agentic_suitability__MATCH.en-AU.archify.json",
+      "output": "prototype/diagrams/operating-model/D4_01_agentic_suitability__MATCH.en-AU.archify.html",
+      "src": "./diagrams/operating-model/D4_01_agentic_suitability__MATCH.en-AU.svg",
+      "nodeRefs": [
+        "access",
+        "unknown",
+        "judgement",
+        "human",
+        "bounded",
+        "skill",
+        "context",
+        "agent"
+      ],
+      "alt": "Choose how this work runs",
+      "semantics": "Checks are evaluated input/access first, human gates before simpler alternatives; rows are conditional judgments, not a running workflow"
+    },
+    {
+      "view": "execution-choice",
+      "id": "D4_01_agentic_suitability__MATCH",
+      "parentId": "D4_01_agentic_suitability",
+      "locale": "en-US",
+      "input": "04_operating_model/d4/diagrams/D4_01_agentic_suitability__MATCH.en-US.archify.json",
+      "output": "prototype/diagrams/operating-model/D4_01_agentic_suitability__MATCH.en-US.archify.html",
+      "src": "./diagrams/operating-model/D4_01_agentic_suitability__MATCH.en-US.svg",
+      "nodeRefs": [
+        "access",
+        "unknown",
+        "judgement",
+        "human",
+        "bounded",
+        "skill",
+        "context",
+        "agent"
+      ],
+      "alt": "Choose how this work runs",
+      "semantics": "Checks are evaluated input/access first, human gates before simpler alternatives; rows are conditional judgments, not a running workflow"
+    },
+    {
+      "view": "execution-choice",
+      "id": "D4_01_agentic_suitability__MATCH",
+      "parentId": "D4_01_agentic_suitability",
+      "locale": "zh-CN",
+      "input": "04_operating_model/d4/diagrams/D4_01_agentic_suitability__MATCH.zh-CN.archify.json",
+      "output": "prototype/diagrams/operating-model/D4_01_agentic_suitability__MATCH.zh-CN.archify.html",
+      "src": "./diagrams/operating-model/D4_01_agentic_suitability__MATCH.zh-CN.svg",
+      "nodeRefs": [
+        "access",
+        "unknown",
+        "judgement",
+        "human",
+        "bounded",
+        "skill",
+        "context",
+        "agent"
+      ],
+      "alt": "选择这项工作的执行方式",
+      "semantics": "Checks are evaluated input/access first, human gates before simpler alternatives; rows are conditional judgments, not a running workflow"
+    },
+    {
+      "view": "skills",
+      "id": "D4_02_agent_matrix__MATCH",
+      "parentId": "D4_02_agent_matrix",
+      "locale": "en-AU",
+      "input": "04_operating_model/d4/diagrams/D4_02_agent_matrix__MATCH.en-AU.archify.json",
+      "output": "prototype/diagrams/operating-model/D4_02_agent_matrix__MATCH.en-AU.archify.html",
+      "src": "./diagrams/operating-model/D4_02_agent_matrix__MATCH.en-AU.svg",
+      "nodeRefs": [
+        "SK-03",
+        "comparison",
+        "SK-06",
+        "reviewer",
+        "reuse",
+        "boundary"
+      ],
+      "alt": "Reusable skills · separate responsibilities",
+      "semantics": "produces / supports / constrained-by are distinct; no new executes edge on human action"
+    },
+    {
+      "view": "skills",
+      "id": "D4_02_agent_matrix__MATCH",
+      "parentId": "D4_02_agent_matrix",
+      "locale": "en-US",
+      "input": "04_operating_model/d4/diagrams/D4_02_agent_matrix__MATCH.en-US.archify.json",
+      "output": "prototype/diagrams/operating-model/D4_02_agent_matrix__MATCH.en-US.archify.html",
+      "src": "./diagrams/operating-model/D4_02_agent_matrix__MATCH.en-US.svg",
+      "nodeRefs": [
+        "SK-03",
+        "comparison",
+        "SK-06",
+        "reviewer",
+        "reuse",
+        "boundary"
+      ],
+      "alt": "Reusable skills · separate responsibilities",
+      "semantics": "produces / supports / constrained-by are distinct; no new executes edge on human action"
+    },
+    {
+      "view": "skills",
+      "id": "D4_02_agent_matrix__MATCH",
+      "parentId": "D4_02_agent_matrix",
+      "locale": "zh-CN",
+      "input": "04_operating_model/d4/diagrams/D4_02_agent_matrix__MATCH.zh-CN.archify.json",
+      "output": "prototype/diagrams/operating-model/D4_02_agent_matrix__MATCH.zh-CN.archify.html",
+      "src": "./diagrams/operating-model/D4_02_agent_matrix__MATCH.zh-CN.svg",
+      "nodeRefs": [
+        "SK-03",
+        "comparison",
+        "SK-06",
+        "reviewer",
+        "reuse",
+        "boundary"
+      ],
+      "alt": "能力复用 · 责任仍然分开",
+      "semantics": "produces / supports / constrained-by are distinct; no new executes edge on human action"
+    },
+    {
+      "view": "collaboration",
+      "id": "D4_03_human_agent_collaboration__MATCH",
+      "parentId": "D4_03_human_agent_collaboration",
+      "locale": "en-AU",
+      "input": "04_operating_model/d4/diagrams/D4_03_human_agent_collaboration__MATCH.en-AU.archify.json",
+      "output": "prototype/diagrams/operating-model/D4_03_human_agent_collaboration__MATCH.en-AU.archify.html",
+      "src": "./diagrams/operating-model/D4_03_human_agent_collaboration__MATCH.en-AU.svg",
+      "nodeRefs": [
+        "OM-F1",
+        "OM-F2",
+        "OM-F3",
+        "OM-F4",
+        "OM-F5",
+        "OM-F6"
+      ],
+      "alt": "A prepared story · not an execution log",
+      "semantics": "Authored reading moments; separate pairs do not bypass information or human pause gates"
+    },
+    {
+      "view": "collaboration",
+      "id": "D4_03_human_agent_collaboration__MATCH",
+      "parentId": "D4_03_human_agent_collaboration",
+      "locale": "en-US",
+      "input": "04_operating_model/d4/diagrams/D4_03_human_agent_collaboration__MATCH.en-US.archify.json",
+      "output": "prototype/diagrams/operating-model/D4_03_human_agent_collaboration__MATCH.en-US.archify.html",
+      "src": "./diagrams/operating-model/D4_03_human_agent_collaboration__MATCH.en-US.svg",
+      "nodeRefs": [
+        "OM-F1",
+        "OM-F2",
+        "OM-F3",
+        "OM-F4",
+        "OM-F5",
+        "OM-F6"
+      ],
+      "alt": "A prepared story · not an execution log",
+      "semantics": "Authored reading moments; separate pairs do not bypass information or human pause gates"
+    },
+    {
+      "view": "collaboration",
+      "id": "D4_03_human_agent_collaboration__MATCH",
+      "parentId": "D4_03_human_agent_collaboration",
+      "locale": "zh-CN",
+      "input": "04_operating_model/d4/diagrams/D4_03_human_agent_collaboration__MATCH.zh-CN.archify.json",
+      "output": "prototype/diagrams/operating-model/D4_03_human_agent_collaboration__MATCH.zh-CN.archify.html",
+      "src": "./diagrams/operating-model/D4_03_human_agent_collaboration__MATCH.zh-CN.svg",
+      "nodeRefs": [
+        "OM-F1",
+        "OM-F2",
+        "OM-F3",
+        "OM-F4",
+        "OM-F5",
+        "OM-F6"
+      ],
+      "alt": "预编制故事 · 不是执行日志",
+      "semantics": "Authored reading moments; separate pairs do not bypass information or human pause gates"
+    }
+  ]
+}

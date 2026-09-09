@@ -1,15 +1,15 @@
 frame_code,frame_title,scope,priority,version,status,source_files,content_owner,visual_owner,export_type,miro_frame_id,x,y,width,height,last_updated,notes
 F00,Board Home & Navigation,Alpha,A,V0,BLOCKED_SOURCE_NOT_VALIDATED,,Christina,Codex|Xiaoming|Coco,Board,,,,,,2026-09-05,
-F00A,Automation Component Library & Visual Tokens,Internal Pilot,PILOT,V0,LOCAL_SPEC_READY,Clear_to_Trade_UXUI_Miro_Automation_Scope_v1.1.md,Christina,Codex|Coco,Internal,,,,,,2026-09-05,Awaiting Miro connection
+F00A,Automation Component Library & Visual Tokens,Internal Pilot,PILOT,V0,PILOT_CREATED_AWAITING_REVIEW,Clear_to_Trade_UXUI_Miro_Automation_Scope_v1.1.md,Christina,Codex|Coco,Internal,3458764682843351765,0,0,1680,3100,2026-09-07,Readback verified; design and client validation pending
 F01,Sources Evidence Status & Visual Legend,Alpha,A,V0,BLOCKED_SOURCE_NOT_VALIDATED,,Christina,Codex|Coco,Board,,,,,,2026-09-05,
-F02,Journey Architecture,Alpha Pilot,PILOT,V0,BLOCKED_SOURCE_NOT_VALIDATED,journey_moments_master.csv,Christina,Codex|Xiaoming,16:9,,,,,,2026-09-05,
+F02,Journey Architecture,Alpha Pilot,PILOT,V0,PILOT_CREATED_AWAITING_REVIEW,journey_moments.csv,Christina,Codex|Xiaoming,16:9,3458764682843351902,2050,-160,1980,1100,2026-09-07,Readback verified; design and client validation pending
 F03,Role Ecosystem & Persona Hypotheses,Alpha,A,V0,BLOCKED_SOURCE_NOT_VALIDATED,persona_hypotheses.md|jobs_to_be_done.csv,Christina,Codex|Coco,16:9,,,,,,2026-09-05,
-F04,Current End-to-End Executive Journey,Alpha Pilot,PILOT,V0,BLOCKED_SOURCE_NOT_VALIDATED,current_journey_matrix.csv|pain_point_register.csv,Christina,Codex|Xiaoming,16:9,,,,,,2026-09-05,
+F04,Current End-to-End Executive Journey,Alpha Pilot,PILOT,V0,PILOT_CREATED_AWAITING_REVIEW,current_journey_matrix.csv|pain_point_register.csv,Christina,Codex|Xiaoming,16:9,3458764682843351920,4230,1100,2316,2916,2026-09-07,Readback verified; design and client validation pending
 F05,Current Detailed Service Blueprint,Workshop,B,V0,BLOCKED_SOURCE_NOT_VALIDATED,current_journey_matrix.csv,Christina,Codex|Xiaoming,Board,,,,,,2026-09-05,
 F06,Case Manager Deep Dive,Alpha,A,V0,BLOCKED_SOURCE_NOT_VALIDATED,journey_moments_master.csv|persona_hypotheses.md,Christina,Codex|Xiaoming,16:9,,,,,,2026-09-05,
 F07,KYC Operations Deep Dive,Alpha,A,V0,BLOCKED_SOURCE_NOT_VALIDATED,journey_moments_master.csv|persona_hypotheses.md,Christina,Codex|Xiaoming,16:9,,,,,,2026-09-05,
 F08,Hero Case & Trigger Variants,Alpha,A,V0,BLOCKED_SOURCE_NOT_VALIDATED,hero_case.md|trigger_variants.csv,Christina,Codex|Coco,16:9,,,,,,2026-09-05,
-F09,Target Agentic End-to-End Journey,Alpha Pilot,PILOT,V0,BLOCKED_SOURCE_NOT_VALIDATED,target_journey_matrix.csv|hitl_task_matrix.csv,Christina,Codex|Xiaoming,16:9,,,,,,2026-09-05,
+F09,Target Agentic End-to-End Journey,Alpha Pilot,PILOT,V0,PILOT_CREATED_AWAITING_REVIEW,target_journey_matrix.csv|hitl_task_matrix.csv,Christina,Codex|Xiaoming,16:9,3458764682843412020,6746,1100,2316,2916,2026-09-07,Readback verified; design and client validation pending
 F10,MVP vs Target HITL & Autonomy,Alpha,A,V0,BLOCKED_SOURCE_NOT_VALIDATED,hitl_task_matrix.csv,Christina,Codex|Coco,16:9,,,,,,2026-09-05,
 F11,Structured State & Continuous Readiness,Workshop,B,V0,BLOCKED_SOURCE_NOT_VALIDATED,structured_state_model.md|state_transition_table.csv,Christina,Codex|Coco,16:9,,,,,,2026-09-05,
 F12,Pain → Root Cause → Opportunity,Workshop,B,V0,BLOCKED_SOURCE_NOT_VALIDATED,pain_point_register.csv,Christina,Codex|Coco,16:9,,,,,,2026-09-05,

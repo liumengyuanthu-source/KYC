@@ -1,0 +1,11 @@
+{
+  "batch":"D2-C-Final-1.0",
+  "business_write_capability":false,
+  "missing_media_policy":"static_equivalent_no_fake_play",
+  "assets":[
+    {"id":"DMO-C01","scene":"SCN-POPULATION","status":"static_fallback","video_path":null,"frames":[{"id":"C01-start","nodes":["P01","P02"],"meaning":"Read scope, known subjects and unresolved inventory"},{"id":"C01-middle","nodes":["P03","P04","P07"],"meaning":"Named preliminary subset may proceed; comprehensive plan remains independently guarded"},{"id":"C01-end","nodes":["P05","P10","P11","P12"],"meaning":"Completed/partial/failed/pending remain distinct; full coverage and whole-case readiness are not granted"}]},
+    {"id":"DMO-C02","scene":"SCN-MATCH","status":"static_fallback","video_path":null,"frames":[{"id":"C02-start","nodes":["M01","M02","M03"],"meaning":"Possible match, versioned comparison and protection scope"},{"id":"C02-middle","nodes":["M04","M05","M06","M10"],"meaning":"Precise evidence gap and immediate specialist referral can coexist"},{"id":"C02-end","nodes":["M10","M11","M12"],"meaning":"Unresolved finding with next responsibility; no reviewed exclusion fixture is shipped"}]},
+    {"id":"DMO-C03","scene":"SCN-MATCH","status":"working_html_with_actual_state_captures","video_path":null,"frames":[{"id":"C03-review","path":"../../qa/batch-c/review-mainline.zh-CN.png","meaning":"Actual saved Person T review, case v32; inventory incomplete and case not ready"},{"id":"C03-decisions","path":"../../qa/batch-c/review-decisions.zh-CN.png","meaning":"Actual unresolved and referral records, not supported exclusion"}],"evidence_receipt":"../../qa/batch-c/review-capture.json","capture_rule":"Real local mainline state after explicit actions; still images are read-only proof, not a video or an executable hotspot"},
+    {"id":"IMG-C-REVIEWER","status":"neutral_role_icon_fallback","image_path":null,"restriction":"No new real or synthetic identity portrait required; appearance never implies risk"}
+  ]
+}

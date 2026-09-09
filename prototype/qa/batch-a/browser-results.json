@@ -1,0 +1,98 @@
+{
+  "results": [
+    {
+      "ids": [
+        "RT-A01",
+        "RT-A17"
+      ],
+      "name": "Fresh A0 has only initial evidence, no counterparty",
+      "status": "passed"
+    },
+    {
+      "ids": [
+        "RT-A10",
+        "RT-A21"
+      ],
+      "name": "Story Next to end never writes case",
+      "status": "passed"
+    },
+    {
+      "ids": [
+        "RT-A09"
+      ],
+      "name": "Stay preserves dirty Scope input",
+      "status": "passed"
+    },
+    {
+      "ids": [
+        "RT-A22",
+        "RT-A05"
+      ],
+      "name": "Save and return preserves Current and newest locale / business context",
+      "status": "passed"
+    },
+    {
+      "ids": [
+        "RT-A02",
+        "RT-A03",
+        "RT-A06",
+        "RT-A07",
+        "RT-A11",
+        "RT-A20"
+      ],
+      "name": "Authority action is purpose-specific and idempotent",
+      "status": "passed"
+    },
+    {
+      "ids": [
+        "RT-A23"
+      ],
+      "name": "Authority help hover/focus/dismiss; blocker visible outside help",
+      "status": "passed"
+    },
+    {
+      "ids": [
+        "RT-A16"
+      ],
+      "name": "Scope revision, role and zoom survive product return",
+      "status": "passed"
+    },
+    {
+      "ids": [
+        "RT-A24",
+        "RT-A28"
+      ],
+      "name": "Missing media / Lab does not block mainline",
+      "status": "passed"
+    },
+    {
+      "ids": [
+        "RT-A25"
+      ],
+      "name": "Print from mid-journey includes full scope and restores origin",
+      "status": "passed"
+    },
+    {
+      "ids": [],
+      "name": "viewport 1366: no document overflow",
+      "status": "passed"
+    },
+    {
+      "ids": [],
+      "name": "viewport 1024: no document overflow",
+      "status": "passed"
+    },
+    {
+      "ids": [],
+      "name": "viewport 390: no document overflow",
+      "status": "passed"
+    },
+    {
+      "ids": [],
+      "name": "No JavaScript exceptions",
+      "status": "passed",
+      "errors": []
+    }
+  ],
+  "errors": []
+}

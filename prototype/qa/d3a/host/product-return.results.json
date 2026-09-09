@@ -1,0 +1,35 @@
+{
+  "at": "2026-09-07T16:03:16.112Z",
+  "browser": "152.0.7977.76",
+  "results": [
+    {
+      "ids": [
+        "UX-11",
+        "UX-12",
+        "UX-16"
+      ],
+      "name": "saved-product-return",
+      "status": "passed",
+      "screenshot": "prototype/qa/d3a/host/saved-product-return.png",
+      "errors": []
+    },
+    {
+      "ids": [
+        "UX-13"
+      ],
+      "name": "failed-save-stay-discard",
+      "status": "passed",
+      "screenshot": "prototype/qa/d3a/host/failed-save-stay-discard.png",
+      "errors": []
+    },
+    {
+      "ids": [
+        "UX-11"
+      ],
+      "name": "purpose-specific-evidence-target",
+      "status": "passed",
+      "screenshot": "prototype/qa/d3a/host/purpose-specific-evidence-target.png",
+      "errors": []
+    }
+  ]
+}

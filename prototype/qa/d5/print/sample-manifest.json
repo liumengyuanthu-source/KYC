@@ -1,0 +1,57 @@
+[
+  {
+    "view": "review-en-AU",
+    "page": 1,
+    "image": "prototype/qa/d5/print/review-en-AU-page1.png"
+  },
+  {
+    "view": "review-en-AU",
+    "page": 4,
+    "image": "prototype/qa/d5/print/review-en-AU-page4.png"
+  },
+  {
+    "view": "review-en-AU",
+    "page": 8,
+    "image": "prototype/qa/d5/print/review-en-AU-page8.png"
+  },
+  {
+    "view": "review-en-US",
+    "page": 1,
+    "image": "prototype/qa/d5/print/review-en-US-page1.png"
+  },
+  {
+    "view": "review-en-US",
+    "page": 4,
+    "image": "prototype/qa/d5/print/review-en-US-page4.png"
+  },
+  {
+    "view": "review-en-US",
+    "page": 8,
+    "image": "prototype/qa/d5/print/review-en-US-page8.png"
+  },
+  {
+    "view": "review-zh-CN",
+    "page": 1,
+    "image": "prototype/qa/d5/print/review-zh-CN-page1.png"
+  },
+  {
+    "view": "review-zh-CN",
+    "page": 4,
+    "image": "prototype/qa/d5/print/review-zh-CN-page4.png"
+  },
+  {
+    "view": "review-zh-CN",
+    "page": 8,
+    "image": "prototype/qa/d5/print/review-zh-CN-page8.png"
+  },
+  {
+    "view": "rm-en-AU",
+    "page": 1,
+    "image": "prototype/qa/d5/print/rm-en-AU-page1.png"
+  },
+  {
+    "view": "client-en-AU",
+    "page": 1,
+    "image": "prototype/qa/d5/print/client-en-AU-page1.png"
+  }
+]

@@ -1,0 +1,210 @@
+{
+  "results": [
+    {
+      "name": "review-en-AU",
+      "pages": 8,
+      "checks": {
+        "nonempty_pages": true,
+        "no_page_overflow": true,
+        "synthetic_not_bank_approved_header": true,
+        "required_identity_comparison_present": true,
+        "isolated_time_example_present": true,
+        "all_six_steps_present": true,
+        "no_unexpected_chinese": true
+      },
+      "page_checks": [
+        {
+          "page": 1,
+          "text_chars": 962,
+          "clipped_characters": []
+        },
+        {
+          "page": 2,
+          "text_chars": 1430,
+          "clipped_characters": []
+        },
+        {
+          "page": 3,
+          "text_chars": 1410,
+          "clipped_characters": []
+        },
+        {
+          "page": 4,
+          "text_chars": 1366,
+          "clipped_characters": []
+        },
+        {
+          "page": 5,
+          "text_chars": 1292,
+          "clipped_characters": []
+        },
+        {
+          "page": 6,
+          "text_chars": 1551,
+          "clipped_characters": []
+        },
+        {
+          "page": 7,
+          "text_chars": 1057,
+          "clipped_characters": []
+        },
+        {
+          "page": 8,
+          "text_chars": 1358,
+          "clipped_characters": []
+        }
+      ]
+    },
+    {
+      "name": "review-en-US",
+      "pages": 8,
+      "checks": {
+        "nonempty_pages": true,
+        "no_page_overflow": true,
+        "synthetic_not_bank_approved_header": true,
+        "required_identity_comparison_present": true,
+        "isolated_time_example_present": true,
+        "all_six_steps_present": true,
+        "no_unexpected_chinese": true
+      },
+      "page_checks": [
+        {
+          "page": 1,
+          "text_chars": 962,
+          "clipped_characters": []
+        },
+        {
+          "page": 2,
+          "text_chars": 1430,
+          "clipped_characters": []
+        },
+        {
+          "page": 3,
+          "text_chars": 1410,
+          "clipped_characters": []
+        },
+        {
+          "page": 4,
+          "text_chars": 1366,
+          "clipped_characters": []
+        },
+        {
+          "page": 5,
+          "text_chars": 1292,
+          "clipped_characters": []
+        },
+        {
+          "page": 6,
+          "text_chars": 1551,
+          "clipped_characters": []
+        },
+        {
+          "page": 7,
+          "text_chars": 1057,
+          "clipped_characters": []
+        },
+        {
+          "page": 8,
+          "text_chars": 1358,
+          "clipped_characters": []
+        }
+      ]
+    },
+    {
+      "name": "review-zh-CN",
+      "pages": 8,
+      "checks": {
+        "nonempty_pages": true,
+        "no_page_overflow": true,
+        "synthetic_not_bank_approved_header": true,
+        "required_identity_comparison_present": true,
+        "isolated_time_example_present": true,
+        "all_six_steps_present": true
+      },
+      "page_checks": [
+        {
+          "page": 1,
+          "text_chars": 681,
+          "clipped_characters": []
+        },
+        {
+          "page": 2,
+          "text_chars": 837,
+          "clipped_characters": []
+        },
+        {
+          "page": 3,
+          "text_chars": 838,
+          "clipped_characters": []
+        },
+        {
+          "page": 4,
+          "text_chars": 730,
+          "clipped_characters": []
+        },
+        {
+          "page": 5,
+          "text_chars": 903,
+          "clipped_characters": []
+        },
+        {
+          "page": 6,
+          "text_chars": 528,
+          "clipped_characters": []
+        },
+        {
+          "page": 7,
+          "text_chars": 341,
+          "clipped_characters": []
+        },
+        {
+          "page": 8,
+          "text_chars": 486,
+          "clipped_characters": []
+        }
+      ]
+    },
+    {
+      "name": "rm-en-AU",
+      "pages": 1,
+      "checks": {
+        "nonempty_pages": true,
+        "no_page_overflow": true,
+        "synthetic_not_bank_approved_header": true,
+        "restricted_terms_absent": true,
+        "no_unexpected_chinese": true
+      },
+      "page_checks": [
+        {
+          "page": 1,
+          "text_chars": 1392,
+          "clipped_characters": []
+        }
+      ]
+    },
+    {
+      "name": "client-en-AU",
+      "pages": 1,
+      "checks": {
+        "nonempty_pages": true,
+        "no_page_overflow": true,
+        "synthetic_not_bank_approved_header": true,
+        "restricted_terms_absent": true,
+        "no_unexpected_chinese": true
+      },
+      "page_checks": [
+        {
+          "page": 1,
+          "text_chars": 795,
+          "clipped_characters": []
+        }
+      ]
+    }
+  ],
+  "parser_warnings": {
+    "count": 232,
+    "samples": [
+      "Could not get FontBBox from font descriptor because None cannot be parsed as 4 floats"
+    ]
+  }
+}

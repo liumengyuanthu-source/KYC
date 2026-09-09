@@ -1,0 +1,17 @@
+{
+  "status": "passed",
+  "sampleCount": 21,
+  "reviewer": "root",
+  "scope": "First, middle and last physical pages of all seven proofs",
+  "observations": [
+    "Sharp titles and secondary metadata; no overlapping text in selected samples.",
+    "Single physical-page context and legend including nested reuse tables.",
+    "Complete offscreen action/assessment/source/skill/frame content is text-audited, not inferred from viewport.",
+    "Author print intentionally retains internal references; separate customer export excludes them.",
+    "Some final pages are sparse; full catalogue and source register are retained rather than truncated."
+  ],
+  "limitations": [
+    "Chromium PDF proof only; Safari/Firefox/native200%zoom/screenreader not certified.",
+    "PDF parser reports FontBBox descriptor warnings; recorded in pdf-results.json, not hidden."
+  ]
+}

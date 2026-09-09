@@ -1,0 +1,30 @@
+[
+  {
+    "name": "09-media",
+    "path": "media/d2-batch-a/r01/print/DMO-A01__r01__zh-CN.html",
+    "status": 200,
+    "screenshot": "prototype/qa/d3/static/09-media.png",
+    "overflow": false
+  },
+  {
+    "name": "10-static-screening",
+    "path": "media/d2-batch-c/static/SCN-MATCH.zh-CN.html",
+    "status": 200,
+    "screenshot": "prototype/qa/d3/static/10-static-screening.png",
+    "overflow": false
+  },
+  {
+    "name": "11-archify",
+    "path": "diagrams/batch-d/DG-D02.zh-CN.r02.html",
+    "status": 200,
+    "screenshot": "prototype/qa/d3/static/11-archify.png",
+    "overflow": false
+  },
+  {
+    "name": "12-collaboration-diagram",
+    "path": "diagrams/batch-b/client-collaboration.zh-CN.html",
+    "status": 200,
+    "screenshot": "prototype/qa/d3/static/12-collaboration-diagram.png",
+    "overflow": false
+  }
+]

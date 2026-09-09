@@ -1,0 +1,14 @@
+{
+  "at": "2026-09-07T19:09:50.015Z",
+  "changed_existing_product_files": [
+    "prototype/app.mjs",
+    "prototype/product-experience/product-experience.css",
+    "prototype/product-experience/projection.mjs",
+    "prototype/product-experience/ui.mjs"
+  ],
+  "engine_changes": [],
+  "css_changes": [
+    "prototype/product-experience/product-experience.css"
+  ],
+  "note": "New files and controlled diff are listed in controlled-fix-report.md. No git mutations or remote publication."
+}

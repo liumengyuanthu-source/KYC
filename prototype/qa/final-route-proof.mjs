@@ -1,0 +1,32 @@
+import {chromium} from '/Users/christinaliu/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright/index.mjs';
+import path from 'node:path';import{fileURLToPath}from'node:url';
+const out=path.dirname(fileURLToPath(import.meta.url));const browser=await chromium.launch({executablePath:'/Applications/Google Chrome.app/Contents/MacOS/Google Chrome',headless:true});
+const results={};const context=await browser.newContext({viewport:{width:1440,height:900}});const page=await context.newPage();
+const read=()=>page.evaluate(()=>JSON.parse(sessionStorage.getItem('ctt-round-a-v1')));
+try{
+ await page.goto('http://127.0.0.1:8765/prototype/?locale=en-AU');await page.locator('.storyrail').waitFor();
+ await page.locator('[data-action="compare"][data-value="current"]').click();await page.locator('.storyrail [data-value="SCN-MATCH"]').click();
+ const b=await page.locator('#scenario-dialog').boundingBox();await page.mouse.move(b.x+b.width*.8,b.y+b.height*.65);await page.mouse.wheel(0,160);await page.waitForTimeout(250);
+ const before=await page.locator('#scenario-dialog').evaluate(x=>x.scrollTop);const previous=await read();
+ await page.locator('#scene-locale').selectOption('zh-CN');await page.waitForFunction(()=>[...document.querySelectorAll('#scenario-dialog img')].every(x=>x.complete));await page.waitForTimeout(100);
+ const after=await page.locator('#scenario-dialog').evaluate(x=>x.scrollTop);const changed=await read();
+ results.sceneLocale={before:{locale:previous.navigation.locale,scenario:previous.navigation.scenario,comparison:previous.navigation.comparison,scrollTop:before},after:{locale:changed.navigation.locale,scenario:changed.navigation.scenario,comparison:changed.navigation.comparison,scrollTop:after},preserved:previous.navigation.scenario===changed.navigation.scenario&&changed.navigation.comparison==='current'&&Math.abs(before-after)<2};
+ await page.screenshot({path:path.join(out,'scene-locale.zh-CN.png')});
+ await page.locator('#scene-locale').selectOption('en-AU');await page.locator('#scenario-dialog [data-action="product"]').click();
+ await page.locator('.work-nav [data-value="requirements"]').click();await page.locator('[data-value="confirm_requirements"]').click();
+ await page.locator('.work-nav [data-value="evidence"]').click();await page.locator('#rationale').fill('Registry identity data supports the synthetic legal entity for identity only; screening disambiguation still needs its own supplement.');await page.locator('[data-value="reuse_identity"]').click();
+ await page.locator('.work-nav [data-value="gaps"]').click();await page.locator('#rationale').fill('Request the missing registration identifier, incorporation date and jurisdiction for the screening purpose.');await page.locator('[data-value="send_residual_request"]').click();await page.locator('[data-value="receive_supplement"]').click();
+ await page.locator('.work-nav [data-value="validation"]').click();await page.locator('#rationale').fill('The received synthetic identifier supplement is current and sufficient for this subject and the screening-disambiguation purpose.');await page.locator('[data-value="assess_supplement"]').click();
+ await page.locator('.work-nav [data-value="screening"]').click();await page.locator('#product-role').selectOption('ROLE-FINCRIME');
+ await page.locator('#rationale').fill('Reviewed subject registration SYN-A-104 against provider SYN-B-207 and AU against NZ, alongside the sufficient screening-purpose assessment. These authored records represent different subjects for this demo input version.');
+ results.screeningBeforeDecision={role:(await read()).navigation.role,comparisonText:await page.locator('.compare-table').innerText(),caseRevision:(await read()).data.case.revision};
+ await page.locator('.work-panel').scrollIntoViewIfNeeded();await page.screenshot({path:path.join(out,'screening.en-AU.png')});await page.screenshot({path:path.join(out,'screening.en-AU.full.png'),fullPage:true});
+ await page.locator('[data-value="record_disposition"]').click();await page.locator('.work-nav [data-value="clearance"]').click();
+ await page.locator('.work-panel').scrollIntoViewIfNeeded();await page.screenshot({path:path.join(out,'clearance.en-AU.png')});await page.screenshot({path:path.join(out,'clearance.en-AU.full.png'),fullPage:true});
+ const done=(await read()).data;results.finalCase={revision:done.case.revision,decisions:done.decisions.length,events:done.auditEvents.map(x=>x.event_type),conditions:done.clearanceConditions.map(x=>({domain:x.domain,status:x.status,applicability:x.applicability})),readiness:done.readinessSnapshots.at(-1).result,publication:done.case.publication_status,transaction:done.case.transaction_status};
+ await context.close();
+ const cx=await browser.newContext({viewport:{width:1440,height:900}});const p=await cx.newPage();await p.goto('http://127.0.0.1:8765/prototype/?locale=en-AU');await p.locator('[data-action="play"]').click();
+ await p.waitForFunction(()=>{const s=JSON.parse(sessionStorage.getItem('ctt-round-a-v1'));return s?.navigation.modal&&s.navigation.scenario==='SCN-MATCH'},{},{timeout:20000});
+ results.autoplay=await p.evaluate(()=>{const s=JSON.parse(sessionStorage.getItem('ctt-round-a-v1'));return{scenario:s.navigation.scenario,cursor:s.navigation.storyCursor,modalOpen:document.querySelector('#scenario-dialog').open,caseRevision:s.data.case.revision,decisions:s.data.decisions.length,buttonText:document.querySelector('[data-action="play"]').innerText}});await cx.close();
+ console.log(JSON.stringify(results,null,2));
+}finally{await browser.close()}

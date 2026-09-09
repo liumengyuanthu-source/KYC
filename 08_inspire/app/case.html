@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Case OB-2026-0147 — Clear-to-Trade Portal</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Roboto+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="case">
+<div class="frame">
+  <header class="topbar">
+    <a class="brand" href="index.html"><span class="brand-mark">CT</span><span class="brand-name">Clear-to-Trade Portal<small>Client Workspace</small></span></a>
+    <div class="search">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#54453f" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      <input type="text" placeholder="Search cases, documents, requirements…">
+    </div>
+    <div class="topbar-spacer"></div>
+    <button class="icon-btn" onclick="toast('2 new updates from Aria')"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#54453f" stroke-width="1.8" stroke-linecap="round"><path d="M18 8a6 6 0 1 0-12 0c0 7-3 8-3 8h18s-3-1-3-8"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/></svg><span class="dot"></span></button>
+    <div class="avatar">AB</div>
+  </header>
+
+  <div class="shell">
+    <nav class="sidebar">
+      <a class="side-link" href="index.html"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg><span class="tip">Home</span></a>
+      <a class="side-link" href="intake.html"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg><span class="tip">New request</span></a>
+      <a class="side-link active" href="case.html"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><path d="M9 17l-5-5 5-5M15 7l5 5-5 5"/></svg><span class="tip">Case tracker</span></a>
+      <a class="side-link" href="documents.html"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6"/></svg><span class="tip">Documents</span></a>
+      <a class="side-link" href="edd.html"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><path d="M12 3 4 7v5c0 5 3.4 8 8 9 4.6-1 8-4 8-9V7z"/><path d="m9 12 2 2 4-4"/></svg><span class="tip">EDD info</span></a>
+    </nav>
+
+    <main class="main">
+      <div class="content-grid">
+        <div>
+          <!-- case header -->
+          <section class="reveal" style="margin-bottom:24px">
+            <span class="eyebrow">Live case · updated 40 seconds ago</span>
+            <h1 class="display" style="margin-top:10px;font-size:clamp(26px,3vw,38px)">Meridian Holdings Ltd</h1>
+            <div class="pill-row" style="margin-top:14px">
+              <span class="badge-mono solid">OB-2026-0147</span>
+              <span class="chip chip-info"><span class="cdot"></span>New relationship</span>
+              <span class="chip chip-info"><span class="cdot"></span>HK booking entity</span>
+              <span class="chip chip-wait"><span class="cdot"></span>Enhanced due diligence</span>
+              <span class="chip chip-run"><span class="cdot"></span>Aria orchestrating</span>
+            </div>
+          </section>
+
+          <!-- journey -->
+          <section class="card reveal" style="margin-bottom:24px;padding:26px">
+            <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:20px;flex-wrap:wrap;gap:8px">
+              <h2 class="section-title">Journey to cleared-to-trade</h2>
+              <span class="eyebrow">Non-dependent steps run in parallel</span>
+            </div>
+            <div class="module-strip" style="margin-bottom:22px">
+              <div class="module-chip cc-sage is-done" id="m0"><div class="mc-code">M0</div><div class="mc-name">Booking model</div><div class="mc-state"><span class="cdot"></span>Done · 4 Sep</div></div>
+              <div class="module-chip cc-sage is-done" id="m1"><div class="mc-code">M1</div><div class="mc-name">Intake &amp; triage</div><div class="mc-state"><span class="cdot"></span>Done · 4 Sep</div></div>
+              <div class="module-chip cc-sage is-done" id="m2"><div class="mc-code">M2</div><div class="mc-name">Requirements</div><div class="mc-state"><span class="cdot"></span>Done · 5 Sep</div></div>
+              <div class="module-chip cc-yellow is-run" id="m3"><div class="mc-code">M3</div><div class="mc-name">Doc sourcing</div><div class="mc-state"><span class="cdot"></span>9 / 11 items</div></div>
+              <div class="module-chip cc-blue is-run" id="m4"><div class="mc-code">M4</div><div class="mc-name">Screening</div><div class="mc-state"><span class="cdot"></span>Adjudicating</div></div>
+              <div class="module-chip cc-pink is-wait" id="m5"><div class="mc-code">M5</div><div class="mc-name">EDD assess</div><div class="mc-state"><span class="cdot"></span>Needs you</div></div>
+              <div class="module-chip is-idle" style="background:var(--beige)" id="m6"><div class="mc-code">M6</div><div class="mc-name">Quality assur.</div><div class="mc-state"><span class="cdot"></span>Queued</div></div>
+              <div class="module-chip cc-sage is-done" id="m7"><div class="mc-code">M7</div><div class="mc-name">Conflicts</div><div class="mc-state"><span class="cdot"></span>Done · 5 Sep</div></div>
+              <div class="module-chip cc-lav is-idle" id="m8"><div class="mc-code">M8</div><div class="mc-name">Cleared-to-trade</div><div class="mc-state"><span class="cdot"></span>Queued</div></div>
+            </div>
+            <div style="display:flex;gap:14px;flex-wrap:wrap">
+              <span class="chip chip-info"><span class="cdot" style="background:var(--peach)"></span>C1 Legal · drafting in parallel</span>
+              <span class="chip chip-idle"><span class="cdot"></span>C2 Credit · not required</span>
+              <span class="chip chip-info"><span class="cdot" style="background:var(--lavender)"></span>HITL · specialist reviews EDD judgment (M5.9)</span>
+            </div>
+          </section>
+
+          <!-- outstanding -->
+          <section class="reveal" style="margin-bottom:24px">
+            <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:14px">
+              <h2 class="section-title">Outstanding — issued to you</h2>
+              <span class="badge-mono solid">REQ · 2 OPEN / 6 ISSUED</span>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:12px">
+              <div class="doc-row" style="border-left:3px solid var(--bad)">
+                <div class="doc-ico" style="background:var(--pink)"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#26221e" stroke-width="1.9" stroke-linecap="round"><path d="M12 3 4 7v5c0 5 3.4 8 8 9 4.6-1 8-4 8-9V7z"/></svg></div>
+                <div>
+                  <div class="doc-name">Source of Funds &amp; Source of Wealth declaration</div>
+                  <div class="doc-meta">REQ-04 · issued by M2.5 · blocks M5 evidence pack &amp; QA review</div>
+                </div>
+                <div class="doc-actions"><a class="btn btn-primary btn-sm" href="edd.html">Respond
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+              </div>
+              <div class="doc-row" style="border-left:3px solid var(--warn)">
+                <div class="doc-ico" style="background:var(--yellow)"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#26221e" stroke-width="1.9" stroke-linecap="round"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6"/></svg></div>
+                <div>
+                  <div class="doc-name">Certified register of directors (within 3 months)</div>
+                  <div class="doc-meta">REQ-06 · issued by M3.3 · residual gap after registry sourcing</div>
+                </div>
+                <div class="doc-actions"><a class="btn btn-primary btn-sm" href="documents.html">Upload
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+              </div>
+              <div class="doc-row" style="opacity:.65">
+                <div class="doc-ico" style="background:var(--sage)"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#1f7a52" stroke-width="2.2" stroke-linecap="round"><path d="m4.5 12.5 5 5 10-11"/></svg></div>
+                <div>
+                  <div class="doc-name">Ownership chart to ultimate beneficial owners</div>
+                  <div class="doc-meta">REQ-02 · received 6 Sep · validated against registry data</div>
+                </div>
+                <div class="doc-actions"><span class="chip chip-ok"><span class="cdot"></span>Closed</span></div>
+              </div>
+            </div>
+          </section>
+
+          <!-- structured state -->
+          <section class="card reveal" style="margin-bottom:24px">
+            <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:14px;flex-wrap:wrap;gap:8px">
+              <h2 class="section-title">Readiness state</h2>
+              <span class="eyebrow">Published live to RM &amp; downstream systems</span>
+            </div>
+            <div class="mono-block"><span class="k">"case"</span>: <span class="s">"OB-2026-0147"</span>,
+<span class="k">"entity"</span>: <span class="s">"Meridian Holdings Ltd"</span>,
+<span class="k">"readiness"</span>: <span class="n">0.68</span>,
+<span class="k">"modules"</span>: { <span class="k">"M0"</span>: <span class="s">"done"</span>, <span class="k">"M1"</span>: <span class="s">"done"</span>, <span class="k">"M2"</span>: <span class="s">"done"</span>,
+  <span class="k">"M3"</span>: <span class="s">"running"</span>, <span class="k">"M4"</span>: <span class="s">"running"</span>, <span class="k">"M5"</span>: <span class="s">"awaiting_client"</span>,
+  <span class="k">"M6"</span>: <span class="s">"queued"</span>, <span class="k">"M7"</span>: <span class="s">"done"</span>, <span class="k">"M8"</span>: <span class="s">"queued"</span> },
+<span class="k">"parallel"</span>: { <span class="k">"C1_legal"</span>: <span class="s">"drafting"</span>, <span class="k">"C2_credit"</span>: <span class="s">"not_required"</span> },
+<span class="k">"blocking"</span>: [ <span class="s">"REQ-04"</span>, <span class="s">"REQ-06"</span> ],
+<span class="k">"eta_clear_to_trade"</span>: <span class="s">"2026-09-16"</span></div>
+          </section>
+        </div>
+
+        <!-- rail -->
+        <aside class="rail">
+          <div class="agent-card reveal">
+            <div class="agent-head">
+              <span class="agent-orb"></span>
+              <div>
+                <div class="agent-name">Execution log</div>
+                <div class="agent-sub"><span class="live"></span>Streaming · every action recorded</div>
+              </div>
+            </div>
+            <div class="agent-feed" style="max-height:330px;overflow-y:auto">
+              <div class="agent-item"><span class="ai-time">40s</span><span><b>M5.2</b> Evidence pack compile tick — still missing REQ-04</span></div>
+              <div class="agent-item"><span class="ai-time">6m</span><span><b>M4.5</b> Hit on "Meridian Trading LLC" adjudicated — distinct entity, false positive</span></div>
+              <div class="agent-item"><span class="ai-time">6m</span><span><b>M4.5</b> Adverse-media hit on UBO reviewed — historic, immaterial</span></div>
+              <div class="agent-item"><span class="ai-time">22m</span><span><b>C1.3</b> Trade-finance agreement draft v1 generated for Legal review</span></div>
+              <div class="agent-item"><span class="ai-time">1h</span><span><b>M3.4</b> Ownership chart captured &amp; validated against CR data</span></div>
+              <div class="agent-item"><span class="ai-time">3h</span><span><b>M2.5</b> Requirement set issued — 6 items, EDD indicators flagged</span></div>
+              <div class="agent-item"><span class="ai-time">2d</span><span><b>M5.9</b> EDD judgment drafted → handed to Financial Crime specialist</span></div>
+              <div class="agent-item"><span class="ai-time">3d</span><span><b>M7.4</b> Conflict clearance recorded — no hits</span></div>
+            </div>
+          </div>
+
+          <div class="card reveal">
+            <div style="display:flex;gap:18px;align-items:center">
+              <div class="ring-wrap">
+                <svg width="148" height="148" viewBox="0 0 148 148">
+                  <circle class="ring-track" cx="74" cy="74" r="62" fill="none" stroke-width="11"/>
+                  <circle class="ring-fill" data-pct="68" cx="74" cy="74" r="62" fill="none" stroke-width="11"/>
+                </svg>
+                <div class="ring-center"><span class="num" data-count="68" data-suffix="%">0%</span><span class="lbl">Readiness</span></div>
+              </div>
+              <div>
+                <div class="eyebrow" style="margin-bottom:8px">ETA</div>
+                <div class="stat-num" style="font-size:20px">~16 Sep</div>
+                <p style="font-size:12px;color:var(--muted);margin-top:6px;line-height:1.5">Close the two open requirements to hold this date.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card reveal">
+            <h2 class="section-title" style="font-size:16px;margin-bottom:12px">Who's involved</h2>
+            <div style="display:flex;flex-direction:column;gap:10px;font-size:12.5px">
+              <div style="display:flex;justify-content:space-between;align-items:center"><span><b style="color:var(--ink)">Daniel Cheung</b> · RM</span><span class="chip chip-ok" style="padding:3px 9px;font-size:10px">Informed</span></div>
+              <div style="display:flex;justify-content:space-between;align-items:center"><span><b style="color:var(--ink)">KYC Ops</b> · Fulfilment</span><span class="chip chip-run" style="padding:3px 9px;font-size:10px"><span class="cdot"></span>Active</span></div>
+              <div style="display:flex;justify-content:space-between;align-items:center"><span><b style="color:var(--ink)">FC Risk</b> · EDD approver</span><span class="chip chip-wait" style="padding:3px 9px;font-size:10px"><span class="cdot"></span>Reviewing</span></div>
+              <div style="display:flex;justify-content:space-between;align-items:center"><span><b style="color:var(--ink)">CGM Legal</b> · Agreements</span><span class="chip chip-run" style="padding:3px 9px;font-size:10px"><span class="cdot"></span>Drafting</span></div>
+              <div style="display:flex;justify-content:space-between;align-items:center"><span><b style="color:var(--ink)">QA team</b> · Sign-off</span><span class="chip chip-idle" style="padding:3px 9px;font-size:10px">Queued</span></div>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </main>
+  </div>
+</div>
+
+<!-- chat -->
+<button class="chat-fab"><span class="mini-orb"></span>Ask Aria</button>
+<div class="chat-drawer">
+  <div class="chat-head">
+    <span class="mini-orb"></span>
+    <div><div class="ch-title">Aria</div><div class="ch-sub"><span class="live"></span>Onboarding agent · online</div></div>
+    <button class="chat-close">✕</button>
+  </div>
+  <div class="chat-body"></div>
+  <div class="chat-chips">
+    <button class="pill">Why is M5 waiting on me?</button>
+    <button class="pill">Who reviews the EDD outcome?</button>
+    <button class="pill">What runs in parallel?</button>
+  </div>
+  <div class="chat-input">
+    <input type="text" placeholder="Ask about this case…">
+    <button class="chat-send" aria-label="Send"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M22 2 11 13M22 2l-7 20-4-9-9-4z"/></svg></button>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

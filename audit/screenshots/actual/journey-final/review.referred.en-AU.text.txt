@@ -1,0 +1,148 @@
+Skip to content
+CLEAR
+TO TRADE
+Journey / Scenario Studio
+Product Prototype
+References
+Demo environment · synthetic
+English (AU)
+English (US)
+简体中文
+Cases
+Back to scenario
+Print this view
+Back to journey
+Demo persona 
+Operator 1
+Operator 2
+Role projection 
+KYC Operations
+Risk / Financial Crime / QA
+Financial Crime reviewer
+Relationship Manager
+Client
+Screening action recorded. Overall case remains Not ready.
+Population
+Review
+Evidence
+EDD
+Activity
+Screening Review Person T · Entity A
+
+DEMO-CTT-001 · Scope: FX forward for future USD procurement payments · Scope revision 3 · Case revision 32 · KYC Operations
+
+Not ready
+Current problem: an unresolved local identity result is recorded
+Owner: Unassigned · Next actor: Unassigned
+Recommended next action: Await a configured follow-up owner · The recorded local result is not repeated and does not clear the case.
+S1 Initiate & scope
+S2 Determine & source
+S3 Screen & assess
+S4 Assure & resolve
+S5 Clear to trade
+01 Bind query
+✓
+Step complete
+02 Compare information
+→
+Action needed
+03 Request evidence if needed
+◷
+Waiting
+04 Review pack
+→
+Action needed
+05 Human judgment
+✓
+Step complete
+06 Record local result
+✓
+Step complete
+
+Required steps still being confirmed. Step selection is reading only. Actual work: 
+◷
+Waiting
+
+View all steps, owners and time
+Compare the identity information
+Attribute	Person T	Source record	Comparison
+Name	Person T	Person T	Similar · review needed
+Birth date	Not provided	1970 (year only) / 1971 (year only)	Inconclusive
+Birthplace	Not provided	Not provided	Inconclusive
+Nationality	Not provided	Not provided	Inconclusive
+Evidence for identity distinction
+
+EV-ID-C01 · Intake status: released · v1
+
+DEMO-CTT-001/person/person-t · DEMO-CTT-001/evidence/collaboration-2
+
+Purpose assessment: Insufficient · v1
+
+Received is not assessed. Coordination evidence does not automatically satisfy the screening identity purpose.
+
+Original query, source and versions
+Your review
+
+Human question: identity remains inconclusive; a configured reviewer may record unresolved or referral only; this does not clear the case.
+
+Rationale / precise identity gap
+
+Draft saved · no decision recorded by saving
+
+Request identity information
+Save review draft
+Resume review
+Refer to specialist
+Record unresolved
+Record disposition
+
+Exclusion is unavailable: no reviewed exclusion fixture or permission configuration. Referral destination is Unassigned until configured.
+
+Record unresolved requires a configured reviewer.
+
+Local result recorded
+
+Unresolved · Identity remains unresolved for these inputs; specialist follow-up remains necessary.
+
+DEMO-CTT-001/screening-decision/c-1 · 2026-09-07T19:05:54.343Z
+Local result recorded
+
+Referred for specialist review · Refer the unresolved concern without treating the identity request as satisfied.
+
+DEMO-CTT-001/screening-decision/c-2 · 2026-09-07T19:05:56.045Z
+Open identity request
+Review received identity evidence
+
+This action changes only its bound task or finding. Coverage remains incomplete; the case is not ready.
+
+Other case conditions · parallel work
+Credit
+?
+Not yet established
+Applicability: Unknown · Earlier scope · requires current review
+Legal
+?
+Not yet established
+Applicability: Unknown · Earlier scope · requires current review
+Conflicts
+?
+Not yet established
+Applicability: Required · Earlier scope · requires current review
+Financial Crime reviewer
+?
+Not yet established
+Applicability: Unknown · Earlier scope · requires current review
+QA reviewer
+?
+Not yet established
+Applicability: Required · Earlier scope · requires current review
+
+Manifest completeness is unknown. No complete-case date or clearance follows from a local review result.
+
+Customize workspace
+Activity timeline
+Related dependencies
+Related evidence
+Illustrative timing example · separate from this session
+Confidential Australian Banking Client · Internal design review only
+Black · blue · white / Web glass approximation, not optical refraction

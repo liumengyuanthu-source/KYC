@@ -1,0 +1,42 @@
+[
+  {
+    "file": "prototype/app.mjs",
+    "sha256": "1cf90a0aeb4be77ecc45d12f473989cc9556d9d233fe0871116e027ea88b4163"
+  },
+  {
+    "file": "prototype/content.mjs",
+    "sha256": "a06a0ca7dfd59f65f12e79e5af246de67c991032b372a2017b9c2e6ee7e7fec8"
+  },
+  {
+    "file": "prototype/navigation.mjs",
+    "sha256": "8b6f0f1efd158c3a1baeb467034b67f39715e339a761dd3e7cf88798a4f991f4"
+  },
+  {
+    "file": "prototype/index.html",
+    "sha256": "b7ad03532caa45dee70e287036d78025fc9fd7f4772cd650531982123821aef7"
+  },
+  {
+    "file": "prototype/references/registry.json",
+    "sha256": "4a0b415a175231cb80aa792ef8fd74749a3c561234a2c23c9ae7e616cd1cee4c"
+  },
+  {
+    "file": "prototype/references/registry.mjs",
+    "sha256": "0fd9adacfe86906aaf9e59209b3ed20620ae1eafd857fb598f52de7f1d234bf2"
+  },
+  {
+    "file": "prototype/references.mjs",
+    "sha256": "535fa7ef16013ac8e6aa8598ebd8e039370fb572df53cc631bfc9d8196cc439a"
+  },
+  {
+    "file": "prototype/case-engine.mjs",
+    "sha256": "b6186ddb5725dcaea07a39a11c0d4b34e356885c9eb3189ca40f029622d8082c"
+  },
+  {
+    "file": "prototype/collaboration-engine.mjs",
+    "sha256": "d7d55efec4c9c5f2d19f6f13ffc58ad7f0bb2e61c6cce7caa8e73ed68b0ea4f4"
+  },
+  {
+    "file": "prototype/screening-engine.mjs",
+    "sha256": "ab9b873e971f929ec12088f1b90bb13ce716c57538d266ca800d0c3d95c14d9d"
+  }
+]

@@ -1,0 +1,17 @@
+[
+  {
+    ids: [ 'RT-D14' ],
+    name: 'Node References return preserves dependency focus and selected agreement revision',
+    status: 'passed'
+  },
+  {
+    ids: [ 'RT-D14' ],
+    name: 'Dirty rationale Stay retains input; Discard returns without a business write',
+    status: 'passed'
+  },
+  {
+    ids: [ 'RT-D14' ],
+    name: 'Dirty rationale Save stores a draft without revising Credit; Journey return preserves origin camera and zoom',
+    status: 'passed'
+  }
+]

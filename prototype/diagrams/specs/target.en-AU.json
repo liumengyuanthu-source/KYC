@@ -1,0 +1,245 @@
+{
+  "schema_version": 2,
+  "diagram_type": "workflow",
+  "meta": {
+    "title": "Target · Clear-to-Trade",
+    "locale": "en",
+    "quality_profile": "showcase",
+    "animation": "none",
+    "legend": {
+      "mode": "hidden"
+    }
+  },
+  "lanes": [
+    {
+      "id": "kyc",
+      "label": "KYC · evidence and quality"
+    },
+    {
+      "id": "conditional",
+      "label": "Conditional due diligence"
+    },
+    {
+      "id": "parallel",
+      "label": "Parallel · own input and authority"
+    },
+    {
+      "id": "release",
+      "label": "Conditions · authority · publication"
+    }
+  ],
+  "phases": [
+    {
+      "id": "scope",
+      "label": "1 Scope",
+      "fromCol": 0,
+      "toCol": 0
+    },
+    {
+      "id": "evidence",
+      "label": "2 Evidence",
+      "fromCol": 1,
+      "toCol": 1
+    },
+    {
+      "id": "assess",
+      "label": "3 Assess",
+      "fromCol": 2,
+      "toCol": 2
+    },
+    {
+      "id": "assure",
+      "label": "4 Assure",
+      "fromCol": 3,
+      "toCol": 3
+    },
+    {
+      "id": "release-stage",
+      "label": "5 Clear to trade",
+      "fromCol": 4,
+      "toCol": 5
+    }
+  ],
+  "nodes": [
+    {
+      "id": "M0-M1",
+      "lane": "kyc",
+      "col": 0,
+      "type": "frontend",
+      "label": "Scope + identity",
+      "sublabel": "M0 / M1 · case inputs",
+      "width": 132
+    },
+    {
+      "id": "M2-M3",
+      "lane": "kyc",
+      "col": 1,
+      "type": "database",
+      "label": "Requirements",
+      "sublabel": "M2 / M3 · source + verify",
+      "width": 144
+    },
+    {
+      "id": "M4",
+      "lane": "kyc",
+      "col": 2,
+      "type": "security",
+      "label": "Screening",
+      "sublabel": "M4 · findings + disposition",
+      "width": 144
+    },
+    {
+      "id": "M6",
+      "lane": "kyc",
+      "col": 3,
+      "type": "security",
+      "label": "Quality review",
+      "sublabel": "M6 · sufficiency + gaps",
+      "width": 144
+    },
+    {
+      "id": "M5",
+      "lane": "conditional",
+      "col": 2,
+      "type": "security",
+      "label": "EDD",
+      "sublabel": "M5 · risk / applicability",
+      "width": 144
+    },
+    {
+      "id": "M7",
+      "lane": "parallel",
+      "col": 1,
+      "type": "security",
+      "label": "Conflicts",
+      "sublabel": "M7 · early from M1",
+      "width": 132
+    },
+    {
+      "id": "C2",
+      "lane": "parallel",
+      "col": 2,
+      "type": "backend",
+      "label": "Credit",
+      "sublabel": "C2 · applicable terms",
+      "width": 132
+    },
+    {
+      "id": "C1",
+      "lane": "parallel",
+      "col": 3,
+      "type": "backend",
+      "label": "Legal",
+      "sublabel": "C1 · review + agreement",
+      "width": 144
+    },
+    {
+      "id": "M8-conditions",
+      "lane": "release",
+      "col": 4,
+      "type": "database",
+      "label": "Conditions converge",
+      "sublabel": "M8.1 / .2 · linked outcomes",
+      "width": 160
+    },
+    {
+      "id": "M8-authority",
+      "lane": "release",
+      "col": 5,
+      "type": "security",
+      "label": "Authorise",
+      "sublabel": "Explicit authority required",
+      "width": 160
+    },
+    {
+      "id": "M8-publish",
+      "lane": "kyc",
+      "col": 5,
+      "type": "messagebus",
+      "label": "Publish status",
+      "sublabel": "M8.3–.5 · record + notify",
+      "width": 160
+    }
+  ],
+  "edges": [
+    {
+      "from": "M0-M1",
+      "to": "M2-M3"
+    },
+    {
+      "from": "M2-M3",
+      "to": "M4"
+    },
+    {
+      "from": "M4",
+      "to": "M6",
+      "label": "Review inputs"
+    },
+    {
+      "from": "M4",
+      "to": "M5",
+      "label": "If applicable",
+      "role": "branch"
+    },
+    {
+      "from": "M5",
+      "to": "M6",
+      "label": "Required outcome"
+    },
+    {
+      "from": "M0-M1",
+      "to": "M7",
+      "label": "Early M1 inputs",
+      "role": "branch"
+    },
+    {
+      "from": "C2",
+      "to": "C1",
+      "label": "Agreement data"
+    },
+    {
+      "from": "M6",
+      "to": "M8-conditions"
+    },
+    {
+      "from": "M7",
+      "to": "M8-conditions"
+    },
+    {
+      "from": "C1",
+      "to": "M8-conditions"
+    },
+    {
+      "from": "C2",
+      "to": "M8-conditions"
+    },
+    {
+      "from": "M8-conditions",
+      "to": "M8-authority",
+      "label": "All applicable met"
+    },
+    {
+      "from": "M8-authority",
+      "to": "M8-publish",
+      "label": "Authorised"
+    }
+  ],
+  "cards": [
+    {
+      "dot": "cyan",
+      "title": "Structured collaboration",
+      "items": [
+        "One shared case links requirements, evidence uses and parallel outcomes.",
+        "Conditional EDD and independent Legal / Credit remain; preparation does not grant authority."
+      ]
+    },
+    {
+      "dot": "amber",
+      "title": "Source boundary",
+      "items": [
+        "SRC-007 · slide 2 Target. Source-supported dependencies also exist in Current.",
+        "Proposed product prepares evidence and linked work; human authority must be confirmed."
+      ]
+    }
+  ]
+}

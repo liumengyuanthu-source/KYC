@@ -1,0 +1,113 @@
+{
+  "at": "2026-09-07T17:25:06.650Z",
+  "browser": "152.0.7977.76",
+  "results": [
+    {
+      "ids": [
+        "D5-04",
+        "D5-07",
+        "D5-10",
+        "D5-43",
+        "D5U-01",
+        "D5U-19"
+      ],
+      "name": "pilot-core-current-finding",
+      "status": "passed",
+      "screenshot": "prototype/qa/d5/host/pilot-core-current-finding.png",
+      "errors": [],
+      "remote": []
+    },
+    {
+      "ids": [
+        "D5U-02",
+        "D5U-03",
+        "D5U-04",
+        "D5U-37"
+      ],
+      "name": "step-reading-does-not-execute",
+      "status": "failed",
+      "error": "The input did not match the regular expression /Credit/. Input:\n\n'S1 Initiate & scope\\n' +\n  'S2 Determine & source\\n' +\n  'S3 Screen & assess\\n' +\n  'S4 Assure & resolve\\n' +\n  'S5 Clear to trade\\n' +\n  '01 Bind query\\n' +\n  '✓\\n' +\n  'Step complete\\n' +\n  '02 Compare information\\n' +\n  '→\\n' +\n  'Action needed\\n' +\n  '03 Request evidence if needed\\n' +\n  '→\\n' +\n  'Action needed\\n' +\n  '04 Review pack\\n' +\n  '→\\n' +\n  'Action needed\\n' +\n  '05 Human judgment\\n' +\n  '→\\n' +\n  'Action needed\\n' +\n  '06 Record local result\\n' +\n  '⊘\\n' +\n  'Blocked\\n' +\n  '\\n' +\n  'Required steps still being confirmed. Step selection is reading only. Actual work: \\n' +\n  '◷\\n' +\n  'Waiting\\n' +\n  '\\n' +\n  'View all steps, owners and time'\n",
+      "stack": "AssertionError [ERR_ASSERTION]: The input did not match the regular expression /Credit/. Input:\n\n'S1 Initiate & scope\\n' +\n  'S2 Determine & source\\n' +\n  'S3 Screen & assess\\n' +\n  'S4 Assure & resolve\\n' +\n  'S5 Clear to trade\\n' +\n  '01 Bind query\\n' +\n  '✓\\n' +\n  'Step complete\\n' +\n  '02 Compare information\\n' +\n  '→\\n' +\n  'Action needed\\n' +\n  '03 Request evidence if needed\\n' +\n  '→\\n' +\n  'Action needed\\n' +\n  '04 Review pack\\n' +\n  '→\\n' +\n  'Action needed\\n' +\n  '05 Human judgment\\n' +\n  '→\\n' +\n  'Action needed\\n' +\n  '06 Record local result\\n' +\n  '⊘\\n' +\n  'Blocked\\n' +\n  '\\n' +\n  'Required steps still being confirmed. Step selection is reading only. Actual work: \\n' +\n  '◷\\n' +\n  'Waiting\\n' +\n  '\\n' +\n  'View all steps, owners and time'\n\n    at file:///Users/christinaliu/Documents/ChatGPT/Australia%20Bank/clear-to-trade-product/prototype/qa/d5/host-browser.mjs:14:87\n    at async probe (file:///Users/christinaliu/Documents/ChatGPT/Australia%20Bank/clear-to-trade-product/prototype/qa/d5/harness.mjs:16:95)\n    at async file:///Users/christinaliu/Documents/ChatGPT/Australia%20Bank/clear-to-trade-product/prototype/qa/d5/host-browser.mjs:12:1",
+      "errors": [],
+      "remote": []
+    },
+    {
+      "ids": [
+        "D5U-20",
+        "D5U-21",
+        "D5U-23",
+        "D5U-36",
+        "D5U-37"
+      ],
+      "name": "layout-save-reset-and-draft-isolation",
+      "status": "failed",
+      "error": "locator.click: Timeout 7000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[data-d5-action=\"save-layout\"]').filter({ visible: true }).first()\u001b[22m\n",
+      "stack": "locator.click: Timeout 7000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[data-d5-action=\"save-layout\"]').filter({ visible: true }).first()\u001b[22m\n\n    at d5 (/Users/christinaliu/Documents/ChatGPT/Australia Bank/clear-to-trade-product/prototype/qa/d5/host-browser.mjs:3:393)\n    at async file:///Users/christinaliu/Documents/ChatGPT/Australia%20Bank/clear-to-trade-product/prototype/qa/d5/host-browser.mjs:22:63\n    at async probe (/Users/christinaliu/Documents/ChatGPT/Australia Bank/clear-to-trade-product/prototype/qa/d5/harness.mjs:16:95)\n    at async file:///Users/christinaliu/Documents/ChatGPT/Australia%20Bank/clear-to-trade-product/prototype/qa/d5/host-browser.mjs:16:1",
+      "errors": [],
+      "remote": []
+    },
+    {
+      "ids": [
+        "D5-14",
+        "D5-38",
+        "D5U-28"
+      ],
+      "name": "history-dirty-stay-failed-save-discard",
+      "status": "failed",
+      "error": "false == true",
+      "stack": "AssertionError [ERR_ASSERTION]: false == true\n    at file:///Users/christinaliu/Documents/ChatGPT/Australia%20Bank/clear-to-trade-product/prototype/qa/d5/host-browser.mjs:29:42\n    at async probe (file:///Users/christinaliu/Documents/ChatGPT/Australia%20Bank/clear-to-trade-product/prototype/qa/d5/harness.mjs:16:95)\n    at async file:///Users/christinaliu/Documents/ChatGPT/Australia%20Bank/clear-to-trade-product/prototype/qa/d5/host-browser.mjs:26:1",
+      "errors": [],
+      "remote": []
+    },
+    {
+      "ids": [
+        "D5-39",
+        "D5U-28",
+        "D5U-37"
+      ],
+      "name": "saved-review-history-language-roundtrip",
+      "status": "failed",
+      "error": "locator.fill: Timeout 7000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#d5-history-search')\u001b[22m\n",
+      "stack": "locator.fill: Timeout 7000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#d5-history-search')\u001b[22m\n\n    at /Users/christinaliu/Documents/ChatGPT/Australia Bank/clear-to-trade-product/prototype/qa/d5/host-browser.mjs:33:45\n    at async probe (/Users/christinaliu/Documents/ChatGPT/Australia Bank/clear-to-trade-product/prototype/qa/d5/harness.mjs:16:95)\n    at async file:///Users/christinaliu/Documents/ChatGPT/Australia%20Bank/clear-to-trade-product/prototype/qa/d5/host-browser.mjs:31:1",
+      "errors": [],
+      "remote": []
+    },
+    {
+      "ids": [
+        "D5-40",
+        "D5-41",
+        "D5U-22",
+        "D5U-30",
+        "D5U-31",
+        "D5U-38"
+      ],
+      "name": "safe-rm-client-projections",
+      "status": "passed",
+      "screenshot": "prototype/qa/d5/host/safe-rm-client-projections.png",
+      "errors": [],
+      "remote": []
+    },
+    {
+      "ids": [
+        "D5-42",
+        "D5U-39"
+      ],
+      "name": "narrow-touch-reduced-motion",
+      "status": "passed",
+      "screenshot": "prototype/qa/d5/host/narrow-touch-reduced-motion.png",
+      "errors": [],
+      "remote": []
+    },
+    {
+      "ids": [
+        "D5-39",
+        "D5U-39"
+      ],
+      "name": "three-language-current-input",
+      "status": "passed",
+      "screenshot": "prototype/qa/d5/host/three-language-current-input.png",
+      "errors": [],
+      "remote": []
+    }
+  ]
+}

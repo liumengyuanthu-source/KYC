@@ -1,0 +1,247 @@
+{
+  "at": "2026-09-07T12:05:20.254Z",
+  "browser": "152.0.7977.76",
+  "command": "node prototype/qa/batch-c/edge-browser.mjs",
+  "results": [
+    {
+      "ids": [
+        "RT-C02",
+        "RT-C05",
+        "RT-C06",
+        "RT-C20",
+        "RT-C45"
+      ],
+      "name": "outcome.zero",
+      "status": "passed",
+      "steps": "Isolated explicit synthetic fixture through actual HTML; no alteration of user session",
+      "case_before": {
+        "revision": 20
+      },
+      "case_after": {
+        "revision": 20
+      },
+      "screenshot": "outcome.zero.png"
+    },
+    {
+      "ids": [
+        "RT-C02",
+        "RT-C05",
+        "RT-C06",
+        "RT-C20",
+        "RT-C45"
+      ],
+      "name": "outcome.failed",
+      "status": "passed",
+      "steps": "Isolated explicit synthetic fixture through actual HTML; no alteration of user session",
+      "case_before": {
+        "revision": 20
+      },
+      "case_after": {
+        "revision": 20
+      },
+      "screenshot": "outcome.failed.png"
+    },
+    {
+      "ids": [
+        "RT-C02",
+        "RT-C05",
+        "RT-C06",
+        "RT-C20",
+        "RT-C45"
+      ],
+      "name": "outcome.partial",
+      "status": "passed",
+      "steps": "Isolated explicit synthetic fixture through actual HTML; no alteration of user session",
+      "case_before": {
+        "revision": 20
+      },
+      "case_after": {
+        "revision": 20
+      },
+      "screenshot": "outcome.partial.png"
+    },
+    {
+      "ids": [
+        "RT-C02",
+        "RT-C05",
+        "RT-C06",
+        "RT-C20",
+        "RT-C45"
+      ],
+      "name": "outcome.pending",
+      "status": "passed",
+      "steps": "Isolated explicit synthetic fixture through actual HTML; no alteration of user session",
+      "case_before": {
+        "revision": 20
+      },
+      "case_after": {
+        "revision": 20
+      },
+      "screenshot": "outcome.pending.png"
+    },
+    {
+      "ids": [
+        "RT-C24",
+        "RT-C46"
+      ],
+      "name": "resume.held",
+      "status": "passed",
+      "steps": "Isolated explicit synthetic fixture through actual HTML; no alteration of user session",
+      "case_before": {
+        "revision": 34
+      },
+      "case_after": {
+        "revision": 34
+      },
+      "screenshot": "resume.held.png"
+    },
+    {
+      "ids": [
+        "RT-C13",
+        "RT-C14"
+      ],
+      "name": "role.unconfigured",
+      "status": "passed",
+      "steps": "Isolated explicit synthetic fixture through actual HTML; no alteration of user session",
+      "case_before": {
+        "revision": 20
+      },
+      "case_after": {
+        "revision": 20
+      },
+      "screenshot": "role.unconfigured.png"
+    },
+    {
+      "ids": [
+        "RT-C33",
+        "RT-C56",
+        "RT-C62"
+      ],
+      "name": "fallback.reduced-mobile",
+      "status": "passed",
+      "steps": "Isolated explicit synthetic fixture through actual HTML; no alteration of user session",
+      "case_before": {
+        "revision": 34
+      },
+      "case_after": {
+        "revision": 34
+      },
+      "screenshot": "fallback.reduced-mobile.png"
+    },
+    {
+      "ids": [
+        "RT-C49",
+        "RT-C57",
+        "RT-C58",
+        "RT-C59"
+      ],
+      "name": "reference.public-url",
+      "status": "passed",
+      "steps": "Isolated explicit synthetic fixture through actual HTML; no alteration of user session",
+      "case_before": {
+        "revision": 20
+      },
+      "case_after": {
+        "revision": 20
+      },
+      "screenshot": "reference.public-url.png"
+    },
+    {
+      "ids": [
+        "RT-C28",
+        "RT-C30",
+        "RT-C50",
+        "RT-C64"
+      ],
+      "name": "journey.drag-and-history",
+      "status": "passed",
+      "steps": "Isolated explicit synthetic fixture through actual HTML; no alteration of user session",
+      "case_before": {
+        "revision": 34
+      },
+      "case_after": {
+        "revision": 34
+      },
+      "screenshot": "journey.drag-and-history.png"
+    },
+    {
+      "ids": [
+        "RT-C13",
+        "RT-C36"
+      ],
+      "name": "clearance.ROLE-KYCOPS",
+      "status": "passed",
+      "steps": "Isolated explicit synthetic fixture through actual HTML; no alteration of user session",
+      "case_before": {
+        "revision": 34
+      },
+      "case_after": {
+        "revision": 34
+      },
+      "screenshot": "clearance.ROLE-KYCOPS.png"
+    },
+    {
+      "ids": [
+        "RT-C13",
+        "RT-C36"
+      ],
+      "name": "clearance.ROLE-RM",
+      "status": "passed",
+      "steps": "Isolated explicit synthetic fixture through actual HTML; no alteration of user session",
+      "case_before": {
+        "revision": 34
+      },
+      "case_after": {
+        "revision": 34
+      },
+      "screenshot": "clearance.ROLE-RM.png"
+    },
+    {
+      "ids": [
+        "RT-C13",
+        "RT-C36"
+      ],
+      "name": "clearance.ROLE-CLIENT",
+      "status": "passed",
+      "steps": "Isolated explicit synthetic fixture through actual HTML; no alteration of user session",
+      "case_before": {
+        "revision": 34
+      },
+      "case_after": {
+        "revision": 34
+      },
+      "screenshot": "clearance.ROLE-CLIENT.png"
+    },
+    {
+      "ids": [
+        "RT-C67"
+      ],
+      "name": "preserved-a.scope",
+      "status": "passed",
+      "steps": "Isolated explicit synthetic fixture through actual HTML; no alteration of user session",
+      "case_before": {
+        "revision": 34
+      },
+      "case_after": {
+        "revision": 34
+      },
+      "screenshot": "preserved-a.scope.png"
+    },
+    {
+      "ids": [
+        "RT-C67"
+      ],
+      "name": "preserved-a.authority",
+      "status": "passed",
+      "steps": "Isolated explicit synthetic fixture through actual HTML; no alteration of user session",
+      "case_before": {
+        "revision": 34
+      },
+      "case_after": {
+        "revision": 34
+      },
+      "screenshot": "preserved-a.authority.png"
+    }
+  ],
+  "errors": []
+}

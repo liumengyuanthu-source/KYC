@@ -1,0 +1,133 @@
+Skip to content
+CLEAR
+TO TRADE
+Journey / Scenario Studio
+Product Prototype
+References
+Demo environment · synthetic
+English (AU)
+English (US)
+简体中文
+Cases
+Back to scenario
+Print this view
+Back to journey
+Demo persona 
+Operator 1
+Operator 2
+Role projection 
+KYC Operations
+Risk / Financial Crime / QA
+Financial Crime reviewer
+Relationship Manager
+Client
+Screening action recorded. Overall case remains Not ready.
+Population
+Review
+Evidence
+EDD
+Activity
+Screening Review Person T · Entity A
+
+DEMO-CTT-001 · Scope: FX forward for future USD procurement payments · Scope revision 3 · Case revision 20 · KYC Operations
+
+Not ready
+Current problem: identity remains inconclusive
+Owner: Unassigned · Next actor: KYC Operations
+Recommended next action: Prepare the precise identity request · The precise identity gap must be addressed before a supported local result; this does not clear the case.
+S1 Initiate & scope
+S2 Determine & source
+S3 Screen & assess
+S4 Assure & resolve
+S5 Clear to trade
+01 Bind query
+✓
+Step complete
+02 Compare information
+→
+Action needed
+03 Request evidence if needed
+→
+Action needed
+04 Review pack
+?
+Not yet established
+05 Human judgment
+→
+Action needed
+06 Record local result
+⊘
+Blocked
+
+Required steps still being confirmed. Step selection is reading only. Actual work: 
+◷
+Waiting
+
+View all steps, owners and time
+Compare the identity information
+Attribute	Person T	Source record	Comparison
+Name	Person T	Person T	Similar · review needed
+Birth date	Not provided	1970 (year only) / 1971 (year only)	Inconclusive
+Birthplace	Not provided	Not provided	Inconclusive
+Nationality	Not provided	Not provided	Inconclusive
+Evidence for identity distinction
+
+No identity document has been received for this finding. Birth date is unknown; this is not evidence of a difference.
+
+Purpose assessment: Not assessed
+
+Received is not assessed. Coordination evidence does not automatically satisfy the screening identity purpose.
+
+Original query, source and versions
+Your review
+
+Human question: identity remains inconclusive; a configured reviewer may record unresolved or referral only; this does not clear the case.
+
+Rationale / precise identity gap
+
+No decision option is preselected
+
+Request identity information
+Save review draft
+Resume review
+Refer to specialist
+Record unresolved
+Record disposition
+
+Exclusion is unavailable: no reviewed exclusion fixture or permission configuration. Referral destination is Unassigned until configured.
+
+Record unresolved requires a configured reviewer.
+
+This action changes only its bound task or finding. Coverage remains incomplete; the case is not ready.
+
+Other case conditions · parallel work
+Credit
+?
+Not yet established
+Applicability: Unknown · Earlier scope · requires current review
+Legal
+?
+Not yet established
+Applicability: Unknown · Earlier scope · requires current review
+Conflicts
+?
+Not yet established
+Applicability: Required · Earlier scope · requires current review
+Financial Crime reviewer
+?
+Not yet established
+Applicability: Unknown · Earlier scope · requires current review
+QA reviewer
+?
+Not yet established
+Applicability: Required · Earlier scope · requires current review
+
+Manifest completeness is unknown. No complete-case date or clearance follows from a local review result.
+
+Customize workspace
+Activity timeline
+Related dependencies
+Related evidence
+Illustrative timing example · separate from this session
+Confidential Australian Banking Client · Internal design review only
+Black · blue · white / Web glass approximation, not optical refraction

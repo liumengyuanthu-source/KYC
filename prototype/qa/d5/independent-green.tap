@@ -1,0 +1,58 @@
+TAP version 13
+# Subtest: D5U-07 never-started local result does not borrow finding queue timestamp
+ok 1 - D5U-07 never-started local result does not borrow finding queue timestamp
+  ---
+  duration_ms: 9.825959
+  type: 'test'
+  ...
+# Subtest: D5U-13 a basis string without confirmed target kind cannot certify overdue
+ok 2 - D5U-13 a basis string without confirmed target kind cannot certify overdue
+  ---
+  duration_ms: 0.054334
+  type: 'test'
+  ...
+# Subtest: D5U-37 reading every group never writes business state
+ok 3 - D5U-37 reading every group never writes business state
+  ---
+  duration_ms: 21.709541
+  type: 'test'
+  ...
+# Subtest: D5U-08 independent Sydney residence oracle totals five hours, not five hours human work
+ok 4 - D5U-08 independent Sydney residence oracle totals five hours, not five hours human work
+  ---
+  duration_ms: 0.772541
+  type: 'test'
+  ...
+# Subtest: D5U-07 missing event time does not become page-open time
+ok 5 - D5U-07 missing event time does not become page-open time
+  ---
+  duration_ms: 0.058167
+  type: 'test'
+  ...
+# Subtest: D5U-29 finished historical work does not accumulate today waiting
+ok 6 - D5U-29 finished historical work does not accumulate today waiting
+  ---
+  duration_ms: 0.630875
+  type: 'test'
+  ...
+# Subtest: D5U-11 localisation changes formatting, not Sydney timestamps or calendar
+ok 7 - D5U-11 localisation changes formatting, not Sydney timestamps or calendar
+  ---
+  duration_ms: 9.355167
+  type: 'test'
+  ...
+# Subtest: D5U-33 internal, stale and unreviewed estimates cannot become client commitments
+ok 8 - D5U-33 internal, stale and unreviewed estimates cannot become client commitments
+  ---
+  duration_ms: 0.134167
+  type: 'test'
+  ...
+1..8
+# tests 8
+# suites 0
+# pass 8
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 70.315166

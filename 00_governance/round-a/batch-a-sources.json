@@ -1,0 +1,16 @@
+[
+  {
+    "source_id": "SRC-013",
+    "path": "/Users/christinaliu/Downloads/Clear_to_Trade_D2_Batch_A_Scope_Entity_Final_v1.0.md",
+    "sha256": "a179172c336bd25025a510021d17957309a4bcf042e025f2de3eb69eb19f1e99",
+    "status": "USER-APPROVED Batch A only",
+    "bank_validation_status": "NOT_BANK_POLICY"
+  },
+  {
+    "source_id": "SRC-014",
+    "path": "/Users/christinaliu/Downloads/Clear_to_Trade_D2_Batch_A_Media_Format_and_Demo_Brief_v1.0.md",
+    "sha256": "96667637c8970a50100c53a0ba83989c51627cc81e90242949e145d391a56f1a",
+    "status": "PRODUCTION-BRIEF / visual candidates not selected",
+    "bank_validation_status": "NOT_BANK_POLICY"
+  }
+]

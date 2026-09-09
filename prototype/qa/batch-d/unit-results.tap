@@ -1,0 +1,1318 @@
+TAP version 13
+# Subtest: initial state maps the scene, restores a bounded position, and never restores autoplay
+ok 1 - initial state maps the scene, restores a bounded position, and never restores autoplay
+  ---
+  duration_ms: 0.930083
+  type: 'test'
+  ...
+# Subtest: unknown scene and malformed saved values normalize to the safe paused poster
+ok 2 - unknown scene and malformed saved values normalize to the safe paused poster
+  ---
+  duration_ms: 0.260875
+  type: 'test'
+  ...
+# Subtest: unknown or malformed intents cannot alter or extend sanitized state
+ok 3 - unknown or malformed intents cannot alter or extend sanitized state
+  ---
+  duration_ms: 0.277625
+  type: 'test'
+  ...
+# Subtest: seek and tick clamp to scene boundaries, stop at the end, and do not mutate input
+ok 4 - seek and tick clamp to scene boundaries, stop at the end, and do not mutate input
+  ---
+  duration_ms: 0.192333
+  type: 'test'
+  ...
+# Subtest: DMO-A02 play and seek cannot bypass the evidence hold; Next unlocks at 13 seconds
+ok 5 - DMO-A02 play and seek cannot bypass the evidence hold; Next unlocks at 13 seconds
+  ---
+  duration_ms: 0.377875
+  type: 'test'
+  ...
+# Subtest: Previous is bounded and Replay resets the story paused with the hold locked again
+ok 6 - Previous is bounded and Replay resets the story paused with the hold locked again
+  ---
+  duration_ms: 0.187041
+  type: 'test'
+  ...
+# Subtest: Play or Next at the ending stays stopped at the ending and never loops or rewinds
+ok 7 - Play or Next at the ending stays stopped at the ending and never loops or rewinds
+  ---
+  duration_ms: 0.217917
+  type: 'test'
+  ...
+# Subtest: SNAP-A0 conforms to additive prototype schema
+ok 8 - SNAP-A0 conforms to additive prototype schema
+  ---
+  duration_ms: 2.64425
+  type: 'test'
+  ...
+# Subtest: SNAP-A1 conforms to additive prototype schema
+ok 9 - SNAP-A1 conforms to additive prototype schema
+  ---
+  duration_ms: 2.432333
+  type: 'test'
+  ...
+# Subtest: SNAP-A2 conforms to additive prototype schema
+ok 10 - SNAP-A2 conforms to additive prototype schema
+  ---
+  duration_ms: 1.706541
+  type: 'test'
+  ...
+# Subtest: SNAP-A3 conforms to additive prototype schema
+ok 11 - SNAP-A3 conforms to additive prototype schema
+  ---
+  duration_ms: 3.785916
+  type: 'test'
+  ...
+# Subtest: RT-A26: qualified DEP-05 resolves to distinct meanings
+ok 12 - RT-A26: qualified DEP-05 resolves to distinct meanings
+  ---
+  duration_ms: 1.6055
+  type: 'test'
+  ...
+# Subtest: Schema rejects arbitrary action status and non-synthetic records
+ok 13 - Schema rejects arbitrary action status and non-synthetic records
+  ---
+  duration_ms: 1.892459
+  type: 'test'
+  ...
+# Subtest: Batch A object links resolve in the same case, including the retained readiness output ID
+ok 14 - Batch A object links resolve in the same case, including the retained readiness output ID
+  ---
+  duration_ms: 1.610375
+  type: 'test'
+  ...
+# Subtest: RT-A01 / A17: A0 separates the group and parties; registry arrives only by event
+ok 15 - RT-A01 / A17: A0 separates the group and parties; registry arrives only by event
+  ---
+  duration_ms: 5.320333
+  type: 'test'
+  ...
+# Subtest: RT-A02 / A03: employment evidence never creates principal authority
+ok 16 - RT-A02 / A03: employment evidence never creates principal authority
+  ---
+  duration_ms: 1.044083
+  type: 'test'
+  ...
+# Subtest: RT-A04 / A06 / A07: scope can be recorded with unresolved booking, not CDD or clearance
+ok 17 - RT-A04 / A06 / A07: scope can be recorded with unresolved booking, not CDD or clearance
+  ---
+  duration_ms: 1.507291
+  type: 'test'
+  ...
+# Subtest: RT-A11 / A20: purpose gap and request are idempotent and artifacts immutable
+ok 18 - RT-A11 / A20: purpose gap and request are idempotent and artifacts immutable
+  ---
+  duration_ms: 3.524417
+  type: 'test'
+  ...
+# Subtest: RT-A12: source unavailable does not populate registry content
+ok 19 - RT-A12: source unavailable does not populate registry content
+  ---
+  duration_ms: 0.537417
+  type: 'test'
+  ...
+# Subtest: RT-A13: action layer rejects missing demo permission and authority
+ok 20 - RT-A13: action layer rejects missing demo permission and authority
+  ---
+  duration_ms: 0.497625
+  type: 'test'
+  ...
+# Subtest: RT-A14 / A19: stale writes reject and context edits invalidate dependent currency
+ok 21 - RT-A14 / A19: stale writes reject and context edits invalidate dependent currency
+  ---
+  duration_ms: 1.178
+  type: 'test'
+  ...
+# Subtest: RT-A08 / A18: unknown applicability and holds fail closed per task
+ok 22 - RT-A08 / A18: unknown applicability and holds fail closed per task
+  ---
+  duration_ms: 1.545792
+  type: 'test'
+  ...
+# Subtest: RT-A15: Three Lens projections share one snapshot; shadow cannot mutate mainline
+ok 23 - RT-A15: Three Lens projections share one snapshot; shadow cannot mutate mainline
+  ---
+  duration_ms: 1.854042
+  type: 'test'
+  ...
+# Subtest: RT-A10 / A21: Next and media signals are presentation-only, unauthorized intent ignored
+ok 24 - RT-A10 / A21: Next and media signals are presentation-only, unauthorized intent ignored
+  ---
+  duration_ms: 1.116541
+  type: 'test'
+  ...
+# Subtest: RT-A27: candidate revision never overrides specifically approved asset revision
+ok 25 - RT-A27: candidate revision never overrides specifically approved asset revision
+  ---
+  duration_ms: 0.108542
+  type: 'test'
+  ...
+# Subtest: Earlier A0 cannot reuse a registry that has not arrived or confirm an unresolved scope
+ok 26 - Earlier A0 cannot reuse a registry that has not arrived or confirm an unresolved scope
+  ---
+  duration_ms: 3.070458
+  type: 'test'
+  ...
+# Subtest: RT-A08: completed preparation does not satisfy conflicts or another case condition
+ok 27 - RT-A08: completed preparation does not satisfy conflicts or another case condition
+  ---
+  duration_ms: 1.339833
+  type: 'test'
+  ...
+# Subtest: RT-A14: entity review invalidates a decision bound to the prior entity revision
+ok 28 - RT-A14: entity review invalidates a decision bound to the prior entity revision
+  ---
+  duration_ms: 1.979708
+  type: 'test'
+  ...
+# Subtest: False Green: unresolved Legal, Credit, QA and unknown EDD prevent readiness
+ok 29 - False Green: unresolved Legal, Credit, QA and unknown EDD prevent readiness
+  ---
+  duration_ms: 3.177666
+  type: 'test'
+  ...
+# Subtest: Empty conditions and missing scope fail closed
+ok 30 - Empty conditions and missing scope fail closed
+  ---
+  duration_ms: 0.620333
+  type: 'test'
+  ...
+# Subtest: Evidence receipt does not satisfy a requirement or decide a finding
+ok 31 - Evidence receipt does not satisfy a requirement or decide a finding
+  ---
+  duration_ms: 3.104625
+  type: 'test'
+  ...
+# Subtest: Registry reuse supports identity only, not every evidence purpose
+ok 32 - Registry reuse supports identity only, not every evidence purpose
+  ---
+  duration_ms: 0.531667
+  type: 'test'
+  ...
+# Subtest: An unauthorised role cannot record disposition
+ok 33 - An unauthorised role cannot record disposition
+  ---
+  duration_ms: 1.810291
+  type: 'test'
+  ...
+# Subtest: Disposition requires sufficient evidence and nonempty rationale
+ok 34 - Disposition requires sufficient evidence and nonempty rationale
+  ---
+  duration_ms: 1.266875
+  type: 'test'
+  ...
+# Subtest: One complete slice records a local decision, preserves other branches and does not publish
+ok 35 - One complete slice records a local decision, preserves other branches and does not publish
+  ---
+  duration_ms: 2.933833
+  type: 'test'
+  ...
+# Subtest: Stale revisions and duplicate submissions cannot create contradictory decisions
+ok 36 - Stale revisions and duplicate submissions cannot create contradictory decisions
+  ---
+  duration_ms: 4.108042
+  type: 'test'
+  ...
+# Subtest: Missing authority configuration fails closed even for reviewer
+ok 37 - Missing authority configuration fails closed even for reviewer
+  ---
+  duration_ms: 1.4315
+  type: 'test'
+  ...
+# Subtest: Missing input blocks reuse and no real publication action exists
+ok 38 - Missing input blocks reuse and no real publication action exists
+  ---
+  duration_ms: 1.734792
+  type: 'test'
+  ...
+# Subtest: Draft, request and referral are not disposition decisions
+ok 39 - Draft, request and referral are not disposition decisions
+  ---
+  duration_ms: 1.70375
+  type: 'test'
+  ...
+# Subtest: Dependency status follows fulfilled inputs rather than retaining the seed pending state
+ok 40 - Dependency status follows fulfilled inputs rather than retaining the seed pending state
+  ---
+  duration_ms: 1.972166
+  type: 'test'
+  ...
+# Subtest: Resolved finding cannot be silently reopened by a pause or information request
+ok 41 - Resolved finding cannot be silently reopened by a pause or information request
+  ---
+  duration_ms: 2.268917
+  type: 'test'
+  ...
+# Subtest: Batch B field contract and snapshots preserve one case and resolve item requirements
+ok 42 - Batch B field contract and snapshots preserve one case and resolve item requirements
+  ---
+  duration_ms: 3.7845
+  type: 'test'
+  ...
+# Subtest: Field dictionary includes types, sensitivity, edit ownership, provenance and UI binding
+ok 43 - Field dictionary includes types, sensitivity, edit ownership, provenance and UI binding
+  ---
+  duration_ms: 2.387458
+  type: 'test'
+  ...
+# Subtest: CH-27: adversarial all-local-items-complete fixture still cannot clear unresolved case conditions
+ok 44 - CH-27: adversarial all-local-items-complete fixture still cannot clear unresolved case conditions
+  ---
+  duration_ms: 1.667584
+  type: 'test'
+  ...
+# Subtest: Recorded Batch B actions replay to the exact final shared-case snapshot
+ok 45 - Recorded Batch B actions replay to the exact final shared-case snapshot
+  ---
+  duration_ms: 15.294709
+  type: 'test'
+  ...
+# Subtest: New pending-review request does not inherit historic notification sent state
+ok 46 - New pending-review request does not inherit historic notification sent state
+  ---
+  duration_ms: 0.859
+  type: 'test'
+  ...
+# Subtest: Chinese client uses approved fixture explanation translation, retaining custom source text unchanged
+ok 47 - Chinese client uses approved fixture explanation translation, retaining custom source text unchanged
+  ---
+  duration_ms: 0.104291
+  type: 'test'
+  ...
+# Subtest: Client denied view emits no task editor or internal work panels
+ok 48 - Client denied view emits no task editor or internal work panels
+  ---
+  duration_ms: 0.145
+  type: 'test'
+  ...
+# Subtest: Client task renders only supplied safe items and escapes response text
+ok 49 - Client task renders only supplied safe items and escapes response text
+  ---
+  duration_ms: 0.124625
+  type: 'test'
+  ...
+# Subtest: Client print has no form actions and includes only safe task receipt
+ok 50 - Client print has no form actions and includes only safe task receipt
+  ---
+  duration_ms: 0.156625
+  type: 'test'
+  ...
+# Subtest: CH-01/02/07/27: Batch B extends the same case/request without clearing unknowns or establishing authority
+ok 51 - CH-01/02/07/27: Batch B extends the same case/request without clearing unknowns or establishing authority
+  ---
+  duration_ms: 5.779291
+  type: 'test'
+  ...
+# Subtest: createBatchB refuses a case before working scope or Entity A identity resolution
+ok 52 - createBatchB refuses a case before working scope or Entity A identity resolution
+  ---
+  duration_ms: 0.617958
+  type: 'test'
+  ...
+# Subtest: CH-03/04/12/28: reference authentication and grants remain separate and projections fail closed
+ok 53 - CH-03/04/12/28: reference authentication and grants remain separate and projections fail closed
+  ---
+  duration_ms: 4.791709
+  type: 'test'
+  ...
+# Subtest: two separately assigned recipients never see one another's task or receipt
+ok 54 - two separately assigned recipients never see one another's task or receipt
+  ---
+  duration_ms: 3.882666
+  type: 'test'
+  ...
+# Subtest: CH-09/10/18/19/26: review is not send; dispatch is channel/version bound and idempotent
+ok 55 - CH-09/10/18/19/26: review is not send; dispatch is channel/version bound and idempotent
+  ---
+  duration_ms: 4.372417
+  type: 'test'
+  ...
+# Subtest: RM projection receives safe item progress and reviewed notes, never restricted reasons or artifacts
+ok 56 - RM projection receives safe item progress and reviewed notes, never restricted reasons or artifacts
+  ---
+  duration_ms: 1.083584
+  type: 'test'
+  ...
+# Subtest: stale case/request/item revisions reject without mutating current state
+ok 57 - stale case/request/item revisions reject without mutating current state
+  ---
+  duration_ms: 4.166458
+  type: 'test'
+  ...
+# Subtest: CH-08/16/19: one client submission is partial, received only, and duplicate safe
+ok 58 - CH-08/16/19: one client submission is partial, received only, and duplicate safe
+  ---
+  duration_ms: 5.127084
+  type: 'test'
+  ...
+# Subtest: CH-05: expired or revoked grant blocks every read/write while saved draft persists
+ok 59 - CH-05: expired or revoked grant blocks every read/write while saved draft persists
+  ---
+  duration_ms: 8.136208
+  type: 'test'
+  ...
+# Subtest: CH-13/14: staff-assisted duplicate candidates preserve origin, principal and uploader
+ok 60 - CH-13/14: staff-assisted duplicate candidates preserve origin, principal and uploader
+  ---
+  duration_ms: 6.755917
+  type: 'test'
+  ...
+# Subtest: CH-15/16/17/27: intake, purpose link and assessment gates are independent
+ok 61 - CH-15/16/17/27: intake, purpose link and assessment gates are independent
+  ---
+  duration_ms: 9.12475
+  type: 'test'
+  ...
+# Subtest: CH-11: replacing a recipient revokes old access and creates only a controlled item grant
+ok 62 - CH-11: replacing a recipient revokes old access and creates only a controlled item grant
+  ---
+  duration_ms: 3.765709
+  type: 'test'
+  ...
+# Subtest: CH-20: scope changes invalidate access/current assessments without deleting saved records
+ok 63 - CH-20: scope changes invalidate access/current assessments without deleting saved records
+  ---
+  duration_ms: 2.026834
+  type: 'test'
+  ...
+# Subtest: request feedback and referrals affect only the selected item and preserve whole-case readiness
+ok 64 - request feedback and referrals affect only the selected item and preserve whole-case readiness
+  ---
+  duration_ms: 3.324917
+  type: 'test'
+  ...
+# Subtest: client questions repeat session, principal, scope and item-grant checks
+ok 65 - client questions repeat session, principal, scope and item-grant checks
+  ---
+  duration_ms: 3.831167
+  type: 'test'
+  ...
+# Subtest: a scope revision change blocks dispatch until request scope and review are refreshed
+ok 66 - a scope revision change blocks dispatch until request scope and review are refreshed
+  ---
+  duration_ms: 0.9155
+  type: 'test'
+  ...
+# Subtest: an existing purpose-specific requirement is reused by physical ID
+ok 67 - an existing purpose-specific requirement is reused by physical ID
+  ---
+  duration_ms: 1.555958
+  type: 'test'
+  ...
+# Subtest: a grant is unusable when its recipient is no longer current or no longer assigns the item
+ok 68 - a grant is unusable when its recipient is no longer current or no longer assigns the item
+  ---
+  duration_ms: 6.176334
+  type: 'test'
+  ...
+# Subtest: assessment binds the exact evidence revision linked to the item
+ok 69 - assessment binds the exact evidence revision linked to the item
+  ---
+  duration_ms: 6.592833
+  type: 'test'
+  ...
+# Subtest: each accepted action appends a readiness snapshot without rewriting history
+ok 70 - each accepted action appends a readiness snapshot without rewriting history
+  ---
+  duration_ms: 0.972708
+  type: 'test'
+  ...
+# Subtest: client projection validates every grant before including each item or receipt
+ok 71 - client projection validates every grant before including each item or receipt
+  ---
+  duration_ms: 2.944083
+  type: 'test'
+  ...
+# Subtest: recipient replacement requires current review/config and an item owned by the old recipient
+ok 72 - recipient replacement requires current review/config and an item owned by the old recipient
+  ---
+  duration_ms: 5.240959
+  type: 'test'
+  ...
+# Subtest: old-scope evidence cannot be linked after request scope is saved and reviewed again
+ok 73 - old-scope evidence cannot be linked after request scope is saved and reviewed again
+  ---
+  duration_ms: 5.642875
+  type: 'test'
+  ...
+# Subtest: idempotency permits exact logical replay but rejects key collisions before permissions
+ok 74 - idempotency permits exact logical replay but rejects key collisions before permissions
+  ---
+  duration_ms: 2.336083
+  type: 'test'
+  ...
+# Subtest: submit_response uses current text directly and never substitutes an older saved draft
+ok 75 - submit_response uses current text directly and never substitutes an older saved draft
+  ---
+  duration_ms: 7.141584
+  type: 'test'
+  ...
+# Subtest: host accepts only media fields and never restores playback
+ok 76 - host accepts only media fields and never restores playback
+  ---
+  duration_ms: 1.437583
+  type: 'test'
+  ...
+# Subtest: frozen Entity narrative never replaces latest live receipt or authority
+ok 77 - frozen Entity narrative never replaces latest live receipt or authority
+  ---
+  duration_ms: 4.351667
+  type: 'test'
+  ...
+# Subtest: host ignores stale async completion and payloads, snapshots pause on stop
+ok 78 - host ignores stale async completion and payloads, snapshots pause on stop
+  ---
+  duration_ms: 5.10275
+  type: 'test'
+  ...
+# Subtest: optional module failure leaves readable static fallback open
+ok 79 - optional module failure leaves readable static fallback open
+  ---
+  duration_ms: 0.13125
+  type: 'test'
+  ...
+# Subtest: required resource failure displays notice inside an existing shadow root
+ok 80 - required resource failure displays notice inside an existing shadow root
+  ---
+  duration_ms: 0.132916
+  type: 'test'
+  ...
+# Subtest: unpassed A02 hold caps restored time, wrong revision ignored
+ok 81 - unpassed A02 hold caps restored time, wrong revision ignored
+  ---
+  duration_ms: 0.106916
+  type: 'test'
+  ...
+# Subtest: direct preview changes navigation only; existing case/role/locale preserved
+ok 82 - direct preview changes navigation only; existing case/role/locale preserved
+  ---
+  duration_ms: 0.282291
+  type: 'test'
+  ...
+# Subtest: static fallback always contains all 5+6 cues in all locales, with guard facts
+ok 83 - static fallback always contains all 5+6 cues in all locales, with guard facts
+  ---
+  duration_ms: 0.172875
+  type: 'test'
+  ...
+# Subtest: Current scene returns from Target product without overwriting latest language or case revision
+ok 84 - Current scene returns from Target product without overwriting latest language or case revision
+  ---
+  duration_ms: 1.734875
+  type: 'test'
+  ...
+# Subtest: Journey return closes modal but preserves role and semantic camera
+ok 85 - Journey return closes modal but preserves role and semantic camera
+  ---
+  duration_ms: 0.563542
+  type: 'test'
+  ...
+# Subtest: Explore does not consume story cursor; Continue advances curated route only
+ok 86 - Explore does not consume story cursor; Continue advances curated route only
+  ---
+  duration_ms: 0.294875
+  type: 'test'
+  ...
+# Subtest: Comparison and language changes keep scene and semantic anchor
+ok 87 - Comparison and language changes keep scene and semantic anchor
+  ---
+  duration_ms: 0.159083
+  type: 'test'
+  ...
+# Subtest: Save, discard and stay have different leave semantics
+ok 88 - Save, discard and stay have different leave semantics
+  ---
+  duration_ms: 0.231083
+  type: 'test'
+  ...
+# Subtest: Batch C product and reference layers preserve the exact Current scene origin
+ok 89 - Batch C product and reference layers preserve the exact Current scene origin
+  ---
+  duration_ms: 0.295292
+  type: 'test'
+  ...
+# Subtest: global References retains an explicit all-library scope and All clears node filters
+ok 90 - global References retains an explicit all-library scope and All clears node filters
+  ---
+  duration_ms: 0.267958
+  type: 'test'
+  ...
+# Subtest: scene and Reference dialogs use distinct scroll keys for the same scene
+ok 91 - scene and Reference dialogs use distinct scroll keys for the same scene
+  ---
+  duration_ms: 0.128667
+  type: 'test'
+  ...
+# Subtest: story route presents D1-D5 after the screening slice without adding scenario IDs
+ok 92 - story route presents D1-D5 after the screening slice without adding scenario IDs
+  ---
+  duration_ms: 1.070709
+  type: 'test'
+  ...
+# Subtest: dependency return restores condition, revision and viewport context while latest locale wins
+ok 93 - dependency return restores condition, revision and viewport context while latest locale wins
+  ---
+  duration_ms: 0.884833
+  type: 'test'
+  ...
+# Subtest: selected agreement revision stays frozen when live data revision is reported separately
+ok 94 - selected agreement revision stays frozen when live data revision is reported separately
+  ---
+  duration_ms: 0.232083
+  type: 'test'
+  ...
+# Subtest: specialist scene and beat navigation synchronize the rendered graph family without losing same-family focus
+ok 95 - specialist scene and beat navigation synchronize the rendered graph family without losing same-family focus
+  ---
+  duration_ms: 0.177625
+  type: 'test'
+  ...
+# Subtest: Print waits for every image, including offscreen Target, before invoking print
+ok 96 - Print waits for every image, including offscreen Target, before invoking print
+  ---
+  duration_ms: 1.267625
+  type: 'test'
+  ...
+# Subtest: Failed print image prevents a silent incomplete PDF
+ok 97 - Failed print image prevents a silent incomplete PDF
+  ---
+  duration_ms: 0.261125
+  type: 'test'
+  ...
+# Subtest: RT-C52/55 imported qualified aliases retain observations and inherited status
+ok 98 - RT-C52/55 imported qualified aliases retain observations and inherited status
+  ---
+  duration_ms: 0.352875
+  type: 'test'
+  ...
+# Subtest: RT-C53/54 deduplication keeps observation identity and distinct versions/artifacts
+ok 99 - RT-C53/54 deduplication keeps observation identity and distinct versions/artifacts
+  ---
+  duration_ms: 0.343375
+  type: 'test'
+  ...
+# Subtest: RT-C56/57/58 source renderer is safe, scoped and never implies acquired media
+ok 100 - RT-C56/57/58 source renderer is safe, scoped and never implies acquired media
+  ---
+  duration_ms: 2.916458
+  type: 'test'
+  ...
+# Subtest: RT-C59/60 filters and locale retain canonical title, alias and interpretation boundary
+ok 101 - RT-C59/60 filters and locale retain canonical title, alias and interpretation boundary
+  ---
+  duration_ms: 0.5015
+  type: 'test'
+  ...
+# Subtest: RT-C63 English print exposes inherited source status without opening a disclosure
+ok 102 - RT-C63 English print exposes inherited source status without opening a disclosure
+  ---
+  duration_ms: 0.105792
+  type: 'test'
+  ...
+# Subtest: RT-C48/58 project-only node cards expose source gaps without bundling internal originals
+ok 103 - RT-C48/58 project-only node cards expose source gaps without bundling internal originals
+  ---
+  duration_ms: 0.158667
+  type: 'test'
+  ...
+# Subtest: Every runtime action produces an exact schema-conforming shared fixture
+ok 104 - Every runtime action produces an exact schema-conforming shared fixture
+  ---
+  duration_ms: 17.648542
+  type: 'test'
+  ...
+# Subtest: Every runtime action preserves latest semantics and historical snapshot bases
+ok 105 - Every runtime action preserves latest semantics and historical snapshot bases
+  ---
+  duration_ms: 10.0335
+  type: 'test'
+  ...
+# Subtest: KYC purpose assessment rejects absent or wrongly scoped demo permission
+ok 106 - KYC purpose assessment rejects absent or wrongly scoped demo permission
+  ---
+  duration_ms: 4.443583
+  type: 'test'
+  ...
+# Subtest: KYC assessment binds to its own configured authority
+ok 107 - KYC assessment binds to its own configured authority
+  ---
+  duration_ms: 0.604042
+  type: 'test'
+  ...
+# Subtest: Invalid and stale input revisions fail before mutation
+ok 108 - Invalid and stale input revisions fail before mutation
+  ---
+  duration_ms: 1.705667
+  type: 'test'
+  ...
+# Subtest: Each accepted action increments case once and retains immutable prior input
+ok 109 - Each accepted action increments case once and retains immutable prior input
+  ---
+  duration_ms: 4.947375
+  type: 'test'
+  ...
+# Subtest: Null booking context blocks readiness even when all conditions are green
+ok 110 - Null booking context blocks readiness even when all conditions are green
+  ---
+  duration_ms: 0.51525
+  type: 'test'
+  ...
+# Subtest: Sufficient assessment with stale evidence or mismatched purpose cannot disposition
+ok 111 - Sufficient assessment with stale evidence or mismatched purpose cannot disposition
+  ---
+  duration_ms: 4.666709
+  type: 'test'
+  ...
+# Subtest: Optional audit rationale is omitted rather than null
+ok 112 - Optional audit rationale is omitted rather than null
+  ---
+  duration_ms: 3.537833
+  type: 'test'
+  ...
+# Subtest: Latest snapshot cannot lie while history retains past blockers
+ok 113 - Latest snapshot cannot lie while history retains past blockers
+  ---
+  duration_ms: 3.385208
+  type: 'test'
+  ...
+# Subtest: B request projection excludes another request and RM excludes response drafts
+ok 114 - B request projection excludes another request and RM excludes response drafts
+  ---
+  duration_ms: 2.909417
+  type: 'test'
+  ...
+# Subtest: cross-request item and recipient actions are rejected without writes
+ok 115 - cross-request item and recipient actions are rejected without writes
+  ---
+  duration_ms: 2.32175
+  type: 'test'
+  ...
+# Subtest: review and dispatch do not grant or notify recipients from another request
+ok 116 - review and dispatch do not grant or notify recipients from another request
+  ---
+  duration_ms: 2.316083
+  type: 'test'
+  ...
+# Subtest: dispatch policy purposes must include every selected request item
+ok 117 - dispatch policy purposes must include every selected request item
+  ---
+  duration_ms: 1.10725
+  type: 'test'
+  ...
+# Subtest: RT-C10/11/12/13/67: new identity intake reuses B with separate purpose, grant, provenance and insufficient outcome
+ok 118 - RT-C10/11/12/13/67: new identity intake reuses B with separate purpose, grant, provenance and insufficient outcome
+  ---
+  duration_ms: 110.525209
+  type: 'test'
+  ...
+# Subtest: request membership is rechecked before granting or dispatching corrupted recipient item lists
+ok 119 - request membership is rechecked before granting or dispatching corrupted recipient item lists
+  ---
+  duration_ms: 3.290333
+  type: 'test'
+  ...
+# Subtest: identity client text cannot be replaced with restricted provider text and holds are checked by reused actions
+ok 120 - identity client text cannot be replaced with restricted provider text and holds are checked by reused actions
+  ---
+  duration_ms: 53.387083
+  type: 'test'
+  ...
+# Subtest: C client sessions cannot reuse a B session or another request grant
+ok 121 - C client sessions cannot reuse a B session or another request grant
+  ---
+  duration_ms: 49.185666
+  type: 'test'
+  ...
+# Subtest: staff-assisted identity submission must name a contributor assigned to that item
+ok 122 - staff-assisted identity submission must name a contributor assigned to that item
+  ---
+  duration_ms: 30.422542
+  type: 'test'
+  ...
+# Subtest: review fix: unknown evidence-scoped hold blocks identity assessment in predicate and action without writes
+ok 123 - review fix: unknown evidence-scoped hold blocks identity assessment in predicate and action without writes
+  ---
+  duration_ms: 37.085333
+  type: 'test'
+  ...
+# Subtest: review fix: resume rechecks the identity request item hold after a current assessment
+ok 124 - review fix: resume rechecks the identity request item hold after a current assessment
+  ---
+  duration_ms: 36.645709
+  type: 'test'
+  ...
+# Subtest: review round2: a held artifact cannot be cited by unresolved or referral decisions
+ok 125 - review round2: a held artifact cannot be cited by unresolved or referral decisions
+  ---
+  duration_ms: 55.679833
+  type: 'test'
+  ...
+# Subtest: review round2: a held assessment cannot be cited by unresolved or referral decisions
+ok 126 - review round2: a held assessment cannot be cited by unresolved or referral decisions
+  ---
+  duration_ms: 63.558583
+  type: 'test'
+  ...
+# Subtest: review round2: explicit emergency finding-only referral does not cite held evidence and preserves narrower work scopes
+ok 127 - review round2: explicit emergency finding-only referral does not cite held evidence and preserves narrower work scopes
+  ---
+  duration_ms: 32.506417
+  type: 'test'
+  ...
+# Subtest: review round2: emergency basis exclusion is unavailable without its explicit scoped policy
+ok 128 - review round2: emergency basis exclusion is unavailable without its explicit scoped policy
+  ---
+  duration_ms: 35.067333
+  type: 'test'
+  ...
+# Subtest: review round2: unrelated artifact holds do not block a decision whose actual basis excludes that artifact
+ok 129 - review round2: unrelated artifact holds do not block a decision whose actual basis excludes that artifact
+  ---
+  duration_ms: 53.523708
+  type: 'test'
+  ...
+# Subtest: review round2: EDD applicability decision cannot cite a held evidence-use basis
+ok 130 - review round2: EDD applicability decision cannot cite a held evidence-use basis
+  ---
+  duration_ms: 20.638625
+  type: 'test'
+  ...
+# Subtest: RT-C03 confirmed coordination remains distinct from identity and trade/signing authority
+ok 131 - RT-C03 confirmed coordination remains distinct from identity and trade/signing authority
+  ---
+  duration_ms: 36.184042
+  type: 'test'
+  ...
+# Subtest: RT-C19 population revision change preserves old results but invalidates reuse
+ok 132 - RT-C19 population revision change preserves old results but invalidates reuse
+  ---
+  duration_ms: 57.999791
+  type: 'test'
+  ...
+# Subtest: RT-C35 source-qualified dependency meanings and evidence aliases do not collide
+ok 133 - RT-C35 source-qualified dependency meanings and evidence aliases do not collide
+  ---
+  duration_ms: 1.513458
+  type: 'test'
+  ...
+# Subtest: RT-C42 referral followed by identity collection retains two branches on one finding
+ok 134 - RT-C42 referral followed by identity collection retains two branches on one finding
+  ---
+  duration_ms: 61.568167
+  type: 'test'
+  ...
+# Subtest: RT-C47 actual graph action bindings match current role-specific predicates across entry and result
+ok 135 - RT-C47 actual graph action bindings match current role-specific predicates across entry and result
+  ---
+  duration_ms: 79.620458
+  type: 'test'
+  ...
+# Subtest: RT-C48 every semantic node reference resolves to a scoped source or labelled interpretation
+ok 136 - RT-C48 every semantic node reference resolves to a scoped source or labelled interpretation
+  ---
+  duration_ms: 2.372292
+  type: 'test'
+  ...
+# Subtest: RT-C48 all approved node and edge contracts retained, grouped without losing guards
+ok 137 - RT-C48 all approved node and edge contracts retained, grouped without losing guards
+  ---
+  duration_ms: 4.385416
+  type: 'test'
+  ...
+# Subtest: RT-C47 graph reads exact predicate objects and never infers permissions from captions
+ok 138 - RT-C47 graph reads exact predicate objects and never infers permissions from captions
+  ---
+  duration_ms: 0.241125
+  type: 'test'
+  ...
+# Subtest: bilingual node titles preserve English internal slashes and Chinese labels
+ok 139 - bilingual node titles preserve English internal slashes and Chinese labels
+  ---
+  duration_ms: 0.193625
+  type: 'test'
+  ...
+# Subtest: RT-C47 graph binds preparation and dispatch to their distinct actual action predicates
+ok 140 - RT-C47 graph binds preparation and dispatch to their distinct actual action predicates
+  ---
+  duration_ms: 0.162417
+  type: 'test'
+  ...
+# Subtest: RT-C32/63 print includes every semantic node despite active focus
+ok 141 - RT-C32/63 print includes every semantic node despite active focus
+  ---
+  duration_ms: 11.428458
+  type: 'test'
+  ...
+# Subtest: RT-C50/60 canonical intrinsic image dimensions reserve space before locale assets load
+ok 142 - RT-C50/60 canonical intrinsic image dimensions reserve space before locale assets load
+  ---
+  duration_ms: 22.623167
+  type: 'test'
+  ...
+# Subtest: RT-C01/03/04/66: additive C entry preserves B and has no identity evidence or C finding
+ok 143 - RT-C01/03/04/66: additive C entry preserves B and has no identity evidence or C finding
+  ---
+  duration_ms: 6.560958
+  type: 'test'
+  ...
+# Subtest: RT-C37/38: partial entry permits defined preliminary only, comprehensive requires confirmed inventory
+ok 144 - RT-C37/38: partial entry permits defined preliminary only, comprehensive requires confirmed inventory
+  ---
+  duration_ms: 44.435
+  type: 'test'
+  ...
+# Subtest: RT-C02/05/06/20/26: named zero, failure, partial and unknown dataset never imply complete coverage
+ok 145 - RT-C02/05/06/20/26: named zero, failure, partial and unknown dataset never imply complete coverage
+  ---
+  duration_ms: 156.564292
+  type: 'test'
+  ...
+# Subtest: RT-C07/08/09/34: possible match uses Person T immutable snapshots and honest comparison
+ok 146 - RT-C07/08/09/34: possible match uses Person T immutable snapshots and honest comparison
+  ---
+  duration_ms: 20.19475
+  type: 'test'
+  ...
+# Subtest: RT-C14/15/16/17/66: permissions, rationale, stale inputs and idempotency protect writes
+ok 147 - RT-C14/15/16/17/66: permissions, rationale, stale inputs and idempotency protect writes
+  ---
+  duration_ms: 44.543959
+  type: 'test'
+  ...
+# Subtest: RT-C19/45: late responses are historical and never replace current run
+ok 148 - RT-C19/45: late responses are historical and never replace current run
+  ---
+  duration_ms: 23.708333
+  type: 'test'
+  ...
+# Subtest: RT-C21/23/24/36/41/42/43/65: gaps and urgent referral coexist without manufactured release
+ok 149 - RT-C21/23/24/36/41/42/43/65: gaps and urgent referral coexist without manufactured release
+  ---
+  duration_ms: 37.25425
+  type: 'test'
+  ...
+# Subtest: RT-C13/47/68: projections are allowlists and lenses share one revision, shadow inject disabled
+ok 150 - RT-C13/47/68: projections are allowlists and lenses share one revision, shadow inject disabled
+  ---
+  duration_ms: 16.272375
+  type: 'test'
+  ...
+# Subtest: RT-C22/39/40: EDD remains independent; only reviewed current reason can record applicability
+ok 151 - RT-C22/39/40: EDD remains independent; only reviewed current reason can record applicability
+  ---
+  duration_ms: 33.2855
+  type: 'test'
+  ...
+# Subtest: RT-C22: required EDD creates bounded linked work and pack with explicit open issues
+ok 152 - RT-C22: required EDD creates bounded linked work and pack with explicit open issues
+  ---
+  duration_ms: 9.337292
+  type: 'test'
+  ...
+# Subtest: client projection context cannot override its role with an ops audience
+ok 153 - client projection context cannot override its role with an ops audience
+  ---
+  duration_ms: 12.41175
+  type: 'test'
+  ...
+# Subtest: RT-C16/19/46: subject changes, revoked permission and scope changes block resumed substantive work
+ok 154 - RT-C16/19/46: subject changes, revoked permission and scope changes block resumed substantive work
+  ---
+  duration_ms: 28.1665
+  type: 'test'
+  ...
+# Subtest: RT-C47/48: unconfigured comprehensive adapter is not presented as executable even with supplied population confirmation
+ok 155 - RT-C47/48: unconfigured comprehensive adapter is not presented as executable even with supplied population confirmation
+  ---
+  duration_ms: 3.255541
+  type: 'test'
+  ...
+# Subtest: C candidate contract has complete field metadata and literal independent outcomes, and rejects malformed content
+ok 156 - C candidate contract has complete field metadata and literal independent outcomes, and rejects malformed content
+  ---
+  duration_ms: 102.513583
+  type: 'test'
+  ...
+# Subtest: branch provenance resolves to actual events and existing evidence is reviewed before targeted collection
+ok 157 - branch provenance resolves to actual events and existing evidence is reviewed before targeted collection
+  ---
+  duration_ms: 12.093917
+  type: 'test'
+  ...
+# Subtest: graph facts distinguish returned result and evidence sufficiency from permission to write an assessment
+ok 158 - graph facts distinguish returned result and evidence sufficiency from permission to write an assessment
+  ---
+  duration_ms: 10.839458
+  type: 'test'
+  ...
+# Subtest: review fix: immediate Unassigned referral cannot resume without owner or a new authorised review
+ok 159 - review fix: immediate Unassigned referral cannot resume without owner or a new authorised review
+  ---
+  duration_ms: 21.882417
+  type: 'test'
+  ...
+# Subtest: review fix: a newer finding decision cannot justify resuming an older referral
+ok 160 - review fix: a newer finding decision cannot justify resuming an older referral
+  ---
+  duration_ms: 27.476625
+  type: 'test'
+  ...
+# Subtest: review fix: EDD resume needs its own current pack and approval prerequisites, not a screening finding
+ok 161 - review fix: EDD resume needs its own current pack and approval prerequisites, not a screening finding
+  ---
+  duration_ms: 22.498
+  type: 'test'
+  ...
+# Subtest: review fix: request and EDD applicability object holds participate in named write guards
+ok 162 - review fix: request and EDD applicability object holds participate in named write guards
+  ---
+  duration_ms: 11.476875
+  type: 'test'
+  ...
+# Subtest: review fix: supported referral resume retains its fixed finding and records the actual later review event
+ok 163 - review fix: supported referral resume retains its fixed finding and records the actual later review event
+  ---
+  duration_ms: 35.465417
+  type: 'test'
+  ...
+# Subtest: review fix: later finding referrals anchor their own review task rather than the first finding task
+ok 164 - review fix: later finding referrals anchor their own review task rather than the first finding task
+  ---
+  duration_ms: 28.683167
+  type: 'test'
+  ...
+# Subtest: review round2: preliminary request eligibility requires the same current plan as the reducer
+ok 165 - review round2: preliminary request eligibility requires the same current plan as the reducer
+  ---
+  duration_ms: 10.79225
+  type: 'test'
+  ...
+# Subtest: Batch C entry is explicit and names both current-case and archival fixture choices
+ok 166 - Batch C entry is explicit and names both current-case and archival fixture choices
+  ---
+  duration_ms: 0.611584
+  type: 'test'
+  ...
+# Subtest: Batch C routing is bounded to its five workspace steps and does not capture Scope or Clearance
+ok 167 - Batch C routing is bounded to its five workspace steps and does not capture Scope or Clearance
+  ---
+  duration_ms: 0.0695
+  type: 'test'
+  ...
+# Subtest: all fifteen scene IDs remain stable while Population and EDD become authored route scenes
+ok 168 - all fifteen scene IDs remain stable while Population and EDD become authored route scenes
+  ---
+  duration_ms: 0.137417
+  type: 'test'
+  ...
+# Subtest: operator rendering exposes real guarded actions and an explicit disabled disposition reason
+ok 169 - operator rendering exposes real guarded actions and an explicit disabled disposition reason
+  ---
+  duration_ms: 74.979958
+  type: 'test'
+  ...
+# Subtest: safe RM and client product projections never render restricted screening fields, including print
+ok 170 - safe RM and client product projections never render restricted screening fields, including print
+  ---
+  duration_ms: 19.070958
+  type: 'test'
+  ...
+# Subtest: selected Batch C scene print renders its complete decision set and scoped reference footnotes
+ok 171 - selected Batch C scene print renders its complete decision set and scoped reference footnotes
+  ---
+  duration_ms: 26.481292
+  type: 'test'
+  ...
+# Subtest: interactive scene keeps references on demand rather than forcing the full library below the graph
+ok 172 - interactive scene keeps references on demand rather than forcing the full library below the graph
+  ---
+  duration_ms: 21.462042
+  type: 'test'
+  ...
+# Subtest: Evidence makes the exact disabled resume guard visible
+ok 173 - Evidence makes the exact disabled resume guard visible
+  ---
+  duration_ms: 19.113375
+  type: 'test'
+  ...
+# Subtest: print projection includes compact identity artifact and use assessment identifiers
+ok 174 - print projection includes compact identity artifact and use assessment identifiers
+  ---
+  duration_ms: 21.816209
+  type: 'test'
+  ...
+# Subtest: selected synthetic result survives workspace rerender
+ok 175 - selected synthetic result survives workspace rerender
+  ---
+  duration_ms: 5.180375
+  type: 'test'
+  ...
+# Subtest: unknown EDD visibly retains an unresolved question and unassigned owner
+ok 176 - unknown EDD visibly retains an unresolved question and unassigned owner
+  ---
+  duration_ms: 3.918667
+  type: 'test'
+  ...
+# Subtest: identity request collaboration uses screening-safe copy and routes assessment back to Screening Evidence
+ok 177 - identity request collaboration uses screening-safe copy and routes assessment back to Screening Evidence
+  ---
+  duration_ms: 0.907375
+  type: 'test'
+  ...
+# Subtest: restricted legacy Activity uses a safe C projection rather than raw audit events
+ok 178 - restricted legacy Activity uses a safe C projection rather than raw audit events
+  ---
+  duration_ms: 0.260166
+  type: 'test'
+  ...
+# Subtest: authorized legacy Activity preserves A/B history and admits only projected C events
+ok 179 - authorized legacy Activity preserves A/B history and admits only projected C events
+  ---
+  duration_ms: 0.719042
+  type: 'test'
+  ...
+# Subtest: cross-workspace C collaboration routes are leave-guarded in the host
+ok 180 - cross-workspace C collaboration routes are leave-guarded in the host
+  ---
+  duration_ms: 0.778667
+  type: 'test'
+  ...
+# Subtest: D entry preserves A/B/C and requires scoped unresolved C context
+ok 181 - D entry preserves A/B/C and requires scoped unresolved C context
+  ---
+  duration_ms: 27.930791
+  type: 'test'
+  ...
+# Subtest: RT-D01/02/03: specialist preparation progresses with open screening and a potential conflict
+ok 182 - RT-D01/02/03: specialist preparation progresses with open screening and a potential conflict
+  ---
+  duration_ms: 17.100333
+  type: 'test'
+  ...
+# Subtest: RT-D04/05/06: Credit approval remains distinct from assessment and applicability
+ok 183 - RT-D04/05/06: Credit approval remains distinct from assessment and applicability
+  ---
+  duration_ms: 10.482916
+  type: 'test'
+  ...
+# Subtest: RT-D08/09/10/11: Legal execution and authority remain unmet despite internal approval
+ok 184 - RT-D08/09/10/11: Legal execution and authority remain unmet despite internal approval
+  ---
+  duration_ms: 13.535666
+  type: 'test'
+  ...
+# Subtest: D unconfigured roles fail closed and only facilitator has revision simulation permission
+ok 185 - D unconfigured roles fail closed and only facilitator has revision simulation permission
+  ---
+  duration_ms: 6.542666
+  type: 'test'
+  ...
+# Subtest: RT-D12: RM and client get safe progress without restricted conflict detail or audit text
+ok 186 - RT-D12: RM and client get safe progress without restricted conflict detail or audit text
+  ---
+  duration_ms: 17.586959
+  type: 'test'
+  ...
+# Subtest: RT-D13: readonly lenses share case, scope and condition revisions with mainline
+ok 187 - RT-D13: readonly lenses share case, scope and condition revisions with mainline
+  ---
+  duration_ms: 23.86775
+  type: 'test'
+  ...
+# Subtest: RT-D16/17: holds retain scope and unknown impact blocks only known affected work or remains unknown
+ok 188 - RT-D16/17: holds retain scope and unknown impact blocks only known affected work or remains unknown
+  ---
+  duration_ms: 5.573167
+  type: 'test'
+  ...
+# Subtest: RT-D07/18: Credit revision makes existing legal dependency stale and retains immutable input chain
+ok 189 - RT-D07/18: Credit revision makes existing legal dependency stale and retains immutable input chain
+  ---
+  duration_ms: 16.311584
+  type: 'test'
+  ...
+# Subtest: D revision simulation rejects stale, missing and expanded commands without mutation
+ok 190 - D revision simulation rejects stale, missing and expanded commands without mutation
+  ---
+  duration_ms: 18.714459
+  type: 'test'
+  ...
+# Subtest: D dependencies use source-qualified aliases and scoped version-addressed objects
+ok 191 - D dependencies use source-qualified aliases and scoped version-addressed objects
+  ---
+  duration_ms: 4.764209
+  type: 'test'
+  ...
+# Subtest: D prerequisites fail closed for missing financial, party or agreement context
+ok 192 - D prerequisites fail closed for missing financial, party or agreement context
+  ---
+  duration_ms: 10.6915
+  type: 'test'
+  ...
+# Subtest: D version history exposes both revision-addressed chains and immutable consumer provenance
+ok 193 - D version history exposes both revision-addressed chains and immutable consumer provenance
+  ---
+  duration_ms: 3.150833
+  type: 'test'
+  ...
+# Subtest: D honors inherited case/scope hold targets and unknown object input
+ok 194 - D honors inherited case/scope hold targets and unknown object input
+  ---
+  duration_ms: 7.991792
+  type: 'test'
+  ...
+# Subtest: D contract generates complete aliases, independently stated oracle and candidate snapshots
+ok 195 - D contract generates complete aliases, independently stated oracle and candidate snapshots
+  ---
+  duration_ms: 23.188625
+  type: 'test'
+  ...
+# Subtest: D safe progress strips free-text hold, dependency and audit strings
+ok 196 - D safe progress strips free-text hold, dependency and audit strings
+  ---
+  duration_ms: 6.757209
+  type: 'test'
+  ...
+# Subtest: D review fix: unknown Legal dependency blocks affected preparation without stopping Credit
+ok 197 - D review fix: unknown Legal dependency blocks affected preparation without stopping Credit
+  ---
+  duration_ms: 5.909875
+  type: 'test'
+  ...
+# Subtest: D review fix: Legal requires nonempty current scoped product references
+ok 198 - D review fix: Legal requires nonempty current scoped product references
+  ---
+  duration_ms: 3.517417
+  type: 'test'
+  ...
+# Subtest: D review fix: incorporation validates current decision condition input and required terms
+ok 199 - D review fix: incorporation validates current decision condition input and required terms
+  ---
+  duration_ms: 16.366417
+  type: 'test'
+  ...
+# Subtest: Graph next/focus/play change presentation only and stop at final node
+ok 200 - Graph next/focus/play change presentation only and stop at final node
+  ---
+  duration_ms: 1.474208
+  type: 'test'
+  ...
+# Subtest: Print retains every version node despite focus; input projection cannot be written by renderer
+ok 201 - Print retains every version node despite focus; input projection cannot be written by renderer
+  ---
+  duration_ms: 0.893333
+  type: 'test'
+  ...
+# Subtest: Focused diagram still contains complete semantic fallback when image fails
+ok 202 - Focused diagram still contains complete semantic fallback when image fails
+  ---
+  duration_ms: 0.49325
+  type: 'test'
+  ...
+# Subtest: Version facts bind by stable record identity even when projection order changes
+ok 203 - Version facts bind by stable record identity even when projection order changes
+  ---
+  duration_ms: 0.465208
+  type: 'test'
+  ...
+# Subtest: All three rendered families retain literal mandatory route semantics
+ok 204 - All three rendered families retain literal mandatory route semantics
+  ---
+  duration_ms: 0.450625
+  type: 'test'
+  ...
+# Subtest: Chinese graph fallback and print localize complete without changing source IDs
+ok 205 - Chinese graph fallback and print localize complete without changing source IDs
+  ---
+  duration_ms: 1.102833
+  type: 'test'
+  ...
+# Subtest: Credit version node returns inherited NIST and counterparty-credit records without duplicating observations
+ok 206 - Credit version node returns inherited NIST and counterparty-credit records without duplicating observations
+  ---
+  duration_ms: 2.537916
+  type: 'test'
+  ...
+# Subtest: Parallel and hold nodes retain original process context and A-CDM as inspiration
+ok 207 - Parallel and hold nodes retain original process context and A-CDM as inspiration
+  ---
+  duration_ms: 0.802791
+  type: 'test'
+  ...
+# Subtest: Scoped-hold interpretation does not imply process-map or A-CDM policy provenance
+ok 208 - Scoped-hold interpretation does not imply process-map or A-CDM policy provenance
+  ---
+  duration_ms: 0.443709
+  type: 'test'
+  ...
+# Subtest: three specialist scenarios are promoted while the journey retains exactly 15 stable IDs
+ok 209 - three specialist scenarios are promoted while the journey retains exactly 15 stable IDs
+  ---
+  duration_ms: 1.254875
+  type: 'test'
+  ...
+# Subtest: D1 and D5 render all three specialist domains without inventing scenario IDs
+ok 210 - D1 and D5 render all three specialist domains without inventing scenario IDs
+  ---
+  duration_ms: 8.70375
+  type: 'test'
+  ...
+# Subtest: Condition Detail exposes the complete shared condition contract and dependency routes
+ok 211 - Condition Detail exposes the complete shared condition contract and dependency routes
+  ---
+  duration_ms: 2.142667
+  type: 'test'
+  ...
+# Subtest: Credit state distinguishes approved condition, incorporated entry input and stale changed input
+ok 212 - Credit state distinguishes approved condition, incorporated entry input and stale changed input
+  ---
+  duration_ms: 4.254208
+  type: 'test'
+  ...
+# Subtest: RM Condition Detail remains useful but never renders restricted conflict detail
+ok 213 - RM Condition Detail remains useful but never renders restricted conflict detail
+  ---
+  duration_ms: 1.289083
+  type: 'test'
+  ...
+# Subtest: zh-CN Condition Detail translates approved condition prose while retaining stable references
+ok 214 - zh-CN Condition Detail translates approved condition prose while retaining stable references
+  ---
+  duration_ms: 1.393542
+  type: 'test'
+  ...
+# Subtest: Dependency view uses graph fallback and provides an explicit return command
+ok 215 - Dependency view uses graph fallback and provides an explicit return command
+  ---
+  duration_ms: 3.367625
+  type: 'test'
+  ...
+# Subtest: D session writer guard blocks every upstream writer family but not presentation or D commands
+ok 216 - D session writer guard blocks every upstream writer family but not presentation or D commands
+  ---
+  duration_ms: 1.218916
+  type: 'test'
+  ...
+# Subtest: failed D load renders an accessible retry surface
+ok 217 - failed D load renders an accessible retry surface
+  ---
+  duration_ms: 6.381667
+  type: 'test'
+  ...
+# Subtest: zh-CN D1 and D5 translate approved summary and readiness prose in screen and print
+ok 218 - zh-CN D1 and D5 translate approved summary and readiness prose in screen and print
+  ---
+  duration_ms: 5.128458
+  type: 'test'
+  ...
+1..218
+# tests 218
+# suites 0
+# pass 218
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 961.835708

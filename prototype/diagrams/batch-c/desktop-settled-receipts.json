@@ -1,0 +1,581 @@
+{
+  "method": "font ready and two animation frames after viewport change; supplements canonical visual-check",
+  "results": [
+    {
+      "name": "DG-C-POPULATION.Current.zh-CN",
+      "scrollWidth": 1440,
+      "scrollHeight": 900,
+      "width": 1440,
+      "height": 900,
+      "pass": true
+    },
+    {
+      "name": "DG-C-POPULATION.Current.zh-CN",
+      "scrollWidth": 1600,
+      "scrollHeight": 1000,
+      "width": 1600,
+      "height": 1000,
+      "pass": true
+    },
+    {
+      "name": "DG-C-POPULATION.Current.zh-CN",
+      "scrollWidth": 1920,
+      "scrollHeight": 1080,
+      "width": 1920,
+      "height": 1080,
+      "pass": true
+    },
+    {
+      "name": "DG-C-POPULATION.Current.zh-CN",
+      "scrollWidth": 2048,
+      "scrollHeight": 1320,
+      "width": 2048,
+      "height": 1320,
+      "pass": true
+    },
+    {
+      "name": "DG-C-POPULATION.Current.en-AU.r02",
+      "scrollWidth": 1440,
+      "scrollHeight": 900,
+      "width": 1440,
+      "height": 900,
+      "pass": true
+    },
+    {
+      "name": "DG-C-POPULATION.Current.en-AU.r02",
+      "scrollWidth": 1600,
+      "scrollHeight": 1000,
+      "width": 1600,
+      "height": 1000,
+      "pass": true
+    },
+    {
+      "name": "DG-C-POPULATION.Current.en-AU.r02",
+      "scrollWidth": 1920,
+      "scrollHeight": 1080,
+      "width": 1920,
+      "height": 1080,
+      "pass": true
+    },
+    {
+      "name": "DG-C-POPULATION.Current.en-AU.r02",
+      "scrollWidth": 2048,
+      "scrollHeight": 1320,
+      "width": 2048,
+      "height": 1320,
+      "pass": true
+    },
+    {
+      "name": "DG-C-POPULATION.Current.en-US.r02",
+      "scrollWidth": 1440,
+      "scrollHeight": 900,
+      "width": 1440,
+      "height": 900,
+      "pass": true
+    },
+    {
+      "name": "DG-C-POPULATION.Current.en-US.r02",
+      "scrollWidth": 1600,
+      "scrollHeight": 1000,
+      "width": 1600,
+      "height": 1000,
+      "pass": true
+    },
+    {
+      "name": "DG-C-POPULATION.Current.en-US.r02",
+      "scrollWidth": 1920,
+      "scrollHeight": 1080,
+      "width": 1920,
+      "height": 1080,
+      "pass": true
+    },
+    {
+      "name": "DG-C-POPULATION.Current.en-US.r02",
+      "scrollWidth": 2048,
+      "scrollHeight": 1320,
+      "width": 2048,
+      "height": 1320,
+      "pass": true
+    },
+    {
+      "name": "DG-C-POPULATION.Target.zh-CN",
+      "scrollWidth": 1440,
+      "scrollHeight": 900,
+      "width": 1440,
+      "height": 900,
+      "pass": true
+    },
+    {
+      "name": "DG-C-POPULATION.Target.zh-CN",
+      "scrollWidth": 1600,
+      "scrollHeight": 1000,
+      "width": 1600,
+      "height": 1000,
+      "pass": true
+    },
+    {
+      "name": "DG-C-POPULATION.Target.zh-CN",
+      "scrollWidth": 1920,
+      "scrollHeight": 1080,
+      "width": 1920,
+      "height": 1080,
+      "pass": true
+    },
+    {
+      "name": "DG-C-POPULATION.Target.zh-CN",
+      "scrollWidth": 2048,
+      "scrollHeight": 1320,
+      "width": 2048,
+      "height": 1320,
+      "pass": true
+    },
+    {
+      "name": "DG-C-POPULATION.Target.en-AU.r02",
+      "scrollWidth": 1440,
+      "scrollHeight": 900,
+      "width": 1440,
+      "height": 900,
+      "pass": true
+    },
+    {
+      "name": "DG-C-POPULATION.Target.en-AU.r02",
+      "scrollWidth": 1600,
+      "scrollHeight": 1000,
+      "width": 1600,
+      "height": 1000,
+      "pass": true
+    },
+    {
+      "name": "DG-C-POPULATION.Target.en-AU.r02",
+      "scrollWidth": 1920,
+      "scrollHeight": 1080,
+      "width": 1920,
+      "height": 1080,
+      "pass": true
+    },
+    {
+      "name": "DG-C-POPULATION.Target.en-AU.r02",
+      "scrollWidth": 2048,
+      "scrollHeight": 1320,
+      "width": 2048,
+      "height": 1320,
+      "pass": true
+    },
+    {
+      "name": "DG-C-POPULATION.Target.en-US.r02",
+      "scrollWidth": 1440,
+      "scrollHeight": 900,
+      "width": 1440,
+      "height": 900,
+      "pass": true
+    },
+    {
+      "name": "DG-C-POPULATION.Target.en-US.r02",
+      "scrollWidth": 1600,
+      "scrollHeight": 1000,
+      "width": 1600,
+      "height": 1000,
+      "pass": true
+    },
+    {
+      "name": "DG-C-POPULATION.Target.en-US.r02",
+      "scrollWidth": 1920,
+      "scrollHeight": 1080,
+      "width": 1920,
+      "height": 1080,
+      "pass": true
+    },
+    {
+      "name": "DG-C-POPULATION.Target.en-US.r02",
+      "scrollWidth": 2048,
+      "scrollHeight": 1320,
+      "width": 2048,
+      "height": 1320,
+      "pass": true
+    },
+    {
+      "name": "DG-C-MATCH.Current.zh-CN.r02",
+      "scrollWidth": 1440,
+      "scrollHeight": 900,
+      "width": 1440,
+      "height": 900,
+      "pass": true
+    },
+    {
+      "name": "DG-C-MATCH.Current.zh-CN.r02",
+      "scrollWidth": 1600,
+      "scrollHeight": 1000,
+      "width": 1600,
+      "height": 1000,
+      "pass": true
+    },
+    {
+      "name": "DG-C-MATCH.Current.zh-CN.r02",
+      "scrollWidth": 1920,
+      "scrollHeight": 1080,
+      "width": 1920,
+      "height": 1080,
+      "pass": true
+    },
+    {
+      "name": "DG-C-MATCH.Current.zh-CN.r02",
+      "scrollWidth": 2048,
+      "scrollHeight": 1320,
+      "width": 2048,
+      "height": 1320,
+      "pass": true
+    },
+    {
+      "name": "DG-C-MATCH.Current.en-AU.r02",
+      "scrollWidth": 1440,
+      "scrollHeight": 900,
+      "width": 1440,
+      "height": 900,
+      "pass": true
+    },
+    {
+      "name": "DG-C-MATCH.Current.en-AU.r02",
+      "scrollWidth": 1600,
+      "scrollHeight": 1000,
+      "width": 1600,
+      "height": 1000,
+      "pass": true
+    },
+    {
+      "name": "DG-C-MATCH.Current.en-AU.r02",
+      "scrollWidth": 1920,
+      "scrollHeight": 1080,
+      "width": 1920,
+      "height": 1080,
+      "pass": true
+    },
+    {
+      "name": "DG-C-MATCH.Current.en-AU.r02",
+      "scrollWidth": 2048,
+      "scrollHeight": 1320,
+      "width": 2048,
+      "height": 1320,
+      "pass": true
+    },
+    {
+      "name": "DG-C-MATCH.Current.en-US.r02",
+      "scrollWidth": 1440,
+      "scrollHeight": 900,
+      "width": 1440,
+      "height": 900,
+      "pass": true
+    },
+    {
+      "name": "DG-C-MATCH.Current.en-US.r02",
+      "scrollWidth": 1600,
+      "scrollHeight": 1000,
+      "width": 1600,
+      "height": 1000,
+      "pass": true
+    },
+    {
+      "name": "DG-C-MATCH.Current.en-US.r02",
+      "scrollWidth": 1920,
+      "scrollHeight": 1080,
+      "width": 1920,
+      "height": 1080,
+      "pass": true
+    },
+    {
+      "name": "DG-C-MATCH.Current.en-US.r02",
+      "scrollWidth": 2048,
+      "scrollHeight": 1320,
+      "width": 2048,
+      "height": 1320,
+      "pass": true
+    },
+    {
+      "name": "DG-C-MATCH.Target.zh-CN.r02",
+      "scrollWidth": 1440,
+      "scrollHeight": 900,
+      "width": 1440,
+      "height": 900,
+      "pass": true
+    },
+    {
+      "name": "DG-C-MATCH.Target.zh-CN.r02",
+      "scrollWidth": 1600,
+      "scrollHeight": 1000,
+      "width": 1600,
+      "height": 1000,
+      "pass": true
+    },
+    {
+      "name": "DG-C-MATCH.Target.zh-CN.r02",
+      "scrollWidth": 1920,
+      "scrollHeight": 1080,
+      "width": 1920,
+      "height": 1080,
+      "pass": true
+    },
+    {
+      "name": "DG-C-MATCH.Target.zh-CN.r02",
+      "scrollWidth": 2048,
+      "scrollHeight": 1320,
+      "width": 2048,
+      "height": 1320,
+      "pass": true
+    },
+    {
+      "name": "DG-C-MATCH.Target.en-AU.r02",
+      "scrollWidth": 1440,
+      "scrollHeight": 900,
+      "width": 1440,
+      "height": 900,
+      "pass": true
+    },
+    {
+      "name": "DG-C-MATCH.Target.en-AU.r02",
+      "scrollWidth": 1600,
+      "scrollHeight": 1000,
+      "width": 1600,
+      "height": 1000,
+      "pass": true
+    },
+    {
+      "name": "DG-C-MATCH.Target.en-AU.r02",
+      "scrollWidth": 1920,
+      "scrollHeight": 1080,
+      "width": 1920,
+      "height": 1080,
+      "pass": true
+    },
+    {
+      "name": "DG-C-MATCH.Target.en-AU.r02",
+      "scrollWidth": 2048,
+      "scrollHeight": 1320,
+      "width": 2048,
+      "height": 1320,
+      "pass": true
+    },
+    {
+      "name": "DG-C-MATCH.Target.en-US.r02",
+      "scrollWidth": 1440,
+      "scrollHeight": 900,
+      "width": 1440,
+      "height": 900,
+      "pass": true
+    },
+    {
+      "name": "DG-C-MATCH.Target.en-US.r02",
+      "scrollWidth": 1600,
+      "scrollHeight": 1000,
+      "width": 1600,
+      "height": 1000,
+      "pass": true
+    },
+    {
+      "name": "DG-C-MATCH.Target.en-US.r02",
+      "scrollWidth": 1920,
+      "scrollHeight": 1080,
+      "width": 1920,
+      "height": 1080,
+      "pass": true
+    },
+    {
+      "name": "DG-C-MATCH.Target.en-US.r02",
+      "scrollWidth": 2048,
+      "scrollHeight": 1320,
+      "width": 2048,
+      "height": 1320,
+      "pass": true
+    },
+    {
+      "name": "DG-C-EDD.Current.zh-CN",
+      "scrollWidth": 1440,
+      "scrollHeight": 900,
+      "width": 1440,
+      "height": 900,
+      "pass": true
+    },
+    {
+      "name": "DG-C-EDD.Current.zh-CN",
+      "scrollWidth": 1600,
+      "scrollHeight": 1000,
+      "width": 1600,
+      "height": 1000,
+      "pass": true
+    },
+    {
+      "name": "DG-C-EDD.Current.zh-CN",
+      "scrollWidth": 1920,
+      "scrollHeight": 1080,
+      "width": 1920,
+      "height": 1080,
+      "pass": true
+    },
+    {
+      "name": "DG-C-EDD.Current.zh-CN",
+      "scrollWidth": 2048,
+      "scrollHeight": 1320,
+      "width": 2048,
+      "height": 1320,
+      "pass": true
+    },
+    {
+      "name": "DG-C-EDD.Current.en-AU",
+      "scrollWidth": 1440,
+      "scrollHeight": 900,
+      "width": 1440,
+      "height": 900,
+      "pass": true
+    },
+    {
+      "name": "DG-C-EDD.Current.en-AU",
+      "scrollWidth": 1600,
+      "scrollHeight": 1000,
+      "width": 1600,
+      "height": 1000,
+      "pass": true
+    },
+    {
+      "name": "DG-C-EDD.Current.en-AU",
+      "scrollWidth": 1920,
+      "scrollHeight": 1080,
+      "width": 1920,
+      "height": 1080,
+      "pass": true
+    },
+    {
+      "name": "DG-C-EDD.Current.en-AU",
+      "scrollWidth": 2048,
+      "scrollHeight": 1320,
+      "width": 2048,
+      "height": 1320,
+      "pass": true
+    },
+    {
+      "name": "DG-C-EDD.Current.en-US",
+      "scrollWidth": 1440,
+      "scrollHeight": 900,
+      "width": 1440,
+      "height": 900,
+      "pass": true
+    },
+    {
+      "name": "DG-C-EDD.Current.en-US",
+      "scrollWidth": 1600,
+      "scrollHeight": 1000,
+      "width": 1600,
+      "height": 1000,
+      "pass": true
+    },
+    {
+      "name": "DG-C-EDD.Current.en-US",
+      "scrollWidth": 1920,
+      "scrollHeight": 1080,
+      "width": 1920,
+      "height": 1080,
+      "pass": true
+    },
+    {
+      "name": "DG-C-EDD.Current.en-US",
+      "scrollWidth": 2048,
+      "scrollHeight": 1320,
+      "width": 2048,
+      "height": 1320,
+      "pass": true
+    },
+    {
+      "name": "DG-C-EDD.Target.zh-CN",
+      "scrollWidth": 1440,
+      "scrollHeight": 900,
+      "width": 1440,
+      "height": 900,
+      "pass": true
+    },
+    {
+      "name": "DG-C-EDD.Target.zh-CN",
+      "scrollWidth": 1600,
+      "scrollHeight": 1000,
+      "width": 1600,
+      "height": 1000,
+      "pass": true
+    },
+    {
+      "name": "DG-C-EDD.Target.zh-CN",
+      "scrollWidth": 1920,
+      "scrollHeight": 1080,
+      "width": 1920,
+      "height": 1080,
+      "pass": true
+    },
+    {
+      "name": "DG-C-EDD.Target.zh-CN",
+      "scrollWidth": 2048,
+      "scrollHeight": 1320,
+      "width": 2048,
+      "height": 1320,
+      "pass": true
+    },
+    {
+      "name": "DG-C-EDD.Target.en-AU",
+      "scrollWidth": 1440,
+      "scrollHeight": 900,
+      "width": 1440,
+      "height": 900,
+      "pass": true
+    },
+    {
+      "name": "DG-C-EDD.Target.en-AU",
+      "scrollWidth": 1600,
+      "scrollHeight": 1000,
+      "width": 1600,
+      "height": 1000,
+      "pass": true
+    },
+    {
+      "name": "DG-C-EDD.Target.en-AU",
+      "scrollWidth": 1920,
+      "scrollHeight": 1080,
+      "width": 1920,
+      "height": 1080,
+      "pass": true
+    },
+    {
+      "name": "DG-C-EDD.Target.en-AU",
+      "scrollWidth": 2048,
+      "scrollHeight": 1320,
+      "width": 2048,
+      "height": 1320,
+      "pass": true
+    },
+    {
+      "name": "DG-C-EDD.Target.en-US",
+      "scrollWidth": 1440,
+      "scrollHeight": 900,
+      "width": 1440,
+      "height": 900,
+      "pass": true
+    },
+    {
+      "name": "DG-C-EDD.Target.en-US",
+      "scrollWidth": 1600,
+      "scrollHeight": 1000,
+      "width": 1600,
+      "height": 1000,
+      "pass": true
+    },
+    {
+      "name": "DG-C-EDD.Target.en-US",
+      "scrollWidth": 1920,
+      "scrollHeight": 1080,
+      "width": 1920,
+      "height": 1080,
+      "pass": true
+    },
+    {
+      "name": "DG-C-EDD.Target.en-US",
+      "scrollWidth": 2048,
+      "scrollHeight": 1320,
+      "width": 2048,
+      "height": 1320,
+      "pass": true
+    }
+  ]
+}

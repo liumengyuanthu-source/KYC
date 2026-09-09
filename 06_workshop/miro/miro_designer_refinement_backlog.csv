@@ -1,1 +1,5 @@
 issue_id,frame_code,item_id,category,description,recommendation,owner,priority,status,content_change_required,decision_id,last_updated
+VIS-001,F04|F09,,DENSITY,Full S2 grid is dense at fit-to-frame zoom,Calibrate supporting copy and executive exports,Xiaoming,MEDIUM,OPEN,true,,2026-09-07
+VIS-002,F04|F09,,CONNECTOR_ROUTING,Skip and rework links share top corridor,Review labels and route separation while preserving native anchors,Xiaoming,MEDIUM,OPEN,false,,2026-09-07
+VIS-003,F02,,LAYOUT_DEFINITION,Eleven common lanes and L0/L1/L2 are provisional,Resolve Q-004 before broader board generation,Christina|Xiaoming|Coco,HIGH,OPEN,true,,2026-09-07
+VIS-004,F09,,CONTROL_STATE,Role authority and state semantics are hypotheses,Validate Q-001 and Q-003,Christina|Coco,HIGH,OPEN,true,,2026-09-07

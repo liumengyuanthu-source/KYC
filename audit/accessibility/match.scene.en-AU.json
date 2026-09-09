@@ -1,0 +1,531 @@
+{
+  "url": "http://127.0.0.1:8765/prototype/?scene=SCN-POPULATION&locale=en-AU#scenario/SCN-MATCH",
+  "at": "2026-09-07T19:05:45.276Z",
+  "violations": [],
+  "incomplete": [
+    {
+      "id": "color-contrast",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<header class=\"modal-head\">",
+                  "target": [
+                    ".modal-head"
+                  ]
+                },
+                {
+                  "html": "<dialog id=\"scenario-dialog\" aria-labelledby=\"scene-title\" open=\"\">",
+                  "target": [
+                    "#scenario-dialog"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"trace-meta\">S3 / M4.5–M4.7</span>",
+          "target": [
+            ".scene-kicker > .trace-meta"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<span class=\"badge \">Proposed design</span>",
+                  "target": [
+                    ".badge:nth-child(2)"
+                  ]
+                },
+                {
+                  "html": "<header class=\"modal-head\">",
+                  "target": [
+                    ".modal-head"
+                  ]
+                },
+                {
+                  "html": "<dialog id=\"scenario-dialog\" aria-labelledby=\"scene-title\" open=\"\">",
+                  "target": [
+                    "#scenario-dialog"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"badge \">Proposed design</span>",
+          "target": [
+            ".badge:nth-child(2)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<span class=\"badge \">Current</span>",
+                  "target": [
+                    ".badge:nth-child(3)"
+                  ]
+                },
+                {
+                  "html": "<header class=\"modal-head\">",
+                  "target": [
+                    ".modal-head"
+                  ]
+                },
+                {
+                  "html": "<dialog id=\"scenario-dialog\" aria-labelledby=\"scene-title\" open=\"\">",
+                  "target": [
+                    "#scenario-dialog"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"badge \">Current</span>",
+          "target": [
+            ".badge:nth-child(3)"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "24.0pt (32px)",
+                "fontWeight": "normal",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<header class=\"modal-head\">",
+                  "target": [
+                    ".modal-head"
+                  ]
+                },
+                {
+                  "html": "<dialog id=\"scenario-dialog\" aria-labelledby=\"scene-title\" open=\"\">",
+                  "target": [
+                    "#scenario-dialog"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h2 id=\"scene-title\">Resolve a possible match</h2>",
+          "target": [
+            "#scene-title"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.8pt (13px)",
+                "fontWeight": "normal",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<select id=\"scene-locale\" aria-label=\"Scene language\"><option value=\"en-AU\" selected=\"\">English (AU)</option><option value=\"en-US\">English (US)</option><option value=\"zh-CN\">简体中文</option></select>",
+                  "target": [
+                    "#scene-locale"
+                  ]
+                },
+                {
+                  "html": "<header class=\"modal-head\">",
+                  "target": [
+                    ".modal-head"
+                  ]
+                },
+                {
+                  "html": "<dialog id=\"scenario-dialog\" aria-labelledby=\"scene-title\" open=\"\">",
+                  "target": [
+                    "#scenario-dialog"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<select id=\"scene-locale\" aria-label=\"Scene language\"><option value=\"en-AU\" selected=\"\">English (AU)</option><option value=\"en-US\">English (US)</option><option value=\"zh-CN\">简体中文</option></select>",
+          "target": [
+            "#scene-locale"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "16.5pt (22px)",
+                "fontWeight": "normal",
+                "messageKey": "shortTextContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<span class=\"glass-surface\" aria-hidden=\"true\"></span>",
+                  "target": [
+                    ".close > .glass-surface[aria-hidden=\"true\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element content is too short to determine if it is actual text content"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"button-label\">×</span>",
+          "target": [
+            ".close > .button-label"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.8pt (13px)",
+                "fontWeight": "normal",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<span class=\"glass-surface\" aria-hidden=\"true\"></span>",
+                  "target": [
+                    "button[data-value=\"overview\"][data-action=\"om-open\"] > .glass-surface[aria-hidden=\"true\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"button-label\">How this work runs</span>",
+          "target": [
+            "button[data-value=\"overview\"][data-action=\"om-open\"] > .button-label"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<span class=\"selection-glass\" aria-hidden=\"true\" data-value=\"current\" style=\"left: 4px; top: 4px; width: 79px; height: 34px;\"></span>",
+                  "target": [
+                    ".modal-body > .segmented > .selection-glass[data-value=\"current\"][aria-hidden=\"true\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"button-label\">Current</span>",
+          "target": [
+            ".modal-body > .segmented > button[data-action=\"compare\"][data-value=\"current\"] > .button-label"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"segmented\">",
+                  "target": [
+                    ".modal-body > .segmented"
+                  ]
+                },
+                {
+                  "html": "<dialog id=\"scenario-dialog\" aria-labelledby=\"scene-title\" open=\"\">",
+                  "target": [
+                    "#scenario-dialog"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"button-label\">Target</span>",
+          "target": [
+            ".modal-body > .segmented > button[data-value=\"target\"][data-action=\"compare\"] > .button-label"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.8pt (13px)",
+                "fontWeight": "normal",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<span class=\"glass-surface\" aria-hidden=\"true\"></span>",
+                  "target": [
+                    "button[data-action=\"transformation-compare\"] > .glass-surface[aria-hidden=\"true\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"button-label\">Compare Current / Target</span>",
+          "target": [
+            "button[data-action=\"transformation-compare\"] > .button-label"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.8pt (13px)",
+                "fontWeight": "normal",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<span class=\"glass-surface\" aria-hidden=\"true\"></span>",
+                  "target": [
+                    "button[data-action=\"c-scene-print\"] > .glass-surface[aria-hidden=\"true\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"button-label\">Print selected scene</span>",
+          "target": [
+            "button[data-action=\"c-scene-print\"] > .button-label"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.8pt (13px)",
+                "fontWeight": "normal",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<span class=\"glass-surface\" aria-hidden=\"true\"></span>",
+                  "target": [
+                    ".modal-footer > .controls > button[data-action=\"continue\"][data-value=\"\"] > .glass-surface[aria-hidden=\"true\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"button-label\">Continue story</span>",
+          "target": [
+            ".modal-footer > .controls > button[data-action=\"continue\"][data-value=\"\"] > .button-label"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.8pt (13px)",
+                "fontWeight": "normal",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<span class=\"glass-surface\" aria-hidden=\"true\"></span>",
+                  "target": [
+                    ".primary > .glass-surface[aria-hidden=\"true\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"button-label\">View target product</span>",
+          "target": [
+            ".primary > .button-label"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        }
+      ]
+    }
+  ],
+  "passes": [
+    "aria-allowed-attr",
+    "aria-allowed-role",
+    "aria-conditional-attr",
+    "aria-hidden-body",
+    "aria-hidden-focus",
+    "aria-prohibited-attr",
+    "aria-valid-attr-value",
+    "aria-valid-attr",
+    "button-name",
+    "color-contrast",
+    "duplicate-id-aria",
+    "empty-heading",
+    "form-field-multiple-labels",
+    "heading-order",
+    "image-alt",
+    "image-redundant-alt",
+    "label-title-only",
+    "landmark-banner-is-top-level",
+    "landmark-contentinfo-is-top-level",
+    "landmark-no-duplicate-banner",
+    "landmark-no-duplicate-contentinfo",
+    "landmark-unique",
+    "list",
+    "listitem",
+    "meta-viewport-large",
+    "meta-viewport",
+    "nested-interactive",
+    "region",
+    "scrollable-region-focusable",
+    "select-name",
+    "summary-name"
+  ]
+}

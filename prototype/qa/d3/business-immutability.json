@@ -1,0 +1,35 @@
+{
+  "claim": "Business engine source bytes unchanged by D3; runtime state invariance tested separately",
+  "results": [
+    {
+      "file": "prototype/batch-a-engine.mjs",
+      "before": "1627092f7222e563a0a7408c44045c54f744274693f25453a0fb0d7e039aa315",
+      "after": "1627092f7222e563a0a7408c44045c54f744274693f25453a0fb0d7e039aa315",
+      "status": "passed"
+    },
+    {
+      "file": "prototype/case-engine.mjs",
+      "before": "b6186ddb5725dcaea07a39a11c0d4b34e356885c9eb3189ca40f029622d8082c",
+      "after": "b6186ddb5725dcaea07a39a11c0d4b34e356885c9eb3189ca40f029622d8082c",
+      "status": "passed"
+    },
+    {
+      "file": "prototype/collaboration-engine.mjs",
+      "before": "d7d55efec4c9c5f2d19f6f13ffc58ad7f0bb2e61c6cce7caa8e73ed68b0ea4f4",
+      "after": "d7d55efec4c9c5f2d19f6f13ffc58ad7f0bb2e61c6cce7caa8e73ed68b0ea4f4",
+      "status": "passed"
+    },
+    {
+      "file": "prototype/screening-engine.mjs",
+      "before": "ab9b873e971f929ec12088f1b90bb13ce716c57538d266ca800d0c3d95c14d9d",
+      "after": "ab9b873e971f929ec12088f1b90bb13ce716c57538d266ca800d0c3d95c14d9d",
+      "status": "passed"
+    },
+    {
+      "file": "prototype/specialist-engine.mjs",
+      "before": "259053892877c1bed7793ffa2ba9929763a76f3fda7d7ab6730b040e94e845ce",
+      "after": "259053892877c1bed7793ffa2ba9929763a76f3fda7d7ab6730b040e94e845ce",
+      "status": "passed"
+    }
+  ]
+}

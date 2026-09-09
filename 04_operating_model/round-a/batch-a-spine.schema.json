@@ -1,0 +1,4633 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:clear-to-trade:shared-case-spine:d2-batch-a-v1",
+  "title": "Shared Case Spine — additive D2 Batch A prototype contract",
+  "description": "Not bank policy, production schema or authorised clearance. All records are synthetic.",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "case": {
+      "$ref": "#/$defs/Case"
+    },
+    "scopes": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/Scope"
+      }
+    },
+    "entities": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/Entity"
+      }
+    },
+    "representatives": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/Representative"
+      }
+    },
+    "authorities": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/Authority"
+      }
+    },
+    "requirements": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/Requirement"
+      }
+    },
+    "evidence": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/Evidence"
+      }
+    },
+    "evidenceUseAssessments": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/EvidenceUseAssessment"
+      }
+    },
+    "workItems": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/WorkItem"
+      }
+    },
+    "dependencies": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/Dependency"
+      }
+    },
+    "screeningFindings": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/ScreeningFinding"
+      }
+    },
+    "decisions": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/Decision"
+      }
+    },
+    "clearanceConditions": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/ClearanceCondition"
+      }
+    },
+    "readinessSnapshots": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/ReadinessSnapshot"
+      }
+    },
+    "auditEvents": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/AuditEvent"
+      }
+    },
+    "storyRoutes": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/StoryRoute"
+      }
+    },
+    "demoConfig": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "source_status",
+        "simulation_flag",
+        "bank_authority_status",
+        "bank_policy_status",
+        "allowed_actions_by_role",
+        "rules",
+        "questions"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "source_status": {
+          "const": "SYNTHETIC"
+        },
+        "simulation_flag": {
+          "const": true
+        },
+        "bank_authority_status": {
+          "const": "unknown"
+        },
+        "bank_policy_status": {
+          "const": "unknown"
+        },
+        "allowed_actions_by_role": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "rules": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        },
+        "questions": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        },
+        "batchA": {
+          "type": "object",
+          "required": [
+            "version",
+            "permissions",
+            "bank_authority_ref",
+            "rule_pack_ref",
+            "holds"
+          ],
+          "properties": {
+            "bank_authority_ref": {
+              "type": "null"
+            },
+            "holds": {
+              "type": "array",
+              "items": {
+                "type": "object"
+              }
+            }
+          },
+          "additionalProperties": true
+        }
+      }
+    },
+    "naturalPersons": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/NaturalPerson"
+      }
+    },
+    "partyRelationships": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/PartyRelationship"
+      }
+    },
+    "informationRequests": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/InformationRequest"
+      }
+    }
+  },
+  "required": [
+    "case",
+    "scopes",
+    "entities",
+    "representatives",
+    "authorities",
+    "requirements",
+    "evidence",
+    "evidenceUseAssessments",
+    "workItems",
+    "dependencies",
+    "screeningFindings",
+    "decisions",
+    "clearanceConditions",
+    "readinessSnapshots",
+    "auditEvents",
+    "storyRoutes",
+    "demoConfig"
+  ],
+  "$defs": {
+    "Case": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "title": "稳定编号",
+          "description": "Stable synthetic local identifier."
+        },
+        "case_id": {
+          "type": "string",
+          "title": "案件",
+          "description": "Reference to Case.",
+          "x-reference": "Case"
+        },
+        "case_scope_id": {
+          "type": "string",
+          "title": "案件范围",
+          "description": "Reference to Scope.",
+          "x-reference": "Scope"
+        },
+        "revision": {
+          "type": "integer",
+          "title": "版本",
+          "description": "版本; increment for material revisions.",
+          "minimum": 1
+        },
+        "supersedes_ref": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "前版本",
+          "description": "Previous immutable record reference, null for first revision.",
+          "x-reference": "Any"
+        },
+        "source_refs": {
+          "type": "array",
+          "title": "设计依据",
+          "description": "Registered design sources; distinct from synthetic evidence provenance.",
+          "items": {
+            "type": "string"
+          }
+        },
+        "source_status": {
+          "type": "string",
+          "title": "来源状态",
+          "description": "Explicit 来源状态 independent of other object states.",
+          "enum": [
+            "USER-CONFIRMED",
+            "SOURCE-SUPPORTED",
+            "INDUSTRY-REFERENCE",
+            "DESIGN-HYPOTHESIS",
+            "SYNTHETIC",
+            "OPEN",
+            "SUPERSEDED"
+          ]
+        },
+        "simulation_flag": {
+          "type": "boolean",
+          "title": "合成标记",
+          "description": "Always true for Round A business records.",
+          "const": true
+        },
+        "owner_role": {
+          "type": "string",
+          "title": "责任角色",
+          "description": "Synthetic role assignment, not bank delegation."
+        },
+        "validation_owner": {
+          "type": "string",
+          "title": "验证负责人",
+          "description": "Working review owner."
+        },
+        "authority_status": {
+          "type": "string",
+          "title": "权限状态",
+          "description": "Explicit 权限状态 independent of other object states.",
+          "enum": [
+            "demo_configured",
+            "unknown",
+            "not_applicable"
+          ]
+        },
+        "sensitivity": {
+          "type": "string",
+          "title": "敏感等级",
+          "description": "Explicit 敏感等级 independent of other object states.",
+          "enum": [
+            "synthetic-restricted"
+          ]
+        },
+        "created_at": {
+          "type": "string",
+          "title": "创建时间",
+          "description": "UTC timestamp for authored synthetic data.",
+          "format": "date-time"
+        },
+        "updated_at": {
+          "type": "string",
+          "title": "更新时间",
+          "description": "UTC timestamp; display locale never changes the value.",
+          "format": "date-time"
+        },
+        "as_of": {
+          "type": "string",
+          "title": "资料时点",
+          "description": "UTC currency of this authored record.",
+          "format": "date-time"
+        },
+        "question_ref": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "待确认问题",
+          "description": "Required when bank authority or policy is unknown."
+        },
+        "audit_event_refs": {
+          "type": "array",
+          "title": "审计事件",
+          "description": "References to AuditEvent.",
+          "items": {
+            "type": "string"
+          },
+          "x-reference": "AuditEvent"
+        },
+        "trigger_id": {
+          "type": "string",
+          "title": "触发",
+          "description": "Authored new_relationship trigger."
+        },
+        "lifecycle": {
+          "type": "string",
+          "title": "生命周期",
+          "description": "Explicit 生命周期 independent of other object states.",
+          "enum": [
+            "active",
+            "closed"
+          ]
+        },
+        "publication_status": {
+          "type": "string",
+          "title": "发布状态",
+          "description": "Explicit 发布状态 independent of other object states.",
+          "enum": [
+            "not_requested",
+            "pending",
+            "published",
+            "failed"
+          ]
+        },
+        "transaction_status": {
+          "type": "string",
+          "title": "交易状态",
+          "description": "Explicit 交易状态 independent of other object states.",
+          "enum": [
+            "out_of_scope"
+          ]
+        },
+        "baseline_revision": {
+          "type": "string",
+          "description": "Batch A Case.baseline_revision; SRC-013 Final v1.0 §7; synthetic / reviewed_for_demo only."
+        }
+      },
+      "required": [
+        "id",
+        "case_id",
+        "case_scope_id",
+        "revision",
+        "supersedes_ref",
+        "source_refs",
+        "source_status",
+        "simulation_flag",
+        "owner_role",
+        "validation_owner",
+        "authority_status",
+        "sensitivity",
+        "created_at",
+        "updated_at",
+        "as_of",
+        "question_ref",
+        "audit_event_refs",
+        "trigger_id",
+        "lifecycle",
+        "publication_status",
+        "transaction_status"
+      ]
+    },
+    "Scope": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "title": "稳定编号",
+          "description": "Stable synthetic local identifier."
+        },
+        "case_id": {
+          "type": "string",
+          "title": "案件",
+          "description": "Reference to Case.",
+          "x-reference": "Case"
+        },
+        "case_scope_id": {
+          "type": "string",
+          "title": "案件范围",
+          "description": "Reference to Scope.",
+          "x-reference": "Scope"
+        },
+        "revision": {
+          "type": "integer",
+          "title": "版本",
+          "description": "版本; increment for material revisions.",
+          "minimum": 1
+        },
+        "supersedes_ref": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "前版本",
+          "description": "Previous immutable record reference, null for first revision.",
+          "x-reference": "Any"
+        },
+        "source_refs": {
+          "type": "array",
+          "title": "设计依据",
+          "description": "Registered design sources; distinct from synthetic evidence provenance.",
+          "items": {
+            "type": "string"
+          }
+        },
+        "source_status": {
+          "type": "string",
+          "title": "来源状态",
+          "description": "Explicit 来源状态 independent of other object states.",
+          "enum": [
+            "USER-CONFIRMED",
+            "SOURCE-SUPPORTED",
+            "INDUSTRY-REFERENCE",
+            "DESIGN-HYPOTHESIS",
+            "SYNTHETIC",
+            "OPEN",
+            "SUPERSEDED"
+          ]
+        },
+        "simulation_flag": {
+          "type": "boolean",
+          "title": "合成标记",
+          "description": "Always true for Round A business records.",
+          "const": true
+        },
+        "owner_role": {
+          "type": "string",
+          "title": "责任角色",
+          "description": "Synthetic role assignment, not bank delegation."
+        },
+        "validation_owner": {
+          "type": "string",
+          "title": "验证负责人",
+          "description": "Working review owner."
+        },
+        "authority_status": {
+          "type": "string",
+          "title": "权限状态",
+          "description": "Explicit 权限状态 independent of other object states.",
+          "enum": [
+            "demo_configured",
+            "unknown",
+            "not_applicable"
+          ]
+        },
+        "sensitivity": {
+          "type": "string",
+          "title": "敏感等级",
+          "description": "Explicit 敏感等级 independent of other object states.",
+          "enum": [
+            "synthetic-restricted"
+          ]
+        },
+        "created_at": {
+          "type": "string",
+          "title": "创建时间",
+          "description": "UTC timestamp for authored synthetic data.",
+          "format": "date-time"
+        },
+        "updated_at": {
+          "type": "string",
+          "title": "更新时间",
+          "description": "UTC timestamp; display locale never changes the value.",
+          "format": "date-time"
+        },
+        "as_of": {
+          "type": "string",
+          "title": "资料时点",
+          "description": "UTC currency of this authored record.",
+          "format": "date-time"
+        },
+        "question_ref": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "待确认问题",
+          "description": "Required when bank authority or policy is unknown."
+        },
+        "audit_event_refs": {
+          "type": "array",
+          "title": "审计事件",
+          "description": "References to AuditEvent.",
+          "items": {
+            "type": "string"
+          },
+          "x-reference": "AuditEvent"
+        },
+        "entity_ids": {
+          "type": "array",
+          "title": "主体",
+          "description": "References to Entity.",
+          "items": {
+            "type": "string"
+          },
+          "x-reference": "Entity"
+        },
+        "product_scope_ids": {
+          "type": "array",
+          "title": "产品范围",
+          "description": "Synthetic product codes only.",
+          "items": {
+            "type": "string"
+          }
+        },
+        "booking_entity_ref": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "记账实体",
+          "description": "Bank booking entity unknown; no fictitious real bank identifier."
+        },
+        "sales_location": {
+          "type": "string",
+          "title": "销售地区",
+          "description": "Explicit 销售地区 independent of other object states.",
+          "enum": [
+            "unknown",
+            "AU",
+            "US"
+          ]
+        },
+        "jurisdiction_contexts": {
+          "type": "array",
+          "title": "地区上下文",
+          "description": "Context separate from locale and policy.",
+          "items": {
+            "type": "string"
+          }
+        },
+        "policy_profile_ref": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "银行政策版本",
+          "description": "Unknown bank policy remains null."
+        },
+        "scope_status": {
+          "type": "string",
+          "title": "范围状态",
+          "description": "Explicit 范围状态 independent of other object states.",
+          "enum": [
+            "draft",
+            "confirmed_for_demo",
+            "needs_clarification",
+            "clarification_required",
+            "working_scope_recorded",
+            "superseded"
+          ]
+        },
+        "request_id": {
+          "type": "string",
+          "description": "Batch A Scope.request_id; SRC-013 Final v1.0 §7; synthetic / reviewed_for_demo only."
+        },
+        "request_source_ref": {
+          "type": "string",
+          "description": "Batch A Scope.request_source_ref; SRC-013 Final v1.0 §7; synthetic / reviewed_for_demo only."
+        },
+        "trigger_type": {
+          "type": "string",
+          "description": "Batch A Scope.trigger_type; SRC-013 Final v1.0 §7; synthetic / reviewed_for_demo only."
+        },
+        "group_display_name": {
+          "type": "string",
+          "description": "Batch A Scope.group_display_name; SRC-013 Final v1.0 §7; synthetic / reviewed_for_demo only."
+        },
+        "relationship_intent": {
+          "type": "string",
+          "description": "Batch A Scope.relationship_intent; SRC-013 Final v1.0 §7; synthetic / reviewed_for_demo only."
+        },
+        "counterparty_entity_id": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "Batch A Scope.counterparty_entity_id; SRC-013 Final v1.0 §7; synthetic / reviewed_for_demo only."
+        },
+        "related_party_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Batch A Scope.related_party_ids; SRC-013 Final v1.0 §7; synthetic / reviewed_for_demo only."
+        },
+        "business_purpose": {
+          "type": "string",
+          "description": "Batch A Scope.business_purpose; SRC-013 Final v1.0 §7; synthetic / reviewed_for_demo only."
+        },
+        "product_scope_status": {
+          "type": "string",
+          "description": "Batch A Scope.product_scope_status; SRC-013 Final v1.0 §7; synthetic / reviewed_for_demo only.",
+          "enum": [
+            "draft",
+            "needs_review",
+            "recorded"
+          ]
+        },
+        "product_eligibility_assessment_ref": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "Batch A Scope.product_eligibility_assessment_ref; SRC-013 Final v1.0 §7; synthetic / reviewed_for_demo only."
+        },
+        "booking_jurisdiction": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "Batch A Scope.booking_jurisdiction; SRC-013 Final v1.0 §7; synthetic / reviewed_for_demo only."
+        },
+        "service_jurisdictions": {
+          "type": "array",
+          "items": {},
+          "description": "Batch A Scope.service_jurisdictions; SRC-013 Final v1.0 §7; synthetic / reviewed_for_demo only."
+        },
+        "dd_level": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "Batch A Scope.dd_level; SRC-013 Final v1.0 §7; synthetic / reviewed_for_demo only."
+        },
+        "dd_assessment_status": {
+          "type": "string",
+          "description": "Batch A Scope.dd_assessment_status; SRC-013 Final v1.0 §7; synthetic / reviewed_for_demo only.",
+          "enum": [
+            "not_assessed",
+            "under_review",
+            "recorded"
+          ]
+        },
+        "scope_confirmation_ref": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "Batch A Scope.scope_confirmation_ref; SRC-013 Final v1.0 §7; synthetic / reviewed_for_demo only."
+        },
+        "scope_revision": {
+          "type": "integer",
+          "description": "Batch A Scope.scope_revision; SRC-013 Final v1.0 §7; synthetic / reviewed_for_demo only."
+        },
+        "confirmation_purpose": {
+          "type": "string",
+          "description": "Batch A Scope.confirmation_purpose; SRC-013 Final v1.0 §7; synthetic / reviewed_for_demo only.",
+          "const": "working_scope"
+        },
+        "unresolved_context_refs": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Batch A Scope.unresolved_context_refs; SRC-013 Final v1.0 §7; synthetic / reviewed_for_demo only."
+        },
+        "field_provenance": {
+          "type": "object",
+          "additionalProperties": true,
+          "description": "Batch A Scope.field_provenance; SRC-013 Final v1.0 §7; synthetic / reviewed_for_demo only."
+        },
+        "synthetic": {
+          "type": "boolean",
+          "description": "Batch A Scope.synthetic; SRC-013 Final v1.0 §7; synthetic / reviewed_for_demo only."
+        },
+        "validation_status": {
+          "type": "string",
+          "description": "Batch A Scope.validation_status; SRC-013 Final v1.0 §7; synthetic / reviewed_for_demo only."
+        }
+      },
+      "required": [
+        "id",
+        "case_id",
+        "case_scope_id",
+        "revision",
+        "supersedes_ref",
+        "source_refs",
+        "source_status",
+        "simulation_flag",
+        "owner_role",
+        "validation_owner",
+        "authority_status",
+        "sensitivity",
+        "created_at",
+        "updated_at",
+        "as_of",
+        "question_ref",
+        "audit_event_refs",
+        "entity_ids",
+        "product_scope_ids",
+        "booking_entity_ref",
+        "sales_location",
+        "jurisdiction_contexts",
+        "policy_profile_ref",
+        "scope_status"
+      ]
+    },
+    "Entity": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "title": "稳定编号",
+          "description": "Stable synthetic local identifier."
+        },
+        "case_id": {
+          "type": "string",
+          "title": "案件",
+          "description": "Reference to Case.",
+          "x-reference": "Case"
+        },
+        "case_scope_id": {
+          "type": "string",
+          "title": "案件范围",
+          "description": "Reference to Scope.",
+          "x-reference": "Scope"
+        },
+        "revision": {
+          "type": "integer",
+          "title": "版本",
+          "description": "版本; increment for material revisions.",
+          "minimum": 1
+        },
+        "supersedes_ref": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "前版本",
+          "description": "Previous immutable record reference, null for first revision.",
+          "x-reference": "Any"
+        },
+        "source_refs": {
+          "type": "array",
+          "title": "设计依据",
+          "description": "Registered design sources; distinct from synthetic evidence provenance.",
+          "items": {
+            "type": "string"
+          }
+        },
+        "source_status": {
+          "type": "string",
+          "title": "来源状态",
+          "description": "Explicit 来源状态 independent of other object states.",
+          "enum": [
+            "USER-CONFIRMED",
+            "SOURCE-SUPPORTED",
+            "INDUSTRY-REFERENCE",
+            "DESIGN-HYPOTHESIS",
+            "SYNTHETIC",
+            "OPEN",
+            "SUPERSEDED"
+          ]
+        },
+        "simulation_flag": {
+          "type": "boolean",
+          "title": "合成标记",
+          "description": "Always true for Round A business records.",
+          "const": true
+        },
+        "owner_role": {
+          "type": "string",
+          "title": "责任角色",
+          "description": "Synthetic role assignment, not bank delegation."
+        },
+        "validation_owner": {
+          "type": "string",
+          "title": "验证负责人",
+          "description": "Working review owner."
+        },
+        "authority_status": {
+          "type": "string",
+          "title": "权限状态",
+          "description": "Explicit 权限状态 independent of other object states.",
+          "enum": [
+            "demo_configured",
+            "unknown",
+            "not_applicable"
+          ]
+        },
+        "sensitivity": {
+          "type": "string",
+          "title": "敏感等级",
+          "description": "Explicit 敏感等级 independent of other object states.",
+          "enum": [
+            "synthetic-restricted"
+          ]
+        },
+        "created_at": {
+          "type": "string",
+          "title": "创建时间",
+          "description": "UTC timestamp for authored synthetic data.",
+          "format": "date-time"
+        },
+        "updated_at": {
+          "type": "string",
+          "title": "更新时间",
+          "description": "UTC timestamp; display locale never changes the value.",
+          "format": "date-time"
+        },
+        "as_of": {
+          "type": "string",
+          "title": "资料时点",
+          "description": "UTC currency of this authored record.",
+          "format": "date-time"
+        },
+        "question_ref": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "待确认问题",
+          "description": "Required when bank authority or policy is unknown."
+        },
+        "audit_event_refs": {
+          "type": "array",
+          "title": "审计事件",
+          "description": "References to AuditEvent.",
+          "items": {
+            "type": "string"
+          },
+          "x-reference": "AuditEvent"
+        },
+        "legal_name": {
+          "type": "string",
+          "title": "法定名称",
+          "description": "Synthetic entity name."
+        },
+        "entity_type": {
+          "type": "string",
+          "title": "主体类型",
+          "description": "Explicit 主体类型 independent of other object states.",
+          "enum": [
+            "synthetic_corporation"
+          ]
+        },
+        "incorporation_jurisdiction": {
+          "type": "string",
+          "title": "注册地",
+          "description": "Synthetic registration context."
+        },
+        "registration_number": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "注册编号",
+          "description": "No real registration number in fixture."
+        },
+        "lei": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "LEI",
+          "description": "No invented real LEI."
+        },
+        "identity_status": {
+          "type": "string",
+          "title": "身份状态",
+          "description": "Explicit 身份状态 independent of other object states.",
+          "enum": [
+            "unverified",
+            "review_required",
+            "verified_for_demo"
+          ]
+        },
+        "display_alias": {
+          "type": "string",
+          "description": "Batch A Entity.display_alias; SRC-013 Final v1.0 §7; synthetic / reviewed_for_demo only."
+        },
+        "identity_resolution_status": {
+          "type": "string",
+          "description": "Batch A Entity.identity_resolution_status; SRC-013 Final v1.0 §7; synthetic / reviewed_for_demo only.",
+          "enum": [
+            "unresolved",
+            "under_review",
+            "resolved_for_scope"
+          ]
+        },
+        "verification_status": {
+          "type": "string",
+          "description": "Batch A Entity.verification_status; SRC-013 Final v1.0 §7; synthetic / reviewed_for_demo only.",
+          "enum": [
+            "not_started",
+            "in_review",
+            "established",
+            "unresolved"
+          ]
+        },
+        "identity_verification_ref": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "Batch A Entity.identity_verification_ref; SRC-013 Final v1.0 §7; synthetic / reviewed_for_demo only."
+        },
+        "beneficial_ownership_status": {
+          "type": "string",
+          "description": "Batch A Entity.beneficial_ownership_status; SRC-013 Final v1.0 §7; synthetic / reviewed_for_demo only."
+        },
+        "identifiers": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "scheme",
+              "value",
+              "source_ref",
+              "status"
+            ],
+            "properties": {
+              "scheme": {
+                "const": "synthetic_registry_key"
+              },
+              "value": {
+                "type": "string"
+              },
+              "source_ref": {
+                "type": "string"
+              },
+              "status": {
+                "enum": [
+                  "reported",
+                  "source_reviewed",
+                  "unknown",
+                  "conflicted"
+                ]
+              }
+            },
+            "additionalProperties": false
+          },
+          "description": "Batch A Entity.identifiers; SRC-013 Final v1.0 §7; synthetic / reviewed_for_demo only."
+        },
+        "provenance_refs": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Batch A Entity.provenance_refs; SRC-013 Final v1.0 §7; synthetic / reviewed_for_demo only."
+        },
+        "value_status": {
+          "type": "string",
+          "description": "Batch A Entity.value_status; SRC-013 Final v1.0 §7; synthetic / reviewed_for_demo only."
+        },
+        "synthetic": {
+          "type": "boolean",
+          "description": "Batch A Entity.synthetic; SRC-013 Final v1.0 §7; synthetic / reviewed_for_demo only."
+        },
+        "validation_status": {
+          "type": "string",
+          "description": "Batch A Entity.validation_status; SRC-013 Final v1.0 §7; synthetic / reviewed_for_demo only."
+        }
+      },
+      "required": [
+        "id",
+        "case_id",
+        "case_scope_id",
+        "revision",
+        "supersedes_ref",
+        "source_refs",
+        "source_status",
+        "simulation_flag",
+        "owner_role",
+        "validation_owner",
+        "authority_status",
+        "sensitivity",
+        "created_at",
+        "updated_at",
+        "as_of",
+        "question_ref",
+        "audit_event_refs",
+        "legal_name",
+        "entity_type",
+        "incorporation_jurisdiction",
+        "registration_number",
+        "lei",
+        "identity_status"
+      ]
+    },
+    "Representative": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "title": "稳定编号",
+          "description": "Stable synthetic local identifier."
+        },
+        "case_id": {
+          "type": "string",
+          "title": "案件",
+          "description": "Reference to Case.",
+          "x-reference": "Case"
+        },
+        "case_scope_id": {
+          "type": "string",
+          "title": "案件范围",
+          "description": "Reference to Scope.",
+          "x-reference": "Scope"
+        },
+        "revision": {
+          "type": "integer",
+          "title": "版本",
+          "description": "版本; increment for material revisions.",
+          "minimum": 1
+        },
+        "supersedes_ref": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "前版本",
+          "description": "Previous immutable record reference, null for first revision.",
+          "x-reference": "Any"
+        },
+        "source_refs": {
+          "type": "array",
+          "title": "设计依据",
+          "description": "Registered design sources; distinct from synthetic evidence provenance.",
+          "items": {
+            "type": "string"
+          }
+        },
+        "source_status": {
+          "type": "string",
+          "title": "来源状态",
+          "description": "Explicit 来源状态 independent of other object states.",
+          "enum": [
+            "USER-CONFIRMED",
+            "SOURCE-SUPPORTED",
+            "INDUSTRY-REFERENCE",
+            "DESIGN-HYPOTHESIS",
+            "SYNTHETIC",
+            "OPEN",
+            "SUPERSEDED"
+          ]
+        },
+        "simulation_flag": {
+          "type": "boolean",
+          "title": "合成标记",
+          "description": "Always true for Round A business records.",
+          "const": true
+        },
+        "owner_role": {
+          "type": "string",
+          "title": "责任角色",
+          "description": "Synthetic role assignment, not bank delegation."
+        },
+        "validation_owner": {
+          "type": "string",
+          "title": "验证负责人",
+          "description": "Working review owner."
+        },
+        "authority_status": {
+          "type": "string",
+          "title": "权限状态",
+          "description": "Explicit 权限状态 independent of other object states.",
+          "enum": [
+            "demo_configured",
+            "unknown",
+            "not_applicable"
+          ]
+        },
+        "sensitivity": {
+          "type": "string",
+          "title": "敏感等级",
+          "description": "Explicit 敏感等级 independent of other object states.",
+          "enum": [
+            "synthetic-restricted"
+          ]
+        },
+        "created_at": {
+          "type": "string",
+          "title": "创建时间",
+          "description": "UTC timestamp for authored synthetic data.",
+          "format": "date-time"
+        },
+        "updated_at": {
+          "type": "string",
+          "title": "更新时间",
+          "description": "UTC timestamp; display locale never changes the value.",
+          "format": "date-time"
+        },
+        "as_of": {
+          "type": "string",
+          "title": "资料时点",
+          "description": "UTC currency of this authored record.",
+          "format": "date-time"
+        },
+        "question_ref": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "待确认问题",
+          "description": "Required when bank authority or policy is unknown."
+        },
+        "audit_event_refs": {
+          "type": "array",
+          "title": "审计事件",
+          "description": "References to AuditEvent.",
+          "items": {
+            "type": "string"
+          },
+          "x-reference": "AuditEvent"
+        },
+        "display_name": {
+          "type": "string",
+          "title": "代表名称",
+          "description": "Synthetic representative name."
+        },
+        "entity_id": {
+          "type": "string",
+          "title": "代表主体",
+          "description": "Reference to Entity.",
+          "x-reference": "Entity"
+        },
+        "role": {
+          "type": "string",
+          "title": "代表角色",
+          "description": "Proposed relationship role, not demonstrated authority."
+        },
+        "authority_ref": {
+          "type": "string",
+          "title": "代表权限",
+          "description": "Reference to Authority.",
+          "x-reference": "Authority"
+        },
+        "synthetic": {
+          "type": "boolean",
+          "description": "Batch A Representative.synthetic; SRC-013 Final v1.0 §7; synthetic / reviewed_for_demo only."
+        },
+        "validation_status": {
+          "type": "string",
+          "description": "Batch A Representative.validation_status; SRC-013 Final v1.0 §7; synthetic / reviewed_for_demo only."
+        },
+        "value_status": {
+          "type": "string",
+          "description": "Batch A Representative.value_status; SRC-013 Final v1.0 §7; synthetic / reviewed_for_demo only."
+        },
+        "provenance_refs": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Batch A Representative.provenance_refs; SRC-013 Final v1.0 §7; synthetic / reviewed_for_demo only."
+        },
+        "person_id": {
+          "type": "string",
+          "description": "Batch A Representative.person_id; SRC-013 Final v1.0 §7; synthetic / reviewed_for_demo only."
+        },
+        "principal_entity_id": {
+          "type": "string",
+          "description": "Batch A Representative.principal_entity_id; SRC-013 Final v1.0 §7; synthetic / reviewed_for_demo only."
+        },
+        "claimed_role": {
+          "type": "string",
+          "description": "Batch A Representative.claimed_role; SRC-013 Final v1.0 §7; synthetic / reviewed_for_demo only."
+        }
+      },
+      "required": [
+        "id",
+        "case_id",
+        "case_scope_id",
+        "revision",
+        "supersedes_ref",
+        "source_refs",
+        "source_status",
+        "simulation_flag",
+        "owner_role",
+        "validation_owner",
+        "authority_status",
+        "sensitivity",
+        "created_at",
+        "updated_at",
+        "as_of",
+        "question_ref",
+        "audit_event_refs",
+        "display_name",
+        "entity_id",
+        "role",
+        "authority_ref"
+      ]
+    },
+    "Authority": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "title": "稳定编号",
+          "description": "Stable synthetic local identifier."
+        },
+        "case_id": {
+          "type": "string",
+          "title": "案件",
+          "description": "Reference to Case.",
+          "x-reference": "Case"
+        },
+        "case_scope_id": {
+          "type": "string",
+          "title": "案件范围",
+          "description": "Reference to Scope.",
+          "x-reference": "Scope"
+        },
+        "revision": {
+          "type": "integer",
+          "title": "版本",
+          "description": "版本; increment for material revisions.",
+          "minimum": 1
+        },
+        "supersedes_ref": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "前版本",
+          "description": "Previous immutable record reference, null for first revision.",
+          "x-reference": "Any"
+        },
+        "source_refs": {
+          "type": "array",
+          "title": "设计依据",
+          "description": "Registered design sources; distinct from synthetic evidence provenance.",
+          "items": {
+            "type": "string"
+          }
+        },
+        "source_status": {
+          "type": "string",
+          "title": "来源状态",
+          "description": "Explicit 来源状态 independent of other object states.",
+          "enum": [
+            "USER-CONFIRMED",
+            "SOURCE-SUPPORTED",
+            "INDUSTRY-REFERENCE",
+            "DESIGN-HYPOTHESIS",
+            "SYNTHETIC",
+            "OPEN",
+            "SUPERSEDED"
+          ]
+        },
+        "simulation_flag": {
+          "type": "boolean",
+          "title": "合成标记",
+          "description": "Always true for Round A business records.",
+          "const": true
+        },
+        "owner_role": {
+          "type": "string",
+          "title": "责任角色",
+          "description": "Synthetic role assignment, not bank delegation."
+        },
+        "validation_owner": {
+          "type": "string",
+          "title": "验证负责人",
+          "description": "Working review owner."
+        },
+        "authority_status": {
+          "type": "string",
+          "title": "权限状态",
+          "description": "Explicit 权限状态 independent of other object states.",
+          "enum": [
+            "demo_configured",
+            "unknown",
+            "not_applicable"
+          ]
+        },
+        "sensitivity": {
+          "type": "string",
+          "title": "敏感等级",
+          "description": "Explicit 敏感等级 independent of other object states.",
+          "enum": [
+            "synthetic-restricted"
+          ]
+        },
+        "created_at": {
+          "type": "string",
+          "title": "创建时间",
+          "description": "UTC timestamp for authored synthetic data.",
+          "format": "date-time"
+        },
+        "updated_at": {
+          "type": "string",
+          "title": "更新时间",
+          "description": "UTC timestamp; display locale never changes the value.",
+          "format": "date-time"
+        },
+        "as_of": {
+          "type": "string",
+          "title": "资料时点",
+          "description": "UTC currency of this authored record.",
+          "format": "date-time"
+        },
+        "question_ref": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "待确认问题",
+          "description": "Required when bank authority or policy is unknown."
+        },
+        "audit_event_refs": {
+          "type": "array",
+          "title": "审计事件",
+          "description": "References to AuditEvent.",
+          "items": {
+            "type": "string"
+          },
+          "x-reference": "AuditEvent"
+        },
+        "subject_ref": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "权限主体",
+          "description": "Representative reference, null for generic demo reviewer role.",
+          "x-reference": "Representative"
+        },
+        "authority_kind": {
+          "type": "string",
+          "title": "权限类型",
+          "description": "Explicit 权限类型 independent of other object states.",
+          "enum": [
+            "representative",
+            "demo_action_permission"
+          ]
+        },
+        "scope_description": {
+          "type": "string",
+          "title": "权限范围",
+          "description": "Separates demo UI permissions from unknown bank mandates."
+        },
+        "bank_authority_ref": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "银行授权",
+          "description": "Unknown bank delegation remains null."
+        },
+        "demo_permission_ref": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "演示配置",
+          "description": "Local configuration key; never a real bank authority."
+        },
+        "status": {
+          "type": "string",
+          "title": "状态",
+          "description": "Explicit 状态 independent of other object states.",
+          "enum": [
+            "unknown",
+            "configured_for_demo",
+            "evidence_required",
+            "not_established",
+            "not_assessed"
+          ]
+        },
+        "synthetic": {
+          "type": "boolean",
+          "description": "Batch A Authority.synthetic; SRC-013 Final v1.0 §7; synthetic / reviewed_for_demo only."
+        },
+        "validation_status": {
+          "type": "string",
+          "description": "Batch A Authority.validation_status; SRC-013 Final v1.0 §7; synthetic / reviewed_for_demo only."
+        },
+        "value_status": {
+          "type": "string",
+          "description": "Batch A Authority.value_status; SRC-013 Final v1.0 §7; synthetic / reviewed_for_demo only."
+        },
+        "provenance_refs": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Batch A Authority.provenance_refs; SRC-013 Final v1.0 §7; synthetic / reviewed_for_demo only."
+        },
+        "person_id": {
+          "type": "string",
+          "description": "Batch A Authority.person_id; SRC-013 Final v1.0 §7; synthetic / reviewed_for_demo only."
+        },
+        "principal_entity_id": {
+          "type": "string",
+          "description": "Batch A Authority.principal_entity_id; SRC-013 Final v1.0 §7; synthetic / reviewed_for_demo only."
+        },
+        "action_type": {
+          "type": "string",
+          "description": "Batch A Authority.action_type; SRC-013 Final v1.0 §7; synthetic / reviewed_for_demo only."
+        },
+        "authority_scope": {
+          "type": "string",
+          "description": "Batch A Authority.authority_scope; SRC-013 Final v1.0 §7; synthetic / reviewed_for_demo only."
+        },
+        "basis_type": {
+          "type": "string",
+          "description": "Batch A Authority.basis_type; SRC-013 Final v1.0 §7; synthetic / reviewed_for_demo only."
+        },
+        "evidence_use_refs": {
+          "type": "array",
+          "items": {},
+          "description": "Batch A Authority.evidence_use_refs; SRC-013 Final v1.0 §7; synthetic / reviewed_for_demo only."
+        },
+        "assessed_by": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "Batch A Authority.assessed_by; SRC-013 Final v1.0 §7; synthetic / reviewed_for_demo only."
+        },
+        "assessment_permission_ref": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "Batch A Authority.assessment_permission_ref; SRC-013 Final v1.0 §7; synthetic / reviewed_for_demo only."
+        },
+        "decision_ref": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "Batch A Authority.decision_ref; SRC-013 Final v1.0 §7; synthetic / reviewed_for_demo only."
+        },
+        "valid_from": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "Batch A Authority.valid_from; SRC-013 Final v1.0 §7; synthetic / reviewed_for_demo only."
+        },
+        "valid_to": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "Batch A Authority.valid_to; SRC-013 Final v1.0 §7; synthetic / reviewed_for_demo only."
+        },
+        "scope_match": {
+          "type": "string",
+          "description": "Batch A Authority.scope_match; SRC-013 Final v1.0 §7; synthetic / reviewed_for_demo only."
+        }
+      },
+      "required": [
+        "id",
+        "case_id",
+        "case_scope_id",
+        "revision",
+        "supersedes_ref",
+        "source_refs",
+        "source_status",
+        "simulation_flag",
+        "owner_role",
+        "validation_owner",
+        "authority_status",
+        "sensitivity",
+        "created_at",
+        "updated_at",
+        "as_of",
+        "question_ref",
+        "audit_event_refs",
+        "subject_ref",
+        "authority_kind",
+        "scope_description",
+        "bank_authority_ref",
+        "demo_permission_ref",
+        "status"
+      ]
+    },
+    "Requirement": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "title": "稳定编号",
+          "description": "Stable synthetic local identifier."
+        },
+        "case_id": {
+          "type": "string",
+          "title": "案件",
+          "description": "Reference to Case.",
+          "x-reference": "Case"
+        },
+        "case_scope_id": {
+          "type": "string",
+          "title": "案件范围",
+          "description": "Reference to Scope.",
+          "x-reference": "Scope"
+        },
+        "revision": {
+          "type": "integer",
+          "title": "版本",
+          "description": "版本; increment for material revisions.",
+          "minimum": 1
+        },
+        "supersedes_ref": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "前版本",
+          "description": "Previous immutable record reference, null for first revision.",
+          "x-reference": "Any"
+        },
+        "source_refs": {
+          "type": "array",
+          "title": "设计依据",
+          "description": "Registered design sources; distinct from synthetic evidence provenance.",
+          "items": {
+            "type": "string"
+          }
+        },
+        "source_status": {
+          "type": "string",
+          "title": "来源状态",
+          "description": "Explicit 来源状态 independent of other object states.",
+          "enum": [
+            "USER-CONFIRMED",
+            "SOURCE-SUPPORTED",
+            "INDUSTRY-REFERENCE",
+            "DESIGN-HYPOTHESIS",
+            "SYNTHETIC",
+            "OPEN",
+            "SUPERSEDED"
+          ]
+        },
+        "simulation_flag": {
+          "type": "boolean",
+          "title": "合成标记",
+          "description": "Always true for Round A business records.",
+          "const": true
+        },
+        "owner_role": {
+          "type": "string",
+          "title": "责任角色",
+          "description": "Synthetic role assignment, not bank delegation."
+        },
+        "validation_owner": {
+          "type": "string",
+          "title": "验证负责人",
+          "description": "Working review owner."
+        },
+        "authority_status": {
+          "type": "string",
+          "title": "权限状态",
+          "description": "Explicit 权限状态 independent of other object states.",
+          "enum": [
+            "demo_configured",
+            "unknown",
+            "not_applicable"
+          ]
+        },
+        "sensitivity": {
+          "type": "string",
+          "title": "敏感等级",
+          "description": "Explicit 敏感等级 independent of other object states.",
+          "enum": [
+            "synthetic-restricted"
+          ]
+        },
+        "created_at": {
+          "type": "string",
+          "title": "创建时间",
+          "description": "UTC timestamp for authored synthetic data.",
+          "format": "date-time"
+        },
+        "updated_at": {
+          "type": "string",
+          "title": "更新时间",
+          "description": "UTC timestamp; display locale never changes the value.",
+          "format": "date-time"
+        },
+        "as_of": {
+          "type": "string",
+          "title": "资料时点",
+          "description": "UTC currency of this authored record.",
+          "format": "date-time"
+        },
+        "question_ref": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "待确认问题",
+          "description": "Required when bank authority or policy is unknown."
+        },
+        "audit_event_refs": {
+          "type": "array",
+          "title": "审计事件",
+          "description": "References to AuditEvent.",
+          "items": {
+            "type": "string"
+          },
+          "x-reference": "AuditEvent"
+        },
+        "subject_id": {
+          "type": "string",
+          "title": "要求主体",
+          "description": "Reference to Entity.",
+          "x-reference": "Entity"
+        },
+        "purpose_code": {
+          "type": "string",
+          "title": "用途",
+          "description": "A purpose cannot be inferred from an evidence artifact."
+        },
+        "set_revision": {
+          "type": "integer",
+          "title": "要求集版本",
+          "description": "要求集版本; increment for material revisions.",
+          "minimum": 1
+        },
+        "applicability": {
+          "type": "string",
+          "title": "适用性",
+          "description": "Explicit 适用性 independent of other object states.",
+          "enum": [
+            "required",
+            "not_required",
+            "unknown"
+          ]
+        },
+        "rule_ref": {
+          "type": "string",
+          "title": "演示规则",
+          "description": "Local authored rule key."
+        },
+        "rule_revision": {
+          "type": "integer",
+          "title": "规则版本",
+          "description": "规则版本; increment for material revisions.",
+          "minimum": 1
+        },
+        "bank_policy_ref": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "银行政策",
+          "description": "Unknown bank policy remains null."
+        },
+        "status": {
+          "type": "string",
+          "title": "要求状态",
+          "description": "Explicit 要求状态 independent of other object states.",
+          "enum": [
+            "draft",
+            "review_required",
+            "satisfied",
+            "unknown"
+          ]
+        },
+        "status_reason": {
+          "type": "string",
+          "title": "状态原因",
+          "description": "Explicit reason for requirement state."
+        }
+      },
+      "required": [
+        "id",
+        "case_id",
+        "case_scope_id",
+        "revision",
+        "supersedes_ref",
+        "source_refs",
+        "source_status",
+        "simulation_flag",
+        "owner_role",
+        "validation_owner",
+        "authority_status",
+        "sensitivity",
+        "created_at",
+        "updated_at",
+        "as_of",
+        "question_ref",
+        "audit_event_refs",
+        "subject_id",
+        "purpose_code",
+        "set_revision",
+        "applicability",
+        "rule_ref",
+        "rule_revision",
+        "bank_policy_ref",
+        "status",
+        "status_reason"
+      ]
+    },
+    "Evidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "title": "稳定编号",
+          "description": "Stable synthetic local identifier."
+        },
+        "case_id": {
+          "type": "string",
+          "title": "案件",
+          "description": "Reference to Case.",
+          "x-reference": "Case"
+        },
+        "case_scope_id": {
+          "type": "string",
+          "title": "案件范围",
+          "description": "Reference to Scope.",
+          "x-reference": "Scope"
+        },
+        "revision": {
+          "type": "integer",
+          "title": "版本",
+          "description": "版本; increment for material revisions.",
+          "minimum": 1
+        },
+        "supersedes_ref": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "前版本",
+          "description": "Previous immutable record reference, null for first revision.",
+          "x-reference": "Any"
+        },
+        "source_refs": {
+          "type": "array",
+          "title": "设计依据",
+          "description": "Registered design sources; distinct from synthetic evidence provenance.",
+          "items": {
+            "type": "string"
+          }
+        },
+        "source_status": {
+          "type": "string",
+          "title": "来源状态",
+          "description": "Explicit 来源状态 independent of other object states.",
+          "enum": [
+            "USER-CONFIRMED",
+            "SOURCE-SUPPORTED",
+            "INDUSTRY-REFERENCE",
+            "DESIGN-HYPOTHESIS",
+            "SYNTHETIC",
+            "OPEN",
+            "SUPERSEDED"
+          ]
+        },
+        "simulation_flag": {
+          "type": "boolean",
+          "title": "合成标记",
+          "description": "Always true for Round A business records.",
+          "const": true
+        },
+        "owner_role": {
+          "type": "string",
+          "title": "责任角色",
+          "description": "Synthetic role assignment, not bank delegation."
+        },
+        "validation_owner": {
+          "type": "string",
+          "title": "验证负责人",
+          "description": "Working review owner."
+        },
+        "authority_status": {
+          "type": "string",
+          "title": "权限状态",
+          "description": "Explicit 权限状态 independent of other object states.",
+          "enum": [
+            "demo_configured",
+            "unknown",
+            "not_applicable"
+          ]
+        },
+        "sensitivity": {
+          "type": "string",
+          "title": "敏感等级",
+          "description": "Explicit 敏感等级 independent of other object states.",
+          "enum": [
+            "synthetic-restricted"
+          ]
+        },
+        "created_at": {
+          "type": "string",
+          "title": "创建时间",
+          "description": "UTC timestamp for authored synthetic data.",
+          "format": "date-time"
+        },
+        "updated_at": {
+          "type": "string",
+          "title": "更新时间",
+          "description": "UTC timestamp; display locale never changes the value.",
+          "format": "date-time"
+        },
+        "as_of": {
+          "type": "string",
+          "title": "资料时点",
+          "description": "UTC currency of this authored record.",
+          "format": "date-time"
+        },
+        "question_ref": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "待确认问题",
+          "description": "Required when bank authority or policy is unknown."
+        },
+        "audit_event_refs": {
+          "type": "array",
+          "title": "审计事件",
+          "description": "References to AuditEvent.",
+          "items": {
+            "type": "string"
+          },
+          "x-reference": "AuditEvent"
+        },
+        "subject_id": {
+          "type": "string",
+          "title": "资料主体",
+          "description": "Reference to Entity.",
+          "x-reference": "Any"
+        },
+        "evidence_revision": {
+          "type": "integer",
+          "title": "资料版本",
+          "description": "资料版本; increment for material revisions.",
+          "minimum": 1
+        },
+        "source_record_ref": {
+          "type": "string",
+          "title": "资料来源记录",
+          "description": "Synthetic source record; not a design-source ID."
+        },
+        "acquired_at": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "接收时间",
+          "description": "Null until received.",
+          "format": "date-time"
+        },
+        "covered_attributes": {
+          "type": "array",
+          "title": "资料覆盖属性",
+          "description": "Explicit content coverage, no global validity.",
+          "items": {
+            "type": "string"
+          }
+        },
+        "content_ref": {
+          "type": "string",
+          "title": "内容引用",
+          "description": "Synthetic inline content key."
+        },
+        "receipt_status": {
+          "type": "string",
+          "title": "接收状态",
+          "description": "Explicit 接收状态 independent of other object states.",
+          "enum": [
+            "available",
+            "missing",
+            "received"
+          ]
+        },
+        "verification_status": {
+          "type": "string",
+          "title": "核验状态",
+          "description": "Explicit 核验状态 independent of other object states.",
+          "enum": [
+            "not_verified",
+            "review_required",
+            "verified"
+          ]
+        },
+        "status_reason": {
+          "type": "string",
+          "title": "状态原因",
+          "description": "Why artifact is present or absent."
+        },
+        "content_attributes": {
+          "type": "object",
+          "title": "合成资料属性",
+          "description": "Explicit fictional string values for the bounded comparison. Missing evidence content must not be displayed as received; no single value grants automatic sufficiency.",
+          "additionalProperties": {
+            "type": "string"
+          },
+          "x-required": false
+        },
+        "synthetic": {
+          "type": "boolean",
+          "description": "Batch A Evidence.synthetic; SRC-013 Final v1.0 §7; synthetic / reviewed_for_demo only."
+        },
+        "validation_status": {
+          "type": "string",
+          "description": "Batch A Evidence.validation_status; SRC-013 Final v1.0 §7; synthetic / reviewed_for_demo only."
+        },
+        "value_status": {
+          "type": "string",
+          "description": "Batch A Evidence.value_status; SRC-013 Final v1.0 §7; synthetic / reviewed_for_demo only."
+        },
+        "provenance_refs": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Batch A Evidence.provenance_refs; SRC-013 Final v1.0 §7; synthetic / reviewed_for_demo only."
+        },
+        "alias": {
+          "type": "string",
+          "description": "Batch A Evidence.alias; SRC-013 Final v1.0 §7; synthetic / reviewed_for_demo only."
+        }
+      },
+      "required": [
+        "id",
+        "case_id",
+        "case_scope_id",
+        "revision",
+        "supersedes_ref",
+        "source_refs",
+        "source_status",
+        "simulation_flag",
+        "owner_role",
+        "validation_owner",
+        "authority_status",
+        "sensitivity",
+        "created_at",
+        "updated_at",
+        "as_of",
+        "question_ref",
+        "audit_event_refs",
+        "subject_id",
+        "evidence_revision",
+        "source_record_ref",
+        "acquired_at",
+        "covered_attributes",
+        "content_ref",
+        "receipt_status",
+        "verification_status",
+        "status_reason"
+      ]
+    },
+    "EvidenceUseAssessment": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "title": "稳定编号",
+          "description": "Stable synthetic local identifier."
+        },
+        "case_id": {
+          "type": "string",
+          "title": "案件",
+          "description": "Reference to Case.",
+          "x-reference": "Case"
+        },
+        "case_scope_id": {
+          "type": "string",
+          "title": "案件范围",
+          "description": "Reference to Scope.",
+          "x-reference": "Scope"
+        },
+        "revision": {
+          "type": "integer",
+          "title": "版本",
+          "description": "版本; increment for material revisions.",
+          "minimum": 1
+        },
+        "supersedes_ref": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "前版本",
+          "description": "Previous immutable record reference, null for first revision.",
+          "x-reference": "Any"
+        },
+        "source_refs": {
+          "type": "array",
+          "title": "设计依据",
+          "description": "Registered design sources; distinct from synthetic evidence provenance.",
+          "items": {
+            "type": "string"
+          }
+        },
+        "source_status": {
+          "type": "string",
+          "title": "来源状态",
+          "description": "Explicit 来源状态 independent of other object states.",
+          "enum": [
+            "USER-CONFIRMED",
+            "SOURCE-SUPPORTED",
+            "INDUSTRY-REFERENCE",
+            "DESIGN-HYPOTHESIS",
+            "SYNTHETIC",
+            "OPEN",
+            "SUPERSEDED"
+          ]
+        },
+        "simulation_flag": {
+          "type": "boolean",
+          "title": "合成标记",
+          "description": "Always true for Round A business records.",
+          "const": true
+        },
+        "owner_role": {
+          "type": "string",
+          "title": "责任角色",
+          "description": "Synthetic role assignment, not bank delegation."
+        },
+        "validation_owner": {
+          "type": "string",
+          "title": "验证负责人",
+          "description": "Working review owner."
+        },
+        "authority_status": {
+          "type": "string",
+          "title": "权限状态",
+          "description": "Explicit 权限状态 independent of other object states.",
+          "enum": [
+            "demo_configured",
+            "unknown",
+            "not_applicable"
+          ]
+        },
+        "sensitivity": {
+          "type": "string",
+          "title": "敏感等级",
+          "description": "Explicit 敏感等级 independent of other object states.",
+          "enum": [
+            "synthetic-restricted"
+          ]
+        },
+        "created_at": {
+          "type": "string",
+          "title": "创建时间",
+          "description": "UTC timestamp for authored synthetic data.",
+          "format": "date-time"
+        },
+        "updated_at": {
+          "type": "string",
+          "title": "更新时间",
+          "description": "UTC timestamp; display locale never changes the value.",
+          "format": "date-time"
+        },
+        "as_of": {
+          "type": "string",
+          "title": "资料时点",
+          "description": "UTC currency of this authored record.",
+          "format": "date-time"
+        },
+        "question_ref": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "待确认问题",
+          "description": "Required when bank authority or policy is unknown."
+        },
+        "audit_event_refs": {
+          "type": "array",
+          "title": "审计事件",
+          "description": "References to AuditEvent.",
+          "items": {
+            "type": "string"
+          },
+          "x-reference": "AuditEvent"
+        },
+        "evidence_id": {
+          "type": "string",
+          "title": "证据",
+          "description": "Reference to Evidence.",
+          "x-reference": "Evidence"
+        },
+        "evidence_revision": {
+          "type": "integer",
+          "title": "证据版本",
+          "description": "证据版本; increment for material revisions.",
+          "minimum": 1
+        },
+        "requirement_id": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "要求",
+          "description": "Reference to Requirement.",
+          "x-reference": "Requirement"
+        },
+        "subject_id": {
+          "type": "string",
+          "title": "用途主体",
+          "description": "Reference to Entity.",
+          "x-reference": "Any"
+        },
+        "purpose_code": {
+          "type": "string",
+          "title": "用途",
+          "description": "Exact purpose of this assessment."
+        },
+        "sufficiency": {
+          "type": "string",
+          "title": "充分性",
+          "description": "Explicit 充分性 independent of other object states.",
+          "enum": [
+            "not_assessed",
+            "sufficient",
+            "insufficient",
+            "unknown"
+          ]
+        },
+        "reason_code": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "原因",
+          "description": "Required unless sufficient."
+        },
+        "basis_refs": {
+          "type": "array",
+          "title": "判断依据",
+          "description": "Evidence, source or local rule refs; required for determinate judgments.",
+          "items": {
+            "type": "string"
+          }
+        },
+        "assessed_by_ref": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "评估者",
+          "description": "Synthetic actor role required for completed assessment."
+        },
+        "authority_ref": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "判断授权",
+          "description": "Null does not grant permission.",
+          "x-reference": "Authority"
+        },
+        "assessed_at": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "评估时间",
+          "description": "UTC time required when assessment completed.",
+          "format": "date-time"
+        },
+        "design_rule_ref": {
+          "type": "string",
+          "title": "演示规则",
+          "description": "Explicit demo-only assessment rule."
+        },
+        "supersedes_assessment_ref": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "前次评估",
+          "description": "Null at revision 1; preserve prior judgment on reassessment.",
+          "x-reference": "EvidenceUseAssessment"
+        },
+        "synthetic": {
+          "type": "boolean",
+          "description": "Batch A EvidenceUseAssessment.synthetic; SRC-013 Final v1.0 §7; synthetic / reviewed_for_demo only."
+        },
+        "validation_status": {
+          "type": "string",
+          "description": "Batch A EvidenceUseAssessment.validation_status; SRC-013 Final v1.0 §7; synthetic / reviewed_for_demo only."
+        },
+        "value_status": {
+          "type": "string",
+          "description": "Batch A EvidenceUseAssessment.value_status; SRC-013 Final v1.0 §7; synthetic / reviewed_for_demo only."
+        },
+        "provenance_refs": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Batch A EvidenceUseAssessment.provenance_refs; SRC-013 Final v1.0 §7; synthetic / reviewed_for_demo only."
+        },
+        "principal_entity_id": {
+          "type": "string",
+          "description": "Batch A EvidenceUseAssessment.principal_entity_id; SRC-013 Final v1.0 §7; synthetic / reviewed_for_demo only."
+        },
+        "assessment_permission_ref": {
+          "type": "string",
+          "description": "Batch A EvidenceUseAssessment.assessment_permission_ref; SRC-013 Final v1.0 §7; synthetic / reviewed_for_demo only."
+        }
+      },
+      "required": [
+        "id",
+        "case_id",
+        "case_scope_id",
+        "revision",
+        "supersedes_ref",
+        "source_refs",
+        "source_status",
+        "simulation_flag",
+        "owner_role",
+        "validation_owner",
+        "authority_status",
+        "sensitivity",
+        "created_at",
+        "updated_at",
+        "as_of",
+        "question_ref",
+        "audit_event_refs",
+        "evidence_id",
+        "evidence_revision",
+        "requirement_id",
+        "subject_id",
+        "purpose_code",
+        "sufficiency",
+        "reason_code",
+        "basis_refs",
+        "assessed_by_ref",
+        "authority_ref",
+        "assessed_at",
+        "design_rule_ref",
+        "supersedes_assessment_ref"
+      ]
+    },
+    "WorkItem": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "title": "稳定编号",
+          "description": "Stable synthetic local identifier."
+        },
+        "case_id": {
+          "type": "string",
+          "title": "案件",
+          "description": "Reference to Case.",
+          "x-reference": "Case"
+        },
+        "case_scope_id": {
+          "type": "string",
+          "title": "案件范围",
+          "description": "Reference to Scope.",
+          "x-reference": "Scope"
+        },
+        "revision": {
+          "type": "integer",
+          "title": "版本",
+          "description": "版本; increment for material revisions.",
+          "minimum": 1
+        },
+        "supersedes_ref": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "前版本",
+          "description": "Previous immutable record reference, null for first revision.",
+          "x-reference": "Any"
+        },
+        "source_refs": {
+          "type": "array",
+          "title": "设计依据",
+          "description": "Registered design sources; distinct from synthetic evidence provenance.",
+          "items": {
+            "type": "string"
+          }
+        },
+        "source_status": {
+          "type": "string",
+          "title": "来源状态",
+          "description": "Explicit 来源状态 independent of other object states.",
+          "enum": [
+            "USER-CONFIRMED",
+            "SOURCE-SUPPORTED",
+            "INDUSTRY-REFERENCE",
+            "DESIGN-HYPOTHESIS",
+            "SYNTHETIC",
+            "OPEN",
+            "SUPERSEDED"
+          ]
+        },
+        "simulation_flag": {
+          "type": "boolean",
+          "title": "合成标记",
+          "description": "Always true for Round A business records.",
+          "const": true
+        },
+        "owner_role": {
+          "type": "string",
+          "title": "责任角色",
+          "description": "Synthetic role assignment, not bank delegation."
+        },
+        "validation_owner": {
+          "type": "string",
+          "title": "验证负责人",
+          "description": "Working review owner."
+        },
+        "authority_status": {
+          "type": "string",
+          "title": "权限状态",
+          "description": "Explicit 权限状态 independent of other object states.",
+          "enum": [
+            "demo_configured",
+            "unknown",
+            "not_applicable"
+          ]
+        },
+        "sensitivity": {
+          "type": "string",
+          "title": "敏感等级",
+          "description": "Explicit 敏感等级 independent of other object states.",
+          "enum": [
+            "synthetic-restricted"
+          ]
+        },
+        "created_at": {
+          "type": "string",
+          "title": "创建时间",
+          "description": "UTC timestamp for authored synthetic data.",
+          "format": "date-time"
+        },
+        "updated_at": {
+          "type": "string",
+          "title": "更新时间",
+          "description": "UTC timestamp; display locale never changes the value.",
+          "format": "date-time"
+        },
+        "as_of": {
+          "type": "string",
+          "title": "资料时点",
+          "description": "UTC currency of this authored record.",
+          "format": "date-time"
+        },
+        "question_ref": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "待确认问题",
+          "description": "Required when bank authority or policy is unknown."
+        },
+        "audit_event_refs": {
+          "type": "array",
+          "title": "审计事件",
+          "description": "References to AuditEvent.",
+          "items": {
+            "type": "string"
+          },
+          "x-reference": "AuditEvent"
+        },
+        "activity_id": {
+          "type": "string",
+          "title": "源活动",
+          "description": "Source-scoped activity reference."
+        },
+        "scenario_id": {
+          "type": "string",
+          "title": "场景",
+          "description": "Preserved SCN alias."
+        },
+        "requirement_ids": {
+          "type": "array",
+          "title": "关联要求",
+          "description": "References to Requirement.",
+          "items": {
+            "type": "string"
+          },
+          "x-reference": "Requirement"
+        },
+        "status": {
+          "type": "string",
+          "title": "任务状态",
+          "description": "Work state; awaiting_response identifies a recorded residual request waiting for its named client response, distinct from input prerequisites before sending.",
+          "enum": [
+            "ready",
+            "awaiting_input",
+            "awaiting_review",
+            "in_progress",
+            "completed",
+            "paused",
+            "referred",
+            "awaiting_response"
+          ]
+        },
+        "waiting_for": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "等待对象字段",
+          "description": "Exact object/field/response; null only when no wait."
+        },
+        "input_refs": {
+          "type": "array",
+          "title": "输入",
+          "description": "References to Any.",
+          "items": {
+            "type": "string"
+          },
+          "x-reference": "Any"
+        },
+        "output_refs": {
+          "type": "array",
+          "title": "输出",
+          "description": "References to Any.",
+          "items": {
+            "type": "string"
+          },
+          "x-reference": "Any"
+        },
+        "action_revision": {
+          "type": "integer",
+          "title": "动作版本",
+          "description": "动作版本; increment for material revisions.",
+          "minimum": 1
+        },
+        "hold_scope": {
+          "type": "string",
+          "title": "暂停范围",
+          "description": "Explicit 暂停范围 independent of other object states.",
+          "enum": [
+            "task",
+            "linked_requirement",
+            "case_scope",
+            "none"
+          ]
+        },
+        "next_owner": {
+          "type": "string",
+          "title": "下一责任角色",
+          "description": "Synthetic role that can supply the next input."
+        },
+        "synthetic": {
+          "type": "boolean",
+          "description": "Batch A WorkItem.synthetic; SRC-013 Final v1.0 §7; synthetic / reviewed_for_demo only."
+        },
+        "validation_status": {
+          "type": "string",
+          "description": "Batch A WorkItem.validation_status; SRC-013 Final v1.0 §7; synthetic / reviewed_for_demo only."
+        },
+        "value_status": {
+          "type": "string",
+          "description": "Batch A WorkItem.value_status; SRC-013 Final v1.0 §7; synthetic / reviewed_for_demo only."
+        },
+        "provenance_refs": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Batch A WorkItem.provenance_refs; SRC-013 Final v1.0 §7; synthetic / reviewed_for_demo only."
+        },
+        "work_type": {
+          "type": "string",
+          "description": "Batch A WorkItem.work_type; SRC-013 Final v1.0 §7; synthetic / reviewed_for_demo only."
+        },
+        "gap_key": {
+          "type": "string",
+          "description": "Batch A WorkItem.gap_key; SRC-013 Final v1.0 §7; synthetic / reviewed_for_demo only."
+        },
+        "principal_entity_id": {
+          "type": "string",
+          "description": "Batch A WorkItem.principal_entity_id; SRC-013 Final v1.0 §7; synthetic / reviewed_for_demo only."
+        },
+        "purpose_code": {
+          "type": "string",
+          "description": "Batch A WorkItem.purpose_code; SRC-013 Final v1.0 §7; synthetic / reviewed_for_demo only."
+        },
+        "assignee_ref": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "Batch A WorkItem.assignee_ref; SRC-013 Final v1.0 §7; synthetic / reviewed_for_demo only."
+        },
+        "wait_reason": {
+          "type": "string",
+          "description": "Batch A WorkItem.wait_reason; SRC-013 Final v1.0 §7; synthetic / reviewed_for_demo only."
+        },
+        "required_inputs": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Batch A WorkItem.required_inputs; SRC-013 Final v1.0 §7; synthetic / reviewed_for_demo only."
+        },
+        "blocked_actions": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Batch A WorkItem.blocked_actions; SRC-013 Final v1.0 §7; synthetic / reviewed_for_demo only."
+        },
+        "due_at": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "Batch A WorkItem.due_at; SRC-013 Final v1.0 §7; synthetic / reviewed_for_demo only."
+        }
+      },
+      "required": [
+        "id",
+        "case_id",
+        "case_scope_id",
+        "revision",
+        "supersedes_ref",
+        "source_refs",
+        "source_status",
+        "simulation_flag",
+        "owner_role",
+        "validation_owner",
+        "authority_status",
+        "sensitivity",
+        "created_at",
+        "updated_at",
+        "as_of",
+        "question_ref",
+        "audit_event_refs",
+        "activity_id",
+        "scenario_id",
+        "requirement_ids",
+        "status",
+        "waiting_for",
+        "input_refs",
+        "output_refs",
+        "action_revision",
+        "hold_scope",
+        "next_owner"
+      ]
+    },
+    "Dependency": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "title": "稳定编号",
+          "description": "Stable synthetic local identifier."
+        },
+        "case_id": {
+          "type": "string",
+          "title": "案件",
+          "description": "Reference to Case.",
+          "x-reference": "Case"
+        },
+        "case_scope_id": {
+          "type": "string",
+          "title": "案件范围",
+          "description": "Reference to Scope.",
+          "x-reference": "Scope"
+        },
+        "revision": {
+          "type": "integer",
+          "title": "版本",
+          "description": "版本; increment for material revisions.",
+          "minimum": 1
+        },
+        "supersedes_ref": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "前版本",
+          "description": "Previous immutable record reference, null for first revision.",
+          "x-reference": "Any"
+        },
+        "source_refs": {
+          "type": "array",
+          "title": "设计依据",
+          "description": "Registered design sources; distinct from synthetic evidence provenance.",
+          "items": {
+            "type": "string"
+          }
+        },
+        "source_status": {
+          "type": "string",
+          "title": "来源状态",
+          "description": "Explicit 来源状态 independent of other object states.",
+          "enum": [
+            "USER-CONFIRMED",
+            "SOURCE-SUPPORTED",
+            "INDUSTRY-REFERENCE",
+            "DESIGN-HYPOTHESIS",
+            "SYNTHETIC",
+            "OPEN",
+            "SUPERSEDED"
+          ]
+        },
+        "simulation_flag": {
+          "type": "boolean",
+          "title": "合成标记",
+          "description": "Always true for Round A business records.",
+          "const": true
+        },
+        "owner_role": {
+          "type": "string",
+          "title": "责任角色",
+          "description": "Synthetic role assignment, not bank delegation."
+        },
+        "validation_owner": {
+          "type": "string",
+          "title": "验证负责人",
+          "description": "Working review owner."
+        },
+        "authority_status": {
+          "type": "string",
+          "title": "权限状态",
+          "description": "Explicit 权限状态 independent of other object states.",
+          "enum": [
+            "demo_configured",
+            "unknown",
+            "not_applicable"
+          ]
+        },
+        "sensitivity": {
+          "type": "string",
+          "title": "敏感等级",
+          "description": "Explicit 敏感等级 independent of other object states.",
+          "enum": [
+            "synthetic-restricted"
+          ]
+        },
+        "created_at": {
+          "type": "string",
+          "title": "创建时间",
+          "description": "UTC timestamp for authored synthetic data.",
+          "format": "date-time"
+        },
+        "updated_at": {
+          "type": "string",
+          "title": "更新时间",
+          "description": "UTC timestamp; display locale never changes the value.",
+          "format": "date-time"
+        },
+        "as_of": {
+          "type": "string",
+          "title": "资料时点",
+          "description": "UTC currency of this authored record.",
+          "format": "date-time"
+        },
+        "question_ref": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "待确认问题",
+          "description": "Required when bank authority or policy is unknown."
+        },
+        "audit_event_refs": {
+          "type": "array",
+          "title": "审计事件",
+          "description": "References to AuditEvent.",
+          "items": {
+            "type": "string"
+          },
+          "x-reference": "AuditEvent"
+        },
+        "source_key": {
+          "type": "string",
+          "title": "源限定依赖",
+          "description": "SRC-010:DEP-nn; bare DEP keys are ambiguous."
+        },
+        "ia_crosswalk_keys": {
+          "type": "array",
+          "title": "IA对照",
+          "description": "SRC-009 scoped alternatives with explicit semantic mapping.",
+          "items": {
+            "type": "string"
+          }
+        },
+        "from_ref": {
+          "type": "string",
+          "title": "起点",
+          "description": "Reference to Any.",
+          "x-reference": "Any"
+        },
+        "to_ref": {
+          "type": "string",
+          "title": "终点",
+          "description": "Reference to Any.",
+          "x-reference": "Any"
+        },
+        "relation_type": {
+          "type": "string",
+          "title": "关系类型",
+          "description": "Explicit 关系类型 independent of other object states.",
+          "enum": [
+            "requires_input",
+            "waits_for",
+            "triggers_review",
+            "aggregates_conditions"
+          ]
+        },
+        "required_input_revision": {
+          "type": "integer",
+          "title": "所需输入版本",
+          "description": "所需输入版本; increment for material revisions.",
+          "minimum": 1
+        },
+        "status": {
+          "type": "string",
+          "title": "依赖状态",
+          "description": "Explicit 依赖状态 independent of other object states.",
+          "enum": [
+            "pending",
+            "satisfied",
+            "blocked"
+          ]
+        },
+        "wait_field": {
+          "type": "string",
+          "title": "等待字段",
+          "description": "Named input field or judgment."
+        },
+        "resume_event": {
+          "type": "string",
+          "title": "恢复事件",
+          "description": "Event that may release this scoped dependency."
+        },
+        "parallel_rule": {
+          "type": "string",
+          "title": "并行规则",
+          "description": "Why unrelated branches may continue; synthetic proposal."
+        }
+      },
+      "required": [
+        "id",
+        "case_id",
+        "case_scope_id",
+        "revision",
+        "supersedes_ref",
+        "source_refs",
+        "source_status",
+        "simulation_flag",
+        "owner_role",
+        "validation_owner",
+        "authority_status",
+        "sensitivity",
+        "created_at",
+        "updated_at",
+        "as_of",
+        "question_ref",
+        "audit_event_refs",
+        "source_key",
+        "ia_crosswalk_keys",
+        "from_ref",
+        "to_ref",
+        "relation_type",
+        "required_input_revision",
+        "status",
+        "wait_field",
+        "resume_event",
+        "parallel_rule"
+      ]
+    },
+    "ScreeningFinding": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "title": "稳定编号",
+          "description": "Stable synthetic local identifier."
+        },
+        "case_id": {
+          "type": "string",
+          "title": "案件",
+          "description": "Reference to Case.",
+          "x-reference": "Case"
+        },
+        "case_scope_id": {
+          "type": "string",
+          "title": "案件范围",
+          "description": "Reference to Scope.",
+          "x-reference": "Scope"
+        },
+        "revision": {
+          "type": "integer",
+          "title": "版本",
+          "description": "版本; increment for material revisions.",
+          "minimum": 1
+        },
+        "supersedes_ref": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "前版本",
+          "description": "Previous immutable record reference, null for first revision.",
+          "x-reference": "Any"
+        },
+        "source_refs": {
+          "type": "array",
+          "title": "设计依据",
+          "description": "Registered design sources; distinct from synthetic evidence provenance.",
+          "items": {
+            "type": "string"
+          }
+        },
+        "source_status": {
+          "type": "string",
+          "title": "来源状态",
+          "description": "Explicit 来源状态 independent of other object states.",
+          "enum": [
+            "USER-CONFIRMED",
+            "SOURCE-SUPPORTED",
+            "INDUSTRY-REFERENCE",
+            "DESIGN-HYPOTHESIS",
+            "SYNTHETIC",
+            "OPEN",
+            "SUPERSEDED"
+          ]
+        },
+        "simulation_flag": {
+          "type": "boolean",
+          "title": "合成标记",
+          "description": "Always true for Round A business records.",
+          "const": true
+        },
+        "owner_role": {
+          "type": "string",
+          "title": "责任角色",
+          "description": "Synthetic role assignment, not bank delegation."
+        },
+        "validation_owner": {
+          "type": "string",
+          "title": "验证负责人",
+          "description": "Working review owner."
+        },
+        "authority_status": {
+          "type": "string",
+          "title": "权限状态",
+          "description": "Explicit 权限状态 independent of other object states.",
+          "enum": [
+            "demo_configured",
+            "unknown",
+            "not_applicable"
+          ]
+        },
+        "sensitivity": {
+          "type": "string",
+          "title": "敏感等级",
+          "description": "Explicit 敏感等级 independent of other object states.",
+          "enum": [
+            "synthetic-restricted"
+          ]
+        },
+        "created_at": {
+          "type": "string",
+          "title": "创建时间",
+          "description": "UTC timestamp for authored synthetic data.",
+          "format": "date-time"
+        },
+        "updated_at": {
+          "type": "string",
+          "title": "更新时间",
+          "description": "UTC timestamp; display locale never changes the value.",
+          "format": "date-time"
+        },
+        "as_of": {
+          "type": "string",
+          "title": "资料时点",
+          "description": "UTC currency of this authored record.",
+          "format": "date-time"
+        },
+        "question_ref": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "待确认问题",
+          "description": "Required when bank authority or policy is unknown."
+        },
+        "audit_event_refs": {
+          "type": "array",
+          "title": "审计事件",
+          "description": "References to AuditEvent.",
+          "items": {
+            "type": "string"
+          },
+          "x-reference": "AuditEvent"
+        },
+        "subject_id": {
+          "type": "string",
+          "title": "筛查主体",
+          "description": "Reference to Entity.",
+          "x-reference": "Entity"
+        },
+        "run_id": {
+          "type": "string",
+          "title": "筛查运行",
+          "description": "Synthetic run alias, source not a real screening provider."
+        },
+        "run_kind": {
+          "type": "string",
+          "title": "筛查类型",
+          "description": "Explicit 筛查类型 independent of other object states.",
+          "enum": [
+            "preliminary",
+            "comprehensive"
+          ]
+        },
+        "population_revision": {
+          "type": "integer",
+          "title": "群体版本",
+          "description": "群体版本; increment for material revisions.",
+          "minimum": 1
+        },
+        "provider_record_ref": {
+          "type": "string",
+          "title": "提供方记录",
+          "description": "Synthetic comparison record."
+        },
+        "matched_attributes": {
+          "type": "array",
+          "title": "相同属性",
+          "description": "Authored match attributes.",
+          "items": {
+            "type": "string"
+          }
+        },
+        "different_attributes": {
+          "type": "array",
+          "title": "不同属性",
+          "description": "Authored differing attributes.",
+          "items": {
+            "type": "string"
+          }
+        },
+        "unknown_attributes": {
+          "type": "array",
+          "title": "未知属性",
+          "description": "Attributes requiring evidence.",
+          "items": {
+            "type": "string"
+          }
+        },
+        "evidence_use_ids": {
+          "type": "array",
+          "title": "证据用途评估",
+          "description": "References to EvidenceUseAssessment.",
+          "items": {
+            "type": "string"
+          },
+          "x-reference": "EvidenceUseAssessment"
+        },
+        "materiality_status": {
+          "type": "string",
+          "title": "重大性",
+          "description": "Explicit 重大性 independent of other object states.",
+          "enum": [
+            "unknown",
+            "review_required",
+            "assessed_for_demo"
+          ]
+        },
+        "review_status": {
+          "type": "string",
+          "title": "复核状态",
+          "description": "Explicit 复核状态 independent of other object states.",
+          "enum": [
+            "awaiting_evidence",
+            "awaiting_human",
+            "paused",
+            "referred",
+            "resolved"
+          ]
+        },
+        "decision_ref": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "决定",
+          "description": "Null until an authorised demo human records disposition.",
+          "x-reference": "Decision"
+        },
+        "provider_attributes": {
+          "type": "object",
+          "title": "合成提供方属性",
+          "description": "Explicit fictional provider comparison values; no real registry/provider lookup or policy determination.",
+          "additionalProperties": {
+            "type": "string"
+          },
+          "x-required": false
+        }
+      },
+      "required": [
+        "id",
+        "case_id",
+        "case_scope_id",
+        "revision",
+        "supersedes_ref",
+        "source_refs",
+        "source_status",
+        "simulation_flag",
+        "owner_role",
+        "validation_owner",
+        "authority_status",
+        "sensitivity",
+        "created_at",
+        "updated_at",
+        "as_of",
+        "question_ref",
+        "audit_event_refs",
+        "subject_id",
+        "run_id",
+        "run_kind",
+        "population_revision",
+        "provider_record_ref",
+        "matched_attributes",
+        "different_attributes",
+        "unknown_attributes",
+        "evidence_use_ids",
+        "materiality_status",
+        "review_status",
+        "decision_ref"
+      ]
+    },
+    "Decision": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "title": "稳定编号",
+          "description": "Stable synthetic local identifier."
+        },
+        "case_id": {
+          "type": "string",
+          "title": "案件",
+          "description": "Reference to Case.",
+          "x-reference": "Case"
+        },
+        "case_scope_id": {
+          "type": "string",
+          "title": "案件范围",
+          "description": "Reference to Scope.",
+          "x-reference": "Scope"
+        },
+        "revision": {
+          "type": "integer",
+          "title": "版本",
+          "description": "版本; increment for material revisions.",
+          "minimum": 1
+        },
+        "supersedes_ref": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "前版本",
+          "description": "Previous immutable record reference, null for first revision.",
+          "x-reference": "Any"
+        },
+        "source_refs": {
+          "type": "array",
+          "title": "设计依据",
+          "description": "Registered design sources; distinct from synthetic evidence provenance.",
+          "items": {
+            "type": "string"
+          }
+        },
+        "source_status": {
+          "type": "string",
+          "title": "来源状态",
+          "description": "Explicit 来源状态 independent of other object states.",
+          "enum": [
+            "USER-CONFIRMED",
+            "SOURCE-SUPPORTED",
+            "INDUSTRY-REFERENCE",
+            "DESIGN-HYPOTHESIS",
+            "SYNTHETIC",
+            "OPEN",
+            "SUPERSEDED"
+          ]
+        },
+        "simulation_flag": {
+          "type": "boolean",
+          "title": "合成标记",
+          "description": "Always true for Round A business records.",
+          "const": true
+        },
+        "owner_role": {
+          "type": "string",
+          "title": "责任角色",
+          "description": "Synthetic role assignment, not bank delegation."
+        },
+        "validation_owner": {
+          "type": "string",
+          "title": "验证负责人",
+          "description": "Working review owner."
+        },
+        "authority_status": {
+          "type": "string",
+          "title": "权限状态",
+          "description": "Explicit 权限状态 independent of other object states.",
+          "enum": [
+            "demo_configured",
+            "unknown",
+            "not_applicable"
+          ]
+        },
+        "sensitivity": {
+          "type": "string",
+          "title": "敏感等级",
+          "description": "Explicit 敏感等级 independent of other object states.",
+          "enum": [
+            "synthetic-restricted"
+          ]
+        },
+        "created_at": {
+          "type": "string",
+          "title": "创建时间",
+          "description": "UTC timestamp for authored synthetic data.",
+          "format": "date-time"
+        },
+        "updated_at": {
+          "type": "string",
+          "title": "更新时间",
+          "description": "UTC timestamp; display locale never changes the value.",
+          "format": "date-time"
+        },
+        "as_of": {
+          "type": "string",
+          "title": "资料时点",
+          "description": "UTC currency of this authored record.",
+          "format": "date-time"
+        },
+        "question_ref": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "待确认问题",
+          "description": "Required when bank authority or policy is unknown."
+        },
+        "audit_event_refs": {
+          "type": "array",
+          "title": "审计事件",
+          "description": "References to AuditEvent.",
+          "items": {
+            "type": "string"
+          },
+          "x-reference": "AuditEvent"
+        },
+        "decision_type": {
+          "type": "string",
+          "title": "决定类型",
+          "description": "Explicit 决定类型 independent of other object states.",
+          "enum": [
+            "screening_disposition",
+            "evidence_assessment"
+          ]
+        },
+        "outcome": {
+          "type": "string",
+          "title": "决定结果",
+          "description": "Explicit 决定结果 independent of other object states.",
+          "enum": [
+            "not_a_match",
+            "potential_match",
+            "insufficient_evidence",
+            "refer"
+          ]
+        },
+        "authority_ref": {
+          "type": "string",
+          "title": "演示权限",
+          "description": "Reference to Authority.",
+          "x-reference": "Authority"
+        },
+        "bank_authority_ref": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "银行权限",
+          "description": "Never inferred from configured demo action."
+        },
+        "basis_refs": {
+          "type": "array",
+          "title": "决定依据",
+          "description": "Evidence-use refs and explicit authored rule.",
+          "items": {
+            "type": "string"
+          }
+        },
+        "input_revisions": {
+          "type": "object",
+          "title": "输入版本",
+          "description": "Exact input object revisions at decision time.",
+          "additionalProperties": {
+            "type": "integer",
+            "minimum": 1
+          }
+        },
+        "recorded_by": {
+          "type": "string",
+          "title": "决定者",
+          "description": "Synthetic human reviewer."
+        },
+        "recorded_at": {
+          "type": "string",
+          "title": "决定时间",
+          "description": "UTC timestamp.",
+          "format": "date-time"
+        },
+        "currency": {
+          "type": "string",
+          "title": "当前适用性",
+          "description": "Explicit 当前适用性 independent of other object states.",
+          "enum": [
+            "current",
+            "needs_review",
+            "historical"
+          ]
+        },
+        "record_status": {
+          "type": "string",
+          "title": "记录状态",
+          "description": "Explicit 记录状态 independent of other object states.",
+          "enum": [
+            "recorded"
+          ],
+          "x-required": false
+        },
+        "submission_key": {
+          "type": "string",
+          "title": "提交去重键",
+          "description": "Local idempotency key; repeated submission returns the existing decision.",
+          "x-required": false
+        }
+      },
+      "required": [
+        "id",
+        "case_id",
+        "case_scope_id",
+        "revision",
+        "supersedes_ref",
+        "source_refs",
+        "source_status",
+        "simulation_flag",
+        "owner_role",
+        "validation_owner",
+        "authority_status",
+        "sensitivity",
+        "created_at",
+        "updated_at",
+        "as_of",
+        "question_ref",
+        "audit_event_refs",
+        "decision_type",
+        "outcome",
+        "authority_ref",
+        "bank_authority_ref",
+        "basis_refs",
+        "input_revisions",
+        "recorded_by",
+        "recorded_at",
+        "currency"
+      ]
+    },
+    "ClearanceCondition": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "title": "稳定编号",
+          "description": "Stable synthetic local identifier."
+        },
+        "case_id": {
+          "type": "string",
+          "title": "案件",
+          "description": "Reference to Case.",
+          "x-reference": "Case"
+        },
+        "case_scope_id": {
+          "type": "string",
+          "title": "案件范围",
+          "description": "Reference to Scope.",
+          "x-reference": "Scope"
+        },
+        "revision": {
+          "type": "integer",
+          "title": "版本",
+          "description": "版本; increment for material revisions.",
+          "minimum": 1
+        },
+        "supersedes_ref": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "前版本",
+          "description": "Previous immutable record reference, null for first revision.",
+          "x-reference": "Any"
+        },
+        "source_refs": {
+          "type": "array",
+          "title": "设计依据",
+          "description": "Registered design sources; distinct from synthetic evidence provenance.",
+          "items": {
+            "type": "string"
+          }
+        },
+        "source_status": {
+          "type": "string",
+          "title": "来源状态",
+          "description": "Explicit 来源状态 independent of other object states.",
+          "enum": [
+            "USER-CONFIRMED",
+            "SOURCE-SUPPORTED",
+            "INDUSTRY-REFERENCE",
+            "DESIGN-HYPOTHESIS",
+            "SYNTHETIC",
+            "OPEN",
+            "SUPERSEDED"
+          ]
+        },
+        "simulation_flag": {
+          "type": "boolean",
+          "title": "合成标记",
+          "description": "Always true for Round A business records.",
+          "const": true
+        },
+        "owner_role": {
+          "type": "string",
+          "title": "责任角色",
+          "description": "Synthetic role assignment, not bank delegation."
+        },
+        "validation_owner": {
+          "type": "string",
+          "title": "验证负责人",
+          "description": "Working review owner."
+        },
+        "authority_status": {
+          "type": "string",
+          "title": "权限状态",
+          "description": "Explicit 权限状态 independent of other object states.",
+          "enum": [
+            "demo_configured",
+            "unknown",
+            "not_applicable"
+          ]
+        },
+        "sensitivity": {
+          "type": "string",
+          "title": "敏感等级",
+          "description": "Explicit 敏感等级 independent of other object states.",
+          "enum": [
+            "synthetic-restricted"
+          ]
+        },
+        "created_at": {
+          "type": "string",
+          "title": "创建时间",
+          "description": "UTC timestamp for authored synthetic data.",
+          "format": "date-time"
+        },
+        "updated_at": {
+          "type": "string",
+          "title": "更新时间",
+          "description": "UTC timestamp; display locale never changes the value.",
+          "format": "date-time"
+        },
+        "as_of": {
+          "type": "string",
+          "title": "资料时点",
+          "description": "UTC currency of this authored record.",
+          "format": "date-time"
+        },
+        "question_ref": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "待确认问题",
+          "description": "Required when bank authority or policy is unknown."
+        },
+        "audit_event_refs": {
+          "type": "array",
+          "title": "审计事件",
+          "description": "References to AuditEvent.",
+          "items": {
+            "type": "string"
+          },
+          "x-reference": "AuditEvent"
+        },
+        "domain": {
+          "type": "string",
+          "title": "条件领域",
+          "description": "Explicit 条件领域 independent of other object states.",
+          "enum": [
+            "evidence",
+            "screening",
+            "legal",
+            "credit",
+            "qa",
+            "conflicts",
+            "edd"
+          ]
+        },
+        "applicability": {
+          "type": "string",
+          "title": "适用性",
+          "description": "Explicit 适用性 independent of other object states.",
+          "enum": [
+            "required",
+            "not_required",
+            "unknown"
+          ]
+        },
+        "status": {
+          "type": "string",
+          "title": "条件状态",
+          "description": "Explicit 条件状态 independent of other object states.",
+          "enum": [
+            "unknown",
+            "review_required",
+            "satisfied",
+            "awaiting_execution",
+            "condition_pending",
+            "pending"
+          ]
+        },
+        "status_reason": {
+          "type": "string",
+          "title": "阻塞原因",
+          "description": "Named reason; task completion cannot overwrite unrelated conditions."
+        },
+        "scope_revision": {
+          "type": "integer",
+          "title": "范围版本",
+          "description": "范围版本; increment for material revisions.",
+          "minimum": 1
+        },
+        "basis_refs": {
+          "type": "array",
+          "title": "条件依据",
+          "description": "References to Any.",
+          "items": {
+            "type": "string"
+          },
+          "x-reference": "Any"
+        },
+        "next_action": {
+          "type": "string",
+          "title": "下一动作",
+          "description": "Action required from the responsible role."
+        }
+      },
+      "required": [
+        "id",
+        "case_id",
+        "case_scope_id",
+        "revision",
+        "supersedes_ref",
+        "source_refs",
+        "source_status",
+        "simulation_flag",
+        "owner_role",
+        "validation_owner",
+        "authority_status",
+        "sensitivity",
+        "created_at",
+        "updated_at",
+        "as_of",
+        "question_ref",
+        "audit_event_refs",
+        "domain",
+        "applicability",
+        "status",
+        "status_reason",
+        "scope_revision",
+        "basis_refs",
+        "next_action"
+      ]
+    },
+    "ReadinessSnapshot": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "title": "稳定编号",
+          "description": "Stable synthetic local identifier."
+        },
+        "case_id": {
+          "type": "string",
+          "title": "案件",
+          "description": "Reference to Case.",
+          "x-reference": "Case"
+        },
+        "case_scope_id": {
+          "type": "string",
+          "title": "案件范围",
+          "description": "Reference to Scope.",
+          "x-reference": "Scope"
+        },
+        "revision": {
+          "type": "integer",
+          "title": "版本",
+          "description": "版本; increment for material revisions.",
+          "minimum": 1
+        },
+        "supersedes_ref": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "前版本",
+          "description": "Previous immutable record reference, null for first revision.",
+          "x-reference": "Any"
+        },
+        "source_refs": {
+          "type": "array",
+          "title": "设计依据",
+          "description": "Registered design sources; distinct from synthetic evidence provenance.",
+          "items": {
+            "type": "string"
+          }
+        },
+        "source_status": {
+          "type": "string",
+          "title": "来源状态",
+          "description": "Explicit 来源状态 independent of other object states.",
+          "enum": [
+            "USER-CONFIRMED",
+            "SOURCE-SUPPORTED",
+            "INDUSTRY-REFERENCE",
+            "DESIGN-HYPOTHESIS",
+            "SYNTHETIC",
+            "OPEN",
+            "SUPERSEDED"
+          ]
+        },
+        "simulation_flag": {
+          "type": "boolean",
+          "title": "合成标记",
+          "description": "Always true for Round A business records.",
+          "const": true
+        },
+        "owner_role": {
+          "type": "string",
+          "title": "责任角色",
+          "description": "Synthetic role assignment, not bank delegation."
+        },
+        "validation_owner": {
+          "type": "string",
+          "title": "验证负责人",
+          "description": "Working review owner."
+        },
+        "authority_status": {
+          "type": "string",
+          "title": "权限状态",
+          "description": "Explicit 权限状态 independent of other object states.",
+          "enum": [
+            "demo_configured",
+            "unknown",
+            "not_applicable"
+          ]
+        },
+        "sensitivity": {
+          "type": "string",
+          "title": "敏感等级",
+          "description": "Explicit 敏感等级 independent of other object states.",
+          "enum": [
+            "synthetic-restricted"
+          ]
+        },
+        "created_at": {
+          "type": "string",
+          "title": "创建时间",
+          "description": "UTC timestamp for authored synthetic data.",
+          "format": "date-time"
+        },
+        "updated_at": {
+          "type": "string",
+          "title": "更新时间",
+          "description": "UTC timestamp; display locale never changes the value.",
+          "format": "date-time"
+        },
+        "as_of": {
+          "type": "string",
+          "title": "资料时点",
+          "description": "UTC currency of this authored record.",
+          "format": "date-time"
+        },
+        "question_ref": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "待确认问题",
+          "description": "Required when bank authority or policy is unknown."
+        },
+        "audit_event_refs": {
+          "type": "array",
+          "title": "审计事件",
+          "description": "References to AuditEvent.",
+          "items": {
+            "type": "string"
+          },
+          "x-reference": "AuditEvent"
+        },
+        "scope_revision": {
+          "type": "integer",
+          "title": "范围版本",
+          "description": "范围版本; increment for material revisions.",
+          "minimum": 1
+        },
+        "condition_revisions": {
+          "type": "object",
+          "title": "条件版本",
+          "description": "Version map; immutable snapshot basis.",
+          "additionalProperties": {
+            "type": "integer",
+            "minimum": 1
+          }
+        },
+        "result": {
+          "type": "string",
+          "title": "就绪结果",
+          "description": "Explicit 就绪结果 independent of other object states.",
+          "enum": [
+            "not_ready",
+            "candidate_ready"
+          ]
+        },
+        "blocking_condition_ids": {
+          "type": "array",
+          "title": "阻塞条件",
+          "description": "References to ClearanceCondition.",
+          "items": {
+            "type": "string"
+          },
+          "x-reference": "ClearanceCondition"
+        },
+        "unknown_condition_ids": {
+          "type": "array",
+          "title": "未知条件",
+          "description": "References to ClearanceCondition.",
+          "items": {
+            "type": "string"
+          },
+          "x-reference": "ClearanceCondition"
+        },
+        "evaluated_at": {
+          "type": "string",
+          "title": "计算时间",
+          "description": "UTC snapshot timestamp.",
+          "format": "date-time"
+        },
+        "basis_event_refs": {
+          "type": "array",
+          "title": "计算事件",
+          "description": "References to AuditEvent.",
+          "items": {
+            "type": "string"
+          },
+          "x-reference": "AuditEvent"
+        }
+      },
+      "required": [
+        "id",
+        "case_id",
+        "case_scope_id",
+        "revision",
+        "supersedes_ref",
+        "source_refs",
+        "source_status",
+        "simulation_flag",
+        "owner_role",
+        "validation_owner",
+        "authority_status",
+        "sensitivity",
+        "created_at",
+        "updated_at",
+        "as_of",
+        "question_ref",
+        "audit_event_refs",
+        "scope_revision",
+        "condition_revisions",
+        "result",
+        "blocking_condition_ids",
+        "unknown_condition_ids",
+        "evaluated_at",
+        "basis_event_refs"
+      ]
+    },
+    "AuditEvent": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "title": "稳定编号",
+          "description": "Stable synthetic local identifier."
+        },
+        "case_id": {
+          "type": "string",
+          "title": "案件",
+          "description": "Reference to Case.",
+          "x-reference": "Case"
+        },
+        "case_scope_id": {
+          "type": "string",
+          "title": "案件范围",
+          "description": "Reference to Scope.",
+          "x-reference": "Scope"
+        },
+        "revision": {
+          "type": "integer",
+          "title": "版本",
+          "description": "版本; increment for material revisions.",
+          "minimum": 1
+        },
+        "supersedes_ref": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "前版本",
+          "description": "Previous immutable record reference, null for first revision.",
+          "x-reference": "Any"
+        },
+        "source_refs": {
+          "type": "array",
+          "title": "设计依据",
+          "description": "Registered design sources; distinct from synthetic evidence provenance.",
+          "items": {
+            "type": "string"
+          }
+        },
+        "source_status": {
+          "type": "string",
+          "title": "来源状态",
+          "description": "Explicit 来源状态 independent of other object states.",
+          "enum": [
+            "USER-CONFIRMED",
+            "SOURCE-SUPPORTED",
+            "INDUSTRY-REFERENCE",
+            "DESIGN-HYPOTHESIS",
+            "SYNTHETIC",
+            "OPEN",
+            "SUPERSEDED"
+          ]
+        },
+        "simulation_flag": {
+          "type": "boolean",
+          "title": "合成标记",
+          "description": "Always true for Round A business records.",
+          "const": true
+        },
+        "owner_role": {
+          "type": "string",
+          "title": "责任角色",
+          "description": "Synthetic role assignment, not bank delegation."
+        },
+        "validation_owner": {
+          "type": "string",
+          "title": "验证负责人",
+          "description": "Working review owner."
+        },
+        "authority_status": {
+          "type": "string",
+          "title": "权限状态",
+          "description": "Explicit 权限状态 independent of other object states.",
+          "enum": [
+            "demo_configured",
+            "unknown",
+            "not_applicable"
+          ]
+        },
+        "sensitivity": {
+          "type": "string",
+          "title": "敏感等级",
+          "description": "Explicit 敏感等级 independent of other object states.",
+          "enum": [
+            "synthetic-restricted"
+          ]
+        },
+        "created_at": {
+          "type": "string",
+          "title": "创建时间",
+          "description": "UTC timestamp for authored synthetic data.",
+          "format": "date-time"
+        },
+        "updated_at": {
+          "type": "string",
+          "title": "更新时间",
+          "description": "UTC timestamp; display locale never changes the value.",
+          "format": "date-time"
+        },
+        "as_of": {
+          "type": "string",
+          "title": "资料时点",
+          "description": "UTC currency of this authored record.",
+          "format": "date-time"
+        },
+        "question_ref": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "待确认问题",
+          "description": "Required when bank authority or policy is unknown."
+        },
+        "audit_event_refs": {
+          "type": "array",
+          "title": "审计事件",
+          "description": "References to AuditEvent.",
+          "items": {
+            "type": "string"
+          },
+          "x-reference": "AuditEvent"
+        },
+        "event_type": {
+          "type": "string",
+          "title": "事件类型",
+          "description": "Authored or simulated action; no production immutability claim."
+        },
+        "actor_ref": {
+          "type": "string",
+          "title": "执行者",
+          "description": "Synthetic human/rule/tool identity."
+        },
+        "object_ref": {
+          "type": "string",
+          "title": "目标",
+          "description": "Reference to Any.",
+          "x-reference": "Any"
+        },
+        "from_revision": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "title": "前版本",
+          "description": "Null for record creation.",
+          "minimum": 1
+        },
+        "to_revision": {
+          "type": "integer",
+          "title": "新版本",
+          "description": "新版本; increment for material revisions.",
+          "minimum": 1
+        },
+        "correlation_id": {
+          "type": "string",
+          "title": "关联动作",
+          "description": "Idempotent local action key."
+        },
+        "occurred_at": {
+          "type": "string",
+          "title": "发生时间",
+          "description": "UTC timestamp.",
+          "format": "date-time"
+        },
+        "rationale": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "操作理由",
+          "description": "Synthetic actor explanation, separate from bank authority.",
+          "x-required": false
+        },
+        "input_revisions": {
+          "type": "object",
+          "title": "输入版本",
+          "description": "Exact input record revision map.",
+          "additionalProperties": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "x-required": false
+        },
+        "synthetic": {
+          "type": "boolean",
+          "description": "Batch A AuditEvent.synthetic; SRC-013 Final v1.0 §7; synthetic / reviewed_for_demo only."
+        },
+        "validation_status": {
+          "type": "string",
+          "description": "Batch A AuditEvent.validation_status; SRC-013 Final v1.0 §7; synthetic / reviewed_for_demo only."
+        },
+        "value_status": {
+          "type": "string",
+          "description": "Batch A AuditEvent.value_status; SRC-013 Final v1.0 §7; synthetic / reviewed_for_demo only."
+        },
+        "provenance_refs": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Batch A AuditEvent.provenance_refs; SRC-013 Final v1.0 §7; synthetic / reviewed_for_demo only."
+        },
+        "object_refs": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Batch A AuditEvent.object_refs; SRC-013 Final v1.0 §7; synthetic / reviewed_for_demo only."
+        },
+        "source_revision": {
+          "type": "string",
+          "description": "Batch A AuditEvent.source_revision; SRC-013 Final v1.0 §7; synthetic / reviewed_for_demo only."
+        },
+        "expected_revision": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "description": "Batch A AuditEvent.expected_revision; SRC-013 Final v1.0 §7; synthetic / reviewed_for_demo only."
+        },
+        "causation_ref": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "Batch A AuditEvent.causation_ref; SRC-013 Final v1.0 §7; synthetic / reviewed_for_demo only."
+        },
+        "before_after_refs": {
+          "type": "object",
+          "additionalProperties": true,
+          "description": "Batch A AuditEvent.before_after_refs; SRC-013 Final v1.0 §7; synthetic / reviewed_for_demo only."
+        },
+        "expected_scope_revision": {
+          "type": "integer",
+          "description": "Batch A AuditEvent.expected_scope_revision; SRC-013 Final v1.0 §7; synthetic / reviewed_for_demo only."
+        }
+      },
+      "required": [
+        "id",
+        "case_id",
+        "case_scope_id",
+        "revision",
+        "supersedes_ref",
+        "source_refs",
+        "source_status",
+        "simulation_flag",
+        "owner_role",
+        "validation_owner",
+        "authority_status",
+        "sensitivity",
+        "created_at",
+        "updated_at",
+        "as_of",
+        "question_ref",
+        "audit_event_refs",
+        "event_type",
+        "actor_ref",
+        "object_ref",
+        "from_revision",
+        "to_revision",
+        "correlation_id",
+        "occurred_at"
+      ]
+    },
+    "StoryRoute": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "title": "稳定编号",
+          "description": "Stable synthetic local identifier."
+        },
+        "case_id": {
+          "type": "string",
+          "title": "案件",
+          "description": "Reference to Case.",
+          "x-reference": "Case"
+        },
+        "case_scope_id": {
+          "type": "string",
+          "title": "案件范围",
+          "description": "Reference to Scope.",
+          "x-reference": "Scope"
+        },
+        "revision": {
+          "type": "integer",
+          "title": "版本",
+          "description": "版本; increment for material revisions.",
+          "minimum": 1
+        },
+        "supersedes_ref": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "前版本",
+          "description": "Previous immutable record reference, null for first revision.",
+          "x-reference": "Any"
+        },
+        "source_refs": {
+          "type": "array",
+          "title": "设计依据",
+          "description": "Registered design sources; distinct from synthetic evidence provenance.",
+          "items": {
+            "type": "string"
+          }
+        },
+        "source_status": {
+          "type": "string",
+          "title": "来源状态",
+          "description": "Explicit 来源状态 independent of other object states.",
+          "enum": [
+            "USER-CONFIRMED",
+            "SOURCE-SUPPORTED",
+            "INDUSTRY-REFERENCE",
+            "DESIGN-HYPOTHESIS",
+            "SYNTHETIC",
+            "OPEN",
+            "SUPERSEDED"
+          ]
+        },
+        "simulation_flag": {
+          "type": "boolean",
+          "title": "合成标记",
+          "description": "Always true for Round A business records.",
+          "const": true
+        },
+        "owner_role": {
+          "type": "string",
+          "title": "责任角色",
+          "description": "Synthetic role assignment, not bank delegation."
+        },
+        "validation_owner": {
+          "type": "string",
+          "title": "验证负责人",
+          "description": "Working review owner."
+        },
+        "authority_status": {
+          "type": "string",
+          "title": "权限状态",
+          "description": "Explicit 权限状态 independent of other object states.",
+          "enum": [
+            "demo_configured",
+            "unknown",
+            "not_applicable"
+          ]
+        },
+        "sensitivity": {
+          "type": "string",
+          "title": "敏感等级",
+          "description": "Explicit 敏感等级 independent of other object states.",
+          "enum": [
+            "synthetic-restricted"
+          ]
+        },
+        "created_at": {
+          "type": "string",
+          "title": "创建时间",
+          "description": "UTC timestamp for authored synthetic data.",
+          "format": "date-time"
+        },
+        "updated_at": {
+          "type": "string",
+          "title": "更新时间",
+          "description": "UTC timestamp; display locale never changes the value.",
+          "format": "date-time"
+        },
+        "as_of": {
+          "type": "string",
+          "title": "资料时点",
+          "description": "UTC currency of this authored record.",
+          "format": "date-time"
+        },
+        "question_ref": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "待确认问题",
+          "description": "Required when bank authority or policy is unknown."
+        },
+        "audit_event_refs": {
+          "type": "array",
+          "title": "审计事件",
+          "description": "References to AuditEvent.",
+          "items": {
+            "type": "string"
+          },
+          "x-reference": "AuditEvent"
+        },
+        "case_revision": {
+          "type": "integer",
+          "title": "案件版本",
+          "description": "案件版本; increment for material revisions.",
+          "minimum": 1
+        },
+        "trigger_id": {
+          "type": "string",
+          "title": "路线触发",
+          "description": "Same authored trigger as case."
+        },
+        "scenario_ids": {
+          "type": "array",
+          "title": "路线场景",
+          "description": "Six authored scenes in Round A; no completion implied.",
+          "items": {
+            "type": "string"
+          }
+        },
+        "skeleton_scenario_ids": {
+          "type": "array",
+          "title": "骨架场景",
+          "description": "Remaining SCN aliases reserved, not authored product slices.",
+          "items": {
+            "type": "string"
+          }
+        },
+        "entry_scenario_id": {
+          "type": "string",
+          "title": "入口场景",
+          "description": "SCN-REQUIREMENTS for this slice."
+        },
+        "terminal_scenario_id": {
+          "type": "string",
+          "title": "结束场景",
+          "description": "SCN-READINESS for blocked outcome."
+        },
+        "playback_executes_actions": {
+          "type": "boolean",
+          "title": "播放不执行",
+          "description": "Always false; navigation does not mutate business state.",
+          "const": false
+        }
+      },
+      "required": [
+        "id",
+        "case_id",
+        "case_scope_id",
+        "revision",
+        "supersedes_ref",
+        "source_refs",
+        "source_status",
+        "simulation_flag",
+        "owner_role",
+        "validation_owner",
+        "authority_status",
+        "sensitivity",
+        "created_at",
+        "updated_at",
+        "as_of",
+        "question_ref",
+        "audit_event_refs",
+        "case_revision",
+        "trigger_id",
+        "scenario_ids",
+        "skeleton_scenario_ids",
+        "entry_scenario_id",
+        "terminal_scenario_id",
+        "playback_executes_actions"
+      ]
+    },
+    "NaturalPerson": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "case_id",
+        "revision",
+        "simulation_flag"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Batch A NaturalPerson.id; SRC-013 Final v1.0 §7; synthetic / reviewed_for_demo only."
+        },
+        "case_id": {
+          "type": "string",
+          "description": "Batch A NaturalPerson.case_id; SRC-013 Final v1.0 §7; synthetic / reviewed_for_demo only."
+        },
+        "case_scope_id": {
+          "type": "string",
+          "description": "Batch A NaturalPerson.case_scope_id; SRC-013 Final v1.0 §7; synthetic / reviewed_for_demo only."
+        },
+        "revision": {
+          "type": "integer",
+          "description": "Batch A NaturalPerson.revision; SRC-013 Final v1.0 §7; synthetic / reviewed_for_demo only."
+        },
+        "supersedes_ref": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "Batch A NaturalPerson.supersedes_ref; SRC-013 Final v1.0 §7; synthetic / reviewed_for_demo only."
+        },
+        "source_refs": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Batch A NaturalPerson.source_refs; SRC-013 Final v1.0 §7; synthetic / reviewed_for_demo only."
+        },
+        "source_status": {
+          "type": "string",
+          "description": "Batch A NaturalPerson.source_status; SRC-013 Final v1.0 §7; synthetic / reviewed_for_demo only."
+        },
+        "simulation_flag": {
+          "type": "boolean",
+          "description": "Batch A NaturalPerson.simulation_flag; SRC-013 Final v1.0 §7; synthetic / reviewed_for_demo only."
+        },
+        "synthetic": {
+          "type": "boolean",
+          "description": "Batch A NaturalPerson.synthetic; SRC-013 Final v1.0 §7; synthetic / reviewed_for_demo only."
+        },
+        "validation_status": {
+          "type": "string",
+          "description": "Batch A NaturalPerson.validation_status; SRC-013 Final v1.0 §7; synthetic / reviewed_for_demo only."
+        },
+        "value_status": {
+          "type": "string",
+          "description": "Batch A NaturalPerson.value_status; SRC-013 Final v1.0 §7; synthetic / reviewed_for_demo only."
+        },
+        "provenance_refs": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Batch A NaturalPerson.provenance_refs; SRC-013 Final v1.0 §7; synthetic / reviewed_for_demo only."
+        },
+        "owner_role": {
+          "type": "string",
+          "description": "Batch A NaturalPerson.owner_role; SRC-013 Final v1.0 §7; synthetic / reviewed_for_demo only."
+        },
+        "validation_owner": {
+          "type": "string",
+          "description": "Batch A NaturalPerson.validation_owner; SRC-013 Final v1.0 §7; synthetic / reviewed_for_demo only."
+        },
+        "authority_status": {
+          "type": "string",
+          "description": "Batch A NaturalPerson.authority_status; SRC-013 Final v1.0 §7; synthetic / reviewed_for_demo only."
+        },
+        "sensitivity": {
+          "type": "string",
+          "description": "Batch A NaturalPerson.sensitivity; SRC-013 Final v1.0 §7; synthetic / reviewed_for_demo only."
+        },
+        "created_at": {
+          "type": "string",
+          "description": "Batch A NaturalPerson.created_at; SRC-013 Final v1.0 §7; synthetic / reviewed_for_demo only."
+        },
+        "updated_at": {
+          "type": "string",
+          "description": "Batch A NaturalPerson.updated_at; SRC-013 Final v1.0 §7; synthetic / reviewed_for_demo only."
+        },
+        "as_of": {
+          "type": "string",
+          "description": "Batch A NaturalPerson.as_of; SRC-013 Final v1.0 §7; synthetic / reviewed_for_demo only."
+        },
+        "question_ref": {
+          "type": "string",
+          "description": "Batch A NaturalPerson.question_ref; SRC-013 Final v1.0 §7; synthetic / reviewed_for_demo only."
+        },
+        "audit_event_refs": {
+          "type": "array",
+          "items": {},
+          "description": "Batch A NaturalPerson.audit_event_refs; SRC-013 Final v1.0 §7; synthetic / reviewed_for_demo only."
+        },
+        "display_name": {
+          "type": "string",
+          "description": "Batch A NaturalPerson.display_name; SRC-013 Final v1.0 §7; synthetic / reviewed_for_demo only."
+        },
+        "employer_entity_id": {
+          "type": "string",
+          "description": "Batch A NaturalPerson.employer_entity_id; SRC-013 Final v1.0 §7; synthetic / reviewed_for_demo only."
+        },
+        "business_role_title": {
+          "type": "string",
+          "description": "Batch A NaturalPerson.business_role_title; SRC-013 Final v1.0 §7; synthetic / reviewed_for_demo only."
+        }
+      }
+    },
+    "PartyRelationship": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "case_id",
+        "revision",
+        "simulation_flag"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Batch A PartyRelationship.id; SRC-013 Final v1.0 §7; synthetic / reviewed_for_demo only."
+        },
+        "case_id": {
+          "type": "string",
+          "description": "Batch A PartyRelationship.case_id; SRC-013 Final v1.0 §7; synthetic / reviewed_for_demo only."
+        },
+        "case_scope_id": {
+          "type": "string",
+          "description": "Batch A PartyRelationship.case_scope_id; SRC-013 Final v1.0 §7; synthetic / reviewed_for_demo only."
+        },
+        "revision": {
+          "type": "integer",
+          "description": "Batch A PartyRelationship.revision; SRC-013 Final v1.0 §7; synthetic / reviewed_for_demo only."
+        },
+        "supersedes_ref": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "Batch A PartyRelationship.supersedes_ref; SRC-013 Final v1.0 §7; synthetic / reviewed_for_demo only."
+        },
+        "source_refs": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Batch A PartyRelationship.source_refs; SRC-013 Final v1.0 §7; synthetic / reviewed_for_demo only."
+        },
+        "source_status": {
+          "type": "string",
+          "description": "Batch A PartyRelationship.source_status; SRC-013 Final v1.0 §7; synthetic / reviewed_for_demo only."
+        },
+        "simulation_flag": {
+          "type": "boolean",
+          "description": "Batch A PartyRelationship.simulation_flag; SRC-013 Final v1.0 §7; synthetic / reviewed_for_demo only."
+        },
+        "synthetic": {
+          "type": "boolean",
+          "description": "Batch A PartyRelationship.synthetic; SRC-013 Final v1.0 §7; synthetic / reviewed_for_demo only."
+        },
+        "validation_status": {
+          "type": "string",
+          "description": "Batch A PartyRelationship.validation_status; SRC-013 Final v1.0 §7; synthetic / reviewed_for_demo only."
+        },
+        "value_status": {
+          "type": "string",
+          "description": "Batch A PartyRelationship.value_status; SRC-013 Final v1.0 §7; synthetic / reviewed_for_demo only."
+        },
+        "provenance_refs": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Batch A PartyRelationship.provenance_refs; SRC-013 Final v1.0 §7; synthetic / reviewed_for_demo only."
+        },
+        "owner_role": {
+          "type": "string",
+          "description": "Batch A PartyRelationship.owner_role; SRC-013 Final v1.0 §7; synthetic / reviewed_for_demo only."
+        },
+        "validation_owner": {
+          "type": "string",
+          "description": "Batch A PartyRelationship.validation_owner; SRC-013 Final v1.0 §7; synthetic / reviewed_for_demo only."
+        },
+        "authority_status": {
+          "type": "string",
+          "description": "Batch A PartyRelationship.authority_status; SRC-013 Final v1.0 §7; synthetic / reviewed_for_demo only."
+        },
+        "sensitivity": {
+          "type": "string",
+          "description": "Batch A PartyRelationship.sensitivity; SRC-013 Final v1.0 §7; synthetic / reviewed_for_demo only."
+        },
+        "created_at": {
+          "type": "string",
+          "description": "Batch A PartyRelationship.created_at; SRC-013 Final v1.0 §7; synthetic / reviewed_for_demo only."
+        },
+        "updated_at": {
+          "type": "string",
+          "description": "Batch A PartyRelationship.updated_at; SRC-013 Final v1.0 §7; synthetic / reviewed_for_demo only."
+        },
+        "as_of": {
+          "type": "string",
+          "description": "Batch A PartyRelationship.as_of; SRC-013 Final v1.0 §7; synthetic / reviewed_for_demo only."
+        },
+        "question_ref": {
+          "type": "string",
+          "description": "Batch A PartyRelationship.question_ref; SRC-013 Final v1.0 §7; synthetic / reviewed_for_demo only."
+        },
+        "audit_event_refs": {
+          "type": "array",
+          "items": {},
+          "description": "Batch A PartyRelationship.audit_event_refs; SRC-013 Final v1.0 §7; synthetic / reviewed_for_demo only."
+        },
+        "from_entity_id": {
+          "type": "string",
+          "description": "Batch A PartyRelationship.from_entity_id; SRC-013 Final v1.0 §7; synthetic / reviewed_for_demo only."
+        },
+        "to_entity_id": {
+          "type": "string",
+          "description": "Batch A PartyRelationship.to_entity_id; SRC-013 Final v1.0 §7; synthetic / reviewed_for_demo only."
+        },
+        "relationship_type": {
+          "type": "string",
+          "description": "Batch A PartyRelationship.relationship_type; SRC-013 Final v1.0 §7; synthetic / reviewed_for_demo only."
+        },
+        "status": {
+          "type": "string",
+          "description": "Batch A PartyRelationship.status; SRC-013 Final v1.0 §7; synthetic / reviewed_for_demo only."
+        },
+        "basis_refs": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Batch A PartyRelationship.basis_refs; SRC-013 Final v1.0 §7; synthetic / reviewed_for_demo only."
+        },
+        "effective_from": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "Batch A PartyRelationship.effective_from; SRC-013 Final v1.0 §7; synthetic / reviewed_for_demo only."
+        },
+        "effective_to": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "Batch A PartyRelationship.effective_to; SRC-013 Final v1.0 §7; synthetic / reviewed_for_demo only."
+        }
+      }
+    },
+    "InformationRequest": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "case_id",
+        "revision",
+        "simulation_flag"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Batch A InformationRequest.id; SRC-013 Final v1.0 §7; synthetic / reviewed_for_demo only."
+        },
+        "case_id": {
+          "type": "string",
+          "description": "Batch A InformationRequest.case_id; SRC-013 Final v1.0 §7; synthetic / reviewed_for_demo only."
+        },
+        "case_scope_id": {
+          "type": "string",
+          "description": "Batch A InformationRequest.case_scope_id; SRC-013 Final v1.0 §7; synthetic / reviewed_for_demo only."
+        },
+        "revision": {
+          "type": "integer",
+          "description": "Batch A InformationRequest.revision; SRC-013 Final v1.0 §7; synthetic / reviewed_for_demo only."
+        },
+        "supersedes_ref": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "Batch A InformationRequest.supersedes_ref; SRC-013 Final v1.0 §7; synthetic / reviewed_for_demo only."
+        },
+        "source_refs": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Batch A InformationRequest.source_refs; SRC-013 Final v1.0 §7; synthetic / reviewed_for_demo only."
+        },
+        "source_status": {
+          "type": "string",
+          "description": "Batch A InformationRequest.source_status; SRC-013 Final v1.0 §7; synthetic / reviewed_for_demo only."
+        },
+        "simulation_flag": {
+          "type": "boolean",
+          "description": "Batch A InformationRequest.simulation_flag; SRC-013 Final v1.0 §7; synthetic / reviewed_for_demo only."
+        },
+        "synthetic": {
+          "type": "boolean",
+          "description": "Batch A InformationRequest.synthetic; SRC-013 Final v1.0 §7; synthetic / reviewed_for_demo only."
+        },
+        "validation_status": {
+          "type": "string",
+          "description": "Batch A InformationRequest.validation_status; SRC-013 Final v1.0 §7; synthetic / reviewed_for_demo only."
+        },
+        "value_status": {
+          "type": "string",
+          "description": "Batch A InformationRequest.value_status; SRC-013 Final v1.0 §7; synthetic / reviewed_for_demo only."
+        },
+        "provenance_refs": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Batch A InformationRequest.provenance_refs; SRC-013 Final v1.0 §7; synthetic / reviewed_for_demo only."
+        },
+        "owner_role": {
+          "type": "string",
+          "description": "Batch A InformationRequest.owner_role; SRC-013 Final v1.0 §7; synthetic / reviewed_for_demo only."
+        },
+        "validation_owner": {
+          "type": "string",
+          "description": "Batch A InformationRequest.validation_owner; SRC-013 Final v1.0 §7; synthetic / reviewed_for_demo only."
+        },
+        "authority_status": {
+          "type": "string",
+          "description": "Batch A InformationRequest.authority_status; SRC-013 Final v1.0 §7; synthetic / reviewed_for_demo only."
+        },
+        "sensitivity": {
+          "type": "string",
+          "description": "Batch A InformationRequest.sensitivity; SRC-013 Final v1.0 §7; synthetic / reviewed_for_demo only."
+        },
+        "created_at": {
+          "type": "string",
+          "description": "Batch A InformationRequest.created_at; SRC-013 Final v1.0 §7; synthetic / reviewed_for_demo only."
+        },
+        "updated_at": {
+          "type": "string",
+          "description": "Batch A InformationRequest.updated_at; SRC-013 Final v1.0 §7; synthetic / reviewed_for_demo only."
+        },
+        "as_of": {
+          "type": "string",
+          "description": "Batch A InformationRequest.as_of; SRC-013 Final v1.0 §7; synthetic / reviewed_for_demo only."
+        },
+        "question_ref": {
+          "type": "string",
+          "description": "Batch A InformationRequest.question_ref; SRC-013 Final v1.0 §7; synthetic / reviewed_for_demo only."
+        },
+        "audit_event_refs": {
+          "type": "array",
+          "items": {},
+          "description": "Batch A InformationRequest.audit_event_refs; SRC-013 Final v1.0 §7; synthetic / reviewed_for_demo only."
+        },
+        "task_ref": {
+          "type": "string",
+          "description": "Batch A InformationRequest.task_ref; SRC-013 Final v1.0 §7; synthetic / reviewed_for_demo only."
+        },
+        "principal_entity_id": {
+          "type": "string",
+          "description": "Batch A InformationRequest.principal_entity_id; SRC-013 Final v1.0 §7; synthetic / reviewed_for_demo only."
+        },
+        "purpose_code": {
+          "type": "string",
+          "description": "Batch A InformationRequest.purpose_code; SRC-013 Final v1.0 §7; synthetic / reviewed_for_demo only."
+        },
+        "gap_key": {
+          "type": "string",
+          "description": "Batch A InformationRequest.gap_key; SRC-013 Final v1.0 §7; synthetic / reviewed_for_demo only."
+        },
+        "status": {
+          "type": "string",
+          "description": "Batch A InformationRequest.status; SRC-013 Final v1.0 §7; synthetic / reviewed_for_demo only."
+        },
+        "recipient_ref": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "Batch A InformationRequest.recipient_ref; SRC-013 Final v1.0 §7; synthetic / reviewed_for_demo only."
+        },
+        "disclosure_permission_ref": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "Batch A InformationRequest.disclosure_permission_ref; SRC-013 Final v1.0 §7; synthetic / reviewed_for_demo only."
+        },
+        "send_permission_ref": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "Batch A InformationRequest.send_permission_ref; SRC-013 Final v1.0 §7; synthetic / reviewed_for_demo only."
+        },
+        "sent_at": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "Batch A InformationRequest.sent_at; SRC-013 Final v1.0 §7; synthetic / reviewed_for_demo only."
+        },
+        "reason": {
+          "type": "string",
+          "description": "Batch A InformationRequest.reason; SRC-013 Final v1.0 §7; synthetic / reviewed_for_demo only."
+        }
+      }
+    }
+  }
+}

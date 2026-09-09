@@ -1,0 +1,123 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "A prepared story · not an execution log",
+    "locale": "en",
+    "animation": "none",
+    "quality_profile": "showcase",
+    "viewBox": [
+      1080,
+      640
+    ],
+    "legend": {
+      "mode": "hidden"
+    }
+  },
+  "components": [
+    {
+      "id": "OM-F1",
+      "type": "frontend",
+      "label": "1 · Same finding and versions",
+      "sublabel": "Person T · original subject and query",
+      "pos": [
+        60,
+        95
+      ],
+      "size": [
+        355,
+        96
+      ]
+    },
+    {
+      "id": "OM-F2",
+      "type": "frontend",
+      "label": "2 · Compare, preserve unknowns",
+      "sublabel": "Authored Skill sample · no identity decision",
+      "pos": [
+        665,
+        95
+      ],
+      "size": [
+        355,
+        96
+      ]
+    },
+    {
+      "id": "OM-F3",
+      "type": "frontend",
+      "label": "3 · Evidence gap — pause",
+      "sublabel": "Narration stops · no business hold created",
+      "pos": [
+        60,
+        275
+      ],
+      "size": [
+        355,
+        96
+      ]
+    },
+    {
+      "id": "OM-F4",
+      "type": "frontend",
+      "label": "4 · Human decision pack — pause",
+      "sublabel": "Next is not approval · permission still matters",
+      "pos": [
+        665,
+        275
+      ],
+      "size": [
+        355,
+        96
+      ]
+    },
+    {
+      "id": "OM-F5",
+      "type": "frontend",
+      "label": "5 · Explicit later-example preview",
+      "sublabel": "Authored continuation · not your decision",
+      "pos": [
+        60,
+        455
+      ],
+      "size": [
+        355,
+        96
+      ]
+    },
+    {
+      "id": "OM-F6",
+      "type": "frontend",
+      "label": "6 · Local outcome, open conditions",
+      "sublabel": "Ownership, coverage and Legal remain open",
+      "pos": [
+        665,
+        455
+      ],
+      "size": [
+        355,
+        96
+      ]
+    }
+  ],
+  "connections": [
+    {
+      "id": "relation-1",
+      "from": "OM-F1",
+      "to": "OM-F2",
+      "label": "read context"
+    },
+    {
+      "id": "relation-2",
+      "from": "OM-F3",
+      "to": "OM-F4",
+      "label": "review context"
+    },
+    {
+      "id": "relation-3",
+      "from": "OM-F5",
+      "to": "OM-F6",
+      "label": "authored only"
+    }
+  ]
+}

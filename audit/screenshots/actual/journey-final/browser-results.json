@@ -1,0 +1,342 @@
+{
+  "at": "2026-09-07T19:06:14.125Z",
+  "browser": "152.0.7977.76",
+  "command": "node audit/tests/journey-final.mjs",
+  "results": [
+    {
+      "ids": [
+        "RT-C27",
+        "RT-C33"
+      ],
+      "name": "C scene URL and static explanation do not create business records",
+      "steps": "Open Population deep link; inspect central scene and case",
+      "status": "passed",
+      "case_before": {
+        "revision": 1,
+        "sha256": "6ba945b1589e5874ae7742e6fca762e786c6b8db04a7a6d026cb1ce575ad1f05"
+      },
+      "case_after": {
+        "revision": 1,
+        "sha256": "6ba945b1589e5874ae7742e6fca762e786c6b8db04a7a6d026cb1ce575ad1f05"
+      },
+      "screenshot": "population.scene.en-AU.png"
+    },
+    {
+      "ids": [
+        "RT-C01",
+        "RT-C03",
+        "RT-C04",
+        "RT-C37",
+        "RT-C38",
+        "RT-C47",
+        "RT-C66"
+      ],
+      "name": "Explicit C fixture entry preserves B and gates preliminary versus comprehensive",
+      "steps": "Explicit archive/partial fixture; inspect population and disabled actions; compare P04 guard",
+      "status": "passed",
+      "case_before": {
+        "revision": 17,
+        "sha256": "4bc899e5c2fdd9e27d1ef2142278243bbfcdd017c5b3eefe3f7ab67ab623351b"
+      },
+      "case_after": {
+        "revision": 17,
+        "sha256": "4bc899e5c2fdd9e27d1ef2142278243bbfcdd017c5b3eefe3f7ab67ab623351b"
+      }
+    },
+    {
+      "ids": [
+        "RT-C07",
+        "RT-C08",
+        "RT-C09",
+        "RT-C34"
+      ],
+      "name": "Person T result retains uncertainty and scoped input identity",
+      "steps": "Prepare/query/receive explicit synthetic result; open Review",
+      "status": "passed",
+      "case_before": {
+        "revision": 20,
+        "sha256": "ab87844112e9209f365d686607effd9b712fd1adcda9670988a668c5f9880ac0"
+      },
+      "case_after": {
+        "revision": 20,
+        "sha256": "ab87844112e9209f365d686607effd9b712fd1adcda9670988a668c5f9880ac0"
+      },
+      "screenshot": "review.result.en-AU.png"
+    },
+    {
+      "ids": [],
+      "name": "Review draft is saved by a real synthetic action",
+      "steps": "Save review draft; inspect recorded draft and no disposition",
+      "status": "passed",
+      "case_before": {
+        "revision": 21,
+        "sha256": "b8ba6b64fdf77685302be282a38b96498b2d9f36a9d2fc3784804985a1209fc5"
+      },
+      "case_after": {
+        "revision": 21,
+        "sha256": "b8ba6b64fdf77685302be282a38b96498b2d9f36a9d2fc3784804985a1209fc5"
+      },
+      "screenshot": "review.saved.en-AU.png"
+    },
+    {
+      "ids": [
+        "RT-C12",
+        "RT-C67"
+      ],
+      "name": "New identity collection uses separate B contract without expanding old items/grants",
+      "steps": "Create gap then open its request; compare original B records",
+      "status": "passed",
+      "case_before": {
+        "revision": 22,
+        "sha256": "406d12d804d639c535a3f44a06644c179dbf6cc38e441eac4b45ef2be7daaa5b"
+      },
+      "case_after": {
+        "revision": 22,
+        "sha256": "406d12d804d639c535a3f44a06644c179dbf6cc38e441eac4b45ef2be7daaa5b"
+      }
+    },
+    {
+      "ids": [
+        "RT-C13",
+        "RT-C58"
+      ],
+      "name": "Identity client DOM contains only its granted task and no internal provider details",
+      "steps": "Authenticate synthetic Person T against newly scoped grant",
+      "status": "passed",
+      "case_before": {
+        "revision": 26,
+        "sha256": "7c9611d2637af7b93c73335b9762b2f428fe56e78306084aa53561634ac5fd54"
+      },
+      "case_after": {
+        "revision": 26,
+        "sha256": "7c9611d2637af7b93c73335b9762b2f428fe56e78306084aa53561634ac5fd54"
+      },
+      "screenshot": "identity.client.en-AU.png"
+    },
+    {
+      "ids": [
+        "RT-C10",
+        "RT-C11"
+      ],
+      "name": "Receipt allocates EV-ID-C01 but does not imply usable or sufficient identity",
+      "steps": "Client submits real synthetic response; inspect resulting artifact",
+      "status": "passed",
+      "case_before": {
+        "revision": 27,
+        "sha256": "49990bfe007fba8390c680fa0bae6a839fdd6fd9e3bf4692431b8caec96a7bb7"
+      },
+      "case_after": {
+        "revision": 27,
+        "sha256": "49990bfe007fba8390c680fa0bae6a839fdd6fd9e3bf4692431b8caec96a7bb7"
+      },
+      "screenshot": "identity.received.en-AU.png"
+    },
+    {
+      "ids": [
+        "RT-C10",
+        "RT-C11",
+        "RT-C36"
+      ],
+      "name": "Released identity use remains insufficient and whole case not ready",
+      "steps": "Release/link via B; assess identity insufficient through C",
+      "status": "passed",
+      "case_before": {
+        "revision": 30,
+        "sha256": "4c60f718341e7e5ea3f9fcdd9aeeb32ba41d31c2f22d912085aeaa04bdc331f2"
+      },
+      "case_after": {
+        "revision": 30,
+        "sha256": "4c60f718341e7e5ea3f9fcdd9aeeb32ba41d31c2f22d912085aeaa04bdc331f2"
+      },
+      "screenshot": "identity.assessed.en-AU.png"
+    },
+    {
+      "ids": [
+        "RT-C14",
+        "RT-C15",
+        "RT-C17",
+        "RT-C36",
+        "RT-C66",
+        "RT-C68"
+      ],
+      "name": "Double-click records one authorised unresolved decision and does not clear the case",
+      "steps": "Select configured synthetic Financial Crime actor; double-click Record unresolved",
+      "status": "passed",
+      "case_before": {
+        "revision": 30,
+        "sha256": "4c60f718341e7e5ea3f9fcdd9aeeb32ba41d31c2f22d912085aeaa04bdc331f2"
+      },
+      "case_after": {
+        "revision": 31,
+        "sha256": "544bf27a9827d5bac920b9e50f9c487c828cf945930239b521a02e5c0b732358"
+      },
+      "screenshot": "review.unresolved.en-AU.png"
+    },
+    {
+      "ids": [
+        "RT-C23",
+        "RT-C24",
+        "RT-C41",
+        "RT-C42",
+        "RT-C44",
+        "RT-C45"
+      ],
+      "name": "Referral retains Unassigned ownership and does not authorise original Ops role",
+      "steps": "Refer unresolved finding, visit Evidence and return to same Review",
+      "status": "passed",
+      "case_before": {
+        "revision": 32,
+        "sha256": "39261ee36d07e3c3601d59a80325073f4e4884b64f4f0dc08a598f6739f5a54a"
+      },
+      "case_after": {
+        "revision": 32,
+        "sha256": "39261ee36d07e3c3601d59a80325073f4e4884b64f4f0dc08a598f6739f5a54a"
+      },
+      "screenshot": "review.referred.en-AU.png"
+    },
+    {
+      "ids": [
+        "RT-C28",
+        "RT-C30",
+        "RT-C64"
+      ],
+      "name": "Current origin and latest locale survive saved Target actions",
+      "steps": "Switch locale to Chinese then Back to Scenario",
+      "status": "passed",
+      "case_before": {
+        "revision": 32,
+        "sha256": "39261ee36d07e3c3601d59a80325073f4e4884b64f4f0dc08a598f6739f5a54a"
+      },
+      "case_after": {
+        "revision": 32,
+        "sha256": "39261ee36d07e3c3601d59a80325073f4e4884b64f4f0dc08a598f6739f5a54a"
+      },
+      "screenshot": "population.return.zh-CN.png"
+    },
+    {
+      "ids": [
+        "RT-C49",
+        "RT-C50",
+        "RT-C59",
+        "RT-C60"
+      ],
+      "name": "Node R uses central container and returns to same focus without writes",
+      "steps": "Focus P03; open R; switch language; return to decision",
+      "status": "passed",
+      "case_before": {
+        "revision": 32,
+        "sha256": "39261ee36d07e3c3601d59a80325073f4e4884b64f4f0dc08a598f6739f5a54a"
+      },
+      "case_after": {
+        "revision": 32,
+        "sha256": "39261ee36d07e3c3601d59a80325073f4e4884b64f4f0dc08a598f6739f5a54a"
+      },
+      "screenshot": "references.return.en-US.png"
+    },
+    {
+      "ids": [
+        "RT-C27",
+        "RT-C65"
+      ],
+      "name": "Story navigation and collapsed branches cannot write case state",
+      "steps": "Continue story to last authored scene; close each; compare full case",
+      "status": "passed",
+      "case_before": {
+        "revision": 32,
+        "sha256": "39261ee36d07e3c3601d59a80325073f4e4884b64f4f0dc08a598f6739f5a54a"
+      },
+      "case_after": {
+        "revision": 32,
+        "sha256": "39261ee36d07e3c3601d59a80325073f4e4884b64f4f0dc08a598f6739f5a54a"
+      }
+    },
+    {
+      "ids": [
+        "RT-C51"
+      ],
+      "name": "Global References stays inside Studio and preserves origin",
+      "steps": "Open all 48 reference records, filter and restore full library, then close",
+      "status": "passed",
+      "case_before": {
+        "revision": 32,
+        "sha256": "39261ee36d07e3c3601d59a80325073f4e4884b64f4f0dc08a598f6739f5a54a"
+      },
+      "case_after": {
+        "revision": 32,
+        "sha256": "39261ee36d07e3c3601d59a80325073f4e4884b64f4f0dc08a598f6739f5a54a"
+      }
+    },
+    {
+      "ids": [
+        "RT-C29",
+        "RT-C61"
+      ],
+      "name": "Failed save on return retains form and error; read-only reference preserves draft",
+      "steps": "Type invalid empty rationale draft then try Save on exit; stay, open/close reference",
+      "status": "passed",
+      "case_before": {
+        "revision": 32,
+        "sha256": "39261ee36d07e3c3601d59a80325073f4e4884b64f4f0dc08a598f6739f5a54a"
+      },
+      "case_after": {
+        "revision": 32,
+        "sha256": "39261ee36d07e3c3601d59a80325073f4e4884b64f4f0dc08a598f6739f5a54a"
+      }
+    },
+    {
+      "ids": [
+        "RT-C13",
+        "RT-C58",
+        "RT-C63"
+      ],
+      "name": "ROLE-RM DOM and print are role-projected",
+      "steps": "Select restricted role, inspect DOM and print preview",
+      "status": "passed",
+      "case_before": {
+        "revision": 32,
+        "sha256": "39261ee36d07e3c3601d59a80325073f4e4884b64f4f0dc08a598f6739f5a54a"
+      },
+      "case_after": {
+        "revision": 32,
+        "sha256": "39261ee36d07e3c3601d59a80325073f4e4884b64f4f0dc08a598f6739f5a54a"
+      },
+      "screenshot": "safe.ROLE-RM.print.en-US.png"
+    },
+    {
+      "ids": [
+        "RT-C13",
+        "RT-C58",
+        "RT-C63"
+      ],
+      "name": "ROLE-CLIENT DOM and print are role-projected",
+      "steps": "Select restricted role, inspect DOM and print preview",
+      "status": "passed",
+      "case_before": {
+        "revision": 32,
+        "sha256": "39261ee36d07e3c3601d59a80325073f4e4884b64f4f0dc08a598f6739f5a54a"
+      },
+      "case_after": {
+        "revision": 32,
+        "sha256": "39261ee36d07e3c3601d59a80325073f4e4884b64f4f0dc08a598f6739f5a54a"
+      },
+      "screenshot": "safe.ROLE-CLIENT.print.en-US.png"
+    },
+    {
+      "ids": [
+        "RT-C68"
+      ],
+      "name": "Complete mainline without Living Case Lab",
+      "steps": "Full query, identity intake, review, referral, references, return and safe-print path completes without Lab",
+      "status": "passed",
+      "case_before": {
+        "revision": 32,
+        "sha256": "39261ee36d07e3c3601d59a80325073f4e4884b64f4f0dc08a598f6739f5a54a"
+      },
+      "case_after": {
+        "revision": 32,
+        "sha256": "39261ee36d07e3c3601d59a80325073f4e4884b64f4f0dc08a598f6739f5a54a"
+      }
+    }
+  ],
+  "errors": []
+}

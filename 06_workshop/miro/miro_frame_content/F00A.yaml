@@ -1,15 +1,615 @@
-frame_code: F00A
-title: "Automation Component Library & Visual Tokens"
-version: V0
-status: LOCAL_SPEC_READY
-source_files:
-  - "00_sources/raw/Clear_to_Trade_UXUI_Miro_Automation_Scope_v1.1.md"
-token_file: "06_workshop/miro/miro_visual_tokens.yaml"
-component_catalogue: "06_workshop/miro/miro_component_catalog.md"
-items:
-  - type: TOKEN_REFERENCE
-    content_id: VISUAL-TOKENS-0.1
-  - type: COMPONENT_CATALOGUE_REFERENCE
-    content_id: COMPONENT-CATALOGUE-0.1
-notes:
-  - "Local definition only; no Miro item ID exists."
+{
+  "frame_code": "F00A",
+  "title": "Component library and connector samples",
+  "version": "V0.1",
+  "status": "MIRO_V0_CREATED_AWAITING_REVIEW",
+  "token_file": "06_workshop/miro/miro_visual_tokens.yaml",
+  "component_catalogue": "06_workshop/miro/miro_component_catalog.md",
+  "layout": {
+    "width": 1680,
+    "height": 3100,
+    "margin": 80
+  },
+  "items": [
+    {
+      "content_id": "F00A-SAMPLE-STAGE",
+      "component": "CMP-STAGE",
+      "title": "CMP-STAGE",
+      "body": "S2 · Requirements and evidence",
+      "visible_tag": "COMPONENT_SAMPLE_NOT_PRODUCT_COMMITMENT",
+      "source_refs": [
+        {
+          "source_id": "SRC-004",
+          "locator": "Component catalogue"
+        }
+      ],
+      "x": 80,
+      "y": 180,
+      "width": 340,
+      "height": 180
+    },
+    {
+      "content_id": "F00A-SAMPLE-LANE",
+      "component": "CMP-LANE",
+      "title": "CMP-LANE",
+      "body": "KYC Operations",
+      "visible_tag": "COMPONENT_SAMPLE_NOT_PRODUCT_COMMITMENT",
+      "source_refs": [
+        {
+          "source_id": "SRC-004",
+          "locator": "Component catalogue"
+        }
+      ],
+      "x": 444,
+      "y": 180,
+      "width": 340,
+      "height": 180
+    },
+    {
+      "content_id": "F00A-SAMPLE-ACTION",
+      "component": "CMP-ACTION",
+      "title": "CMP-ACTION",
+      "body": "Determine applicable requirements",
+      "visible_tag": "COMPONENT_SAMPLE_NOT_PRODUCT_COMMITMENT",
+      "source_refs": [
+        {
+          "source_id": "SRC-004",
+          "locator": "Component catalogue"
+        }
+      ],
+      "x": 808,
+      "y": 180,
+      "width": 340,
+      "height": 180
+    },
+    {
+      "content_id": "F00A-SAMPLE-JOB",
+      "component": "CMP-JOB",
+      "title": "CMP-JOB",
+      "body": "Know what evidence is needed and why",
+      "visible_tag": "COMPONENT_SAMPLE_NOT_PRODUCT_COMMITMENT",
+      "source_refs": [
+        {
+          "source_id": "SRC-004",
+          "locator": "Component catalogue"
+        }
+      ],
+      "x": 1172,
+      "y": 180,
+      "width": 340,
+      "height": 180
+    },
+    {
+      "content_id": "F00A-SAMPLE-SYSTEM",
+      "component": "CMP-SYSTEM",
+      "title": "CMP-SYSTEM",
+      "body": "Approved evidence source",
+      "visible_tag": "COMPONENT_SAMPLE_NOT_PRODUCT_COMMITMENT",
+      "source_refs": [
+        {
+          "source_id": "SRC-004",
+          "locator": "Component catalogue"
+        }
+      ],
+      "x": 80,
+      "y": 380,
+      "width": 340,
+      "height": 180
+    },
+    {
+      "content_id": "F00A-SAMPLE-HANDOFF",
+      "component": "CMP-HANDOFF",
+      "title": "CMP-HANDOFF",
+      "body": "Residual gap → accountable reviewer",
+      "visible_tag": "COMPONENT_SAMPLE_NOT_PRODUCT_COMMITMENT",
+      "source_refs": [
+        {
+          "source_id": "SRC-004",
+          "locator": "Component catalogue"
+        }
+      ],
+      "x": 444,
+      "y": 380,
+      "width": 340,
+      "height": 180
+    },
+    {
+      "content_id": "F00A-SAMPLE-PAIN",
+      "component": "CMP-PAIN",
+      "title": "CMP-PAIN",
+      "body": "Hypothesis: repeated requests",
+      "visible_tag": "COMPONENT_SAMPLE_NOT_PRODUCT_COMMITMENT",
+      "source_refs": [
+        {
+          "source_id": "SRC-004",
+          "locator": "Component catalogue"
+        }
+      ],
+      "x": 808,
+      "y": 380,
+      "width": 340,
+      "height": 180
+    },
+    {
+      "content_id": "F00A-SAMPLE-ROOT",
+      "component": "CMP-ROOT",
+      "title": "CMP-ROOT",
+      "body": "Hypothesis: fragmented evidence context",
+      "visible_tag": "COMPONENT_SAMPLE_NOT_PRODUCT_COMMITMENT",
+      "source_refs": [
+        {
+          "source_id": "SRC-004",
+          "locator": "Component catalogue"
+        }
+      ],
+      "x": 1172,
+      "y": 380,
+      "width": 340,
+      "height": 180
+    },
+    {
+      "content_id": "F00A-SAMPLE-AGENTIC",
+      "component": "CMP-AGENTIC",
+      "title": "CMP-AGENTIC",
+      "body": "Proposed: prepare an evidence-gap list",
+      "visible_tag": "COMPONENT_SAMPLE_NOT_PRODUCT_COMMITMENT",
+      "source_refs": [
+        {
+          "source_id": "SRC-004",
+          "locator": "Component catalogue"
+        }
+      ],
+      "x": 80,
+      "y": 580,
+      "width": 340,
+      "height": 180
+    },
+    {
+      "content_id": "F00A-SAMPLE-HUMAN",
+      "component": "CMP-HUMAN",
+      "title": "CMP-HUMAN",
+      "body": "Designated reviewer resolves ambiguity",
+      "visible_tag": "COMPONENT_SAMPLE_NOT_PRODUCT_COMMITMENT",
+      "source_refs": [
+        {
+          "source_id": "SRC-004",
+          "locator": "Component catalogue"
+        }
+      ],
+      "x": 444,
+      "y": 580,
+      "width": 340,
+      "height": 180
+    },
+    {
+      "content_id": "F00A-SAMPLE-STATE",
+      "component": "CMP-STATE",
+      "title": "CMP-STATE",
+      "body": "Evidence under review — not trade clearance",
+      "visible_tag": "COMPONENT_SAMPLE_NOT_PRODUCT_COMMITMENT",
+      "source_refs": [
+        {
+          "source_id": "SRC-004",
+          "locator": "Component catalogue"
+        }
+      ],
+      "x": 808,
+      "y": 580,
+      "width": 340,
+      "height": 180
+    },
+    {
+      "content_id": "F00A-SAMPLE-QUESTION",
+      "component": "CMP-QUESTION",
+      "title": "CMP-QUESTION",
+      "body": "Who can approve the external request?",
+      "visible_tag": "COMPONENT_SAMPLE_NOT_PRODUCT_COMMITMENT",
+      "source_refs": [
+        {
+          "source_id": "SRC-004",
+          "locator": "Component catalogue"
+        }
+      ],
+      "x": 1172,
+      "y": 580,
+      "width": 340,
+      "height": 180
+    },
+    {
+      "content_id": "F00A-SAMPLE-CAPABILITY",
+      "component": "CMP-CAPABILITY",
+      "title": "CMP-CAPABILITY",
+      "body": "Illustrative capability label; not a backlog commitment",
+      "visible_tag": "COMPONENT_SAMPLE_NOT_PRODUCT_COMMITMENT",
+      "source_refs": [
+        {
+          "source_id": "SRC-004",
+          "locator": "Component catalogue"
+        }
+      ],
+      "x": 80,
+      "y": 780,
+      "width": 340,
+      "height": 180
+    },
+    {
+      "content_id": "F00A-SAMPLE-REQUIREMENT",
+      "component": "CMP-REQUIREMENT",
+      "title": "CMP-REQUIREMENT",
+      "body": "Illustrative requirement label; not an approved requirement",
+      "visible_tag": "COMPONENT_SAMPLE_NOT_PRODUCT_COMMITMENT",
+      "source_refs": [
+        {
+          "source_id": "SRC-004",
+          "locator": "Component catalogue"
+        }
+      ],
+      "x": 444,
+      "y": 780,
+      "width": 340,
+      "height": 180
+    },
+    {
+      "content_id": "F00A-SAMPLE-VARIANT",
+      "component": "CMP-VARIANT",
+      "title": "CMP-VARIANT",
+      "body": "Country expansion: reassess applicable requirements",
+      "visible_tag": "COMPONENT_SAMPLE_NOT_PRODUCT_COMMITMENT",
+      "source_refs": [
+        {
+          "source_id": "SRC-004",
+          "locator": "Component catalogue"
+        }
+      ],
+      "x": 808,
+      "y": 780,
+      "width": 340,
+      "height": 180
+    },
+    {
+      "content_id": "F00A-REQ-A",
+      "component": "CMP-ACTION",
+      "title": "Sample source",
+      "body": "Connector demonstration only",
+      "visible_tag": "SAMPLE",
+      "source_refs": [
+        {
+          "source_id": "SRC-004",
+          "locator": "Connector catalogue"
+        }
+      ],
+      "x": 80,
+      "y": 1080,
+      "width": 340,
+      "height": 120
+    },
+    {
+      "content_id": "F00A-REQ-B",
+      "component": "CMP-HUMAN",
+      "title": "Sample destination",
+      "body": "Connector demonstration only",
+      "visible_tag": "SAMPLE",
+      "source_refs": [
+        {
+          "source_id": "SRC-004",
+          "locator": "Connector catalogue"
+        }
+      ],
+      "x": 580,
+      "y": 1080,
+      "width": 340,
+      "height": 120
+    },
+    {
+      "content_id": "F00A-OPT-A",
+      "component": "CMP-ACTION",
+      "title": "Sample source",
+      "body": "Connector demonstration only",
+      "visible_tag": "SAMPLE",
+      "source_refs": [
+        {
+          "source_id": "SRC-004",
+          "locator": "Connector catalogue"
+        }
+      ],
+      "x": 80,
+      "y": 1240,
+      "width": 340,
+      "height": 120
+    },
+    {
+      "content_id": "F00A-OPT-B",
+      "component": "CMP-HUMAN",
+      "title": "Sample destination",
+      "body": "Connector demonstration only",
+      "visible_tag": "SAMPLE",
+      "source_refs": [
+        {
+          "source_id": "SRC-004",
+          "locator": "Connector catalogue"
+        }
+      ],
+      "x": 580,
+      "y": 1240,
+      "width": 340,
+      "height": 120
+    },
+    {
+      "content_id": "F00A-PAR-A",
+      "component": "CMP-ACTION",
+      "title": "Sample source",
+      "body": "Connector demonstration only",
+      "visible_tag": "SAMPLE",
+      "source_refs": [
+        {
+          "source_id": "SRC-004",
+          "locator": "Connector catalogue"
+        }
+      ],
+      "x": 80,
+      "y": 1400,
+      "width": 340,
+      "height": 120
+    },
+    {
+      "content_id": "F00A-PAR-B",
+      "component": "CMP-HUMAN",
+      "title": "Sample destination",
+      "body": "Connector demonstration only",
+      "visible_tag": "SAMPLE",
+      "source_refs": [
+        {
+          "source_id": "SRC-004",
+          "locator": "Connector catalogue"
+        }
+      ],
+      "x": 580,
+      "y": 1400,
+      "width": 340,
+      "height": 120
+    },
+    {
+      "content_id": "F00A-LOOP-A",
+      "component": "CMP-ACTION",
+      "title": "Sample source",
+      "body": "Connector demonstration only",
+      "visible_tag": "SAMPLE",
+      "source_refs": [
+        {
+          "source_id": "SRC-004",
+          "locator": "Connector catalogue"
+        }
+      ],
+      "x": 80,
+      "y": 1560,
+      "width": 340,
+      "height": 120
+    },
+    {
+      "content_id": "F00A-LOOP-B",
+      "component": "CMP-HUMAN",
+      "title": "Sample destination",
+      "body": "Connector demonstration only",
+      "visible_tag": "SAMPLE",
+      "source_refs": [
+        {
+          "source_id": "SRC-004",
+          "locator": "Connector catalogue"
+        }
+      ],
+      "x": 580,
+      "y": 1560,
+      "width": 340,
+      "height": 120
+    },
+    {
+      "content_id": "F00A-DEC-A",
+      "component": "CMP-ACTION",
+      "title": "Sample source",
+      "body": "Connector demonstration only",
+      "visible_tag": "SAMPLE",
+      "source_refs": [
+        {
+          "source_id": "SRC-004",
+          "locator": "Connector catalogue"
+        }
+      ],
+      "x": 80,
+      "y": 1720,
+      "width": 340,
+      "height": 120
+    },
+    {
+      "content_id": "F00A-DEC-B",
+      "component": "CMP-HUMAN",
+      "title": "Sample destination",
+      "body": "Connector demonstration only",
+      "visible_tag": "SAMPLE",
+      "source_refs": [
+        {
+          "source_id": "SRC-004",
+          "locator": "Connector catalogue"
+        }
+      ],
+      "x": 580,
+      "y": 1720,
+      "width": 340,
+      "height": 120
+    },
+    {
+      "content_id": "F00A-DATA-A",
+      "component": "CMP-ACTION",
+      "title": "Sample source",
+      "body": "Connector demonstration only",
+      "visible_tag": "SAMPLE",
+      "source_refs": [
+        {
+          "source_id": "SRC-004",
+          "locator": "Connector catalogue"
+        }
+      ],
+      "x": 80,
+      "y": 1880,
+      "width": 340,
+      "height": 120
+    },
+    {
+      "content_id": "F00A-DATA-B",
+      "component": "CMP-HUMAN",
+      "title": "Sample destination",
+      "body": "Connector demonstration only",
+      "visible_tag": "SAMPLE",
+      "source_refs": [
+        {
+          "source_id": "SRC-004",
+          "locator": "Connector catalogue"
+        }
+      ],
+      "x": 580,
+      "y": 1880,
+      "width": 340,
+      "height": 120
+    },
+    {
+      "content_id": "F00A-STATE-A",
+      "component": "CMP-ACTION",
+      "title": "Sample source",
+      "body": "Connector demonstration only",
+      "visible_tag": "SAMPLE",
+      "source_refs": [
+        {
+          "source_id": "SRC-004",
+          "locator": "Connector catalogue"
+        }
+      ],
+      "x": 80,
+      "y": 2040,
+      "width": 340,
+      "height": 120
+    },
+    {
+      "content_id": "F00A-STATE-B",
+      "component": "CMP-HUMAN",
+      "title": "Sample destination",
+      "body": "Connector demonstration only",
+      "visible_tag": "SAMPLE",
+      "source_refs": [
+        {
+          "source_id": "SRC-004",
+          "locator": "Connector catalogue"
+        }
+      ],
+      "x": 580,
+      "y": 2040,
+      "width": 340,
+      "height": 120
+    },
+    {
+      "content_id": "F00A-ESC-A",
+      "component": "CMP-ACTION",
+      "title": "Sample source",
+      "body": "Connector demonstration only",
+      "visible_tag": "SAMPLE",
+      "source_refs": [
+        {
+          "source_id": "SRC-004",
+          "locator": "Connector catalogue"
+        }
+      ],
+      "x": 80,
+      "y": 2200,
+      "width": 340,
+      "height": 120
+    },
+    {
+      "content_id": "F00A-ESC-B",
+      "component": "CMP-HUMAN",
+      "title": "Sample destination",
+      "body": "Connector demonstration only",
+      "visible_tag": "SAMPLE",
+      "source_refs": [
+        {
+          "source_id": "SRC-004",
+          "locator": "Connector catalogue"
+        }
+      ],
+      "x": 580,
+      "y": 2200,
+      "width": 340,
+      "height": 120
+    }
+  ],
+  "connectors": [
+    {
+      "content_id": "F00A-CON-REQ",
+      "type": "CON-REQ",
+      "from": "F00A-REQ-A",
+      "to": "F00A-REQ-B",
+      "label": "CON-REQ · example only",
+      "anchor_status": "PLANNED_NOT_MIRO_VERIFIED"
+    },
+    {
+      "content_id": "F00A-CON-OPT",
+      "type": "CON-OPT",
+      "from": "F00A-OPT-A",
+      "to": "F00A-OPT-B",
+      "label": "CON-OPT · example only",
+      "anchor_status": "PLANNED_NOT_MIRO_VERIFIED"
+    },
+    {
+      "content_id": "F00A-CON-PAR",
+      "type": "CON-PAR",
+      "from": "F00A-PAR-A",
+      "to": "F00A-PAR-B",
+      "label": "CON-PAR · example only",
+      "anchor_status": "PLANNED_NOT_MIRO_VERIFIED"
+    },
+    {
+      "content_id": "F00A-CON-LOOP",
+      "type": "CON-LOOP",
+      "from": "F00A-LOOP-A",
+      "to": "F00A-LOOP-B",
+      "label": "CON-LOOP · example only",
+      "anchor_status": "PLANNED_NOT_MIRO_VERIFIED"
+    },
+    {
+      "content_id": "F00A-CON-DEC",
+      "type": "CON-DEC",
+      "from": "F00A-DEC-A",
+      "to": "F00A-DEC-B",
+      "label": "CON-DEC · example only",
+      "anchor_status": "PLANNED_NOT_MIRO_VERIFIED"
+    },
+    {
+      "content_id": "F00A-CON-DATA",
+      "type": "CON-DATA",
+      "from": "F00A-DATA-A",
+      "to": "F00A-DATA-B",
+      "label": "CON-DATA · example only",
+      "anchor_status": "PLANNED_NOT_MIRO_VERIFIED"
+    },
+    {
+      "content_id": "F00A-CON-STATE",
+      "type": "CON-STATE",
+      "from": "F00A-STATE-A",
+      "to": "F00A-STATE-B",
+      "label": "CON-STATE · example only",
+      "anchor_status": "PLANNED_NOT_MIRO_VERIFIED"
+    },
+    {
+      "content_id": "F00A-CON-ESC",
+      "type": "CON-ESC",
+      "from": "F00A-ESC-A",
+      "to": "F00A-ESC-B",
+      "label": "CON-ESC · example only",
+      "anchor_status": "PLANNED_NOT_MIRO_VERIFIED"
+    }
+  ],
+  "notes": [
+    "All 15 catalogue components and all eight connector types are represented.",
+    "2026-09-07: native items and connector references read back; detailed design calibration and client validation remain open."
+  ],
+  "miro_frame_id": "3458764682843351765",
+  "miro_url": "https://miro.com/app/board/uXjVHr-MAS8=/?moveToWidget=3458764682843351765",
+  "readback_managed_count": 43
+}

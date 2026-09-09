@@ -1,0 +1,103 @@
+{
+  "at": "2026-09-07T17:55:11.710Z",
+  "command": "node /Users/christinaliu/Documents/ChatGPT/Australia Bank/clear-to-trade-product/prototype/qa/d5/om-regression/host-browser.mjs",
+  "browser": "152.0.7977.76",
+  "results": [
+    {
+      "ids": [
+        "OM-01",
+        "OM-03",
+        "OM-18",
+        "OM-26"
+      ],
+      "name": "global-entry-and-groups",
+      "status": "passed",
+      "screenshot": "prototype/qa/d5/om-regression/host/global-entry-and-groups.png",
+      "errors": [],
+      "remote": []
+    },
+    {
+      "ids": [
+        "OM-04",
+        "OM-05",
+        "OM-06",
+        "OM-07",
+        "OM-11",
+        "OM-29"
+      ],
+      "name": "execution-choices-source-bound",
+      "status": "passed",
+      "screenshot": "prototype/qa/d5/om-regression/host/execution-choices-source-bound.png",
+      "errors": [],
+      "remote": []
+    },
+    {
+      "ids": [
+        "OM-08",
+        "OM-09",
+        "OM-10"
+      ],
+      "name": "skill-samples-and-reuse-context",
+      "status": "passed",
+      "screenshot": "prototype/qa/d5/om-regression/host/skill-samples-and-reuse-context.png",
+      "errors": [],
+      "remote": []
+    },
+    {
+      "ids": [
+        "OM-12",
+        "OM-23"
+      ],
+      "name": "all-action-sources-three-locales",
+      "status": "passed",
+      "screenshot": "prototype/qa/d5/om-regression/host/all-action-sources-three-locales.png",
+      "errors": [],
+      "remote": []
+    },
+    {
+      "ids": [
+        "OM-13",
+        "OM-14",
+        "OM-15",
+        "OM-16",
+        "OM-26"
+      ],
+      "name": "playback-pauses-and-gates",
+      "status": "passed",
+      "screenshot": "prototype/qa/d5/om-regression/host/playback-pauses-and-gates.png",
+      "errors": [],
+      "remote": []
+    },
+    {
+      "ids": [
+        "OM-14",
+        "OM-24"
+      ],
+      "name": "reduced-motion-does-not-reveal-outcome",
+      "status": "passed",
+      "screenshot": "prototype/qa/d5/om-regression/host/reduced-motion-does-not-reveal-outcome.png",
+      "errors": [],
+      "remote": []
+    },
+    {
+      "ids": [
+        "OM-22"
+      ],
+      "name": "history-and-stale-action-deep-link",
+      "status": "passed",
+      "screenshot": "prototype/qa/d5/om-regression/host/history-and-stale-action-deep-link.png",
+      "errors": [],
+      "remote": []
+    },
+    {
+      "ids": [
+        "OM-24"
+      ],
+      "name": "narrow-keyboard-and-static-fallback",
+      "status": "passed",
+      "screenshot": "prototype/qa/d5/om-regression/host/narrow-keyboard-and-static-fallback.png",
+      "errors": [],
+      "remote": []
+    }
+  ]
+}

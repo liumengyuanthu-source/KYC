@@ -1,0 +1,123 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "Screening review · work and responsibility",
+    "locale": "en",
+    "animation": "none",
+    "quality_profile": "showcase",
+    "viewBox": [
+      1080,
+      640
+    ],
+    "legend": {
+      "mode": "hidden"
+    }
+  },
+  "components": [
+    {
+      "id": "OM-MATCH-G1",
+      "type": "frontend",
+      "label": "Bind query context",
+      "sublabel": "Rule · same subject and source versions",
+      "pos": [
+        60,
+        95
+      ],
+      "size": [
+        355,
+        96
+      ]
+    },
+    {
+      "id": "OM-MATCH-G2",
+      "type": "frontend",
+      "label": "Compare identifiers",
+      "sublabel": "Skill prepares · unknown stays unknown",
+      "pos": [
+        665,
+        95
+      ],
+      "size": [
+        355,
+        96
+      ]
+    },
+    {
+      "id": "OM-MATCH-G3",
+      "type": "frontend",
+      "label": "Resolve an evidence gap",
+      "sublabel": "Conditional candidate · human access check",
+      "pos": [
+        60,
+        275
+      ],
+      "size": [
+        355,
+        96
+      ]
+    },
+    {
+      "id": "OM-MATCH-G4",
+      "type": "frontend",
+      "label": "Prepare the review pack",
+      "sublabel": "Skill prepares · rule validates references",
+      "pos": [
+        665,
+        275
+      ],
+      "size": [
+        355,
+        96
+      ]
+    },
+    {
+      "id": "OM-MATCH-G5",
+      "type": "frontend",
+      "label": "Human review",
+      "sublabel": "Judgment and configured authority",
+      "pos": [
+        60,
+        455
+      ],
+      "size": [
+        355,
+        96
+      ]
+    },
+    {
+      "id": "OM-MATCH-G6",
+      "type": "frontend",
+      "label": "Record the local outcome",
+      "sublabel": "Rule · other case conditions remain open",
+      "pos": [
+        665,
+        455
+      ],
+      "size": [
+        355,
+        96
+      ]
+    }
+  ],
+  "connections": [
+    {
+      "id": "relation-1",
+      "from": "OM-MATCH-G1",
+      "to": "OM-MATCH-G2",
+      "label": "input context"
+    },
+    {
+      "id": "relation-2",
+      "from": "OM-MATCH-G3",
+      "to": "OM-MATCH-G4",
+      "label": "if evidence is needed"
+    },
+    {
+      "id": "relation-3",
+      "from": "OM-MATCH-G5",
+      "to": "OM-MATCH-G6",
+      "label": "authorized result"
+    }
+  ]
+}

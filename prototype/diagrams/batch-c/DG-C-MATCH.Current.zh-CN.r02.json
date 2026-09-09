@@ -1,0 +1,116 @@
+{
+  "schema_version": 2,
+  "diagram_type": "workflow",
+  "meta": {
+    "title": "疑似命中复核 · 现状",
+    "locale": "zh-CN",
+    "quality_profile": "showcase",
+    "animation": "none",
+    "legend": {
+      "mode": "auto",
+      "entries": {
+        "frontend": {
+          "label": "只读分组"
+        }
+      }
+    }
+  },
+  "lanes": [
+    {
+      "id": "main",
+      "label": "人工工作与判断"
+    },
+    {
+      "id": "lower",
+      "label": "未决、保护与返回",
+      "variant": "exception"
+    }
+  ],
+  "mainPath": [
+    "context",
+    "evidence",
+    "decision",
+    "impact"
+  ],
+  "nodes": [
+    {
+      "id": "context",
+      "col": 0,
+      "lane": "main",
+      "type": "frontend",
+      "label": "结果与保护范围",
+      "sublabel": "M01 · M02",
+      "height": 150
+    },
+    {
+      "id": "evidence",
+      "col": 1,
+      "lane": "main",
+      "type": "frontend",
+      "label": "对照与精确缺口",
+      "sublabel": "M03 · M04 · M05",
+      "height": 150
+    },
+    {
+      "id": "decision",
+      "col": 2,
+      "lane": "main",
+      "type": "frontend",
+      "label": "人工权限与记录",
+      "sublabel": "M06 · M07 · M08 · M09",
+      "height": 150
+    },
+    {
+      "id": "referral",
+      "col": 1,
+      "lane": "lower",
+      "type": "frontend",
+      "label": "移交或保留未决",
+      "sublabel": "M10",
+      "height": 150
+    },
+    {
+      "id": "impact",
+      "col": 3,
+      "lane": "main",
+      "type": "frontend",
+      "label": "影响与未决条件",
+      "sublabel": "M11 · M12",
+      "height": 150
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge0",
+      "from": "context",
+      "to": "evidence",
+      "label": "有限准备"
+    },
+    {
+      "id": "edge1",
+      "from": "evidence",
+      "to": "decision",
+      "label": "用途、版本与权限"
+    },
+    {
+      "id": "edge2",
+      "from": "decision",
+      "to": "impact",
+      "label": "成功记录事件"
+    },
+    {
+      "id": "edge3",
+      "from": "context",
+      "to": "referral",
+      "label": "紧急或专业处置",
+      "role": "branch"
+    },
+    {
+      "id": "edge4",
+      "from": "referral",
+      "to": "impact",
+      "label": "未决，不生成排除",
+      "role": "branch"
+    }
+  ]
+}

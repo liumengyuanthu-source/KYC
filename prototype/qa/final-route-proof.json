@@ -1,0 +1,92 @@
+{
+  "capturedAt": "2026-09-07T05:54:19.448Z",
+  "sourceHashes": {
+    "app.mjs": "d922d09e50162a17240fe0d5c153d3d6e1111810ed263eb838a347c30641a9fc",
+    "navigation.mjs": "bfe02374a6c9375ff29845c583f84a9262f4e832e81c08d70efaf3012bbf1ad3",
+    "studio.css": "2916e22cd9ee88775366d8217f25d8d646b4e65902aac94ed30891df9dae78f1",
+    "content.mjs": "163be571d4f9efa3d2f53266ca860d262db0d4daaf41423becd10ef06557168d",
+    "case-engine.mjs": "2d459e2155c09272370af76e39a151dfb73549911489e175bbfa817b9494dd88",
+    "../04_operating_model/round-a/synthetic-case-fixture.json": "dbd77a1d4217fcb6384cdb1cdf6ab61617d49ff243d10df7dfddb6b272e7da41"
+  },
+  "sceneLocale": {
+    "before": {
+      "locale": "en-AU",
+      "scenario": "SCN-MATCH",
+      "comparison": "current",
+      "scrollTop": 160
+    },
+    "after": {
+      "locale": "zh-CN",
+      "scenario": "SCN-MATCH",
+      "comparison": "current",
+      "scrollTop": 160
+    },
+    "preserved": true
+  },
+  "screeningBeforeDecision": {
+    "role": "ROLE-FINCRIME",
+    "comparisonText": "Attribute\tSubject\tProvider record\tAssessment\nLegal name\tHarbour Institutional Holdings (Synthetic)\tHarbour Institutional Holdings (Provider Demo)\tSimilar name · review\nRegistration reference\tSYN-A-104\tSYN-B-207\tDifferent demo references\nIncorporation context\tAU\tNZ\tCompare with source\nEntity type\tCorporation · synthetic\tCorporation · synthetic\tSame demo type",
+    "caseRevision": 6
+  },
+  "finalCase": {
+    "revision": 7,
+    "decisions": 1,
+    "events": [
+      "synthetic_fixture_authored",
+      "confirm_requirements",
+      "reuse_identity",
+      "send_residual_request",
+      "receive_supplement",
+      "assess_supplement",
+      "record_disposition"
+    ],
+    "conditions": [
+      {
+        "domain": "evidence",
+        "status": "satisfied",
+        "applicability": "required"
+      },
+      {
+        "domain": "screening",
+        "status": "satisfied",
+        "applicability": "required"
+      },
+      {
+        "domain": "legal",
+        "status": "awaiting_execution",
+        "applicability": "required"
+      },
+      {
+        "domain": "credit",
+        "status": "condition_pending",
+        "applicability": "required"
+      },
+      {
+        "domain": "qa",
+        "status": "pending",
+        "applicability": "required"
+      },
+      {
+        "domain": "conflicts",
+        "status": "satisfied",
+        "applicability": "required"
+      },
+      {
+        "domain": "edd",
+        "status": "unknown",
+        "applicability": "unknown"
+      }
+    ],
+    "readiness": "not_ready",
+    "publication": "not_requested",
+    "transaction": "out_of_scope"
+  },
+  "autoplay": {
+    "scenario": "SCN-MATCH",
+    "cursor": 4,
+    "modalOpen": true,
+    "caseRevision": 1,
+    "decisions": 0,
+    "buttonText": "Play story"
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "suite": "Round A draft data contract",
+  "run_at": "2026-09-07T05:41:44.656Z",
+  "checks": [
+    {
+      "name": "Draft schema validates every initial fixture record",
+      "status": "PASS"
+    },
+    {
+      "name": "Same-case typed references, registered sources and synthetic status",
+      "status": "PASS"
+    },
+    {
+      "name": "Initial receipt/purpose/authority/readiness invariants",
+      "status": "PASS"
+    },
+    {
+      "name": "15 preserved SCN aliases; 6 authored and 9 skeleton",
+      "status": "PASS"
+    },
+    {
+      "name": "Crosswalk uses only existing journey IDs",
+      "status": "PASS"
+    },
+    {
+      "name": "Source-qualified D2 dependency semantics",
+      "status": "PASS"
+    },
+    {
+      "name": "IA §7.2 field metadata coverage",
+      "status": "PASS"
+    },
+    {
+      "name": "Reject dangling reference",
+      "status": "PASS"
+    },
+    {
+      "name": "Reject wrong reference type",
+      "status": "PASS"
+    },
+    {
+      "name": "Reject missing required nullable key",
+      "status": "PASS"
+    },
+    {
+      "name": "Reject null for non-null field",
+      "status": "PASS"
+    },
+    {
+      "name": "Reject non-synthetic source status",
+      "status": "PASS"
+    },
+    {
+      "name": "Reject receipt treated as sufficient",
+      "status": "PASS"
+    },
+    {
+      "name": "Reject false green with open Legal/Credit/QA",
+      "status": "PASS"
+    },
+    {
+      "name": "Screening local completion leaves Legal/Credit/QA blocked",
+      "status": "PASS"
+    }
+  ],
+  "summary": {
+    "passed": 15,
+    "failed": 0
+  },
+  "limits": [
+    "Tests inspect generated schema vocabulary and logical fixture invariants; not an independent full JSON Schema implementation.",
+    "No runtime/UI, external send, bank policy/authority, publication, persistence or production security certification.",
+    "Legal/Credit/QA are read-only branch placeholders. EDD applicability remains unknown.",
+    "Original P0/P1 source absent from narrowly searched workspace; derived references are not treated as the original."
+  ]
+}

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Documents — Clear-to-Trade Portal</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Roboto+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="documents">
+<div class="frame">
+  <header class="topbar">
+    <a class="brand" href="index.html"><span class="brand-mark">CT</span><span class="brand-name">Clear-to-Trade Portal<small>Client Workspace</small></span></a>
+    <div class="search">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#54453f" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      <input type="text" placeholder="Search documents…">
+    </div>
+    <div class="topbar-spacer"></div>
+    <button class="icon-btn" onclick="toast('2 new updates from Aria')"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#54453f" stroke-width="1.8" stroke-linecap="round"><path d="M18 8a6 6 0 1 0-12 0c0 7-3 8-3 8h18s-3-1-3-8"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/></svg><span class="dot"></span></button>
+    <div class="avatar">AB</div>
+  </header>
+
+  <div class="shell">
+    <nav class="sidebar">
+      <a class="side-link" href="index.html"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg><span class="tip">Home</span></a>
+      <a class="side-link" href="intake.html"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg><span class="tip">New request</span></a>
+      <a class="side-link" href="case.html"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><path d="M9 17l-5-5 5-5M15 7l5 5-5 5"/></svg><span class="tip">Case tracker</span></a>
+      <a class="side-link active" href="documents.html"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6"/></svg><span class="tip">Documents</span></a>
+      <a class="side-link" href="edd.html"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><path d="M12 3 4 7v5c0 5 3.4 8 8 9 4.6-1 8-4 8-9V7z"/><path d="m9 12 2 2 4-4"/></svg><span class="tip">EDD info</span></a>
+    </nav>
+
+    <main class="main">
+      <div class="content-grid">
+        <div>
+          <section class="reveal" style="margin-bottom:24px">
+            <span class="eyebrow">M3 · Document sourcing</span>
+            <h1 class="display" style="margin-top:10px;font-size:clamp(26px,3vw,38px)">Aria sources first.<br>You upload <em>only the gaps</em>.</h1>
+            <p class="lede" style="margin-top:12px">5 of 11 required items were pulled automatically from public registries, commercial data providers and your last refresh. Every upload is validated the moment it lands.</p>
+          </section>
+
+          <section class="card reveal" style="margin-bottom:22px;padding:20px 22px;display:flex;align-items:center;gap:20px;flex-wrap:wrap">
+            <div style="flex:1;min-width:220px">
+              <div class="progress-label"><span>EVIDENCE COMPLETE</span><span data-count="82" data-suffix="%">0%</span></div>
+              <div class="progress"><div class="fill" data-fill="82"></div></div>
+            </div>
+            <span class="chip chip-ok"><span class="cdot"></span>5 auto-sourced</span>
+            <span class="chip chip-info"><span class="cdot"></span>4 received from you</span>
+            <span class="chip chip-wait"><span class="cdot"></span>2 outstanding</span>
+          </section>
+
+          <section class="reveal" style="margin-bottom:24px">
+            <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:14px">
+              <h2 class="section-title">Corporate &amp; registry</h2>
+              <span class="badge-mono">4 / 4</span>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:12px">
+              <div class="doc-row">
+                <div class="doc-ico" style="background:var(--sage)"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#1f7a52" stroke-width="2.2" stroke-linecap="round"><path d="m4.5 12.5 5 5 10-11"/></svg></div>
+                <div><div class="doc-name">Certificate of incorporation</div><div class="doc-meta">Sourced · HK Companies Registry · 5 Sep</div></div>
+                <div class="doc-actions"><span class="chip chip-ok"><span class="cdot"></span>Validated</span></div>
+              </div>
+              <div class="doc-row">
+                <div class="doc-ico" style="background:var(--sage)"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#1f7a52" stroke-width="2.2" stroke-linecap="round"><path d="m4.5 12.5 5 5 10-11"/></svg></div>
+                <div><div class="doc-name">Latest annual return (NAR1)</div><div class="doc-meta">Sourced · HK Companies Registry · 5 Sep</div></div>
+                <div class="doc-actions"><span class="chip chip-ok"><span class="cdot"></span>Validated</span></div>
+              </div>
+              <div class="doc-row">
+                <div class="doc-ico" style="background:var(--sage)"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#1f7a52" stroke-width="2.2" stroke-linecap="round"><path d="m4.5 12.5 5 5 10-11"/></svg></div>
+                <div><div class="doc-name">Business registration certificate</div><div class="doc-meta">Sourced · Commercial data provider · 5 Sep</div></div>
+                <div class="doc-actions"><span class="chip chip-ok"><span class="cdot"></span>Validated</span></div>
+              </div>
+              <div class="doc-row">
+                <div class="doc-ico" style="background:var(--sage)"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#1f7a52" stroke-width="2.2" stroke-linecap="round"><path d="m4.5 12.5 5 5 10-11"/></svg></div>
+                <div><div class="doc-name">Articles of association</div><div class="doc-meta">Reused · 2024 refresh · still current</div></div>
+                <div class="doc-actions"><span class="chip chip-ok"><span class="cdot"></span>Validated</span></div>
+              </div>
+            </div>
+          </section>
+
+          <section class="reveal" style="margin-bottom:24px">
+            <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:14px">
+              <h2 class="section-title">Ownership &amp; control</h2>
+              <span class="badge-mono">3 / 4</span>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:12px">
+              <div class="doc-row">
+                <div class="doc-ico" style="background:var(--sage)"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#1f7a52" stroke-width="2.2" stroke-linecap="round"><path d="m4.5 12.5 5 5 10-11"/></svg></div>
+                <div><div class="doc-name">Ownership chart to UBOs</div><div class="doc-meta">You uploaded · 6 Sep · cross-checked vs registry</div></div>
+                <div class="doc-actions"><span class="chip chip-ok"><span class="cdot"></span>Validated</span></div>
+              </div>
+              <div class="doc-row">
+                <div class="doc-ico" style="background:var(--sage)"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#1f7a52" stroke-width="2.2" stroke-linecap="round"><path d="m4.5 12.5 5 5 10-11"/></svg></div>
+                <div><div class="doc-name">UBO identity document — E. Vance</div><div class="doc-meta">You uploaded · 6 Sep · evidence sufficiency confirmed</div></div>
+                <div class="doc-actions"><span class="chip chip-ok"><span class="cdot"></span>Validated</span></div>
+              </div>
+              <div class="doc-row">
+                <div class="doc-ico" style="background:var(--sage)"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#1f7a52" stroke-width="2.2" stroke-linecap="round"><path d="m4.5 12.5 5 5 10-11"/></svg></div>
+                <div><div class="doc-name">Register of members</div><div class="doc-meta">You uploaded · 7 Sep</div></div>
+                <div class="doc-actions"><span class="chip chip-ok"><span class="cdot"></span>Validated</span></div>
+              </div>
+              <div class="doc-row" data-doc-target style="border-left:3px solid var(--warn)">
+                <div class="doc-ico" style="background:var(--yellow)"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#26221e" stroke-width="1.9" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></div>
+                <div><div class="doc-name">Certified register of directors</div><div class="doc-meta">Upload needed · certified within last 3 months · REQ-06</div></div>
+                <div class="doc-actions"><span class="chip chip-wait"><span class="cdot"></span>Outstanding</span></div>
+              </div>
+            </div>
+          </section>
+
+          <section class="reveal">
+            <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:14px">
+              <h2 class="section-title">Financial &amp; regulatory</h2>
+              <span class="badge-mono">2 / 3</span>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:12px">
+              <div class="doc-row">
+                <div class="doc-ico" style="background:var(--sage)"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#1f7a52" stroke-width="2.2" stroke-linecap="round"><path d="m4.5 12.5 5 5 10-11"/></svg></div>
+                <div><div class="doc-name">Audited financial statements FY2025</div><div class="doc-meta">Sourced · Commercial data provider · 5 Sep</div></div>
+                <div class="doc-actions"><span class="chip chip-ok"><span class="cdot"></span>Validated</span></div>
+              </div>
+              <div class="doc-row">
+                <div class="doc-ico" style="background:var(--sage)"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#1f7a52" stroke-width="2.2" stroke-linecap="round"><path d="m4.5 12.5 5 5 10-11"/></svg></div>
+                <div><div class="doc-name">Tax residency self-certification</div><div class="doc-meta">You uploaded · 7 Sep</div></div>
+                <div class="doc-actions"><span class="chip chip-ok"><span class="cdot"></span>Validated</span></div>
+              </div>
+              <div class="doc-row" data-doc-target style="border-left:3px solid var(--warn)">
+                <div class="doc-ico" style="background:var(--yellow)"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#26221e" stroke-width="1.9" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></div>
+                <div><div class="doc-name">Board resolution authorising the relationship</div><div class="doc-meta">Upload needed · template available · REQ-05</div></div>
+                <div class="doc-actions"><button class="btn btn-ghost btn-sm" onclick="toast('Template downloaded')">Template</button><span class="chip chip-wait"><span class="cdot"></span>Outstanding</span></div>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <!-- rail -->
+        <aside class="rail">
+          <div class="card reveal" data-doc-target>
+            <h2 class="section-title" style="font-size:16px;margin-bottom:6px">Quick upload</h2>
+            <p style="font-size:12px;color:var(--muted);margin-bottom:16px;line-height:1.55">Drop a file here — Aria matches it to the open requirement and validates it instantly.</p>
+            <div class="dropzone">
+              <input type="file" hidden>
+              <div class="dz-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><path d="M12 16V4m0 0-4 4m4-4 4 4"/><path d="M4 16v3a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-3"/></svg></div>
+              <div class="dz-title">Drop files or click to browse</div>
+              <div class="dz-sub">PDF, JPG, PNG · ≤ 10 MB · encrypted in transit</div>
+            </div>
+          </div>
+
+          <div class="agent-card reveal">
+            <div class="agent-head">
+              <span class="agent-orb"></span>
+              <div>
+                <div class="agent-name">Sourcing activity</div>
+                <div class="agent-sub"><span class="live"></span>Audit trail · M3.5</div>
+              </div>
+            </div>
+            <div class="agent-feed">
+              <div class="agent-item"><span class="ai-time">7 SEP</span><span>Tax self-cert received &amp; validated</span></div>
+              <div class="agent-item"><span class="ai-time">6 SEP</span><span>Ownership chart cross-checked against registry — consistent</span></div>
+              <div class="agent-item"><span class="ai-time">5 SEP</span><span>CR extract + annual return pulled from HK Companies Registry</span></div>
+              <div class="agent-item"><span class="ai-time">5 SEP</span><span>Residual gaps identified → 2 requests issued (M3.2 → M3.3)</span></div>
+            </div>
+          </div>
+
+          <div class="card reveal">
+            <h2 class="section-title" style="font-size:16px;margin-bottom:12px">Good to know</h2>
+            <div style="display:flex;flex-direction:column;gap:12px;font-size:12.5px;line-height:1.6">
+              <div style="display:flex;gap:10px"><span style="flex:none;width:8px;height:8px;border-radius:50%;background:var(--peach);margin-top:6px"></span>Certified copies must be signed by a director, solicitor, CPA or notary within the last 3 months.</div>
+              <div style="display:flex;gap:10px"><span style="flex:none;width:8px;height:8px;border-radius:50%;background:var(--blue);margin-top:6px"></span>Everything you upload feeds straight into the QA evidence checks (M6) — no re-keying, no email threads.</div>
+              <div style="display:flex;gap:10px"><span style="flex:none;width:8px;height:8px;border-radius:50%;background:var(--lavender);margin-top:6px"></span>Expired documents are re-requested automatically at refresh — you'll never chase a date yourself.</div>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </main>
+  </div>
+</div>
+
+<!-- chat -->
+<button class="chat-fab"><span class="mini-orb"></span>Ask Aria</button>
+<div class="chat-drawer">
+  <div class="chat-head">
+    <span class="mini-orb"></span>
+    <div><div class="ch-title">Aria</div><div class="ch-sub"><span class="live"></span>Onboarding agent · online</div></div>
+    <button class="chat-close">✕</button>
+  </div>
+  <div class="chat-body"></div>
+  <div class="chat-chips">
+    <button class="pill">What counts as certified?</button>
+    <button class="pill">Where did you source from?</button>
+    <button class="pill">What happens after upload?</button>
+  </div>
+  <div class="chat-input">
+    <input type="text" placeholder="Ask about any document…">
+    <button class="chat-send" aria-label="Send"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M22 2 11 13M22 2l-7 20-4-9-9-4z"/></svg></button>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

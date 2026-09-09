@@ -1,0 +1,77 @@
+Process_ID,Node_Title,Target_Lane,Map_Implies,Execution_Mode_MVP,Execution_Mode_Target,Agent_Inputs,Agent_Outputs,Cannot_Check,Escalation_Trigger,Accountable_Human,Four_Eyes_Required,Override_Effect,Audit_Fields,Evidence_Status,Source_ID
+C1.1,Intake & initialise legal request,CGM Legal,Human lane,,,,,,,,,,,NEEDS_TAGGING,SRC-007
+C1.2,Determine required agreements / forms,CGM Legal,Human lane,,,,,,,,,,,NEEDS_TAGGING,SRC-007
+C1.3,Draft required agreements,CGM Legal,Human lane,,,,,,,,,,,NEEDS_TAGGING,SRC-007
+C1.4,Incorporate Credit input (if required),CGM Legal,Human lane,,,,,,,,,,,NEEDS_TAGGING,SRC-007
+C1.5,Negotiate agreement terms,CGM Legal,Human lane,,,,,,,,,,,NEEDS_TAGGING,SRC-007
+C1.6,Obtain internal review & approvals,CGM Legal,Human lane,,,,,,,,,,,NEEDS_TAGGING,SRC-007
+C1.7,Execute agreements,CGM Legal,Human lane,,,,,,,,,,,NEEDS_TAGGING,SRC-007
+C1.8,Capture key terms & store executed documents,CGM Legal,Human lane,,,,,,,,,,,NEEDS_TAGGING,SRC-007
+C2.1,Determine credit requirement,Credit,Human lane,,,,,,,,,,,NEEDS_TAGGING,SRC-007
+C2.2,Retrieve & validate financial / exposure data,Credit,Human lane,,,,,,,,,,,NEEDS_TAGGING,SRC-007
+C2.3,Assess counterparty credit risk,Credit,Human lane,,,,,,,,,,,NEEDS_TAGGING,SRC-007
+C2.4,Determine credit limit & conditions,Credit,Human lane,,,,,,,,,,,NEEDS_TAGGING,SRC-007
+C2.5,Obtain credit approval,Credit,Human lane,,,,,,,,,,,NEEDS_TAGGING,SRC-007
+C2.6,Provide Credit Agreement data to Legal,Credit,Human lane,,,,,,,,,,,NEEDS_TAGGING,SRC-007
+C2.7,Review / approve final agreement & data,Credit,Human lane,,,,,,,,,,,NEEDS_TAGGING,SRC-007
+M0.1,Determine sales location & reporting / booking entity,Agentic execution | Sales / RM (Front Office),Human lane,,,,,,,,,,,NEEDS_TAGGING,SRC-007
+M0.2,Confirm & validate approved product / service scope,Agentic execution,"Agentic band - flavour unspecified, must be tagged",,,,,,,,,,,NEEDS_TAGGING,SRC-007
+M0.3,Determine DD level,Agentic execution,"Agentic band - flavour unspecified, must be tagged",,,,,,,,,,,NEEDS_TAGGING,SRC-007
+M0.4,Record booking model,Agentic execution,"Agentic band - flavour unspecified, must be tagged",,,,,,,,,,,NEEDS_TAGGING,SRC-007
+M1.1,Submit onboarding request & capture initial client / relationship,Sales / RM (Front Office),Human lane,,,,,,,,,,,NEEDS_TAGGING,SRC-007
+M1.2,Receive onboarding request info,Agentic execution,"Agentic band - flavour unspecified, must be tagged",,,,,,,,,,,NEEDS_TAGGING,SRC-007
+M1.3,Create onboarding case & working repository,Agentic execution,"Agentic band - flavour unspecified, must be tagged",,,,,,,,,,,NEEDS_TAGGING,SRC-007
+M1.4,Confirm client legal name & location,Agentic execution,"Agentic band - flavour unspecified, must be tagged",,,,,,,,,,,NEEDS_TAGGING,SRC-007
+M1.5,Classify client / legal entity type & triage case,Agentic execution,"Agentic band - flavour unspecified, must be tagged",,,,,,,,,,,NEEDS_TAGGING,SRC-007
+M2.1,Determine AML / KYC requirements & applicable reliefs,Agentic execution,"Agentic band - flavour unspecified, must be tagged",,,,,,,,,,,NEEDS_TAGGING,SRC-007
+M2.2,Determine non-AML requirements & applicable exemption (With Legal if required),Agentic execution,"Agentic band - flavour unspecified, must be tagged",,,,,,,,,,,NEEDS_TAGGING,SRC-007
+M2.3,Consolidate requirements,Agentic execution,"Agentic band - flavour unspecified, must be tagged",,,,,,,,,,,NEEDS_TAGGING,SRC-007
+M2.4,"Apply risk rating, identify EDD indicators & adjust requirements",Agentic execution,"Agentic band - flavour unspecified, must be tagged",,,,,,,,,,,NEEDS_TAGGING,SRC-007
+M2.5,Issue client requirements,Agentic execution,"Agentic band - flavour unspecified, must be tagged",,,,,,,,,,,NEEDS_TAGGING,SRC-007
+M3.1,Source from public & commercial sources,Agentic execution,"Agentic band - flavour unspecified, must be tagged",,,,,,,,,,,NEEDS_TAGGING,SRC-007
+M3.2,Identify residual gaps,Agentic execution,"Agentic band - flavour unspecified, must be tagged",,,,,,,,,,,NEEDS_TAGGING,SRC-007
+M3.3,Request info from client,Agentic execution,"Agentic band - flavour unspecified, must be tagged",,,,,,,,,,,NEEDS_TAGGING,SRC-007
+M3.4,Capture & validate evidence,Agentic execution,"Agentic band - flavour unspecified, must be tagged",,,,,,,,,,,NEEDS_TAGGING,SRC-007
+M3.5,Manage outstanding gaps & sourcing audit trail,Agentic execution,"Agentic band - flavour unspecified, must be tagged",,,,,,,,,,,NEEDS_TAGGING,SRC-007
+M4.1,Initial risk pre-screening,Agentic execution,"Agentic band - flavour unspecified, must be tagged",,,,,,,,,,,NEEDS_TAGGING,SRC-007
+M4.2,Early adverse-media screen,Agentic execution,"Agentic band - flavour unspecified, must be tagged",,,,,,,,,,,NEEDS_TAGGING,SRC-007
+M4.3,Establish screening pop.,Agentic execution,"Agentic band - flavour unspecified, must be tagged",,,,,,,,,,,NEEDS_TAGGING,SRC-007
+M4.4,Execute comprehensive screening,Agentic execution,"Agentic band - flavour unspecified, must be tagged",,,,,,,,,,,NEEDS_TAGGING,SRC-007
+M4.5,Adjudicate screening hits,Agentic execution,"Agentic band - flavour unspecified, must be tagged",,,,,,,,,,,NEEDS_TAGGING,SRC-007
+M4.6,Assess risk & materiality,Agentic execution,"Agentic band - flavour unspecified, must be tagged",,,,,,,,,,,NEEDS_TAGGING,SRC-007
+M4.7,Determine screening outcome,Agentic execution,"Agentic band - flavour unspecified, must be tagged",,,,,,,,,,,NEEDS_TAGGING,SRC-007
+M5.1,Initiate & assign EDD case,Agentic execution,"Agentic band - flavour unspecified, must be tagged",,,,,,,,,,,NEEDS_TAGGING,SRC-007
+M5.2,Compile EDD evidence pack,Agentic execution,"Agentic band - flavour unspecified, must be tagged",,,,,,,,,,,NEEDS_TAGGING,SRC-007
+M5.3,Assess evidencing risk factors,Agentic execution,"Agentic band - flavour unspecified, must be tagged",,,,,,,,,,,NEEDS_TAGGING,SRC-007
+M5.4,Close intelligence & gaps,Agentic execution,"Agentic band - flavour unspecified, must be tagged",,,,,,,,,,,NEEDS_TAGGING,SRC-007
+M5.5,Consult risk specialists,Agentic execution,"Agentic band - flavour unspecified, must be tagged",,,,,,,,,,,NEEDS_TAGGING,SRC-007
+M5.6,Determine EDD outcome & conditions,Agentic execution,"Agentic band - flavour unspecified, must be tagged",,,,,,,,,,,NEEDS_TAGGING,SRC-007
+M5.7,Obtain required approvals,Agentic execution,"Agentic band - flavour unspecified, must be tagged",,,,,,,,,,,NEEDS_TAGGING,SRC-007
+M5.8,Record & hand over EDD outcome,Agentic execution,"Agentic band - flavour unspecified, must be tagged",,,,,,,,,,,NEEDS_TAGGING,SRC-007
+M5.9,Perform EDD judgment and risk assessment,Financial Crime Risk / Compliance,Human lane,,,,,,,,,,,NEEDS_TAGGING,SRC-007
+M5.10,Approve EDD outcome and conditions,Financial Crime Risk / Compliance,Human lane,,,,,,,,,,,NEEDS_TAGGING,SRC-007
+M6.1,Confirm applicable requirements / CIPs,Agentic execution,"Agentic band - flavour unspecified, must be tagged",,,,,,,,,,,NEEDS_TAGGING,SRC-007
+M6.2,Check completeness,Agentic execution,"Agentic band - flavour unspecified, must be tagged",,,,,,,,,,,NEEDS_TAGGING,SRC-007
+M6.3,Validate evidence sources,Agentic execution,"Agentic band - flavour unspecified, must be tagged",,,,,,,,,,,NEEDS_TAGGING,SRC-007
+M6.4,Assess evidence sufficiency,Agentic execution,"Agentic band - flavour unspecified, must be tagged",,,,,,,,,,,NEEDS_TAGGING,SRC-007
+M6.5,Cross-check screening & EDD conditions,Agentic execution,"Agentic band - flavour unspecified, must be tagged",,,,,,,,,,,NEEDS_TAGGING,SRC-007
+M6.6,Identify & issue gaps,Agentic execution,"Agentic band - flavour unspecified, must be tagged",,,,,,,,,,,NEEDS_TAGGING,SRC-007
+M6.7,Re-review remediated items,Agentic execution,"Agentic band - flavour unspecified, must be tagged",,,,,,,,,,,NEEDS_TAGGING,SRC-007
+M6.8,Provide QA sign-off,Agentic execution,"Agentic band - flavour unspecified, must be tagged",,,,,,,,,,,NEEDS_TAGGING,SRC-007
+M7.1,Initiate conflicts check,Agentic execution,"Agentic band - flavour unspecified, must be tagged",,,,,,,,,,,NEEDS_TAGGING,SRC-007
+M7.2,Perform conflicts / NDA search,Agentic execution,"Agentic band - flavour unspecified, must be tagged",,,,,,,,,,,NEEDS_TAGGING,SRC-007
+M7.3,Investigate & resolve conflicts,Agentic execution,"Agentic band - flavour unspecified, must be tagged",,,,,,,,,,,NEEDS_TAGGING,SRC-007
+M7.4,Record conflict clearance,Agentic execution,"Agentic band - flavour unspecified, must be tagged",,,,,,,,,,,NEEDS_TAGGING,SRC-007
+M7.5,Investigate potential conflicts,RMG Control Room,Human lane,,,,,,,,,,,NEEDS_TAGGING,SRC-007
+M7.6,Escalate to senior manager if required,RMG Control Room,Human lane,,,,,,,,,,,NEEDS_TAGGING,SRC-007
+M7.7,Confirm and record outcome,RMG Control Room,Human lane,,,,,,,,,,,NEEDS_TAGGING,SRC-007
+M8.1,Confirm all required clearance prerequisites are complete,Agentic execution,"Agentic band - flavour unspecified, must be tagged",,,,,,,,,,,NEEDS_TAGGING,SRC-007
+M8.2,Finalise onboarding case & link supporting outputs,Agentic execution,"Agentic band - flavour unspecified, must be tagged",,,,,,,,,,,NEEDS_TAGGING,SRC-007
+M8.3,Confirm / record cleared-to-trade status,Agentic execution,"Agentic band - flavour unspecified, must be tagged",,,,,,,,,,,NEEDS_TAGGING,SRC-007
+M8.4,Record clearance timestamp,Agentic execution,"Agentic band - flavour unspecified, must be tagged",,,,,,,,,,,NEEDS_TAGGING,SRC-007
+M8.5,Communication outcome,Sales / RM (Front Office),Human lane,,,,,,,,,,,NEEDS_TAGGING,SRC-007
+HITL-01,Resolve classification exceptions,Client Fulfilment / KYC Ops,Human lane,,,,,,,,,,,NEEDS_TAGGING,SRC-007
+HITL-02,Resolve complex info gaps,Client Fulfilment / KYC Ops,Human lane,,,,,,,,,,,NEEDS_TAGGING,SRC-007
+HITL-03,Review ambiguous screening hits,Client Fulfilment / KYC Ops,Human lane,,,,,,,,,,,NEEDS_TAGGING,SRC-007
+HITL-04,Support evidence gaps where needed,Client Fulfilment / KYC Ops,Human lane,,,,,,,,,,,NEEDS_TAGGING,SRC-007
+HITL-05,Adjudicate material screening finding,Financial Crime Risk / Compliance,Human lane,,,,,,,,,,,NEEDS_TAGGING,SRC-007

@@ -1,0 +1,11 @@
+{
+  "at": "2026-09-07T23:22:50.618Z",
+  "results": [
+    {
+      "name": "Role activities have real scenario entry controls",
+      "status": "failed",
+      "error": "Expected clickable role activities; existing static role rows have none"
+    }
+  ],
+  "errors": []
+}

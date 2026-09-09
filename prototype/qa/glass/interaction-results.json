@@ -1,0 +1,61 @@
+{
+  "at": "2026-09-07T06:28:44.381Z",
+  "results": [
+    {
+      "name": "Authored scene appears within the desktop first viewport",
+      "pass": true
+    },
+    {
+      "name": "Controls have a separate material plane with stable text",
+      "pass": true
+    },
+    {
+      "name": "Scenario primary actions remain visible with a long diagram",
+      "pass": true
+    },
+    {
+      "name": "Return actions remain on screen when workspace content is scrolled",
+      "pass": true
+    },
+    {
+      "name": "Close control stays in the modal top-right corner",
+      "pass": true
+    },
+    {
+      "name": "Capsule hit target and keyboard focus survive comparison changes",
+      "pass": true
+    },
+    {
+      "name": "Hover, pressure and release act on material but not text",
+      "pass": true
+    },
+    {
+      "name": "Segment selection travels rather than snapping after render",
+      "pass": true
+    },
+    {
+      "name": "Release rebound survives a control-triggered render",
+      "pass": true
+    },
+    {
+      "name": "Dirty-input dialog receives the same material control states",
+      "pass": true
+    },
+    {
+      "name": "Current scenario to Target task and back preserves locale and camera",
+      "pass": true
+    },
+    {
+      "name": "Reduced motion removes tilt, stretch and rebound",
+      "pass": true
+    },
+    {
+      "name": "All six authored scenes and three diagrams remain in print",
+      "pass": true
+    },
+    {
+      "name": "Touch layout fits viewport without document overflow",
+      "pass": true
+    }
+  ]
+}

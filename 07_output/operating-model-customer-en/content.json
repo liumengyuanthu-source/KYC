@@ -1,0 +1,4649 @@
+{
+  "title": "Operating Model — Person T Screening Review",
+  "client": "Confidential Australian Banking Client",
+  "version": "D4 v0.1 · Person T pilot",
+  "status": "Design proposal · synthetic authored example · real implementation and bank approval unverified",
+  "legend": "Workflow contains work · Rule checks and records · Skill prepares · Human decides · Agent is a conditional candidate",
+  "scene": "SCN-MATCH",
+  "branch": "BR-07",
+  "workflow": "WF-05",
+  "groups": [
+    {
+      "id": "OM-MATCH-G1",
+      "title": "Bind query context",
+      "note": "Rule binds the subject, query and source versions. It adds no query result.",
+      "action_refs": [
+        "D4A-MATCH-01-01",
+        "D4A-MATCH-01-02"
+      ]
+    },
+    {
+      "id": "OM-MATCH-G2",
+      "title": "Compare identifiers",
+      "note": "Rule preserves precision and unknowns; Skill prepares cited differences without an identity verdict.",
+      "action_refs": [
+        "D4A-MATCH-02-01",
+        "D4A-MATCH-02-02"
+      ]
+    },
+    {
+      "id": "OM-MATCH-G3",
+      "title": "Resolve the evidence gap",
+      "note": "A conditional candidate may plan evidence gathering. Skill drafts the request; a human confirms access and disclosure. Skip this branch if no gap exists.",
+      "action_refs": [
+        "D4A-MATCH-03-01",
+        "D4A-MATCH-03-02",
+        "D4A-MATCH-03-03"
+      ]
+    },
+    {
+      "id": "OM-MATCH-G4",
+      "title": "Prepare the review pack",
+      "note": "Skill prepares facts and unknowns; Rule checks access, citations and current versions. Preparation is not a decision.",
+      "action_refs": [
+        "D4A-MATCH-04-01",
+        "D4A-MATCH-04-02",
+        "D4A-MATCH-05-01"
+      ]
+    },
+    {
+      "id": "OM-MATCH-G5",
+      "title": "Human review",
+      "note": "People retain materiality and disposition. Rule applies a scoped hold. Independent approval applies only where configured.",
+      "action_refs": [
+        "D4A-MATCH-05-02",
+        "D4A-MATCH-05-03",
+        "D4A-MATCH-06-01",
+        "D4A-MATCH-06-02"
+      ]
+    },
+    {
+      "id": "OM-MATCH-G6",
+      "title": "Record the local outcome",
+      "note": "Rule records an authorised result, recalculates affected coverage and projects remaining conditions. The whole case stays open.",
+      "action_refs": [
+        "D4A-MATCH-06-03",
+        "D4A-MATCH-07-01",
+        "D4A-MATCH-07-02"
+      ]
+    }
+  ],
+  "actions": [
+    {
+      "id": "D4A-MATCH-01-01",
+      "title": "Bind the finding, subject snapshot, query scope and source version",
+      "change": "Reassigned",
+      "recommendation": "Workflow + Rule / Code",
+      "reason": "Writing and version checks have fixed inputs and outputs; a model does not need to choose the next step.",
+      "inputs": [
+        "ProviderRecordSnapshot",
+        "RunSubjectSnapshot",
+        "RunId"
+      ],
+      "outputs": [
+        "ScreeningFinding"
+      ],
+      "skills": [
+        "SK-11"
+      ],
+      "relation": "Used by execution",
+      "human": "Financial Crime / authorised screening reviewer",
+      "preconditions": [
+        "Input objects exist with explicit source and version",
+        "The current actor or tool has the required read and action scope",
+        "No applicable prohibiting hold exists",
+        "Do not execute automatically if required policy or accountability is unknown"
+      ],
+      "forbidden": [
+        "Create or alter bank policy or permissions",
+        "Overwrite historical evidence or decisions",
+        "Change business region, lists or applicability on a language switch",
+        "Record whole-case clearance without a valid basis",
+        "Replace missing prerequisites or failed receipts with success",
+        "Treat product write access as business decision authority",
+        "Exclude identity or declare global absence of risk from similarity or no results"
+      ],
+      "stop": "Pause the affected work if population is incomplete, a source fails, identity information is insufficient, permission is missing or materiality awaits judgement. Keep this action pending when its required inputs or permissions are absent.",
+      "resume": "After new evidence, query results or an authorised decision arrive, reassess only affected items. Recheck read/write permissions, current versions and the original task / return anchor. Opening a task or pressing Next never authorises resumption.",
+      "references": [
+        "IND-WOLFSBERG"
+      ]
+    },
+    {
+      "id": "D4A-MATCH-01-02",
+      "title": "Check record consistency and flag duplicate or related candidates",
+      "change": "Reassigned",
+      "recommendation": "Workflow + Rule / Code",
+      "reason": "Approved conditions, fields and current versions determine this result. Missing rules require clarification; a model cannot invent them.",
+      "inputs": [
+        "ScreeningFinding",
+        "KnownFindingRegistry"
+      ],
+      "outputs": [
+        "FindingConsistencyCheck"
+      ],
+      "skills": [
+        "SK-03",
+        "SK-10"
+      ],
+      "relation": "Used by execution",
+      "human": "Financial Crime / authorised screening reviewer",
+      "preconditions": [
+        "Input objects exist with explicit source and version",
+        "The current actor or tool has the required read and action scope",
+        "No applicable prohibiting hold exists",
+        "Do not execute automatically if required policy or accountability is unknown"
+      ],
+      "forbidden": [
+        "Create or alter bank policy or permissions",
+        "Overwrite historical evidence or decisions",
+        "Change business region, lists or applicability on a language switch",
+        "Record whole-case clearance without a valid basis",
+        "Replace missing prerequisites or failed receipts with success",
+        "Treat product write access as business decision authority",
+        "Exclude identity or declare global absence of risk from similarity or no results"
+      ],
+      "stop": "Pause the affected work if population is incomplete, a source fails, identity information is insufficient, permission is missing or materiality awaits judgement. Keep this action pending when its required inputs or permissions are absent.",
+      "resume": "After new evidence, query results or an authorised decision arrive, reassess only affected items. Recheck read/write permissions, current versions and the original task / return anchor. Opening a task or pressing Next never authorises resumption.",
+      "references": [
+        "IND-WOLFSBERG"
+      ]
+    },
+    {
+      "id": "D4A-MATCH-02-01",
+      "title": "Preserve date precision, multiple values, original script and missing values",
+      "change": "Enhanced",
+      "recommendation": "Workflow + Rule / Code",
+      "reason": "Approved conditions, fields and current versions determine this result. Missing rules require clarification; a model cannot invent them.",
+      "inputs": [
+        "SubjectClaims",
+        "ProviderClaims"
+      ],
+      "outputs": [
+        "TypedComparableClaims"
+      ],
+      "skills": [
+        "SK-03"
+      ],
+      "relation": "Used by execution",
+      "human": "Financial Crime / authorised screening reviewer",
+      "preconditions": [
+        "Input objects exist with explicit source and version",
+        "The current actor or tool has the required read and action scope",
+        "No applicable prohibiting hold exists",
+        "Do not execute automatically if required policy or accountability is unknown"
+      ],
+      "forbidden": [
+        "Create or alter bank policy or permissions",
+        "Overwrite historical evidence or decisions",
+        "Change business region, lists or applicability on a language switch",
+        "Record whole-case clearance without a valid basis",
+        "Replace missing prerequisites or failed receipts with success",
+        "Treat product write access as business decision authority",
+        "Exclude identity or declare global absence of risk from similarity or no results"
+      ],
+      "stop": "Pause the affected work if population is incomplete, a source fails, identity information is insufficient, permission is missing or materiality awaits judgement. Keep this action pending when its required inputs or permissions are absent.",
+      "resume": "After new evidence, query results or an authorised decision arrive, reassess only affected items. Recheck read/write permissions, current versions and the original task / return anchor. Opening a task or pressing Next never authorises resumption.",
+      "references": [
+        "REG-DFAT-LIST"
+      ]
+    },
+    {
+      "id": "D4A-MATCH-02-02",
+      "title": "Prepare a cited matrix of similarities, differences and incomparable values",
+      "change": "Enhanced",
+      "recommendation": "Workflow + Semantic Skill",
+      "reason": "Comparison and synthesis need context, but a bounded comparison Skill can prepare the result without a professional conclusion.",
+      "inputs": [
+        "TypedComparableClaims"
+      ],
+      "outputs": [
+        "AttributeComparison[]"
+      ],
+      "skills": [
+        "SK-03"
+      ],
+      "relation": "Used by execution",
+      "human": "Financial Crime / authorised screening reviewer",
+      "preconditions": [
+        "Input objects exist with explicit source and version",
+        "The current actor or tool has the required read and action scope",
+        "No applicable prohibiting hold exists",
+        "Do not execute automatically if required policy or accountability is unknown"
+      ],
+      "forbidden": [
+        "Create or alter bank policy or permissions",
+        "Overwrite historical evidence or decisions",
+        "Change business region, lists or applicability on a language switch",
+        "Record whole-case clearance without a valid basis",
+        "Mark candidates or proposals as accepted facts",
+        "Record formal professional decisions or authorisation",
+        "Dispatch content to unapproved recipients",
+        "Directly write sufficiency or readiness truth",
+        "Exclude identity or declare global absence of risk from similarity or no results"
+      ],
+      "stop": "Pause the affected work if population is incomplete, a source fails, identity information is insufficient, permission is missing or materiality awaits judgement. Keep this action pending when its required inputs or permissions are absent.",
+      "resume": "After new evidence, query results or an authorised decision arrive, reassess only affected items. Recheck read/write permissions, current versions and the original task / return anchor. Opening a task or pressing Next never authorises resumption.",
+      "references": [
+        "REG-DFAT-LIST"
+      ]
+    },
+    {
+      "id": "D4A-MATCH-03-01",
+      "title": "Choose the next permitted evidence source and stopping conditions",
+      "change": "Enhanced",
+      "recommendation": "Bounded Agent candidate",
+      "reason": "Returned evidence may change the next permitted source or Skill. Only this limited evidence planning is an Agent candidate.",
+      "inputs": [
+        "FindingUnknowns",
+        "ExistingEvidence",
+        "AllowedSources",
+        "PreviousReceipts"
+      ],
+      "outputs": [
+        "IdentityEvidencePlanProposal"
+      ],
+      "skills": [
+        "SK-01",
+        "SK-05",
+        "SK-06"
+      ],
+      "relation": "Used by execution",
+      "human": "Financial Crime / authorised screening reviewer",
+      "preconditions": [
+        "Input objects exist with explicit source and version",
+        "The current actor or tool has the required read and action scope",
+        "No applicable prohibiting hold exists",
+        "Do not execute automatically if required policy or accountability is unknown"
+      ],
+      "forbidden": [
+        "Create or alter bank policy or permissions",
+        "Overwrite historical evidence or decisions",
+        "Change business region, lists or applicability on a language switch",
+        "Record whole-case clearance without a valid basis",
+        "Mark candidates or proposals as accepted facts",
+        "Record formal professional decisions or authorisation",
+        "Dispatch content to unapproved recipients",
+        "Directly write sufficiency or readiness truth",
+        "Exclude identity or declare global absence of risk from similarity or no results"
+      ],
+      "stop": "Pause the affected work if population is incomplete, a source fails, identity information is insufficient, permission is missing or materiality awaits judgement. Keep this action pending when its required inputs or permissions are absent.",
+      "resume": "After new evidence, query results or an authorised decision arrive, reassess only affected items. Recheck read/write permissions, current versions and the original task / return anchor. Opening a task or pressing Next never authorises resumption.",
+      "references": [
+        "IB-ANZ-SECURE"
+      ]
+    },
+    {
+      "id": "D4A-MATCH-03-02",
+      "title": "Turn remaining identity facts into a limited request draft",
+      "change": "Enhanced",
+      "recommendation": "Workflow + Semantic Skill",
+      "reason": "A cited preparation task has a clear deliverable. A pack is not approval; use a Skill for fixed inputs.",
+      "inputs": [
+        "IdentityEvidencePlanProposal",
+        "AllowedClientReason"
+      ],
+      "outputs": [
+        "IdentityRequestDraft"
+      ],
+      "skills": [
+        "SK-08"
+      ],
+      "relation": "Used by execution",
+      "human": "Financial Crime / authorised screening reviewer",
+      "preconditions": [
+        "Input objects exist with explicit source and version",
+        "The current actor or tool has the required read and action scope",
+        "No applicable prohibiting hold exists",
+        "Do not execute automatically if required policy or accountability is unknown"
+      ],
+      "forbidden": [
+        "Create or alter bank policy or permissions",
+        "Overwrite historical evidence or decisions",
+        "Change business region, lists or applicability on a language switch",
+        "Record whole-case clearance without a valid basis",
+        "Mark candidates or proposals as accepted facts",
+        "Record formal professional decisions or authorisation",
+        "Dispatch content to unapproved recipients",
+        "Directly write sufficiency or readiness truth",
+        "Exclude identity or declare global absence of risk from similarity or no results"
+      ],
+      "stop": "Pause the affected work if population is incomplete, a source fails, identity information is insufficient, permission is missing or materiality awaits judgement. Keep this action pending when its required inputs or permissions are absent.",
+      "resume": "After new evidence, query results or an authorised decision arrive, reassess only affected items. Recheck read/write permissions, current versions and the original task / return anchor. Opening a task or pressing Next never authorises resumption.",
+      "references": [
+        "IB-ANZ-SECURE"
+      ]
+    },
+    {
+      "id": "D4A-MATCH-03-03",
+      "title": "Confirm recipients, disclosure and access for personal evidence",
+      "change": "Enhanced",
+      "recommendation": "Human + prepared evidence",
+      "reason": "Formal authority belongs to the responsible person. Automated checks and recording cannot grant that authority to a model.",
+      "inputs": [
+        "IdentityRequestDraft",
+        "ExistingGrant"
+      ],
+      "outputs": [
+        "IdentityRequestAccessDecision"
+      ],
+      "skills": [
+        "SK-06"
+      ],
+      "relation": "Supports the human action",
+      "human": "Request / access authority",
+      "preconditions": [
+        "Input objects exist with explicit source and version",
+        "The current actor or tool has the required read and action scope",
+        "No applicable prohibiting hold exists",
+        "Do not execute automatically if required policy or accountability is unknown"
+      ],
+      "forbidden": [
+        "Create or alter bank policy or permissions",
+        "Overwrite historical evidence or decisions",
+        "Change business region, lists or applicability on a language switch",
+        "Record whole-case clearance without a valid basis",
+        "Exclude identity or declare global absence of risk from similarity or no results"
+      ],
+      "stop": "Pause the affected work if population is incomplete, a source fails, identity information is insufficient, permission is missing or materiality awaits judgement. Keep this action pending when its required inputs or permissions are absent.",
+      "resume": "After new evidence, query results or an authorised decision arrive, reassess only affected items. Recheck read/write permissions, current versions and the original task / return anchor. Opening a task or pressing Next never authorises resumption.",
+      "references": [
+        "IB-ANZ-SECURE"
+      ]
+    },
+    {
+      "id": "D4A-MATCH-04-01",
+      "title": "Prepare cited facts, unknowns, contradictions and permitted actions",
+      "change": "Enhanced",
+      "recommendation": "Workflow + Semantic Skill",
+      "reason": "A cited preparation task has a clear deliverable. A pack is not approval; use a Skill for fixed inputs.",
+      "inputs": [
+        "Finding",
+        "CurrentEvidenceUse",
+        "Comparison",
+        "AllowedActionSet"
+      ],
+      "outputs": [
+        "ScreeningDecisionPack"
+      ],
+      "skills": [
+        "SK-06"
+      ],
+      "relation": "Used by execution",
+      "human": "Financial Crime / authorised screening reviewer",
+      "preconditions": [
+        "Input objects exist with explicit source and version",
+        "The current actor or tool has the required read and action scope",
+        "No applicable prohibiting hold exists",
+        "Do not execute automatically if required policy or accountability is unknown"
+      ],
+      "forbidden": [
+        "Create or alter bank policy or permissions",
+        "Overwrite historical evidence or decisions",
+        "Change business region, lists or applicability on a language switch",
+        "Record whole-case clearance without a valid basis",
+        "Mark candidates or proposals as accepted facts",
+        "Record formal professional decisions or authorisation",
+        "Dispatch content to unapproved recipients",
+        "Directly write sufficiency or readiness truth",
+        "Exclude identity or declare global absence of risk from similarity or no results"
+      ],
+      "stop": "Pause the affected work if population is incomplete, a source fails, identity information is insufficient, permission is missing or materiality awaits judgement. Keep this action pending when its required inputs or permissions are absent.",
+      "resume": "After new evidence, query results or an authorised decision arrive, reassess only affected items. Recheck read/write permissions, current versions and the original task / return anchor. Opening a task or pressing Next never authorises resumption.",
+      "references": [
+        "IND-WOLFSBERG"
+      ]
+    },
+    {
+      "id": "D4A-MATCH-04-02",
+      "title": "Check pack citations, access, current versions and unsupported conclusions",
+      "change": "Enhanced",
+      "recommendation": "Workflow + Rule / Code",
+      "reason": "Approved conditions, fields and current versions determine this result. Missing rules require clarification; a model cannot invent them.",
+      "inputs": [
+        "ScreeningDecisionPack",
+        "AccessScope",
+        "CurrentRevisions"
+      ],
+      "outputs": [
+        "DecisionPackValidation"
+      ],
+      "skills": [
+        "SK-05",
+        "SK-10"
+      ],
+      "relation": "Used by execution",
+      "human": "Financial Crime / authorised screening reviewer",
+      "preconditions": [
+        "Input objects exist with explicit source and version",
+        "The current actor or tool has the required read and action scope",
+        "No applicable prohibiting hold exists",
+        "Do not execute automatically if required policy or accountability is unknown"
+      ],
+      "forbidden": [
+        "Create or alter bank policy or permissions",
+        "Overwrite historical evidence or decisions",
+        "Change business region, lists or applicability on a language switch",
+        "Record whole-case clearance without a valid basis",
+        "Replace missing prerequisites or failed receipts with success",
+        "Treat product write access as business decision authority",
+        "Exclude identity or declare global absence of risk from similarity or no results"
+      ],
+      "stop": "Pause the affected work if population is incomplete, a source fails, identity information is insufficient, permission is missing or materiality awaits judgement. Keep this action pending when its required inputs or permissions are absent.",
+      "resume": "After new evidence, query results or an authorised decision arrive, reassess only affected items. Recheck read/write permissions, current versions and the original task / return anchor. Opening a task or pressing Next never authorises resumption.",
+      "references": [
+        "IND-WOLFSBERG"
+      ]
+    },
+    {
+      "id": "D4A-MATCH-05-01",
+      "title": "Prepare materiality facts and unresolved contradictions",
+      "change": "Retained",
+      "recommendation": "Workflow + Semantic Skill",
+      "reason": "A cited preparation task has a clear deliverable. A pack is not approval; use a Skill for fixed inputs.",
+      "inputs": [
+        "Finding",
+        "Evidence",
+        "RiskContext"
+      ],
+      "outputs": [
+        "MaterialityBrief"
+      ],
+      "skills": [
+        "SK-06"
+      ],
+      "relation": "Used by execution",
+      "human": "Financial Crime / authorised screening reviewer",
+      "preconditions": [
+        "Input objects exist with explicit source and version",
+        "The current actor or tool has the required read and action scope",
+        "No applicable prohibiting hold exists",
+        "Do not execute automatically if required policy or accountability is unknown"
+      ],
+      "forbidden": [
+        "Create or alter bank policy or permissions",
+        "Overwrite historical evidence or decisions",
+        "Change business region, lists or applicability on a language switch",
+        "Record whole-case clearance without a valid basis",
+        "Mark candidates or proposals as accepted facts",
+        "Record formal professional decisions or authorisation",
+        "Dispatch content to unapproved recipients",
+        "Directly write sufficiency or readiness truth",
+        "Exclude identity or declare global absence of risk from similarity or no results"
+      ],
+      "stop": "Pause the affected work if population is incomplete, a source fails, identity information is insufficient, permission is missing or materiality awaits judgement. Keep this action pending when its required inputs or permissions are absent.",
+      "resume": "After new evidence, query results or an authorised decision arrive, reassess only affected items. Recheck read/write permissions, current versions and the original task / return anchor. Opening a task or pressing Next never authorises resumption.",
+      "references": [
+        "IND-WOLFSBERG"
+      ]
+    },
+    {
+      "id": "D4A-MATCH-05-02",
+      "title": "Judge ambiguous or material matters and the need for escalation",
+      "change": "Retained",
+      "recommendation": "Human + prepared evidence",
+      "reason": "Substantive judgement and uncertainty require an appropriately qualified, accountable person. Complex context does not authorise autonomous decisions.",
+      "inputs": [
+        "MaterialityBrief",
+        "ApplicableControlContext"
+      ],
+      "outputs": [
+        "RiskMaterialityDecision"
+      ],
+      "skills": [
+        "SK-06"
+      ],
+      "relation": "Supports the human action",
+      "human": "Financial Crime authority",
+      "preconditions": [
+        "Input objects exist with explicit source and version",
+        "The current actor or tool has the required read and action scope",
+        "No applicable prohibiting hold exists",
+        "Do not execute automatically if required policy or accountability is unknown"
+      ],
+      "forbidden": [
+        "Create or alter bank policy or permissions",
+        "Overwrite historical evidence or decisions",
+        "Change business region, lists or applicability on a language switch",
+        "Record whole-case clearance without a valid basis",
+        "Exclude identity or declare global absence of risk from similarity or no results"
+      ],
+      "stop": "Pause the affected work if population is incomplete, a source fails, identity information is insufficient, permission is missing or materiality awaits judgement. Keep this action pending when its required inputs or permissions are absent.",
+      "resume": "After new evidence, query results or an authorised decision arrive, reassess only affected items. Recheck read/write permissions, current versions and the original task / return anchor. Opening a task or pressing Next never authorises resumption.",
+      "references": [
+        "IND-WOLFSBERG"
+      ]
+    },
+    {
+      "id": "D4A-MATCH-05-03",
+      "title": "Apply a hold to specific actions using explicit decisions and rules",
+      "change": "Retained",
+      "recommendation": "Workflow + Rule / Code",
+      "reason": "Approved conditions, fields and current versions determine this result. Missing rules require clarification; a model cannot invent them.",
+      "inputs": [
+        "RiskMaterialityDecision",
+        "HoldPolicy"
+      ],
+      "outputs": [
+        "ScopedHold",
+        "EscalationTask"
+      ],
+      "skills": [
+        "SK-07",
+        "SK-10"
+      ],
+      "relation": "Used by execution",
+      "human": "Financial Crime / authorised screening reviewer",
+      "preconditions": [
+        "Input objects exist with explicit source and version",
+        "The current actor or tool has the required read and action scope",
+        "No applicable prohibiting hold exists",
+        "Do not execute automatically if required policy or accountability is unknown"
+      ],
+      "forbidden": [
+        "Create or alter bank policy or permissions",
+        "Overwrite historical evidence or decisions",
+        "Change business region, lists or applicability on a language switch",
+        "Record whole-case clearance without a valid basis",
+        "Replace missing prerequisites or failed receipts with success",
+        "Treat product write access as business decision authority",
+        "Exclude identity or declare global absence of risk from similarity or no results"
+      ],
+      "stop": "Pause the affected work if population is incomplete, a source fails, identity information is insufficient, permission is missing or materiality awaits judgement. Keep this action pending when its required inputs or permissions are absent.",
+      "resume": "After new evidence, query results or an authorised decision arrive, reassess only affected items. Recheck read/write permissions, current versions and the original task / return anchor. Opening a task or pressing Next never authorises resumption.",
+      "references": [
+        "IND-WOLFSBERG"
+      ]
+    },
+    {
+      "id": "D4A-MATCH-06-01",
+      "title": "Choose a supported local disposition or keep the finding unresolved",
+      "change": "Enhanced",
+      "recommendation": "Human + prepared evidence",
+      "reason": "Substantive judgement and uncertainty require an appropriately qualified, accountable person. Complex context does not authorise autonomous decisions.",
+      "inputs": [
+        "ScreeningDecisionPack",
+        "CurrentInputManifest"
+      ],
+      "outputs": [
+        "ProposedDisposition",
+        "HumanRationale"
+      ],
+      "skills": [
+        "SK-06"
+      ],
+      "relation": "Supports the human action",
+      "human": "Authorised screening reviewer",
+      "preconditions": [
+        "Input objects exist with explicit source and version",
+        "The current actor or tool has the required read and action scope",
+        "No applicable prohibiting hold exists",
+        "Do not execute automatically if required policy or accountability is unknown"
+      ],
+      "forbidden": [
+        "Create or alter bank policy or permissions",
+        "Overwrite historical evidence or decisions",
+        "Change business region, lists or applicability on a language switch",
+        "Record whole-case clearance without a valid basis",
+        "Exclude identity or declare global absence of risk from similarity or no results"
+      ],
+      "stop": "Pause the affected work if population is incomplete, a source fails, identity information is insufficient, permission is missing or materiality awaits judgement. Keep this action pending when its required inputs or permissions are absent.",
+      "resume": "After new evidence, query results or an authorised decision arrive, reassess only affected items. Recheck read/write permissions, current versions and the original task / return anchor. Opening a task or pressing Next never authorises resumption.",
+      "references": [
+        "IND-WOLFSBERG",
+        "XB-FHIR-R5"
+      ]
+    },
+    {
+      "id": "D4A-MATCH-06-02",
+      "title": "Obtain independent authority only where the configuration requires it",
+      "change": "Enhanced",
+      "recommendation": "Human + prepared evidence",
+      "reason": "Formal authority belongs to the responsible person. Automated checks and recording cannot grant that authority to a model.",
+      "inputs": [
+        "ProposedDisposition",
+        "ApprovalPolicy",
+        "ReviewerPermission"
+      ],
+      "outputs": [
+        "AuthorisedDisposition"
+      ],
+      "skills": [
+        "SK-06"
+      ],
+      "relation": "Supports the human action",
+      "human": "Configured additional approver where required",
+      "preconditions": [
+        "Input objects exist with explicit source and version",
+        "The current actor or tool has the required read and action scope",
+        "No applicable prohibiting hold exists",
+        "Do not execute automatically if required policy or accountability is unknown"
+      ],
+      "forbidden": [
+        "Create or alter bank policy or permissions",
+        "Overwrite historical evidence or decisions",
+        "Change business region, lists or applicability on a language switch",
+        "Record whole-case clearance without a valid basis",
+        "Exclude identity or declare global absence of risk from similarity or no results"
+      ],
+      "stop": "Pause the affected work if population is incomplete, a source fails, identity information is insufficient, permission is missing or materiality awaits judgement. Keep this action pending when its required inputs or permissions are absent.",
+      "resume": "After new evidence, query results or an authorised decision arrive, reassess only affected items. Recheck read/write permissions, current versions and the original task / return anchor. Opening a task or pressing Next never authorises resumption.",
+      "references": [
+        "IND-WOLFSBERG",
+        "XB-FHIR-R5"
+      ]
+    },
+    {
+      "id": "D4A-MATCH-06-03",
+      "title": "Validate current versions and authority, then record the local outcome",
+      "change": "Enhanced",
+      "recommendation": "Workflow + Rule / Code",
+      "reason": "Writing and version checks have fixed inputs and outputs; a model does not need to choose the next step.",
+      "inputs": [
+        "AuthorisedDisposition",
+        "ExpectedRevisions",
+        "IdempotencyKey"
+      ],
+      "outputs": [
+        "ScreeningReviewDecision",
+        "AuditEvent"
+      ],
+      "skills": [
+        "SK-11"
+      ],
+      "relation": "Used by execution",
+      "human": "Financial Crime / authorised screening reviewer",
+      "preconditions": [
+        "Input objects exist with explicit source and version",
+        "The current actor or tool has the required read and action scope",
+        "No applicable prohibiting hold exists",
+        "Do not execute automatically if required policy or accountability is unknown"
+      ],
+      "forbidden": [
+        "Create or alter bank policy or permissions",
+        "Overwrite historical evidence or decisions",
+        "Change business region, lists or applicability on a language switch",
+        "Record whole-case clearance without a valid basis",
+        "Replace missing prerequisites or failed receipts with success",
+        "Treat product write access as business decision authority",
+        "Exclude identity or declare global absence of risk from similarity or no results"
+      ],
+      "stop": "Pause the affected work if population is incomplete, a source fails, identity information is insufficient, permission is missing or materiality awaits judgement. Keep this action pending when its required inputs or permissions are absent.",
+      "resume": "After new evidence, query results or an authorised decision arrive, reassess only affected items. Recheck read/write permissions, current versions and the original task / return anchor. Opening a task or pressing Next never authorises resumption.",
+      "references": [
+        "IND-WOLFSBERG",
+        "XB-FHIR-R5"
+      ]
+    },
+    {
+      "id": "D4A-MATCH-07-01",
+      "title": "Calculate the limited finding and coverage impact of a disposition",
+      "change": "Enhanced",
+      "recommendation": "Workflow + Rule / Code",
+      "reason": "Approved conditions, fields and current versions determine this result. Missing rules require clarification; a model cannot invent them.",
+      "inputs": [
+        "ScreeningReviewDecision",
+        "CoverageManifest",
+        "DependencyEdge[]"
+      ],
+      "outputs": [
+        "CoverageDelta",
+        "ReadinessReevaluationEvent"
+      ],
+      "skills": [
+        "SK-10"
+      ],
+      "relation": "Used by execution",
+      "human": "Financial Crime / authorised screening reviewer",
+      "preconditions": [
+        "Input objects exist with explicit source and version",
+        "The current actor or tool has the required read and action scope",
+        "No applicable prohibiting hold exists",
+        "Do not execute automatically if required policy or accountability is unknown"
+      ],
+      "forbidden": [
+        "Create or alter bank policy or permissions",
+        "Overwrite historical evidence or decisions",
+        "Change business region, lists or applicability on a language switch",
+        "Record whole-case clearance without a valid basis",
+        "Replace missing prerequisites or failed receipts with success",
+        "Treat product write access as business decision authority",
+        "Exclude identity or declare global absence of risk from similarity or no results"
+      ],
+      "stop": "Pause the affected work if population is incomplete, a source fails, identity information is insufficient, permission is missing or materiality awaits judgement. Keep this action pending when its required inputs or permissions are absent.",
+      "resume": "After new evidence, query results or an authorised decision arrive, reassess only affected items. Recheck read/write permissions, current versions and the original task / return anchor. Opening a task or pressing Next never authorises resumption.",
+      "references": [
+        "XB-FHIR-R5"
+      ]
+    },
+    {
+      "id": "D4A-MATCH-07-02",
+      "title": "Show remaining ownership, EDD, Legal and other conditions",
+      "change": "Enhanced",
+      "recommendation": "Workflow + Rule / Code",
+      "reason": "A projection follows actual object states and permissions. A fixed query is appropriate for presenting the result.",
+      "inputs": [
+        "CurrentCaseState",
+        "AllowedRoleProjection"
+      ],
+      "outputs": [
+        "CaseImpactView"
+      ],
+      "skills": [
+        "SK-12"
+      ],
+      "relation": "Used by execution",
+      "human": "Financial Crime / authorised screening reviewer",
+      "preconditions": [
+        "Input objects exist with explicit source and version",
+        "The current actor or tool has the required read and action scope",
+        "No applicable prohibiting hold exists",
+        "Do not execute automatically if required policy or accountability is unknown"
+      ],
+      "forbidden": [
+        "Create or alter bank policy or permissions",
+        "Overwrite historical evidence or decisions",
+        "Change business region, lists or applicability on a language switch",
+        "Record whole-case clearance without a valid basis",
+        "Replace missing prerequisites or failed receipts with success",
+        "Treat product write access as business decision authority",
+        "Exclude identity or declare global absence of risk from similarity or no results"
+      ],
+      "stop": "Pause the affected work if population is incomplete, a source fails, identity information is insufficient, permission is missing or materiality awaits judgement. Keep this action pending when its required inputs or permissions are absent.",
+      "resume": "After new evidence, query results or an authorised decision arrive, reassess only affected items. Recheck read/write permissions, current versions and the original task / return anchor. Opening a task or pressing Next never authorises resumption.",
+      "references": [
+        "XB-FHIR-R5"
+      ]
+    }
+  ],
+  "skills": [
+    {
+      "id": "SK-01",
+      "name": "Context & Approved Source Retrieval",
+      "purpose": "Context & Approved Source Retrieval",
+      "input": "scope + requested facts + approved source/permission",
+      "output": "source response + receipt + unknown/failure",
+      "boundaries": "Read only by default",
+      "stops": "No access / unavailable / ambiguous subject → named gap, no invented result",
+      "kind": "deterministic entrypoints; semantic query proposal separately typed",
+      "contract_status": "Defined design proposal",
+      "sample_status": "Not authored in this pilot",
+      "prototype_binding_status": "Read-only interface binding",
+      "implementation_evidence_status": "Unverified; no model or runtime evaluation",
+      "uses": [
+        {
+          "action_ref": "D4A-SCOPE-01-02",
+          "scene_ref": "SCN-SCOPE",
+          "relation": "executes",
+          "inputs": [
+            "CandidateClaim[]",
+            "CaseSearchScope"
+          ],
+          "outputs": [
+            "DuplicateCandidate[]"
+          ]
+        },
+        {
+          "action_ref": "D4A-REQUIREMENTS-01-01",
+          "scene_ref": "SCN-REQUIREMENTS",
+          "relation": "executes",
+          "inputs": [
+            "CaseScope",
+            "ApprovedPolicyCatalogue"
+          ],
+          "outputs": [
+            "PolicyExcerpt[]"
+          ]
+        },
+        {
+          "action_ref": "D4A-REQUIREMENTS-06-02",
+          "scene_ref": "SCN-REQUIREMENTS",
+          "relation": "executes",
+          "inputs": [
+            "UnknownImpact",
+            "AllowedSkills",
+            "CaseReadContext"
+          ],
+          "outputs": [
+            "ReassessmentPlanProposal"
+          ]
+        },
+        {
+          "action_ref": "D4A-SOURCE-01-02",
+          "scene_ref": "SCN-SOURCE",
+          "relation": "executes",
+          "inputs": [
+            "AllowedSourceSet",
+            "ExistingEvidence",
+            "RetrievalResult[]"
+          ],
+          "outputs": [
+            "EvidenceSearchPlan",
+            "ResidualUnknowns"
+          ]
+        },
+        {
+          "action_ref": "D4A-SOURCE-01-03",
+          "scene_ref": "SCN-SOURCE",
+          "relation": "executes",
+          "inputs": [
+            "ApprovedQueryIntent",
+            "SubjectSnapshot"
+          ],
+          "outputs": [
+            "SourceResponse",
+            "RetrievalReceipt"
+          ]
+        },
+        {
+          "action_ref": "D4A-SOURCE-05-02",
+          "scene_ref": "SCN-SOURCE",
+          "relation": "executes",
+          "inputs": [
+            "RetryPolicy",
+            "IdempotencyKey",
+            "LastReceipt"
+          ],
+          "outputs": [
+            "RetryReceipt",
+            "SourceUnavailableTask"
+          ]
+        },
+        {
+          "action_ref": "D4A-MATCH-03-01",
+          "scene_ref": "SCN-MATCH",
+          "relation": "executes",
+          "inputs": [
+            "FindingUnknowns",
+            "ExistingEvidence",
+            "AllowedSources",
+            "PreviousReceipts"
+          ],
+          "outputs": [
+            "IdentityEvidencePlanProposal"
+          ]
+        },
+        {
+          "action_ref": "D4A-EDD-03-01",
+          "scene_ref": "SCN-EDD",
+          "relation": "executes",
+          "inputs": [
+            "ApprovedRiskQuestions",
+            "AvailableEvidence",
+            "AllowedSources"
+          ],
+          "outputs": [
+            "EDDEvidencePlanProposal"
+          ]
+        },
+        {
+          "action_ref": "D4A-EDD-05-01",
+          "scene_ref": "SCN-EDD",
+          "relation": "executes",
+          "inputs": [
+            "RiskQuestionGaps",
+            "PriorResponses",
+            "AllowedSources"
+          ],
+          "outputs": [
+            "TargetedEnquiryPlan"
+          ]
+        },
+        {
+          "action_ref": "D4A-LEGAL-01-01",
+          "scene_ref": "SCN-LEGAL",
+          "relation": "executes",
+          "inputs": [
+            "CaseScope.revision",
+            "LegalRoleProjection"
+          ],
+          "outputs": [
+            "LegalIntakeContext"
+          ]
+        },
+        {
+          "action_ref": "D4A-CREDIT-02-01",
+          "scene_ref": "SCN-CREDIT",
+          "relation": "executes",
+          "inputs": [
+            "Counterparty",
+            "FinancialSourceScope",
+            "AccessPolicy"
+          ],
+          "outputs": [
+            "FinancialArtifact",
+            "ExposureSnapshot"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "SK-02",
+      "name": "Claim Extraction",
+      "purpose": "Claim Extraction",
+      "input": "released source artifact + extraction schema",
+      "output": "candidate claims + locators + extraction status",
+      "boundaries": "Draft candidates only",
+      "stops": "unsupported or conflicting field → abstain / unknown, never populate from general knowledge",
+      "kind": "semantic",
+      "contract_status": "Defined design proposal",
+      "sample_status": "Not authored in this pilot",
+      "prototype_binding_status": "Read-only interface binding",
+      "implementation_evidence_status": "Unverified; no model or runtime evaluation",
+      "uses": [
+        {
+          "action_ref": "D4A-SCOPE-01-01",
+          "scene_ref": "SCN-SCOPE",
+          "relation": "executes",
+          "inputs": [
+            "IntakeArtifact.content",
+            "SourcePermission"
+          ],
+          "outputs": [
+            "CandidateClaim[]"
+          ]
+        },
+        {
+          "action_ref": "D4A-ENTITY-03-01",
+          "scene_ref": "SCN-ENTITY",
+          "relation": "executes",
+          "inputs": [
+            "OwnershipArtifact",
+            "EntityRefs"
+          ],
+          "outputs": [
+            "RelationshipClaim[]"
+          ]
+        },
+        {
+          "action_ref": "D4A-ENTITY-04-01",
+          "scene_ref": "SCN-ENTITY",
+          "relation": "executes",
+          "inputs": [
+            "Request",
+            "RoleLetter",
+            "PartyRegistry"
+          ],
+          "outputs": [
+            "RepresentativeCandidate"
+          ]
+        },
+        {
+          "action_ref": "D4A-SOURCE-03-01",
+          "scene_ref": "SCN-SOURCE",
+          "relation": "executes",
+          "inputs": [
+            "EvidenceArtifact",
+            "ExtractionSchema"
+          ],
+          "outputs": [
+            "EvidenceClaim[]"
+          ]
+        },
+        {
+          "action_ref": "D4A-VALIDATE-03-01",
+          "scene_ref": "SCN-VALIDATE",
+          "relation": "executes",
+          "inputs": [
+            "EvidenceArtifact",
+            "ExistingClaims"
+          ],
+          "outputs": [
+            "CandidateClaim[]"
+          ]
+        },
+        {
+          "action_ref": "D4A-LEGAL-08-01",
+          "scene_ref": "SCN-LEGAL",
+          "relation": "executes",
+          "inputs": [
+            "SignedArtifact",
+            "KeyTermSchema"
+          ],
+          "outputs": [
+            "KeyTermCandidate[]"
+          ]
+        },
+        {
+          "action_ref": "D4A-CREDIT-02-02",
+          "scene_ref": "SCN-CREDIT",
+          "relation": "executes",
+          "inputs": [
+            "FinancialArtifact",
+            "FieldSchema"
+          ],
+          "outputs": [
+            "FinancialClaim[]"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "SK-03",
+      "name": "Entity / Attribute / Duplicate Comparison",
+      "purpose": "Entity / Attribute / Duplicate Comparison",
+      "input": "two versioned claim sets + permitted comparison scope",
+      "output": "similar / different / inconclusive / not_comparable with evidence",
+      "boundaries": "Candidate comparison only",
+      "stops": "missing/partial dates, scripts, aliases → preserve precision; no identity verdict",
+      "kind": "deterministic normalisation + semantic candidate interpretation",
+      "contract_status": "Defined design proposal",
+      "sample_status": "Authored synthetic sample",
+      "prototype_binding_status": "Read-only interface binding",
+      "implementation_evidence_status": "Unverified; no model or runtime evaluation",
+      "uses": [
+        {
+          "action_ref": "D4A-SCOPE-01-02",
+          "scene_ref": "SCN-SCOPE",
+          "relation": "executes",
+          "inputs": [
+            "CandidateClaim[]",
+            "CaseSearchScope"
+          ],
+          "outputs": [
+            "DuplicateCandidate[]"
+          ]
+        },
+        {
+          "action_ref": "D4A-ENTITY-01-01",
+          "scene_ref": "SCN-ENTITY",
+          "relation": "executes",
+          "inputs": [
+            "PartyClaims[]",
+            "RegistrySnapshot"
+          ],
+          "outputs": [
+            "EntityMatchCandidate[]"
+          ]
+        },
+        {
+          "action_ref": "D4A-ENTITY-05-01",
+          "scene_ref": "SCN-ENTITY",
+          "relation": "executes",
+          "inputs": [
+            "AuthorityRequirement[]",
+            "RoleClaims",
+            "EvidenceUse[]"
+          ],
+          "outputs": [
+            "AuthorityEvidenceMatrix"
+          ]
+        },
+        {
+          "action_ref": "D4A-REQUIREMENTS-03-01",
+          "scene_ref": "SCN-REQUIREMENTS",
+          "relation": "executes",
+          "inputs": [
+            "RequirementCandidate[]"
+          ],
+          "outputs": [
+            "RequirementGroupingProposal"
+          ]
+        },
+        {
+          "action_ref": "D4A-SOURCE-04-01",
+          "scene_ref": "SCN-SOURCE",
+          "relation": "executes",
+          "inputs": [
+            "EvidenceArtifact[]",
+            "SubmissionHistory"
+          ],
+          "outputs": [
+            "ExactDuplicateCandidate[]"
+          ]
+        },
+        {
+          "action_ref": "D4A-SOURCE-04-02",
+          "scene_ref": "SCN-SOURCE",
+          "relation": "executes",
+          "inputs": [
+            "NonExactArtifactPairs"
+          ],
+          "outputs": [
+            "NearDuplicateReview"
+          ]
+        },
+        {
+          "action_ref": "D4A-SOURCE-06-01",
+          "scene_ref": "SCN-SOURCE",
+          "relation": "executes",
+          "inputs": [
+            "Requirement[]",
+            "EvidenceClaim[]"
+          ],
+          "outputs": [
+            "EvidenceUseCandidate[]"
+          ]
+        },
+        {
+          "action_ref": "D4A-VALIDATE-02-01",
+          "scene_ref": "SCN-VALIDATE",
+          "relation": "executes",
+          "inputs": [
+            "EvidenceClaim[]",
+            "RequiredSubjectPurpose"
+          ],
+          "outputs": [
+            "EvidenceContextComparison"
+          ]
+        },
+        {
+          "action_ref": "D4A-POPULATION-02-02",
+          "scene_ref": "SCN-POPULATION",
+          "relation": "executes",
+          "inputs": [
+            "MediaSourceSnapshot[]",
+            "SubjectClaims"
+          ],
+          "outputs": [
+            "MediaAttributionDraft"
+          ]
+        },
+        {
+          "action_ref": "D4A-MATCH-01-02",
+          "scene_ref": "SCN-MATCH",
+          "relation": "executes",
+          "inputs": [
+            "ScreeningFinding",
+            "KnownFindingRegistry"
+          ],
+          "outputs": [
+            "FindingConsistencyCheck"
+          ]
+        },
+        {
+          "action_ref": "D4A-MATCH-02-01",
+          "scene_ref": "SCN-MATCH",
+          "relation": "executes",
+          "inputs": [
+            "SubjectClaims",
+            "ProviderClaims"
+          ],
+          "outputs": [
+            "TypedComparableClaims"
+          ]
+        },
+        {
+          "action_ref": "D4A-MATCH-02-02",
+          "scene_ref": "SCN-MATCH",
+          "relation": "executes",
+          "inputs": [
+            "TypedComparableClaims"
+          ],
+          "outputs": [
+            "AttributeComparison[]"
+          ]
+        },
+        {
+          "action_ref": "D4A-LEGAL-04-01",
+          "scene_ref": "SCN-LEGAL",
+          "relation": "executes",
+          "inputs": [
+            "CreditCondition.spec_ref",
+            "AgreementDraft.revision"
+          ],
+          "outputs": [
+            "ConditionIncorporationCandidate"
+          ]
+        },
+        {
+          "action_ref": "D4A-LEGAL-05-02",
+          "scene_ref": "SCN-LEGAL",
+          "relation": "executes",
+          "inputs": [
+            "NegotiationResponse",
+            "AgreementRevisions"
+          ],
+          "outputs": [
+            "ClauseChangeCandidate[]"
+          ]
+        },
+        {
+          "action_ref": "D4A-CREDIT-07-01",
+          "scene_ref": "SCN-CREDIT",
+          "relation": "executes",
+          "inputs": [
+            "CurrentAgreement",
+            "PriorAgreement",
+            "CreditConditionSpec"
+          ],
+          "outputs": [
+            "CreditRelevantClauseDelta"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "SK-04",
+      "name": "Scope & Policy Condition Evaluation",
+      "purpose": "Scope & Policy Condition Evaluation",
+      "input": "approved versioned rules + current scoped facts",
+      "output": "required / not_required / unknown + basis",
+      "boundaries": "Only defined rule-derived records through command boundary",
+      "stops": "missing rules / facts / authority → unknown or review, not LLM policy generation",
+      "kind": "deterministic",
+      "contract_status": "Defined design proposal",
+      "sample_status": "Not authored in this pilot",
+      "prototype_binding_status": "Read-only interface binding",
+      "implementation_evidence_status": "Unverified; no model or runtime evaluation",
+      "uses": [
+        {
+          "action_ref": "D4A-SCOPE-02-01",
+          "scene_ref": "SCN-SCOPE",
+          "relation": "executes",
+          "inputs": [
+            "CaseScope.sales_location",
+            "BookingPolicy.revision",
+            "CandidateBookingEntity"
+          ],
+          "outputs": [
+            "BookingContextCheck",
+            "ContextGap[]"
+          ]
+        },
+        {
+          "action_ref": "D4A-SCOPE-03-01",
+          "scene_ref": "SCN-SCOPE",
+          "relation": "executes",
+          "inputs": [
+            "RequestedProduct[]",
+            "EligibilityPolicy.revision",
+            "CaseScope.revision"
+          ],
+          "outputs": [
+            "ProductEligibilityCheck"
+          ]
+        },
+        {
+          "action_ref": "D4A-SCOPE-04-01",
+          "scene_ref": "SCN-SCOPE",
+          "relation": "executes",
+          "inputs": [
+            "CaseScope",
+            "RiskIndicator[]",
+            "DDPolicy.revision"
+          ],
+          "outputs": [
+            "DDContext.candidate",
+            "DDContext.unknown_refs"
+          ]
+        },
+        {
+          "action_ref": "D4A-ENTITY-02-01",
+          "scene_ref": "SCN-ENTITY",
+          "relation": "executes",
+          "inputs": [
+            "EntityClaims",
+            "ClassificationRules.revision"
+          ],
+          "outputs": [
+            "EntityClassificationCandidate"
+          ]
+        },
+        {
+          "action_ref": "D4A-REQUIREMENTS-01-02",
+          "scene_ref": "SCN-REQUIREMENTS",
+          "relation": "executes",
+          "inputs": [
+            "ScopeInputs",
+            "PolicyRules.revision"
+          ],
+          "outputs": [
+            "RequirementApplicability[]"
+          ]
+        },
+        {
+          "action_ref": "D4A-REQUIREMENTS-02-01",
+          "scene_ref": "SCN-REQUIREMENTS",
+          "relation": "executes",
+          "inputs": [
+            "ScopeInputs",
+            "NonAMLRuleSet"
+          ],
+          "outputs": [
+            "NonAMLRequirement[]",
+            "OpenApplicability[]"
+          ]
+        },
+        {
+          "action_ref": "D4A-REQUIREMENTS-04-01",
+          "scene_ref": "SCN-REQUIREMENTS",
+          "relation": "executes",
+          "inputs": [
+            "RiskEvent",
+            "PolicyRuleSet",
+            "DependencyEdge[]"
+          ],
+          "outputs": [
+            "RequirementReassessmentProposal"
+          ]
+        },
+        {
+          "action_ref": "D4A-SOURCE-01-01",
+          "scene_ref": "SCN-SOURCE",
+          "relation": "executes",
+          "inputs": [
+            "RequiredFact",
+            "ApprovedSourceCatalogue",
+            "AccessPolicy"
+          ],
+          "outputs": [
+            "AllowedSourceSet"
+          ]
+        },
+        {
+          "action_ref": "D4A-GAP-02-02",
+          "scene_ref": "SCN-GAP",
+          "relation": "executes",
+          "inputs": [
+            "RequestItemDraft[]",
+            "RequirementRefs",
+            "DisclosureConstraints"
+          ],
+          "outputs": [
+            "RequestDraftValidation"
+          ]
+        },
+        {
+          "action_ref": "D4A-POPULATION-01-01",
+          "scene_ref": "SCN-POPULATION",
+          "relation": "executes",
+          "inputs": [
+            "CaseScope",
+            "PreScreenPolicy",
+            "KnownPartyRefs"
+          ],
+          "outputs": [
+            "PreScreenPlan",
+            "UnresolvedScope"
+          ]
+        },
+        {
+          "action_ref": "D4A-POPULATION-03-01",
+          "scene_ref": "SCN-POPULATION",
+          "relation": "executes",
+          "inputs": [
+            "PartyInventory",
+            "ScreeningCriteria.revision"
+          ],
+          "outputs": [
+            "MembershipCandidate[]",
+            "InventoryGap[]"
+          ]
+        },
+        {
+          "action_ref": "D4A-POPULATION-04-02",
+          "scene_ref": "SCN-POPULATION",
+          "relation": "executes",
+          "inputs": [
+            "PopulationRevision",
+            "QueryRequirements",
+            "InventoryGaps"
+          ],
+          "outputs": [
+            "PlanConfirmationEligibility"
+          ]
+        },
+        {
+          "action_ref": "D4A-EDD-01-01",
+          "scene_ref": "SCN-EDD",
+          "relation": "executes",
+          "inputs": [
+            "CaseScope",
+            "RiskIndicators",
+            "EDDPolicy.revision"
+          ],
+          "outputs": [
+            "EDDApplicabilityCandidate"
+          ]
+        },
+        {
+          "action_ref": "D4A-EDD-02-01",
+          "scene_ref": "SCN-EDD",
+          "relation": "executes",
+          "inputs": [
+            "EDDApplicabilityDecision",
+            "CaseScope",
+            "HoldRefs"
+          ],
+          "outputs": [
+            "EDDStartEligibility"
+          ]
+        },
+        {
+          "action_ref": "D4A-CONFLICTS-01-01",
+          "scene_ref": "SCN-CONFLICTS",
+          "relation": "executes",
+          "inputs": [
+            "CaseScope",
+            "PartyContext",
+            "ConflictPolicy",
+            "HoldRefs"
+          ],
+          "outputs": [
+            "ConflictStartEligibility"
+          ]
+        },
+        {
+          "action_ref": "D4A-LEGAL-01-02",
+          "scene_ref": "SCN-LEGAL",
+          "relation": "executes",
+          "inputs": [
+            "LegalIntakeContext",
+            "LegalIntakeDefinition"
+          ],
+          "outputs": [
+            "LegalRequest",
+            "LegalInputGap[]"
+          ]
+        },
+        {
+          "action_ref": "D4A-LEGAL-02-01",
+          "scene_ref": "SCN-LEGAL",
+          "relation": "executes",
+          "inputs": [
+            "CaseScope",
+            "ApprovedAgreementCatalogue"
+          ],
+          "outputs": [
+            "AgreementApplicabilityCandidate"
+          ]
+        },
+        {
+          "action_ref": "D4A-LEGAL-06-01",
+          "scene_ref": "SCN-LEGAL",
+          "relation": "executes",
+          "inputs": [
+            "Agreement.revision",
+            "CreditInput.revision",
+            "ApprovalManifest"
+          ],
+          "outputs": [
+            "AgreementApprovalEligibility"
+          ]
+        },
+        {
+          "action_ref": "D4A-LEGAL-07-01",
+          "scene_ref": "SCN-LEGAL",
+          "relation": "executes",
+          "inputs": [
+            "Agreement.revision",
+            "ApprovalManifest",
+            "SignatoryAuthority",
+            "HoldRefs"
+          ],
+          "outputs": [
+            "ExecutionEligibility"
+          ]
+        },
+        {
+          "action_ref": "D4A-CREDIT-01-01",
+          "scene_ref": "SCN-CREDIT",
+          "relation": "executes",
+          "inputs": [
+            "CaseScope",
+            "CreditApplicabilityRules"
+          ],
+          "outputs": [
+            "CreditApplicabilityCandidate"
+          ]
+        },
+        {
+          "action_ref": "D4A-QA-01-01",
+          "scene_ref": "SCN-QA",
+          "relation": "executes",
+          "inputs": [
+            "CaseScope",
+            "RequirementSet",
+            "QACheckDefinition"
+          ],
+          "outputs": [
+            "QAManifest",
+            "ManifestUnknowns"
+          ]
+        },
+        {
+          "action_ref": "D4A-READINESS-01-01",
+          "scene_ref": "SCN-READINESS",
+          "relation": "executes",
+          "inputs": [
+            "CaseScope",
+            "ApprovedPrerequisiteDefinition",
+            "ConditionRegistry"
+          ],
+          "outputs": [
+            "ConditionManifest",
+            "MissingConditionRefs"
+          ]
+        },
+        {
+          "action_ref": "D4A-PUBLISH-02-01",
+          "scene_ref": "SCN-PUBLISH",
+          "relation": "executes",
+          "inputs": [
+            "ReadinessSnapshot",
+            "ActorPermission",
+            "ExpectedRevisions",
+            "HoldRefs"
+          ],
+          "outputs": [
+            "ClearanceConfirmationEligibility"
+          ]
+        },
+        {
+          "action_ref": "D4A-PUBLISH-04-01",
+          "scene_ref": "SCN-PUBLISH",
+          "relation": "executes",
+          "inputs": [
+            "ClearanceDecision",
+            "PublicationPolicy",
+            "TargetAllowlist"
+          ],
+          "outputs": [
+            "ApprovedPublicationIntent"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "SK-05",
+      "name": "Evidence-use & Completeness Checks",
+      "purpose": "Evidence-use & Completeness Checks",
+      "input": "expected manifest + source/claim/use references",
+      "output": "missing objects, candidate coverage, provenance gaps",
+      "boundaries": "Draft checks or deterministic findings; not formal sufficiency judgement",
+      "stops": "missing assessment differs from invalid evidence; empty/failed manifest never passes",
+      "kind": "deterministic checks + optional semantic preparation",
+      "contract_status": "Defined design proposal",
+      "sample_status": "Not authored in this pilot",
+      "prototype_binding_status": "Read-only interface binding",
+      "implementation_evidence_status": "Unverified; no model or runtime evaluation",
+      "uses": [
+        {
+          "action_ref": "D4A-ENTITY-05-01",
+          "scene_ref": "SCN-ENTITY",
+          "relation": "executes",
+          "inputs": [
+            "AuthorityRequirement[]",
+            "RoleClaims",
+            "EvidenceUse[]"
+          ],
+          "outputs": [
+            "AuthorityEvidenceMatrix"
+          ]
+        },
+        {
+          "action_ref": "D4A-REQUIREMENTS-06-02",
+          "scene_ref": "SCN-REQUIREMENTS",
+          "relation": "executes",
+          "inputs": [
+            "UnknownImpact",
+            "AllowedSkills",
+            "CaseReadContext"
+          ],
+          "outputs": [
+            "ReassessmentPlanProposal"
+          ]
+        },
+        {
+          "action_ref": "D4A-SOURCE-01-02",
+          "scene_ref": "SCN-SOURCE",
+          "relation": "executes",
+          "inputs": [
+            "AllowedSourceSet",
+            "ExistingEvidence",
+            "RetrievalResult[]"
+          ],
+          "outputs": [
+            "EvidenceSearchPlan",
+            "ResidualUnknowns"
+          ]
+        },
+        {
+          "action_ref": "D4A-SOURCE-02-02",
+          "scene_ref": "SCN-SOURCE",
+          "relation": "executes",
+          "inputs": [
+            "ProvenanceRecord",
+            "RequiredMetadata"
+          ],
+          "outputs": [
+            "MetadataGap[]"
+          ]
+        },
+        {
+          "action_ref": "D4A-SOURCE-03-02",
+          "scene_ref": "SCN-SOURCE",
+          "relation": "executes",
+          "inputs": [
+            "EvidenceClaim[]",
+            "AllowedDocumentScope"
+          ],
+          "outputs": [
+            "ExtractionValidation",
+            "RejectedClaim[]"
+          ]
+        },
+        {
+          "action_ref": "D4A-SOURCE-06-01",
+          "scene_ref": "SCN-SOURCE",
+          "relation": "executes",
+          "inputs": [
+            "Requirement[]",
+            "EvidenceClaim[]"
+          ],
+          "outputs": [
+            "EvidenceUseCandidate[]"
+          ]
+        },
+        {
+          "action_ref": "D4A-GAP-01-01",
+          "scene_ref": "SCN-GAP",
+          "relation": "executes",
+          "inputs": [
+            "RequirementApplicability",
+            "EvidenceUseAssessment[]",
+            "OpenGap[]"
+          ],
+          "outputs": [
+            "GapDelta"
+          ]
+        },
+        {
+          "action_ref": "D4A-VALIDATE-01-02",
+          "scene_ref": "SCN-VALIDATE",
+          "relation": "executes",
+          "inputs": [
+            "SecurityScanResult",
+            "IntakePolicy"
+          ],
+          "outputs": [
+            "Artifact.intake_status",
+            "ReviewEligibility"
+          ]
+        },
+        {
+          "action_ref": "D4A-VALIDATE-04-01",
+          "scene_ref": "SCN-VALIDATE",
+          "relation": "executes",
+          "inputs": [
+            "Requirement",
+            "EvidenceClaims",
+            "UseCriteria"
+          ],
+          "outputs": [
+            "EvidenceUseReviewPack"
+          ]
+        },
+        {
+          "action_ref": "D4A-MATCH-03-01",
+          "scene_ref": "SCN-MATCH",
+          "relation": "executes",
+          "inputs": [
+            "FindingUnknowns",
+            "ExistingEvidence",
+            "AllowedSources",
+            "PreviousReceipts"
+          ],
+          "outputs": [
+            "IdentityEvidencePlanProposal"
+          ]
+        },
+        {
+          "action_ref": "D4A-MATCH-04-02",
+          "scene_ref": "SCN-MATCH",
+          "relation": "executes",
+          "inputs": [
+            "ScreeningDecisionPack",
+            "AccessScope",
+            "CurrentRevisions"
+          ],
+          "outputs": [
+            "DecisionPackValidation"
+          ]
+        },
+        {
+          "action_ref": "D4A-EDD-03-01",
+          "scene_ref": "SCN-EDD",
+          "relation": "executes",
+          "inputs": [
+            "ApprovedRiskQuestions",
+            "AvailableEvidence",
+            "AllowedSources"
+          ],
+          "outputs": [
+            "EDDEvidencePlanProposal"
+          ]
+        },
+        {
+          "action_ref": "D4A-EDD-05-01",
+          "scene_ref": "SCN-EDD",
+          "relation": "executes",
+          "inputs": [
+            "RiskQuestionGaps",
+            "PriorResponses",
+            "AllowedSources"
+          ],
+          "outputs": [
+            "TargetedEnquiryPlan"
+          ]
+        },
+        {
+          "action_ref": "D4A-CREDIT-02-03",
+          "scene_ref": "SCN-CREDIT",
+          "relation": "executes",
+          "inputs": [
+            "FinancialClaim[]",
+            "ExposureSnapshot",
+            "DataDefinition"
+          ],
+          "outputs": [
+            "CreditInputCheck",
+            "DataGap[]"
+          ]
+        },
+        {
+          "action_ref": "D4A-QA-01-01",
+          "scene_ref": "SCN-QA",
+          "relation": "executes",
+          "inputs": [
+            "CaseScope",
+            "RequirementSet",
+            "QACheckDefinition"
+          ],
+          "outputs": [
+            "QAManifest",
+            "ManifestUnknowns"
+          ]
+        },
+        {
+          "action_ref": "D4A-QA-02-01",
+          "scene_ref": "SCN-QA",
+          "relation": "executes",
+          "inputs": [
+            "QAManifest",
+            "CurrentCaseObjects"
+          ],
+          "outputs": [
+            "QACheckResult[]",
+            "MissingObjectRefs"
+          ]
+        },
+        {
+          "action_ref": "D4A-QA-03-01",
+          "scene_ref": "SCN-QA",
+          "relation": "executes",
+          "inputs": [
+            "EvidenceProvenance",
+            "SourcePolicy",
+            "CurrentRevision"
+          ],
+          "outputs": [
+            "SourceMetadataCheck"
+          ]
+        },
+        {
+          "action_ref": "D4A-QA-04-01",
+          "scene_ref": "SCN-QA",
+          "relation": "executes",
+          "inputs": [
+            "Requirement",
+            "Subject",
+            "Purpose",
+            "EvidenceUseAssessment"
+          ],
+          "outputs": [
+            "AssessmentPresenceCheck"
+          ]
+        },
+        {
+          "action_ref": "D4A-QA-05-01",
+          "scene_ref": "SCN-QA",
+          "relation": "executes",
+          "inputs": [
+            "QAManifest",
+            "ScreeningCoverage",
+            "EDDApplicability",
+            "EDDConditions"
+          ],
+          "outputs": [
+            "CrossConditionCheck",
+            "SpecificIssueRefs"
+          ]
+        },
+        {
+          "action_ref": "D4A-QA-06-01",
+          "scene_ref": "SCN-QA",
+          "relation": "executes",
+          "inputs": [
+            "QAObservation",
+            "ExistingGap[]",
+            "DependencyEdge[]"
+          ],
+          "outputs": [
+            "RemediationScope"
+          ]
+        },
+        {
+          "action_ref": "D4A-QA-07-01",
+          "scene_ref": "SCN-QA",
+          "relation": "executes",
+          "inputs": [
+            "RemediationResolution",
+            "RevisedEvidenceUse",
+            "CheckDefinition"
+          ],
+          "outputs": [
+            "QARecheckCandidate"
+          ]
+        },
+        {
+          "action_ref": "D4A-QA-08-01",
+          "scene_ref": "SCN-QA",
+          "relation": "executes",
+          "inputs": [
+            "QAManifest",
+            "QACheck[]",
+            "ScopeRevision",
+            "HoldRefs"
+          ],
+          "outputs": [
+            "QASignoffEligibility"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "SK-06",
+      "name": "Decision Pack / Explanation / Composition",
+      "purpose": "Decision Pack / Explanation / Composition",
+      "input": "role-filtered facts, unknowns, sources, permitted actions",
+      "output": "versioned draft pack or explanation with sources",
+      "boundaries": "Draft only; no approval or external dispatch",
+      "stops": "unsupported claim / instruction in evidence / revoked access → exclude or pause",
+      "kind": "semantic; approved template mode is deterministic",
+      "contract_status": "Defined design proposal",
+      "sample_status": "Authored synthetic sample",
+      "prototype_binding_status": "Read-only interface binding",
+      "implementation_evidence_status": "Unverified; no model or runtime evaluation",
+      "uses": [
+        {
+          "action_ref": "D4A-SCOPE-01-03",
+          "scene_ref": "SCN-SCOPE",
+          "relation": "supports",
+          "inputs": [
+            "DuplicateCandidate[]",
+            "OriginalRequest"
+          ],
+          "outputs": [
+            "IntakeLinkDecision"
+          ]
+        },
+        {
+          "action_ref": "D4A-SCOPE-02-02",
+          "scene_ref": "SCN-SCOPE",
+          "relation": "supports",
+          "inputs": [
+            "BookingContextCheck",
+            "OriginalRequest"
+          ],
+          "outputs": [
+            "BookingContextDecision"
+          ]
+        },
+        {
+          "action_ref": "D4A-SCOPE-03-02",
+          "scene_ref": "SCN-SCOPE",
+          "relation": "supports",
+          "inputs": [
+            "ProductEligibilityCheck",
+            "ApprovalContext"
+          ],
+          "outputs": [
+            "ProductEligibility.decision_ref"
+          ]
+        },
+        {
+          "action_ref": "D4A-SCOPE-04-02",
+          "scene_ref": "SCN-SCOPE",
+          "relation": "supports",
+          "inputs": [
+            "DDContext.candidate",
+            "EvidenceRefs"
+          ],
+          "outputs": [
+            "DDLevelDecision"
+          ]
+        },
+        {
+          "action_ref": "D4A-ENTITY-01-02",
+          "scene_ref": "SCN-ENTITY",
+          "relation": "supports",
+          "inputs": [
+            "EntityMatchCandidate[]",
+            "EvidenceRefs"
+          ],
+          "outputs": [
+            "EntityIdentityDecision"
+          ]
+        },
+        {
+          "action_ref": "D4A-ENTITY-02-02",
+          "scene_ref": "SCN-ENTITY",
+          "relation": "executes",
+          "inputs": [
+            "EntityClassificationCandidate",
+            "PartyRelationship[]"
+          ],
+          "outputs": [
+            "ClassificationReviewPack"
+          ]
+        },
+        {
+          "action_ref": "D4A-ENTITY-02-03",
+          "scene_ref": "SCN-ENTITY",
+          "relation": "supports",
+          "inputs": [
+            "ClassificationReviewPack"
+          ],
+          "outputs": [
+            "EntityClassification.decision_ref"
+          ]
+        },
+        {
+          "action_ref": "D4A-ENTITY-03-02",
+          "scene_ref": "SCN-ENTITY",
+          "relation": "supports",
+          "inputs": [
+            "RelationshipClaim[]",
+            "VerificationBasis"
+          ],
+          "outputs": [
+            "PartyRelationship.verification_ref"
+          ]
+        },
+        {
+          "action_ref": "D4A-ENTITY-04-02",
+          "scene_ref": "SCN-ENTITY",
+          "relation": "supports",
+          "inputs": [
+            "RepresentativeCandidate",
+            "OriginalRequest"
+          ],
+          "outputs": [
+            "RepresentativeClarification"
+          ]
+        },
+        {
+          "action_ref": "D4A-ENTITY-05-02",
+          "scene_ref": "SCN-ENTITY",
+          "relation": "supports",
+          "inputs": [
+            "AuthorityEvidenceMatrix",
+            "ApplicableCriteria"
+          ],
+          "outputs": [
+            "AuthorityDecision"
+          ]
+        },
+        {
+          "action_ref": "D4A-ENTITY-06-01",
+          "scene_ref": "SCN-ENTITY",
+          "relation": "supports",
+          "inputs": [
+            "ContactCheck",
+            "RequestedResources",
+            "DisclosurePolicy"
+          ],
+          "outputs": [
+            "RequestAccessDecision"
+          ]
+        },
+        {
+          "action_ref": "D4A-REQUIREMENTS-01-03",
+          "scene_ref": "SCN-REQUIREMENTS",
+          "relation": "supports",
+          "inputs": [
+            "RequirementApplicability[]",
+            "PolicyExcerpt[]"
+          ],
+          "outputs": [
+            "ReliefDecision"
+          ]
+        },
+        {
+          "action_ref": "D4A-REQUIREMENTS-02-02",
+          "scene_ref": "SCN-REQUIREMENTS",
+          "relation": "supports",
+          "inputs": [
+            "NonAMLRequirement[]",
+            "ExpertContext"
+          ],
+          "outputs": [
+            "ExemptionDecision"
+          ]
+        },
+        {
+          "action_ref": "D4A-REQUIREMENTS-04-02",
+          "scene_ref": "SCN-REQUIREMENTS",
+          "relation": "supports",
+          "inputs": [
+            "RiskEvidence",
+            "RequirementReassessmentProposal"
+          ],
+          "outputs": [
+            "RiskAdjustmentDecision"
+          ]
+        },
+        {
+          "action_ref": "D4A-REQUIREMENTS-05-02",
+          "scene_ref": "SCN-REQUIREMENTS",
+          "relation": "supports",
+          "inputs": [
+            "ClientRequestDraft",
+            "DisclosurePolicy"
+          ],
+          "outputs": [
+            "RequestReviewDecision"
+          ]
+        },
+        {
+          "action_ref": "D4A-REQUIREMENTS-06-02",
+          "scene_ref": "SCN-REQUIREMENTS",
+          "relation": "executes",
+          "inputs": [
+            "UnknownImpact",
+            "AllowedSkills",
+            "CaseReadContext"
+          ],
+          "outputs": [
+            "ReassessmentPlanProposal"
+          ]
+        },
+        {
+          "action_ref": "D4A-REQUIREMENTS-06-03",
+          "scene_ref": "SCN-REQUIREMENTS",
+          "relation": "supports",
+          "inputs": [
+            "ReassessmentPlanProposal",
+            "CurrencyEvidence"
+          ],
+          "outputs": [
+            "RequirementReuseDecision"
+          ]
+        },
+        {
+          "action_ref": "D4A-GAP-03-01",
+          "scene_ref": "SCN-GAP",
+          "relation": "supports",
+          "inputs": [
+            "ContactRecord",
+            "ProposedRequestScope"
+          ],
+          "outputs": [
+            "RequestAccessDecision"
+          ]
+        },
+        {
+          "action_ref": "D4A-GAP-04-01",
+          "scene_ref": "SCN-GAP",
+          "relation": "supports",
+          "inputs": [
+            "RequestDraft",
+            "RecipientScope",
+            "ApprovalRule"
+          ],
+          "outputs": [
+            "RequestApproval"
+          ]
+        },
+        {
+          "action_ref": "D4A-GAP-06-01",
+          "scene_ref": "SCN-GAP",
+          "relation": "executes",
+          "inputs": [
+            "ApprovedInteractionInput",
+            "CaseScope"
+          ],
+          "outputs": [
+            "InteractionSummaryDraft"
+          ]
+        },
+        {
+          "action_ref": "D4A-GAP-06-02",
+          "scene_ref": "SCN-GAP",
+          "relation": "supports",
+          "inputs": [
+            "InteractionSummaryDraft",
+            "OriginalInteraction"
+          ],
+          "outputs": [
+            "ReviewedInteractionSummary"
+          ]
+        },
+        {
+          "action_ref": "D4A-VALIDATE-02-02",
+          "scene_ref": "SCN-VALIDATE",
+          "relation": "supports",
+          "inputs": [
+            "EvidenceContextComparison",
+            "SourceMaterial"
+          ],
+          "outputs": [
+            "EvidenceContextDecision"
+          ]
+        },
+        {
+          "action_ref": "D4A-VALIDATE-03-02",
+          "scene_ref": "SCN-VALIDATE",
+          "relation": "supports",
+          "inputs": [
+            "CandidateClaim[]",
+            "ConflictingClaims",
+            "Criteria"
+          ],
+          "outputs": [
+            "ClaimAdoptionDecision"
+          ]
+        },
+        {
+          "action_ref": "D4A-VALIDATE-04-01",
+          "scene_ref": "SCN-VALIDATE",
+          "relation": "executes",
+          "inputs": [
+            "Requirement",
+            "EvidenceClaims",
+            "UseCriteria"
+          ],
+          "outputs": [
+            "EvidenceUseReviewPack"
+          ]
+        },
+        {
+          "action_ref": "D4A-VALIDATE-04-02",
+          "scene_ref": "SCN-VALIDATE",
+          "relation": "supports",
+          "inputs": [
+            "EvidenceUseReviewPack",
+            "CurrentInputs"
+          ],
+          "outputs": [
+            "EvidenceSufficiencyDecision"
+          ]
+        },
+        {
+          "action_ref": "D4A-POPULATION-02-02",
+          "scene_ref": "SCN-POPULATION",
+          "relation": "executes",
+          "inputs": [
+            "MediaSourceSnapshot[]",
+            "SubjectClaims"
+          ],
+          "outputs": [
+            "MediaAttributionDraft"
+          ]
+        },
+        {
+          "action_ref": "D4A-POPULATION-02-03",
+          "scene_ref": "SCN-POPULATION",
+          "relation": "supports",
+          "inputs": [
+            "MediaAttributionDraft",
+            "SourceEvidence"
+          ],
+          "outputs": [
+            "MediaRelevanceDecision"
+          ]
+        },
+        {
+          "action_ref": "D4A-POPULATION-03-02",
+          "scene_ref": "SCN-POPULATION",
+          "relation": "supports",
+          "inputs": [
+            "MembershipCandidate[]",
+            "InventoryEvidence"
+          ],
+          "outputs": [
+            "PopulationMembershipDecision"
+          ]
+        },
+        {
+          "action_ref": "D4A-POPULATION-06-02",
+          "scene_ref": "SCN-POPULATION",
+          "relation": "supports",
+          "inputs": [
+            "CurrencyReviewPack",
+            "OldResultRefs"
+          ],
+          "outputs": [
+            "CoverageReuseDecision"
+          ]
+        },
+        {
+          "action_ref": "D4A-MATCH-03-01",
+          "scene_ref": "SCN-MATCH",
+          "relation": "executes",
+          "inputs": [
+            "FindingUnknowns",
+            "ExistingEvidence",
+            "AllowedSources",
+            "PreviousReceipts"
+          ],
+          "outputs": [
+            "IdentityEvidencePlanProposal"
+          ]
+        },
+        {
+          "action_ref": "D4A-MATCH-03-03",
+          "scene_ref": "SCN-MATCH",
+          "relation": "supports",
+          "inputs": [
+            "IdentityRequestDraft",
+            "ExistingGrant"
+          ],
+          "outputs": [
+            "IdentityRequestAccessDecision"
+          ]
+        },
+        {
+          "action_ref": "D4A-MATCH-04-01",
+          "scene_ref": "SCN-MATCH",
+          "relation": "executes",
+          "inputs": [
+            "Finding",
+            "CurrentEvidenceUse",
+            "Comparison",
+            "AllowedActionSet"
+          ],
+          "outputs": [
+            "ScreeningDecisionPack"
+          ]
+        },
+        {
+          "action_ref": "D4A-MATCH-05-01",
+          "scene_ref": "SCN-MATCH",
+          "relation": "executes",
+          "inputs": [
+            "Finding",
+            "Evidence",
+            "RiskContext"
+          ],
+          "outputs": [
+            "MaterialityBrief"
+          ]
+        },
+        {
+          "action_ref": "D4A-MATCH-05-02",
+          "scene_ref": "SCN-MATCH",
+          "relation": "supports",
+          "inputs": [
+            "MaterialityBrief",
+            "ApplicableControlContext"
+          ],
+          "outputs": [
+            "RiskMaterialityDecision"
+          ]
+        },
+        {
+          "action_ref": "D4A-MATCH-06-01",
+          "scene_ref": "SCN-MATCH",
+          "relation": "supports",
+          "inputs": [
+            "ScreeningDecisionPack",
+            "CurrentInputManifest"
+          ],
+          "outputs": [
+            "ProposedDisposition",
+            "HumanRationale"
+          ]
+        },
+        {
+          "action_ref": "D4A-MATCH-06-02",
+          "scene_ref": "SCN-MATCH",
+          "relation": "supports",
+          "inputs": [
+            "ProposedDisposition",
+            "ApprovalPolicy",
+            "ReviewerPermission"
+          ],
+          "outputs": [
+            "AuthorisedDisposition"
+          ]
+        },
+        {
+          "action_ref": "D4A-EDD-01-02",
+          "scene_ref": "SCN-EDD",
+          "relation": "supports",
+          "inputs": [
+            "EDDApplicabilityCandidate",
+            "RiskEvidence"
+          ],
+          "outputs": [
+            "EDDApplicabilityDecision"
+          ]
+        },
+        {
+          "action_ref": "D4A-EDD-03-02",
+          "scene_ref": "SCN-EDD",
+          "relation": "executes",
+          "inputs": [
+            "EDDEvidencePlan",
+            "EvidenceUse[]",
+            "RiskQuestion[]"
+          ],
+          "outputs": [
+            "EDDEvidencePack"
+          ]
+        },
+        {
+          "action_ref": "D4A-EDD-04-01",
+          "scene_ref": "SCN-EDD",
+          "relation": "executes",
+          "inputs": [
+            "RiskQuestion[]",
+            "EvidenceUse[]",
+            "OpenIssue[]"
+          ],
+          "outputs": [
+            "RiskFactorReviewPack"
+          ]
+        },
+        {
+          "action_ref": "D4A-EDD-04-02",
+          "scene_ref": "SCN-EDD",
+          "relation": "supports",
+          "inputs": [
+            "RiskFactorReviewPack",
+            "PolicyContext"
+          ],
+          "outputs": [
+            "EDDRiskJudgment"
+          ]
+        },
+        {
+          "action_ref": "D4A-EDD-05-02",
+          "scene_ref": "SCN-EDD",
+          "relation": "supports",
+          "inputs": [
+            "TargetedEnquiryPlan",
+            "DisclosureRules"
+          ],
+          "outputs": [
+            "ApprovedRiskInformationRequest"
+          ]
+        },
+        {
+          "action_ref": "D4A-EDD-06-01",
+          "scene_ref": "SCN-EDD",
+          "relation": "executes",
+          "inputs": [
+            "RiskQuestion",
+            "CaseAllowedProjection"
+          ],
+          "outputs": [
+            "SpecialistConsultationPack"
+          ]
+        },
+        {
+          "action_ref": "D4A-EDD-06-03",
+          "scene_ref": "SCN-EDD",
+          "relation": "supports",
+          "inputs": [
+            "ConsultationTask",
+            "EvidenceRefs"
+          ],
+          "outputs": [
+            "SpecialistOpinion"
+          ]
+        },
+        {
+          "action_ref": "D4A-EDD-07-01",
+          "scene_ref": "SCN-EDD",
+          "relation": "executes",
+          "inputs": [
+            "RiskJudgments",
+            "ExpertOpinions",
+            "EvidencePack.revision"
+          ],
+          "outputs": [
+            "EDDOutcomeDraft"
+          ]
+        },
+        {
+          "action_ref": "D4A-EDD-07-02",
+          "scene_ref": "SCN-EDD",
+          "relation": "supports",
+          "inputs": [
+            "EDDOutcomeDraft",
+            "CurrentEvidence"
+          ],
+          "outputs": [
+            "EDDOutcomeDecision",
+            "EDDConditionDefinition[]"
+          ]
+        },
+        {
+          "action_ref": "D4A-EDD-07-03",
+          "scene_ref": "SCN-EDD",
+          "relation": "supports",
+          "inputs": [
+            "EDDOutcomeDecision",
+            "ApprovalPolicy"
+          ],
+          "outputs": [
+            "EDDApproval"
+          ]
+        },
+        {
+          "action_ref": "D4A-CONFLICTS-03-01",
+          "scene_ref": "SCN-CONFLICTS",
+          "relation": "executes",
+          "inputs": [
+            "ConflictFinding",
+            "PermittedRelationshipContext"
+          ],
+          "outputs": [
+            "ConflictReviewPack"
+          ]
+        },
+        {
+          "action_ref": "D4A-CONFLICTS-03-02",
+          "scene_ref": "SCN-CONFLICTS",
+          "relation": "supports",
+          "inputs": [
+            "ConflictReviewPack",
+            "ApplicableControlContext"
+          ],
+          "outputs": [
+            "ConflictDecisionProposal"
+          ]
+        },
+        {
+          "action_ref": "D4A-CONFLICTS-04-01",
+          "scene_ref": "SCN-CONFLICTS",
+          "relation": "supports",
+          "inputs": [
+            "ConflictReviewPack",
+            "DependencyEvidence"
+          ],
+          "outputs": [
+            "ConflictImpactDecision"
+          ]
+        },
+        {
+          "action_ref": "D4A-CONFLICTS-05-01",
+          "scene_ref": "SCN-CONFLICTS",
+          "relation": "supports",
+          "inputs": [
+            "ConflictDecisionProposal",
+            "CurrentEvidence",
+            "Permission"
+          ],
+          "outputs": [
+            "AuthorisedConflictOutcome"
+          ]
+        },
+        {
+          "action_ref": "D4A-LEGAL-02-02",
+          "scene_ref": "SCN-LEGAL",
+          "relation": "supports",
+          "inputs": [
+            "AgreementApplicabilityCandidate",
+            "ProductContext"
+          ],
+          "outputs": [
+            "AgreementRequirementDecision"
+          ]
+        },
+        {
+          "action_ref": "D4A-LEGAL-03-01",
+          "scene_ref": "SCN-LEGAL",
+          "relation": "executes",
+          "inputs": [
+            "ApprovedTemplate.revision",
+            "AcceptedScopeFields",
+            "DraftOrigin"
+          ],
+          "outputs": [
+            "AgreementDraft",
+            "DraftProvenance"
+          ]
+        },
+        {
+          "action_ref": "D4A-LEGAL-03-02",
+          "scene_ref": "SCN-LEGAL",
+          "relation": "supports",
+          "inputs": [
+            "AgreementDraft",
+            "ApplicableLegalContext"
+          ],
+          "outputs": [
+            "LegalDraftReview"
+          ]
+        },
+        {
+          "action_ref": "D4A-LEGAL-04-02",
+          "scene_ref": "SCN-LEGAL",
+          "relation": "supports",
+          "inputs": [
+            "ConditionIncorporationCandidate",
+            "CreditInput.revision"
+          ],
+          "outputs": [
+            "ConditionIncorporationReview"
+          ]
+        },
+        {
+          "action_ref": "D4A-LEGAL-05-01",
+          "scene_ref": "SCN-LEGAL",
+          "relation": "supports",
+          "inputs": [
+            "CurrentAgreement",
+            "NegotiationContext"
+          ],
+          "outputs": [
+            "NegotiationResponse"
+          ]
+        },
+        {
+          "action_ref": "D4A-LEGAL-06-02",
+          "scene_ref": "SCN-LEGAL",
+          "relation": "supports",
+          "inputs": [
+            "AgreementApprovalEligibility",
+            "CurrentAgreement"
+          ],
+          "outputs": [
+            "DomainApproval[]"
+          ]
+        },
+        {
+          "action_ref": "D4A-LEGAL-07-02",
+          "scene_ref": "SCN-LEGAL",
+          "relation": "supports",
+          "inputs": [
+            "ExecutionEligibility",
+            "ExecutionDocument"
+          ],
+          "outputs": [
+            "SigningAction"
+          ]
+        },
+        {
+          "action_ref": "D4A-LEGAL-08-02",
+          "scene_ref": "SCN-LEGAL",
+          "relation": "supports",
+          "inputs": [
+            "KeyTermCandidate[]",
+            "SignedArtifact"
+          ],
+          "outputs": [
+            "KeyTermAdoptionDecision"
+          ]
+        },
+        {
+          "action_ref": "D4A-CREDIT-01-02",
+          "scene_ref": "SCN-CREDIT",
+          "relation": "supports",
+          "inputs": [
+            "CreditApplicabilityCandidate",
+            "ScopeEvidence"
+          ],
+          "outputs": [
+            "CreditApplicabilityDecision"
+          ]
+        },
+        {
+          "action_ref": "D4A-CREDIT-03-01",
+          "scene_ref": "SCN-CREDIT",
+          "relation": "executes",
+          "inputs": [
+            "ReviewedFinancialData",
+            "ExposureSnapshot",
+            "Scope"
+          ],
+          "outputs": [
+            "CreditAssessmentPack"
+          ]
+        },
+        {
+          "action_ref": "D4A-CREDIT-03-02",
+          "scene_ref": "SCN-CREDIT",
+          "relation": "supports",
+          "inputs": [
+            "CreditAssessmentPack",
+            "ApplicableCreditContext"
+          ],
+          "outputs": [
+            "CreditRiskAssessment"
+          ]
+        },
+        {
+          "action_ref": "D4A-CREDIT-04-01",
+          "scene_ref": "SCN-CREDIT",
+          "relation": "supports",
+          "inputs": [
+            "CreditRiskAssessment",
+            "ProductScope"
+          ],
+          "outputs": [
+            "CreditConditionDefinition"
+          ]
+        },
+        {
+          "action_ref": "D4A-CREDIT-05-01",
+          "scene_ref": "SCN-CREDIT",
+          "relation": "supports",
+          "inputs": [
+            "CreditRiskAssessment",
+            "ConditionDefinition",
+            "ApprovalPolicy"
+          ],
+          "outputs": [
+            "CreditApprovalDecision"
+          ]
+        },
+        {
+          "action_ref": "D4A-CREDIT-07-02",
+          "scene_ref": "SCN-CREDIT",
+          "relation": "supports",
+          "inputs": [
+            "CreditRelevantClauseDelta",
+            "AgreementRevision",
+            "CreditTerms"
+          ],
+          "outputs": [
+            "CreditAgreementDecision"
+          ]
+        },
+        {
+          "action_ref": "D4A-QA-01-02",
+          "scene_ref": "SCN-QA",
+          "relation": "supports",
+          "inputs": [
+            "QAManifest",
+            "ManifestUnknowns"
+          ],
+          "outputs": [
+            "QAScopeReview"
+          ]
+        },
+        {
+          "action_ref": "D4A-QA-03-02",
+          "scene_ref": "SCN-QA",
+          "relation": "executes",
+          "inputs": [
+            "SourceMetadataCheck",
+            "ConflictingClaims"
+          ],
+          "outputs": [
+            "SourceReviewBrief"
+          ]
+        },
+        {
+          "action_ref": "D4A-QA-03-03",
+          "scene_ref": "SCN-QA",
+          "relation": "supports",
+          "inputs": [
+            "SourceReviewBrief",
+            "OriginalEvidence"
+          ],
+          "outputs": [
+            "SourceReviewDecision"
+          ]
+        },
+        {
+          "action_ref": "D4A-QA-04-02",
+          "scene_ref": "SCN-QA",
+          "relation": "executes",
+          "inputs": [
+            "AssessmentPresenceCheck",
+            "EvidenceUseRefs"
+          ],
+          "outputs": [
+            "SufficiencyReviewBrief"
+          ]
+        },
+        {
+          "action_ref": "D4A-QA-04-03",
+          "scene_ref": "SCN-QA",
+          "relation": "supports",
+          "inputs": [
+            "SufficiencyReviewBrief",
+            "ActualEvidence"
+          ],
+          "outputs": [
+            "QASufficiencyJudgment"
+          ]
+        },
+        {
+          "action_ref": "D4A-QA-06-02",
+          "scene_ref": "SCN-QA",
+          "relation": "executes",
+          "inputs": [
+            "RemediationScope",
+            "EvidenceStatus"
+          ],
+          "outputs": [
+            "RemediationProposal"
+          ]
+        },
+        {
+          "action_ref": "D4A-QA-07-02",
+          "scene_ref": "SCN-QA",
+          "relation": "supports",
+          "inputs": [
+            "QARecheckCandidate",
+            "RevisedEvidence"
+          ],
+          "outputs": [
+            "QARecheckDecision"
+          ]
+        },
+        {
+          "action_ref": "D4A-QA-08-02",
+          "scene_ref": "SCN-QA",
+          "relation": "supports",
+          "inputs": [
+            "QASignoffEligibility",
+            "ReviewPack",
+            "Permission"
+          ],
+          "outputs": [
+            "AuthorisedQASignoff"
+          ]
+        },
+        {
+          "action_ref": "D4A-READINESS-01-02",
+          "scene_ref": "SCN-READINESS",
+          "relation": "supports",
+          "inputs": [
+            "ConditionManifest",
+            "ScopeUnknowns"
+          ],
+          "outputs": [
+            "PrerequisiteScopeDecision"
+          ]
+        },
+        {
+          "action_ref": "D4A-READINESS-04-02",
+          "scene_ref": "SCN-READINESS",
+          "relation": "executes",
+          "inputs": [
+            "AllowedReadinessView",
+            "Dependencies",
+            "CapacityContextIfKnown"
+          ],
+          "outputs": [
+            "NextWorkPlanProposal"
+          ]
+        },
+        {
+          "action_ref": "D4A-READINESS-04-03",
+          "scene_ref": "SCN-READINESS",
+          "relation": "executes",
+          "inputs": [
+            "ReadinessSnapshot",
+            "AllowedConditionProjection"
+          ],
+          "outputs": [
+            "ReadinessExplanation"
+          ]
+        },
+        {
+          "action_ref": "D4A-PUBLISH-02-02",
+          "scene_ref": "SCN-PUBLISH",
+          "relation": "supports",
+          "inputs": [
+            "ClearanceConfirmationEligibility",
+            "ClearancePack"
+          ],
+          "outputs": [
+            "AuthorisedClearanceDecision"
+          ]
+        },
+        {
+          "action_ref": "D4A-PUBLISH-05-01",
+          "scene_ref": "SCN-PUBLISH",
+          "relation": "executes",
+          "inputs": [
+            "AllowedOutcomeProjection",
+            "ApprovedCommunicationTemplate"
+          ],
+          "outputs": [
+            "OutcomeCommunicationDraft"
+          ]
+        },
+        {
+          "action_ref": "D4A-PUBLISH-05-02",
+          "scene_ref": "SCN-PUBLISH",
+          "relation": "supports",
+          "inputs": [
+            "OutcomeCommunicationDraft",
+            "ClientContext"
+          ],
+          "outputs": [
+            "ReviewedOutcomeCommunication"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "SK-07",
+      "name": "Work Item & Routing",
+      "purpose": "Work Item & Routing",
+      "input": "validated task intent + scope + assignment catalogue + dependencies",
+      "output": "task/assignment/referral/return anchor",
+      "boundaries": "Scoped workflow records only",
+      "stops": "owner unknown → Unassigned; duplicate intent → same logical task",
+      "kind": "deterministic",
+      "contract_status": "Defined design proposal",
+      "sample_status": "Not authored in this pilot",
+      "prototype_binding_status": "Read-only interface binding",
+      "implementation_evidence_status": "Unverified; no model or runtime evaluation",
+      "uses": [
+        {
+          "action_ref": "D4A-REQUIREMENTS-04-03",
+          "scene_ref": "SCN-REQUIREMENTS",
+          "relation": "executes",
+          "inputs": [
+            "RiskAdjustmentDecision",
+            "RequirementSet.revision"
+          ],
+          "outputs": [
+            "RequirementChange",
+            "ReviewTask[]"
+          ]
+        },
+        {
+          "action_ref": "D4A-SOURCE-05-02",
+          "scene_ref": "SCN-SOURCE",
+          "relation": "executes",
+          "inputs": [
+            "RetryPolicy",
+            "IdempotencyKey",
+            "LastReceipt"
+          ],
+          "outputs": [
+            "RetryReceipt",
+            "SourceUnavailableTask"
+          ]
+        },
+        {
+          "action_ref": "D4A-GAP-01-02",
+          "scene_ref": "SCN-GAP",
+          "relation": "executes",
+          "inputs": [
+            "GapDelta",
+            "ExpectedRevision"
+          ],
+          "outputs": [
+            "Gap.revision",
+            "ApplicabilityReviewTask"
+          ]
+        },
+        {
+          "action_ref": "D4A-VALIDATE-05-02",
+          "scene_ref": "SCN-VALIDATE",
+          "relation": "executes",
+          "inputs": [
+            "ReviewedImpactSet",
+            "CurrentTaskRegistry"
+          ],
+          "outputs": [
+            "ReassessmentTask[]",
+            "AuditEvent"
+          ]
+        },
+        {
+          "action_ref": "D4A-MATCH-05-03",
+          "scene_ref": "SCN-MATCH",
+          "relation": "executes",
+          "inputs": [
+            "RiskMaterialityDecision",
+            "HoldPolicy"
+          ],
+          "outputs": [
+            "ScopedHold",
+            "EscalationTask"
+          ]
+        },
+        {
+          "action_ref": "D4A-EDD-02-02",
+          "scene_ref": "SCN-EDD",
+          "relation": "executes",
+          "inputs": [
+            "EDDStartEligibility",
+            "AssignmentCatalogue"
+          ],
+          "outputs": [
+            "EDDAssessment",
+            "WorkItem"
+          ]
+        },
+        {
+          "action_ref": "D4A-EDD-06-02",
+          "scene_ref": "SCN-EDD",
+          "relation": "executes",
+          "inputs": [
+            "SpecialistConsultationPack",
+            "RoleDirectory"
+          ],
+          "outputs": [
+            "ConsultationTask",
+            "ResumeAnchor"
+          ]
+        },
+        {
+          "action_ref": "D4A-CONFLICTS-01-02",
+          "scene_ref": "SCN-CONFLICTS",
+          "relation": "executes",
+          "inputs": [
+            "ConflictStartEligibility",
+            "TriggerEvent"
+          ],
+          "outputs": [
+            "ConflictReview",
+            "WorkItem"
+          ]
+        },
+        {
+          "action_ref": "D4A-CONFLICTS-04-02",
+          "scene_ref": "SCN-CONFLICTS",
+          "relation": "executes",
+          "inputs": [
+            "ConflictImpactDecision",
+            "HoldPolicy",
+            "DependencyEdge[]"
+          ],
+          "outputs": [
+            "Hold",
+            "EscalationTask",
+            "UnknownImpact"
+          ]
+        },
+        {
+          "action_ref": "D4A-LEGAL-01-02",
+          "scene_ref": "SCN-LEGAL",
+          "relation": "executes",
+          "inputs": [
+            "LegalIntakeContext",
+            "LegalIntakeDefinition"
+          ],
+          "outputs": [
+            "LegalRequest",
+            "LegalInputGap[]"
+          ]
+        },
+        {
+          "action_ref": "D4A-CREDIT-06-01",
+          "scene_ref": "SCN-CREDIT",
+          "relation": "executes",
+          "inputs": [
+            "CreditDecision",
+            "ConditionPackage.revision",
+            "LegalAccess"
+          ],
+          "outputs": [
+            "AgreementInputReceipt"
+          ]
+        },
+        {
+          "action_ref": "D4A-QA-05-02",
+          "scene_ref": "SCN-QA",
+          "relation": "executes",
+          "inputs": [
+            "SpecificIssueRefs",
+            "ExistingWorkItems"
+          ],
+          "outputs": [
+            "QAFinding",
+            "LinkedSpecialistTask"
+          ]
+        },
+        {
+          "action_ref": "D4A-QA-06-03",
+          "scene_ref": "SCN-QA",
+          "relation": "executes",
+          "inputs": [
+            "ReviewedRemediationProposal",
+            "AssignmentRule"
+          ],
+          "outputs": [
+            "Remediation",
+            "WorkItem",
+            "ResumeAnchor"
+          ]
+        },
+        {
+          "action_ref": "D4A-READINESS-03-02",
+          "scene_ref": "SCN-READINESS",
+          "relation": "executes",
+          "inputs": [
+            "CurrencyCheck",
+            "DeclaredImpact",
+            "ExpectedRevision"
+          ],
+          "outputs": [
+            "CurrencyReviewTask",
+            "HistoricalDecisionLink"
+          ]
+        },
+        {
+          "action_ref": "D4A-READINESS-04-02",
+          "scene_ref": "SCN-READINESS",
+          "relation": "executes",
+          "inputs": [
+            "AllowedReadinessView",
+            "Dependencies",
+            "CapacityContextIfKnown"
+          ],
+          "outputs": [
+            "NextWorkPlanProposal"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "SK-08",
+      "name": "Client Collaboration",
+      "purpose": "Client Collaboration",
+      "input": "allowed gap projection + response options + recipient grant",
+      "output": "request draft / version / per-item response",
+      "boundaries": "Drafting read-only; actual dispatch requires separate authorised command",
+      "stops": "unknown recipient or restricted rationale → draft/pause, no leak",
+      "kind": "drafting semantic; approval/dispatch/submission entrypoints distinct",
+      "contract_status": "Defined design proposal",
+      "sample_status": "Not authored in this pilot",
+      "prototype_binding_status": "Read-only interface binding",
+      "implementation_evidence_status": "Unverified; no model or runtime evaluation",
+      "uses": [
+        {
+          "action_ref": "D4A-REQUIREMENTS-05-01",
+          "scene_ref": "SCN-REQUIREMENTS",
+          "relation": "executes",
+          "inputs": [
+            "AllowedRequirementProjection",
+            "ApprovedResponseOptions"
+          ],
+          "outputs": [
+            "ClientRequestDraft"
+          ]
+        },
+        {
+          "action_ref": "D4A-REQUIREMENTS-05-03",
+          "scene_ref": "SCN-REQUIREMENTS",
+          "relation": "executes",
+          "inputs": [
+            "ApprovedRequestRevision",
+            "AllowedRecipient"
+          ],
+          "outputs": [
+            "NotificationDispatch",
+            "DeliveryObservation"
+          ]
+        },
+        {
+          "action_ref": "D4A-GAP-02-01",
+          "scene_ref": "SCN-GAP",
+          "relation": "executes",
+          "inputs": [
+            "AllowedGapProjection",
+            "ResponseOptions"
+          ],
+          "outputs": [
+            "RequestItemDraft[]"
+          ]
+        },
+        {
+          "action_ref": "D4A-GAP-04-02",
+          "scene_ref": "SCN-GAP",
+          "relation": "executes",
+          "inputs": [
+            "RequestApproval",
+            "SentRevision",
+            "IdempotencyKey"
+          ],
+          "outputs": [
+            "DispatchReceipt"
+          ]
+        },
+        {
+          "action_ref": "D4A-GAP-05-01",
+          "scene_ref": "SCN-GAP",
+          "relation": "supports",
+          "inputs": [
+            "AllowedRequestItems",
+            "ClientInput"
+          ],
+          "outputs": [
+            "SubmissionIntent"
+          ]
+        },
+        {
+          "action_ref": "D4A-VALIDATE-06-01",
+          "scene_ref": "SCN-VALIDATE",
+          "relation": "executes",
+          "inputs": [
+            "AllowedGapReason",
+            "RequestItem",
+            "ResponseOptions"
+          ],
+          "outputs": [
+            "FeedbackDraft"
+          ]
+        },
+        {
+          "action_ref": "D4A-VALIDATE-06-02",
+          "scene_ref": "SCN-VALIDATE",
+          "relation": "executes",
+          "inputs": [
+            "ApprovedFeedback",
+            "RecipientGrant",
+            "RequestRevision"
+          ],
+          "outputs": [
+            "FeedbackEvent",
+            "NotificationReceipt"
+          ]
+        },
+        {
+          "action_ref": "D4A-MATCH-03-02",
+          "scene_ref": "SCN-MATCH",
+          "relation": "executes",
+          "inputs": [
+            "IdentityEvidencePlanProposal",
+            "AllowedClientReason"
+          ],
+          "outputs": [
+            "IdentityRequestDraft"
+          ]
+        },
+        {
+          "action_ref": "D4A-EDD-05-01",
+          "scene_ref": "SCN-EDD",
+          "relation": "executes",
+          "inputs": [
+            "RiskQuestionGaps",
+            "PriorResponses",
+            "AllowedSources"
+          ],
+          "outputs": [
+            "TargetedEnquiryPlan"
+          ]
+        },
+        {
+          "action_ref": "D4A-PUBLISH-05-01",
+          "scene_ref": "SCN-PUBLISH",
+          "relation": "executes",
+          "inputs": [
+            "AllowedOutcomeProjection",
+            "ApprovedCommunicationTemplate"
+          ],
+          "outputs": [
+            "OutcomeCommunicationDraft"
+          ]
+        },
+        {
+          "action_ref": "D4A-PUBLISH-05-03",
+          "scene_ref": "SCN-PUBLISH",
+          "relation": "executes",
+          "inputs": [
+            "ApprovedOutcomeCommunication",
+            "RecipientGrant"
+          ],
+          "outputs": [
+            "OutcomeNotificationReceipt"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "SK-09",
+      "name": "Approved External Operations & Intake",
+      "purpose": "Approved External Operations & Intake",
+      "input": "validated request, allowlisted endpoint, credential context outside model",
+      "output": "immutable receipt/result/intake status",
+      "boundaries": "Explicit typed query or upload; local synthetic adapters in prework",
+      "stops": "partial/timeout/access failure ≠ no alerts / valid evidence",
+      "kind": "deterministic adapter",
+      "contract_status": "Defined design proposal",
+      "sample_status": "Not authored in this pilot",
+      "prototype_binding_status": "Read-only interface binding",
+      "implementation_evidence_status": "Unverified; no model or runtime evaluation",
+      "uses": [
+        {
+          "action_ref": "D4A-SOURCE-05-01",
+          "scene_ref": "SCN-SOURCE",
+          "relation": "executes",
+          "inputs": [
+            "AdapterReceipt",
+            "QueryIntent"
+          ],
+          "outputs": [
+            "RetrievalStatus",
+            "FailureReason"
+          ]
+        },
+        {
+          "action_ref": "D4A-VALIDATE-01-01",
+          "scene_ref": "SCN-VALIDATE",
+          "relation": "executes",
+          "inputs": [
+            "Submission",
+            "FilePolicy"
+          ],
+          "outputs": [
+            "IntakeReceipt",
+            "SecurityScanResult"
+          ]
+        },
+        {
+          "action_ref": "D4A-POPULATION-01-02",
+          "scene_ref": "SCN-POPULATION",
+          "relation": "executes",
+          "inputs": [
+            "ApprovedPreScreenPlan",
+            "AccessScope"
+          ],
+          "outputs": [
+            "PreScreenRunReceipt"
+          ]
+        },
+        {
+          "action_ref": "D4A-POPULATION-02-01",
+          "scene_ref": "SCN-POPULATION",
+          "relation": "executes",
+          "inputs": [
+            "ApprovedMediaQuery",
+            "SubjectSnapshot"
+          ],
+          "outputs": [
+            "MediaSourceSnapshot[]"
+          ]
+        },
+        {
+          "action_ref": "D4A-POPULATION-05-01",
+          "scene_ref": "SCN-POPULATION",
+          "relation": "executes",
+          "inputs": [
+            "ApprovedQueryPlan",
+            "FrozenSubjects",
+            "IdempotencyKey"
+          ],
+          "outputs": [
+            "ScreeningRun",
+            "ProviderRecordSnapshot"
+          ]
+        },
+        {
+          "action_ref": "D4A-CONFLICTS-02-01",
+          "scene_ref": "SCN-CONFLICTS",
+          "relation": "executes",
+          "inputs": [
+            "ApprovedConflictSearch",
+            "PartySnapshot"
+          ],
+          "outputs": [
+            "ConflictSearchReceipt",
+            "CandidateFinding[]"
+          ]
+        },
+        {
+          "action_ref": "D4A-LEGAL-07-03",
+          "scene_ref": "SCN-LEGAL",
+          "relation": "executes",
+          "inputs": [
+            "SigningAction",
+            "ExecutionAdapter"
+          ],
+          "outputs": [
+            "ExecutionReceipt",
+            "SignedArtifactRef"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "SK-10",
+      "name": "State / Dependency / Readiness Evaluation",
+      "purpose": "State / Dependency / Readiness Evaluation",
+      "input": "complete expected manifest + current versions + decisions + holds",
+      "output": "affected refs, unknown impact, scoped readiness snapshot",
+      "boundaries": "Derived state only; no granted business authority",
+      "stops": "stale/unknown/missing manifest/cycle → not ready or explicit error",
+      "kind": "deterministic",
+      "contract_status": "Defined design proposal",
+      "sample_status": "Not authored in this pilot",
+      "prototype_binding_status": "Read-only interface binding",
+      "implementation_evidence_status": "Unverified; no model or runtime evaluation",
+      "uses": [
+        {
+          "action_ref": "D4A-SCOPE-04-03",
+          "scene_ref": "SCN-SCOPE",
+          "relation": "executes",
+          "inputs": [
+            "DDLevelDecision",
+            "TriggerEvent"
+          ],
+          "outputs": [
+            "DDContext.revision",
+            "RequirementReassessmentTask"
+          ]
+        },
+        {
+          "action_ref": "D4A-SCOPE-05-02",
+          "scene_ref": "SCN-SCOPE",
+          "relation": "executes",
+          "inputs": [
+            "ScopeChange",
+            "DependencyEdge[]"
+          ],
+          "outputs": [
+            "AffectedConsumer[]",
+            "UnknownImpact[]"
+          ]
+        },
+        {
+          "action_ref": "D4A-REQUIREMENTS-04-01",
+          "scene_ref": "SCN-REQUIREMENTS",
+          "relation": "executes",
+          "inputs": [
+            "RiskEvent",
+            "PolicyRuleSet",
+            "DependencyEdge[]"
+          ],
+          "outputs": [
+            "RequirementReassessmentProposal"
+          ]
+        },
+        {
+          "action_ref": "D4A-REQUIREMENTS-06-01",
+          "scene_ref": "SCN-REQUIREMENTS",
+          "relation": "executes",
+          "inputs": [
+            "ScopeChange",
+            "RequirementSet",
+            "DependencyEdge[]"
+          ],
+          "outputs": [
+            "KnownImpact",
+            "UnknownImpact"
+          ]
+        },
+        {
+          "action_ref": "D4A-GAP-01-01",
+          "scene_ref": "SCN-GAP",
+          "relation": "executes",
+          "inputs": [
+            "RequirementApplicability",
+            "EvidenceUseAssessment[]",
+            "OpenGap[]"
+          ],
+          "outputs": [
+            "GapDelta"
+          ]
+        },
+        {
+          "action_ref": "D4A-GAP-05-03",
+          "scene_ref": "SCN-GAP",
+          "relation": "executes",
+          "inputs": [
+            "RequestItemStates",
+            "EvidenceUseStates"
+          ],
+          "outputs": [
+            "RequestResponseSummary"
+          ]
+        },
+        {
+          "action_ref": "D4A-VALIDATE-05-01",
+          "scene_ref": "SCN-VALIDATE",
+          "relation": "executes",
+          "inputs": [
+            "EvidenceAssessmentChange",
+            "DependencyEdge[]"
+          ],
+          "outputs": [
+            "ImpactSet",
+            "UnknownImpact"
+          ]
+        },
+        {
+          "action_ref": "D4A-POPULATION-04-02",
+          "scene_ref": "SCN-POPULATION",
+          "relation": "executes",
+          "inputs": [
+            "PopulationRevision",
+            "QueryRequirements",
+            "InventoryGaps"
+          ],
+          "outputs": [
+            "PlanConfirmationEligibility"
+          ]
+        },
+        {
+          "action_ref": "D4A-POPULATION-05-02",
+          "scene_ref": "SCN-POPULATION",
+          "relation": "executes",
+          "inputs": [
+            "ScreeningRun",
+            "RequiredCoverageTuple[]"
+          ],
+          "outputs": [
+            "ScreeningCoverageItem.execution_status"
+          ]
+        },
+        {
+          "action_ref": "D4A-POPULATION-06-01",
+          "scene_ref": "SCN-POPULATION",
+          "relation": "executes",
+          "inputs": [
+            "CoverageManifest",
+            "RunResults",
+            "FindingDecisions",
+            "ScopeRevision"
+          ],
+          "outputs": [
+            "CoverageAssessment",
+            "BlockingRefs"
+          ]
+        },
+        {
+          "action_ref": "D4A-MATCH-01-02",
+          "scene_ref": "SCN-MATCH",
+          "relation": "executes",
+          "inputs": [
+            "ScreeningFinding",
+            "KnownFindingRegistry"
+          ],
+          "outputs": [
+            "FindingConsistencyCheck"
+          ]
+        },
+        {
+          "action_ref": "D4A-MATCH-04-02",
+          "scene_ref": "SCN-MATCH",
+          "relation": "executes",
+          "inputs": [
+            "ScreeningDecisionPack",
+            "AccessScope",
+            "CurrentRevisions"
+          ],
+          "outputs": [
+            "DecisionPackValidation"
+          ]
+        },
+        {
+          "action_ref": "D4A-MATCH-05-03",
+          "scene_ref": "SCN-MATCH",
+          "relation": "executes",
+          "inputs": [
+            "RiskMaterialityDecision",
+            "HoldPolicy"
+          ],
+          "outputs": [
+            "ScopedHold",
+            "EscalationTask"
+          ]
+        },
+        {
+          "action_ref": "D4A-MATCH-07-01",
+          "scene_ref": "SCN-MATCH",
+          "relation": "executes",
+          "inputs": [
+            "ScreeningReviewDecision",
+            "CoverageManifest",
+            "DependencyEdge[]"
+          ],
+          "outputs": [
+            "CoverageDelta",
+            "ReadinessReevaluationEvent"
+          ]
+        },
+        {
+          "action_ref": "D4A-EDD-02-01",
+          "scene_ref": "SCN-EDD",
+          "relation": "executes",
+          "inputs": [
+            "EDDApplicabilityDecision",
+            "CaseScope",
+            "HoldRefs"
+          ],
+          "outputs": [
+            "EDDStartEligibility"
+          ]
+        },
+        {
+          "action_ref": "D4A-CONFLICTS-01-01",
+          "scene_ref": "SCN-CONFLICTS",
+          "relation": "executes",
+          "inputs": [
+            "CaseScope",
+            "PartyContext",
+            "ConflictPolicy",
+            "HoldRefs"
+          ],
+          "outputs": [
+            "ConflictStartEligibility"
+          ]
+        },
+        {
+          "action_ref": "D4A-CONFLICTS-04-02",
+          "scene_ref": "SCN-CONFLICTS",
+          "relation": "executes",
+          "inputs": [
+            "ConflictImpactDecision",
+            "HoldPolicy",
+            "DependencyEdge[]"
+          ],
+          "outputs": [
+            "Hold",
+            "EscalationTask",
+            "UnknownImpact"
+          ]
+        },
+        {
+          "action_ref": "D4A-LEGAL-04-03",
+          "scene_ref": "SCN-LEGAL",
+          "relation": "executes",
+          "inputs": [
+            "ConditionIncorporationReview",
+            "ExpectedRevisions"
+          ],
+          "outputs": [
+            "AgreementInput",
+            "ConditionIncorporation",
+            "DependencyEdge"
+          ]
+        },
+        {
+          "action_ref": "D4A-LEGAL-05-03",
+          "scene_ref": "SCN-LEGAL",
+          "relation": "executes",
+          "inputs": [
+            "ReviewedClauseChanges",
+            "DependencyEdge[]"
+          ],
+          "outputs": [
+            "ApprovalCurrencyReviewTask[]",
+            "UnknownImpact[]"
+          ]
+        },
+        {
+          "action_ref": "D4A-LEGAL-06-01",
+          "scene_ref": "SCN-LEGAL",
+          "relation": "executes",
+          "inputs": [
+            "Agreement.revision",
+            "CreditInput.revision",
+            "ApprovalManifest"
+          ],
+          "outputs": [
+            "AgreementApprovalEligibility"
+          ]
+        },
+        {
+          "action_ref": "D4A-LEGAL-07-01",
+          "scene_ref": "SCN-LEGAL",
+          "relation": "executes",
+          "inputs": [
+            "Agreement.revision",
+            "ApprovalManifest",
+            "SignatoryAuthority",
+            "HoldRefs"
+          ],
+          "outputs": [
+            "ExecutionEligibility"
+          ]
+        },
+        {
+          "action_ref": "D4A-CREDIT-06-02",
+          "scene_ref": "SCN-CREDIT",
+          "relation": "executes",
+          "inputs": [
+            "AgreementInputReceipt",
+            "CurrentCreditRevision"
+          ],
+          "outputs": [
+            "CreditLegalCurrency",
+            "TargetedReviewTask"
+          ]
+        },
+        {
+          "action_ref": "D4A-QA-05-01",
+          "scene_ref": "SCN-QA",
+          "relation": "executes",
+          "inputs": [
+            "QAManifest",
+            "ScreeningCoverage",
+            "EDDApplicability",
+            "EDDConditions"
+          ],
+          "outputs": [
+            "CrossConditionCheck",
+            "SpecificIssueRefs"
+          ]
+        },
+        {
+          "action_ref": "D4A-QA-06-01",
+          "scene_ref": "SCN-QA",
+          "relation": "executes",
+          "inputs": [
+            "QAObservation",
+            "ExistingGap[]",
+            "DependencyEdge[]"
+          ],
+          "outputs": [
+            "RemediationScope"
+          ]
+        },
+        {
+          "action_ref": "D4A-QA-08-01",
+          "scene_ref": "SCN-QA",
+          "relation": "executes",
+          "inputs": [
+            "QAManifest",
+            "QACheck[]",
+            "ScopeRevision",
+            "HoldRefs"
+          ],
+          "outputs": [
+            "QASignoffEligibility"
+          ]
+        },
+        {
+          "action_ref": "D4A-READINESS-01-01",
+          "scene_ref": "SCN-READINESS",
+          "relation": "executes",
+          "inputs": [
+            "CaseScope",
+            "ApprovedPrerequisiteDefinition",
+            "ConditionRegistry"
+          ],
+          "outputs": [
+            "ConditionManifest",
+            "MissingConditionRefs"
+          ]
+        },
+        {
+          "action_ref": "D4A-READINESS-02-01",
+          "scene_ref": "SCN-READINESS",
+          "relation": "executes",
+          "inputs": [
+            "CompleteConditionManifest",
+            "CurrentConditionStates",
+            "QASignoff"
+          ],
+          "outputs": [
+            "PrerequisiteEvaluation"
+          ]
+        },
+        {
+          "action_ref": "D4A-READINESS-03-01",
+          "scene_ref": "SCN-READINESS",
+          "relation": "executes",
+          "inputs": [
+            "ConditionInputs",
+            "DependencyEdge[]",
+            "HoldRefs",
+            "CurrentRevisions"
+          ],
+          "outputs": [
+            "CurrencyCheck",
+            "BlockingRef[]",
+            "UnknownRef[]"
+          ]
+        },
+        {
+          "action_ref": "D4A-READINESS-04-02",
+          "scene_ref": "SCN-READINESS",
+          "relation": "executes",
+          "inputs": [
+            "AllowedReadinessView",
+            "Dependencies",
+            "CapacityContextIfKnown"
+          ],
+          "outputs": [
+            "NextWorkPlanProposal"
+          ]
+        },
+        {
+          "action_ref": "D4A-READINESS-05-01",
+          "scene_ref": "SCN-READINESS",
+          "relation": "executes",
+          "inputs": [
+            "Manifest",
+            "PrerequisiteEvaluation",
+            "CurrentRevisions",
+            "HoldRefs"
+          ],
+          "outputs": [
+            "ReadyForConfirmationOrNotReady"
+          ]
+        },
+        {
+          "action_ref": "D4A-PUBLISH-02-01",
+          "scene_ref": "SCN-PUBLISH",
+          "relation": "executes",
+          "inputs": [
+            "ReadinessSnapshot",
+            "ActorPermission",
+            "ExpectedRevisions",
+            "HoldRefs"
+          ],
+          "outputs": [
+            "ClearanceConfirmationEligibility"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "SK-11",
+      "name": "Decision / Event / Provenance Recording",
+      "purpose": "Decision / Event / Provenance Recording",
+      "input": "authorised result/observed event + expected revisions + causation",
+      "output": "immutable versioned record and permitted projections",
+      "boundaries": "Scoped append/command; no fabricated approval",
+      "stops": "stale inputs or absent authority → reject write, preserve draft/history",
+      "kind": "deterministic",
+      "contract_status": "Defined design proposal",
+      "sample_status": "Not authored in this pilot",
+      "prototype_binding_status": "Read-only interface binding",
+      "implementation_evidence_status": "Unverified; no model or runtime evaluation",
+      "uses": [
+        {
+          "action_ref": "D4A-SCOPE-01-04",
+          "scene_ref": "SCN-SCOPE",
+          "relation": "executes",
+          "inputs": [
+            "IntakeLinkDecision",
+            "ExpectedRevision"
+          ],
+          "outputs": [
+            "Case.request_source_ref",
+            "Case.link_revision"
+          ]
+        },
+        {
+          "action_ref": "D4A-SCOPE-04-03",
+          "scene_ref": "SCN-SCOPE",
+          "relation": "executes",
+          "inputs": [
+            "DDLevelDecision",
+            "TriggerEvent"
+          ],
+          "outputs": [
+            "DDContext.revision",
+            "RequirementReassessmentTask"
+          ]
+        },
+        {
+          "action_ref": "D4A-SCOPE-05-01",
+          "scene_ref": "SCN-SCOPE",
+          "relation": "executes",
+          "inputs": [
+            "ScopeDecision",
+            "CaseScope.expected_revision"
+          ],
+          "outputs": [
+            "CaseScope.revision"
+          ]
+        },
+        {
+          "action_ref": "D4A-ENTITY-03-03",
+          "scene_ref": "SCN-ENTITY",
+          "relation": "executes",
+          "inputs": [
+            "RelationshipDecision",
+            "EntityRefs"
+          ],
+          "outputs": [
+            "PartyRelationship.revision"
+          ]
+        },
+        {
+          "action_ref": "D4A-ENTITY-04-03",
+          "scene_ref": "SCN-ENTITY",
+          "relation": "executes",
+          "inputs": [
+            "RepresentativeClarification",
+            "PartyRefs"
+          ],
+          "outputs": [
+            "Person.ref",
+            "Representative.ref"
+          ]
+        },
+        {
+          "action_ref": "D4A-ENTITY-05-03",
+          "scene_ref": "SCN-ENTITY",
+          "relation": "executes",
+          "inputs": [
+            "AuthorityDecision",
+            "ExpectedRevision"
+          ],
+          "outputs": [
+            "AuthorityRecord.revision"
+          ]
+        },
+        {
+          "action_ref": "D4A-REQUIREMENTS-02-03",
+          "scene_ref": "SCN-REQUIREMENTS",
+          "relation": "executes",
+          "inputs": [
+            "ExemptionDecision",
+            "RequirementRefs"
+          ],
+          "outputs": [
+            "RequirementDecisionLink"
+          ]
+        },
+        {
+          "action_ref": "D4A-REQUIREMENTS-03-02",
+          "scene_ref": "SCN-REQUIREMENTS",
+          "relation": "executes",
+          "inputs": [
+            "AcceptedRequirement[]",
+            "ScopeRevision"
+          ],
+          "outputs": [
+            "RequirementSet.revision",
+            "OriginLinks"
+          ]
+        },
+        {
+          "action_ref": "D4A-REQUIREMENTS-04-03",
+          "scene_ref": "SCN-REQUIREMENTS",
+          "relation": "executes",
+          "inputs": [
+            "RiskAdjustmentDecision",
+            "RequirementSet.revision"
+          ],
+          "outputs": [
+            "RequirementChange",
+            "ReviewTask[]"
+          ]
+        },
+        {
+          "action_ref": "D4A-SOURCE-02-01",
+          "scene_ref": "SCN-SOURCE",
+          "relation": "executes",
+          "inputs": [
+            "SourceResponse",
+            "AdapterReceipt"
+          ],
+          "outputs": [
+            "ProvenanceRecord",
+            "EvidenceArtifact.data_as_of"
+          ]
+        },
+        {
+          "action_ref": "D4A-SOURCE-04-03",
+          "scene_ref": "SCN-SOURCE",
+          "relation": "executes",
+          "inputs": [
+            "DuplicateAssessment",
+            "SubmissionRefs"
+          ],
+          "outputs": [
+            "EvidenceLineageLinks"
+          ]
+        },
+        {
+          "action_ref": "D4A-SOURCE-06-02",
+          "scene_ref": "SCN-SOURCE",
+          "relation": "executes",
+          "inputs": [
+            "EvidenceUseCandidate[]",
+            "ScopeRevision"
+          ],
+          "outputs": [
+            "EvidenceUseAssessment.not_assessed"
+          ]
+        },
+        {
+          "action_ref": "D4A-GAP-01-02",
+          "scene_ref": "SCN-GAP",
+          "relation": "executes",
+          "inputs": [
+            "GapDelta",
+            "ExpectedRevision"
+          ],
+          "outputs": [
+            "Gap.revision",
+            "ApplicabilityReviewTask"
+          ]
+        },
+        {
+          "action_ref": "D4A-GAP-04-03",
+          "scene_ref": "SCN-GAP",
+          "relation": "executes",
+          "inputs": [
+            "DispatchReceipt",
+            "ChannelObservation"
+          ],
+          "outputs": [
+            "DeliveryObservation",
+            "RequestActivity"
+          ]
+        },
+        {
+          "action_ref": "D4A-GAP-05-02",
+          "scene_ref": "SCN-GAP",
+          "relation": "executes",
+          "inputs": [
+            "SubmissionIntent",
+            "AccessGrant",
+            "FileReceipt"
+          ],
+          "outputs": [
+            "Submission",
+            "RequestItem.response_status"
+          ]
+        },
+        {
+          "action_ref": "D4A-GAP-06-03",
+          "scene_ref": "SCN-GAP",
+          "relation": "executes",
+          "inputs": [
+            "ReviewedInteractionSummary",
+            "StaffSubmission"
+          ],
+          "outputs": [
+            "InteractionRecord",
+            "Submission.provenance"
+          ]
+        },
+        {
+          "action_ref": "D4A-VALIDATE-03-03",
+          "scene_ref": "SCN-VALIDATE",
+          "relation": "executes",
+          "inputs": [
+            "ClaimAdoptionDecision",
+            "ExpectedRevision"
+          ],
+          "outputs": [
+            "ClaimAdoptionRecord"
+          ]
+        },
+        {
+          "action_ref": "D4A-VALIDATE-04-03",
+          "scene_ref": "SCN-VALIDATE",
+          "relation": "executes",
+          "inputs": [
+            "EvidenceSufficiencyDecision",
+            "UseScope"
+          ],
+          "outputs": [
+            "EvidenceUseAssessment.revision"
+          ]
+        },
+        {
+          "action_ref": "D4A-VALIDATE-05-02",
+          "scene_ref": "SCN-VALIDATE",
+          "relation": "executes",
+          "inputs": [
+            "ReviewedImpactSet",
+            "CurrentTaskRegistry"
+          ],
+          "outputs": [
+            "ReassessmentTask[]",
+            "AuditEvent"
+          ]
+        },
+        {
+          "action_ref": "D4A-POPULATION-04-01",
+          "scene_ref": "SCN-POPULATION",
+          "relation": "executes",
+          "inputs": [
+            "ConfirmedMembership",
+            "PartyClaims",
+            "ScopeRevision"
+          ],
+          "outputs": [
+            "RunSubjectSnapshot",
+            "PopulationRevision"
+          ]
+        },
+        {
+          "action_ref": "D4A-MATCH-01-01",
+          "scene_ref": "SCN-MATCH",
+          "relation": "executes",
+          "inputs": [
+            "ProviderRecordSnapshot",
+            "RunSubjectSnapshot",
+            "RunId"
+          ],
+          "outputs": [
+            "ScreeningFinding"
+          ]
+        },
+        {
+          "action_ref": "D4A-MATCH-06-03",
+          "scene_ref": "SCN-MATCH",
+          "relation": "executes",
+          "inputs": [
+            "AuthorisedDisposition",
+            "ExpectedRevisions",
+            "IdempotencyKey"
+          ],
+          "outputs": [
+            "ScreeningReviewDecision",
+            "AuditEvent"
+          ]
+        },
+        {
+          "action_ref": "D4A-EDD-02-02",
+          "scene_ref": "SCN-EDD",
+          "relation": "executes",
+          "inputs": [
+            "EDDStartEligibility",
+            "AssignmentCatalogue"
+          ],
+          "outputs": [
+            "EDDAssessment",
+            "WorkItem"
+          ]
+        },
+        {
+          "action_ref": "D4A-EDD-06-02",
+          "scene_ref": "SCN-EDD",
+          "relation": "executes",
+          "inputs": [
+            "SpecialistConsultationPack",
+            "RoleDirectory"
+          ],
+          "outputs": [
+            "ConsultationTask",
+            "ResumeAnchor"
+          ]
+        },
+        {
+          "action_ref": "D4A-EDD-07-04",
+          "scene_ref": "SCN-EDD",
+          "relation": "executes",
+          "inputs": [
+            "EDDApproval",
+            "Conditions",
+            "ScopeRevision"
+          ],
+          "outputs": [
+            "EDDOutcome",
+            "ClearanceCondition[]"
+          ]
+        },
+        {
+          "action_ref": "D4A-EDD-08-01",
+          "scene_ref": "SCN-EDD",
+          "relation": "executes",
+          "inputs": [
+            "EDDOutcome",
+            "CurrentConditionRefs"
+          ],
+          "outputs": [
+            "EDDConditionHandoffEvent"
+          ]
+        },
+        {
+          "action_ref": "D4A-CONFLICTS-01-02",
+          "scene_ref": "SCN-CONFLICTS",
+          "relation": "executes",
+          "inputs": [
+            "ConflictStartEligibility",
+            "TriggerEvent"
+          ],
+          "outputs": [
+            "ConflictReview",
+            "WorkItem"
+          ]
+        },
+        {
+          "action_ref": "D4A-CONFLICTS-02-02",
+          "scene_ref": "SCN-CONFLICTS",
+          "relation": "executes",
+          "inputs": [
+            "ConflictSearchReceipt",
+            "ScopeRevision"
+          ],
+          "outputs": [
+            "ConflictFinding",
+            "SearchAudit"
+          ]
+        },
+        {
+          "action_ref": "D4A-CONFLICTS-05-02",
+          "scene_ref": "SCN-CONFLICTS",
+          "relation": "executes",
+          "inputs": [
+            "AuthorisedConflictOutcome",
+            "ExpectedRevision"
+          ],
+          "outputs": [
+            "ConflictReview.clearance_ref",
+            "ConditionEvent"
+          ]
+        },
+        {
+          "action_ref": "D4A-LEGAL-04-03",
+          "scene_ref": "SCN-LEGAL",
+          "relation": "executes",
+          "inputs": [
+            "ConditionIncorporationReview",
+            "ExpectedRevisions"
+          ],
+          "outputs": [
+            "AgreementInput",
+            "ConditionIncorporation",
+            "DependencyEdge"
+          ]
+        },
+        {
+          "action_ref": "D4A-LEGAL-06-03",
+          "scene_ref": "SCN-LEGAL",
+          "relation": "executes",
+          "inputs": [
+            "DomainApproval[]",
+            "ExpectedRevisions"
+          ],
+          "outputs": [
+            "AgreementApproval",
+            "CreditAgreementReview"
+          ]
+        },
+        {
+          "action_ref": "D4A-LEGAL-07-03",
+          "scene_ref": "SCN-LEGAL",
+          "relation": "executes",
+          "inputs": [
+            "SigningAction",
+            "ExecutionAdapter"
+          ],
+          "outputs": [
+            "ExecutionReceipt",
+            "SignedArtifactRef"
+          ]
+        },
+        {
+          "action_ref": "D4A-LEGAL-08-03",
+          "scene_ref": "SCN-LEGAL",
+          "relation": "executes",
+          "inputs": [
+            "KeyTermAdoptionDecision",
+            "SignedArtifactRef"
+          ],
+          "outputs": [
+            "KeyTermRecord",
+            "ExecutedDocumentLink"
+          ]
+        },
+        {
+          "action_ref": "D4A-CREDIT-04-02",
+          "scene_ref": "SCN-CREDIT",
+          "relation": "executes",
+          "inputs": [
+            "CreditConditionDefinition",
+            "ScopeRevision"
+          ],
+          "outputs": [
+            "CreditCondition.spec_ref",
+            "CreditCondition.fulfilment_status"
+          ]
+        },
+        {
+          "action_ref": "D4A-CREDIT-05-02",
+          "scene_ref": "SCN-CREDIT",
+          "relation": "executes",
+          "inputs": [
+            "CreditApprovalDecision",
+            "ExpectedInputRevisions"
+          ],
+          "outputs": [
+            "CreditDecision",
+            "ApprovedConditionRefs"
+          ]
+        },
+        {
+          "action_ref": "D4A-CREDIT-07-03",
+          "scene_ref": "SCN-CREDIT",
+          "relation": "executes",
+          "inputs": [
+            "CreditAgreementDecision",
+            "ExpectedRevisions"
+          ],
+          "outputs": [
+            "CreditAgreementReview",
+            "CurrencyRecord"
+          ]
+        },
+        {
+          "action_ref": "D4A-QA-02-02",
+          "scene_ref": "SCN-QA",
+          "relation": "executes",
+          "inputs": [
+            "QACheckResult[]",
+            "ExpectedRevision"
+          ],
+          "outputs": [
+            "QACheck.revision",
+            "QAObservation"
+          ]
+        },
+        {
+          "action_ref": "D4A-QA-05-02",
+          "scene_ref": "SCN-QA",
+          "relation": "executes",
+          "inputs": [
+            "SpecificIssueRefs",
+            "ExistingWorkItems"
+          ],
+          "outputs": [
+            "QAFinding",
+            "LinkedSpecialistTask"
+          ]
+        },
+        {
+          "action_ref": "D4A-QA-06-03",
+          "scene_ref": "SCN-QA",
+          "relation": "executes",
+          "inputs": [
+            "ReviewedRemediationProposal",
+            "AssignmentRule"
+          ],
+          "outputs": [
+            "Remediation",
+            "WorkItem",
+            "ResumeAnchor"
+          ]
+        },
+        {
+          "action_ref": "D4A-QA-07-03",
+          "scene_ref": "SCN-QA",
+          "relation": "executes",
+          "inputs": [
+            "QARecheckDecision",
+            "ExpectedRevision"
+          ],
+          "outputs": [
+            "QACheck.recheck_revision",
+            "RemediationResolutionLink"
+          ]
+        },
+        {
+          "action_ref": "D4A-QA-08-03",
+          "scene_ref": "SCN-QA",
+          "relation": "executes",
+          "inputs": [
+            "AuthorisedQASignoff",
+            "ExpectedRevisions"
+          ],
+          "outputs": [
+            "QASignoff",
+            "AuditEvent"
+          ]
+        },
+        {
+          "action_ref": "D4A-READINESS-02-02",
+          "scene_ref": "SCN-READINESS",
+          "relation": "executes",
+          "inputs": [
+            "PrerequisiteEvaluation",
+            "InputManifest"
+          ],
+          "outputs": [
+            "ReadinessSnapshot"
+          ]
+        },
+        {
+          "action_ref": "D4A-READINESS-03-02",
+          "scene_ref": "SCN-READINESS",
+          "relation": "executes",
+          "inputs": [
+            "CurrencyCheck",
+            "DeclaredImpact",
+            "ExpectedRevision"
+          ],
+          "outputs": [
+            "CurrencyReviewTask",
+            "HistoricalDecisionLink"
+          ]
+        },
+        {
+          "action_ref": "D4A-PUBLISH-01-01",
+          "scene_ref": "SCN-PUBLISH",
+          "relation": "executes",
+          "inputs": [
+            "ReadinessSnapshot",
+            "CurrentDecisionRefs",
+            "EvidenceRefs"
+          ],
+          "outputs": [
+            "ClearancePack",
+            "InputManifest"
+          ]
+        },
+        {
+          "action_ref": "D4A-PUBLISH-02-03",
+          "scene_ref": "SCN-PUBLISH",
+          "relation": "executes",
+          "inputs": [
+            "AuthorisedClearanceDecision",
+            "ExpectedRevisions",
+            "IdempotencyKey"
+          ],
+          "outputs": [
+            "ClearanceDecision",
+            "AuditEvent"
+          ]
+        },
+        {
+          "action_ref": "D4A-PUBLISH-03-01",
+          "scene_ref": "SCN-PUBLISH",
+          "relation": "executes",
+          "inputs": [
+            "DecisionEvent",
+            "DispatchReceipt",
+            "Acknowledgement"
+          ],
+          "outputs": [
+            "TimestampedEventRecords"
+          ]
+        },
+        {
+          "action_ref": "D4A-PUBLISH-04-03",
+          "scene_ref": "SCN-PUBLISH",
+          "relation": "executes",
+          "inputs": [
+            "PerTargetDispatchReceipt",
+            "ClearanceDecision.ref"
+          ],
+          "outputs": [
+            "PublicationEvent",
+            "Acknowledgement",
+            "FailureRecord"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "SK-12",
+      "name": "Role Projection & Controlled Publication",
+      "purpose": "Role Projection & Controlled Publication",
+      "input": "role/resource/action scope + signed-off versioned payload",
+      "output": "allowed view / notification / per-target publication receipt",
+      "boundaries": "Projection read-only; transmission separated and authorised",
+      "stops": "projection denied/revoked → safe exclusion; dispatch fail preserves decision",
+      "kind": "deterministic",
+      "contract_status": "Defined design proposal",
+      "sample_status": "Not authored in this pilot",
+      "prototype_binding_status": "Read-only interface binding",
+      "implementation_evidence_status": "Unverified; no model or runtime evaluation",
+      "uses": [
+        {
+          "action_ref": "D4A-ENTITY-06-02",
+          "scene_ref": "SCN-ENTITY",
+          "relation": "executes",
+          "inputs": [
+            "RequestAccessDecision",
+            "ActorSession"
+          ],
+          "outputs": [
+            "AccessGrant",
+            "AllowedResourceProjection"
+          ]
+        },
+        {
+          "action_ref": "D4A-REQUIREMENTS-05-03",
+          "scene_ref": "SCN-REQUIREMENTS",
+          "relation": "executes",
+          "inputs": [
+            "ApprovedRequestRevision",
+            "AllowedRecipient"
+          ],
+          "outputs": [
+            "NotificationDispatch",
+            "DeliveryObservation"
+          ]
+        },
+        {
+          "action_ref": "D4A-GAP-03-02",
+          "scene_ref": "SCN-GAP",
+          "relation": "executes",
+          "inputs": [
+            "RequestAccessDecision",
+            "GrantPolicy"
+          ],
+          "outputs": [
+            "AccessGrant",
+            "AuthorisedProjection"
+          ]
+        },
+        {
+          "action_ref": "D4A-GAP-04-02",
+          "scene_ref": "SCN-GAP",
+          "relation": "executes",
+          "inputs": [
+            "RequestApproval",
+            "SentRevision",
+            "IdempotencyKey"
+          ],
+          "outputs": [
+            "DispatchReceipt"
+          ]
+        },
+        {
+          "action_ref": "D4A-VALIDATE-06-02",
+          "scene_ref": "SCN-VALIDATE",
+          "relation": "executes",
+          "inputs": [
+            "ApprovedFeedback",
+            "RecipientGrant",
+            "RequestRevision"
+          ],
+          "outputs": [
+            "FeedbackEvent",
+            "NotificationReceipt"
+          ]
+        },
+        {
+          "action_ref": "D4A-MATCH-07-02",
+          "scene_ref": "SCN-MATCH",
+          "relation": "executes",
+          "inputs": [
+            "CurrentCaseState",
+            "AllowedRoleProjection"
+          ],
+          "outputs": [
+            "CaseImpactView"
+          ]
+        },
+        {
+          "action_ref": "D4A-EDD-08-02",
+          "scene_ref": "SCN-EDD",
+          "relation": "executes",
+          "inputs": [
+            "EDDConditionHandoffEvent",
+            "RolePolicy"
+          ],
+          "outputs": [
+            "EDDAllowedSummary"
+          ]
+        },
+        {
+          "action_ref": "D4A-CREDIT-06-01",
+          "scene_ref": "SCN-CREDIT",
+          "relation": "executes",
+          "inputs": [
+            "CreditDecision",
+            "ConditionPackage.revision",
+            "LegalAccess"
+          ],
+          "outputs": [
+            "AgreementInputReceipt"
+          ]
+        },
+        {
+          "action_ref": "D4A-READINESS-04-01",
+          "scene_ref": "SCN-READINESS",
+          "relation": "executes",
+          "inputs": [
+            "ReadinessSnapshot",
+            "RolePermission",
+            "TaskRegistry"
+          ],
+          "outputs": [
+            "AllowedReadinessView"
+          ]
+        },
+        {
+          "action_ref": "D4A-READINESS-05-02",
+          "scene_ref": "SCN-READINESS",
+          "relation": "executes",
+          "inputs": [
+            "ReadyForConfirmationOrNotReady",
+            "ActorPermission"
+          ],
+          "outputs": [
+            "AllowedClearanceActions"
+          ]
+        },
+        {
+          "action_ref": "D4A-PUBLISH-01-02",
+          "scene_ref": "SCN-PUBLISH",
+          "relation": "executes",
+          "inputs": [
+            "ClearancePack",
+            "RolePolicy"
+          ],
+          "outputs": [
+            "AllowedClearancePackView"
+          ]
+        },
+        {
+          "action_ref": "D4A-PUBLISH-04-01",
+          "scene_ref": "SCN-PUBLISH",
+          "relation": "executes",
+          "inputs": [
+            "ClearanceDecision",
+            "PublicationPolicy",
+            "TargetAllowlist"
+          ],
+          "outputs": [
+            "ApprovedPublicationIntent"
+          ]
+        },
+        {
+          "action_ref": "D4A-PUBLISH-04-02",
+          "scene_ref": "SCN-PUBLISH",
+          "relation": "executes",
+          "inputs": [
+            "ApprovedPublicationIntent",
+            "IdempotencyKey",
+            "RetryPolicy"
+          ],
+          "outputs": [
+            "PerTargetDispatchReceipt"
+          ]
+        },
+        {
+          "action_ref": "D4A-PUBLISH-05-03",
+          "scene_ref": "SCN-PUBLISH",
+          "relation": "executes",
+          "inputs": [
+            "ApprovedOutcomeCommunication",
+            "RecipientGrant"
+          ],
+          "outputs": [
+            "OutcomeNotificationReceipt"
+          ]
+        }
+      ]
+    }
+  ],
+  "frames": [
+    {
+      "id": "OM-F1",
+      "title": "Bind the original finding",
+      "text": "Person T and synthetic record C01 share the original query time and subject version. Identity information is incomplete. No Target-only evidence is added.",
+      "action_ref": "D4A-MATCH-01-01",
+      "status": "Authored frame"
+    },
+    {
+      "id": "OM-F2",
+      "title": "Compare, preserving unknowns",
+      "text": "The authored comparison shows a similar name. Person T’s birth date is missing; provider years 1970 / 1971 cannot be treated as a precise contradiction.",
+      "action_ref": "D4A-MATCH-02-02",
+      "status": "Authored frame"
+    },
+    {
+      "id": "OM-F3",
+      "title": "Stop at the evidence gap",
+      "text": "Identity context remains insufficient. A scoped request may be prepared, but recipients, disclosure and personal-evidence access need confirmation. Playback creates no task or hold.",
+      "action_ref": "D4A-MATCH-03-01",
+      "status": "Pause boundary"
+    },
+    {
+      "id": "OM-F4",
+      "title": "Give the decision pack to a person",
+      "text": "Review the original evidence, unknowns, current scope and permitted consequences. Request information, remain unresolved or refer within existing permissions. Next cannot approve.",
+      "action_ref": "D4A-MATCH-05-02",
+      "status": "Pause boundary"
+    },
+    {
+      "id": "OM-F5",
+      "title": "Authored outcome: remains unresolved",
+      "text": "The existing C-unresolved story records an unresolved local disposition. A reviewed identity-exclusion checkpoint is unavailable. This is an authored outcome, not your decision. Recheck permission, versions and holds before any actual resumption.",
+      "action_ref": "D4A-MATCH-06-01",
+      "status": "Authored outcome — not a user decision"
+    },
+    {
+      "id": "OM-F6",
+      "title": "Local outcome, open conditions",
+      "text": "Ownership and population are incomplete; EDD applicability is unknown. Legal, Credit and other applicable conditions remain independently open. This finding is not whole-case clearance.",
+      "action_ref": "D4A-MATCH-07-02",
+      "status": "Authored outcome — not a user decision"
+    }
+  ],
+  "references": [
+    {
+      "id": "REG-DFAT-LIST",
+      "title": "DFAT — Guide to Australia’s Consolidated List",
+      "url": "https://www.dfat.gov.au/international-relations/security/sanctions/consolidated-list/guide-australias-consolidated-list",
+      "locator": "Names, aliases, dates and places of birth, citizenship",
+      "observation": "List records can contain multiple identifiers, aliases and incomplete information.",
+      "transfer": "Preserve multiple values, precision, unknowns and the original record for a purpose-specific comparison.",
+      "limit": "A single attribute difference cannot automatically exclude a match. The Australian list does not establish coverage for every jurisdiction; no real listed person is imported.",
+      "status": "official_content_checked_2026-09-07"
+    },
+    {
+      "id": "IND-WOLFSBERG",
+      "title": "Wolfsberg — Guidance on Sanctions Screening (2019)",
+      "url": "https://wolfsberg-group.org/resources/legacy/53",
+      "locator": "§1; §2.1; §3.2; §4; §6",
+      "observation": "An alert does not establish risk. Review relevant information, record disposition reasons and make screening scope and configuration explicit.",
+      "transfer": "Separate Population, Run, Finding, Review, Decision and Coverage; prepare evidence for a human decision.",
+      "limit": "The guidance does not directly establish our bank permissions, thresholds, pause scopes or reuse rules.",
+      "status": "official_content_checked_2026-09-07"
+    },
+    {
+      "id": "IB-ANZ-SECURE",
+      "title": "ANZ — KYC SecureReply",
+      "url": "https://www.anz.com.au/support/business/secure-reply/",
+      "locator": "Selected business-customer information-update workflow; entry/save/contributor FAQ",
+      "observation": "The example uses a reference and an OTP to registered contact details for entry. Save and submit are separate, with contributor restrictions on some fields.",
+      "transfer": "Separate official-site entry from locating a request; keep item responses, submission receipts and review states distinct.",
+      "limit": "This is an information-update example, not the complete institutional clearance journey. It does not validate this case’s security level or representative authority.",
+      "status": "official_content_checked_2026-09-07"
+    },
+    {
+      "id": "XB-FHIR-R5",
+      "title": "HL7 FHIR R5 — Provenance",
+      "url": "https://hl7.org/fhir/R5/provenance.html",
+      "locator": "Fixed version 5.0.0; target/activity/agent/entity",
+      "observation": "Provenance links a resource version to an activity, participants and source entities.",
+      "transfer": "Link a decision record to its specific input versions, actor and generating activity.",
+      "limit": "The word agent denotes a participant, not an AI Agent. This prototype does not implement FHIR; R4 and R5 remain distinct versions.",
+      "status": "official_content_checked_2026-09-07"
+    }
+  ]
+}

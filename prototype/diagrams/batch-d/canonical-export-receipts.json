@@ -1,0 +1,65 @@
+[
+  {
+    "name": "DG-D01.zh-CN.r02",
+    "method": "Archify viewer Export → SVG",
+    "canonical": true,
+    "artifactSha256": "1cf0d8f1ffc5fea9371d8fd85b6c9918e4dd5063d343d0cff566980541e7ecf4",
+    "svgSha256": "9f00f8c4797d847ce1124dffd99c48b071412cf89109394078eb4ce25c03af7e"
+  },
+  {
+    "name": "DG-D01.en-AU.r02",
+    "method": "Archify viewer Export → SVG",
+    "canonical": true,
+    "artifactSha256": "f97cd0480e02465f634332ccaa0a89f74ce5c1be462da45f05e10f9281ee6dc9",
+    "svgSha256": "9d5d1dfa9d43e31ac3251057d838be6afd8e8256f42b34ec0bb59e4366888854"
+  },
+  {
+    "name": "DG-D01.en-US.r02",
+    "method": "Archify viewer Export → SVG",
+    "canonical": true,
+    "artifactSha256": "f97cd0480e02465f634332ccaa0a89f74ce5c1be462da45f05e10f9281ee6dc9",
+    "svgSha256": "9d5d1dfa9d43e31ac3251057d838be6afd8e8256f42b34ec0bb59e4366888854"
+  },
+  {
+    "name": "DG-D02.zh-CN.r02",
+    "method": "Archify viewer Export → SVG",
+    "canonical": true,
+    "artifactSha256": "cefd3740c8854bde1bf56c3c535d35fc154676a494e20d08dcd9404bf65d428d",
+    "svgSha256": "4e7be81fa62ca6ad09cce011d266fe9b40aba50001a8a9e9f11684e69fd226e0"
+  },
+  {
+    "name": "DG-D02.en-AU.r02",
+    "method": "Archify viewer Export → SVG",
+    "canonical": true,
+    "artifactSha256": "13664ea2fa4d29f24d41208b854082eec60b9ffcd852ca08090922f902e6309d",
+    "svgSha256": "069cd2389feebda7347b8d9982b5f769fbc2d049509a2fdb1c222cd84e3245ef"
+  },
+  {
+    "name": "DG-D02.en-US.r02",
+    "method": "Archify viewer Export → SVG",
+    "canonical": true,
+    "artifactSha256": "13664ea2fa4d29f24d41208b854082eec60b9ffcd852ca08090922f902e6309d",
+    "svgSha256": "069cd2389feebda7347b8d9982b5f769fbc2d049509a2fdb1c222cd84e3245ef"
+  },
+  {
+    "name": "DG-D03.zh-CN.r02",
+    "method": "Archify viewer Export → SVG",
+    "canonical": true,
+    "artifactSha256": "bdf37694083bc3a79b1c7f996b1e24f0672d13013d3a588b233330c9e2dd0cf1",
+    "svgSha256": "02106ede3d567d65bd11ab1b7bb7c2efc8cd30bce1e2b9af6955eb9cb9a38e6b"
+  },
+  {
+    "name": "DG-D03.en-AU.r02",
+    "method": "Archify viewer Export → SVG",
+    "canonical": true,
+    "artifactSha256": "500b2d8de2b082ce583fc3fc06f7d92a4676c3d8da5f5fc5065fc8aaf575481f",
+    "svgSha256": "613aef8648340b9ec0b581c89c43e5e7adf6e7bccc7d2bdcdd7299238d92e179"
+  },
+  {
+    "name": "DG-D03.en-US.r02",
+    "method": "Archify viewer Export → SVG",
+    "canonical": true,
+    "artifactSha256": "500b2d8de2b082ce583fc3fc06f7d92a4676c3d8da5f5fc5065fc8aaf575481f",
+    "svgSha256": "613aef8648340b9ec0b581c89c43e5e7adf6e7bccc7d2bdcdd7299238d92e179"
+  }
+]

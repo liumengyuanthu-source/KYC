@@ -1,0 +1,1344 @@
+{
+  "source_sha256": "fdaa5d5c172645dd2f0409bbc929a016dd5d78ba0ea24d3b15f2fd79ba3852ad",
+  "status": "Inherited author proposal; source issues unresolved",
+  "actions": [
+    {
+      "action_ref": "D4A-MATCH-01-01",
+      "parent_change_ref": "D3-MATCH-01",
+      "branch_ref": "BR-07",
+      "workflow_ref": "WF-05",
+      "transformation_type": "Reassigned",
+      "original_collaboration_pattern": "Human-by-exception",
+      "display_mapping_inputs": {
+        "primary_executor": "RULE_CODE",
+        "skill_relation": "used_by_execution"
+      },
+      "current_occurrences": [
+        {
+          "source_id": "PPT-S1-SH296-A5",
+          "deck_filename": "Sanitised Process Map(1).pptx",
+          "slide_no": 1,
+          "shape_id": 296,
+          "occurrence_in_shape": 5,
+          "process_code": "M4.5",
+          "verbatim_text": "M4.5  Adjudicate screening hits",
+          "visible_actor": "CLIENT FULFILMENT / KYC OPS",
+          "format_observation": "normal",
+          "source_runs": [],
+          "x_inches": 6.5172,
+          "y_inches": 3.1037
+        }
+      ],
+      "target_occurrences": [
+        {
+          "source_id": "PPT-S2-SH296-A5",
+          "deck_filename": "Sanitised Process Map(1).pptx",
+          "slide_no": 2,
+          "shape_id": 296,
+          "occurrence_in_shape": 5,
+          "process_code": "M4.5",
+          "verbatim_text": "M4.5  Adjudicate screening hits",
+          "visible_actor": "Agentic execution",
+          "format_observation": "normal",
+          "source_runs": [],
+          "x_inches": 6.5172,
+          "y_inches": 3.0771
+        },
+        {
+          "source_id": "PPT-S2-SH376-EX",
+          "deck_filename": "Sanitised Process Map(1).pptx",
+          "slide_no": 2,
+          "shape_id": 376,
+          "occurrence_in_shape": 1,
+          "process_code": null,
+          "verbatim_text": "Review ambiguous screening hits",
+          "visible_actor": "CLIENT FULFILMENT / KYC OPS — Human in the Loop",
+          "format_observation": "normal",
+          "source_runs": []
+        }
+      ],
+      "source_format_flags": [],
+      "source_issue_refs": [
+        "D3-ISS-06",
+        "D3-ISS-15"
+      ],
+      "benchmark_refs": [
+        "IND-WOLFSBERG"
+      ]
+    },
+    {
+      "action_ref": "D4A-MATCH-01-02",
+      "parent_change_ref": "D3-MATCH-01",
+      "branch_ref": "BR-07",
+      "workflow_ref": "WF-05",
+      "transformation_type": "Reassigned",
+      "original_collaboration_pattern": "Human-by-exception",
+      "display_mapping_inputs": {
+        "primary_executor": "RULE_CODE",
+        "skill_relation": "used_by_execution"
+      },
+      "current_occurrences": [
+        {
+          "source_id": "PPT-S1-SH296-A5",
+          "deck_filename": "Sanitised Process Map(1).pptx",
+          "slide_no": 1,
+          "shape_id": 296,
+          "occurrence_in_shape": 5,
+          "process_code": "M4.5",
+          "verbatim_text": "M4.5  Adjudicate screening hits",
+          "visible_actor": "CLIENT FULFILMENT / KYC OPS",
+          "format_observation": "normal",
+          "source_runs": [],
+          "x_inches": 6.5172,
+          "y_inches": 3.1037
+        }
+      ],
+      "target_occurrences": [
+        {
+          "source_id": "PPT-S2-SH296-A5",
+          "deck_filename": "Sanitised Process Map(1).pptx",
+          "slide_no": 2,
+          "shape_id": 296,
+          "occurrence_in_shape": 5,
+          "process_code": "M4.5",
+          "verbatim_text": "M4.5  Adjudicate screening hits",
+          "visible_actor": "Agentic execution",
+          "format_observation": "normal",
+          "source_runs": [],
+          "x_inches": 6.5172,
+          "y_inches": 3.0771
+        },
+        {
+          "source_id": "PPT-S2-SH376-EX",
+          "deck_filename": "Sanitised Process Map(1).pptx",
+          "slide_no": 2,
+          "shape_id": 376,
+          "occurrence_in_shape": 1,
+          "process_code": null,
+          "verbatim_text": "Review ambiguous screening hits",
+          "visible_actor": "CLIENT FULFILMENT / KYC OPS — Human in the Loop",
+          "format_observation": "normal",
+          "source_runs": []
+        }
+      ],
+      "source_format_flags": [],
+      "source_issue_refs": [
+        "D3-ISS-06",
+        "D3-ISS-15"
+      ],
+      "benchmark_refs": [
+        "IND-WOLFSBERG"
+      ]
+    },
+    {
+      "action_ref": "D4A-MATCH-02-01",
+      "parent_change_ref": "D3-MATCH-02",
+      "branch_ref": "BR-07",
+      "workflow_ref": "WF-05",
+      "transformation_type": "Enhanced",
+      "original_collaboration_pattern": "Human-by-exception",
+      "display_mapping_inputs": {
+        "primary_executor": "RULE_CODE",
+        "skill_relation": "used_by_execution"
+      },
+      "current_occurrences": [
+        {
+          "source_id": "PPT-S1-SH296-A5",
+          "deck_filename": "Sanitised Process Map(1).pptx",
+          "slide_no": 1,
+          "shape_id": 296,
+          "occurrence_in_shape": 5,
+          "process_code": "M4.5",
+          "verbatim_text": "M4.5  Adjudicate screening hits",
+          "visible_actor": "CLIENT FULFILMENT / KYC OPS",
+          "format_observation": "normal",
+          "source_runs": [],
+          "x_inches": 6.5172,
+          "y_inches": 3.1037
+        }
+      ],
+      "target_occurrences": [
+        {
+          "source_id": "PPT-S2-SH296-A5",
+          "deck_filename": "Sanitised Process Map(1).pptx",
+          "slide_no": 2,
+          "shape_id": 296,
+          "occurrence_in_shape": 5,
+          "process_code": "M4.5",
+          "verbatim_text": "M4.5  Adjudicate screening hits",
+          "visible_actor": "Agentic execution",
+          "format_observation": "normal",
+          "source_runs": [],
+          "x_inches": 6.5172,
+          "y_inches": 3.0771
+        },
+        {
+          "source_id": "PPT-S2-SH376-EX",
+          "deck_filename": "Sanitised Process Map(1).pptx",
+          "slide_no": 2,
+          "shape_id": 376,
+          "occurrence_in_shape": 1,
+          "process_code": null,
+          "verbatim_text": "Review ambiguous screening hits",
+          "visible_actor": "CLIENT FULFILMENT / KYC OPS — Human in the Loop",
+          "format_observation": "normal",
+          "source_runs": []
+        }
+      ],
+      "source_format_flags": [],
+      "source_issue_refs": [
+        "D3-ISS-06",
+        "D3-ISS-15"
+      ],
+      "benchmark_refs": [
+        "REG-DFAT-LIST"
+      ]
+    },
+    {
+      "action_ref": "D4A-MATCH-02-02",
+      "parent_change_ref": "D3-MATCH-02",
+      "branch_ref": "BR-07",
+      "workflow_ref": "WF-05",
+      "transformation_type": "Enhanced",
+      "original_collaboration_pattern": "Agent-prepared",
+      "display_mapping_inputs": {
+        "primary_executor": "SEMANTIC_SKILL",
+        "skill_relation": "used_by_execution"
+      },
+      "current_occurrences": [
+        {
+          "source_id": "PPT-S1-SH296-A5",
+          "deck_filename": "Sanitised Process Map(1).pptx",
+          "slide_no": 1,
+          "shape_id": 296,
+          "occurrence_in_shape": 5,
+          "process_code": "M4.5",
+          "verbatim_text": "M4.5  Adjudicate screening hits",
+          "visible_actor": "CLIENT FULFILMENT / KYC OPS",
+          "format_observation": "normal",
+          "source_runs": [],
+          "x_inches": 6.5172,
+          "y_inches": 3.1037
+        }
+      ],
+      "target_occurrences": [
+        {
+          "source_id": "PPT-S2-SH296-A5",
+          "deck_filename": "Sanitised Process Map(1).pptx",
+          "slide_no": 2,
+          "shape_id": 296,
+          "occurrence_in_shape": 5,
+          "process_code": "M4.5",
+          "verbatim_text": "M4.5  Adjudicate screening hits",
+          "visible_actor": "Agentic execution",
+          "format_observation": "normal",
+          "source_runs": [],
+          "x_inches": 6.5172,
+          "y_inches": 3.0771
+        },
+        {
+          "source_id": "PPT-S2-SH376-EX",
+          "deck_filename": "Sanitised Process Map(1).pptx",
+          "slide_no": 2,
+          "shape_id": 376,
+          "occurrence_in_shape": 1,
+          "process_code": null,
+          "verbatim_text": "Review ambiguous screening hits",
+          "visible_actor": "CLIENT FULFILMENT / KYC OPS — Human in the Loop",
+          "format_observation": "normal",
+          "source_runs": []
+        }
+      ],
+      "source_format_flags": [],
+      "source_issue_refs": [
+        "D3-ISS-06",
+        "D3-ISS-15"
+      ],
+      "benchmark_refs": [
+        "REG-DFAT-LIST"
+      ]
+    },
+    {
+      "action_ref": "D4A-MATCH-03-01",
+      "parent_change_ref": "D3-MATCH-03",
+      "branch_ref": "BR-07",
+      "workflow_ref": "WF-05",
+      "transformation_type": "Enhanced",
+      "original_collaboration_pattern": "Agent-led within guardrails",
+      "display_mapping_inputs": {
+        "primary_executor": "BOUNDED_AGENT_CANDIDATE",
+        "skill_relation": "used_by_execution"
+      },
+      "current_occurrences": [
+        {
+          "source_id": "PPT-S1-SH296-A5",
+          "deck_filename": "Sanitised Process Map(1).pptx",
+          "slide_no": 1,
+          "shape_id": 296,
+          "occurrence_in_shape": 5,
+          "process_code": "M4.5",
+          "verbatim_text": "M4.5  Adjudicate screening hits",
+          "visible_actor": "CLIENT FULFILMENT / KYC OPS",
+          "format_observation": "normal",
+          "source_runs": [],
+          "x_inches": 6.5172,
+          "y_inches": 3.1037
+        },
+        {
+          "source_id": "PPT-S1-SH292-A3",
+          "deck_filename": "Sanitised Process Map(1).pptx",
+          "slide_no": 1,
+          "shape_id": 292,
+          "occurrence_in_shape": 3,
+          "process_code": "M3.3",
+          "verbatim_text": "M3.3  Request info from client",
+          "visible_actor": "CLIENT FULFILMENT / KYC OPS",
+          "format_observation": "normal",
+          "source_runs": [],
+          "x_inches": 5.2328,
+          "y_inches": 3.0604
+        },
+        {
+          "source_id": "PPT-S1-SH9-A1",
+          "deck_filename": "Sanitised Process Map(1).pptx",
+          "slide_no": 1,
+          "shape_id": 9,
+          "occurrence_in_shape": 1,
+          "process_code": "M3.3",
+          "verbatim_text": "M3.3  Request info from client",
+          "visible_actor": "SALES / RM (Front Office)",
+          "format_observation": "normal",
+          "source_runs": [],
+          "x_inches": 5.2328,
+          "y_inches": 2.5137
+        },
+        {
+          "source_id": "PPT-S1-SH292-A4",
+          "deck_filename": "Sanitised Process Map(1).pptx",
+          "slide_no": 1,
+          "shape_id": 292,
+          "occurrence_in_shape": 4,
+          "process_code": "M3.4",
+          "verbatim_text": "M3.4  Capture & validate evidence",
+          "visible_actor": "CLIENT FULFILMENT / KYC OPS",
+          "format_observation": "normal",
+          "source_runs": [],
+          "x_inches": 5.2328,
+          "y_inches": 3.0604
+        }
+      ],
+      "target_occurrences": [
+        {
+          "source_id": "PPT-S2-SH296-A5",
+          "deck_filename": "Sanitised Process Map(1).pptx",
+          "slide_no": 2,
+          "shape_id": 296,
+          "occurrence_in_shape": 5,
+          "process_code": "M4.5",
+          "verbatim_text": "M4.5  Adjudicate screening hits",
+          "visible_actor": "Agentic execution",
+          "format_observation": "normal",
+          "source_runs": [],
+          "x_inches": 6.5172,
+          "y_inches": 3.0771
+        },
+        {
+          "source_id": "PPT-S2-SH292-A3",
+          "deck_filename": "Sanitised Process Map(1).pptx",
+          "slide_no": 2,
+          "shape_id": 292,
+          "occurrence_in_shape": 3,
+          "process_code": "M3.3",
+          "verbatim_text": "M3.3  Request info from client",
+          "visible_actor": "Agentic execution",
+          "format_observation": "normal",
+          "source_runs": [],
+          "x_inches": 5.2328,
+          "y_inches": 3.0771
+        },
+        {
+          "source_id": "PPT-S2-SH292-A4",
+          "deck_filename": "Sanitised Process Map(1).pptx",
+          "slide_no": 2,
+          "shape_id": 292,
+          "occurrence_in_shape": 4,
+          "process_code": "M3.4",
+          "verbatim_text": "M3.4  Capture & validate evidence",
+          "visible_actor": "Agentic execution",
+          "format_observation": "normal",
+          "source_runs": [],
+          "x_inches": 5.2328,
+          "y_inches": 3.0771
+        },
+        {
+          "source_id": "PPT-S2-SH392-EX",
+          "deck_filename": "Sanitised Process Map(1).pptx",
+          "slide_no": 2,
+          "shape_id": 392,
+          "occurrence_in_shape": 1,
+          "process_code": null,
+          "verbatim_text": "Support evidence gaps where needed",
+          "visible_actor": "CLIENT FULFILMENT / KYC OPS — Human in the Loop",
+          "format_observation": "normal",
+          "source_runs": []
+        }
+      ],
+      "source_format_flags": [],
+      "source_issue_refs": [
+        "D3-ISS-06",
+        "D3-ISS-15"
+      ],
+      "benchmark_refs": [
+        "IB-ANZ-SECURE",
+        "IC-PHKL"
+      ]
+    },
+    {
+      "action_ref": "D4A-MATCH-03-02",
+      "parent_change_ref": "D3-MATCH-03",
+      "branch_ref": "BR-07",
+      "workflow_ref": "WF-05",
+      "transformation_type": "Enhanced",
+      "original_collaboration_pattern": "Agent-prepared",
+      "display_mapping_inputs": {
+        "primary_executor": "SEMANTIC_SKILL",
+        "skill_relation": "used_by_execution"
+      },
+      "current_occurrences": [
+        {
+          "source_id": "PPT-S1-SH296-A5",
+          "deck_filename": "Sanitised Process Map(1).pptx",
+          "slide_no": 1,
+          "shape_id": 296,
+          "occurrence_in_shape": 5,
+          "process_code": "M4.5",
+          "verbatim_text": "M4.5  Adjudicate screening hits",
+          "visible_actor": "CLIENT FULFILMENT / KYC OPS",
+          "format_observation": "normal",
+          "source_runs": [],
+          "x_inches": 6.5172,
+          "y_inches": 3.1037
+        },
+        {
+          "source_id": "PPT-S1-SH292-A3",
+          "deck_filename": "Sanitised Process Map(1).pptx",
+          "slide_no": 1,
+          "shape_id": 292,
+          "occurrence_in_shape": 3,
+          "process_code": "M3.3",
+          "verbatim_text": "M3.3  Request info from client",
+          "visible_actor": "CLIENT FULFILMENT / KYC OPS",
+          "format_observation": "normal",
+          "source_runs": [],
+          "x_inches": 5.2328,
+          "y_inches": 3.0604
+        },
+        {
+          "source_id": "PPT-S1-SH9-A1",
+          "deck_filename": "Sanitised Process Map(1).pptx",
+          "slide_no": 1,
+          "shape_id": 9,
+          "occurrence_in_shape": 1,
+          "process_code": "M3.3",
+          "verbatim_text": "M3.3  Request info from client",
+          "visible_actor": "SALES / RM (Front Office)",
+          "format_observation": "normal",
+          "source_runs": [],
+          "x_inches": 5.2328,
+          "y_inches": 2.5137
+        },
+        {
+          "source_id": "PPT-S1-SH292-A4",
+          "deck_filename": "Sanitised Process Map(1).pptx",
+          "slide_no": 1,
+          "shape_id": 292,
+          "occurrence_in_shape": 4,
+          "process_code": "M3.4",
+          "verbatim_text": "M3.4  Capture & validate evidence",
+          "visible_actor": "CLIENT FULFILMENT / KYC OPS",
+          "format_observation": "normal",
+          "source_runs": [],
+          "x_inches": 5.2328,
+          "y_inches": 3.0604
+        }
+      ],
+      "target_occurrences": [
+        {
+          "source_id": "PPT-S2-SH296-A5",
+          "deck_filename": "Sanitised Process Map(1).pptx",
+          "slide_no": 2,
+          "shape_id": 296,
+          "occurrence_in_shape": 5,
+          "process_code": "M4.5",
+          "verbatim_text": "M4.5  Adjudicate screening hits",
+          "visible_actor": "Agentic execution",
+          "format_observation": "normal",
+          "source_runs": [],
+          "x_inches": 6.5172,
+          "y_inches": 3.0771
+        },
+        {
+          "source_id": "PPT-S2-SH292-A3",
+          "deck_filename": "Sanitised Process Map(1).pptx",
+          "slide_no": 2,
+          "shape_id": 292,
+          "occurrence_in_shape": 3,
+          "process_code": "M3.3",
+          "verbatim_text": "M3.3  Request info from client",
+          "visible_actor": "Agentic execution",
+          "format_observation": "normal",
+          "source_runs": [],
+          "x_inches": 5.2328,
+          "y_inches": 3.0771
+        },
+        {
+          "source_id": "PPT-S2-SH292-A4",
+          "deck_filename": "Sanitised Process Map(1).pptx",
+          "slide_no": 2,
+          "shape_id": 292,
+          "occurrence_in_shape": 4,
+          "process_code": "M3.4",
+          "verbatim_text": "M3.4  Capture & validate evidence",
+          "visible_actor": "Agentic execution",
+          "format_observation": "normal",
+          "source_runs": [],
+          "x_inches": 5.2328,
+          "y_inches": 3.0771
+        },
+        {
+          "source_id": "PPT-S2-SH392-EX",
+          "deck_filename": "Sanitised Process Map(1).pptx",
+          "slide_no": 2,
+          "shape_id": 392,
+          "occurrence_in_shape": 1,
+          "process_code": null,
+          "verbatim_text": "Support evidence gaps where needed",
+          "visible_actor": "CLIENT FULFILMENT / KYC OPS — Human in the Loop",
+          "format_observation": "normal",
+          "source_runs": []
+        }
+      ],
+      "source_format_flags": [],
+      "source_issue_refs": [
+        "D3-ISS-06",
+        "D3-ISS-15"
+      ],
+      "benchmark_refs": [
+        "IB-ANZ-SECURE",
+        "IC-PHKL"
+      ]
+    },
+    {
+      "action_ref": "D4A-MATCH-03-03",
+      "parent_change_ref": "D3-MATCH-03",
+      "branch_ref": "BR-07",
+      "workflow_ref": "WF-05",
+      "transformation_type": "Enhanced",
+      "original_collaboration_pattern": "Human-led",
+      "display_mapping_inputs": {
+        "primary_executor": "HUMAN",
+        "skill_relation": "supports_human_action"
+      },
+      "current_occurrences": [
+        {
+          "source_id": "PPT-S1-SH296-A5",
+          "deck_filename": "Sanitised Process Map(1).pptx",
+          "slide_no": 1,
+          "shape_id": 296,
+          "occurrence_in_shape": 5,
+          "process_code": "M4.5",
+          "verbatim_text": "M4.5  Adjudicate screening hits",
+          "visible_actor": "CLIENT FULFILMENT / KYC OPS",
+          "format_observation": "normal",
+          "source_runs": [],
+          "x_inches": 6.5172,
+          "y_inches": 3.1037
+        },
+        {
+          "source_id": "PPT-S1-SH292-A3",
+          "deck_filename": "Sanitised Process Map(1).pptx",
+          "slide_no": 1,
+          "shape_id": 292,
+          "occurrence_in_shape": 3,
+          "process_code": "M3.3",
+          "verbatim_text": "M3.3  Request info from client",
+          "visible_actor": "CLIENT FULFILMENT / KYC OPS",
+          "format_observation": "normal",
+          "source_runs": [],
+          "x_inches": 5.2328,
+          "y_inches": 3.0604
+        },
+        {
+          "source_id": "PPT-S1-SH9-A1",
+          "deck_filename": "Sanitised Process Map(1).pptx",
+          "slide_no": 1,
+          "shape_id": 9,
+          "occurrence_in_shape": 1,
+          "process_code": "M3.3",
+          "verbatim_text": "M3.3  Request info from client",
+          "visible_actor": "SALES / RM (Front Office)",
+          "format_observation": "normal",
+          "source_runs": [],
+          "x_inches": 5.2328,
+          "y_inches": 2.5137
+        },
+        {
+          "source_id": "PPT-S1-SH292-A4",
+          "deck_filename": "Sanitised Process Map(1).pptx",
+          "slide_no": 1,
+          "shape_id": 292,
+          "occurrence_in_shape": 4,
+          "process_code": "M3.4",
+          "verbatim_text": "M3.4  Capture & validate evidence",
+          "visible_actor": "CLIENT FULFILMENT / KYC OPS",
+          "format_observation": "normal",
+          "source_runs": [],
+          "x_inches": 5.2328,
+          "y_inches": 3.0604
+        }
+      ],
+      "target_occurrences": [
+        {
+          "source_id": "PPT-S2-SH296-A5",
+          "deck_filename": "Sanitised Process Map(1).pptx",
+          "slide_no": 2,
+          "shape_id": 296,
+          "occurrence_in_shape": 5,
+          "process_code": "M4.5",
+          "verbatim_text": "M4.5  Adjudicate screening hits",
+          "visible_actor": "Agentic execution",
+          "format_observation": "normal",
+          "source_runs": [],
+          "x_inches": 6.5172,
+          "y_inches": 3.0771
+        },
+        {
+          "source_id": "PPT-S2-SH292-A3",
+          "deck_filename": "Sanitised Process Map(1).pptx",
+          "slide_no": 2,
+          "shape_id": 292,
+          "occurrence_in_shape": 3,
+          "process_code": "M3.3",
+          "verbatim_text": "M3.3  Request info from client",
+          "visible_actor": "Agentic execution",
+          "format_observation": "normal",
+          "source_runs": [],
+          "x_inches": 5.2328,
+          "y_inches": 3.0771
+        },
+        {
+          "source_id": "PPT-S2-SH292-A4",
+          "deck_filename": "Sanitised Process Map(1).pptx",
+          "slide_no": 2,
+          "shape_id": 292,
+          "occurrence_in_shape": 4,
+          "process_code": "M3.4",
+          "verbatim_text": "M3.4  Capture & validate evidence",
+          "visible_actor": "Agentic execution",
+          "format_observation": "normal",
+          "source_runs": [],
+          "x_inches": 5.2328,
+          "y_inches": 3.0771
+        },
+        {
+          "source_id": "PPT-S2-SH392-EX",
+          "deck_filename": "Sanitised Process Map(1).pptx",
+          "slide_no": 2,
+          "shape_id": 392,
+          "occurrence_in_shape": 1,
+          "process_code": null,
+          "verbatim_text": "Support evidence gaps where needed",
+          "visible_actor": "CLIENT FULFILMENT / KYC OPS — Human in the Loop",
+          "format_observation": "normal",
+          "source_runs": []
+        }
+      ],
+      "source_format_flags": [],
+      "source_issue_refs": [
+        "D3-ISS-06",
+        "D3-ISS-15"
+      ],
+      "benchmark_refs": [
+        "IB-ANZ-SECURE",
+        "IC-PHKL"
+      ]
+    },
+    {
+      "action_ref": "D4A-MATCH-04-01",
+      "parent_change_ref": "D3-MATCH-04",
+      "branch_ref": "BR-07",
+      "workflow_ref": "WF-05",
+      "transformation_type": "Enhanced",
+      "original_collaboration_pattern": "Agent-prepared",
+      "display_mapping_inputs": {
+        "primary_executor": "SEMANTIC_SKILL",
+        "skill_relation": "used_by_execution"
+      },
+      "current_occurrences": [
+        {
+          "source_id": "PPT-S1-SH296-A5",
+          "deck_filename": "Sanitised Process Map(1).pptx",
+          "slide_no": 1,
+          "shape_id": 296,
+          "occurrence_in_shape": 5,
+          "process_code": "M4.5",
+          "verbatim_text": "M4.5  Adjudicate screening hits",
+          "visible_actor": "CLIENT FULFILMENT / KYC OPS",
+          "format_observation": "normal",
+          "source_runs": [],
+          "x_inches": 6.5172,
+          "y_inches": 3.1037
+        }
+      ],
+      "target_occurrences": [
+        {
+          "source_id": "PPT-S2-SH296-A5",
+          "deck_filename": "Sanitised Process Map(1).pptx",
+          "slide_no": 2,
+          "shape_id": 296,
+          "occurrence_in_shape": 5,
+          "process_code": "M4.5",
+          "verbatim_text": "M4.5  Adjudicate screening hits",
+          "visible_actor": "Agentic execution",
+          "format_observation": "normal",
+          "source_runs": [],
+          "x_inches": 6.5172,
+          "y_inches": 3.0771
+        },
+        {
+          "source_id": "PPT-S2-SH376-EX",
+          "deck_filename": "Sanitised Process Map(1).pptx",
+          "slide_no": 2,
+          "shape_id": 376,
+          "occurrence_in_shape": 1,
+          "process_code": null,
+          "verbatim_text": "Review ambiguous screening hits",
+          "visible_actor": "CLIENT FULFILMENT / KYC OPS — Human in the Loop",
+          "format_observation": "normal",
+          "source_runs": []
+        }
+      ],
+      "source_format_flags": [],
+      "source_issue_refs": [
+        "D3-ISS-06",
+        "D3-ISS-15"
+      ],
+      "benchmark_refs": [
+        "IC-PHKL",
+        "IND-WOLFSBERG"
+      ]
+    },
+    {
+      "action_ref": "D4A-MATCH-04-02",
+      "parent_change_ref": "D3-MATCH-04",
+      "branch_ref": "BR-07",
+      "workflow_ref": "WF-05",
+      "transformation_type": "Enhanced",
+      "original_collaboration_pattern": "Human-by-exception",
+      "display_mapping_inputs": {
+        "primary_executor": "RULE_CODE",
+        "skill_relation": "used_by_execution"
+      },
+      "current_occurrences": [
+        {
+          "source_id": "PPT-S1-SH296-A5",
+          "deck_filename": "Sanitised Process Map(1).pptx",
+          "slide_no": 1,
+          "shape_id": 296,
+          "occurrence_in_shape": 5,
+          "process_code": "M4.5",
+          "verbatim_text": "M4.5  Adjudicate screening hits",
+          "visible_actor": "CLIENT FULFILMENT / KYC OPS",
+          "format_observation": "normal",
+          "source_runs": [],
+          "x_inches": 6.5172,
+          "y_inches": 3.1037
+        }
+      ],
+      "target_occurrences": [
+        {
+          "source_id": "PPT-S2-SH296-A5",
+          "deck_filename": "Sanitised Process Map(1).pptx",
+          "slide_no": 2,
+          "shape_id": 296,
+          "occurrence_in_shape": 5,
+          "process_code": "M4.5",
+          "verbatim_text": "M4.5  Adjudicate screening hits",
+          "visible_actor": "Agentic execution",
+          "format_observation": "normal",
+          "source_runs": [],
+          "x_inches": 6.5172,
+          "y_inches": 3.0771
+        },
+        {
+          "source_id": "PPT-S2-SH376-EX",
+          "deck_filename": "Sanitised Process Map(1).pptx",
+          "slide_no": 2,
+          "shape_id": 376,
+          "occurrence_in_shape": 1,
+          "process_code": null,
+          "verbatim_text": "Review ambiguous screening hits",
+          "visible_actor": "CLIENT FULFILMENT / KYC OPS — Human in the Loop",
+          "format_observation": "normal",
+          "source_runs": []
+        }
+      ],
+      "source_format_flags": [],
+      "source_issue_refs": [
+        "D3-ISS-06",
+        "D3-ISS-15"
+      ],
+      "benchmark_refs": [
+        "IC-PHKL",
+        "IND-WOLFSBERG"
+      ]
+    },
+    {
+      "action_ref": "D4A-MATCH-05-01",
+      "parent_change_ref": "D3-MATCH-05",
+      "branch_ref": "BR-07",
+      "workflow_ref": "WF-05",
+      "transformation_type": "Retained",
+      "original_collaboration_pattern": "Agent-prepared",
+      "display_mapping_inputs": {
+        "primary_executor": "SEMANTIC_SKILL",
+        "skill_relation": "used_by_execution"
+      },
+      "current_occurrences": [
+        {
+          "source_id": "PPT-S1-SH177-A1",
+          "deck_filename": "Sanitised Process Map(1).pptx",
+          "slide_no": 1,
+          "shape_id": 177,
+          "occurrence_in_shape": 1,
+          "process_code": "M4.6",
+          "verbatim_text": "M4.6  Assess risk & materiality",
+          "visible_actor": "FINANCIAL CRIME / RISK / COMPLIANCE",
+          "format_observation": "normal",
+          "source_runs": [],
+          "x_inches": 6.5172,
+          "y_inches": 4.1014
+        }
+      ],
+      "target_occurrences": [
+        {
+          "source_id": "PPT-S2-SH296-A6",
+          "deck_filename": "Sanitised Process Map(1).pptx",
+          "slide_no": 2,
+          "shape_id": 296,
+          "occurrence_in_shape": 6,
+          "process_code": "M4.6",
+          "verbatim_text": "M4.6  Assess risk & materiality",
+          "visible_actor": "Agentic execution",
+          "format_observation": "normal",
+          "source_runs": [],
+          "x_inches": 6.5172,
+          "y_inches": 3.0771
+        },
+        {
+          "source_id": "PPT-S2-SH409-EX",
+          "deck_filename": "Sanitised Process Map(1).pptx",
+          "slide_no": 2,
+          "shape_id": 409,
+          "occurrence_in_shape": 1,
+          "process_code": null,
+          "verbatim_text": "Adjudicate material screening finding",
+          "visible_actor": "FINANCIAL CRIME / RISK / COMPLIANCE — Human in the Loop",
+          "format_observation": "normal",
+          "source_runs": []
+        }
+      ],
+      "source_format_flags": [],
+      "source_issue_refs": [
+        "D3-ISS-06",
+        "D3-ISS-15"
+      ],
+      "benchmark_refs": [
+        "IND-WOLFSBERG"
+      ]
+    },
+    {
+      "action_ref": "D4A-MATCH-05-02",
+      "parent_change_ref": "D3-MATCH-05",
+      "branch_ref": "BR-07",
+      "workflow_ref": "WF-05",
+      "transformation_type": "Retained",
+      "original_collaboration_pattern": "Human-led",
+      "display_mapping_inputs": {
+        "primary_executor": "HUMAN",
+        "skill_relation": "supports_human_action"
+      },
+      "current_occurrences": [
+        {
+          "source_id": "PPT-S1-SH177-A1",
+          "deck_filename": "Sanitised Process Map(1).pptx",
+          "slide_no": 1,
+          "shape_id": 177,
+          "occurrence_in_shape": 1,
+          "process_code": "M4.6",
+          "verbatim_text": "M4.6  Assess risk & materiality",
+          "visible_actor": "FINANCIAL CRIME / RISK / COMPLIANCE",
+          "format_observation": "normal",
+          "source_runs": [],
+          "x_inches": 6.5172,
+          "y_inches": 4.1014
+        }
+      ],
+      "target_occurrences": [
+        {
+          "source_id": "PPT-S2-SH296-A6",
+          "deck_filename": "Sanitised Process Map(1).pptx",
+          "slide_no": 2,
+          "shape_id": 296,
+          "occurrence_in_shape": 6,
+          "process_code": "M4.6",
+          "verbatim_text": "M4.6  Assess risk & materiality",
+          "visible_actor": "Agentic execution",
+          "format_observation": "normal",
+          "source_runs": [],
+          "x_inches": 6.5172,
+          "y_inches": 3.0771
+        },
+        {
+          "source_id": "PPT-S2-SH409-EX",
+          "deck_filename": "Sanitised Process Map(1).pptx",
+          "slide_no": 2,
+          "shape_id": 409,
+          "occurrence_in_shape": 1,
+          "process_code": null,
+          "verbatim_text": "Adjudicate material screening finding",
+          "visible_actor": "FINANCIAL CRIME / RISK / COMPLIANCE — Human in the Loop",
+          "format_observation": "normal",
+          "source_runs": []
+        }
+      ],
+      "source_format_flags": [],
+      "source_issue_refs": [
+        "D3-ISS-06",
+        "D3-ISS-15"
+      ],
+      "benchmark_refs": [
+        "IND-WOLFSBERG"
+      ]
+    },
+    {
+      "action_ref": "D4A-MATCH-05-03",
+      "parent_change_ref": "D3-MATCH-05",
+      "branch_ref": "BR-07",
+      "workflow_ref": "WF-05",
+      "transformation_type": "Retained",
+      "original_collaboration_pattern": "Human-by-exception",
+      "display_mapping_inputs": {
+        "primary_executor": "RULE_CODE",
+        "skill_relation": "used_by_execution"
+      },
+      "current_occurrences": [
+        {
+          "source_id": "PPT-S1-SH177-A1",
+          "deck_filename": "Sanitised Process Map(1).pptx",
+          "slide_no": 1,
+          "shape_id": 177,
+          "occurrence_in_shape": 1,
+          "process_code": "M4.6",
+          "verbatim_text": "M4.6  Assess risk & materiality",
+          "visible_actor": "FINANCIAL CRIME / RISK / COMPLIANCE",
+          "format_observation": "normal",
+          "source_runs": [],
+          "x_inches": 6.5172,
+          "y_inches": 4.1014
+        }
+      ],
+      "target_occurrences": [
+        {
+          "source_id": "PPT-S2-SH296-A6",
+          "deck_filename": "Sanitised Process Map(1).pptx",
+          "slide_no": 2,
+          "shape_id": 296,
+          "occurrence_in_shape": 6,
+          "process_code": "M4.6",
+          "verbatim_text": "M4.6  Assess risk & materiality",
+          "visible_actor": "Agentic execution",
+          "format_observation": "normal",
+          "source_runs": [],
+          "x_inches": 6.5172,
+          "y_inches": 3.0771
+        },
+        {
+          "source_id": "PPT-S2-SH409-EX",
+          "deck_filename": "Sanitised Process Map(1).pptx",
+          "slide_no": 2,
+          "shape_id": 409,
+          "occurrence_in_shape": 1,
+          "process_code": null,
+          "verbatim_text": "Adjudicate material screening finding",
+          "visible_actor": "FINANCIAL CRIME / RISK / COMPLIANCE — Human in the Loop",
+          "format_observation": "normal",
+          "source_runs": []
+        }
+      ],
+      "source_format_flags": [],
+      "source_issue_refs": [
+        "D3-ISS-06",
+        "D3-ISS-15"
+      ],
+      "benchmark_refs": [
+        "IND-WOLFSBERG"
+      ]
+    },
+    {
+      "action_ref": "D4A-MATCH-06-01",
+      "parent_change_ref": "D3-MATCH-06",
+      "branch_ref": "BR-07",
+      "workflow_ref": "WF-05",
+      "transformation_type": "Enhanced",
+      "original_collaboration_pattern": "Human-led",
+      "display_mapping_inputs": {
+        "primary_executor": "HUMAN",
+        "skill_relation": "supports_human_action"
+      },
+      "current_occurrences": [
+        {
+          "source_id": "PPT-S1-SH177-A2",
+          "deck_filename": "Sanitised Process Map(1).pptx",
+          "slide_no": 1,
+          "shape_id": 177,
+          "occurrence_in_shape": 2,
+          "process_code": "M4.7",
+          "verbatim_text": "M4.7  Determine screening outcome",
+          "visible_actor": "FINANCIAL CRIME / RISK / COMPLIANCE",
+          "format_observation": "normal",
+          "source_runs": [],
+          "x_inches": 6.5172,
+          "y_inches": 4.1014
+        }
+      ],
+      "target_occurrences": [
+        {
+          "source_id": "PPT-S2-SH296-A7",
+          "deck_filename": "Sanitised Process Map(1).pptx",
+          "slide_no": 2,
+          "shape_id": 296,
+          "occurrence_in_shape": 7,
+          "process_code": "M4.7",
+          "verbatim_text": "M4.7  Determine screening outcome",
+          "visible_actor": "Agentic execution",
+          "format_observation": "normal",
+          "source_runs": [],
+          "x_inches": 6.5172,
+          "y_inches": 3.0771
+        },
+        {
+          "source_id": "PPT-S2-SH409-EX",
+          "deck_filename": "Sanitised Process Map(1).pptx",
+          "slide_no": 2,
+          "shape_id": 409,
+          "occurrence_in_shape": 1,
+          "process_code": null,
+          "verbatim_text": "Adjudicate material screening finding",
+          "visible_actor": "FINANCIAL CRIME / RISK / COMPLIANCE — Human in the Loop",
+          "format_observation": "normal",
+          "source_runs": []
+        }
+      ],
+      "source_format_flags": [],
+      "source_issue_refs": [
+        "D3-ISS-06",
+        "D3-ISS-15"
+      ],
+      "benchmark_refs": [
+        "IND-WOLFSBERG",
+        "XB-FHIR-R5"
+      ]
+    },
+    {
+      "action_ref": "D4A-MATCH-06-02",
+      "parent_change_ref": "D3-MATCH-06",
+      "branch_ref": "BR-07",
+      "workflow_ref": "WF-05",
+      "transformation_type": "Enhanced",
+      "original_collaboration_pattern": "Human-led",
+      "display_mapping_inputs": {
+        "primary_executor": "HUMAN",
+        "skill_relation": "supports_human_action"
+      },
+      "current_occurrences": [
+        {
+          "source_id": "PPT-S1-SH177-A2",
+          "deck_filename": "Sanitised Process Map(1).pptx",
+          "slide_no": 1,
+          "shape_id": 177,
+          "occurrence_in_shape": 2,
+          "process_code": "M4.7",
+          "verbatim_text": "M4.7  Determine screening outcome",
+          "visible_actor": "FINANCIAL CRIME / RISK / COMPLIANCE",
+          "format_observation": "normal",
+          "source_runs": [],
+          "x_inches": 6.5172,
+          "y_inches": 4.1014
+        }
+      ],
+      "target_occurrences": [
+        {
+          "source_id": "PPT-S2-SH296-A7",
+          "deck_filename": "Sanitised Process Map(1).pptx",
+          "slide_no": 2,
+          "shape_id": 296,
+          "occurrence_in_shape": 7,
+          "process_code": "M4.7",
+          "verbatim_text": "M4.7  Determine screening outcome",
+          "visible_actor": "Agentic execution",
+          "format_observation": "normal",
+          "source_runs": [],
+          "x_inches": 6.5172,
+          "y_inches": 3.0771
+        },
+        {
+          "source_id": "PPT-S2-SH409-EX",
+          "deck_filename": "Sanitised Process Map(1).pptx",
+          "slide_no": 2,
+          "shape_id": 409,
+          "occurrence_in_shape": 1,
+          "process_code": null,
+          "verbatim_text": "Adjudicate material screening finding",
+          "visible_actor": "FINANCIAL CRIME / RISK / COMPLIANCE — Human in the Loop",
+          "format_observation": "normal",
+          "source_runs": []
+        }
+      ],
+      "source_format_flags": [],
+      "source_issue_refs": [
+        "D3-ISS-06",
+        "D3-ISS-15"
+      ],
+      "benchmark_refs": [
+        "IND-WOLFSBERG",
+        "XB-FHIR-R5"
+      ]
+    },
+    {
+      "action_ref": "D4A-MATCH-06-03",
+      "parent_change_ref": "D3-MATCH-06",
+      "branch_ref": "BR-07",
+      "workflow_ref": "WF-05",
+      "transformation_type": "Enhanced",
+      "original_collaboration_pattern": "Human-by-exception",
+      "display_mapping_inputs": {
+        "primary_executor": "RULE_CODE",
+        "skill_relation": "used_by_execution"
+      },
+      "current_occurrences": [
+        {
+          "source_id": "PPT-S1-SH177-A2",
+          "deck_filename": "Sanitised Process Map(1).pptx",
+          "slide_no": 1,
+          "shape_id": 177,
+          "occurrence_in_shape": 2,
+          "process_code": "M4.7",
+          "verbatim_text": "M4.7  Determine screening outcome",
+          "visible_actor": "FINANCIAL CRIME / RISK / COMPLIANCE",
+          "format_observation": "normal",
+          "source_runs": [],
+          "x_inches": 6.5172,
+          "y_inches": 4.1014
+        }
+      ],
+      "target_occurrences": [
+        {
+          "source_id": "PPT-S2-SH296-A7",
+          "deck_filename": "Sanitised Process Map(1).pptx",
+          "slide_no": 2,
+          "shape_id": 296,
+          "occurrence_in_shape": 7,
+          "process_code": "M4.7",
+          "verbatim_text": "M4.7  Determine screening outcome",
+          "visible_actor": "Agentic execution",
+          "format_observation": "normal",
+          "source_runs": [],
+          "x_inches": 6.5172,
+          "y_inches": 3.0771
+        },
+        {
+          "source_id": "PPT-S2-SH409-EX",
+          "deck_filename": "Sanitised Process Map(1).pptx",
+          "slide_no": 2,
+          "shape_id": 409,
+          "occurrence_in_shape": 1,
+          "process_code": null,
+          "verbatim_text": "Adjudicate material screening finding",
+          "visible_actor": "FINANCIAL CRIME / RISK / COMPLIANCE — Human in the Loop",
+          "format_observation": "normal",
+          "source_runs": []
+        }
+      ],
+      "source_format_flags": [],
+      "source_issue_refs": [
+        "D3-ISS-06",
+        "D3-ISS-15"
+      ],
+      "benchmark_refs": [
+        "IND-WOLFSBERG",
+        "XB-FHIR-R5"
+      ]
+    },
+    {
+      "action_ref": "D4A-MATCH-07-01",
+      "parent_change_ref": "D3-MATCH-07",
+      "branch_ref": "BR-07",
+      "workflow_ref": "WF-05",
+      "transformation_type": "Enhanced",
+      "original_collaboration_pattern": "Human-by-exception",
+      "display_mapping_inputs": {
+        "primary_executor": "RULE_CODE",
+        "skill_relation": "used_by_execution"
+      },
+      "current_occurrences": [
+        {
+          "source_id": "PPT-S1-SH177-A2",
+          "deck_filename": "Sanitised Process Map(1).pptx",
+          "slide_no": 1,
+          "shape_id": 177,
+          "occurrence_in_shape": 2,
+          "process_code": "M4.7",
+          "verbatim_text": "M4.7  Determine screening outcome",
+          "visible_actor": "FINANCIAL CRIME / RISK / COMPLIANCE",
+          "format_observation": "normal",
+          "source_runs": [],
+          "x_inches": 6.5172,
+          "y_inches": 4.1014
+        },
+        {
+          "source_id": "PPT-S1-SH65-A1",
+          "deck_filename": "Sanitised Process Map(1).pptx",
+          "slide_no": 1,
+          "shape_id": 65,
+          "occurrence_in_shape": 1,
+          "process_code": "M8.1",
+          "verbatim_text": "M8.1  Confirm all required clearance prerequisites are complete",
+          "visible_actor": "CLIENT FULFILMENT / KYC OPS",
+          "format_observation": "normal",
+          "source_runs": [],
+          "x_inches": 11.6518,
+          "y_inches": 3.2068
+        }
+      ],
+      "target_occurrences": [
+        {
+          "source_id": "PPT-S2-SH296-A7",
+          "deck_filename": "Sanitised Process Map(1).pptx",
+          "slide_no": 2,
+          "shape_id": 296,
+          "occurrence_in_shape": 7,
+          "process_code": "M4.7",
+          "verbatim_text": "M4.7  Determine screening outcome",
+          "visible_actor": "Agentic execution",
+          "format_observation": "normal",
+          "source_runs": [],
+          "x_inches": 6.5172,
+          "y_inches": 3.0771
+        },
+        {
+          "source_id": "PPT-S2-SH65-A1",
+          "deck_filename": "Sanitised Process Map(1).pptx",
+          "slide_no": 2,
+          "shape_id": 65,
+          "occurrence_in_shape": 1,
+          "process_code": "M8.1",
+          "verbatim_text": "M8.1  Confirm all required clearance prerequisites are complete",
+          "visible_actor": "Agentic execution",
+          "format_observation": "normal",
+          "source_runs": [],
+          "x_inches": 11.6518,
+          "y_inches": 3.0771
+        }
+      ],
+      "source_format_flags": [],
+      "source_issue_refs": [
+        "D3-ISS-06",
+        "D3-ISS-15"
+      ],
+      "benchmark_refs": [
+        "XB-FHIR-R5"
+      ]
+    },
+    {
+      "action_ref": "D4A-MATCH-07-02",
+      "parent_change_ref": "D3-MATCH-07",
+      "branch_ref": "BR-07",
+      "workflow_ref": "WF-05",
+      "transformation_type": "Enhanced",
+      "original_collaboration_pattern": "Human-by-exception",
+      "display_mapping_inputs": {
+        "primary_executor": "RULE_CODE",
+        "skill_relation": "used_by_execution"
+      },
+      "current_occurrences": [
+        {
+          "source_id": "PPT-S1-SH177-A2",
+          "deck_filename": "Sanitised Process Map(1).pptx",
+          "slide_no": 1,
+          "shape_id": 177,
+          "occurrence_in_shape": 2,
+          "process_code": "M4.7",
+          "verbatim_text": "M4.7  Determine screening outcome",
+          "visible_actor": "FINANCIAL CRIME / RISK / COMPLIANCE",
+          "format_observation": "normal",
+          "source_runs": [],
+          "x_inches": 6.5172,
+          "y_inches": 4.1014
+        },
+        {
+          "source_id": "PPT-S1-SH65-A1",
+          "deck_filename": "Sanitised Process Map(1).pptx",
+          "slide_no": 1,
+          "shape_id": 65,
+          "occurrence_in_shape": 1,
+          "process_code": "M8.1",
+          "verbatim_text": "M8.1  Confirm all required clearance prerequisites are complete",
+          "visible_actor": "CLIENT FULFILMENT / KYC OPS",
+          "format_observation": "normal",
+          "source_runs": [],
+          "x_inches": 11.6518,
+          "y_inches": 3.2068
+        }
+      ],
+      "target_occurrences": [
+        {
+          "source_id": "PPT-S2-SH296-A7",
+          "deck_filename": "Sanitised Process Map(1).pptx",
+          "slide_no": 2,
+          "shape_id": 296,
+          "occurrence_in_shape": 7,
+          "process_code": "M4.7",
+          "verbatim_text": "M4.7  Determine screening outcome",
+          "visible_actor": "Agentic execution",
+          "format_observation": "normal",
+          "source_runs": [],
+          "x_inches": 6.5172,
+          "y_inches": 3.0771
+        },
+        {
+          "source_id": "PPT-S2-SH65-A1",
+          "deck_filename": "Sanitised Process Map(1).pptx",
+          "slide_no": 2,
+          "shape_id": 65,
+          "occurrence_in_shape": 1,
+          "process_code": "M8.1",
+          "verbatim_text": "M8.1  Confirm all required clearance prerequisites are complete",
+          "visible_actor": "Agentic execution",
+          "format_observation": "normal",
+          "source_runs": [],
+          "x_inches": 11.6518,
+          "y_inches": 3.0771
+        }
+      ],
+      "source_format_flags": [],
+      "source_issue_refs": [
+        "D3-ISS-06",
+        "D3-ISS-15"
+      ],
+      "benchmark_refs": [
+        "XB-FHIR-R5"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "derived": true,
+  "runtime_store": false,
+  "source_ref": "SRC-021",
+  "case_id": "DEMO-CTT-001",
+  "validation_status": "approved_demo_design_not_bank_validation",
+  "generator": "04_operating_model/batch-f/build-consolidation.mjs",
+  "fields": {
+    "case_id": "data.case.id",
+    "scene_id": "navigation.scenario",
+    "role": "navigation.role",
+    "stage": "navigation.stage",
+    "trigger": "navigation.trigger",
+    "current_target_view": "navigation.comparison",
+    "language": "navigation.locale",
+    "region": "navigation.region (view context; AU default; never writes policy)",
+    "story_position": "navigation.storyCursor",
+    "zoom_level": "navigation.zoom",
+    "journey_viewport": "navigation.camera",
+    "prototype_entry": "navigation.step / navigation.returnToken",
+    "simulation_session": "sessionStorage ctt-round-a-v1 current data + versions + archives",
+    "variant_state": "data current revision and explicit archived / authored context",
+    "return_target": "navigation.returnToken / definitionOrigin"
+  },
+  "guard": "Product dirty exits retain existing Save / Discard / Stay; failed saves stay. Diagram/Lab/story/region/print only change navigation."
+}

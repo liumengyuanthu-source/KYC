@@ -1,0 +1,9 @@
+{
+  "at": "2026-09-07T19:04:00.301Z",
+  "status": "passed",
+  "case_id": "DEMO-CTT-001",
+  "case_revision": 32,
+  "source_revision": 30,
+  "data_equal_after_render": true,
+  "hero": "Current problem: identity evidence inputs changed after the last assessment\nOwner: Unassigned · Next actor: KYC Operations\nRecommended next action: Recheck intake release, evidence linking and reassess for this purpose · The earlier assessment is not current for the changed input; no review outcome or clearance is suggested."
+}

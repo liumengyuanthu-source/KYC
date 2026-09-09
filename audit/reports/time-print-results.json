@@ -1,0 +1,38 @@
+{
+  "at": "2026-09-07T19:07:07.363Z",
+  "results": [
+    {
+      "locale": "en-AU",
+      "status": "passed",
+      "checks": [
+        "estimate expiry cannot complete business work",
+        "no unsupported calendar finish",
+        "six print step details and full text beyond viewport",
+        "print return state"
+      ],
+      "printed_characters": 11804
+    },
+    {
+      "locale": "en-US",
+      "status": "passed",
+      "checks": [
+        "estimate expiry cannot complete business work",
+        "no unsupported calendar finish",
+        "six print step details and full text beyond viewport",
+        "print return state"
+      ],
+      "printed_characters": 11804
+    },
+    {
+      "locale": "zh-CN",
+      "status": "passed",
+      "checks": [
+        "estimate expiry cannot complete business work",
+        "no unsupported calendar finish",
+        "six print step details and full text beyond viewport",
+        "print return state"
+      ],
+      "printed_characters": 6842
+    }
+  ]
+}

@@ -1,0 +1,120 @@
+{
+  "at": "2026-09-07T15:41:35.922Z",
+  "method": "All-page text bounds, landscape and repeated branch context; sample renders require separate visual review.",
+  "results": [
+    {
+      "file": "output/pdf/d3a/BR-03.en-AU.pdf",
+      "pages": 12,
+      "words": 1461,
+      "status": "passed",
+      "outside": [],
+      "missingHeader": [],
+      "samples": [
+        "prototype/qa/d3a/print/BR-03.en-AU.page-1.png",
+        "prototype/qa/d3a/print/BR-03.en-AU.page-6.png",
+        "prototype/qa/d3a/print/BR-03.en-AU.page-12.png"
+      ],
+      "visualStatus": "pending_open"
+    },
+    {
+      "file": "output/pdf/d3a/BR-03.en-US.pdf",
+      "pages": 12,
+      "words": 1461,
+      "status": "passed",
+      "outside": [],
+      "missingHeader": [],
+      "samples": [],
+      "visualStatus": "not_run_duplicate_locale"
+    },
+    {
+      "file": "output/pdf/d3a/BR-03.zh-CN.pdf",
+      "pages": 11,
+      "words": 530,
+      "status": "passed",
+      "outside": [],
+      "missingHeader": [],
+      "samples": [
+        "prototype/qa/d3a/print/BR-03.zh-CN.page-1.png",
+        "prototype/qa/d3a/print/BR-03.zh-CN.page-6.png",
+        "prototype/qa/d3a/print/BR-03.zh-CN.page-11.png"
+      ],
+      "visualStatus": "pending_open"
+    },
+    {
+      "file": "output/pdf/d3a/BR-04.en-AU.pdf",
+      "pages": 12,
+      "words": 1681,
+      "status": "passed",
+      "outside": [],
+      "missingHeader": [],
+      "samples": [
+        "prototype/qa/d3a/print/BR-04.en-AU.page-1.png",
+        "prototype/qa/d3a/print/BR-04.en-AU.page-6.png",
+        "prototype/qa/d3a/print/BR-04.en-AU.page-12.png"
+      ],
+      "visualStatus": "pending_open"
+    },
+    {
+      "file": "output/pdf/d3a/BR-04.en-US.pdf",
+      "pages": 12,
+      "words": 1681,
+      "status": "passed",
+      "outside": [],
+      "missingHeader": [],
+      "samples": [],
+      "visualStatus": "not_run_duplicate_locale"
+    },
+    {
+      "file": "output/pdf/d3a/BR-04.zh-CN.pdf",
+      "pages": 12,
+      "words": 632,
+      "status": "passed",
+      "outside": [],
+      "missingHeader": [],
+      "samples": [
+        "prototype/qa/d3a/print/BR-04.zh-CN.page-1.png",
+        "prototype/qa/d3a/print/BR-04.zh-CN.page-6.png",
+        "prototype/qa/d3a/print/BR-04.zh-CN.page-12.png"
+      ],
+      "visualStatus": "pending_open"
+    },
+    {
+      "file": "output/pdf/d3a/BR-05.en-AU.pdf",
+      "pages": 16,
+      "words": 2214,
+      "status": "passed",
+      "outside": [],
+      "missingHeader": [],
+      "samples": [
+        "prototype/qa/d3a/print/BR-05.en-AU.page-1.png",
+        "prototype/qa/d3a/print/BR-05.en-AU.page-8.png",
+        "prototype/qa/d3a/print/BR-05.en-AU.page-16.png"
+      ],
+      "visualStatus": "pending_open"
+    },
+    {
+      "file": "output/pdf/d3a/BR-05.en-US.pdf",
+      "pages": 16,
+      "words": 2214,
+      "status": "passed",
+      "outside": [],
+      "missingHeader": [],
+      "samples": [],
+      "visualStatus": "not_run_duplicate_locale"
+    },
+    {
+      "file": "output/pdf/d3a/BR-05.zh-CN.pdf",
+      "pages": 16,
+      "words": 785,
+      "status": "passed",
+      "outside": [],
+      "missingHeader": [],
+      "samples": [
+        "prototype/qa/d3a/print/BR-05.zh-CN.page-1.png",
+        "prototype/qa/d3a/print/BR-05.zh-CN.page-8.png",
+        "prototype/qa/d3a/print/BR-05.zh-CN.page-16.png"
+      ],
+      "visualStatus": "pending_open"
+    }
+  ]
+}

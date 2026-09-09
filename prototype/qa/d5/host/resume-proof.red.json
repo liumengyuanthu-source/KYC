@@ -1,0 +1,22 @@
+{
+  "at": "2026-09-07T17:48:15.417Z",
+  "browser": "152.0.7977.76",
+  "results": [
+    {
+      "ids": [
+        "D5-08",
+        "D5-23",
+        "D5-25",
+        "D5U-06",
+        "D5U-07",
+        "D5U-16"
+      ],
+      "name": "assessed-identity-resumes-native-review",
+      "status": "failed",
+      "error": "D5 host must retain the native eligible resume action\n\ntrue !== false\n",
+      "stack": "AssertionError [ERR_ASSERTION]: D5 host must retain the native eligible resume action\n\ntrue !== false\n\n    at probe.seed.seed (file:///Users/christinaliu/Documents/ChatGPT/Australia%20Bank/clear-to-trade-product/prototype/qa/d5/resume-proof.mjs:9:93)\n    at async probe (file:///Users/christinaliu/Documents/ChatGPT/Australia%20Bank/clear-to-trade-product/prototype/qa/d5/harness.mjs:17:95)\n    at async file:///Users/christinaliu/Documents/ChatGPT/Australia%20Bank/clear-to-trade-product/prototype/qa/d5/resume-proof.mjs:7:1",
+      "errors": [],
+      "remote": []
+    }
+  ]
+}

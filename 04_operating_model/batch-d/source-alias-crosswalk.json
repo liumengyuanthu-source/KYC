@@ -1,0 +1,62 @@
+{
+  "source_ref": "SRC-019",
+  "relations": [
+    {
+      "relation": "Conflicts start",
+      "aliases": [
+        "SRC-009:DEP-01",
+        "SRC-010:DEP-01"
+      ]
+    },
+    {
+      "relation": "Legal preparation",
+      "aliases": [
+        "SRC-009:DEP-05",
+        "SRC-010:DEP-09"
+      ]
+    },
+    {
+      "relation": "Credit preparation",
+      "aliases": [
+        "SRC-009:DEP-06",
+        "SRC-010:DEP-10"
+      ]
+    },
+    {
+      "relation": "Credit to Legal",
+      "aliases": [
+        "SRC-009:DEP-07"
+      ],
+      "refined_by": "SRC-019:3/5",
+      "not_equivalent": "SRC-010:DEP-07 is screening review"
+    },
+    {
+      "relation": "Readiness contribution",
+      "aliases": [
+        "SRC-009:DEP-11",
+        "SRC-010:DEP-12"
+      ]
+    },
+    {
+      "relation": "Scoped hold",
+      "aliases": [
+        "SRC-010:DEP-14"
+      ],
+      "refined_by": "SRC-019:4/5"
+    }
+  ],
+  "compatibility_aliases": {
+    "DependencyEdge.from_object_ref": "dependencies.from_ref",
+    "DependencyEdge.to_object_ref": "dependencies.to_ref",
+    "Hold.target_object_ref": "holds.object_scope_refs[0]",
+    "Hold.hold_scope": "holds.scope",
+    "Hold.trigger_ref": "holds.basis_ref",
+    "Hold.release_condition": "holds.release_condition_ref (source-qualified rule; text is separate)"
+  },
+  "object_aliases": {
+    "CD-01": "DEMO-CTT-001/decision/d-credit-01",
+    "CC-01": "DEMO-CTT-001/credit-condition/d-01",
+    "AI-01": "DEMO-CTT-001/agreement-input/d-01",
+    "AGR-01": "DEMO-CTT-001/agreement/d-01"
+  }
+}

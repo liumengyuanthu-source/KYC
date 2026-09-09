@@ -1,0 +1,53 @@
+{
+  "status": "additive_candidate_not_production_merged_schema",
+  "source_ref": "SRC-019",
+  "models": {
+    "ConflictReview": "conflictReviews",
+    "ConflictFinding": "conflictFindings",
+    "CreditAssessment": "creditAssessments",
+    "CreditCondition": "creditConditions",
+    "LegalAgreement": "legalAgreements",
+    "ProfessionalCondition": "clearanceConditions",
+    "DependencyEdge": "dependencies",
+    "Hold": "holds",
+    "AgreementInput": "agreementInputs",
+    "Decision": "decisions"
+  },
+  "entry_fixture": "Explicit authored extension of actual C-referred-compatible case; no A/B/C completion",
+  "unknowns": [
+    "Bank booking context remains unchanged and unknown",
+    "Bank approval role/policy unknown",
+    "Signatory authority unknown"
+  ],
+  "minimum_context": "SRC-019 approved synthetic starting-state basis permits preparation in demo only; actual booking_entity_ref and policy_profile_ref remain null",
+  "history": "Revision 03 Legal is authored entry. Earlier Legal revisions are not supplied and are not fabricated. Credit revision simulation retains prior inputs.",
+  "action_contract": {
+    "source_ref": "SRC-019",
+    "supported_writers": [
+      "revise_credit"
+    ],
+    "role": "ROLE-FACILITATOR",
+    "host_guard": "After D fixture entry route only specialistAction; disable legacy A/B/C writers for the D session. Restore the archived C session before resuming upstream actions. Legacy case-engine.act updates all dependency statuses and is not D-aware.",
+    "prerequisite_rules": "Activity eligibility checks applicable source-qualified prerequisite edges as well as holds; unknown edge status/impact/validation stays unknown and unresolved edges block only affected work. Legal product references must be nonempty and within the current scope. Credit incorporation requires current scoped decision, condition and AgreementInput revisions with nonempty matching terms.",
+    "required_fields": [
+      "type",
+      "role",
+      "expectedRevision",
+      "expectedScopeRevision",
+      "expectedInputRevisions",
+      "key",
+      "rationale"
+    ],
+    "optional_fields": [
+      "at"
+    ],
+    "arbitrary_terms_amounts_policy": "rejected",
+    "approval_execution_clearance_writers": [],
+    "idempotency": "Same key and identical full command returns current input; changed payload rejected",
+    "concurrency": "Exact case/scope revisions and complete input revision/fingerprint map; changes including unversioned input/config/holds rejected",
+    "history": "Append CreditAssessment, CreditCondition, AgreementInput and Decision; retain Legal revision 03 consuming input 01",
+    "errors": "Stable Error.code; input unchanged on error",
+    "runtime_event_type": "revise_credit",
+    "authored_fixture_is_not_runtime_event": true
+  }
+}

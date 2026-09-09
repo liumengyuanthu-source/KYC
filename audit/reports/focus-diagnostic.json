@@ -1,0 +1,26 @@
+[
+  {
+    "after": "programmatic focus",
+    "active": true,
+    "activeTag": "<summary>Original query, source and versions</summary>",
+    "focusVisible": true,
+    "outline": "rgb(23, 25, 28) none 3px",
+    "open": false
+  },
+  {
+    "after": "Enter",
+    "active": true,
+    "activeTag": "<summary>Original query, source and versions</summary>",
+    "focusVisible": true,
+    "outline": "rgb(23, 25, 28) none 3px",
+    "open": true
+  },
+  {
+    "after": "Tab and ShiftTab",
+    "active": true,
+    "activeTag": "<summary>Original query, source and versions</summary>",
+    "focusVisible": true,
+    "outline": "rgb(23, 25, 28) none 3px",
+    "open": true
+  }
+]

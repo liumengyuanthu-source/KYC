@@ -1,0 +1,19 @@
+import {chromium} from '../tooling/node_modules/playwright/index.mjs';
+import fs from 'node:fs';import assert from 'node:assert/strict';
+const browser=await chromium.launch({executablePath:'/Applications/Google Chrome.app/Contents/MacOS/Google Chrome',headless:true});
+const seed=JSON.parse(fs.readFileSync('audit/screenshots/actual/journey/review.result.en-AU.state.json'));seed.navigation={...seed.navigation,page:'studio',modal:false,locale:'en-AU',mode:'explore',comparison:'current',studioPage:null,d5:{}};
+const ctx=await browser.newContext({viewport:{width:1366,height:768},reducedMotion:'reduce'});await ctx.addInitScript(s=>{if(!sessionStorage.getItem('ctt-round-a-v1'))sessionStorage.setItem('ctt-round-a-v1',JSON.stringify(s));},seed);const page=await ctx.newPage();page.setDefaultTimeout(8000);const results=[];
+const state=()=>page.evaluate(()=>JSON.parse(sessionStorage.getItem('ctt-round-a-v1')));
+const click=async(a,v)=>{const q=`[data-action="${a}"]${v?`[data-value="${v}"]`:''}`,m=page.locator('dialog[open]').locator(q);return(await m.count()?m:page.locator(q)).filter({visible:true}).first().click();};
+async function check(name,fn){try{const detail=await fn();results.push({name,status:'passed',detail});}catch(e){results.push({name,status:'failed',error:e.message});}fs.writeFileSync('audit/reports/context-extra-results.json',JSON.stringify({at:new Date().toISOString(),results},null,2));}
+await page.goto('http://127.0.0.1:8765/prototype/');await page.waitForSelector('.journey-scroll');
+await check('horizontal pan modal Current-Target and same return anchor',async()=>{
+ const before=(await state()).data;const journey=page.locator('.journey-scroll');await journey.evaluate(e=>e.scrollLeft=760);await journey.dispatchEvent('scroll');const left=await journey.evaluate(e=>e.scrollLeft);await click('scene','SCN-MATCH');await click('compare','target');await click('compare','current');assert.equal((await state()).navigation.scenario,'SCN-MATCH');await click('product','screening');await page.locator('#locale').selectOption('zh-CN');await click('return','scenario');const n=(await state()).navigation;assert.equal(n.comparison,'current');assert.equal(n.locale,'zh-CN');assert.equal(n.scenario,'SCN-MATCH');await click('close');await page.waitForFunction(expected=>Math.abs(document.querySelector('.journey-scroll').scrollLeft-expected)<3,left);assert.deepEqual((await state()).data,before);return {original_scroll:left,returned_scroll:await journey.evaluate(e=>e.scrollLeft)};
+});
+await check('original source expansion and keyboard visible focus',async()=>{
+ await click('scene','SCN-MATCH');await click('product','screening');await page.locator('#locale').selectOption('en-AU');const before=(await state()).data;const source=page.locator('[data-d5-disclosure="sources"] > summary');await source.focus();await page.keyboard.press('Enter');assert.equal(await page.locator('[data-d5-disclosure="sources"]').getAttribute('open'),'');const outline=await source.evaluate(e=>getComputedStyle(e).outlineStyle);assert.notEqual(outline,'none');await source.scrollIntoViewIfNeeded();await page.screenshot({path:'audit/screenshots/actual/source-detail.png'});assert.deepEqual((await state()).data,before);return {outline};
+});
+await check('step timing reveals event times but creates no entered event',async()=>{
+ const before=(await state()).data;const summary=page.locator('[data-d5-progress-detail] > summary');await summary.click();await summary.scrollIntoViewIfNeeded();const text=await page.locator('[data-d5-progress-detail]').innerText();assert.match(text,/Expected|Entered/);assert.match(text,/Not recorded|not yet estimable|Unknown/);await page.screenshot({path:'audit/screenshots/actual/progress-detail.png'});assert.deepEqual((await state()).data,before);
+});
+await browser.close();console.log(results);if(results.some(x=>x.status==='failed'))process.exitCode=1;

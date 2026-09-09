@@ -1,0 +1,1256 @@
+{
+  "at": "2026-09-07T14:42:05.886Z",
+  "command": "node --test --test-reporter=tap prototype/tests/*.test.mjs",
+  "exit_code": 0,
+  "tests": [
+    {
+      "name": "initial state maps the scene, restores a bounded position, and never restores autoplay",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "unknown scene and malformed saved values normalize to the safe paused poster",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "unknown or malformed intents cannot alter or extend sanitized state",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "seek and tick clamp to scene boundaries, stop at the end, and do not mutate input",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "DMO-A02 play and seek cannot bypass the evidence hold; Next unlocks at 13 seconds",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "Previous is bounded and Replay resets the story paused with the hold locked again",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "Play or Next at the ending stays stopped at the ending and never loops or rewinds",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "SNAP-A0 conforms to additive prototype schema",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "SNAP-A1 conforms to additive prototype schema",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "SNAP-A2 conforms to additive prototype schema",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "SNAP-A3 conforms to additive prototype schema",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "RT-A26: qualified DEP-05 resolves to distinct meanings",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "Schema rejects arbitrary action status and non-synthetic records",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "Batch A object links resolve in the same case, including the retained readiness output ID",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "RT-A01 / A17: A0 separates the group and parties; registry arrives only by event",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "RT-A02 / A03: employment evidence never creates principal authority",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "RT-A04 / A06 / A07: scope can be recorded with unresolved booking, not CDD or clearance",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "RT-A11 / A20: purpose gap and request are idempotent and artifacts immutable",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "RT-A12: source unavailable does not populate registry content",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "RT-A13: action layer rejects missing demo permission and authority",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "RT-A14 / A19: stale writes reject and context edits invalidate dependent currency",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "RT-A08 / A18: unknown applicability and holds fail closed per task",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "RT-A15: Three Lens projections share one snapshot; shadow cannot mutate mainline",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "RT-A10 / A21: Next and media signals are presentation-only, unauthorized intent ignored",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "RT-A27: candidate revision never overrides specifically approved asset revision",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "Earlier A0 cannot reuse a registry that has not arrived or confirm an unresolved scope",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "RT-A08: completed preparation does not satisfy conflicts or another case condition",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "RT-A14: entity review invalidates a decision bound to the prior entity revision",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "False Green: unresolved Legal, Credit, QA and unknown EDD prevent readiness",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "Empty conditions and missing scope fail closed",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "Evidence receipt does not satisfy a requirement or decide a finding",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "Registry reuse supports identity only, not every evidence purpose",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "An unauthorised role cannot record disposition",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "Disposition requires sufficient evidence and nonempty rationale",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "One complete slice records a local decision, preserves other branches and does not publish",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "Stale revisions and duplicate submissions cannot create contradictory decisions",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "Missing authority configuration fails closed even for reviewer",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "Missing input blocks reuse and no real publication action exists",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "Draft, request and referral are not disposition decisions",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "Dependency status follows fulfilled inputs rather than retaining the seed pending state",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "Resolved finding cannot be silently reopened by a pause or information request",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "Batch B field contract and snapshots preserve one case and resolve item requirements",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "Field dictionary includes types, sensitivity, edit ownership, provenance and UI binding",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "CH-27: adversarial all-local-items-complete fixture still cannot clear unresolved case conditions",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "Recorded Batch B actions replay to the exact final shared-case snapshot",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "New pending-review request does not inherit historic notification sent state",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "Chinese client uses approved fixture explanation translation, retaining custom source text unchanged",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "Client denied view emits no task editor or internal work panels",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "Client task renders only supplied safe items and escapes response text",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "Client print has no form actions and includes only safe task receipt",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "CH-01/02/07/27: Batch B extends the same case/request without clearing unknowns or establishing authority",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "createBatchB refuses a case before working scope or Entity A identity resolution",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "CH-03/04/12/28: reference authentication and grants remain separate and projections fail closed",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "two separately assigned recipients never see one another's task or receipt",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "CH-09/10/18/19/26: review is not send; dispatch is channel/version bound and idempotent",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "RM projection receives safe item progress and reviewed notes, never restricted reasons or artifacts",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "stale case/request/item revisions reject without mutating current state",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "CH-08/16/19: one client submission is partial, received only, and duplicate safe",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "CH-05: expired or revoked grant blocks every read/write while saved draft persists",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "CH-13/14: staff-assisted duplicate candidates preserve origin, principal and uploader",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "CH-15/16/17/27: intake, purpose link and assessment gates are independent",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "CH-11: replacing a recipient revokes old access and creates only a controlled item grant",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "CH-20: scope changes invalidate access/current assessments without deleting saved records",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "request feedback and referrals affect only the selected item and preserve whole-case readiness",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "client questions repeat session, principal, scope and item-grant checks",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "a scope revision change blocks dispatch until request scope and review are refreshed",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "an existing purpose-specific requirement is reused by physical ID",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "a grant is unusable when its recipient is no longer current or no longer assigns the item",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "assessment binds the exact evidence revision linked to the item",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "each accepted action appends a readiness snapshot without rewriting history",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "client projection validates every grant before including each item or receipt",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "recipient replacement requires current review/config and an item owned by the old recipient",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "old-scope evidence cannot be linked after request scope is saved and reviewed again",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "idempotency permits exact logical replay but rejects key collisions before permissions",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "submit_response uses current text directly and never substitutes an older saved draft",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "host accepts only media fields and never restores playback",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "frozen Entity narrative never replaces latest live receipt or authority",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "host ignores stale async completion and payloads, snapshots pause on stop",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "optional module failure leaves readable static fallback open",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "required resource failure displays notice inside an existing shadow root",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "unpassed A02 hold caps restored time, wrong revision ignored",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "direct preview changes navigation only; existing case/role/locale preserved",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "static fallback always contains all 5+6 cues in all locales, with guard facts",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "Current scene returns from Target product without overwriting latest language or case revision",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "Journey return closes modal but preserves role and semantic camera",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "Explore does not consume story cursor; Continue advances curated route only",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "Comparison and language changes keep scene and semantic anchor",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "Save, discard and stay have different leave semantics",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "Batch C product and reference layers preserve the exact Current scene origin",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "global References retains an explicit all-library scope and All clears node filters",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "scene and Reference dialogs use distinct scroll keys for the same scene",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "story route presents D1-D5 after the screening slice without adding scenario IDs",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "dependency return restores condition, revision and viewport context while latest locale wins",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "selected agreement revision stays frozen when live data revision is reported separately",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "specialist scene and beat navigation synchronize the rendered graph family without losing same-family focus",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "Print waits for every image, including offscreen Target, before invoking print",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "Failed print image prevents a silent incomplete PDF",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "RT-C52/55 imported qualified aliases retain observations and inherited status",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "RT-C53/54 deduplication keeps observation identity and distinct versions/artifacts",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "RT-C56/57/58 source renderer is safe, scoped and never implies acquired media",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "RT-C59/60 filters and locale retain canonical title, alias and interpretation boundary",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "RT-C63 English print exposes inherited source status without opening a disclosure",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "RT-C48/58 project-only node cards expose source gaps without bundling internal originals",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "Every runtime action produces an exact schema-conforming shared fixture",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "Every runtime action preserves latest semantics and historical snapshot bases",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "KYC purpose assessment rejects absent or wrongly scoped demo permission",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "KYC assessment binds to its own configured authority",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "Invalid and stale input revisions fail before mutation",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "Each accepted action increments case once and retains immutable prior input",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "Null booking context blocks readiness even when all conditions are green",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "Sufficient assessment with stale evidence or mismatched purpose cannot disposition",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "Optional audit rationale is omitted rather than null",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "Latest snapshot cannot lie while history retains past blockers",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "B request projection excludes another request and RM excludes response drafts",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "cross-request item and recipient actions are rejected without writes",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "review and dispatch do not grant or notify recipients from another request",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "dispatch policy purposes must include every selected request item",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "RT-C10/11/12/13/67: new identity intake reuses B with separate purpose, grant, provenance and insufficient outcome",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "request membership is rechecked before granting or dispatching corrupted recipient item lists",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "identity client text cannot be replaced with restricted provider text and holds are checked by reused actions",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "C client sessions cannot reuse a B session or another request grant",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "staff-assisted identity submission must name a contributor assigned to that item",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "review fix: unknown evidence-scoped hold blocks identity assessment in predicate and action without writes",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "review fix: resume rechecks the identity request item hold after a current assessment",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "review round2: a held artifact cannot be cited by unresolved or referral decisions",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "review round2: a held assessment cannot be cited by unresolved or referral decisions",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "review round2: explicit emergency finding-only referral does not cite held evidence and preserves narrower work scopes",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "review round2: emergency basis exclusion is unavailable without its explicit scoped policy",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "review round2: unrelated artifact holds do not block a decision whose actual basis excludes that artifact",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "review round2: EDD applicability decision cannot cite a held evidence-use basis",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "RT-C03 confirmed coordination remains distinct from identity and trade/signing authority",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "RT-C19 population revision change preserves old results but invalidates reuse",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "RT-C35 source-qualified dependency meanings and evidence aliases do not collide",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "RT-C42 referral followed by identity collection retains two branches on one finding",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "RT-C47 actual graph action bindings match current role-specific predicates across entry and result",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "RT-C48 every semantic node reference resolves to a scoped source or labelled interpretation",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "RT-C48 all approved node and edge contracts retained, grouped without losing guards",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "RT-C47 graph reads exact predicate objects and never infers permissions from captions",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "bilingual node titles preserve English internal slashes and Chinese labels",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "RT-C47 graph binds preparation and dispatch to their distinct actual action predicates",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "RT-C32/63 print includes every semantic node despite active focus",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "RT-C50/60 canonical intrinsic image dimensions reserve space before locale assets load",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "RT-C01/03/04/66: additive C entry preserves B and has no identity evidence or C finding",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "RT-C37/38: partial entry permits defined preliminary only, comprehensive requires confirmed inventory",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "RT-C02/05/06/20/26: named zero, failure, partial and unknown dataset never imply complete coverage",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "RT-C07/08/09/34: possible match uses Person T immutable snapshots and honest comparison",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "RT-C14/15/16/17/66: permissions, rationale, stale inputs and idempotency protect writes",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "RT-C19/45: late responses are historical and never replace current run",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "RT-C21/23/24/36/41/42/43/65: gaps and urgent referral coexist without manufactured release",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "RT-C13/47/68: projections are allowlists and lenses share one revision, shadow inject disabled",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "RT-C22/39/40: EDD remains independent; only reviewed current reason can record applicability",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "RT-C22: required EDD creates bounded linked work and pack with explicit open issues",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "client projection context cannot override its role with an ops audience",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "RT-C16/19/46: subject changes, revoked permission and scope changes block resumed substantive work",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "RT-C47/48: unconfigured comprehensive adapter is not presented as executable even with supplied population confirmation",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "C candidate contract has complete field metadata and literal independent outcomes, and rejects malformed content",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "branch provenance resolves to actual events and existing evidence is reviewed before targeted collection",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "graph facts distinguish returned result and evidence sufficiency from permission to write an assessment",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "review fix: immediate Unassigned referral cannot resume without owner or a new authorised review",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "review fix: a newer finding decision cannot justify resuming an older referral",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "review fix: EDD resume needs its own current pack and approval prerequisites, not a screening finding",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "review fix: request and EDD applicability object holds participate in named write guards",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "review fix: supported referral resume retains its fixed finding and records the actual later review event",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "review fix: later finding referrals anchor their own review task rather than the first finding task",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "review round2: preliminary request eligibility requires the same current plan as the reducer",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "Batch C entry is explicit and names both current-case and archival fixture choices",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "Batch C routing is bounded to its five workspace steps and does not capture Scope or Clearance",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "all fifteen scene IDs remain stable while Population and EDD become authored route scenes",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "operator rendering exposes real guarded actions and an explicit disabled disposition reason",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "safe RM and client product projections never render restricted screening fields, including print",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "selected Batch C scene print renders its complete decision set and scoped reference footnotes",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "interactive scene keeps references on demand rather than forcing the full library below the graph",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "Evidence makes the exact disabled resume guard visible",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "print projection includes compact identity artifact and use assessment identifiers",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "selected synthetic result survives workspace rerender",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "unknown EDD visibly retains an unresolved question and unassigned owner",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "identity request collaboration uses screening-safe copy and routes assessment back to Screening Evidence",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "restricted legacy Activity uses a safe C projection rather than raw audit events",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "authorized legacy Activity preserves A/B history and admits only projected C events",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "cross-workspace C collaboration routes are leave-guarded in the host",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "D entry preserves A/B/C and requires scoped unresolved C context",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "RT-D01/02/03: specialist preparation progresses with open screening and a potential conflict",
+      "status": "passed",
+      "rt_ids": [
+        "RT-D01",
+        "RT-D02",
+        "RT-D03"
+      ]
+    },
+    {
+      "name": "RT-D04/05/06: Credit approval remains distinct from assessment and applicability",
+      "status": "passed",
+      "rt_ids": [
+        "RT-D04",
+        "RT-D05",
+        "RT-D06"
+      ]
+    },
+    {
+      "name": "RT-D08/09/10/11: Legal execution and authority remain unmet despite internal approval",
+      "status": "passed",
+      "rt_ids": [
+        "RT-D08",
+        "RT-D09",
+        "RT-D10",
+        "RT-D11"
+      ]
+    },
+    {
+      "name": "D unconfigured roles fail closed and only facilitator has revision simulation permission",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "RT-D12: RM and client get safe progress without restricted conflict detail or audit text",
+      "status": "passed",
+      "rt_ids": [
+        "RT-D12"
+      ]
+    },
+    {
+      "name": "RT-D13: readonly lenses share case, scope and condition revisions with mainline",
+      "status": "passed",
+      "rt_ids": [
+        "RT-D13"
+      ]
+    },
+    {
+      "name": "RT-D16/17: holds retain scope and unknown impact blocks only known affected work or remains unknown",
+      "status": "passed",
+      "rt_ids": [
+        "RT-D16",
+        "RT-D17"
+      ]
+    },
+    {
+      "name": "RT-D07/18: Credit revision makes existing legal dependency stale and retains immutable input chain",
+      "status": "passed",
+      "rt_ids": [
+        "RT-D07",
+        "RT-D18"
+      ]
+    },
+    {
+      "name": "D revision simulation rejects stale, missing and expanded commands without mutation",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "D dependencies use source-qualified aliases and scoped version-addressed objects",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "D prerequisites fail closed for missing financial, party or agreement context",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "D version history exposes both revision-addressed chains and immutable consumer provenance",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "D honors inherited case/scope hold targets and unknown object input",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "D contract generates complete aliases, independently stated oracle and candidate snapshots",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "D safe progress strips free-text hold, dependency and audit strings",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "D review fix: unknown Legal dependency blocks affected preparation without stopping Credit",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "D review fix: Legal requires nonempty current scoped product references",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "D review fix: incorporation validates current decision condition input and required terms",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "Graph next/focus/play change presentation only and stop at final node",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "Print retains every version node despite focus; input projection cannot be written by renderer",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "Focused diagram still contains complete semantic fallback when image fails",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "Version facts bind by stable record identity even when projection order changes",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "All three rendered families retain literal mandatory route semantics",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "Chinese graph fallback and print localize complete without changing source IDs",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "Credit version node returns inherited NIST and counterparty-credit records without duplicating observations",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "Parallel and hold nodes retain original process context and A-CDM as inspiration",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "Scoped-hold interpretation does not imply process-map or A-CDM policy provenance",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "three specialist scenarios are promoted while the journey retains exactly 15 stable IDs",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "D1 and D5 render all three specialist domains without inventing scenario IDs",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "Condition Detail exposes the complete shared condition contract and dependency routes",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "Credit state distinguishes approved condition, incorporated entry input and stale changed input",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "RM Condition Detail remains useful but never renders restricted conflict detail",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "zh-CN Condition Detail translates approved condition prose while retaining stable references",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "Dependency view uses graph fallback and provides an explicit return command",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "D session writer guard blocks every upstream writer family but not presentation or D commands",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "failed D load renders an accessible retry surface",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "zh-CN D1 and D5 translate approved summary and readiness prose in screen and print",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "D3 pilot changes resolve to the existing Archify and semantic graph nodes",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "pilot output keeps six or seven work titles visible and comparison opt-in",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "renderer escapes input context, localises prose and prints all trace details",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "comparison and disclosures survive locale, references and product return without mutating input",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "screening focus controls lead with real business names while retaining stable node selectors",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "canonical pilot aliases open registry records rather than an empty reference filter",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "every mapped pilot reference opens its source even when the registry binds another scene",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "condition and denied client views keep business explanations ahead of diagnostic identifiers",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "nested provenance disclosure remains open on locale rerender",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "all 94 stable change IDs resolve every one of the 144 source-qualified occurrences",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "the two Target M0.1 source occurrences retain separate locators and meanings",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "only the GAP and MATCH pilots project to UI, with six and seven work changes",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "English pilot projections contain no Chinese prose",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "Chinese pilot prose preserves every supplied context and all 13 change statements",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "reference aliases reuse exact registry identities and keep missing mappings explicit",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "public reference projections exclude internal paths and expose inherited status only",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "source work, target proposal and reference observation remain separate projections",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "loading and reading D3 metadata never changes the synthetic business fixture",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "the generated adapter preserves issues and the full closure manifest",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "builder rejects a malformed source reference instead of dropping traceability",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "builder rejects incomplete or inconsistent source locator fields",
+      "status": "passed",
+      "rt_ids": []
+    },
+    {
+      "name": "builder rejects duplicate physical locator tuples even when source IDs differ",
+      "status": "passed",
+      "rt_ids": []
+    }
+  ],
+  "hashes": {
+    "prototype/tests/batch-a-media.test.mjs": "874825b178420078ee35b6ba183a5ab3bea0b3b49432443d9427b9d17969ee97",
+    "prototype/tests/batch-a-schema.test.mjs": "9f666204ae0e62f0e58c7021b2e4e0017ea23b958431435adb7d0b9204d8215e",
+    "prototype/tests/batch-a.test.mjs": "984fc9b1489e9308f12f8f8951456ee2a5bcab3ba093ff12c3079d0039913199",
+    "prototype/tests/case-engine.test.mjs": "4e0874e189fa6f67f9cb36f82a2b882ee1198308e6d0a1cc54bca67dff9cba15",
+    "prototype/tests/collaboration-contract.test.mjs": "ef0b630919f5c67f026e755e87f1220b5f132c92346132fcff6de3d0e7109579",
+    "prototype/tests/collaboration-ui.test.mjs": "9fa7e003a1a0378830b41b48548fa670261e7ebffcbb645d93babba36d1f0055",
+    "prototype/tests/collaboration.test.mjs": "7d4d23b95373d32c699f7eb6ed2dbe60d278ca4fb7ea194e644cfb7a7eca86a9",
+    "prototype/tests/media-host.test.mjs": "572b3dbb6b1d155ae41a512432856ac4a1a6f1f92ea924bc56c3cbf7571f2519",
+    "prototype/tests/navigation.test.mjs": "829f2858a3db4bb197de045cba7166de5cd07d052fa5ed91fb4fc58ad556e047",
+    "prototype/tests/print-ready.test.mjs": "1b1e460183e4e3605d306efb5b2303d45a1d39fb1b69319429a4ad71becef73e",
+    "prototype/tests/references.test.mjs": "508a8e98093fbbba09b7d002d0415bc833be8411e74e3af348a18ba4856b2693",
+    "prototype/tests/runtime-schema.test.mjs": "a8fd9964443b9701fc4bd17339cf85e5f185c9898fd225260db57d3695b8c3fd",
+    "prototype/tests/screening-collaboration.test.mjs": "542601e43799c853ff98112f637dcc2a9194bbf92a1ecff092cc34c0a67cfda2",
+    "prototype/tests/screening-contract-integration.test.mjs": "2aabe9d10ba1e90994810e1f12fc12356941cf200ff92249e08c71dd3577b991",
+    "prototype/tests/screening-diagrams.test.mjs": "f7ca49ee9d5d854466028ad558ea54dfea265ae799748702944c4a43f43b792c",
+    "prototype/tests/screening-engine.test.mjs": "a73cdd37571343f25953f6f03048fe5296ebc7856b25e93ce4c08881021f4ebb",
+    "prototype/tests/screening-ui.test.mjs": "21438bc14061980b2ce246eae24cee395fae0972c0e7c2499f05e9571adb3d75",
+    "prototype/tests/specialist-engine.test.mjs": "c6d8bc7c187f902f33e678198f45e9ee7af00b54273c84fc55d391798adc68e8",
+    "prototype/tests/specialist-graph.test.mjs": "202810f2d0c17913db85c568ff50d0ac0c9062b913c691ad3ef4741f9060ac7e",
+    "prototype/tests/specialist-references.test.mjs": "2de9031c12a632d3613633e521a38cd9a5447d5c193de641f46222265e24bf43",
+    "prototype/tests/specialist-ui.test.mjs": "dfab0c95e23f95c2485920ef4e670a728972d0d770674e2a84174b5568554887",
+    "prototype/tests/transformation-bindings.test.mjs": "d8114a2aaa2b9da40865ee6163543a90dee9d0798c548e45333c84c35fea9db1",
+    "prototype/tests/transformation-ui.test.mjs": "4354f29e5c83da07a4f2642a55e541e0c14c8f59e2abc57eec6c77215dd9d3ac",
+    "prototype/tests/transformations.test.mjs": "ea621733b99694da4ffe13c1a0d440f3e45558ecf13de1317abe8d2333685e1d"
+  }
+}

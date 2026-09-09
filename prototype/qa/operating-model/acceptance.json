@@ -1,0 +1,773 @@
+{
+  "at": "2026-09-07T17:00:36.829Z",
+  "scope": "Person T pilot through OM-T06; not full D4 runtime",
+  "results": [
+    {
+      "id": "OM-01",
+      "name": "Studio subpage / no implicit reset",
+      "status": "PASS",
+      "evidence": [
+        {
+          "name": "global-entry-and-groups",
+          "status": "passed",
+          "path": "prototype/qa/operating-model/host/host-browser.results.json",
+          "screenshot": "prototype/qa/operating-model/host/global-entry-and-groups.png"
+        },
+        {
+          "name": "preserve-existing-session-on-direct-entry",
+          "status": "passed",
+          "path": "prototype/qa/operating-model/host/navigation-edge.results.json",
+          "screenshot": "prototype/qa/operating-model/host/preserve-existing-session-on-direct-entry.png"
+        }
+      ],
+      "note": ""
+    },
+    {
+      "id": "OM-02",
+      "name": "Exact D3 work entry / Current origin",
+      "status": "PASS",
+      "evidence": [
+        {
+          "name": "real-c-task-saved-roundtrip",
+          "status": "passed",
+          "path": "prototype/qa/operating-model/host/product-return.results.json",
+          "screenshot": "prototype/qa/operating-model/host/real-c-task-saved-roundtrip.png"
+        }
+      ],
+      "note": ""
+    },
+    {
+      "id": "OM-03",
+      "name": "Six groups / seventeen actions",
+      "status": "PASS",
+      "evidence": [
+        {
+          "name": "global-entry-and-groups",
+          "status": "passed",
+          "path": "prototype/qa/operating-model/host/host-browser.results.json",
+          "screenshot": "prototype/qa/operating-model/host/global-entry-and-groups.png"
+        }
+      ],
+      "note": ""
+    },
+    {
+      "id": "OM-04",
+      "name": "Separate selection, expansion and sources",
+      "status": "PASS",
+      "evidence": [
+        {
+          "name": "execution-choices-source-bound",
+          "status": "passed",
+          "path": "prototype/qa/operating-model/host/host-browser.results.json",
+          "screenshot": "prototype/qa/operating-model/host/execution-choices-source-bound.png"
+        }
+      ],
+      "note": ""
+    },
+    {
+      "id": "OM-05",
+      "name": "Bounded review pack / inherited N8 F7",
+      "status": "PASS",
+      "evidence": [
+        {
+          "name": "execution-choices-source-bound",
+          "status": "passed",
+          "path": "prototype/qa/operating-model/host/host-browser.results.json",
+          "screenshot": "prototype/qa/operating-model/host/execution-choices-source-bound.png"
+        }
+      ],
+      "note": ""
+    },
+    {
+      "id": "OM-06",
+      "name": "Human gate despite high adaptive need",
+      "status": "PASS",
+      "evidence": [
+        {
+          "name": "execution-choices-source-bound",
+          "status": "passed",
+          "path": "prototype/qa/operating-model/host/host-browser.results.json",
+          "screenshot": "prototype/qa/operating-model/host/execution-choices-source-bound.png"
+        }
+      ],
+      "note": ""
+    },
+    {
+      "id": "OM-07",
+      "name": "Agent candidate and simpler comparator",
+      "status": "PASS",
+      "evidence": [
+        {
+          "name": "execution-choices-source-bound",
+          "status": "passed",
+          "path": "prototype/qa/operating-model/host/host-browser.results.json",
+          "screenshot": "prototype/qa/operating-model/host/execution-choices-source-bound.png"
+        }
+      ],
+      "note": ""
+    },
+    {
+      "id": "OM-08",
+      "name": "Skill supports human action",
+      "status": "PASS",
+      "evidence": [
+        {
+          "name": "skill-samples-and-reuse-context",
+          "status": "passed",
+          "path": "prototype/qa/operating-model/host/host-browser.results.json",
+          "screenshot": "prototype/qa/operating-model/host/skill-samples-and-reuse-context.png"
+        }
+      ],
+      "note": ""
+    },
+    {
+      "id": "OM-09",
+      "name": "Cited comparison / missing date unknown",
+      "status": "PASS",
+      "evidence": [
+        {
+          "name": "skill-samples-and-reuse-context",
+          "status": "passed",
+          "path": "prototype/qa/operating-model/host/host-browser.results.json",
+          "screenshot": "prototype/qa/operating-model/host/skill-samples-and-reuse-context.png"
+        }
+      ],
+      "note": ""
+    },
+    {
+      "id": "OM-10",
+      "name": "Reuse inspect versus explicit scene",
+      "status": "PASS",
+      "evidence": [
+        {
+          "name": "skill-samples-and-reuse-context",
+          "status": "passed",
+          "path": "prototype/qa/operating-model/host/host-browser.results.json",
+          "screenshot": "prototype/qa/operating-model/host/skill-samples-and-reuse-context.png"
+        }
+      ],
+      "note": ""
+    },
+    {
+      "id": "OM-11",
+      "name": "Read-only scores / missing values",
+      "status": "PASS",
+      "evidence": [
+        {
+          "name": "execution-choices-source-bound",
+          "status": "passed",
+          "path": "prototype/qa/operating-model/host/host-browser.results.json",
+          "screenshot": "prototype/qa/operating-model/host/execution-choices-source-bound.png"
+        }
+      ],
+      "note": ""
+    },
+    {
+      "id": "OM-12",
+      "name": "Source precision / limitations / ambiguity",
+      "status": "PASS",
+      "evidence": [
+        {
+          "name": "seventeen-source-mappings-and-status",
+          "status": "passed",
+          "path": "prototype/qa/operating-model/host/delivery-audit.results.json",
+          "screenshot": "prototype/qa/operating-model/host/seventeen-source-mappings-and-status.png"
+        },
+        {
+          "name": "all-action-sources-three-locales",
+          "status": "passed",
+          "path": "prototype/qa/operating-model/host/host-browser.results.json",
+          "screenshot": "prototype/qa/operating-model/host/all-action-sources-three-locales.png"
+        }
+      ],
+      "note": ""
+    },
+    {
+      "id": "OM-13",
+      "name": "Information-gap automatic pause",
+      "status": "PASS",
+      "evidence": [
+        {
+          "name": "playback-pauses-and-gates",
+          "status": "passed",
+          "path": "prototype/qa/operating-model/host/host-browser.results.json",
+          "screenshot": "prototype/qa/operating-model/host/playback-pauses-and-gates.png"
+        }
+      ],
+      "note": ""
+    },
+    {
+      "id": "OM-14",
+      "name": "Human pause / Next is not approval",
+      "status": "PASS",
+      "evidence": [
+        {
+          "name": "playback-pauses-and-gates",
+          "status": "passed",
+          "path": "prototype/qa/operating-model/host/host-browser.results.json",
+          "screenshot": "prototype/qa/operating-model/host/playback-pauses-and-gates.png"
+        },
+        {
+          "name": "reduced-motion-does-not-reveal-outcome",
+          "status": "passed",
+          "path": "prototype/qa/operating-model/host/host-browser.results.json",
+          "screenshot": "prototype/qa/operating-model/host/reduced-motion-does-not-reveal-outcome.png"
+        }
+      ],
+      "note": ""
+    },
+    {
+      "id": "OM-15",
+      "name": "Explicit authored continuation / no write",
+      "status": "PASS",
+      "evidence": [
+        {
+          "name": "playback-pauses-and-gates",
+          "status": "passed",
+          "path": "prototype/qa/operating-model/host/host-browser.results.json",
+          "screenshot": "prototype/qa/operating-model/host/playback-pauses-and-gates.png"
+        }
+      ],
+      "note": ""
+    },
+    {
+      "id": "OM-16",
+      "name": "Leave and references pause playback",
+      "status": "PASS",
+      "evidence": [
+        {
+          "name": "playback-pauses-and-gates",
+          "status": "passed",
+          "path": "prototype/qa/operating-model/host/host-browser.results.json",
+          "screenshot": "prototype/qa/operating-model/host/playback-pauses-and-gates.png"
+        },
+        {
+          "name": "source-toggle-pause-and-browser-back",
+          "status": "passed",
+          "path": "prototype/qa/operating-model/host/navigation-edge.results.json",
+          "screenshot": "prototype/qa/operating-model/host/source-toggle-pause-and-browser-back.png"
+        },
+        {
+          "name": "native-print-pauses-narration",
+          "status": "passed",
+          "path": "prototype/qa/operating-model/host/print-lifecycle.results.json",
+          "screenshot": "prototype/qa/operating-model/host/native-print-pauses-narration.png"
+        }
+      ],
+      "note": ""
+    },
+    {
+      "id": "OM-17",
+      "name": "Correct active C task / same finding",
+      "status": "PASS",
+      "evidence": [
+        {
+          "name": "real-c-task-saved-roundtrip",
+          "status": "passed",
+          "path": "prototype/qa/operating-model/host/product-return.results.json",
+          "screenshot": "prototype/qa/operating-model/host/real-c-task-saved-roundtrip.png"
+        },
+        {
+          "name": "product-source-and-journey-return-with-request",
+          "status": "passed",
+          "path": "prototype/qa/operating-model/host/product-return.results.json",
+          "screenshot": "prototype/qa/operating-model/host/product-source-and-journey-return-with-request.png"
+        }
+      ],
+      "note": ""
+    },
+    {
+      "id": "OM-18",
+      "name": "Missing target truthful / no reset",
+      "status": "PASS",
+      "evidence": [
+        {
+          "name": "global-entry-and-groups",
+          "status": "passed",
+          "path": "prototype/qa/operating-model/host/host-browser.results.json",
+          "screenshot": "prototype/qa/operating-model/host/global-entry-and-groups.png"
+        },
+        {
+          "name": "preserve-existing-session-on-direct-entry",
+          "status": "passed",
+          "path": "prototype/qa/operating-model/host/navigation-edge.results.json",
+          "screenshot": "prototype/qa/operating-model/host/preserve-existing-session-on-direct-entry.png"
+        },
+        {
+          "name": "restricted-role-ROLE-RM",
+          "status": "passed",
+          "path": "prototype/qa/operating-model/host/navigation-edge.results.json",
+          "screenshot": "prototype/qa/operating-model/host/restricted-role-ROLE-RM.png"
+        },
+        {
+          "name": "restricted-role-ROLE-CLIENT",
+          "status": "passed",
+          "path": "prototype/qa/operating-model/host/navigation-edge.results.json",
+          "screenshot": "prototype/qa/operating-model/host/restricted-role-ROLE-CLIENT.png"
+        },
+        {
+          "name": "restricted-role-UNRECOGNISED",
+          "status": "passed",
+          "path": "prototype/qa/operating-model/host/navigation-edge.results.json",
+          "screenshot": "prototype/qa/operating-model/host/restricted-role-UNRECOGNISED.png"
+        },
+        {
+          "name": "latest-role-return-operating-model",
+          "status": "passed",
+          "path": "prototype/qa/operating-model/host/review-regression.results.json",
+          "screenshot": "prototype/qa/operating-model/host/latest-role-return-operating-model.png"
+        },
+        {
+          "name": "latest-role-return-scenario",
+          "status": "passed",
+          "path": "prototype/qa/operating-model/host/review-regression.results.json",
+          "screenshot": "prototype/qa/operating-model/host/latest-role-return-scenario.png"
+        },
+        {
+          "name": "latest-role-return-journey",
+          "status": "passed",
+          "path": "prototype/qa/operating-model/host/review-regression.results.json",
+          "screenshot": "prototype/qa/operating-model/host/latest-role-return-journey.png"
+        }
+      ],
+      "note": ""
+    },
+    {
+      "id": "OM-19",
+      "name": "Saved product return / latest locale",
+      "status": "PASS",
+      "evidence": [
+        {
+          "name": "real-c-task-saved-roundtrip",
+          "status": "passed",
+          "path": "prototype/qa/operating-model/host/product-return.results.json",
+          "screenshot": "prototype/qa/operating-model/host/real-c-task-saved-roundtrip.png"
+        },
+        {
+          "name": "product-source-and-journey-return-with-request",
+          "status": "passed",
+          "path": "prototype/qa/operating-model/host/product-return.results.json",
+          "screenshot": "prototype/qa/operating-model/host/product-source-and-journey-return-with-request.png"
+        },
+        {
+          "name": "latest-role-return-operating-model",
+          "status": "passed",
+          "path": "prototype/qa/operating-model/host/review-regression.results.json",
+          "screenshot": "prototype/qa/operating-model/host/latest-role-return-operating-model.png"
+        },
+        {
+          "name": "latest-role-return-scenario",
+          "status": "passed",
+          "path": "prototype/qa/operating-model/host/review-regression.results.json",
+          "screenshot": "prototype/qa/operating-model/host/latest-role-return-scenario.png"
+        },
+        {
+          "name": "latest-role-return-journey",
+          "status": "passed",
+          "path": "prototype/qa/operating-model/host/review-regression.results.json",
+          "screenshot": "prototype/qa/operating-model/host/latest-role-return-journey.png"
+        }
+      ],
+      "note": ""
+    },
+    {
+      "id": "OM-20",
+      "name": "Save Discard Stay / failed save retention",
+      "status": "PASS",
+      "evidence": [
+        {
+          "name": "dirty-save-stay-discard-and-failure",
+          "status": "passed",
+          "path": "prototype/qa/operating-model/host/product-return.results.json",
+          "screenshot": "prototype/qa/operating-model/host/dirty-save-stay-discard-and-failure.png"
+        }
+      ],
+      "note": ""
+    },
+    {
+      "id": "OM-21",
+      "name": "Changed revision notice / no rollback",
+      "status": "PASS",
+      "evidence": [
+        {
+          "name": "real-c-task-saved-roundtrip",
+          "status": "passed",
+          "path": "prototype/qa/operating-model/host/product-return.results.json",
+          "screenshot": "prototype/qa/operating-model/host/real-c-task-saved-roundtrip.png"
+        }
+      ],
+      "note": ""
+    },
+    {
+      "id": "OM-22",
+      "name": "Meaningful history / deep links / stale ref",
+      "status": "PASS",
+      "evidence": [
+        {
+          "name": "history-and-stale-action-deep-link",
+          "status": "passed",
+          "path": "prototype/qa/operating-model/host/host-browser.results.json",
+          "screenshot": "prototype/qa/operating-model/host/history-and-stale-action-deep-link.png"
+        },
+        {
+          "name": "source-toggle-pause-and-browser-back",
+          "status": "passed",
+          "path": "prototype/qa/operating-model/host/navigation-edge.results.json",
+          "screenshot": "prototype/qa/operating-model/host/source-toggle-pause-and-browser-back.png"
+        }
+      ],
+      "note": ""
+    },
+    {
+      "id": "OM-23",
+      "name": "Three locales / physical English projection",
+      "status": "PASS",
+      "evidence": [
+        {
+          "name": "seventeen-source-mappings-and-status",
+          "status": "passed",
+          "path": "prototype/qa/operating-model/host/delivery-audit.results.json",
+          "screenshot": "prototype/qa/operating-model/host/seventeen-source-mappings-and-status.png"
+        },
+        {
+          "name": "all-action-sources-three-locales",
+          "status": "passed",
+          "path": "prototype/qa/operating-model/host/host-browser.results.json",
+          "screenshot": "prototype/qa/operating-model/host/all-action-sources-three-locales.png"
+        },
+        {
+          "name": "restricted-role-ROLE-RM",
+          "status": "passed",
+          "path": "prototype/qa/operating-model/host/navigation-edge.results.json",
+          "screenshot": "prototype/qa/operating-model/host/restricted-role-ROLE-RM.png"
+        },
+        {
+          "name": "restricted-role-ROLE-CLIENT",
+          "status": "passed",
+          "path": "prototype/qa/operating-model/host/navigation-edge.results.json",
+          "screenshot": "prototype/qa/operating-model/host/restricted-role-ROLE-CLIENT.png"
+        },
+        {
+          "name": "restricted-role-UNRECOGNISED",
+          "status": "passed",
+          "path": "prototype/qa/operating-model/host/navigation-edge.results.json",
+          "screenshot": "prototype/qa/operating-model/host/restricted-role-UNRECOGNISED.png"
+        },
+        {
+          "name": "latest-role-return-operating-model",
+          "status": "passed",
+          "path": "prototype/qa/operating-model/host/review-regression.results.json",
+          "screenshot": "prototype/qa/operating-model/host/latest-role-return-operating-model.png"
+        },
+        {
+          "name": "latest-role-return-scenario",
+          "status": "passed",
+          "path": "prototype/qa/operating-model/host/review-regression.results.json",
+          "screenshot": "prototype/qa/operating-model/host/latest-role-return-scenario.png"
+        },
+        {
+          "name": "latest-role-return-journey",
+          "status": "passed",
+          "path": "prototype/qa/operating-model/host/review-regression.results.json",
+          "screenshot": "prototype/qa/operating-model/host/latest-role-return-journey.png"
+        },
+        {
+          "name": "scenario.zh-CN",
+          "status": "passed",
+          "path": "prototype/qa/operating-model/print/print.results.json"
+        },
+        {
+          "name": "skill.zh-CN",
+          "status": "passed",
+          "path": "prototype/qa/operating-model/print/print.results.json"
+        },
+        {
+          "name": "scenario.en-AU",
+          "status": "passed",
+          "path": "prototype/qa/operating-model/print/print.results.json"
+        },
+        {
+          "name": "skill.en-AU",
+          "status": "passed",
+          "path": "prototype/qa/operating-model/print/print.results.json"
+        },
+        {
+          "name": "scenario.en-US",
+          "status": "passed",
+          "path": "prototype/qa/operating-model/print/print.results.json"
+        },
+        {
+          "name": "skill.en-US",
+          "status": "passed",
+          "path": "prototype/qa/operating-model/print/print.results.json"
+        },
+        {
+          "name": "customer.en-AU",
+          "status": "passed",
+          "path": "prototype/qa/operating-model/print/print.results.json"
+        }
+      ],
+      "note": ""
+    },
+    {
+      "id": "OM-24",
+      "name": "Narrow / keyboard / reduced motion",
+      "status": "PASS",
+      "evidence": [
+        {
+          "name": "touch-target-selection-without-hover",
+          "status": "passed",
+          "path": "prototype/qa/operating-model/host/delivery-audit.results.json",
+          "screenshot": "prototype/qa/operating-model/host/touch-target-selection-without-hover.png"
+        },
+        {
+          "name": "reduced-motion-does-not-reveal-outcome",
+          "status": "passed",
+          "path": "prototype/qa/operating-model/host/host-browser.results.json",
+          "screenshot": "prototype/qa/operating-model/host/reduced-motion-does-not-reveal-outcome.png"
+        },
+        {
+          "name": "narrow-keyboard-and-static-fallback",
+          "status": "passed",
+          "path": "prototype/qa/operating-model/host/host-browser.results.json",
+          "screenshot": "prototype/qa/operating-model/host/narrow-keyboard-and-static-fallback.png"
+        }
+      ],
+      "note": ""
+    },
+    {
+      "id": "OM-25",
+      "name": "Complete scenario and Skill printing",
+      "status": "PASS",
+      "evidence": [
+        {
+          "name": "Physical pages: output/pdf/operating-model/customer.en-AU.pdf",
+          "status": "passed",
+          "path": "prototype/qa/operating-model/pdf-results.json",
+          "error": ""
+        },
+        {
+          "name": "Physical pages: output/pdf/operating-model/scenario.en-AU.pdf",
+          "status": "passed",
+          "path": "prototype/qa/operating-model/pdf-results.json",
+          "error": ""
+        },
+        {
+          "name": "Physical pages: output/pdf/operating-model/scenario.en-US.pdf",
+          "status": "passed",
+          "path": "prototype/qa/operating-model/pdf-results.json",
+          "error": ""
+        },
+        {
+          "name": "Physical pages: output/pdf/operating-model/scenario.zh-CN.pdf",
+          "status": "passed",
+          "path": "prototype/qa/operating-model/pdf-results.json",
+          "error": ""
+        },
+        {
+          "name": "Physical pages: output/pdf/operating-model/skill.en-AU.pdf",
+          "status": "passed",
+          "path": "prototype/qa/operating-model/pdf-results.json",
+          "error": ""
+        },
+        {
+          "name": "Physical pages: output/pdf/operating-model/skill.en-US.pdf",
+          "status": "passed",
+          "path": "prototype/qa/operating-model/pdf-results.json",
+          "error": ""
+        },
+        {
+          "name": "Physical pages: output/pdf/operating-model/skill.zh-CN.pdf",
+          "status": "passed",
+          "path": "prototype/qa/operating-model/pdf-results.json",
+          "error": ""
+        },
+        {
+          "name": "native-print-pauses-narration",
+          "status": "passed",
+          "path": "prototype/qa/operating-model/host/print-lifecycle.results.json",
+          "screenshot": "prototype/qa/operating-model/host/native-print-pauses-narration.png"
+        },
+        {
+          "name": "visible-skill-print-and-unmade-sample",
+          "status": "passed",
+          "path": "prototype/qa/operating-model/host/review-regression.results.json",
+          "screenshot": "prototype/qa/operating-model/host/visible-skill-print-and-unmade-sample.png"
+        },
+        {
+          "name": "scenario.zh-CN",
+          "status": "passed",
+          "path": "prototype/qa/operating-model/print/print.results.json"
+        },
+        {
+          "name": "skill.zh-CN",
+          "status": "passed",
+          "path": "prototype/qa/operating-model/print/print.results.json"
+        },
+        {
+          "name": "scenario.en-AU",
+          "status": "passed",
+          "path": "prototype/qa/operating-model/print/print.results.json"
+        },
+        {
+          "name": "skill.en-AU",
+          "status": "passed",
+          "path": "prototype/qa/operating-model/print/print.results.json"
+        },
+        {
+          "name": "scenario.en-US",
+          "status": "passed",
+          "path": "prototype/qa/operating-model/print/print.results.json"
+        },
+        {
+          "name": "skill.en-US",
+          "status": "passed",
+          "path": "prototype/qa/operating-model/print/print.results.json"
+        },
+        {
+          "name": "customer.en-AU",
+          "status": "passed",
+          "path": "prototype/qa/operating-model/print/print.results.json"
+        }
+      ],
+      "note": ""
+    },
+    {
+      "id": "OM-26",
+      "name": "No remote or business writes from author page",
+      "status": "PASS",
+      "evidence": [
+        {
+          "name": "global-entry-and-groups",
+          "status": "passed",
+          "path": "prototype/qa/operating-model/host/host-browser.results.json",
+          "screenshot": "prototype/qa/operating-model/host/global-entry-and-groups.png"
+        },
+        {
+          "name": "playback-pauses-and-gates",
+          "status": "passed",
+          "path": "prototype/qa/operating-model/host/host-browser.results.json",
+          "screenshot": "prototype/qa/operating-model/host/playback-pauses-and-gates.png"
+        },
+        {
+          "name": "preserve-existing-session-on-direct-entry",
+          "status": "passed",
+          "path": "prototype/qa/operating-model/host/navigation-edge.results.json",
+          "screenshot": "prototype/qa/operating-model/host/preserve-existing-session-on-direct-entry.png"
+        },
+        {
+          "name": "restricted-role-ROLE-RM",
+          "status": "passed",
+          "path": "prototype/qa/operating-model/host/navigation-edge.results.json",
+          "screenshot": "prototype/qa/operating-model/host/restricted-role-ROLE-RM.png"
+        },
+        {
+          "name": "restricted-role-ROLE-CLIENT",
+          "status": "passed",
+          "path": "prototype/qa/operating-model/host/navigation-edge.results.json",
+          "screenshot": "prototype/qa/operating-model/host/restricted-role-ROLE-CLIENT.png"
+        },
+        {
+          "name": "restricted-role-UNRECOGNISED",
+          "status": "passed",
+          "path": "prototype/qa/operating-model/host/navigation-edge.results.json",
+          "screenshot": "prototype/qa/operating-model/host/restricted-role-UNRECOGNISED.png"
+        }
+      ],
+      "note": ""
+    },
+    {
+      "id": "OM-27",
+      "name": "Existing C/B command contracts retained",
+      "status": "PASS",
+      "evidence": [
+        {
+          "name": "real-c-task-saved-roundtrip",
+          "status": "passed",
+          "path": "prototype/qa/operating-model/host/product-return.results.json",
+          "screenshot": "prototype/qa/operating-model/host/real-c-task-saved-roundtrip.png"
+        },
+        {
+          "name": "product-source-and-journey-return-with-request",
+          "status": "passed",
+          "path": "prototype/qa/operating-model/host/product-return.results.json",
+          "screenshot": "prototype/qa/operating-model/host/product-source-and-journey-return-with-request.png"
+        }
+      ],
+      "note": ""
+    },
+    {
+      "id": "OM-28",
+      "name": "Lab Shadow separation",
+      "status": "NOT_RUN",
+      "evidence": [],
+      "note": "No Living Case Lab/Shadow runtime exists in this pilot; actual intentional Shadow injection not run. Author/Product separation is tested independently."
+    },
+    {
+      "id": "OM-29",
+      "name": "Legacy label display correction",
+      "status": "PASS",
+      "evidence": [
+        {
+          "name": "execution-choices-source-bound",
+          "status": "passed",
+          "path": "prototype/qa/operating-model/host/host-browser.results.json",
+          "screenshot": "prototype/qa/operating-model/host/execution-choices-source-bound.png"
+        }
+      ],
+      "note": ""
+    },
+    {
+      "id": "OM-30",
+      "name": "Truthful delivery and implementation status",
+      "status": "PASS",
+      "evidence": [
+        {
+          "name": "seventeen-source-mappings-and-status",
+          "status": "passed",
+          "path": "prototype/qa/operating-model/host/delivery-audit.results.json",
+          "screenshot": "prototype/qa/operating-model/host/seventeen-source-mappings-and-status.png"
+        },
+        {
+          "name": "visible-skill-print-and-unmade-sample",
+          "status": "passed",
+          "path": "prototype/qa/operating-model/host/review-regression.results.json",
+          "screenshot": "prototype/qa/operating-model/host/visible-skill-print-and-unmade-sample.png"
+        }
+      ],
+      "note": ""
+    }
+  ],
+  "engines": [
+    {
+      "file": "prototype/case-engine.mjs",
+      "sha256": "b6186ddb5725dcaea07a39a11c0d4b34e356885c9eb3189ca40f029622d8082c",
+      "unchanged": true
+    },
+    {
+      "file": "prototype/batch-a-engine.mjs",
+      "sha256": "1627092f7222e563a0a7408c44045c54f744274693f25453a0fb0d7e039aa315",
+      "unchanged": true
+    },
+    {
+      "file": "prototype/collaboration-engine.mjs",
+      "sha256": "d7d55efec4c9c5f2d19f6f13ffc58ad7f0bb2e61c6cce7caa8e73ed68b0ea4f4",
+      "unchanged": true
+    },
+    {
+      "file": "prototype/screening-engine.mjs",
+      "sha256": "ab9b873e971f929ec12088f1b90bb13ce716c57538d266ca800d0c3d95c14d9d",
+      "unchanged": true
+    },
+    {
+      "file": "prototype/specialist-engine.mjs",
+      "sha256": "259053892877c1bed7793ffa2ba9929763a76f3fda7d7ab6730b040e94e845ce",
+      "unchanged": true
+    }
+  ],
+  "counts": {
+    "PASS": 29,
+    "FAIL": 0,
+    "NOT_RUN": 1
+  }
+}

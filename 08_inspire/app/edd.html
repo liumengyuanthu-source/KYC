@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EDD Information — Clear-to-Trade Portal</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Roboto+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="edd">
+<div class="frame">
+  <header class="topbar">
+    <a class="brand" href="index.html"><span class="brand-mark">CT</span><span class="brand-name">Clear-to-Trade Portal<small>Client Workspace</small></span></a>
+    <div class="search">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#54453f" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      <input type="text" placeholder="Search cases, documents, requirements…">
+    </div>
+    <div class="topbar-spacer"></div>
+    <button class="icon-btn" onclick="toast('2 new updates from Aria')"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#54453f" stroke-width="1.8" stroke-linecap="round"><path d="M18 8a6 6 0 1 0-12 0c0 7-3 8-3 8h18s-3-1-3-8"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/></svg><span class="dot"></span></button>
+    <div class="avatar">AB</div>
+  </header>
+
+  <div class="shell">
+    <nav class="sidebar">
+      <a class="side-link" href="index.html"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg><span class="tip">Home</span></a>
+      <a class="side-link" href="intake.html"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg><span class="tip">New request</span></a>
+      <a class="side-link" href="case.html"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><path d="M9 17l-5-5 5-5M15 7l5 5-5 5"/></svg><span class="tip">Case tracker</span></a>
+      <a class="side-link" href="documents.html"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6"/></svg><span class="tip">Documents</span></a>
+      <a class="side-link active" href="edd.html"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><path d="M12 3 4 7v5c0 5 3.4 8 8 9 4.6-1 8-4 8-9V7z"/><path d="m9 12 2 2 4-4"/></svg><span class="tip">EDD info</span></a>
+    </nav>
+
+    <main class="main">
+      <div class="content-grid">
+        <div>
+          <section class="reveal" style="margin-bottom:24px">
+            <span class="eyebrow">M5 · Enhanced due diligence · REQ-04</span>
+            <h1 class="display" style="margin-top:10px;font-size:clamp(26px,3vw,38px)">A few <em>human answers</em>,<br>then the machines take over.</h1>
+            <p class="lede" style="margin-top:12px">Your entity's risk profile triggered enhanced due diligence. These answers complete the evidence pack (M5.2); a Financial Crime Risk specialist — not just Aria — reviews and approves the outcome (M5.9 → M5.10).</p>
+          </section>
+
+          <form onsubmit="event.preventDefault();document.querySelector('.overlay').classList.add('show')">
+            <!-- SoF / SoW -->
+            <section class="card reveal" style="padding:28px;margin-bottom:22px">
+              <div style="display:flex;align-items:center;gap:10px;margin-bottom:4px">
+                <span class="badge-mono solid">A</span><h2 class="section-title">Source of wealth &amp; funds</h2>
+              </div>
+              <p style="font-size:12.5px;color:var(--muted);margin-bottom:22px">SoW = how the owners built their wealth over time. SoF = where the money flowing through this relationship comes from.</p>
+              <div class="form-grid">
+                <div class="field">
+                  <label>Primary source of wealth <span class="req">*</span></label>
+                  <select class="control">
+                    <option>Business profits / accumulated earnings</option><option>Sale of business or assets</option><option>Investment returns</option><option>Inheritance</option><option>Employment income</option><option>Other</option>
+                  </select>
+                </div>
+                <div class="field">
+                  <label>Wealth generated over</label>
+                  <select class="control"><option>&lt; 5 years</option><option selected>5–15 years</option><option>15+ years</option></select>
+                </div>
+                <div class="field span-2">
+                  <label>Source of wealth narrative <span class="req">*</span></label>
+                  <textarea class="control" placeholder="e.g. Founded a garment-trading business in 2011; grew to 3 export markets; profits retained in the company…"></textarea>
+                </div>
+                <div class="field">
+                  <label>Primary source of funds for this relationship <span class="req">*</span></label>
+                  <select class="control">
+                    <option>Operating revenue from trade</option><option>Intercompany funding</option><option>Shareholder capital injection</option><option>Loan proceeds</option><option>Other</option>
+                  </select>
+                </div>
+                <div class="field">
+                  <label>Origin country of incoming funds</label>
+                  <input class="control" type="text" placeholder="e.g. Hong Kong SAR">
+                </div>
+              </div>
+            </section>
+
+            <!-- activity profile -->
+            <section class="card reveal" style="padding:28px;margin-bottom:22px">
+              <div style="display:flex;align-items:center;gap:10px;margin-bottom:4px">
+                <span class="badge-mono solid">B</span><h2 class="section-title">Expected activity profile</h2>
+              </div>
+              <p style="font-size:12.5px;color:var(--muted);margin-bottom:22px">Calibrates transaction monitoring — rough figures are fine, re-validated at each refresh.</p>
+              <div class="form-grid">
+                <div class="field">
+                  <label>Monthly transaction count</label>
+                  <select class="control"><option>&lt; 20</option><option selected>20–100</option><option>100–500</option><option>500+</option></select>
+                </div>
+                <div class="field">
+                  <label>Average transaction size</label>
+                  <select class="control"><option>&lt; USD 10k</option><option>USD 10–100k</option><option selected>USD 100k–1m</option><option>&gt; USD 1m</option></select>
+                </div>
+                <div class="field">
+                  <label>Largest single expected transaction</label>
+                  <input class="control" type="text" placeholder="e.g. USD 2.5m">
+                </div>
+                <div class="field">
+                  <label>Payment types</label>
+                  <div class="opt-group">
+                    <label class="opt"><input type="checkbox" checked><span class="opt-face">SWIFT wires</span></label>
+                    <label class="opt"><input type="checkbox" checked><span class="opt-face">Local clearing</span></label>
+                    <label class="opt"><input type="checkbox"><span class="opt-face">Trade instruments (LC/BG)</span></label>
+                    <label class="opt"><input type="checkbox"><span class="opt-face">Cheques</span></label>
+                  </div>
+                </div>
+                <div class="field span-2">
+                  <label>Main counterparties (names &amp; countries)</label>
+                  <textarea class="control" placeholder="Top 3–5 counterparties you expect to pay or receive from…"></textarea>
+                </div>
+                <div class="field span-2">
+                  <label>Any expected third-party payments? <span class="hint-tag">payments to/from parties outside the contract</span></label>
+                  <div class="opt-group">
+                    <label class="opt"><input type="radio" name="tp" checked><span class="opt-face">No</span></label>
+                    <label class="opt"><input type="radio" name="tp"><span class="opt-face">Yes — explain below</span></label>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <!-- declarations -->
+            <section class="card reveal" style="padding:28px;margin-bottom:22px">
+              <div style="display:flex;align-items:center;gap:10px;margin-bottom:4px">
+                <span class="badge-mono solid">C</span><h2 class="section-title">Declarations</h2>
+              </div>
+              <p style="font-size:12.5px;color:var(--muted);margin-bottom:22px">Reviewed by a Financial Crime Risk specialist alongside Aria's assessment.</p>
+              <div style="display:flex;flex-direction:column;gap:14px">
+                <label class="check-row"><input type="checkbox" checked><span class="box"></span><span class="check-text">The entity and its owners are not involved in money laundering, terrorism financing, or sanctions evasion, and incoming funds derive from legitimate activity.</span></label>
+                <label class="check-row"><input type="checkbox" checked><span class="box"></span><span class="check-text">I will notify the bank promptly of material changes to ownership, control, business activity or expected transaction profile.</span></label>
+                <label class="check-row"><input type="checkbox"><span class="box"></span><span class="check-text">I consent to adverse-media and intelligence checks on the entity and its related parties as part of this assessment.</span></label>
+              </div>
+              <div class="divider"></div>
+              <div class="form-grid">
+                <div class="field"><label>Declared by <span class="req">*</span></label><input class="control" type="text" value="Annette Black"></div>
+                <div class="field"><label>Capacity <span class="req">*</span></label><select class="control"><option>Director</option><option selected>Authorised signatory</option><option>UBO</option></select></div>
+              </div>
+            </section>
+
+            <div style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap">
+              <button type="button" class="btn btn-ghost" onclick="toast('Draft saved — resume anytime within 30 days')">Save draft</button>
+              <button type="submit" class="btn btn-primary">Submit EDD information
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+            </div>
+          </form>
+        </div>
+
+        <!-- rail -->
+        <aside class="rail">
+          <div class="agent-card reveal">
+            <div class="agent-head">
+              <span class="agent-orb"></span>
+              <div>
+                <div class="agent-name">Human-in-the-loop</div>
+                <div class="agent-sub"><span class="live"></span>Judgment stays human</div>
+              </div>
+            </div>
+            <div style="margin-top:16px;display:flex;flex-direction:column;gap:0;font-size:12px;line-height:1.6;color:rgba(243,237,230,.85)">
+              <div class="agent-item"><span class="ai-time">M5.9</span><span>Aria drafts the risk assessment — <b>judgment drafted</b></span></div>
+              <div class="agent-item"><span class="ai-time">M5.10</span><span>FC Risk specialist reviews &amp; approves — <b>in progress</b></span></div>
+              <div class="agent-item"><span class="ai-time">ESC</span><span>Material findings escalate to senior management automatically</span></div>
+            </div>
+          </div>
+
+          <div class="card reveal">
+            <h2 class="section-title" style="font-size:16px;margin-bottom:12px">Why EDD was triggered</h2>
+            <div style="display:flex;flex-direction:column;gap:12px;font-size:12.5px;line-height:1.6">
+              <div style="display:flex;gap:10px"><span style="flex:none;width:8px;height:8px;border-radius:50%;background:var(--pink);margin-top:6px"></span>Cross-border trade corridors across 3+ jurisdictions (M2.4 risk indicator).</div>
+              <div style="display:flex;gap:10px"><span style="flex:none;width:8px;height:8px;border-radius:50%;background:var(--yellow);margin-top:6px"></span>Ownership includes a non-resident ultimate beneficial owner.</div>
+              <div style="display:flex;gap:10px"><span style="flex:none;width:8px;height:8px;border-radius:50%;background:var(--blue);margin-top:6px"></span>Trade finance products carry inherent TBML risk factors.</div>
+            </div>
+          </div>
+
+          <div class="card reveal">
+            <h2 class="section-title" style="font-size:16px;margin-bottom:12px">After you submit</h2>
+            <div class="timeline">
+              <div class="tl-item now"><span class="tl-dot"></span><div class="tl-title">Evidence pack completes</div><div class="tl-desc">M5.2 closes automatically on submission.</div></div>
+              <div class="tl-item"><span class="tl-dot"></span><div class="tl-title">Specialist review</div><div class="tl-desc">FC Risk approves outcome &amp; conditions (M5.10).</div></div>
+              <div class="tl-item"><span class="tl-dot"></span><div class="tl-title">QA sign-off</div><div class="tl-desc">M6 cross-checks conditions, then M8 clears you to trade.</div></div>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </main>
+  </div>
+</div>
+
+<!-- success overlay -->
+<div class="overlay">
+  <div class="overlay-card">
+    <div class="success-mark"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#1f7a52" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m4.5 12.5 5 5 10-11"/></svg></div>
+    <h2 class="section-title" style="font-size:24px">EDD information received</h2>
+    <p style="font-size:13.5px;line-height:1.65;margin:12px 0 24px;color:var(--body)">REQ-04 is closed and the evidence pack is complete. A Financial Crime Risk specialist now reviews the outcome — you're one step from cleared-to-trade.</p>
+    <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap">
+      <a class="btn btn-primary" href="case.html">Back to tracker
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <button class="btn btn-ghost" data-overlay-close>Close</button>
+    </div>
+  </div>
+</div>
+
+<!-- chat -->
+<button class="chat-fab"><span class="mini-orb"></span>Ask Aria</button>
+<div class="chat-drawer">
+  <div class="chat-head">
+    <span class="mini-orb"></span>
+    <div><div class="ch-title">Aria</div><div class="ch-sub"><span class="live"></span>Onboarding agent · online</div></div>
+    <button class="chat-close">✕</button>
+  </div>
+  <div class="chat-body"></div>
+  <div class="chat-chips">
+    <button class="pill">SoW vs SoF — what's the difference?</button>
+    <button class="pill">Who sees my answers?</button>
+    <button class="pill">Why was EDD triggered?</button>
+  </div>
+  <div class="chat-input">
+    <input type="text" placeholder="Ask about any field…">
+    <button class="chat-send" aria-label="Send"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M22 2 11 13M22 2l-7 20-4-9-9-4z"/></svg></button>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

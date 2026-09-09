@@ -1,0 +1,59 @@
+Skip to content
+CLEAR
+TO TRADE
+Journey / Scenario Studio
+Product Prototype
+References
+Demo environment · synthetic
+English (AU)
+English (US)
+简体中文
+Cases / request history
+← Back to scenario
+↖ Back to journey
+WORKSHOP TOOLS · SYNTHETIC ENVIRONMENT · LOCAL_SIMULATION
+View
+KYC Ops
+RM
+Client
+No real email, OTP, file scan or bank authentication.
+Print this view
+
+Saved in this synthetic session.
+
+ENTITY A
+
+DEMO-CTT-001
+
+Requests
+Unknown
+
+Case not ready · v25
+
+Requirements
+Requests
+Evidence
+Contacts
+Tasks
+Activity
+Reviewed
+Dispatch: Dispatched · simulation
+Delivery: Unknown
+
+DEMO-CTT-001/request/identity-c · v3
+
+Identity information for screening review
+Open
+
+Please provide the identity information specified in this request for Person T through the secure task.
+
+Purpose: screening_identity · v1
+
+DEMO-CTT-001/requirement/screening-identity-c
+
+Client-safe request summary
+Save draft
+Review request & recipients
+Dispatch notification
+
+Notification adapter: local simulation. Delivery observation remains separate.

@@ -1,0 +1,113 @@
+{
+  "at": "2026-09-07T16:21:14.419Z",
+  "results": [
+    {
+      "id": "D4_04_operating_architecture__MATCH",
+      "locale": "en-AU",
+      "geometry_preserved": true,
+      "text_bounds": "passed",
+      "canonical": "prototype/diagrams/operating-model/D4_04_operating_architecture__MATCH.en-AU.canonical.svg",
+      "styled": "prototype/diagrams/operating-model/D4_04_operating_architecture__MATCH.en-AU.svg",
+      "sha256": "630e7794bc5b5c0f0cf8e121431e211376d5ca9b9b4e67f5b38df0cf9a828e63"
+    },
+    {
+      "id": "D4_04_operating_architecture__MATCH",
+      "locale": "en-US",
+      "geometry_preserved": true,
+      "text_bounds": "passed",
+      "canonical": "prototype/diagrams/operating-model/D4_04_operating_architecture__MATCH.en-US.canonical.svg",
+      "styled": "prototype/diagrams/operating-model/D4_04_operating_architecture__MATCH.en-US.svg",
+      "sha256": "70fdd66bac5494de2139bea65277373353c42184e8e1f3efc4f79f34fbc2022d"
+    },
+    {
+      "id": "D4_04_operating_architecture__MATCH",
+      "locale": "zh-CN",
+      "geometry_preserved": true,
+      "text_bounds": "passed",
+      "canonical": "prototype/diagrams/operating-model/D4_04_operating_architecture__MATCH.zh-CN.canonical.svg",
+      "styled": "prototype/diagrams/operating-model/D4_04_operating_architecture__MATCH.zh-CN.svg",
+      "sha256": "757613101b405060f28a45800a1fa02af02a0878c4bfe84f888fb6edc22680f7"
+    },
+    {
+      "id": "D4_01_agentic_suitability__MATCH",
+      "locale": "en-AU",
+      "geometry_preserved": true,
+      "text_bounds": "passed",
+      "canonical": "prototype/diagrams/operating-model/D4_01_agentic_suitability__MATCH.en-AU.canonical.svg",
+      "styled": "prototype/diagrams/operating-model/D4_01_agentic_suitability__MATCH.en-AU.svg",
+      "sha256": "9ebfbb0707bc882c78abd36fce5129f8a5235824d9e5d167a9dbda3c31ac1da3"
+    },
+    {
+      "id": "D4_01_agentic_suitability__MATCH",
+      "locale": "en-US",
+      "geometry_preserved": true,
+      "text_bounds": "passed",
+      "canonical": "prototype/diagrams/operating-model/D4_01_agentic_suitability__MATCH.en-US.canonical.svg",
+      "styled": "prototype/diagrams/operating-model/D4_01_agentic_suitability__MATCH.en-US.svg",
+      "sha256": "391bb9697801c087e8dcfb1aa5ceef55aa02d9438d0201495535c64293410af9"
+    },
+    {
+      "id": "D4_01_agentic_suitability__MATCH",
+      "locale": "zh-CN",
+      "geometry_preserved": true,
+      "text_bounds": "passed",
+      "canonical": "prototype/diagrams/operating-model/D4_01_agentic_suitability__MATCH.zh-CN.canonical.svg",
+      "styled": "prototype/diagrams/operating-model/D4_01_agentic_suitability__MATCH.zh-CN.svg",
+      "sha256": "4af2d2b6585fa4a445c3d93b43c037c1e8835f26e9d133c17b8ae03bc281ef23"
+    },
+    {
+      "id": "D4_02_agent_matrix__MATCH",
+      "locale": "en-AU",
+      "geometry_preserved": true,
+      "text_bounds": "passed",
+      "canonical": "prototype/diagrams/operating-model/D4_02_agent_matrix__MATCH.en-AU.canonical.svg",
+      "styled": "prototype/diagrams/operating-model/D4_02_agent_matrix__MATCH.en-AU.svg",
+      "sha256": "bca3a2cb9682bb9e089435dfc388e6caf382520b7ebc5b04e67559f1c9200edb"
+    },
+    {
+      "id": "D4_02_agent_matrix__MATCH",
+      "locale": "en-US",
+      "geometry_preserved": true,
+      "text_bounds": "passed",
+      "canonical": "prototype/diagrams/operating-model/D4_02_agent_matrix__MATCH.en-US.canonical.svg",
+      "styled": "prototype/diagrams/operating-model/D4_02_agent_matrix__MATCH.en-US.svg",
+      "sha256": "b0621975525a1f29e5842b0ead9547b0ec3cb7cf4393cd0a28bc6cf75377f44f"
+    },
+    {
+      "id": "D4_02_agent_matrix__MATCH",
+      "locale": "zh-CN",
+      "geometry_preserved": true,
+      "text_bounds": "passed",
+      "canonical": "prototype/diagrams/operating-model/D4_02_agent_matrix__MATCH.zh-CN.canonical.svg",
+      "styled": "prototype/diagrams/operating-model/D4_02_agent_matrix__MATCH.zh-CN.svg",
+      "sha256": "1ed3874d51b61b37c4a64b17d952e023a691e18dcb3347b49eb90887bb73b3ec"
+    },
+    {
+      "id": "D4_03_human_agent_collaboration__MATCH",
+      "locale": "en-AU",
+      "geometry_preserved": true,
+      "text_bounds": "passed",
+      "canonical": "prototype/diagrams/operating-model/D4_03_human_agent_collaboration__MATCH.en-AU.canonical.svg",
+      "styled": "prototype/diagrams/operating-model/D4_03_human_agent_collaboration__MATCH.en-AU.svg",
+      "sha256": "b6fe5398c040b276363c9433877be8c8d733a8745c1c59c0364ffff63fe621c8"
+    },
+    {
+      "id": "D4_03_human_agent_collaboration__MATCH",
+      "locale": "en-US",
+      "geometry_preserved": true,
+      "text_bounds": "passed",
+      "canonical": "prototype/diagrams/operating-model/D4_03_human_agent_collaboration__MATCH.en-US.canonical.svg",
+      "styled": "prototype/diagrams/operating-model/D4_03_human_agent_collaboration__MATCH.en-US.svg",
+      "sha256": "b6fe5398c040b276363c9433877be8c8d733a8745c1c59c0364ffff63fe621c8"
+    },
+    {
+      "id": "D4_03_human_agent_collaboration__MATCH",
+      "locale": "zh-CN",
+      "geometry_preserved": true,
+      "text_bounds": "passed",
+      "canonical": "prototype/diagrams/operating-model/D4_03_human_agent_collaboration__MATCH.zh-CN.canonical.svg",
+      "styled": "prototype/diagrams/operating-model/D4_03_human_agent_collaboration__MATCH.zh-CN.svg",
+      "sha256": "898ce03491a6599c146a7483757425e5634fdb50de0baddf9d512ef23c06c837"
+    }
+  ]
+}

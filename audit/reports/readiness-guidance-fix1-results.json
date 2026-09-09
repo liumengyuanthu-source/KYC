@@ -1,0 +1,41 @@
+{
+  "at": "2026-09-07T18:42:36.228Z",
+  "results": [
+    {
+      "name": "current C readiness first Product action opens same-case readonly clearance and returns exactly",
+      "status": "passed",
+      "detail": {
+        "revision": 20,
+        "step": "clearance",
+        "locale": "zh-CN"
+      }
+    },
+    {
+      "name": "active D readiness keeps condition route without changing the fixture",
+      "status": "passed",
+      "detail": {
+        "revision": 35,
+        "step": "condition"
+      }
+    },
+    {
+      "name": "RM and Client readiness actions stay on role-filtered product progress",
+      "status": "passed",
+      "detail": {
+        "roles": [
+          "ROLE-RM",
+          "ROLE-CLIENT"
+        ],
+        "projection": "safe screening progress"
+      }
+    },
+    {
+      "name": "identity assessment CTA navigates to explicit outcome choices without writing",
+      "status": "passed",
+      "detail": {
+        "step": "screening-evidence",
+        "revision": 30
+      }
+    }
+  ]
+}

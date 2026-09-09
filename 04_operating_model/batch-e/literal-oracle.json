@@ -1,0 +1,175 @@
+{
+  "source_ref": "SRC-020:13",
+  "status": "independently_authored_literal_expectations",
+  "expected": {
+    "E-entry": {
+      "readiness": "NOT_READY",
+      "qa": "not_final",
+      "publication": "not_requested",
+      "scope_revision": 3
+    },
+    "E-gap": {
+      "readiness": "NOT_READY",
+      "qa": "gap_open",
+      "remediation": "open"
+    },
+    "E-remediation-completed": {
+      "readiness": "NOT_READY",
+      "qa": "re_review_required",
+      "remediation": "completed"
+    },
+    "E-qa-signed-alone": {
+      "readiness": "NOT_READY",
+      "qa": "signed_off"
+    },
+    "E-ready": {
+      "readiness": "READY_FOR_AUTHORISED_CONFIRMATION",
+      "qa": "signed_off",
+      "prerequisites": [
+        "satisfied",
+        "satisfied",
+        "satisfied"
+      ],
+      "edd": "not_required",
+      "publication": "not_requested"
+    },
+    "E-cleared": {
+      "readiness": "CLEARED_TO_TRADE",
+      "publication": "not_requested"
+    },
+    "E-publication-failed": {
+      "readiness": "CLEARED_TO_TRADE",
+      "publication": "failed"
+    },
+    "E-published": {
+      "readiness": "CLEARED_TO_TRADE",
+      "publication": "succeeded"
+    },
+    "E-evidence-changed": {
+      "readiness": "NOT_READY",
+      "qa": "re_review_required"
+    },
+    "E-scope-changed": {
+      "readiness": "NOT_READY",
+      "scope_revision": 4
+    }
+  },
+  "boundaries": {
+    "bank_booking_ref": null,
+    "bank_policy_ref": null,
+    "bank_authority_ref": null,
+    "trade_execution": "NOT_PART_OF_PROTOTYPE",
+    "population_members": 5,
+    "required_runs": 4,
+    "raw_C_unresolved_decision_retained": true,
+    "changed_screening_result_is_ready": false,
+    "changed_executed_document_is_ready": false,
+    "additional_unknown_dependency_is_ready": false,
+    "changed_decision_scope_is_current": false,
+    "save_draft_can_launder_changed_inputs": false,
+    "remediation_does_not_sign_qa": true,
+    "publication_does_not_change_clearance_decision": true
+  },
+  "red_team": [
+    {
+      "id": "RT-E01",
+      "state_test_file": "prototype/tests/clearance-engine.test.mjs",
+      "ui_status": "not_applicable"
+    },
+    {
+      "id": "RT-E02",
+      "state_test_file": "prototype/tests/clearance-engine.test.mjs",
+      "ui_status": "not_applicable"
+    },
+    {
+      "id": "RT-E03",
+      "state_test_file": "prototype/tests/clearance-engine.test.mjs",
+      "ui_status": "not_applicable"
+    },
+    {
+      "id": "RT-E04",
+      "state_test_file": "prototype/tests/clearance-engine.test.mjs",
+      "ui_status": "not_applicable"
+    },
+    {
+      "id": "RT-E05",
+      "state_test_file": "prototype/tests/clearance-engine.test.mjs",
+      "ui_status": "not_applicable"
+    },
+    {
+      "id": "RT-E06",
+      "state_test_file": "prototype/tests/clearance-engine.test.mjs",
+      "ui_status": "not_applicable"
+    },
+    {
+      "id": "RT-E07",
+      "state_test_file": "prototype/tests/clearance-engine.test.mjs",
+      "ui_status": "not_applicable"
+    },
+    {
+      "id": "RT-E08",
+      "state_test_file": "prototype/tests/clearance-engine.test.mjs",
+      "ui_status": "not_applicable"
+    },
+    {
+      "id": "RT-E09",
+      "state_test_file": "prototype/tests/clearance-engine.test.mjs",
+      "ui_status": "not_applicable"
+    },
+    {
+      "id": "RT-E10",
+      "state_test_file": "prototype/tests/clearance-engine.test.mjs",
+      "ui_status": "not_applicable"
+    },
+    {
+      "id": "RT-E11",
+      "state_test_file": "prototype/tests/clearance-engine.test.mjs",
+      "ui_status": "not_applicable"
+    },
+    {
+      "id": "RT-E12",
+      "state_test_file": "prototype/tests/clearance-engine.test.mjs",
+      "ui_status": "not_applicable"
+    },
+    {
+      "id": "RT-E13",
+      "state_test_file": "prototype/tests/clearance-engine.test.mjs",
+      "ui_status": "not_applicable"
+    },
+    {
+      "id": "RT-E14",
+      "state_test_file": "prototype/tests/clearance-engine.test.mjs",
+      "ui_status": "not_applicable"
+    },
+    {
+      "id": "RT-E15",
+      "state_test_file": "prototype/tests/clearance-engine.test.mjs",
+      "ui_status": "not_applicable"
+    },
+    {
+      "id": "RT-E16",
+      "state_test_file": "prototype/tests/clearance-engine.test.mjs",
+      "ui_status": "not_applicable"
+    },
+    {
+      "id": "RT-E17",
+      "state_test_file": "prototype/tests/clearance-engine.test.mjs",
+      "ui_status": "not_applicable"
+    },
+    {
+      "id": "RT-E18",
+      "state_test_file": "prototype/tests/clearance-engine.test.mjs",
+      "ui_status": "NOT_RUN_TASK_2"
+    },
+    {
+      "id": "RT-E19",
+      "state_test_file": "prototype/tests/clearance-engine.test.mjs",
+      "ui_status": "NOT_RUN_TASK_2"
+    },
+    {
+      "id": "RT-E20",
+      "state_test_file": "prototype/tests/clearance-engine.test.mjs",
+      "ui_status": "NOT_RUN_TASK_2"
+    }
+  ]
+}

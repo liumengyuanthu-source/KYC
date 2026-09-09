@@ -1,0 +1,66 @@
+{
+  "at": "2026-09-07T16:52:54.567Z",
+  "command": "node /Users/christinaliu/Documents/ChatGPT/Australia Bank/clear-to-trade-product/prototype/qa/operating-model/navigation-edge.mjs",
+  "browser": "152.0.7977.76",
+  "results": [
+    {
+      "ids": [
+        "OM-01",
+        "OM-18",
+        "OM-26"
+      ],
+      "name": "preserve-existing-session-on-direct-entry",
+      "status": "passed",
+      "screenshot": "prototype/qa/operating-model/host/preserve-existing-session-on-direct-entry.png",
+      "errors": [],
+      "remote": []
+    },
+    {
+      "ids": [
+        "OM-18",
+        "OM-23",
+        "OM-26"
+      ],
+      "name": "restricted-role-ROLE-RM",
+      "status": "passed",
+      "screenshot": "prototype/qa/operating-model/host/restricted-role-ROLE-RM.png",
+      "errors": [],
+      "remote": []
+    },
+    {
+      "ids": [
+        "OM-18",
+        "OM-23",
+        "OM-26"
+      ],
+      "name": "restricted-role-ROLE-CLIENT",
+      "status": "passed",
+      "screenshot": "prototype/qa/operating-model/host/restricted-role-ROLE-CLIENT.png",
+      "errors": [],
+      "remote": []
+    },
+    {
+      "ids": [
+        "OM-18",
+        "OM-23",
+        "OM-26"
+      ],
+      "name": "restricted-role-UNRECOGNISED",
+      "status": "passed",
+      "screenshot": "prototype/qa/operating-model/host/restricted-role-UNRECOGNISED.png",
+      "errors": [],
+      "remote": []
+    },
+    {
+      "ids": [
+        "OM-16",
+        "OM-22"
+      ],
+      "name": "source-toggle-pause-and-browser-back",
+      "status": "passed",
+      "screenshot": "prototype/qa/operating-model/host/source-toggle-pause-and-browser-back.png",
+      "errors": [],
+      "remote": []
+    }
+  ]
+}

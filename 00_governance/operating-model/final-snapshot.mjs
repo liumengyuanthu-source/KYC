@@ -1,0 +1,18 @@
+import fs from 'node:fs';import crypto from 'node:crypto';import {execFileSync} from 'node:child_process';
+const sha=p=>crypto.createHash('sha256').update(fs.readFileSync(p)).digest('hex');
+const base=JSON.parse(fs.readFileSync('00_governance/operating-model/baseline/manifest.json'));
+const changed=Object.keys(base.files).filter(p=>!fs.existsSync(p)||sha(p)!==base.files[p]);
+const allowed=['prototype/app.mjs','prototype/index.html','prototype/navigation.mjs','prototype/transformation-ui.mjs'];
+const unexpected=changed.filter(p=>!allowed.includes(p));
+const diagramDir='prototype/qa/operating-model/diagrams/';
+const initial=JSON.parse(fs.readFileSync(diagramDir+'visual-summary.json'));
+const corrected=JSON.parse(fs.readFileSync(diagramDir+'visual-summary-execution-choice.json'));
+const diagrams=[...initial.filter(x=>!x.id.includes('suitability')),...corrected];
+const host=fs.readdirSync('prototype/qa/operating-model/host').filter(f=>f.endsWith('.results.json')&&!f.includes('entry-red')).flatMap(f=>JSON.parse(fs.readFileSync('prototype/qa/operating-model/host/'+f)).results.map(t=>({file:f,name:t.name,status:t.status})));
+const unit=JSON.parse(fs.readFileSync('prototype/qa/operating-model/regression/unit-results.json'));
+const pdf=JSON.parse(fs.readFileSync('prototype/qa/operating-model/pdf-results.json'));
+const parents=JSON.parse(fs.readFileSync('00_governance/operating-model/parent-diagram-hashes.json'));
+const parentChecks=Object.entries(parents).map(([file,expected])=>({file,sha256:sha(file),unchanged:sha(file)===expected}));
+const result={at:new Date().toISOString(),head:execFileSync('git',['rev-parse','HEAD'],{encoding:'utf8'}).trim(),branch:execFileSync('git',['branch','--show-current'],{encoding:'utf8'}).trim(),changedExistingFiles:changed,unexpectedBaselineChanges:unexpected,host:{passed:host.filter(t=>t.status==='passed').length,failed:host.filter(t=>t.status!=='passed')},unit:{total:unit.tests.length,passed:unit.tests.filter(t=>t.status==='passed').length,exit:unit.exit_code},pdf:pdf.results.map(x=>({file:x.file,pages:x.pages,status:x.status,failures:x.failures})),pdfParserWarnings:pdf.parser_warning_count,diagrams:{automatedBrowserChecks:diagrams.length,passed:diagrams.filter(x=>x.ok).length,perceptualReview:'Selected embedded SVG and host screenshots inspected by root; native automated theme evidence is not a claim of visual review of every theme.'},parentChecks,scope:'OM-T00–T06 pilot only; no remote publication; model, bank integration and Lab runtime not run'};
+fs.writeFileSync('prototype/qa/operating-model/final-snapshot.json',JSON.stringify(result,null,2));console.log(result);
+if(parentChecks.some(p=>!p.unchanged)||unexpected.length||result.host.failed.length||unit.exit_code||pdf.results.some(x=>x.status!=='passed')||diagrams.some(x=>!x.ok))process.exitCode=1;

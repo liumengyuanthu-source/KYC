@@ -1,0 +1,22 @@
+[
+  {
+    "scene": "SCN-SCOPE",
+    "status": "passed",
+    "geometry": {
+      "headBottom": 230.5,
+      "panelTop": 242.6875,
+      "transportPosition": "static",
+      "time": "0"
+    }
+  },
+  {
+    "scene": "SCN-ENTITY",
+    "status": "passed",
+    "geometry": {
+      "headBottom": 230.5,
+      "panelTop": 242.1875,
+      "transportPosition": "static",
+      "time": "0"
+    }
+  }
+]

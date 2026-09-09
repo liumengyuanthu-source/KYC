@@ -1,0 +1,123 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "筛查复核 · 工作与责任",
+    "locale": "zh-CN",
+    "animation": "none",
+    "quality_profile": "showcase",
+    "viewBox": [
+      1080,
+      640
+    ],
+    "legend": {
+      "mode": "hidden"
+    }
+  },
+  "components": [
+    {
+      "id": "OM-MATCH-G1",
+      "type": "frontend",
+      "label": "绑定查询背景",
+      "sublabel": "规则 · 保持同一主体与来源版本",
+      "pos": [
+        60,
+        95
+      ],
+      "size": [
+        355,
+        96
+      ]
+    },
+    {
+      "id": "OM-MATCH-G2",
+      "type": "frontend",
+      "label": "比较识别信息",
+      "sublabel": "能力准备对照 · 未知仍为未知",
+      "pos": [
+        665,
+        95
+      ],
+      "size": [
+        355,
+        96
+      ]
+    },
+    {
+      "id": "OM-MATCH-G3",
+      "type": "frontend",
+      "label": "组织补证",
+      "sublabel": "条件性候选 · 人确认访问范围",
+      "pos": [
+        60,
+        275
+      ],
+      "size": [
+        355,
+        96
+      ]
+    },
+    {
+      "id": "OM-MATCH-G4",
+      "type": "frontend",
+      "label": "准备复核包",
+      "sublabel": "能力编制 · 规则校验引用",
+      "pos": [
+        665,
+        275
+      ],
+      "size": [
+        355,
+        96
+      ]
+    },
+    {
+      "id": "OM-MATCH-G5",
+      "type": "frontend",
+      "label": "人工判断",
+      "sublabel": "专业判断与已配置权限",
+      "pos": [
+        60,
+        455
+      ],
+      "size": [
+        355,
+        96
+      ]
+    },
+    {
+      "id": "OM-MATCH-G6",
+      "type": "frontend",
+      "label": "记录局部结果",
+      "sublabel": "规则 · 其他案件条件仍未满足",
+      "pos": [
+        665,
+        455
+      ],
+      "size": [
+        355,
+        96
+      ]
+    }
+  ],
+  "connections": [
+    {
+      "id": "relation-1",
+      "from": "OM-MATCH-G1",
+      "to": "OM-MATCH-G2",
+      "label": "输入背景"
+    },
+    {
+      "id": "relation-2",
+      "from": "OM-MATCH-G3",
+      "to": "OM-MATCH-G4",
+      "label": "仅在需要补证时"
+    },
+    {
+      "id": "relation-3",
+      "from": "OM-MATCH-G5",
+      "to": "OM-MATCH-G6",
+      "label": "已有权结果"
+    }
+  ]
+}

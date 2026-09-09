@@ -1,0 +1,94 @@
+{
+  "at": "2026-09-07T17:00:36.867Z",
+  "head": "1e202f5102aaf0726940e0ae8508341ad032b93a",
+  "branch": "codex/clear-to-trade-bootstrap",
+  "changedExistingFiles": [
+    "prototype/app.mjs",
+    "prototype/index.html",
+    "prototype/navigation.mjs",
+    "prototype/transformation-ui.mjs"
+  ],
+  "unexpectedBaselineChanges": [],
+  "host": {
+    "passed": 23,
+    "failed": []
+  },
+  "unit": {
+    "total": 299,
+    "passed": 299,
+    "exit": 0
+  },
+  "pdf": [
+    {
+      "file": "output/pdf/operating-model/customer.en-AU.pdf",
+      "pages": 38,
+      "status": "passed",
+      "failures": []
+    },
+    {
+      "file": "output/pdf/operating-model/scenario.en-AU.pdf",
+      "pages": 25,
+      "status": "passed",
+      "failures": []
+    },
+    {
+      "file": "output/pdf/operating-model/scenario.en-US.pdf",
+      "pages": 25,
+      "status": "passed",
+      "failures": []
+    },
+    {
+      "file": "output/pdf/operating-model/scenario.zh-CN.pdf",
+      "pages": 22,
+      "status": "passed",
+      "failures": []
+    },
+    {
+      "file": "output/pdf/operating-model/skill.en-AU.pdf",
+      "pages": 7,
+      "status": "passed",
+      "failures": []
+    },
+    {
+      "file": "output/pdf/operating-model/skill.en-US.pdf",
+      "pages": 7,
+      "status": "passed",
+      "failures": []
+    },
+    {
+      "file": "output/pdf/operating-model/skill.zh-CN.pdf",
+      "pages": 7,
+      "status": "passed",
+      "failures": []
+    }
+  ],
+  "pdfParserWarnings": 285,
+  "diagrams": {
+    "automatedBrowserChecks": 12,
+    "passed": 12,
+    "perceptualReview": "Selected embedded SVG and host screenshots inspected by root; native automated theme evidence is not a claim of visual review of every theme."
+  },
+  "parentChecks": [
+    {
+      "file": "../experiments/methodology-operating-model-r2/source/D4_01_agentic_suitability.archify.json",
+      "sha256": "8ee36b0df641be8d9cb0f3a18075ea11f1916d5931720a887626d4f7a06106b2",
+      "unchanged": true
+    },
+    {
+      "file": "../experiments/methodology-operating-model-r2/source/D4_02_agent_matrix.archify.json",
+      "sha256": "79c031a870852e5ccc9bf74a924fb19737393bf465edc81b61c15381261ec833",
+      "unchanged": true
+    },
+    {
+      "file": "../experiments/methodology-operating-model-r2/source/D4_03_human_agent_collaboration.archify.json",
+      "sha256": "00980f246a095e716156308a2221ec917c8b119edc2d050fbfd95a0da3ff854f",
+      "unchanged": true
+    },
+    {
+      "file": "../experiments/methodology-operating-model-r2/source/D4_04_operating_architecture.archify.json",
+      "sha256": "e43a7caa77239f576cc4e05d7a34b13c385681c0b2b9338989e2efcfd0aafdc9",
+      "unchanged": true
+    }
+  ],
+  "scope": "OM-T00–T06 pilot only; no remote publication; model, bank integration and Lab runtime not run"
+}

@@ -1,0 +1,22 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {readFileSync} from 'node:fs';
+import {act,readiness,id,find} from '../case-engine.mjs';
+import {validate,semantics} from '../../04_operating_model/round-a/validate-spine.mjs';
+const load=name=>JSON.parse(readFileSync(new URL(`../../04_operating_model/round-a/${name}`,import.meta.url)));
+const schema=load('shared-case-spine.schema.json');
+const seed=()=>load('synthetic-case-fixture.json');
+const steps=['confirm_requirements','reuse_identity','send_residual_request','receive_supplement','assess_supplement','record_disposition'];
+const run=(s,type,extra={})=>act(s,{type,role:type==='record_disposition'?'ROLE-FINCRIME':'ROLE-KYCOPS',rationale:'Purpose and source reviewed in the synthetic case.',expectedRevision:s.case.revision,key:`${type}-${s.case.revision}`,at:'2026-09-07T06:00:00Z',...extra});
+const prepared=()=>steps.slice(0,5).reduce((s,t)=>run(s,t),seed());
+
+test('Every runtime action produces an exact schema-conforming shared fixture',()=>{let s=seed();for(const step of steps){s=run(s,step);assert.doesNotThrow(()=>validate(s,schema),step);}});
+test('Every runtime action preserves latest semantics and historical snapshot bases',()=>{let s=seed();const versions=[];for(const step of steps){versions.push(structuredClone(s));s=run(s,step);assert.doesNotThrow(()=>semantics(s,{history:versions}),step);}});
+test('KYC purpose assessment rejects absent or wrongly scoped demo permission',()=>{let s=run(seed(),'confirm_requirements');s.authorities=s.authorities.filter(a=>a.id!==id('authority','demo-kycops'));assert.throws(()=>run(s,'reuse_identity'),/authority/i);s=run(seed(),'confirm_requirements');find(s,'authorities',id('authority','demo-kycops')).demo_permission_ref='invalid-config';assert.throws(()=>run(s,'reuse_identity'),/authority/i);});
+test('KYC assessment binds to its own configured authority',()=>{const s=run(run(seed(),'confirm_requirements'),'reuse_identity');assert.equal(find(s,'evidenceUseAssessments',id('assessment','identity')).authority_ref,id('authority','demo-kycops'));});
+test('Invalid and stale input revisions fail before mutation',()=>{let s=seed();s.case.revision=0;assert.throws(()=>run(s,'confirm_requirements'),/revision/i);s=seed();s.requirements[0].revision=0;assert.throws(()=>run(s,'confirm_requirements'),/revision/i);s=prepared();assert.throws(()=>run(s,'record_disposition',{expectedInputRevisions:{[id('assessment','supplement-screening')]:1}}),/revision/i);});
+test('Each accepted action increments case once and retains immutable prior input',()=>{let s=seed();for(const step of steps){const before=structuredClone(s),prior=s.case.revision;s=run(s,step);assert.equal(s.case.revision,prior+1);assert.deepEqual(before.case.revision,prior);assert.equal(s.auditEvents.at(-1).from_revision,prior);assert.equal(s.auditEvents.at(-1).to_revision,prior+1);assert.equal(s.readinessSnapshots.at(-1).supersedes_ref,s.readinessSnapshots.at(-2).id);}});
+test('Null booking context blocks readiness even when all conditions are green',()=>{const s=seed();for(const c of s.clearanceConditions){c.applicability='required';c.status='satisfied';}assert.equal(readiness(s).result,'not_ready');assert.equal(readiness(s).invalid_context,true);});
+test('Sufficient assessment with stale evidence or mismatched purpose cannot disposition',()=>{let s=prepared();find(s,'evidence',id('evidence','supplement')).evidence_revision++;assert.throws(()=>run(s,'record_disposition'),/revision|evidence/i);s=prepared();find(s,'evidenceUseAssessments',id('assessment','supplement-screening')).purpose_code='entity_identity';assert.throws(()=>run(s,'record_disposition'),/purpose|evidence/i);});
+test('Optional audit rationale is omitted rather than null',()=>{const s=run(seed(),'confirm_requirements',{rationale:undefined});assert.doesNotThrow(()=>validate(s,schema));assert.equal(Object.hasOwn(s.auditEvents.at(-1),'rationale'),false);});
+test('Latest snapshot cannot lie while history retains past blockers',()=>{let s=steps.reduce((state,t)=>run(state,t),seed());const initial=structuredClone(s.readinessSnapshots[0]);assert.equal(initial.blocking_condition_ids.length,5);assert.equal(s.readinessSnapshots.at(-1).blocking_condition_ids.length,3);s.readinessSnapshots.at(-1).result='candidate_ready';assert.throws(()=>semantics(s),/false green|context/i);});

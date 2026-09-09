@@ -1,0 +1,21 @@
+{
+  "schema_version":2,"diagram_type":"workflow",
+  "meta":{"title":"Clearance and publication","locale":"en","quality_profile":"showcase","animation":"none"},
+  "lanes":[{"id":"decision","label":"Authorised human confirmation"},{"id":"publication","label":"Separate publication event"}],
+  "mainPath":["E03-ready","E03-confirm","E03-decision","E03-publish","E03-communicate"],
+  "nodes":[
+    {"id":"E03-ready","lane":"decision","col":0,"width":154,"type":"backend","label":"Review ready snapshot","sublabel":"Current scope and basis"},
+    {"id":"E03-confirm","lane":"decision","col":1,"width":154,"type":"backend","label":"Confirm clearance","sublabel":"Explicit demo role and authority"},
+    {"id":"E03-decision","lane":"decision","col":2,"width":154,"type":"backend","label":"Record decision","sublabel":"Scoped outcome and timestamp"},
+    {"id":"E03-publish","lane":"publication","col":2,"width":180,"type":"backend","label":"Publish permitted outcome","sublabel":"Local simulated targets only"},
+    {"id":"E03-communicate","lane":"publication","col":3,"width":154,"type":"frontend","label":"Communicate status","sublabel":"No trade is executed"},
+    {"id":"E03-failure","lane":"publication","col":1,"width":154,"type":"backend","label":"Publication failed","sublabel":"Keep decision; track delivery"}
+  ],
+  "edges":[
+    {"from":"E03-ready","to":"E03-confirm","label":"Current and permitted"},
+    {"from":"E03-confirm","to":"E03-decision","label":"Human confirmation"},
+    {"from":"E03-decision","to":"E03-publish","label":"Separate action"},
+    {"from":"E03-publish","to":"E03-communicate","label":"Recorded delivery"},
+    {"from":"E03-publish","to":"E03-failure","label":"Failed","role":"branch"}
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "sourcePack": "Clear_to_Trade_D3_Detailed_Transformation_Pack_v0.2.zip",
+  "expectedDeckSha256": "9ce02c70bdacabc3209208d82bb92efdf01352b2122caa2ba8dca175226f1f11",
+  "actualDeckSha256": "9ce02c70bdacabc3209208d82bb92efdf01352b2122caa2ba8dca175226f1f11",
+  "match": true,
+  "comparison": "SHA-256 bytes only; not a new visual PPT audit",
+  "sourceStatus": "DETAILED-REVIEW-BASELINE"
+}

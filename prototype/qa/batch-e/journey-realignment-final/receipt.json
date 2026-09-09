@@ -1,0 +1,250 @@
+{
+  "date": "2026-09-08T00:20:07.103Z",
+  "checks": [
+    {
+      "id": "E-ENTRY-READONLY",
+      "rt": [
+        "RT18",
+        "RT20"
+      ],
+      "status": "passed",
+      "name": "Preview links, E beats and comparison do not load outcomes",
+      "evidence": [
+        "prototype/qa/batch-e/journey-realignment-final/entry-review.png"
+      ]
+    },
+    {
+      "id": "E-ENTRY-ARCHIVE",
+      "rt": [],
+      "status": "passed",
+      "name": "Explicit reviewed entry preserves exact previous session",
+      "evidence": [
+        "prototype/qa/batch-e/journey-realignment-final/qa-entry.en-AU.png"
+      ]
+    },
+    {
+      "id": "E-DRAFT-EXITS",
+      "rt": [
+        "RT19"
+      ],
+      "status": "passed",
+      "name": "Stay and discard protect dirty role and scene exits",
+      "evidence": []
+    },
+    {
+      "id": "E-SAVE-FAILURE",
+      "rt": [
+        "RT19"
+      ],
+      "status": "passed",
+      "name": "Failed draft save stays in dirty dialog and retains input",
+      "evidence": [
+        "prototype/qa/batch-e/journey-realignment-final/draft-save-failed.png"
+      ]
+    },
+    {
+      "id": "E-DRAFT-SAVE",
+      "rt": [
+        "RT19"
+      ],
+      "status": "passed",
+      "name": "Save persists draft only and returns with latest locale",
+      "evidence": []
+    },
+    {
+      "id": "E-BROWSER-BACK",
+      "rt": [
+        "RT19"
+      ],
+      "status": "passed",
+      "name": "Browser Back offers Save/Discard/Stay and preserves live business revision",
+      "evidence": []
+    },
+    {
+      "id": "E-REMEDIATION",
+      "rt": [
+        "RT01",
+        "RT16"
+      ],
+      "status": "passed",
+      "name": "Completed remediation requires QA re-review and preserves Legal/Credit",
+      "evidence": [
+        "prototype/qa/batch-e/journey-realignment-final/remediation-completed.en-AU.png"
+      ]
+    },
+    {
+      "id": "E-QA-ALONE",
+      "rt": [
+        "RT02",
+        "RT04",
+        "RT05"
+      ],
+      "status": "passed",
+      "name": "QA sign-off leaves pending Conflicts and coverage blocking",
+      "evidence": [
+        "prototype/qa/batch-e/journey-realignment-final/qa-signed-alone.png"
+      ]
+    },
+    {
+      "id": "E-READY",
+      "rt": [
+        "RT06",
+        "RT07",
+        "RT08",
+        "RT10",
+        "RT11"
+      ],
+      "status": "passed",
+      "name": "All reviewed prerequisites give ready; QA cannot confirm",
+      "evidence": [
+        "prototype/qa/batch-e/journey-realignment-final/ready.en-US.png"
+      ]
+    },
+    {
+      "id": "E-CONFIRMED",
+      "rt": [
+        "RT12"
+      ],
+      "status": "passed",
+      "name": "Confirmation creates a decision but no publication",
+      "evidence": [
+        "prototype/qa/batch-e/journey-realignment-final/cleared-not-published.png"
+      ]
+    },
+    {
+      "id": "E-PUBLICATION-FAILURE",
+      "rt": [
+        "RT13"
+      ],
+      "status": "passed",
+      "name": "Publication failure preserves clearance and offers separate retry",
+      "evidence": [
+        "prototype/qa/batch-e/journey-realignment-final/publication-failed.png"
+      ]
+    },
+    {
+      "id": "E-PUBLISHED-RELOAD",
+      "rt": [
+        "RT14",
+        "RT18",
+        "RT19"
+      ],
+      "status": "passed",
+      "name": "Full operational path persists through reload without E state copies in versions",
+      "evidence": [
+        "prototype/qa/batch-e/journey-realignment-final/published.en-US.png"
+      ]
+    },
+    {
+      "id": "E-STUDIO-LAB",
+      "rt": [
+        "RT18",
+        "RT20"
+      ],
+      "status": "passed",
+      "name": "Studio, Product and optional Lab share revision; all E beats and diagrams are read only",
+      "evidence": [
+        "prototype/qa/batch-e/journey-realignment-final/studio-E6.en-US.png"
+      ]
+    },
+    {
+      "id": "E-REFERENCES-RETURN",
+      "rt": [
+        "RT19",
+        "RT20"
+      ],
+      "status": "passed",
+      "name": "Reference return preserves scene and latest language",
+      "evidence": [
+        "prototype/qa/batch-e/journey-realignment-final/studio-E6.zh-CN.png"
+      ]
+    },
+    {
+      "id": "E-PRINT-COMPLETE",
+      "rt": [
+        "RT15",
+        "RT18",
+        "RT19",
+        "RT20"
+      ],
+      "status": "passed",
+      "name": "Complete print includes all condition groups, QA detail, all diagrams and preserves data",
+      "evidence": [
+        "prototype/qa/batch-e/journey-realignment-final/complete-E.zh-CN.png"
+      ]
+    },
+    {
+      "id": "E-ROLE-SAFE",
+      "rt": [
+        "RT15"
+      ],
+      "status": "passed",
+      "name": "RM/client DOM and print omit restricted rationale and writers",
+      "evidence": [
+        "prototype/qa/batch-e/journey-realignment-final/client-safe.png"
+      ]
+    },
+    {
+      "id": "E-MOBILE",
+      "rt": [],
+      "status": "passed",
+      "name": "Mobile text and controls remain readable without page overflow",
+      "evidence": [
+        "prototype/qa/batch-e/journey-realignment-final/mobile.zh-CN.png"
+      ]
+    },
+    {
+      "id": "E-HISTORY-BOUNDARY",
+      "rt": [
+        "RT19"
+      ],
+      "status": "passed",
+      "name": "Earlier Product and D scenes are explicit historical context with current E status",
+      "evidence": [
+        "prototype/qa/batch-e/journey-realignment-final/legacy-readonly.png"
+      ]
+    },
+    {
+      "id": "E-INVALIDATION",
+      "rt": [
+        "RT09",
+        "RT17"
+      ],
+      "status": "passed",
+      "name": "Evidence and scope changes invalidate current clearance and label prior publication historical",
+      "evidence": [
+        "prototype/qa/batch-e/journey-realignment-final/revise_scope-reload.png"
+      ]
+    },
+    {
+      "id": "E-LAB-OFF",
+      "rt": [
+        "RT18"
+      ],
+      "status": "passed",
+      "name": "Mainline remains functional with Lab disabled",
+      "evidence": []
+    },
+    {
+      "id": "E-RESTORE",
+      "rt": [
+        "RT19"
+      ],
+      "status": "passed",
+      "name": "Explicit reviewed restore retains E archive and latest language",
+      "evidence": [
+        "prototype/qa/batch-e/journey-realignment-final/pre-E-restored.png"
+      ]
+    },
+    {
+      "id": "E-CONSOLE",
+      "rt": [],
+      "status": "passed",
+      "name": "No browser page or console errors",
+      "evidence": []
+    }
+  ],
+  "consoleErrors": [],
+  "passed": 22,
+  "failed": 0
+}

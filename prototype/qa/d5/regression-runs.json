@@ -1,0 +1,69 @@
+{
+  "at": "2026-09-07T17:56:49.614Z",
+  "results": [
+    {
+      "file": "regression/b-regression.mjs",
+      "exit": 0
+    },
+    {
+      "file": "regression/d-mainline-browser.mjs",
+      "exit": 0
+    },
+    {
+      "file": "regression/d-scene-graph-browser.mjs",
+      "exit": 0
+    },
+    {
+      "file": "regression/c-regression.mjs",
+      "exit": 0
+    },
+    {
+      "file": "regression/a-regression.mjs",
+      "exit": 0
+    },
+    {
+      "file": "regression/product-return.mjs",
+      "exit": 0
+    },
+    {
+      "file": "regression/host-browser.mjs",
+      "exit": 0
+    },
+    {
+      "file": "regression/print-reentry.mjs",
+      "exit": 0
+    },
+    {
+      "file": "regression/chain-preview.mjs",
+      "exit": 0
+    },
+    {
+      "file": "om-regression/print-lifecycle.mjs",
+      "exit": 0
+    },
+    {
+      "file": "om-regression/product-return.mjs",
+      "exit": 0
+    },
+    {
+      "file": "om-regression/host-browser.mjs",
+      "exit": 0
+    },
+    {
+      "file": "regression/d-return-browser.mjs",
+      "exit": 0
+    },
+    {
+      "file": "om-regression/navigation-edge.mjs",
+      "exit": 0
+    },
+    {
+      "file": "om-regression/review-regression.mjs",
+      "exit": 0
+    },
+    {
+      "file": "regression/navigation-edge.mjs",
+      "exit": 0
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "at": "2026-09-07T15:02:34.893Z",
+  "results": [
+    {
+      "scene": "SCN-REQUIREMENTS",
+      "status": "failed",
+      "error": "Scenario summary must offer one explicit Compare process CTA\n\n0 !== 1\n"
+    },
+    {
+      "scene": "SCN-SOURCE",
+      "status": "failed",
+      "error": "Scenario summary must offer one explicit Compare process CTA\n\n0 !== 1\n"
+    },
+    {
+      "scene": "SCN-GAP",
+      "status": "failed",
+      "error": "Scenario summary must offer one explicit Compare process CTA\n\n0 !== 1\n"
+    },
+    {
+      "scene": "SCN-VALIDATE",
+      "status": "failed",
+      "error": "Scenario summary must offer one explicit Compare process CTA\n\n0 !== 1\n"
+    }
+  ]
+}

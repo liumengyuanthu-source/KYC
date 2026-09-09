@@ -1,0 +1,1602 @@
+{
+  "source_ref": "SRC-021",
+  "checked_at": "2026-09-07T21:35:58.251Z",
+  "overall": "implemented_with_unmet_graphical_acceptance",
+  "workshop_ready_claim": false,
+  "native": {
+    "command": "node --test --test-reporter=tap prototype/tests/*.test.mjs (expanded sorted filenames)",
+    "exit_code": 0,
+    "tests": 406,
+    "passed": 406,
+    "failed": 0,
+    "skipped": 0,
+    "evidence": "00_governance/batch-f/native-final.tap"
+  },
+  "gates": [
+    {
+      "id": "G1",
+      "title": "Scope Integrity",
+      "status": "tested_cases_passed_not_exhaustive",
+      "automated_cases": [
+        {
+          "name": "RT-A01 / A17: A0 separates the group and parties; registry arrives only by event",
+          "status": "passed",
+          "test_number": 15,
+          "evidence": "00_governance/batch-f/native-final.tap",
+          "source_paths": [
+            "prototype/tests/batch-a.test.mjs"
+          ]
+        },
+        {
+          "name": "RT-A04 / A06 / A07: scope can be recorded with unresolved booking, not CDD or clearance",
+          "status": "passed",
+          "test_number": 17,
+          "evidence": "00_governance/batch-f/native-final.tap",
+          "source_paths": [
+            "prototype/tests/batch-a.test.mjs"
+          ]
+        },
+        {
+          "name": "RT-A14 / A19: stale writes reject and context edits invalidate dependent currency",
+          "status": "passed",
+          "test_number": 21,
+          "evidence": "00_governance/batch-f/native-final.tap",
+          "source_paths": [
+            "prototype/tests/batch-a.test.mjs"
+          ]
+        },
+        {
+          "name": "RT-A14: entity review invalidates a decision bound to the prior entity revision",
+          "status": "passed",
+          "test_number": 28,
+          "evidence": "00_governance/batch-f/native-final.tap",
+          "source_paths": [
+            "prototype/tests/batch-a.test.mjs"
+          ]
+        },
+        {
+          "name": "Empty conditions and missing scope fail closed",
+          "status": "passed",
+          "test_number": 30,
+          "evidence": "00_governance/batch-f/native-final.tap",
+          "source_paths": [
+            "prototype/tests/case-engine.test.mjs"
+          ]
+        },
+        {
+          "name": "RT-E10/E11: real command guard rejects unconfigured, tampered and wrong-scope authority",
+          "status": "passed",
+          "test_number": 49,
+          "evidence": "00_governance/batch-f/native-final.tap",
+          "source_paths": [
+            "prototype/tests/clearance-engine.test.mjs"
+          ]
+        },
+        {
+          "name": "Malformed/empty conditions and scope, expected unknown dependencies and unknown holds fail closed",
+          "status": "passed",
+          "test_number": 55,
+          "evidence": "00_governance/batch-f/native-final.tap",
+          "source_paths": [
+            "prototype/tests/clearance-engine.test.mjs"
+          ]
+        }
+      ],
+      "browser": null,
+      "bank_validation": "not_inferred_from_tests",
+      "limitations": [
+        "Synthetic fixtures only; bank rules and authority remain unresolved"
+      ]
+    },
+    {
+      "id": "G2",
+      "title": "Evidence Integrity",
+      "status": "tested_cases_passed_not_exhaustive",
+      "automated_cases": [
+        {
+          "name": "Evidence receipt does not satisfy a requirement or decide a finding",
+          "status": "passed",
+          "test_number": 31,
+          "evidence": "00_governance/batch-f/native-final.tap",
+          "source_paths": [
+            "prototype/tests/case-engine.test.mjs"
+          ]
+        },
+        {
+          "name": "Registry reuse supports identity only, not every evidence purpose",
+          "status": "passed",
+          "test_number": 32,
+          "evidence": "00_governance/batch-f/native-final.tap",
+          "source_paths": [
+            "prototype/tests/case-engine.test.mjs"
+          ]
+        },
+        {
+          "name": "Disposition requires sufficient evidence and nonempty rationale",
+          "status": "passed",
+          "test_number": 34,
+          "evidence": "00_governance/batch-f/native-final.tap",
+          "source_paths": [
+            "prototype/tests/case-engine.test.mjs"
+          ]
+        },
+        {
+          "name": "RT-E17: relevant evidence change invalidates QA, readiness and decision, retains evidence history",
+          "status": "passed",
+          "test_number": 52,
+          "evidence": "00_governance/batch-f/native-final.tap",
+          "source_paths": [
+            "prototype/tests/clearance-engine.test.mjs"
+          ]
+        },
+        {
+          "name": "Review fix 1 R2 incorrect Legal evidence purpose prevents readiness",
+          "status": "passed",
+          "test_number": 75,
+          "evidence": "00_governance/batch-f/native-final.tap",
+          "source_paths": []
+        },
+        {
+          "name": "E reference bindings reuse observations without duplicate cards or a new verification claim",
+          "status": "passed",
+          "test_number": 95,
+          "evidence": "00_governance/batch-f/native-final.tap",
+          "source_paths": [
+            "prototype/tests/clearance-ui.test.mjs"
+          ]
+        },
+        {
+          "name": "F does not promote evidence receipt, empty prerequisites or unknown applicability to clearance",
+          "status": "passed",
+          "test_number": 137,
+          "evidence": "00_governance/batch-f/native-final.tap",
+          "source_paths": [
+            "prototype/tests/consolidation.test.mjs"
+          ]
+        },
+        {
+          "name": "E diagram canonical exports bind to the checked HTML artifacts without claiming host validation",
+          "status": "passed",
+          "test_number": 144,
+          "evidence": "00_governance/batch-f/native-final.tap",
+          "source_paths": [
+            "prototype/tests/e-diagrams.test.mjs"
+          ]
+        },
+        {
+          "name": "printing an un-authored Skill family cannot invent a SK06 sample or claim its sample is authored",
+          "status": "passed",
+          "test_number": 181,
+          "evidence": "00_governance/batch-f/native-final.tap",
+          "source_paths": [
+            "prototype/tests/operating-model-ui.test.mjs"
+          ]
+        },
+        {
+          "name": "guidance sends received but unassessed evidence to current intake and purpose review",
+          "status": "passed",
+          "test_number": 196,
+          "evidence": "00_governance/batch-f/native-final.tap",
+          "source_paths": [
+            "prototype/tests/product-experience-guidance.test.mjs"
+          ]
+        },
+        {
+          "name": "guidance makes Resume the sole primary task after a current insufficient assessment",
+          "status": "passed",
+          "test_number": 197,
+          "evidence": "00_governance/batch-f/native-final.tap",
+          "source_paths": [
+            "prototype/tests/product-experience-guidance.test.mjs"
+          ]
+        },
+        {
+          "name": "retains source classification, flags, actors and exact occurrence references without claiming bank validation",
+          "status": "passed",
+          "test_number": 232,
+          "evidence": "00_governance/batch-f/native-final.tap",
+          "source_paths": [
+            "prototype/tests/reconstruction-registry.test.mjs"
+          ]
+        },
+        {
+          "name": "Sufficient assessment with stale evidence or mismatched purpose cannot disposition",
+          "status": "passed",
+          "test_number": 277,
+          "evidence": "00_governance/batch-f/native-final.tap",
+          "source_paths": [
+            "prototype/tests/runtime-schema.test.mjs"
+          ]
+        },
+        {
+          "name": "RT-C10/11/12/13/67: new identity intake reuses B with separate purpose, grant, provenance and insufficient outcome",
+          "status": "passed",
+          "test_number": 284,
+          "evidence": "00_governance/batch-f/native-final.tap",
+          "source_paths": [
+            "prototype/tests/screening-collaboration.test.mjs"
+          ]
+        },
+        {
+          "name": "graph facts distinguish returned result and evidence sufficiency from permission to write an assessment",
+          "status": "passed",
+          "test_number": 324,
+          "evidence": "00_governance/batch-f/native-final.tap",
+          "source_paths": [
+            "prototype/tests/screening-engine.test.mjs"
+          ]
+        }
+      ],
+      "browser": null,
+      "bank_validation": "not_inferred_from_tests",
+      "limitations": [
+        "Synthetic fixtures only; bank rules and authority remain unresolved"
+      ]
+    },
+    {
+      "id": "G3",
+      "title": "Decision Integrity",
+      "status": "tested_cases_passed_not_exhaustive",
+      "automated_cases": [
+        {
+          "name": "RT-A02 / A03: employment evidence never creates principal authority",
+          "status": "passed",
+          "test_number": 16,
+          "evidence": "00_governance/batch-f/native-final.tap",
+          "source_paths": [
+            "prototype/tests/batch-a.test.mjs"
+          ]
+        },
+        {
+          "name": "RT-A13: action layer rejects missing demo permission and authority",
+          "status": "passed",
+          "test_number": 20,
+          "evidence": "00_governance/batch-f/native-final.tap",
+          "source_paths": [
+            "prototype/tests/batch-a.test.mjs"
+          ]
+        },
+        {
+          "name": "RT-A10 / A21: Next and media signals are presentation-only, unauthorized intent ignored",
+          "status": "passed",
+          "test_number": 24,
+          "evidence": "00_governance/batch-f/native-final.tap",
+          "source_paths": [
+            "prototype/tests/batch-a.test.mjs"
+          ]
+        },
+        {
+          "name": "An unauthorised role cannot record disposition",
+          "status": "passed",
+          "test_number": 33,
+          "evidence": "00_governance/batch-f/native-final.tap",
+          "source_paths": [
+            "prototype/tests/case-engine.test.mjs"
+          ]
+        },
+        {
+          "name": "Missing authority configuration fails closed even for reviewer",
+          "status": "passed",
+          "test_number": 37,
+          "evidence": "00_governance/batch-f/native-final.tap",
+          "source_paths": [
+            "prototype/tests/case-engine.test.mjs"
+          ]
+        },
+        {
+          "name": "RT-E10/E11: real command guard rejects unconfigured, tampered and wrong-scope authority",
+          "status": "passed",
+          "test_number": 49,
+          "evidence": "00_governance/batch-f/native-final.tap",
+          "source_paths": [
+            "prototype/tests/clearance-engine.test.mjs"
+          ]
+        },
+        {
+          "name": "CH-01/02/07/27: Batch B extends the same case/request without clearing unknowns or establishing authority",
+          "status": "passed",
+          "test_number": 105,
+          "evidence": "00_governance/batch-f/native-final.tap",
+          "source_paths": [
+            "prototype/tests/collaboration.test.mjs"
+          ]
+        },
+        {
+          "name": "idempotency permits exact logical replay but rejects key collisions before permissions",
+          "status": "passed",
+          "test_number": 128,
+          "evidence": "00_governance/batch-f/native-final.tap",
+          "source_paths": [
+            "prototype/tests/collaboration.test.mjs"
+          ]
+        },
+        {
+          "name": "F unavailable scope or permission is not displayed as a factual readiness result",
+          "status": "passed",
+          "test_number": 134,
+          "evidence": "00_governance/batch-f/native-final.tap",
+          "source_paths": [
+            "prototype/tests/consolidation.test.mjs"
+          ]
+        },
+        {
+          "name": "frozen Entity narrative never replaces latest live receipt or authority",
+          "status": "passed",
+          "test_number": 150,
+          "evidence": "00_governance/batch-f/native-final.tap",
+          "source_paths": [
+            "prototype/tests/media-host.test.mjs"
+          ]
+        },
+        {
+          "name": "preserves the approved same-case facts and separates employment from authority in every locale",
+          "status": "passed",
+          "test_number": 236,
+          "evidence": "00_governance/batch-f/native-final.tap",
+          "source_paths": [
+            "prototype/tests/reconstruction-registry.test.mjs"
+          ]
+        },
+        {
+          "name": "KYC purpose assessment rejects absent or wrongly scoped demo permission",
+          "status": "passed",
+          "test_number": 272,
+          "evidence": "00_governance/batch-f/native-final.tap",
+          "source_paths": [
+            "prototype/tests/runtime-schema.test.mjs"
+          ]
+        },
+        {
+          "name": "KYC assessment binds to its own configured authority",
+          "status": "passed",
+          "test_number": 273,
+          "evidence": "00_governance/batch-f/native-final.tap",
+          "source_paths": [
+            "prototype/tests/runtime-schema.test.mjs"
+          ]
+        },
+        {
+          "name": "RT-C03 confirmed coordination remains distinct from identity and trade/signing authority",
+          "status": "passed",
+          "test_number": 297,
+          "evidence": "00_governance/batch-f/native-final.tap",
+          "source_paths": [
+            "prototype/tests/screening-contract-integration.test.mjs"
+          ]
+        },
+        {
+          "name": "RT-C47 graph reads exact predicate objects and never infers permissions from captions",
+          "status": "passed",
+          "test_number": 304,
+          "evidence": "00_governance/batch-f/native-final.tap",
+          "source_paths": [
+            "prototype/tests/screening-diagrams.test.mjs"
+          ]
+        },
+        {
+          "name": "RT-C14/15/16/17/66: permissions, rationale, stale inputs and idempotency protect writes",
+          "status": "passed",
+          "test_number": 313,
+          "evidence": "00_governance/batch-f/native-final.tap",
+          "source_paths": [
+            "prototype/tests/screening-engine.test.mjs"
+          ]
+        },
+        {
+          "name": "RT-C16/19/46: subject changes, revoked permission and scope changes block resumed substantive work",
+          "status": "passed",
+          "test_number": 320,
+          "evidence": "00_governance/batch-f/native-final.tap",
+          "source_paths": [
+            "prototype/tests/screening-engine.test.mjs"
+          ]
+        },
+        {
+          "name": "graph facts distinguish returned result and evidence sufficiency from permission to write an assessment",
+          "status": "passed",
+          "test_number": 324,
+          "evidence": "00_governance/batch-f/native-final.tap",
+          "source_paths": [
+            "prototype/tests/screening-engine.test.mjs"
+          ]
+        },
+        {
+          "name": "RT-D08/09/10/11: Legal execution and authority remain unmet despite internal approval",
+          "status": "passed",
+          "test_number": 350,
+          "evidence": "00_governance/batch-f/native-final.tap",
+          "source_paths": [
+            "prototype/tests/specialist-engine.test.mjs"
+          ]
+        },
+        {
+          "name": "D unconfigured roles fail closed and only facilitator has revision simulation permission",
+          "status": "passed",
+          "test_number": 351,
+          "evidence": "00_governance/batch-f/native-final.tap",
+          "source_paths": [
+            "prototype/tests/specialist-engine.test.mjs"
+          ]
+        }
+      ],
+      "browser": null,
+      "bank_validation": "not_inferred_from_tests",
+      "limitations": [
+        "Synthetic fixtures only; bank rules and authority remain unresolved"
+      ]
+    },
+    {
+      "id": "G4",
+      "title": "Dependency Integrity",
+      "status": "tested_cases_passed_not_exhaustive",
+      "automated_cases": [
+        {
+          "name": "DMO-A02 play and seek cannot bypass the evidence hold; Next unlocks at 13 seconds",
+          "status": "passed",
+          "test_number": 5,
+          "evidence": "00_governance/batch-f/native-final.tap",
+          "source_paths": [
+            "prototype/tests/batch-a-media.test.mjs"
+          ]
+        },
+        {
+          "name": "Previous is bounded and Replay resets the story paused with the hold locked again",
+          "status": "passed",
+          "test_number": 6,
+          "evidence": "00_governance/batch-f/native-final.tap",
+          "source_paths": [
+            "prototype/tests/batch-a-media.test.mjs"
+          ]
+        },
+        {
+          "name": "RT-A08 / A18: unknown applicability and holds fail closed per task",
+          "status": "passed",
+          "test_number": 22,
+          "evidence": "00_governance/batch-f/native-final.tap",
+          "source_paths": [
+            "prototype/tests/batch-a.test.mjs"
+          ]
+        },
+        {
+          "name": "Dependency status follows fulfilled inputs rather than retaining the seed pending state",
+          "status": "passed",
+          "test_number": 40,
+          "evidence": "00_governance/batch-f/native-final.tap",
+          "source_paths": [
+            "prototype/tests/case-engine.test.mjs"
+          ]
+        },
+        {
+          "name": "RT-E03: current Credit change or missing expected dependency prevents readiness and execution",
+          "status": "passed",
+          "test_number": 46,
+          "evidence": "00_governance/batch-f/native-final.tap",
+          "source_paths": [
+            "prototype/tests/clearance-engine.test.mjs"
+          ]
+        },
+        {
+          "name": "Malformed/empty conditions and scope, expected unknown dependencies and unknown holds fail closed",
+          "status": "passed",
+          "test_number": 55,
+          "evidence": "00_governance/batch-f/native-final.tap",
+          "source_paths": [
+            "prototype/tests/clearance-engine.test.mjs"
+          ]
+        },
+        {
+          "name": "Scoped holds block their affected prerequisite; explicitly non-business draft holds do not become case holds",
+          "status": "passed",
+          "test_number": 60,
+          "evidence": "00_governance/batch-f/native-final.tap",
+          "source_paths": [
+            "prototype/tests/clearance-engine.test.mjs"
+          ]
+        },
+        {
+          "name": "Missing E purpose/remediation dependency fails closed",
+          "status": "passed",
+          "test_number": 61,
+          "evidence": "00_governance/batch-f/native-final.tap",
+          "source_paths": [
+            "prototype/tests/clearance-engine.test.mjs"
+          ]
+        },
+        {
+          "name": "Named package closure disabled on freshly reviewed changed conflict inputs; save draft cannot repair missing dependencies",
+          "status": "passed",
+          "test_number": 62,
+          "evidence": "00_governance/batch-f/native-final.tap",
+          "source_paths": [
+            "prototype/tests/clearance-engine.test.mjs"
+          ]
+        },
+        {
+          "name": "Review fix 1 R3 additional current unknown dependency prevents readiness",
+          "status": "passed",
+          "test_number": 77,
+          "evidence": "00_governance/batch-f/native-final.tap",
+          "source_paths": []
+        },
+        {
+          "name": "Review fix 1 save_draft cannot launder R3 additional current unknown dependency",
+          "status": "passed",
+          "test_number": 80,
+          "evidence": "00_governance/batch-f/native-final.tap",
+          "source_paths": []
+        },
+        {
+          "name": "Review fix 1 R3 additional QA dependency remains scoped and only explicitly non-business draft edges are excluded",
+          "status": "passed",
+          "test_number": 85,
+          "evidence": "00_governance/batch-f/native-final.tap",
+          "source_paths": [
+            "prototype/tests/clearance-engine.test.mjs"
+          ]
+        },
+        {
+          "name": "F dependency projection never calls absence independence; stale endpoints and unknown holds stay unknown",
+          "status": "passed",
+          "test_number": 132,
+          "evidence": "00_governance/batch-f/native-final.tap",
+          "source_paths": [
+            "prototype/tests/consolidation.test.mjs"
+          ]
+        },
+        {
+          "name": "F dependency independence requires explicit current relation and reviewed condition",
+          "status": "passed",
+          "test_number": 133,
+          "evidence": "00_governance/batch-f/native-final.tap",
+          "source_paths": [
+            "prototype/tests/consolidation.test.mjs"
+          ]
+        },
+        {
+          "name": "F unknown dependency status cannot be presented as known affected work",
+          "status": "passed",
+          "test_number": 139,
+          "evidence": "00_governance/batch-f/native-final.tap",
+          "source_paths": [
+            "prototype/tests/consolidation.test.mjs"
+          ]
+        },
+        {
+          "name": "F dependency graphical failure remains explicit and cannot imply independence",
+          "status": "passed",
+          "test_number": 148,
+          "evidence": "00_governance/batch-f/native-final.tap",
+          "source_paths": [
+            "prototype/tests/f-diagrams.test.mjs"
+          ]
+        },
+        {
+          "name": "unpassed A02 hold caps restored time, wrong revision ignored",
+          "status": "passed",
+          "test_number": 154,
+          "evidence": "00_governance/batch-f/native-final.tap",
+          "source_paths": [
+            "prototype/tests/media-host.test.mjs"
+          ]
+        },
+        {
+          "name": "dependency return restores condition, revision and viewport context while latest locale wins",
+          "status": "passed",
+          "test_number": 166,
+          "evidence": "00_governance/batch-f/native-final.tap",
+          "source_paths": [
+            "prototype/tests/navigation.test.mjs"
+          ]
+        },
+        {
+          "name": "D5 safe role HTML excludes review, dependencies, timing illustration and hidden internal inputs",
+          "status": "passed",
+          "test_number": 215,
+          "evidence": "00_governance/batch-f/native-final.tap",
+          "source_paths": [
+            "prototype/tests/product-experience-ui.test.mjs"
+          ]
+        },
+        {
+          "name": "identity client text cannot be replaced with restricted provider text and holds are checked by reused actions",
+          "status": "passed",
+          "test_number": 286,
+          "evidence": "00_governance/batch-f/native-final.tap",
+          "source_paths": [
+            "prototype/tests/screening-collaboration.test.mjs"
+          ]
+        },
+        {
+          "name": "review fix: unknown evidence-scoped hold blocks identity assessment in predicate and action without writes",
+          "status": "passed",
+          "test_number": 289,
+          "evidence": "00_governance/batch-f/native-final.tap",
+          "source_paths": [
+            "prototype/tests/screening-collaboration.test.mjs"
+          ]
+        },
+        {
+          "name": "review fix: resume rechecks the identity request item hold after a current assessment",
+          "status": "passed",
+          "test_number": 290,
+          "evidence": "00_governance/batch-f/native-final.tap",
+          "source_paths": [
+            "prototype/tests/screening-collaboration.test.mjs"
+          ]
+        },
+        {
+          "name": "review round2: unrelated artifact holds do not block a decision whose actual basis excludes that artifact",
+          "status": "passed",
+          "test_number": 295,
+          "evidence": "00_governance/batch-f/native-final.tap",
+          "source_paths": [
+            "prototype/tests/screening-collaboration.test.mjs"
+          ]
+        },
+        {
+          "name": "RT-C35 source-qualified dependency meanings and evidence aliases do not collide",
+          "status": "passed",
+          "test_number": 299,
+          "evidence": "00_governance/batch-f/native-final.tap",
+          "source_paths": [
+            "prototype/tests/screening-contract-integration.test.mjs"
+          ]
+        },
+        {
+          "name": "review fix: request and EDD applicability object holds participate in named write guards",
+          "status": "passed",
+          "test_number": 328,
+          "evidence": "00_governance/batch-f/native-final.tap",
+          "source_paths": [
+            "prototype/tests/screening-engine.test.mjs"
+          ]
+        },
+        {
+          "name": "RT-D16/17: holds retain scope and unknown impact blocks only known affected work or remains unknown",
+          "status": "passed",
+          "test_number": 354,
+          "evidence": "00_governance/batch-f/native-final.tap",
+          "source_paths": [
+            "prototype/tests/specialist-engine.test.mjs"
+          ]
+        },
+        {
+          "name": "RT-D07/18: Credit revision makes existing legal dependency stale and retains immutable input chain",
+          "status": "passed",
+          "test_number": 355,
+          "evidence": "00_governance/batch-f/native-final.tap",
+          "source_paths": [
+            "prototype/tests/specialist-engine.test.mjs"
+          ]
+        },
+        {
+          "name": "D dependencies use source-qualified aliases and scoped version-addressed objects",
+          "status": "passed",
+          "test_number": 357,
+          "evidence": "00_governance/batch-f/native-final.tap",
+          "source_paths": [
+            "prototype/tests/specialist-engine.test.mjs"
+          ]
+        },
+        {
+          "name": "D honors inherited case/scope hold targets and unknown object input",
+          "status": "passed",
+          "test_number": 360,
+          "evidence": "00_governance/batch-f/native-final.tap",
+          "source_paths": [
+            "prototype/tests/specialist-engine.test.mjs"
+          ]
+        },
+        {
+          "name": "D safe progress strips free-text hold, dependency and audit strings",
+          "status": "passed",
+          "test_number": 362,
+          "evidence": "00_governance/batch-f/native-final.tap",
+          "source_paths": [
+            "prototype/tests/specialist-engine.test.mjs"
+          ]
+        },
+        {
+          "name": "D review fix: unknown Legal dependency blocks affected preparation without stopping Credit",
+          "status": "passed",
+          "test_number": 363,
+          "evidence": "00_governance/batch-f/native-final.tap",
+          "source_paths": [
+            "prototype/tests/specialist-engine.test.mjs"
+          ]
+        },
+        {
+          "name": "Parallel and hold nodes retain original process context and A-CDM as inspiration",
+          "status": "passed",
+          "test_number": 373,
+          "evidence": "00_governance/batch-f/native-final.tap",
+          "source_paths": [
+            "prototype/tests/specialist-references.test.mjs"
+          ]
+        },
+        {
+          "name": "Scoped-hold interpretation does not imply process-map or A-CDM policy provenance",
+          "status": "passed",
+          "test_number": 374,
+          "evidence": "00_governance/batch-f/native-final.tap",
+          "source_paths": [
+            "prototype/tests/specialist-references.test.mjs"
+          ]
+        },
+        {
+          "name": "Condition Detail exposes the complete shared condition contract and dependency routes",
+          "status": "passed",
+          "test_number": 377,
+          "evidence": "00_governance/batch-f/native-final.tap",
+          "source_paths": [
+            "prototype/tests/specialist-ui.test.mjs"
+          ]
+        },
+        {
+          "name": "Dependency view uses graph fallback and provides an explicit return command",
+          "status": "passed",
+          "test_number": 381,
+          "evidence": "00_governance/batch-f/native-final.tap",
+          "source_paths": [
+            "prototype/tests/specialist-ui.test.mjs"
+          ]
+        }
+      ],
+      "browser": null,
+      "bank_validation": "not_inferred_from_tests",
+      "limitations": [
+        "Synthetic fixtures only; bank rules and authority remain unresolved"
+      ]
+    },
+    {
+      "id": "G5",
+      "title": "Clearance Integrity",
+      "status": "tested_cases_passed_not_exhaustive",
+      "automated_cases": [
+        {
+          "name": "Batch A object links resolve in the same case, including the retained readiness output ID",
+          "status": "passed",
+          "test_number": 14,
+          "evidence": "00_governance/batch-f/native-final.tap",
+          "source_paths": [
+            "prototype/tests/batch-a-schema.test.mjs"
+          ]
+        },
+        {
+          "name": "RT-A04 / A06 / A07: scope can be recorded with unresolved booking, not CDD or clearance",
+          "status": "passed",
+          "test_number": 17,
+          "evidence": "00_governance/batch-f/native-final.tap",
+          "source_paths": [
+            "prototype/tests/batch-a.test.mjs"
+          ]
+        },
+        {
+          "name": "False Green: unresolved Legal, Credit, QA and unknown EDD prevent readiness",
+          "status": "passed",
+          "test_number": 29,
+          "evidence": "00_governance/batch-f/native-final.tap",
+          "source_paths": [
+            "prototype/tests/case-engine.test.mjs"
+          ]
+        },
+        {
+          "name": "RT-E02/E04/E05: QA signoff alone leaves conflicts and coverage blocking",
+          "status": "passed",
+          "test_number": 44,
+          "evidence": "00_governance/batch-f/native-final.tap",
+          "source_paths": [
+            "prototype/tests/clearance-engine.test.mjs"
+          ]
+        },
+        {
+          "name": "Literal positive path has three layers, current versions, independent EDD and separate human decision",
+          "status": "passed",
+          "test_number": 45,
+          "evidence": "00_governance/batch-f/native-final.tap",
+          "source_paths": [
+            "prototype/tests/clearance-engine.test.mjs"
+          ]
+        },
+        {
+          "name": "RT-E03: current Credit change or missing expected dependency prevents readiness and execution",
+          "status": "passed",
+          "test_number": 46,
+          "evidence": "00_governance/batch-f/native-final.tap",
+          "source_paths": [
+            "prototype/tests/clearance-engine.test.mjs"
+          ]
+        },
+        {
+          "name": "RT-E06/E07: unknown applicability fails closed and not-required EDD is not approved",
+          "status": "passed",
+          "test_number": 47,
+          "evidence": "00_governance/batch-f/native-final.tap",
+          "source_paths": [
+            "prototype/tests/clearance-engine.test.mjs"
+          ]
+        },
+        {
+          "name": "RT-E08/E09: scope change preserves historical decision and invalidates current clearance",
+          "status": "passed",
+          "test_number": 48,
+          "evidence": "00_governance/batch-f/native-final.tap",
+          "source_paths": [
+            "prototype/tests/clearance-engine.test.mjs"
+          ]
+        },
+        {
+          "name": "RT-E12/E13/E14: failure and success publication preserve decision, no trade is executed",
+          "status": "passed",
+          "test_number": 50,
+          "evidence": "00_governance/batch-f/native-final.tap",
+          "source_paths": [
+            "prototype/tests/clearance-engine.test.mjs"
+          ]
+        },
+        {
+          "name": "RT-E17: relevant evidence change invalidates QA, readiness and decision, retains evidence history",
+          "status": "passed",
+          "test_number": 52,
+          "evidence": "00_governance/batch-f/native-final.tap",
+          "source_paths": [
+            "prototype/tests/clearance-engine.test.mjs"
+          ]
+        },
+        {
+          "name": "Draft save changes no readiness, condition, clearance or publication and does not submit the intended action",
+          "status": "passed",
+          "test_number": 57,
+          "evidence": "00_governance/batch-f/native-final.tap",
+          "source_paths": [
+            "prototype/tests/clearance-engine.test.mjs"
+          ]
+        },
+        {
+          "name": "Self-review: unknown stored applicability, unversioned evidence edits and forged decisions never manufacture readiness/clearance",
+          "status": "passed",
+          "test_number": 58,
+          "evidence": "00_governance/batch-f/native-final.tap",
+          "source_paths": [
+            "prototype/tests/clearance-engine.test.mjs"
+          ]
+        },
+        {
+          "name": "Current party content and independent signing mandate changes invalidate applicable readiness",
+          "status": "passed",
+          "test_number": 64,
+          "evidence": "00_governance/batch-f/native-final.tap",
+          "source_paths": [
+            "prototype/tests/clearance-engine.test.mjs"
+          ]
+        },
+        {
+          "name": "Review fix 1 R1 changed result with unhandled match prevents readiness",
+          "status": "passed",
+          "test_number": 68,
+          "evidence": "00_governance/batch-f/native-final.tap",
+          "source_paths": []
+        },
+        {
+          "name": "Review fix 1 R1 run revision without current result linkage prevents readiness",
+          "status": "passed",
+          "test_number": 69,
+          "evidence": "00_governance/batch-f/native-final.tap",
+          "source_paths": []
+        },
+        {
+          "name": "Review fix 1 R1 wrong subject identity prevents readiness",
+          "status": "passed",
+          "test_number": 70,
+          "evidence": "00_governance/batch-f/native-final.tap",
+          "source_paths": []
+        },
+        {
+          "name": "Review fix 1 R1 wrong subject category prevents readiness",
+          "status": "passed",
+          "test_number": 71,
+          "evidence": "00_governance/batch-f/native-final.tap",
+          "source_paths": []
+        },
+        {
+          "name": "Review fix 1 R1 new unresolved current finding prevents readiness",
+          "status": "passed",
+          "test_number": 72,
+          "evidence": "00_governance/batch-f/native-final.tap",
+          "source_paths": []
+        },
+        {
+          "name": "Review fix 1 R1 revised previously handled C finding prevents readiness",
+          "status": "passed",
+          "test_number": 73,
+          "evidence": "00_governance/batch-f/native-final.tap",
+          "source_paths": []
+        },
+        {
+          "name": "Review fix 1 R2 changed executed Legal document prevents readiness",
+          "status": "passed",
+          "test_number": 74,
+          "evidence": "00_governance/batch-f/native-final.tap",
+          "source_paths": []
+        },
+        {
+          "name": "Review fix 1 R2 incorrect Legal evidence purpose prevents readiness",
+          "status": "passed",
+          "test_number": 75,
+          "evidence": "00_governance/batch-f/native-final.tap",
+          "source_paths": []
+        },
+        {
+          "name": "Review fix 1 R2 unreleased Legal document prevents readiness",
+          "status": "passed",
+          "test_number": 76,
+          "evidence": "00_governance/batch-f/native-final.tap",
+          "source_paths": []
+        },
+        {
+          "name": "Review fix 1 R3 additional current unknown dependency prevents readiness",
+          "status": "passed",
+          "test_number": 77,
+          "evidence": "00_governance/batch-f/native-final.tap",
+          "source_paths": []
+        },
+        {
+          "name": "Review fix 1 R4 altered ready-snapshot scope cannot confer current clearance",
+          "status": "passed",
+          "test_number": 82,
+          "evidence": "00_governance/batch-f/native-final.tap",
+          "source_paths": [
+            "prototype/tests/clearance-engine.test.mjs"
+          ]
+        },
+        {
+          "name": "Clearance has six readable groups, scoped three-state result and no percentage",
+          "status": "passed",
+          "test_number": 90,
+          "evidence": "00_governance/batch-f/native-final.tap",
+          "source_paths": [
+            "prototype/tests/clearance-ui.test.mjs"
+          ]
+        },
+        {
+          "name": "request feedback and referrals affect only the selected item and preserve whole-case readiness",
+          "status": "passed",
+          "test_number": 118,
+          "evidence": "00_governance/batch-f/native-final.tap",
+          "source_paths": [
+            "prototype/tests/collaboration.test.mjs"
+          ]
+        },
+        {
+          "name": "each accepted action appends a readiness snapshot without rewriting history",
+          "status": "passed",
+          "test_number": 124,
+          "evidence": "00_governance/batch-f/native-final.tap",
+          "source_paths": [
+            "prototype/tests/collaboration.test.mjs"
+          ]
+        },
+        {
+          "name": "F unavailable scope or permission is not displayed as a factual readiness result",
+          "status": "passed",
+          "test_number": 134,
+          "evidence": "00_governance/batch-f/native-final.tap",
+          "source_paths": [
+            "prototype/tests/consolidation.test.mjs"
+          ]
+        },
+        {
+          "name": "F lenses and print project the active revision and preserve clearance/publication distinction",
+          "status": "passed",
+          "test_number": 135,
+          "evidence": "00_governance/batch-f/native-final.tap",
+          "source_paths": [
+            "prototype/tests/consolidation.test.mjs"
+          ]
+        },
+        {
+          "name": "F does not promote evidence receipt, empty prerequisites or unknown applicability to clearance",
+          "status": "passed",
+          "test_number": 137,
+          "evidence": "00_governance/batch-f/native-final.tap",
+          "source_paths": [
+            "prototype/tests/consolidation.test.mjs"
+          ]
+        },
+        {
+          "name": "Null booking context blocks readiness even when all conditions are green",
+          "status": "passed",
+          "test_number": 276,
+          "evidence": "00_governance/batch-f/native-final.tap",
+          "source_paths": [
+            "prototype/tests/runtime-schema.test.mjs"
+          ]
+        },
+        {
+          "name": "Batch C routing is bounded to its five workspace steps and does not capture Scope or Clearance",
+          "status": "passed",
+          "test_number": 333,
+          "evidence": "00_governance/batch-f/native-final.tap",
+          "source_paths": [
+            "prototype/tests/screening-ui.test.mjs"
+          ]
+        },
+        {
+          "name": "zh-CN D1 and D5 translate approved summary and readiness prose in screen and print",
+          "status": "passed",
+          "test_number": 384,
+          "evidence": "00_governance/batch-f/native-final.tap",
+          "source_paths": [
+            "prototype/tests/specialist-ui.test.mjs"
+          ]
+        }
+      ],
+      "browser": null,
+      "bank_validation": "not_inferred_from_tests",
+      "limitations": [
+        "Synthetic fixtures only; bank rules and authority remain unresolved"
+      ]
+    },
+    {
+      "id": "G6",
+      "title": "Experience Integrity",
+      "status": "tested_cases_passed_not_exhaustive",
+      "automated_cases": [
+        {
+          "name": "RT-A15: Three Lens projections share one snapshot; shadow cannot mutate mainline",
+          "status": "passed",
+          "test_number": 23,
+          "evidence": "00_governance/batch-f/native-final.tap",
+          "source_paths": [
+            "prototype/tests/batch-a.test.mjs"
+          ]
+        },
+        {
+          "name": "RT-E18/E19/E20 state portions: every read-only lens uses same revision and snapshot and never writes",
+          "status": "passed",
+          "test_number": 53,
+          "evidence": "00_governance/batch-f/native-final.tap",
+          "source_paths": [
+            "prototype/tests/clearance-engine.test.mjs"
+          ]
+        },
+        {
+          "name": "E semantic origin survives return with latest language and no business snapshot",
+          "status": "passed",
+          "test_number": 89,
+          "evidence": "00_governance/batch-f/native-final.tap",
+          "source_paths": [
+            "prototype/tests/clearance-ui.test.mjs"
+          ]
+        },
+        {
+          "name": "RM/client DOM and complete print consume only safe projection",
+          "status": "passed",
+          "test_number": 92,
+          "evidence": "00_governance/batch-f/native-final.tap",
+          "source_paths": [
+            "prototype/tests/clearance-ui.test.mjs"
+          ]
+        },
+        {
+          "name": "Client print has no form actions and includes only safe task receipt",
+          "status": "passed",
+          "test_number": 104,
+          "evidence": "00_governance/batch-f/native-final.tap",
+          "source_paths": [
+            "prototype/tests/collaboration-ui.test.mjs"
+          ]
+        },
+        {
+          "name": "F master reading route reaches publication through actual scene links without creating business scenarios",
+          "status": "passed",
+          "test_number": 130,
+          "evidence": "00_governance/batch-f/native-final.tap",
+          "source_paths": [
+            "prototype/tests/consolidation.test.mjs"
+          ]
+        },
+        {
+          "name": "F definition return preserves semantic navigation and latest language with no new top-level experience",
+          "status": "passed",
+          "test_number": 131,
+          "evidence": "00_governance/batch-f/native-final.tap",
+          "source_paths": [
+            "prototype/tests/consolidation.test.mjs"
+          ]
+        },
+        {
+          "name": "F lenses and print project the active revision and preserve clearance/publication distinction",
+          "status": "passed",
+          "test_number": 135,
+          "evidence": "00_governance/batch-f/native-final.tap",
+          "source_paths": [
+            "prototype/tests/consolidation.test.mjs"
+          ]
+        },
+        {
+          "name": "F view region changes preserve policy and return semantic context",
+          "status": "passed",
+          "test_number": 138,
+          "evidence": "00_governance/batch-f/native-final.tap",
+          "source_paths": [
+            "prototype/tests/consolidation.test.mjs"
+          ]
+        },
+        {
+          "name": "E diagram manifest resolves delivered read-only static artifacts and semantic nodes",
+          "status": "passed",
+          "test_number": 143,
+          "evidence": "00_governance/batch-f/native-final.tap",
+          "source_paths": [
+            "prototype/tests/e-diagrams.test.mjs"
+          ]
+        },
+        {
+          "name": "F four static exports bind to delivered HTML without hiding failed canonical viewport checks",
+          "status": "passed",
+          "test_number": 147,
+          "evidence": "00_governance/batch-f/native-final.tap",
+          "source_paths": [
+            "prototype/tests/f-diagrams.test.mjs"
+          ]
+        },
+        {
+          "name": "direct preview changes navigation only; existing case/role/locale preserved",
+          "status": "passed",
+          "test_number": 155,
+          "evidence": "00_governance/batch-f/native-final.tap",
+          "source_paths": [
+            "prototype/tests/media-host.test.mjs"
+          ]
+        },
+        {
+          "name": "Current scene returns from Target product without overwriting latest language or case revision",
+          "status": "passed",
+          "test_number": 157,
+          "evidence": "00_governance/batch-f/native-final.tap",
+          "source_paths": [
+            "prototype/tests/navigation.test.mjs"
+          ]
+        },
+        {
+          "name": "Journey return closes modal but preserves role and semantic camera",
+          "status": "passed",
+          "test_number": 158,
+          "evidence": "00_governance/batch-f/native-final.tap",
+          "source_paths": [
+            "prototype/tests/navigation.test.mjs"
+          ]
+        },
+        {
+          "name": "Comparison and language changes keep scene and semantic anchor",
+          "status": "passed",
+          "test_number": 160,
+          "evidence": "00_governance/batch-f/native-final.tap",
+          "source_paths": [
+            "prototype/tests/navigation.test.mjs"
+          ]
+        },
+        {
+          "name": "dependency return restores condition, revision and viewport context while latest locale wins",
+          "status": "passed",
+          "test_number": 166,
+          "evidence": "00_governance/batch-f/native-final.tap",
+          "source_paths": [
+            "prototype/tests/navigation.test.mjs"
+          ]
+        },
+        {
+          "name": "specialist scene and beat navigation synchronize the rendered graph family without losing same-family focus",
+          "status": "passed",
+          "test_number": 168,
+          "evidence": "00_governance/batch-f/native-final.tap",
+          "source_paths": [
+            "prototype/tests/navigation.test.mjs"
+          ]
+        },
+        {
+          "name": "standalone print has no collapsible content that could hide controls or cross-scene uses",
+          "status": "passed",
+          "test_number": 169,
+          "evidence": "00_governance/batch-f/native-final.tap",
+          "source_paths": [
+            "prototype/tests/operating-model-export.test.mjs"
+          ]
+        },
+        {
+          "name": "role downgrade in Product is retained on every Operating Model return destination and original-source return",
+          "status": "passed",
+          "test_number": 171,
+          "evidence": "00_governance/batch-f/native-final.tap",
+          "source_paths": [
+            "prototype/tests/operating-model-state.test.mjs"
+          ]
+        },
+        {
+          "name": "collaboration pauses at both human boundaries and ordinary navigation cannot reach authored outcome",
+          "status": "passed",
+          "test_number": 173,
+          "evidence": "00_governance/batch-f/native-final.tap",
+          "source_paths": [
+            "prototype/tests/operating-model-state.test.mjs"
+          ]
+        },
+        {
+          "name": "Operating origin and product return preserve Current, semantic position and newest locale without case data",
+          "status": "passed",
+          "test_number": 176,
+          "evidence": "00_governance/batch-f/native-final.tap",
+          "source_paths": [
+            "prototype/tests/operating-model-state.test.mjs"
+          ]
+        },
+        {
+          "name": "physical print uses its margin-box context without duplicating the screen preview header",
+          "status": "passed",
+          "test_number": 177,
+          "evidence": "00_governance/batch-f/native-final.tap",
+          "source_paths": [
+            "prototype/tests/operating-model-ui.test.mjs"
+          ]
+        },
+        {
+          "name": "every pilot action has complete English controls, rationale and translated printable content",
+          "status": "passed",
+          "test_number": 178,
+          "evidence": "00_governance/batch-f/native-final.tap",
+          "source_paths": [
+            "prototype/tests/operating-model-ui.test.mjs"
+          ]
+        },
+        {
+          "name": "print opens every native disclosure so offscreen controls and reuse survive browser print layout",
+          "status": "passed",
+          "test_number": 179,
+          "evidence": "00_governance/batch-f/native-final.tap",
+          "source_paths": [
+            "prototype/tests/operating-model-ui.test.mjs"
+          ]
+        },
+        {
+          "name": "print titles survive hiding interactive buttons and shared sources occur once with a repeating page header",
+          "status": "passed",
+          "test_number": 180,
+          "evidence": "00_governance/batch-f/native-final.tap",
+          "source_paths": [
+            "prototype/tests/operating-model-ui.test.mjs"
+          ]
+        },
+        {
+          "name": "printing an un-authored Skill family cannot invent a SK06 sample or claim its sample is authored",
+          "status": "passed",
+          "test_number": 181,
+          "evidence": "00_governance/batch-f/native-final.tap",
+          "source_paths": [
+            "prototype/tests/operating-model-ui.test.mjs"
+          ]
+        },
+        {
+          "name": "Skill Brief prints the same implicit first related family visible in the Skills view",
+          "status": "passed",
+          "test_number": 182,
+          "evidence": "00_governance/batch-f/native-final.tap",
+          "source_paths": [
+            "prototype/tests/operating-model-ui.test.mjs"
+          ]
+        },
+        {
+          "name": "both print collections include offscreen content and denied roles receive no author content",
+          "status": "passed",
+          "test_number": 186,
+          "evidence": "00_governance/batch-f/native-final.tap",
+          "source_paths": [
+            "prototype/tests/operating-model-ui.test.mjs"
+          ]
+        },
+        {
+          "name": "Print waits for every image, including offscreen Target, before invoking print",
+          "status": "passed",
+          "test_number": 191,
+          "evidence": "00_governance/batch-f/native-final.tap",
+          "source_paths": [
+            "prototype/tests/print-ready.test.mjs"
+          ]
+        },
+        {
+          "name": "Failed print image prevents a silent incomplete PDF",
+          "status": "passed",
+          "test_number": 192,
+          "evidence": "00_governance/batch-f/native-final.tap",
+          "source_paths": [
+            "prototype/tests/print-ready.test.mjs"
+          ]
+        },
+        {
+          "name": "D5 printing emits all selected scope timing and required evidence regardless of hidden modules",
+          "status": "passed",
+          "test_number": 216,
+          "evidence": "00_governance/batch-f/native-final.tap",
+          "source_paths": [
+            "prototype/tests/product-experience-ui.test.mjs"
+          ]
+        },
+        {
+          "name": "unknown mapping or replaced node returns branch overview with old reference notice",
+          "status": "passed",
+          "test_number": 245,
+          "evidence": "00_governance/batch-f/native-final.tap",
+          "source_paths": [
+            "prototype/tests/reconstruction-ui.test.mjs"
+          ]
+        },
+        {
+          "name": "branch print includes complete BR04 groups, hypotheses and source footnotes",
+          "status": "passed",
+          "test_number": 247,
+          "evidence": "00_governance/batch-f/native-final.tap",
+          "source_paths": [
+            "prototype/tests/reconstruction-ui.test.mjs"
+          ]
+        },
+        {
+          "name": "restricted reader and print never include internal sources or traces",
+          "status": "passed",
+          "test_number": 248,
+          "evidence": "00_governance/batch-f/native-final.tap",
+          "source_paths": [
+            "prototype/tests/reconstruction-ui.test.mjs"
+          ]
+        },
+        {
+          "name": "reference back and product return restore reader position and latest locale",
+          "status": "passed",
+          "test_number": 251,
+          "evidence": "00_governance/batch-f/native-final.tap",
+          "source_paths": [
+            "prototype/tests/reconstruction-ui.test.mjs"
+          ]
+        },
+        {
+          "name": "restricted reader permits safe existing-workspace return without internal content or context reset",
+          "status": "passed",
+          "test_number": 256,
+          "evidence": "00_governance/batch-f/native-final.tap",
+          "source_paths": [
+            "prototype/tests/reconstruction-ui.test.mjs"
+          ]
+        },
+        {
+          "name": "branch print retains readable reference provenance but excludes raw JSON kept on screen",
+          "status": "passed",
+          "test_number": 257,
+          "evidence": "00_governance/batch-f/native-final.tap",
+          "source_paths": [
+            "prototype/tests/reconstruction-ui.test.mjs"
+          ]
+        },
+        {
+          "name": "complete branch print includes authored work inputs outputs and controls",
+          "status": "passed",
+          "test_number": 258,
+          "evidence": "00_governance/batch-f/native-final.tap",
+          "source_paths": [
+            "prototype/tests/reconstruction-ui.test.mjs"
+          ]
+        },
+        {
+          "name": "scene-query and product transitions invalidate a saved branch-print marker",
+          "status": "passed",
+          "test_number": 261,
+          "evidence": "00_governance/batch-f/native-final.tap",
+          "source_paths": [
+            "prototype/tests/reconstruction-ui.test.mjs"
+          ]
+        },
+        {
+          "name": "branch print selection requires the active print surface and preserves print-origin return",
+          "status": "passed",
+          "test_number": 262,
+          "evidence": "00_governance/batch-f/native-final.tap",
+          "source_paths": [
+            "prototype/tests/reconstruction-ui.test.mjs"
+          ]
+        },
+        {
+          "name": "RT-C63 English print exposes inherited source status without opening a disclosure",
+          "status": "passed",
+          "test_number": 268,
+          "evidence": "00_governance/batch-f/native-final.tap",
+          "source_paths": [
+            "prototype/tests/references.test.mjs"
+          ]
+        },
+        {
+          "name": "RT-C32/63 print includes every semantic node despite active focus",
+          "status": "passed",
+          "test_number": 307,
+          "evidence": "00_governance/batch-f/native-final.tap",
+          "source_paths": [
+            "prototype/tests/screening-diagrams.test.mjs"
+          ]
+        },
+        {
+          "name": "RT-C13/47/68: projections are allowlists and lenses share one revision, shadow inject disabled",
+          "status": "passed",
+          "test_number": 316,
+          "evidence": "00_governance/batch-f/native-final.tap",
+          "source_paths": [
+            "prototype/tests/screening-engine.test.mjs"
+          ]
+        },
+        {
+          "name": "graph facts distinguish returned result and evidence sufficiency from permission to write an assessment",
+          "status": "passed",
+          "test_number": 324,
+          "evidence": "00_governance/batch-f/native-final.tap",
+          "source_paths": [
+            "prototype/tests/screening-engine.test.mjs"
+          ]
+        },
+        {
+          "name": "safe RM and client product projections never render restricted screening fields, including print",
+          "status": "passed",
+          "test_number": 336,
+          "evidence": "00_governance/batch-f/native-final.tap",
+          "source_paths": [
+            "prototype/tests/screening-ui.test.mjs"
+          ]
+        },
+        {
+          "name": "selected Batch C scene print renders its complete decision set and scoped reference footnotes",
+          "status": "passed",
+          "test_number": 337,
+          "evidence": "00_governance/batch-f/native-final.tap",
+          "source_paths": [
+            "prototype/tests/screening-ui.test.mjs"
+          ]
+        },
+        {
+          "name": "print projection includes compact identity artifact and use assessment identifiers",
+          "status": "passed",
+          "test_number": 340,
+          "evidence": "00_governance/batch-f/native-final.tap",
+          "source_paths": [
+            "prototype/tests/screening-ui.test.mjs"
+          ]
+        },
+        {
+          "name": "RT-D13: readonly lenses share case, scope and condition revisions with mainline",
+          "status": "passed",
+          "test_number": 353,
+          "evidence": "00_governance/batch-f/native-final.tap",
+          "source_paths": [
+            "prototype/tests/specialist-engine.test.mjs"
+          ]
+        },
+        {
+          "name": "Print retains every version node despite focus; input projection cannot be written by renderer",
+          "status": "passed",
+          "test_number": 367,
+          "evidence": "00_governance/batch-f/native-final.tap",
+          "source_paths": [
+            "prototype/tests/specialist-graph.test.mjs"
+          ]
+        },
+        {
+          "name": "Chinese graph fallback and print localize complete without changing source IDs",
+          "status": "passed",
+          "test_number": 371,
+          "evidence": "00_governance/batch-f/native-final.tap",
+          "source_paths": [
+            "prototype/tests/specialist-graph.test.mjs"
+          ]
+        },
+        {
+          "name": "Credit version node returns inherited NIST and counterparty-credit records without duplicating observations",
+          "status": "passed",
+          "test_number": 372,
+          "evidence": "00_governance/batch-f/native-final.tap",
+          "source_paths": [
+            "prototype/tests/specialist-references.test.mjs"
+          ]
+        },
+        {
+          "name": "Dependency view uses graph fallback and provides an explicit return command",
+          "status": "passed",
+          "test_number": 381,
+          "evidence": "00_governance/batch-f/native-final.tap",
+          "source_paths": [
+            "prototype/tests/specialist-ui.test.mjs"
+          ]
+        },
+        {
+          "name": "zh-CN D1 and D5 translate approved summary and readiness prose in screen and print",
+          "status": "passed",
+          "test_number": 384,
+          "evidence": "00_governance/batch-f/native-final.tap",
+          "source_paths": [
+            "prototype/tests/specialist-ui.test.mjs"
+          ]
+        },
+        {
+          "name": "renderer escapes input context, localises prose and prints all trace details",
+          "status": "passed",
+          "test_number": 387,
+          "evidence": "00_governance/batch-f/native-final.tap",
+          "source_paths": [
+            "prototype/tests/transformation-ui.test.mjs"
+          ]
+        },
+        {
+          "name": "comparison and disclosures survive locale, references and product return without mutating input",
+          "status": "passed",
+          "test_number": 388,
+          "evidence": "00_governance/batch-f/native-final.tap",
+          "source_paths": [
+            "prototype/tests/transformation-ui.test.mjs"
+          ]
+        }
+      ],
+      "browser": {
+        "receipt": "prototype/qa/batch-f/host-final/receipt.json",
+        "checks": [
+          {
+            "id": "F-SECONDARY",
+            "status": "passed"
+          },
+          {
+            "id": "F-READONLY-GRAPHS-LAB",
+            "status": "passed"
+          },
+          {
+            "id": "F-LOCALE-PRINT",
+            "status": "passed"
+          },
+          {
+            "id": "F-STORY-RETURN",
+            "status": "passed"
+          },
+          {
+            "id": "F-CONTEXT-BACK",
+            "status": "passed"
+          },
+          {
+            "id": "F-RESPONSIVE",
+            "status": "passed"
+          },
+          {
+            "id": "F-CONSOLE",
+            "status": "passed"
+          }
+        ]
+      },
+      "bank_validation": "not_inferred_from_tests",
+      "limitations": [
+        "DG-F02 graphical validation unmet; semantic fallback used",
+        "DG-F01/F03 standalone viewer containment failed; host SVG tested separately",
+        "Other browsers and enabled shadow injection not tested"
+      ]
+    }
+  ],
+  "unresolved_business_critical_failures_in_executed_cases": [],
+  "diagram_receipt": "prototype/diagrams/batch-f/manifest.json",
+  "diagram_handoff": "00_governance/batch-f/diagram-handoff.md",
+  "reference_checks": "00_governance/batch-f/reference-link-checks.json",
+  "inherited_not_rerun_by_this_command": [
+    "00_governance/batch-e/acceptance-status.json",
+    "prototype/qa/batch-e/evidence-fix-1-mainline-final/receipt.json"
+  ],
+  "not_run": [
+    "Full JSON Schema meta-validation",
+    "Enabled Lab shadow inject / mainline writeback (disabled)",
+    "Production authentication, bank integrations and trade execution (out of scope)",
+    "Independent bank/client policy, authority or business validation"
+  ],
+  "separate_residuals": [
+    "E gap_open display label",
+    "E authored-time vs action-time display distinction",
+    "D5 UX-010 permission configuration variants",
+    "F02 diagram routing; F01/F03 standalone viewer containment"
+  ]
+}

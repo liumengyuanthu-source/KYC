@@ -1,0 +1,112 @@
+{
+  "schema_version": 2,
+  "diagram_type": "workflow",
+  "meta": {
+    "title": "One case, connected experiences",
+    "locale": "en",
+    "quality_profile": "showcase",
+    "animation": "none",
+    "legend": {
+      "mode": "auto",
+      "entries": {
+        "frontend": {
+          "label": "Read-only explanation"
+        }
+      }
+    }
+  },
+  "lanes": [
+    {
+      "id": "shared",
+      "label": "Shared current case"
+    },
+    {
+      "id": "experience",
+      "label": "Connected experiences"
+    },
+    {
+      "id": "projection",
+      "label": "Printable projection"
+    }
+  ],
+  "mainPath": [
+    "F03-spine",
+    "F03-product",
+    "F03-print"
+  ],
+  "nodes": [
+    {
+      "id": "F03-spine",
+      "lane": "shared",
+      "col": 1,
+      "width": 180,
+      "height": 145,
+      "type": "frontend",
+      "label": "Shared case",
+      "sublabel": "One current revision"
+    },
+    {
+      "id": "F03-studio",
+      "lane": "experience",
+      "col": 0,
+      "width": 180,
+      "height": 145,
+      "type": "frontend",
+      "label": "Studio",
+      "sublabel": "Understand / explore"
+    },
+    {
+      "id": "F03-product",
+      "lane": "experience",
+      "col": 1,
+      "width": 180,
+      "height": 145,
+      "type": "frontend",
+      "label": "Product",
+      "sublabel": "Guarded work actions"
+    },
+    {
+      "id": "F03-lab",
+      "lane": "experience",
+      "col": 2,
+      "width": 180,
+      "height": 145,
+      "type": "frontend",
+      "label": "Optional Lab",
+      "sublabel": "Read-only shadow"
+    },
+    {
+      "id": "F03-print",
+      "lane": "projection",
+      "col": 1,
+      "width": 180,
+      "height": 145,
+      "type": "frontend",
+      "label": "Print",
+      "sublabel": "Projection, not a store"
+    }
+  ],
+  "edges": [
+    {
+      "from": "F03-spine",
+      "to": "F03-studio"
+    },
+    {
+      "from": "F03-spine",
+      "to": "F03-product"
+    },
+    {
+      "from": "F03-spine",
+      "to": "F03-lab",
+      "role": "branch"
+    },
+    {
+      "from": "F03-studio",
+      "to": "F03-print"
+    },
+    {
+      "from": "F03-product",
+      "to": "F03-print"
+    }
+  ]
+}

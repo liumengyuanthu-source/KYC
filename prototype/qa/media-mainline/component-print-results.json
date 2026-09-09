@@ -1,0 +1,14 @@
+[
+  {
+    "scene": "SCN-SCOPE",
+    "status": "passed",
+    "visible_print_cues": 5,
+    "help_role": "dialog"
+  },
+  {
+    "scene": "SCN-ENTITY",
+    "status": "passed",
+    "visible_print_cues": 6,
+    "help_role": "dialog"
+  }
+]

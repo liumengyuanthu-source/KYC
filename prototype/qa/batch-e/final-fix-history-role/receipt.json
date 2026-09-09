@@ -1,0 +1,68 @@
+{
+  "date": "2026-09-07T22:11:19.229Z",
+  "checks": [
+    {
+      "id": "E-HISTORY-ROLE-BACK",
+      "rt": [
+        "RT19"
+      ],
+      "status": "passed",
+      "name": "Back restores QA draft and tokens; displayed gap action commits as QA",
+      "evidence": [
+        "prototype/qa/batch-e/final-fix-history-role/history-role-back.png"
+      ]
+    },
+    {
+      "id": "E-HISTORY-ROLE-FORWARD",
+      "rt": [
+        "RT19"
+      ],
+      "status": "passed",
+      "name": "Forward restores KYC draft and fresh input tokens after the QA command",
+      "evidence": [
+        "prototype/qa/batch-e/final-fix-history-role/history-role-forward.png"
+      ]
+    },
+    {
+      "id": "E-HISTORY-ROLE-REPEAT",
+      "rt": [
+        "RT19"
+      ],
+      "status": "passed",
+      "name": "Repeated Back/Forward preserves role-specific saved drafts and commits current intent",
+      "evidence": [
+        "prototype/qa/batch-e/final-fix-history-role/history-role-repeat.png"
+      ]
+    },
+    {
+      "id": "E-HISTORY-ROLE-DIRTY",
+      "rt": [
+        "RT19"
+      ],
+      "status": "passed",
+      "name": "Role-changing Back waits through Stay and failed Save, then restores destination editor after Save",
+      "evidence": [
+        "prototype/qa/batch-e/final-fix-history-role/history-role-dirty-save.png"
+      ]
+    },
+    {
+      "id": "E-HISTORY-ROLE-DISCARD",
+      "rt": [
+        "RT19"
+      ],
+      "status": "passed",
+      "name": "Discard on role-changing Back restores saved destination draft without a business write",
+      "evidence": []
+    },
+    {
+      "id": "E-HISTORY-ROLE-CONSOLE",
+      "rt": [],
+      "status": "passed",
+      "name": "History editor regression has no page or console errors",
+      "evidence": []
+    }
+  ],
+  "consoleErrors": [],
+  "passed": 6,
+  "failed": 0
+}

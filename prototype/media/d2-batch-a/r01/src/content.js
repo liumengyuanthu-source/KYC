@@ -1,0 +1,21 @@
+export const freeze=x=>{if(x&&typeof x==='object'){Object.values(x).forEach(freeze);Object.freeze(x)}return x};
+export const contract=freeze({case_id:'DEMO-CTT-001',content_revision:'Batch-A-Final-v1.0',case_fixture_revision:'Batch-A-Final-v1.0/read-only-media-projection-r01',source_snapshot_ref:'source/Clear_to_Trade_D2_Batch_A_Scope_Entity_Final_v1.0.md#3.2',synthetic:true,group:'Group A',intended_entity:'Entity A',entity_jurisdiction:'Australia',related_entity:'Entity B',related_jurisdiction:'Singapore',parent_status:'reported',person:'Person T',employer:'Entity B',principal:'Entity A',representation_status:'claimed',product:'FX forward',business_purpose:'future_usd_procurement_fx_risk_management',booking:null,eligibility:'not_assessed',readiness:'Not ready',publication:'not_requested',trade_enabled:false,all_conditions_assessed:false,evidence:['EV-A01','EV-A02','EV-A03'],authority:{coordinate_information:'evidence_required',make_declarations:'not_established',execute_agreements:'not_established',issue_trading_instructions:'not_assessed'},task_owner:null,preparation:{requirements:'known_context_draft_only',other_branches:'not_assessed',external_send:'awaiting_permission',gate:'sufficient_inputs_and_no_applicable_hold'}});
+export const cues=freeze({
+ 'DMO-A01':[
+ {id:'A01-C1',beat:'A-01',start:0,end:3,title:'a01_c1',description:'a01_d1',focus:['request','group-a'],diagram:'DG-SCOPE-A',event:'relationship_request_received'},
+ {id:'A01-C2',beat:'A-02',start:3,end:6,title:'a01_c2',description:'a01_d2',focus:['group-a','entity-a'],diagram:'DG-SCOPE-A',event:null},
+ {id:'A01-C3',beat:'A-03',start:6,end:9.5,title:'a01_c3',description:'a01_d3',focus:['entity-a'],diagram:'DG-SCOPE-A',event:'counterparty_scope_clarified'},
+ {id:'A01-C4',beat:'A-04',start:9.5,end:13,title:'a01_c4',description:'a01_d4',focus:['scope'],diagram:'DG-SCOPE-A',event:'working_scope_recorded'},
+ {id:'A01-C5',beat:'A-exit',start:13,end:16,title:'a01_c5',description:'a01_d5',focus:['entity-a','scope'],diagram:'DG-SCOPE-A',event:null}
+ ],
+ 'DMO-A02':[
+ {id:'A02-C1',beat:'B-01',start:0,end:3,title:'a02_c1',description:'a02_d1',focus:['person-t','entity-b','entity-a'],diagram:'DG-ENTITY-A',event:'representative_claim_recorded'},
+ {id:'A02-C2',beat:'B-02',start:3,end:6,title:'a02_c2',description:'a02_d2',focus:['entity-a'],diagram:'DG-ENTITY-A',event:'entity_context_reviewed'},
+ {id:'A02-C3',beat:'B-03',start:6,end:9.5,title:'a02_c3',description:'a02_d3',focus:['person-t','authority'],diagram:'DG-ENTITY-A',event:'evidence_use_assessed'},
+ {id:'A02-C4',beat:'B-04',start:9.5,end:13,title:'a02_c4',description:'a02_d4',focus:['authority'],diagram:'DG-ENTITY-A',event:'authority_gap_opened',hold:true},
+ {id:'A02-C5',beat:'B-05',start:13,end:16.5,title:'a02_c5',description:'a02_d5',focus:['requirements','authority'],diagram:'DG-ENABLE-A',event:'downstream_preparation_enabled'},
+ {id:'A02-C6',beat:'B-exit',start:16.5,end:20,title:'a02_c6',description:'a02_d6',focus:['authority','entity-a','person-t'],diagram:'DG-ENTITY-A',event:null}
+ ]});
+export function projection(asset,index){if(!cues[asset]||!Number.isInteger(index)||index<0||index>=cues[asset].length)throw Error('Unknown narrative cue');const p=structuredClone(contract);p.asset_id=asset;p.cue_id=cues[asset][index].id;p.beat_ref=cues[asset][index].beat;p.scope_status=asset==='DMO-A02'||index>=3?'working_scope_recorded':index>=2?'trading_entity_clarified':'scope_draft';p.counterparty_clarified=asset==='DMO-A02'||index>=2;p.entity_source_reviewed=asset==='DMO-A02'&&index>=1;if(p.entity_source_reviewed)p.evidence.push('EV-A04');p.authority_gap_explained=asset==='DMO-A02'&&index>=2;p.gap_task_visible=asset==='DMO-A02'&&index>=3;p.preparation_visible=asset==='DMO-A02'&&index>=4;return freeze(p)}
+export const allowedIntents=freeze(['media_started','media_paused','media_finished','focus_requested','story_beat_requested','return_requested']);
+export function validateIntent(m){if(!m||!allowedIntents.includes(m.type)||!cues[m.asset_id]||m.asset_revision!=='r01')return false;if(m.type==='focus_requested')return (m.asset_id==='DMO-A01'?['request','group-a','entity-a','scope']:['person-t','entity-b','entity-a','authority','context','requirements','external']).includes(m.node_ref);if(m.type==='story_beat_requested')return cues[m.asset_id].some(c=>c.id===m.beat_ref);return true}

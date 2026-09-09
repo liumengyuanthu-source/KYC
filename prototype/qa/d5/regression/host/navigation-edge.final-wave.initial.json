@@ -1,0 +1,62 @@
+{
+  "at": "2026-09-07T17:55:00.520Z",
+  "browser": "152.0.7977.76",
+  "results": [
+    {
+      "ids": [
+        "UX-15",
+        "UX-20"
+      ],
+      "name": "journey-camera-escape-focus",
+      "status": "failed",
+      "error": "{}",
+      "errors": []
+    },
+    {
+      "ids": [
+        "UX-18"
+      ],
+      "name": "removed-node-safe-fallback",
+      "status": "passed",
+      "screenshot": "prototype/qa/d5/regression/host/removed-node-safe-fallback.png",
+      "errors": []
+    },
+    {
+      "ids": [
+        "UX-24"
+      ],
+      "name": "ROLE-RM.safe-reader-print",
+      "status": "passed",
+      "screenshot": "prototype/qa/d5/regression/host/ROLE-RM.safe-reader-print.png",
+      "errors": []
+    },
+    {
+      "ids": [
+        "UX-24"
+      ],
+      "name": "ROLE-CLIENT.safe-reader-print",
+      "status": "passed",
+      "screenshot": "prototype/qa/d5/regression/host/ROLE-CLIENT.safe-reader-print.png",
+      "errors": []
+    },
+    {
+      "ids": [
+        "UX-24"
+      ],
+      "name": "client-product-return-safe-reader",
+      "status": "passed",
+      "screenshot": "prototype/qa/d5/regression/host/client-product-return-safe-reader.png",
+      "errors": []
+    },
+    {
+      "ids": [
+        "UX-25",
+        "UX-28"
+      ],
+      "name": "index-and-story-readonly",
+      "status": "passed",
+      "screenshot": "prototype/qa/d5/regression/host/index-and-story-readonly.png",
+      "errors": []
+    }
+  ]
+}

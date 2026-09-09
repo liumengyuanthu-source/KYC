@@ -1,0 +1,200 @@
+[
+  {
+    "family": "DG-C-POPULATION",
+    "mode": "Current",
+    "locale": "zh-CN",
+    "name": "DG-C-POPULATION.Current.zh-CN",
+    "spec": "DG-C-POPULATION.Current.zh-CN.json",
+    "html": "DG-C-POPULATION.Current.zh-CN.html",
+    "svg": "DG-C-POPULATION.Current.zh-CN.svg",
+    "revision": "original_canonical_fallback",
+    "reason": "r02 stopped at nonimproving diagnostics; original checked canonical retained"
+  },
+  {
+    "family": "DG-C-POPULATION",
+    "mode": "Current",
+    "locale": "en-AU",
+    "name": "DG-C-POPULATION.Current.en-AU.r02",
+    "spec": "DG-C-POPULATION.Current.en-AU.r02.json",
+    "html": "DG-C-POPULATION.Current.en-AU.r02.html",
+    "svg": "DG-C-POPULATION.Current.en-AU.r02.svg",
+    "revision": "r02",
+    "reason": "Reviewed vertical layout candidate passed"
+  },
+  {
+    "family": "DG-C-POPULATION",
+    "mode": "Current",
+    "locale": "en-US",
+    "name": "DG-C-POPULATION.Current.en-US.r02",
+    "spec": "DG-C-POPULATION.Current.en-US.r02.json",
+    "html": "DG-C-POPULATION.Current.en-US.r02.html",
+    "svg": "DG-C-POPULATION.Current.en-US.r02.svg",
+    "revision": "r02",
+    "reason": "Reviewed vertical layout candidate passed"
+  },
+  {
+    "family": "DG-C-POPULATION",
+    "mode": "Target",
+    "locale": "zh-CN",
+    "name": "DG-C-POPULATION.Target.zh-CN",
+    "spec": "DG-C-POPULATION.Target.zh-CN.json",
+    "html": "DG-C-POPULATION.Target.zh-CN.html",
+    "svg": "DG-C-POPULATION.Target.zh-CN.svg",
+    "revision": "original_canonical_fallback",
+    "reason": "r02 stopped at nonimproving diagnostics; original checked canonical retained"
+  },
+  {
+    "family": "DG-C-POPULATION",
+    "mode": "Target",
+    "locale": "en-AU",
+    "name": "DG-C-POPULATION.Target.en-AU.r02",
+    "spec": "DG-C-POPULATION.Target.en-AU.r02.json",
+    "html": "DG-C-POPULATION.Target.en-AU.r02.html",
+    "svg": "DG-C-POPULATION.Target.en-AU.r02.svg",
+    "revision": "r02",
+    "reason": "Reviewed vertical layout candidate passed"
+  },
+  {
+    "family": "DG-C-POPULATION",
+    "mode": "Target",
+    "locale": "en-US",
+    "name": "DG-C-POPULATION.Target.en-US.r02",
+    "spec": "DG-C-POPULATION.Target.en-US.r02.json",
+    "html": "DG-C-POPULATION.Target.en-US.r02.html",
+    "svg": "DG-C-POPULATION.Target.en-US.r02.svg",
+    "revision": "r02",
+    "reason": "Reviewed vertical layout candidate passed"
+  },
+  {
+    "family": "DG-C-MATCH",
+    "mode": "Current",
+    "locale": "zh-CN",
+    "name": "DG-C-MATCH.Current.zh-CN.r02",
+    "spec": "DG-C-MATCH.Current.zh-CN.r02.json",
+    "html": "DG-C-MATCH.Current.zh-CN.r02.html",
+    "svg": "DG-C-MATCH.Current.zh-CN.r02.svg",
+    "revision": "r02",
+    "reason": "Reviewed vertical layout candidate passed"
+  },
+  {
+    "family": "DG-C-MATCH",
+    "mode": "Current",
+    "locale": "en-AU",
+    "name": "DG-C-MATCH.Current.en-AU.r02",
+    "spec": "DG-C-MATCH.Current.en-AU.r02.json",
+    "html": "DG-C-MATCH.Current.en-AU.r02.html",
+    "svg": "DG-C-MATCH.Current.en-AU.r02.svg",
+    "revision": "r02",
+    "reason": "Reviewed vertical layout candidate passed"
+  },
+  {
+    "family": "DG-C-MATCH",
+    "mode": "Current",
+    "locale": "en-US",
+    "name": "DG-C-MATCH.Current.en-US.r02",
+    "spec": "DG-C-MATCH.Current.en-US.r02.json",
+    "html": "DG-C-MATCH.Current.en-US.r02.html",
+    "svg": "DG-C-MATCH.Current.en-US.r02.svg",
+    "revision": "r02",
+    "reason": "Reviewed vertical layout candidate passed"
+  },
+  {
+    "family": "DG-C-MATCH",
+    "mode": "Target",
+    "locale": "zh-CN",
+    "name": "DG-C-MATCH.Target.zh-CN.r02",
+    "spec": "DG-C-MATCH.Target.zh-CN.r02.json",
+    "html": "DG-C-MATCH.Target.zh-CN.r02.html",
+    "svg": "DG-C-MATCH.Target.zh-CN.r02.svg",
+    "revision": "r02",
+    "reason": "Reviewed vertical layout candidate passed"
+  },
+  {
+    "family": "DG-C-MATCH",
+    "mode": "Target",
+    "locale": "en-AU",
+    "name": "DG-C-MATCH.Target.en-AU.r02",
+    "spec": "DG-C-MATCH.Target.en-AU.r02.json",
+    "html": "DG-C-MATCH.Target.en-AU.r02.html",
+    "svg": "DG-C-MATCH.Target.en-AU.r02.svg",
+    "revision": "r02",
+    "reason": "Reviewed vertical layout candidate passed"
+  },
+  {
+    "family": "DG-C-MATCH",
+    "mode": "Target",
+    "locale": "en-US",
+    "name": "DG-C-MATCH.Target.en-US.r02",
+    "spec": "DG-C-MATCH.Target.en-US.r02.json",
+    "html": "DG-C-MATCH.Target.en-US.r02.html",
+    "svg": "DG-C-MATCH.Target.en-US.r02.svg",
+    "revision": "r02",
+    "reason": "Reviewed vertical layout candidate passed"
+  },
+  {
+    "family": "DG-C-EDD",
+    "mode": "Current",
+    "locale": "zh-CN",
+    "name": "DG-C-EDD.Current.zh-CN",
+    "spec": "DG-C-EDD.Current.zh-CN.json",
+    "html": "DG-C-EDD.Current.zh-CN.html",
+    "svg": "DG-C-EDD.Current.zh-CN.svg",
+    "revision": "original_canonical_fallback",
+    "reason": "r02 stopped at nonimproving diagnostics; original checked canonical retained"
+  },
+  {
+    "family": "DG-C-EDD",
+    "mode": "Current",
+    "locale": "en-AU",
+    "name": "DG-C-EDD.Current.en-AU",
+    "spec": "DG-C-EDD.Current.en-AU.json",
+    "html": "DG-C-EDD.Current.en-AU.html",
+    "svg": "DG-C-EDD.Current.en-AU.svg",
+    "revision": "original_canonical_fallback",
+    "reason": "r02 stopped at nonimproving diagnostics; original checked canonical retained"
+  },
+  {
+    "family": "DG-C-EDD",
+    "mode": "Current",
+    "locale": "en-US",
+    "name": "DG-C-EDD.Current.en-US",
+    "spec": "DG-C-EDD.Current.en-US.json",
+    "html": "DG-C-EDD.Current.en-US.html",
+    "svg": "DG-C-EDD.Current.en-US.svg",
+    "revision": "original_canonical_fallback",
+    "reason": "r02 stopped at nonimproving diagnostics; original checked canonical retained"
+  },
+  {
+    "family": "DG-C-EDD",
+    "mode": "Target",
+    "locale": "zh-CN",
+    "name": "DG-C-EDD.Target.zh-CN",
+    "spec": "DG-C-EDD.Target.zh-CN.json",
+    "html": "DG-C-EDD.Target.zh-CN.html",
+    "svg": "DG-C-EDD.Target.zh-CN.svg",
+    "revision": "original_canonical_fallback",
+    "reason": "r02 stopped at nonimproving diagnostics; original checked canonical retained"
+  },
+  {
+    "family": "DG-C-EDD",
+    "mode": "Target",
+    "locale": "en-AU",
+    "name": "DG-C-EDD.Target.en-AU",
+    "spec": "DG-C-EDD.Target.en-AU.json",
+    "html": "DG-C-EDD.Target.en-AU.html",
+    "svg": "DG-C-EDD.Target.en-AU.svg",
+    "revision": "original_canonical_fallback",
+    "reason": "r02 stopped at nonimproving diagnostics; original checked canonical retained"
+  },
+  {
+    "family": "DG-C-EDD",
+    "mode": "Target",
+    "locale": "en-US",
+    "name": "DG-C-EDD.Target.en-US",
+    "spec": "DG-C-EDD.Target.en-US.json",
+    "html": "DG-C-EDD.Target.en-US.html",
+    "svg": "DG-C-EDD.Target.en-US.svg",
+    "revision": "original_canonical_fallback",
+    "reason": "r02 stopped at nonimproving diagnostics; original checked canonical retained"
+  }
+]

@@ -1,0 +1,137 @@
+Skip to content
+CLEAR
+TO TRADE
+Journey / Scenario Studio
+Product Prototype
+References
+Demo environment · synthetic
+English (AU)
+English (US)
+简体中文
+Cases
+Back to scenario
+Print this view
+Back to journey
+Demo persona 
+Operator 1
+Operator 2
+Role projection 
+KYC Operations
+Risk / Financial Crime / QA
+Financial Crime reviewer
+Relationship Manager
+Client
+Screening action recorded. Overall case remains Not ready.
+Population
+Review
+Evidence
+EDD
+Activity
+Screening Review Person T · Entity A
+
+DEMO-CTT-001 · Scope revision 3 · Case revision 30 · KYC Operations
+
+Not ready
+Identity information is incomplete
+Next: prepare the exact gap, request information or refer.
+S1 Initiate & scope
+S2 Determine & source
+S3 Screen & assess
+S4 Assure & resolve
+S5 Clear to trade
+01 Bind query
+✓
+Step complete
+02 Compare information
+→
+Action needed
+03 Request evidence if needed
+◷
+Waiting
+04 Review pack
+→
+Action needed
+05 Human judgment
+◷
+Waiting
+06 Record local result
+⊘
+Blocked
+
+Required steps still being confirmed. Step selection is reading only. Actual work: 
+◷
+Waiting
+
+View all steps, owners and time
+DEMO-CTT-001 · SRC-016
+Screening
+
+Entity A · Person T · scope v3 · case v30
+
+Not ready
+
+Population: Incomplete
+
+Action rationale / precise gap
+
+Prepared against the visible case and input revisions
+
+Evidence receipt, intake release, linking and screening-purpose sufficiency are separate states. Use the existing Batch B collaboration request and return to this finding.
+information_gap
+Awaiting input
+
+Distinguishing identity information for Person T is still missing.
+
+Owner: Unassigned · Attempt 1
+
+DEMO-CTT-001/finding/person-t-c01
+EV-ID-C01
+DEMO-CTT-001/evidence/collaboration-2
+released
+
+Original submitter retained: DEMO-CTT-001/person/person-t
+
+Insufficient
+
+The supplied identity record is insufficient for a supported exclusion.
+
+DEMO-CTT-001/assessment/identity-c-6
+Open identity request
+Assess as insufficient
+Assess as unknown
+Resume review
+← Back to Review finding
+
+Only current guarded actions above may change this task. Remaining conditions stay open.
+
+Other case conditions · parallel work
+Credit
+?
+Not yet established
+Applicability: Unknown · Earlier scope · requires current review
+Legal
+?
+Not yet established
+Applicability: Unknown · Earlier scope · requires current review
+Conflicts
+?
+Not yet established
+Applicability: Required · Earlier scope · requires current review
+Financial Crime reviewer
+?
+Not yet established
+Applicability: Unknown · Earlier scope · requires current review
+QA reviewer
+?
+Not yet established
+Applicability: Required · Earlier scope · requires current review
+
+Manifest completeness is unknown. No complete-case date or clearance follows from a local review result.
+
+Customize workspace
+Activity timeline
+Related dependencies
+Related evidence
+Illustrative timing example · separate from this session
+Confidential Australian Banking Client · Internal design review only
+Black · blue · white / Web glass approximation, not optical refraction

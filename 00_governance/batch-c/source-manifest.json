@@ -1,0 +1,29 @@
+{
+  "sources": [
+    {
+      "source_id": "SRC-016",
+      "path": "/Users/christinaliu/Downloads/Clear_to_Trade_D2_Batch_C_Screening_Review_and_EDD_Final_v1.0.md",
+      "sha256": "78eb0d541ec0b06781f0a6fa9cf5cb5008eda163add372f870626f0e150a7f1a",
+      "availability": "available",
+      "status": "approved_demo_design",
+      "bank_policy_status": "not_confirmed"
+    },
+    {
+      "source_id": "SRC-017",
+      "path": "/Users/christinaliu/Downloads/Clear_to_Trade_Session_Research_Kimi_PPT_Brief_v1.0.md",
+      "sha256": "9e542dc0832c41a10784fa370e6b0a140b90e2c48cdf2e7f51e51657a789c3a0",
+      "availability": "available",
+      "status": "inherited_research_not_reverified",
+      "bank_policy_status": "not_confirmed"
+    },
+    {
+      "source_id": "SRC-018",
+      "path": "/Users/christinaliu/Downloads/Clear_to_Trade_Public_Product_Visual_Links_v1.0.md",
+      "sha256": "10cf2281ac8d1cf7648c5681f8b5def6bf987319a522e5f8c21ec02a1eb55fd9",
+      "availability": "available",
+      "status": "inherited_research_not_reverified",
+      "bank_policy_status": "not_confirmed"
+    }
+  ],
+  "read_scope": "C Final complete; IA v0.4 complete; B addendum complete; A and D2 relevant business/schema/dependency/return chapters; current A/B code and registry; research imported with its recorded verification scope"
+}

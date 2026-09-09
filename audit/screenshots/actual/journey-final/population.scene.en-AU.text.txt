@@ -1,0 +1,371 @@
+Skip to content
+CLEAR
+TO TRADE
+Journey / Scenario Studio
+Product Prototype
+References
+Demo environment · synthetic
+English (AU)
+English (US)
+简体中文
+Process branches
+Operating Model
+A shared view of readiness.
+
+From requirements to human decisions. See how each task affects the whole case.
+
+Workshop method
+SYNTHETIC CASE
+
+New institutional relationship
+
+DEMO-CTT-001
+ENTITY & PURPOSE
+
+Entity A · institutional relationship
+
+SCOPE · REVISION
+
+AU entity · FX forward · v1
+
+Not ready to trade
+
+Case revision 1 · Not published
+
+The institutional journey
+Current
+Target
+Story
+Explore
+Print
+Trigger
+New relationship
+Product extension · not authored
+Material change · not authored
+Viewpoint
+Client
+Relationship Manager
+Case Manager / KYC Ops
+Risk / Financial Crime / QA
+Legal / Credit / Conflicts
+Case Manager
+Screen the right subjects
+Target · S3 · SCN-POPULATION
+SCENE 01
+Define the relationship
+SCENE 02
+Establish entity and authority
+SCENE 03
+Make requirements explicit
+SCENE 04
+Use evidence already available
+SCENE 05
+Ask only for remaining gaps
+SCENE 06
+Assess evidence for its purpose
+SCENE 07
+Screen the right subjects
+SCENE 08
+Resolve a possible match
+SCENE 09
+Assess elevated risk, if applicable
+D1 · STORY
+Start conflicts early
+D2 · STORY
+Start conflicts early
+D3 · STORY
+Resolve credit conditions
+D4 · STORY
+Complete applicable agreements
+D5 · STORY
+Know exactly what remains
+Play story
+Previous beat
+Continue story
+Presentation only · pauses at human review
+01   Initiate & scope
+02   Determine & source
+03   Screen & assess
+04   Assure & resolve
+05   Clear to trade
+ROLE / VIEWPOINT
+Client
+Relationship Manager
+Case Manager / KYC Ops
+Risk / Financial Crime / QA
+Legal / Credit / Conflicts
+01 / M0 · M1
+Initiate & scope
+Describe the intended relationship.
+Clarify the request and scope.
+M0.1–M0.4 · M1.1
+Define the relationship
+
+Product organises Group A, Entity A and requested FX forward as separate, sourced fields. Human records the working scope and visible unknowns.
+
+Establish entity and authority
+Clarify review applicability.
+Conflicts may start from intake
+02 / M2 · M3
+Determine & source
+Respond to a purpose-specific request.
+Understand what is still missing.
+M2.1–M2.5
+Make requirements explicit
+
+Prepare a versioned requirement set. Show the subject, purpose and basis of each requirement; retain unknown applicability.
+
+Use evidence already available
+Ask only for remaining gaps
+Assess evidence for its purpose
+Resolve complex requirements.
+Proceed when own inputs allow.
+03 / M4 · M5
+Screen & assess
+Clarify an identifying fact, if needed.
+Coordinate focused clarification.
+M4.5–M4.7
+Resolve a possible match
+
+Prepare subject-to-record comparisons and evidence-use links. A human records the disposition or requests more information.
+
+Population
+EDD · conditional
+Human judgment on ambiguity.
+Independent branch work continues.
+04 / M6 · C1 · C2 · M7
+Assure & resolve
+Respond to a precise open item.
+Know the blocker and its owner.
+M6
+Close a specific quality gap
+
+Mainline structure · detailed workspace in a later batch.
+
+Review sufficiency and conditions.
+Legal
+Credit
+05 / M8
+Clear to trade
+Receive the scoped outcome.
+Communicate the permitted outcome.
+M8.1
+Know exactly what remains
+
+Derive a versioned snapshot from explicit conditions, each with its own owner, reason and next action.
+
+Inspect decision and authority.
+Provide branch-specific outcomes.
+Five reading stages, not a sequential approval waterfall. · S3
+←
+→
+Overview
+Read
+Focus stage
+Cross-stage specialist bridge
+Conflicts begins at intake. Credit progresses in parallel. Legal prepares on its own inputs, then consumes the current versioned Credit condition before execution.
+Parallel, with conditions
+Conflicts can start from intake. Legal and Credit progress on their own inputs; Credit terms may feed Legal. A screening decision closes neither branch.
+High-level process · Current / Target / Archify
+Scope, source status & open questions
+Confidential Australian Banking Client · Internal design review only
+Black · blue · white / Web glass approximation, not optical refraction
+S3 / M4.1–M4.4
+Proposed design
+Target
+Screen the right subjects
+English (AU)
+English (US)
+简体中文
+×
+Current
+Target
+
+A versioned population shows Entity A, Entity B and Person T separately. A permitted preliminary run can proceed for Person T without claiming comprehensive coverage.
+
+WAIT / REQUIRED INPUT
+
+Ownership input and an upstream-confirmed complete inventory interface.
+
+HUMAN BOUNDARY
+
+A human reviews inclusion basis and current inputs. No hidden category or comprehensive run is configured.
+
+EXPECTED LOCAL RESULT · CASE CONSEQUENCE
+
+Population remains incomplete; the permitted subject and any missing members are explicit.
+
+Read-only decision detail · DG-C-POPULATION · Archify 2.17
+
+Connections explain the design; they do not execute business actions. All branches, permission and wait conditions remain below.
+
+All decisions
+Load scope & party inventory
+P01
+Assess membership & query inputs
+P02
+Permitted preliminary subset?
+P03
+Freeze & run preliminary plan
+P04
+Result status
+P05
+Store results & open needed reviews
+P06
+Complete applicable inventory?
+P07
+Confirm revision & comprehensive plan
+P08
+Execute or evaluate explicit reuse
+P09
+All required coverage satisfied?
+P10
+Coverage result for current scope
+P11
+Named gap / wait / safe error
+P12
+Load scope & party inventory P01
+
+Read current case scope, party revisions and ownership gaps. Missing inputs stay visible.
+
+Current fact: not_evaluated
+
+Related action guard (not automatic node adjudication): not_evaluated · No current business predicate; read-only explanation
+
+context · Our interpretation, not approved bank policy
+R
+P01 → P02: Current scope is readable; otherwise stop here with a named missing input.
+Assess membership & query inputs P02
+
+Assess each membership, criterion, identifier and permission/hold scope. Included, excluded and unresolved are distinct.
+
+Current fact: not_evaluated
+
+Related action guard (not automatic node adjudication): not_evaluated · No current business predicate; read-only explanation
+
+preliminary · Our interpretation, not approved bank policy
+R
+P02 → P03: Assess the included, known subjects as a preliminary subset.
+P02 → P07: Assess the full inventory independently, without waiting for preliminary completion.
+P02 → P12: Membership unresolved or exclusion basis insufficient; retain the gap.
+Permitted preliminary subset? P03
+
+Check inputs and authority for the named subject/category/query subset; a complete inventory is not a prerequisite.
+
+Current fact: not_evaluated
+
+Related action guard (not automatic node adjudication): not_evaluated · No current business predicate; read-only explanation
+
+preliminary · Our interpretation, not approved bank policy
+R
+P03 → P04: Inputs sufficient, authority explicit, no prohibiting hold.
+P03 → P12: Inputs or permissions insufficient/unknown, or an applicable hold.
+Freeze & run preliminary plan P04
+
+Freeze scope, subject and query revisions. Use a synthetic adapter only; no live list search.
+
+Current fact: not_evaluated
+
+Related action guard (not automatic node adjudication): not_evaluated · No current business predicate; read-only explanation
+
+preliminary · Our interpretation, not approved bank policy
+R
+P04 → P05: Adapter returns a result or remains pending.
+Result status P05
+
+Keep completed, partial, failed and pending distinct. Failure or unknown never means zero results.
+
+Current fact: not_evaluated
+
+Related action guard (not automatic node adjudication): not_evaluated · No current business predicate; read-only explanation
+
+result · Our interpretation, not approved bank policy
+R
+P05 → P06: Completed: retain scoped observations and actual returned findings.
+P05 → P12: Partial, failed or pending: retain sub-results and incomplete coverage.
+Store results & open needed reviews P06
+
+Retain immutable results. A finding opens review; no finding means only that this query returned none.
+
+Current fact: not_evaluated
+
+Related action guard (not automatic node adjudication): not_evaluated · No current business predicate; read-only explanation
+
+review · Our interpretation, not approved bank policy
+R
+P06 → P10: Reassess coverage; a result or disposition does not satisfy all tuples.
+Complete applicable inventory? P07
+
+Require an explicit completeness basis and resolved membership. Unknown scope or ownership cannot confirm the inventory.
+
+Current fact: not_evaluated
+
+Related action guard (not automatic node adjudication): not_evaluated · No current business predicate; read-only explanation
+
+comprehensive · Our interpretation, not approved bank policy
+R
+P07 → P08: Complete for scope, memberships resolved, confirmation authority explicit.
+P07 → P12: Incomplete or unknown: retain the inventory gap.
+Confirm revision & comprehensive plan P08
+
+Confirm population revision, required coverage tuples and authority before comprehensive dispatch.
+
+Current fact: not_evaluated
+
+Related action guard (not automatic node adjudication): not_evaluated · No current business predicate; read-only explanation
+
+comprehensive · Our interpretation, not approved bank policy
+R
+P08 → P09: Confirmed population/plan revision with current inputs and hold checks.
+Execute or evaluate explicit reuse P09
+
+Execute the confirmed plan or assess explicit reuse against scope, currency and versions; never copy a green status.
+
+Current fact: not_evaluated
+
+Related action guard (not automatic node adjudication): not_evaluated · No current business predicate; read-only explanation
+
+comprehensive · Our interpretation, not approved bank policy
+R
+P09 → P10: New result or explicit reuse assessment, with required findings linked.
+All required coverage satisfied? P10
+
+Require a known inventory and applicable tuples, with execution, review and currency satisfied. Empty or failed coverage cannot pass.
+
+Current fact: not_evaluated
+
+Related action guard (not automatic node adjudication): not_evaluated · No current business predicate; read-only explanation
+
+coverage · Our interpretation, not approved bank policy
+R
+P10 → P11: Record a scoped satisfied/unsatisfied/unknown projection, never publish CTT.
+Coverage result for current scope P11
+
+Project satisfied-for-scope, incomplete, unknown or concern. This is not authority to publish clear-to-trade.
+
+Current fact: not_evaluated
+
+Related action guard (not automatic node adjudication): not_evaluated · No current business predicate; read-only explanation
+
+coverage · Our interpretation, not approved bank policy
+R
+Named gap / wait / safe error P12
+
+Keep the named input/source/permission/hold/version reason and return to the same object without inventing parties.
+
+Current fact: not_evaluated
+
+Related action guard (not automatic node adjudication): not_evaluated · No current business predicate; read-only explanation
+
+resume · Our interpretation, not approved bank policy
+R
+P12 → P02: A relevant event or retry basis permits reassessment of the same object.
+References / research
+
+Open the shared read-only library for this scene. Research is not case evidence.
+
+Source, hypothesis & stable IDs
+DEMO-CTT-001 · KYC Operations
+Print selected scene
+Continue story
+Open product task

@@ -1,1 +1,11 @@
 Process_ID,Journey_ID,Persona_ID,Mapping_Rationale,Source_ID,Validation_Status
+M2.1,J-M2-01,ROLE-KYCOPS|ROLE-CASEMGR,Activity grouped by user objective; role split provisional,SRC-007,DRAFT_ROLE_SPLIT_ASM-001
+M2.2,J-M2-01,ROLE-KYCOPS|ROLE-CASEMGR,Activity grouped by user objective; role split provisional,SRC-007,DRAFT_ROLE_SPLIT_ASM-001
+M2.3,J-M2-01,ROLE-KYCOPS|ROLE-CASEMGR,Activity grouped by user objective; role split provisional,SRC-007,DRAFT_ROLE_SPLIT_ASM-001
+M2.4,J-M2-01,ROLE-KYCOPS|ROLE-CASEMGR,Activity grouped by user objective; role split provisional,SRC-007,DRAFT_ROLE_SPLIT_ASM-001
+M2.5,J-M3-03,ROLE-KYCOPS|ROLE-CASEMGR,Activity grouped by user objective; role split provisional,SRC-007,DRAFT_ROLE_SPLIT_ASM-001
+M3.1,J-M3-01,ROLE-KYCOPS|ROLE-CASEMGR,Activity grouped by user objective; role split provisional,SRC-007,DRAFT_ROLE_SPLIT_ASM-001
+M3.2,J-M3-02,ROLE-KYCOPS|ROLE-CASEMGR,Activity grouped by user objective; role split provisional,SRC-007,DRAFT_ROLE_SPLIT_ASM-001
+M3.3,J-M3-03,ROLE-KYCOPS|ROLE-CASEMGR,Activity grouped by user objective; role split provisional,SRC-007,DRAFT_ROLE_SPLIT_ASM-001
+M3.4,J-M3-04,ROLE-KYCOPS|ROLE-CASEMGR,Activity grouped by user objective; role split provisional,SRC-007,DRAFT_ROLE_SPLIT_ASM-001
+M3.5,J-M3-04,ROLE-KYCOPS|ROLE-CASEMGR,Activity grouped by user objective; role split provisional,SRC-007,DRAFT_ROLE_SPLIT_ASM-001

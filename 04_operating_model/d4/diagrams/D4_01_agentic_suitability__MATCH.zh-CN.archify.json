@@ -1,0 +1,157 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "选择这项工作的执行方式",
+    "locale": "zh-CN",
+    "animation": "none",
+    "quality_profile": "showcase",
+    "viewBox": [
+      1350,
+      800
+    ],
+    "legend": {
+      "mode": "hidden"
+    }
+  },
+  "components": [
+    {
+      "id": "access",
+      "type": "frontend",
+      "label": "输入与访问范围",
+      "sublabel": "先核对主体、来源版本与权限",
+      "pos": [
+        60,
+        95
+      ],
+      "size": [
+        355,
+        96
+      ]
+    },
+    {
+      "id": "unknown",
+      "type": "frontend",
+      "label": "未知时停止",
+      "sublabel": "评分不能补足未知规则",
+      "pos": [
+        935,
+        95
+      ],
+      "size": [
+        355,
+        96
+      ]
+    },
+    {
+      "id": "judgement",
+      "type": "frontend",
+      "label": "需要专业判断？",
+      "sublabel": "重大性或正式权限",
+      "pos": [
+        60,
+        275
+      ],
+      "size": [
+        355,
+        96
+      ]
+    },
+    {
+      "id": "human",
+      "type": "frontend",
+      "label": "人 + 已准备的证据",
+      "sublabel": "人工硬门槛 · 能力仅支持人",
+      "pos": [
+        935,
+        275
+      ],
+      "size": [
+        355,
+        96
+      ]
+    },
+    {
+      "id": "bounded",
+      "type": "frontend",
+      "label": "输入输出固定",
+      "sublabel": "带引用的复核包是定界任务",
+      "pos": [
+        60,
+        455
+      ],
+      "size": [
+        355,
+        96
+      ]
+    },
+    {
+      "id": "skill",
+      "type": "frontend",
+      "label": "工作流 + 语义能力",
+      "sublabel": "准备语境 · 不作批准",
+      "pos": [
+        935,
+        455
+      ],
+      "size": [
+        355,
+        96
+      ]
+    },
+    {
+      "id": "context",
+      "type": "frontend",
+      "label": "路径随反馈变化？",
+      "sublabel": "先比较固定来源工作流",
+      "pos": [
+        60,
+        635
+      ],
+      "size": [
+        355,
+        96
+      ]
+    },
+    {
+      "id": "agent",
+      "type": "frontend",
+      "label": "受限 Agent 候选",
+      "sublabel": "仅提出获准取证计划 · 未部署",
+      "pos": [
+        935,
+        635
+      ],
+      "size": [
+        355,
+        96
+      ]
+    }
+  ],
+  "connections": [
+    {
+      "id": "relation-1",
+      "from": "access",
+      "to": "unknown",
+      "label": "缺失或不明"
+    },
+    {
+      "id": "relation-2",
+      "from": "judgement",
+      "to": "human",
+      "label": "必须由人判断"
+    },
+    {
+      "id": "relation-3",
+      "from": "bounded",
+      "to": "skill",
+      "label": "定界编制"
+    },
+    {
+      "id": "relation-4",
+      "from": "context",
+      "to": "agent",
+      "label": "仅在确有必要时"
+    }
+  ]
+}

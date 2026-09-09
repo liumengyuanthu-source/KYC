@@ -1,0 +1,58 @@
+{
+  "at": "2026-09-07T12:17:07.557Z",
+  "command": "node prototype/qa/batch-c/print-proof.mjs",
+  "results": [
+    {
+      "ids": [
+        "RT-C32",
+        "RT-C63"
+      ],
+      "name": "batch-c-match.en-AU",
+      "status": "passed",
+      "steps": "Actual mainline print mode from saved host workflow; focus M04 cannot truncate selected scene",
+      "case_before": {
+        "revision": 32
+      },
+      "case_after": {
+        "revision": 32
+      },
+      "screenshot": "batch-c-match.en-AU.print.png",
+      "pdf": "output/pdf/batch-c-match.en-AU.pdf"
+    },
+    {
+      "ids": [
+        "RT-C32",
+        "RT-C63"
+      ],
+      "name": "batch-c-match.zh-CN",
+      "status": "passed",
+      "steps": "Actual mainline print mode from saved host workflow; focus M04 cannot truncate selected scene",
+      "case_before": {
+        "revision": 32
+      },
+      "case_after": {
+        "revision": 32
+      },
+      "screenshot": "batch-c-match.zh-CN.print.png",
+      "pdf": "output/pdf/batch-c-match.zh-CN.pdf"
+    },
+    {
+      "ids": [
+        "RT-C13",
+        "RT-C58",
+        "RT-C63"
+      ],
+      "name": "batch-c-client.en-AU",
+      "status": "passed",
+      "steps": "Actual mainline print mode from saved host workflow; focus M04 cannot truncate selected scene",
+      "case_before": {
+        "revision": 32
+      },
+      "case_after": {
+        "revision": 32
+      },
+      "screenshot": "batch-c-client.en-AU.print.png",
+      "pdf": "output/pdf/batch-c-client.en-AU.pdf"
+    }
+  ]
+}

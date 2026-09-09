@@ -1,0 +1,9 @@
+# Scoped draft-release checks based on identifiers actually present in supplied sources.
+# Not a guessed client list or a claim of comprehensive PII detection.
+Christina
+Ronak
+Kobe
+NTT DATA
+CGM
+RMG
+FROST

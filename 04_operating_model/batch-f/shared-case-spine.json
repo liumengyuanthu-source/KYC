@@ -1,0 +1,174 @@
+{
+  "derived": true,
+  "runtime_store": false,
+  "source_ref": "SRC-021",
+  "case_id": "DEMO-CTT-001",
+  "validation_status": "approved_demo_design_not_bank_validation",
+  "generator": "04_operating_model/batch-f/build-consolidation.mjs",
+  "domains": [
+    {
+      "domain": "Case & Scope",
+      "objects": {
+        "Case": "case",
+        "CaseScope": "scopes"
+      },
+      "source_refs": [
+        "SRC-009",
+        "SRC-010",
+        "SRC-013",
+        "SRC-015",
+        "SRC-016",
+        "SRC-019",
+        "SRC-020",
+        "SRC-021"
+      ],
+      "validation_status": "approved_demo_design_not_bank_validation"
+    },
+    {
+      "domain": "Party & Authority",
+      "objects": {
+        "LegalEntity": "entities",
+        "Person": "naturalPersons",
+        "Representative": "representatives",
+        "AuthorityRecord": "authorities"
+      },
+      "source_refs": [
+        "SRC-009",
+        "SRC-010",
+        "SRC-013",
+        "SRC-015",
+        "SRC-016",
+        "SRC-019",
+        "SRC-020",
+        "SRC-021"
+      ],
+      "validation_status": "approved_demo_design_not_bank_validation"
+    },
+    {
+      "domain": "Requirement",
+      "objects": {
+        "RequirementSet": "requirements (scope + revision grouping)",
+        "Requirement": "requirements",
+        "Gap": "requestItems / qaFindings (distinct purpose and quality gaps)"
+      },
+      "source_refs": [
+        "SRC-009",
+        "SRC-010",
+        "SRC-013",
+        "SRC-015",
+        "SRC-016",
+        "SRC-019",
+        "SRC-020",
+        "SRC-021"
+      ],
+      "validation_status": "approved_demo_design_not_bank_validation"
+    },
+    {
+      "domain": "Evidence",
+      "objects": {
+        "EvidenceArtifact": "evidence",
+        "EvidenceClaim": "evidence[].claims (embedded)",
+        "EvidenceUseAssessment": "evidenceUseAssessments"
+      },
+      "source_refs": [
+        "SRC-009",
+        "SRC-010",
+        "SRC-013",
+        "SRC-015",
+        "SRC-016",
+        "SRC-019",
+        "SRC-020",
+        "SRC-021"
+      ],
+      "validation_status": "approved_demo_design_not_bank_validation"
+    },
+    {
+      "domain": "Work",
+      "objects": {
+        "WorkItem": "workItems",
+        "InformationRequest": "informationRequests",
+        "Remediation": "workItems (QA remediation subtype)",
+        "Hold": "holds"
+      },
+      "source_refs": [
+        "SRC-009",
+        "SRC-010",
+        "SRC-013",
+        "SRC-015",
+        "SRC-016",
+        "SRC-019",
+        "SRC-020",
+        "SRC-021"
+      ],
+      "validation_status": "approved_demo_design_not_bank_validation"
+    },
+    {
+      "domain": "Decision & Specialist",
+      "objects": {
+        "Decision": "decisions / screeningReviewDecisions (typed)",
+        "ScreeningFinding": "screeningFindings",
+        "ConflictReview": "conflictReviews",
+        "CreditCondition": "creditConditions",
+        "LegalAgreement": "legalAgreements"
+      },
+      "source_refs": [
+        "SRC-009",
+        "SRC-010",
+        "SRC-013",
+        "SRC-015",
+        "SRC-016",
+        "SRC-019",
+        "SRC-020",
+        "SRC-021"
+      ],
+      "validation_status": "approved_demo_design_not_bank_validation"
+    },
+    {
+      "domain": "Dependency",
+      "objects": {
+        "DependencyEdge": "dependencies",
+        "ProfessionalCondition": "clearanceConditions"
+      },
+      "source_refs": [
+        "SRC-009",
+        "SRC-010",
+        "SRC-013",
+        "SRC-015",
+        "SRC-016",
+        "SRC-019",
+        "SRC-020",
+        "SRC-021"
+      ],
+      "validation_status": "approved_demo_design_not_bank_validation"
+    },
+    {
+      "domain": "Clearance",
+      "objects": {
+        "ClearancePrerequisite": "clearancePrerequisites (evaluated snapshots)",
+        "ReadinessSnapshot": "readinessSnapshots",
+        "ClearanceDecision": "clearanceDecisions",
+        "PublicationEvent": "publicationEvents"
+      },
+      "source_refs": [
+        "SRC-009",
+        "SRC-010",
+        "SRC-013",
+        "SRC-015",
+        "SRC-016",
+        "SRC-019",
+        "SRC-020",
+        "SRC-021"
+      ],
+      "validation_status": "approved_demo_design_not_bank_validation"
+    }
+  ],
+  "physical_state": "Host active data and existing A–E engines; F never loads snapshots",
+  "canonical_engine_paths": [
+    "prototype/case-engine.mjs",
+    "prototype/batch-a-engine.mjs",
+    "prototype/collaboration-engine.mjs",
+    "prototype/screening-engine.mjs",
+    "prototype/specialist-engine.mjs",
+    "prototype/clearance-engine.mjs"
+  ]
+}

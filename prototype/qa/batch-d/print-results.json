@@ -1,0 +1,33 @@
+{
+  "at": "2026-09-07T13:49:18.055Z",
+  "command": "node prototype/qa/batch-d/print-proof.mjs",
+  "results": [
+    {
+      "name": "batch-d-credit.en-AU",
+      "locale": "en-AU",
+      "role": "ROLE-FACILITATOR",
+      "status": "passed",
+      "pdf": "output/pdf/batch-d-credit.en-AU.pdf",
+      "screenshot": "batch-d-credit.en-AU.print.png",
+      "businessStateUnchanged": true
+    },
+    {
+      "name": "batch-d-legal.zh-CN",
+      "locale": "zh-CN",
+      "role": "ROLE-FACILITATOR",
+      "status": "passed",
+      "pdf": "output/pdf/batch-d-legal.zh-CN.pdf",
+      "screenshot": "batch-d-legal.zh-CN.print.png",
+      "businessStateUnchanged": true
+    },
+    {
+      "name": "batch-d-client.en-US",
+      "locale": "en-US",
+      "role": "ROLE-CLIENT",
+      "status": "passed",
+      "pdf": "output/pdf/batch-d-client.en-US.pdf",
+      "screenshot": "batch-d-client.en-US.print.png",
+      "businessStateUnchanged": true
+    }
+  ]
+}

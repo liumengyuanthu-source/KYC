@@ -1,0 +1,563 @@
+[
+  {
+    "asset_id": "MED-A-PER-T",
+    "variant_id": "editorial",
+    "asset_revision": "r01",
+    "source_batch": "D2-A",
+    "source_document_revision": "Final v1.0",
+    "scenario_refs": [
+      "SCN-SCOPE",
+      "SCN-ENTITY"
+    ],
+    "beat_refs": [],
+    "diagram_refs": [],
+    "case_fixture_revision": "Batch-A-Final-v1.0/read-only-media-projection-r01",
+    "source_snapshot_ref": "prototype/media/d2-batch-a/r01/source/Clear_to_Trade_D2_Batch_A_Scope_Entity_Final_v1.0.md#3.2",
+    "asset_type": "image",
+    "file_format": "PNG master / WebP",
+    "dimensions": "see actual composition dimensions",
+    "duration": null,
+    "fps": null,
+    "file_size": 110374,
+    "source_files": [
+      {
+        "path": "prototype/media/d2-batch-a/r01/assets/personas/MED-A-PER-T__editorial__r01__1x1.webp",
+        "sha256": "1fcedc0a365162086f253f91067649636bdbf15873cd45fe15d81bf306a2cbce",
+        "bytes": 61664
+      },
+      {
+        "path": "prototype/media/d2-batch-a/r01/assets/personas/MED-A-PER-T__editorial__r01__4x5.webp",
+        "sha256": "e1d92cc2da2352a72cf0d83bb0214747e43fe266a75336e0f3dd2bfb0bedc958",
+        "bytes": 48710
+      }
+    ],
+    "preview_file": "prototype/media/d2-batch-a/r01/assets/personas/MED-A-PER-T__editorial__r01__4x5.webp",
+    "poster_file": "prototype/media/d2-batch-a/r01/assets/personas/MED-A-PER-T__editorial__r01__4x5.webp",
+    "static_fallback": "prototype/media-static.mjs (all frozen cues) + mainline live records",
+    "locale": [
+      "zh-CN",
+      "en-AU",
+      "en-US"
+    ],
+    "caption_tracks": [],
+    "alt_text_refs": [
+      "portrait_t_alt"
+    ],
+    "motion_mode": "static",
+    "controls_supported": [],
+    "allowed_intents": [],
+    "data_mutation_scope": "none",
+    "licence_or_generation_provenance": "prototype/media/d2-batch-a/r01/source/image-generation.md",
+    "content_status": "approved_sample_direction; synthetic_not_bank_policy",
+    "visual_status": "received_user_selected",
+    "test_status": {
+      "host": "00_governance/media-mainline/verification-results.json",
+      "browser": "prototype/qa/media-mainline/browser-results.json",
+      "source_tests": "Historical sample results in packaged source manifest; not counted as host evidence"
+    },
+    "promotion_status": "integrated_locally_for_review",
+    "known_limitations": [
+      "No iframe/postMessage host command API; callback is sanitized media state only",
+      "Frozen story is not the latest live case record",
+      "Safari/Firefox, native zoom and full assistive-technology audit not run",
+      "No encoded video/audio, production system integration or remote publication"
+    ],
+    "review_owner": "Christina",
+    "review_ref": "User approval + experiments/d2-batch-a-media/MAINLINE_INTEGRATION_HANDOFF.md",
+    "file_size_scope": "Listed source files only; shared dependencies in package-provenance.json"
+  },
+  {
+    "asset_id": "MED-A-PER-OPS",
+    "variant_id": "editorial",
+    "asset_revision": "r01",
+    "source_batch": "D2-A",
+    "source_document_revision": "Final v1.0",
+    "scenario_refs": [
+      "SCN-SCOPE",
+      "SCN-ENTITY"
+    ],
+    "beat_refs": [],
+    "diagram_refs": [],
+    "case_fixture_revision": "Batch-A-Final-v1.0/read-only-media-projection-r01",
+    "source_snapshot_ref": "prototype/media/d2-batch-a/r01/source/Clear_to_Trade_D2_Batch_A_Scope_Entity_Final_v1.0.md#3.2",
+    "asset_type": "image",
+    "file_format": "PNG master / WebP",
+    "dimensions": "see actual composition dimensions",
+    "duration": null,
+    "fps": null,
+    "file_size": 128398,
+    "source_files": [
+      {
+        "path": "prototype/media/d2-batch-a/r01/assets/personas/MED-A-PER-OPS__editorial__r01__1x1.webp",
+        "sha256": "6daa8a7633531ebfc3ce701058fd59a8f2661f5fd81bee2fc8723e4d03c4be95",
+        "bytes": 68392
+      },
+      {
+        "path": "prototype/media/d2-batch-a/r01/assets/personas/MED-A-PER-OPS__editorial__r01__4x5.webp",
+        "sha256": "c4f861e4772a24aab0cbb675defb4b2cc49a777a97b5f76063983631f6c234e4",
+        "bytes": 60006
+      }
+    ],
+    "preview_file": "prototype/media/d2-batch-a/r01/assets/personas/MED-A-PER-OPS__editorial__r01__4x5.webp",
+    "poster_file": "prototype/media/d2-batch-a/r01/assets/personas/MED-A-PER-OPS__editorial__r01__4x5.webp",
+    "static_fallback": "prototype/media-static.mjs (all frozen cues) + mainline live records",
+    "locale": [
+      "zh-CN",
+      "en-AU",
+      "en-US"
+    ],
+    "caption_tracks": [],
+    "alt_text_refs": [
+      "portrait_ops_alt"
+    ],
+    "motion_mode": "static",
+    "controls_supported": [],
+    "allowed_intents": [],
+    "data_mutation_scope": "none",
+    "licence_or_generation_provenance": "prototype/media/d2-batch-a/r01/source/image-generation.md",
+    "content_status": "approved_sample_direction; synthetic_not_bank_policy",
+    "visual_status": "received_user_selected",
+    "test_status": {
+      "host": "00_governance/media-mainline/verification-results.json",
+      "browser": "prototype/qa/media-mainline/browser-results.json",
+      "source_tests": "Historical sample results in packaged source manifest; not counted as host evidence"
+    },
+    "promotion_status": "integrated_locally_for_review",
+    "known_limitations": [
+      "No iframe/postMessage host command API; callback is sanitized media state only",
+      "Frozen story is not the latest live case record",
+      "Safari/Firefox, native zoom and full assistive-technology audit not run",
+      "No encoded video/audio, production system integration or remote publication"
+    ],
+    "review_owner": "Christina",
+    "review_ref": "User approval + experiments/d2-batch-a-media/MAINLINE_INTEGRATION_HANDOFF.md",
+    "file_size_scope": "Listed source files only; shared dependencies in package-provenance.json"
+  },
+  {
+    "asset_id": "MED-A-STILL-SCOPE",
+    "variant_id": null,
+    "asset_revision": null,
+    "source_batch": "D2-A",
+    "source_document_revision": "Final v1.0",
+    "scenario_refs": [
+      "SCN-SCOPE",
+      "SCN-ENTITY"
+    ],
+    "beat_refs": [],
+    "diagram_refs": [
+      "DG-SCOPE-A",
+      "DG-ENTITY-A",
+      "DG-ENABLE-A"
+    ],
+    "case_fixture_revision": "D2-A-Final-1.0",
+    "source_snapshot_ref": null,
+    "asset_type": "image",
+    "file_format": null,
+    "dimensions": null,
+    "duration": null,
+    "fps": null,
+    "file_size": null,
+    "source_files": [],
+    "preview_file": null,
+    "poster_file": null,
+    "static_fallback": "prototype/batch-a-ui.mjs (HTML object / purpose / result fallback)",
+    "locale": [
+      "zh-CN",
+      "en-AU",
+      "en-US"
+    ],
+    "caption_tracks": [],
+    "alt_text_refs": [],
+    "motion_mode": "static",
+    "controls_supported": [],
+    "allowed_intents": [
+      "focus_requested",
+      "story_beat_requested",
+      "open_product_requested",
+      "return_requested"
+    ],
+    "data_mutation_scope": "none",
+    "licence_or_generation_provenance": null,
+    "content_status": "brief_approved",
+    "visual_status": "not_received",
+    "test_status": "fallback_tested_separately",
+    "promotion_status": "not_selected",
+    "known_limitations": [
+      "No image/video candidate received; no media playback claimed"
+    ],
+    "review_owner": "Christina",
+    "review_ref": null
+  },
+  {
+    "asset_id": "MED-A-STILL-ENTITY",
+    "variant_id": null,
+    "asset_revision": null,
+    "source_batch": "D2-A",
+    "source_document_revision": "Final v1.0",
+    "scenario_refs": [
+      "SCN-SCOPE",
+      "SCN-ENTITY"
+    ],
+    "beat_refs": [],
+    "diagram_refs": [
+      "DG-SCOPE-A",
+      "DG-ENTITY-A",
+      "DG-ENABLE-A"
+    ],
+    "case_fixture_revision": "D2-A-Final-1.0",
+    "source_snapshot_ref": null,
+    "asset_type": "image",
+    "file_format": null,
+    "dimensions": null,
+    "duration": null,
+    "fps": null,
+    "file_size": null,
+    "source_files": [],
+    "preview_file": null,
+    "poster_file": null,
+    "static_fallback": "prototype/batch-a-ui.mjs (HTML object / purpose / result fallback)",
+    "locale": [
+      "zh-CN",
+      "en-AU",
+      "en-US"
+    ],
+    "caption_tracks": [],
+    "alt_text_refs": [],
+    "motion_mode": "static",
+    "controls_supported": [],
+    "allowed_intents": [
+      "focus_requested",
+      "story_beat_requested",
+      "open_product_requested",
+      "return_requested"
+    ],
+    "data_mutation_scope": "none",
+    "licence_or_generation_provenance": null,
+    "content_status": "brief_approved",
+    "visual_status": "not_received",
+    "test_status": "fallback_tested_separately",
+    "promotion_status": "not_selected",
+    "known_limitations": [
+      "No image/video candidate received; no media playback claimed"
+    ],
+    "review_owner": "Christina",
+    "review_ref": null
+  },
+  {
+    "asset_id": "DMO-A01",
+    "variant_id": "panel-first",
+    "asset_revision": "r01",
+    "source_batch": "D2-A",
+    "source_document_revision": "Final v1.0",
+    "scenario_refs": [
+      "SCN-SCOPE"
+    ],
+    "beat_refs": [
+      "A-01",
+      "A-02",
+      "A-03",
+      "A-04",
+      "A-exit"
+    ],
+    "diagram_refs": [
+      "DG-SCOPE-A"
+    ],
+    "case_fixture_revision": "Batch-A-Final-v1.0/read-only-media-projection-r01",
+    "source_snapshot_ref": "prototype/media/d2-batch-a/r01/source/Clear_to_Trade_D2_Batch_A_Scope_Entity_Final_v1.0.md#3.2",
+    "asset_type": "controlled_demo",
+    "file_format": "HTML/CSS/ES modules + local JSON/SVG/WebP",
+    "dimensions": {
+      "layout": "responsive",
+      "desktop_review": "1440×900 / 1366 width",
+      "mobile_review": "390 CSS px",
+      "poster": "see per-file actual dimensions"
+    },
+    "duration": {
+      "seconds": 16,
+      "semantics": "narrative only; DMO-A02 pauses at 9.5s for explicit Next; no business SLA"
+    },
+    "fps": null,
+    "file_size": 31577,
+    "source_files": [
+      {
+        "path": "prototype/media/d2-batch-a/r01/source/cue-manifest.json",
+        "sha256": "d4ebd3b5c87d9fda3ebbaac3d4bc627348a3d7a05540aa4d88fe26bb23e23ca3",
+        "bytes": 4942
+      },
+      {
+        "path": "prototype/media/d2-batch-a/r01/src/content.js",
+        "sha256": "a57d1d24107fe8b4f88369a2bde9e2600ceb415ebb875d706841d427aad6f73b",
+        "bytes": 4353
+      },
+      {
+        "path": "prototype/media/d2-batch-a/r01/src/views.js",
+        "sha256": "3ab1e7b3ff7d16fe88c7896b5db7be44d3d2edfcbbccd48f73182039a2aea2fa",
+        "bytes": 4156
+      },
+      {
+        "path": "prototype/media/d2-batch-a/r01/styles/media.css",
+        "sha256": "7ed9a0eca211509814cb4f994ed5a081412d455ded48a6118be9e2a596373cc7",
+        "bytes": 18126
+      }
+    ],
+    "preview_file": "prototype/?scene=SCN-SCOPE&locale=zh-CN",
+    "poster_file": "prototype/media/d2-batch-a/r01/assets/posters/DMO-A01__panel-first__r01__zh-CN__C1.png",
+    "static_fallback": "prototype/media-static.mjs (all frozen cues) + mainline live records",
+    "locale": [
+      "zh-CN",
+      "en-AU",
+      "en-US"
+    ],
+    "caption_tracks": [],
+    "alt_text_refs": [
+      "portrait_t_alt",
+      "portrait_ops_alt",
+      "diagram_alt_scope"
+    ],
+    "motion_mode": "opt_in_controlled_or_static",
+    "controls_supported": [
+      "play",
+      "pause",
+      "previous",
+      "next",
+      "replay",
+      "static",
+      "help"
+    ],
+    "allowed_intents": [],
+    "data_mutation_scope": "none",
+    "licence_or_generation_provenance": "prototype/media/d2-batch-a/r01/source/image-generation.md",
+    "content_status": "approved_sample_direction; synthetic_not_bank_policy",
+    "visual_status": "received_user_selected",
+    "test_status": {
+      "host": "00_governance/media-mainline/verification-results.json",
+      "browser": "prototype/qa/media-mainline/browser-results.json",
+      "source_tests": "Historical sample results in packaged source manifest; not counted as host evidence"
+    },
+    "promotion_status": "integrated_locally_for_review",
+    "known_limitations": [
+      "No iframe/postMessage host command API; callback is sanitized media state only",
+      "Frozen story is not the latest live case record",
+      "Safari/Firefox, native zoom and full assistive-technology audit not run",
+      "No encoded video/audio, production system integration or remote publication"
+    ],
+    "review_owner": "Christina",
+    "review_ref": "User approval + experiments/d2-batch-a-media/MAINLINE_INTEGRATION_HANDOFF.md",
+    "file_size_scope": "Listed source files only; shared dependencies in package-provenance.json"
+  },
+  {
+    "asset_id": "DMO-A02",
+    "variant_id": "panel-first",
+    "asset_revision": "r01",
+    "source_batch": "D2-A",
+    "source_document_revision": "Final v1.0",
+    "scenario_refs": [
+      "SCN-ENTITY"
+    ],
+    "beat_refs": [
+      "B-01",
+      "B-02",
+      "B-03",
+      "B-04",
+      "B-05",
+      "B-exit"
+    ],
+    "diagram_refs": [
+      "DG-ENTITY-A",
+      "DG-ENABLE-A"
+    ],
+    "case_fixture_revision": "Batch-A-Final-v1.0/read-only-media-projection-r01",
+    "source_snapshot_ref": "prototype/media/d2-batch-a/r01/source/Clear_to_Trade_D2_Batch_A_Scope_Entity_Final_v1.0.md#3.2",
+    "asset_type": "controlled_demo",
+    "file_format": "HTML/CSS/ES modules + local JSON/SVG/WebP",
+    "dimensions": {
+      "layout": "responsive",
+      "desktop_review": "1440×900 / 1366 width",
+      "mobile_review": "390 CSS px",
+      "poster": "see per-file actual dimensions"
+    },
+    "duration": {
+      "seconds": 20,
+      "semantics": "narrative only; DMO-A02 pauses at 9.5s for explicit Next; no business SLA"
+    },
+    "fps": null,
+    "file_size": 31577,
+    "source_files": [
+      {
+        "path": "prototype/media/d2-batch-a/r01/source/cue-manifest.json",
+        "sha256": "d4ebd3b5c87d9fda3ebbaac3d4bc627348a3d7a05540aa4d88fe26bb23e23ca3",
+        "bytes": 4942
+      },
+      {
+        "path": "prototype/media/d2-batch-a/r01/src/content.js",
+        "sha256": "a57d1d24107fe8b4f88369a2bde9e2600ceb415ebb875d706841d427aad6f73b",
+        "bytes": 4353
+      },
+      {
+        "path": "prototype/media/d2-batch-a/r01/src/views.js",
+        "sha256": "3ab1e7b3ff7d16fe88c7896b5db7be44d3d2edfcbbccd48f73182039a2aea2fa",
+        "bytes": 4156
+      },
+      {
+        "path": "prototype/media/d2-batch-a/r01/styles/media.css",
+        "sha256": "7ed9a0eca211509814cb4f994ed5a081412d455ded48a6118be9e2a596373cc7",
+        "bytes": 18126
+      }
+    ],
+    "preview_file": "prototype/?scene=SCN-ENTITY&locale=zh-CN",
+    "poster_file": "prototype/media/d2-batch-a/r01/assets/posters/DMO-A02__panel-first__r01__zh-CN__C1.png",
+    "static_fallback": "prototype/media-static.mjs (all frozen cues) + mainline live records",
+    "locale": [
+      "zh-CN",
+      "en-AU",
+      "en-US"
+    ],
+    "caption_tracks": [],
+    "alt_text_refs": [
+      "portrait_t_alt",
+      "portrait_ops_alt",
+      "diagram_alt_entity",
+      "diagram_alt_enable"
+    ],
+    "motion_mode": "opt_in_controlled_or_static",
+    "controls_supported": [
+      "play",
+      "pause",
+      "previous",
+      "next",
+      "replay",
+      "static",
+      "help"
+    ],
+    "allowed_intents": [],
+    "data_mutation_scope": "none",
+    "licence_or_generation_provenance": "prototype/media/d2-batch-a/r01/source/image-generation.md",
+    "content_status": "approved_sample_direction; synthetic_not_bank_policy",
+    "visual_status": "received_user_selected",
+    "test_status": {
+      "host": "00_governance/media-mainline/verification-results.json",
+      "browser": "prototype/qa/media-mainline/browser-results.json",
+      "source_tests": "Historical sample results in packaged source manifest; not counted as host evidence"
+    },
+    "promotion_status": "integrated_locally_for_review",
+    "known_limitations": [
+      "No iframe/postMessage host command API; callback is sanitized media state only",
+      "Frozen story is not the latest live case record",
+      "Safari/Firefox, native zoom and full assistive-technology audit not run",
+      "No encoded video/audio, production system integration or remote publication"
+    ],
+    "review_owner": "Christina",
+    "review_ref": "User approval + experiments/d2-batch-a-media/MAINLINE_INTEGRATION_HANDOFF.md",
+    "file_size_scope": "Listed source files only; shared dependencies in package-provenance.json"
+  },
+  {
+    "asset_id": "DMO-A03",
+    "variant_id": null,
+    "asset_revision": null,
+    "source_batch": "D2-A",
+    "source_document_revision": "Final v1.0",
+    "scenario_refs": [
+      "SCN-SCOPE",
+      "SCN-ENTITY"
+    ],
+    "beat_refs": [],
+    "diagram_refs": [
+      "DG-SCOPE-A",
+      "DG-ENTITY-A",
+      "DG-ENABLE-A"
+    ],
+    "case_fixture_revision": "D2-A-Final-1.0",
+    "source_snapshot_ref": null,
+    "asset_type": "controlled_demo",
+    "file_format": null,
+    "dimensions": null,
+    "duration": null,
+    "fps": null,
+    "file_size": null,
+    "source_files": [],
+    "preview_file": null,
+    "poster_file": null,
+    "static_fallback": "prototype/batch-a-ui.mjs (HTML object / purpose / result fallback)",
+    "locale": [
+      "zh-CN",
+      "en-AU",
+      "en-US"
+    ],
+    "caption_tracks": [],
+    "alt_text_refs": [],
+    "motion_mode": "static",
+    "controls_supported": [],
+    "allowed_intents": [
+      "focus_requested",
+      "story_beat_requested",
+      "open_product_requested",
+      "return_requested"
+    ],
+    "data_mutation_scope": "none",
+    "licence_or_generation_provenance": null,
+    "content_status": "brief_approved",
+    "visual_status": "not_received",
+    "test_status": "fallback_tested_separately",
+    "promotion_status": "not_selected",
+    "known_limitations": [
+      "No image/video candidate received; no media playback claimed"
+    ],
+    "review_owner": "Christina",
+    "review_ref": null
+  },
+  {
+    "asset_id": "VID-A01",
+    "variant_id": null,
+    "asset_revision": null,
+    "source_batch": "D2-A",
+    "source_document_revision": "Final v1.0",
+    "scenario_refs": [
+      "SCN-SCOPE",
+      "SCN-ENTITY"
+    ],
+    "beat_refs": [],
+    "diagram_refs": [
+      "DG-SCOPE-A",
+      "DG-ENTITY-A",
+      "DG-ENABLE-A"
+    ],
+    "case_fixture_revision": "D2-A-Final-1.0",
+    "source_snapshot_ref": null,
+    "asset_type": "video",
+    "file_format": null,
+    "dimensions": null,
+    "duration": null,
+    "fps": null,
+    "file_size": null,
+    "source_files": [],
+    "preview_file": null,
+    "poster_file": null,
+    "static_fallback": "prototype/batch-a-ui.mjs (HTML object / purpose / result fallback)",
+    "locale": [
+      "zh-CN",
+      "en-AU",
+      "en-US"
+    ],
+    "caption_tracks": [],
+    "alt_text_refs": [],
+    "motion_mode": "static",
+    "controls_supported": [],
+    "allowed_intents": [
+      "focus_requested",
+      "story_beat_requested",
+      "open_product_requested",
+      "return_requested"
+    ],
+    "data_mutation_scope": "none",
+    "licence_or_generation_provenance": null,
+    "content_status": "brief_approved",
+    "visual_status": "not_received",
+    "test_status": "fallback_tested_separately",
+    "promotion_status": "not_selected",
+    "known_limitations": [
+      "No image/video candidate received; no media playback claimed"
+    ],
+    "review_owner": "Christina",
+    "review_ref": null
+  }
+]

@@ -1,0 +1,54 @@
+{
+  "at": "2026-09-07T17:55:18.694Z",
+  "command": "node /Users/christinaliu/Documents/ChatGPT/Australia Bank/clear-to-trade-product/prototype/qa/d5/om-regression/review-regression.mjs",
+  "browser": "152.0.7977.76",
+  "results": [
+    {
+      "ids": [
+        "OM-18",
+        "OM-19",
+        "OM-23"
+      ],
+      "name": "latest-role-return-operating-model",
+      "status": "passed",
+      "screenshot": "prototype/qa/d5/om-regression/host/latest-role-return-operating-model.png",
+      "errors": [],
+      "remote": []
+    },
+    {
+      "ids": [
+        "OM-18",
+        "OM-19",
+        "OM-23"
+      ],
+      "name": "latest-role-return-scenario",
+      "status": "passed",
+      "screenshot": "prototype/qa/d5/om-regression/host/latest-role-return-scenario.png",
+      "errors": [],
+      "remote": []
+    },
+    {
+      "ids": [
+        "OM-18",
+        "OM-19",
+        "OM-23"
+      ],
+      "name": "latest-role-return-journey",
+      "status": "passed",
+      "screenshot": "prototype/qa/d5/om-regression/host/latest-role-return-journey.png",
+      "errors": [],
+      "remote": []
+    },
+    {
+      "ids": [
+        "OM-25",
+        "OM-30"
+      ],
+      "name": "visible-skill-print-and-unmade-sample",
+      "status": "passed",
+      "screenshot": "prototype/qa/d5/om-regression/host/visible-skill-print-and-unmade-sample.png",
+      "errors": [],
+      "remote": []
+    }
+  ]
+}

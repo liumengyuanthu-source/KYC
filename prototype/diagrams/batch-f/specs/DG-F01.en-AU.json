@@ -1,0 +1,214 @@
+{
+  "schema_version": 2,
+  "diagram_type": "workflow",
+  "meta": {
+    "title": "Shared case spine",
+    "locale": "en",
+    "quality_profile": "showcase",
+    "animation": "none",
+    "legend": {
+      "mode": "auto",
+      "entries": {
+        "frontend": {
+          "label": "Read-only explanation"
+        }
+      }
+    }
+  },
+  "lanes": [
+    {
+      "id": "scope",
+      "label": "Scope and parties"
+    },
+    {
+      "id": "assess",
+      "label": "Requirements and work"
+    },
+    {
+      "id": "readiness",
+      "label": "Specialists and readiness"
+    },
+    {
+      "id": "outcome",
+      "label": "Decision and publication"
+    }
+  ],
+  "mainPath": [
+    "F01-case",
+    "F01-party"
+  ],
+  "nodes": [
+    {
+      "id": "F01-case",
+      "lane": "scope",
+      "col": 0,
+      "width": 180,
+      "height": 100,
+      "type": "frontend",
+      "label": "Case / scope",
+      "sublabel": "Current version"
+    },
+    {
+      "id": "F01-party",
+      "lane": "scope",
+      "col": 1,
+      "width": 180,
+      "height": 100,
+      "type": "frontend",
+      "label": "Parties",
+      "sublabel": "Entity and person"
+    },
+    {
+      "id": "F01-authority",
+      "lane": "scope",
+      "col": 2,
+      "width": 180,
+      "height": 100,
+      "type": "frontend",
+      "label": "Authority",
+      "sublabel": "Separate mandate"
+    },
+    {
+      "id": "F01-requirement",
+      "lane": "assess",
+      "col": 0,
+      "width": 180,
+      "height": 100,
+      "type": "frontend",
+      "label": "Requirement",
+      "sublabel": "Purpose and scope"
+    },
+    {
+      "id": "F01-evidence",
+      "lane": "assess",
+      "col": 1,
+      "width": 180,
+      "height": 100,
+      "type": "frontend",
+      "label": "Evidence",
+      "sublabel": "Use assessment"
+    },
+    {
+      "id": "F01-work",
+      "lane": "assess",
+      "col": 2,
+      "width": 180,
+      "height": 100,
+      "type": "frontend",
+      "label": "Work / decision",
+      "sublabel": "Receipt is not sufficiency"
+    },
+    {
+      "id": "F01-specialist",
+      "lane": "readiness",
+      "col": 0,
+      "width": 180,
+      "height": 100,
+      "type": "frontend",
+      "label": "Specialists",
+      "sublabel": "Current conditions"
+    },
+    {
+      "id": "F01-prerequisite",
+      "lane": "readiness",
+      "col": 1,
+      "width": 180,
+      "height": 100,
+      "type": "frontend",
+      "label": "Prerequisites",
+      "sublabel": "All applicable inputs"
+    },
+    {
+      "id": "F01-readiness",
+      "lane": "readiness",
+      "col": 2,
+      "width": 180,
+      "height": 100,
+      "type": "frontend",
+      "label": "Readiness",
+      "sublabel": "Not an authorisation"
+    },
+    {
+      "id": "F01-decision",
+      "lane": "outcome",
+      "col": 1,
+      "width": 180,
+      "height": 100,
+      "type": "frontend",
+      "label": "Human decision",
+      "sublabel": "Scoped authority"
+    },
+    {
+      "id": "F01-publication",
+      "lane": "outcome",
+      "col": 2,
+      "width": 180,
+      "height": 100,
+      "type": "frontend",
+      "label": "Publication",
+      "sublabel": "No trade execution"
+    }
+  ],
+  "edges": [
+    {
+      "from": "F01-case",
+      "to": "F01-party"
+    },
+    {
+      "from": "F01-party",
+      "to": "F01-authority"
+    },
+    {
+      "from": "F01-party",
+      "to": "F01-requirement"
+    },
+    {
+      "from": "F01-requirement",
+      "to": "F01-evidence"
+    },
+    {
+      "from": "F01-evidence",
+      "to": "F01-work"
+    },
+    {
+      "from": "F01-work",
+      "to": "F01-specialist"
+    },
+    {
+      "from": "F01-specialist",
+      "to": "F01-prerequisite"
+    },
+    {
+      "from": "F01-prerequisite",
+      "to": "F01-readiness"
+    },
+    {
+      "from": "F01-readiness",
+      "to": "F01-decision"
+    },
+    {
+      "from": "F01-decision",
+      "to": "F01-publication"
+    },
+    {
+      "from": "F01-authority",
+      "to": "F01-decision",
+      "label": "Authority basis",
+      "role": "branch",
+      "via": [
+        [
+          720,
+          136
+        ],
+        [
+          720,
+          532
+        ],
+        [
+          346,
+          532
+        ]
+      ]
+    }
+  ]
+}

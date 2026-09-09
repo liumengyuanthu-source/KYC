@@ -1,0 +1,297 @@
+CLEAR TO TRADE / ROUND A
+
+Journey & first vertical slice
+Internal review · synthetic data · not bank-approved policy
+DEMO-CTT-001 · en-AU · Case revision 1 · IA v0.4 / D2 v0.1
+
+
+
+
+Five reading stages: S1 Initiate & scope / S2 Determine & source / S3 Screen & assess / S4 Assure &
+resolve / S5 Clear to trade
+
+Both Current and Target are printed for all six authored scenarios, including content outside the screen
+viewport. Nine additional scenarios are listed as structural scope.
+
+
+
+
+01 · SCN-REQUIREMENTS · S2 · M2.1–M2.5
+
+Make requirements explicit
+Current
+Determine AML and non-AML requirements, exceptions and risk indicators for the relationship.
+
+Target
+Prepare a versioned requirement set. Show the subject, purpose and basis of each requirement; retain unknown
+applicability.
+
+Wait / input: Scope and policy context must be known. Exceptions require a designated reviewer.
+Human boundary: Confirm the demo requirement set. No client policy is inferred.
+Expected result: Requirements confirmed for this synthetic scope; evidence still needs assessment.
+SRC-007 · M2.1–M2.5 / SRC-010 §6 · Design hypothesis + synthetic record · J-M2-01
+02 · SCN-SOURCE · S2 · M3.1–M3.2
+
+Use evidence already available
+Current
+Search public and commercial sources, then identify residual gaps. This already exists in the Current map.
+
+Target
+Link a source item to a specific subject, requirement and purpose, with its original version intact.
+
+Wait / input: Access permission, source provenance and purpose-specific sufficiency.
+Human boundary: Review proposed reuse. One accepted file does not satisfy every requirement.
+Expected result: Entity identity may be supported; screening disambiguation remains a separate use.
+SRC-007 · M3.1–M3.2 / SRC-010 §6 · Design hypothesis + synthetic record · J-M3-01
+
+
+
+
+03 · SCN-GAP · S2 · M2.5 · M3.2–M3.3
+
+Ask only for remaining gaps
+Current
+Issue requirements and request outstanding information from the client.
+
+Target
+Consolidate only unresolved facts into a purpose-specific request, with an owner and response link.
+
+Wait / input: A permitted sender confirms the request; the review then waits for the named response.
+Human boundary: Review the missing fact, purpose and response owner before simulating release.
+Expected result: Request recorded locally. No email is sent. Receipt returns evidence to review.
+SRC-007 · M2.5 · M3.2–M3.3 / SRC-010 §6 · Design hypothesis + synthetic record · J-M3-02, J-M3-03
+04 · SCN-VALIDATE · S2 · M3.4–M3.5
+
+Assess evidence for its purpose
+Current
+Capture and validate evidence; maintain outstanding gaps and the sourcing trail.
+
+Target
+Keep the artifact and its use assessment separate. A received supplement needs its own reviewed assessment.
+
+Wait / input: The received supplement and a reasoned sufficiency assessment for the screening purpose.
+Human boundary: A configured demo reviewer records sufficiency with rationale; bank authority remains open.
+Expected result: Evidence use assessed. Screening still requires a separate human disposition.
+SRC-007 · M3.4–M3.5 / SRC-010 §6 · Design hypothesis + synthetic record · J-M3-04
+
+
+
+
+05 · SCN-MATCH · S3 · M4.5–M4.7
+
+Resolve a possible match
+Current
+Adjudicate possible hits, assess materiality and record the screening outcome.
+
+Target
+Prepare subject-to-record comparisons and evidence-use links. A human records the disposition or requests more
+information.
+
+Wait / input: Sufficient current evidence, rationale and explicit simulated authority. Similarity is not a decision.
+Human boundary: Only the demo reviewer may record disposition. No autonomous approval or automatic EDD.
+Expected result: This finding is resolved for its input version. Legal, Credit and final QA remain open.
+SRC-007 · M4.5–M4.7 / SRC-010 §6 · Design hypothesis + synthetic record · SCN-MATCH
+06 · SCN-READINESS · S5 · M8.1
+
+Know exactly what remains
+Current
+Confirm completion of all applicable clearance prerequisites.
+
+Target
+Derive a versioned snapshot from explicit conditions, each with its own owner, reason and next action.
+
+Wait / input: Legal execution, Credit conditions, QA review and any unresolved applicability.
+Human boundary: Final bank authority is not configured. Publishing and real trades are outside this slice.
+Expected result: Not ready is an explainable result, not a percentage. Authorisation and publication stay separate.
+SRC-007 · M8.1 / SRC-010 §6 · Design hypothesis + synthetic record · SCN-READINESS
+
+
+
+
+Additional journey structure
+SCN-SCOPE / M0 · M1 — Define the relationship · Not interactive in Round A
+
+SCN-ENTITY / M1 · M3.4 — Establish entity & authority · Not interactive in Round A
+
+SCN-POPULATION / M4.1–M4.4 — Screen the right subjects · Not interactive in Round A
+
+SCN-EDD / M5 — Assess elevated risk, if applicable · Not interactive in Round A
+
+SCN-QA / M6 — Close a specific quality gap · Not interactive in Round A
+
+SCN-CONFLICTS / M1 → M7 — Start conflicts early · Not interactive in Round A
+
+SCN-LEGAL / C1 — Complete applicable agreements · Not interactive in Round A
+
+SCN-CREDIT / C2 — Resolve credit conditions · Not interactive in Round A
+
+SCN-PUBLISH / M8.2–M8.5 — Publish the scoped outcome · Not interactive in Round A
+Readiness proof — not ready
+Evidence — Review required · KYC Operations
+Purpose-specific evidence review remains open.
+
+Screening — Review required · Financial Crime reviewer
+A possible match needs evidence and a human decision.
+
+Legal — Awaiting execution · Legal
+The applicable agreement is not yet executed.
+
+Credit — Condition pending · Credit
+An independent Credit condition remains unresolved.
+
+QA — Pending final review · QA
+Final review and sign-off remain pending.
+
+Conflicts — Condition satisfied · Conflicts
+An independent synthetic outcome is retained.
+
+EDD — Unknown · Financial Crime reviewer
+Applicability unknown; a separate risk rationale is required.
+
+Authority unconfirmed. Publication not requested. No transaction is executed.
+Current
+
+            1 Scope                       2 Evidence                    3 Assess                                          4 Assure                                      5 Clear to trade
+
+
+                                                                                                 Review inputs
+     01 / KYC · evidence and quality
+
+
+
+      Scope + identity                 Requirements                   Screening                                      Quality review                                                               Publish status
+      M0 / M1 · case inputs        M2 / M3 · source + verify   M4 · findings + disposition                         M6 · sufficiency + gaps                                                      M8.3–.5 · record + notify
+
+
+                                                                                If applicable
+
+
+
+
+     02 / Conditional due diligence
+
+
+                                                                                                       Required outcome
+                                                                          EDD
+                                                                M5 · risk / applicability
+
+
+
+
+     03 / Parallel · own input and authority
+
+
+                                                                                                Agreement data
+                                         Conflicts                      Credit                                             Legal
+                                      M7 · early from M1          C2 · applicable terms                            C1 · review + agreement
+
+
+                 Early M1 inputs
+
+
+
+     04 / Conditions · authority · publication
+                                                                                                                                                                                                       Authorised
+
+
+                                                                                                                                                                       All applicable met
+                                                                                                                                             Conditions converge                                      Authorise
+                                                                                                                                         M8.1 / .2 · linked outcomes                        Explicit authority required
+
+
+
+
+Archify 2.17 · static host embed · SRC-007, slides 1–2 · fields and authority proposed. Open diagram viewer                                                                                 ↗
+Target
+
+            1 Scope                       2 Evidence                    3 Assess                                          4 Assure                                      5 Clear to trade
+
+
+                                                                                                 Review inputs
+     01 / KYC · evidence and quality
+
+
+
+      Scope + identity                 Requirements                   Screening                                      Quality review                                                               Publish status
+      M0 / M1 · case inputs        M2 / M3 · source + verify   M4 · findings + disposition                         M6 · sufficiency + gaps                                                      M8.3–.5 · record + notify
+
+
+                                                                                If applicable
+
+
+
+
+     02 / Conditional due diligence
+
+
+                                                                                                       Required outcome
+                                                                          EDD
+                                                                M5 · risk / applicability
+
+
+
+
+     03 / Parallel · own input and authority
+
+
+                                                                                                Agreement data
+                                         Conflicts                      Credit                                             Legal
+                                      M7 · early from M1          C2 · applicable terms                            C1 · review + agreement
+
+
+                 Early M1 inputs
+
+
+
+     04 / Conditions · authority · publication
+                                                                                                                                                                                                       Authorised
+
+
+                                                                                                                                                                       All applicable met
+                                                                                                                                             Conditions converge                                      Authorise
+                                                                                                                                         M8.1 / .2 · linked outcomes                        Explicit authority required
+
+
+
+
+Archify 2.17 · static host embed · SRC-007, slides 1–2 · fields and authority proposed. Open diagram viewer                                                                                 ↗
+Screening collaboration
+
+
+      01 / Product · preparation
+
+
+
+        Possible match                Compare evidence
+         Synthetic finding             Subject + purpose
+
+
+
+
+      02 / Human · demo authority
+
+
+                                                                                   Insufficient
+                                                            Human review                           Awaiting input
+                                                           Evidence + rationale                    Specific evidence gap
+
+
+
+
+      03 / Shared case · conditions
+
+
+                                                                      Sufficient + authorised
+                                                                                                  Record disposition       Still not ready
+                                                                                                    Local outcome only     Legal · Credit · QA
+
+
+
+
+Archify 2.17 · static host embed · SRC-007, slides 1–2 · fields and authority proposed. Open diagram viewer                                ↗
+
+
+Open validation questions
+Validate source permissions, requirement applicability, evidence sufficiency, human authority, EDD rationale and final
+QA/publication mandates. No client KPI, policy threshold or production integration is assumed.
+

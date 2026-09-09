@@ -1,0 +1,107 @@
+{
+  "schema_version": 2,
+  "diagram_type": "workflow",
+  "meta": {
+    "title": "Possible match review · Current",
+    "locale": "en",
+    "quality_profile": "showcase",
+    "animation": "none"
+  },
+  "lanes": [
+    {
+      "id": "upper",
+      "label": "Independent assessment"
+    },
+    {
+      "id": "main",
+      "label": "Human work and judgement"
+    },
+    {
+      "id": "lower",
+      "label": "Unresolved, protection and return",
+      "variant": "exception"
+    }
+  ],
+  "mainPath": [
+    "context",
+    "evidence",
+    "decision",
+    "impact"
+  ],
+  "nodes": [
+    {
+      "id": "context",
+      "col": 0,
+      "lane": "main",
+      "type": "frontend",
+      "label": "Result and protection",
+      "width": 240
+    },
+    {
+      "id": "evidence",
+      "col": 1,
+      "lane": "main",
+      "type": "frontend",
+      "label": "Comparison and exact gap",
+      "width": 240
+    },
+    {
+      "id": "decision",
+      "col": 2,
+      "lane": "main",
+      "type": "frontend",
+      "label": "Human authority / record",
+      "width": 240
+    },
+    {
+      "id": "referral",
+      "col": 1,
+      "lane": "lower",
+      "type": "frontend",
+      "label": "Refer or stay unresolved",
+      "width": 240
+    },
+    {
+      "id": "impact",
+      "col": 3,
+      "lane": "main",
+      "type": "frontend",
+      "label": "Impact and open conditions",
+      "width": 240
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge0",
+      "from": "context",
+      "to": "evidence",
+      "label": "Bounded preparation"
+    },
+    {
+      "id": "edge1",
+      "from": "evidence",
+      "to": "decision",
+      "label": "Use / versions / authority"
+    },
+    {
+      "id": "edge2",
+      "from": "decision",
+      "to": "impact",
+      "label": "Recorded event only"
+    },
+    {
+      "id": "edge3",
+      "from": "context",
+      "to": "referral",
+      "label": "Urgent / specialist concern",
+      "role": "branch"
+    },
+    {
+      "id": "edge4",
+      "from": "referral",
+      "to": "impact",
+      "label": "Unresolved, not exclusion",
+      "role": "branch"
+    }
+  ]
+}

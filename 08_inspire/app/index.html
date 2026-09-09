@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Clear-to-Trade Portal — Home</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Roboto+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="home.css?v=request-table">
+</head>
+<body data-page="home">
+<div class="frame">
+
+  <!-- top bar -->
+  <header class="topbar">
+    <a class="brand" href="index.html">
+      <span class="brand-mark">CT</span>
+      <span class="brand-name">Clear-to-Trade Portal<small>Client Workspace</small></span>
+    </a>
+    <div class="topbar-spacer"></div>
+    <button class="icon-btn" aria-label="Notifications" onclick="toast('2 new updates from Aria')">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#54453f" stroke-width="1.8" stroke-linecap="round"><path d="M18 8a6 6 0 1 0-12 0c0 7-3 8-3 8h18s-3-1-3-8"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/></svg>
+      <span class="dot"></span>
+    </button>
+    <div class="avatar" title="Annette Black">AB</div>
+  </header>
+
+  <div class="shell">
+    <!-- sidebar -->
+    <nav class="sidebar" aria-label="Main navigation">
+      <a class="side-link active" aria-current="page" href="index.html"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg><span class="tip">Home</span></a>
+      <a class="side-link" href="intake.html"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg><span class="tip">New request</span></a>
+      <a class="side-link" href="case.html"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><path d="M9 17l-5-5 5-5M15 7l5 5-5 5"/></svg><span class="tip">Case tracker</span></a>
+      <a class="side-link" href="documents.html"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6"/></svg><span class="tip">Documents</span></a>
+      <a class="side-link" href="edd.html"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><path d="M12 3 4 7v5c0 5 3.4 8 8 9 4.6-1 8-4 8-9V7z"/><path d="m9 12 2 2 4-4"/></svg><span class="tip">EDD info</span></a>
+      <div class="side-spacer"></div>
+      <a class="side-link" href="#workspace-intro" id="replay-intro" aria-label="Help: replay workspace introduction"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M9.5 9a2.5 2.5 0 0 1 5 .3c0 1.7-2.5 2-2.5 3.7M12 17h.01"/></svg><span class="tip">Help</span></a>
+    </nav>
+
+    <main class="main home-main" id="main-content">
+      <div class="home-content">
+        <header class="home-heading">
+          <div><h1>Welcome back, Annette.</h1><p>Your daily workspace, prepared by Aria.</p></div>
+          <a class="btn btn-ghost" href="intake.html">New request</a>
+        </header>
+
+        <section class="daily-brief" aria-labelledby="brief-title">
+          <div class="brief-label"><span class="mini-orb" aria-hidden="true"></span><span>ARIA BRIEFING</span><span id="visit-context">Current snapshot</span></div>
+          <div class="brief-content"><div><h2 id="brief-title">Your review queue</h2><p id="brief-copy">Open a task to see what Aria prepared and what needs your input.</p></div></div>
+          <div class="review-queue"><div class="review-queue-tabs" role="group" aria-label="Human task owner"><button type="button" id="your-review-tasks" aria-pressed="true">For you</button><button type="button" id="bank-review-tasks" aria-pressed="false">Bank reviewers</button></div><div id="review-task-list"></div></div>
+          <div class="brief-bottom"><p id="brief-update" role="status">Harbourview is with a specialist. No action requested from you.</p><span>Local prototype</span></div>
+        </section>
+        <section class="stage-workspace" aria-labelledby="requests-title">
+          <div class="requests-heading"><h2 id="requests-title">Your requests</h2><span class="stage-caption" id="portfolio-summary"></span></div>
+          <div class="portfolio-tools"><div class="request-view-switch" role="group" aria-label="Request view"><button type="button" id="show-all" aria-pressed="true" aria-controls="request-list">All requests</button><button type="button" id="browse-stages" aria-pressed="false" aria-controls="stage-nav request-list">Browse 8 stages</button></div><label class="case-search">Find a request<input id="case-search" type="search" placeholder="Company or case ID"></label><button type="button" id="needs-input" aria-pressed="false">Needs you</button></div>
+          <nav class="stage-nav" aria-label="Request stages" id="stage-nav" hidden></nav>
+          <p class="stage-note">Choose a stage to filter. Select a case to see its own next steps and Aria activity.</p>
+          <div class="stage-header"><div><span id="stage-code" class="stage-caption"></span><h2 id="stage-title"></h2><p id="stage-description"></p></div></div>
+          <div class="stage-columns"><div>
+            <div class="grid-2 request-cards" id="request-list">
+              <div class="case-card cc-neutral" data-request="active" data-stage="5">
+                <div class="cc-top"><span class="badge-mono solid">OB-2026-0147</span><span class="chip chip-wait"><span class="cdot"></span>2 inputs outstanding</span></div>
+                <h3>Meridian Holdings Ltd — New relationship</h3>
+                <div class="cc-meta">HK booking entity · Enhanced DD · FX &amp; Trade Finance</div>
+
+                <div class="cc-foot">
+                  <span class="badge-mono">Awaiting EDD information</span>
+                  <a class="btn btn-primary btn-sm" href="case.html">Open
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+                </div>
+              </div>
+              <div class="case-card cc-neutral" data-request="active" data-stage="5" data-needs="false">
+                <div class="cc-top"><span class="badge-mono solid">DEMO-EDD-002</span><span class="chip">With specialist</span></div>
+                <h3>Harbourview Industries — New relationship</h3>
+                <div class="cc-meta">Demo case · Enhanced DD · FX forwards</div>
+                <div class="cc-foot"><span class="badge-mono">Evidence submitted · review pending</span></div>
+              </div>
+              <div class="case-card cc-neutral" data-request="active" data-stage="7">
+                <div class="cc-top"><span class="badge-mono solid">OB-2026-0151</span><span class="chip chip-run"><span class="cdot"></span>Agent working</span></div>
+                <h3>Kestrel Capital Partners — Product extension</h3>
+                <div class="cc-meta">SG booking entity · Standard DD · + Derivatives (ISDA)</div>
+
+                <div class="cc-foot">
+                  <span class="badge-mono">Legal preparation · provisional stage</span>
+                  <details class="request-detail"><summary>Details</summary><p>Legal drafting is in progress. No action needed.</p></details>
+                </div>
+              </div>
+              <div class="case-card cc-neutral" data-request="done" data-stage="8" hidden>
+                <div class="cc-top"><span class="badge-mono solid">OB-2026-0093</span><span class="chip chip-ok"><span class="cdot"></span>Cleared to trade</span></div>
+                <h3>Solana Trading Co. — Annual refresh</h3>
+                <div class="cc-meta">HK booking entity · Standard DD · completed in 9 days</div>
+
+                <div class="cc-foot">
+                  <span class="badge-mono">Cleared 28 Aug 2026</span>
+                  <details class="request-detail"><summary>Details</summary><p>Cleared 28 Aug 2026; completed in 9 days.</p></details>
+                </div>
+              </div>
+              <div class="case-card cc-neutral" data-request="draft" data-stage="1" hidden>
+                <div class="cc-top"><span class="badge-mono solid">DRAFT</span><span class="chip chip-wait"><span class="cdot"></span>Draft · 4d left</span></div>
+                <h3>Unnamed request — Material change</h3>
+                <div class="cc-meta">Ownership change · started 4 Sep · step 3 of 6 saved</div>
+
+                <div class="cc-foot">
+                  <span class="badge-mono">Auto-saved</span>
+                  <a class="btn btn-primary btn-sm" href="intake.html">Resume
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+                </div>
+              </div>
+            </div>
+            <div class="stage-empty" id="stage-empty" hidden>No matching requests.<br><span>Try another stage, clear the search, or turn off “Needs you”.</span></div>
+
+          </div>
+          <div class="case-context"><section class="gate-card" aria-labelledby="gate-title"><h3 id="gate-title">Next step</h3><p id="gate-next"></p><details><summary>Conditions &amp; expected review</summary><ul id="stage-gates"></ul><p class="prediction-note">Expected human review · planning estimate, not approval.</p><div id="stage-human"></div></details></section><aside class="agent-card execution-panel" aria-labelledby="execution-title">
+            <div class="agent-head"><span class="agent-orb" aria-hidden="true"></span><div><h2 class="agent-name" id="execution-title">Execution log</h2><div class="agent-sub"><span class="live" aria-hidden="true"></span>Demo snapshot · Aria</div></div></div>
+            <p id="execution-context" class="execution-context"></p><p id="execution-eta" hidden></p>
+            <ol class="agent-feed" id="execution-items" aria-label="Execution records" tabindex="0"></ol>
+            <details><summary>How Aria helps here</summary><p id="stage-ai"></p></details>
+            <p class="execution-boundary">Aria prepares the evidence. Authorized reviewers make the decisions.</p>
+          </aside>
+
+          </div>
+          </div>
+        </section>
+
+      </div>
+    </main>
+  </div>
+</div>
+
+<script src="app.js"></script>
+<script src="home.js?v=request-table"></script>
+<dialog id="prepared-dialog" aria-labelledby="prepared-title">
+  <form id="prepared-form"><header class="prepared-head"><div><span class="stage-caption">MERIDIAN · OB-2026-0147</span><h2 id="prepared-title">Complete the missing explanation</h2></div><button type="button" id="close-prepared" aria-label="Close prepared request">×</button></header>
+  <p class="prepared-intro">Aria organized what to answer. No financial facts have been inferred or filled in.</p>
+  <section class="prepared-source"><h3>Already available</h3><p>Applicant: Meridian Holdings Ltd · New relationship · HK booking entity · FX &amp; Trade Finance.</p><a href="case.html">View case context</a><p>Source: current prototype case record. No supporting wealth narrative is recorded here.</p></section>
+  <section class="prepared-guidance"><h3>What is still needed</h3><p>Explain how the wealth was generated, then identify the source of money for this relationship. These are assessed separately.</p></section>
+  <label for="wealth-answer">How was the wealth generated?</label><textarea id="wealth-answer" required placeholder="Describe the activity, period and evidence that supports the explanation."></textarea>
+  <label for="funds-answer">Where will the funds come from?</label><textarea id="funds-answer" required placeholder="Identify the source and origin of the incoming funds, and the supporting evidence."></textarea>
+  <p class="prepared-help">Aria’s writing prompts are guidance, not evidence. Leave unknown facts for clarification.</p>
+  <label class="confirm-answer"><input id="answer-confirm" type="checkbox" required> I have checked the information I entered.</label>
+  <p class="prepared-help">Prototype only: saves to this browser; nothing is sent to the bank. Submission records receipt, not acceptance. The director register remains a separate task.</p>
+  <p id="prepared-feedback" role="status"></p>
+  <footer><button type="button" class="btn btn-ghost" id="save-prepared">Save draft</button><button type="submit" class="btn btn-primary">Submit demo response</button></footer></form>
+</dialog>
+<script src="daily.js"></script>
+<section id="workspace-intro" class="region-coach" role="region" aria-labelledby="intro-title" hidden>
+  <div class="coach-top"><span id="intro-step-label"></span><button type="button" id="intro-skip">Skip</button></div>
+  <h2 id="intro-title"></h2><p id="intro-description"></p>
+  <footer><button type="button" id="intro-back">Back</button><button type="button" id="intro-next">Next</button></footer>
+</section>
+<script src="intro.js"></script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+{
+  "at": "2026-09-08T00:19:50.391Z",
+  "results": [
+    {
+      "name": "Role activities have real scenario entry controls",
+      "status": "passed"
+    },
+    {
+      "name": "ROLE-CLIENT: role-specific activity opens without changing product authority",
+      "status": "passed"
+    },
+    {
+      "name": "ROLE-RM: role-specific activity opens without changing product authority",
+      "status": "passed"
+    },
+    {
+      "name": "ROLE-KYCOPS: role-specific activity opens without changing product authority",
+      "status": "passed"
+    },
+    {
+      "name": "ROLE-QA: role-specific activity opens without changing product authority",
+      "status": "passed"
+    },
+    {
+      "name": "ROLE-FINCRIME: role-specific activity opens without changing product authority",
+      "status": "passed"
+    },
+    {
+      "name": "ROLE-CONFLICTS: role-specific activity opens without changing product authority",
+      "status": "passed"
+    },
+    {
+      "name": "ROLE-LEGAL: role-specific activity opens without changing product authority",
+      "status": "passed"
+    },
+    {
+      "name": "ROLE-CREDIT: role-specific activity opens without changing product authority",
+      "status": "passed"
+    },
+    {
+      "name": "All 30 role activities open their mapped shared scene and return without business writes",
+      "status": "passed"
+    },
+    {
+      "name": "Current/Target and bilingual switching preserve selected role activity and business data",
+      "status": "passed"
+    },
+    {
+      "name": "Escape restores horizontal position and focus to launching activity",
+      "status": "passed"
+    },
+    {
+      "name": "Keyboard Enter opens activity and Escape closes",
+      "status": "passed"
+    },
+    {
+      "name": "Full Journey print includes all roles, both comparisons and adjacent pains",
+      "status": "passed"
+    },
+    {
+      "name": "Existing shared scene and Product return retain the original role activity",
+      "status": "passed"
+    },
+    {
+      "name": "Mobile has operable role activities without whole-page horizontal overflow",
+      "status": "passed"
+    },
+    {
+      "name": "Read-only journey actions emit no business changes or browser errors",
+      "status": "passed"
+    },
+    {
+      "name": "Save / Discard / Stay still guard product edits entered from a role activity",
+      "status": "passed"
+    },
+    {
+      "name": "Touch device can tap a role activity and scroll the horizontal journey",
+      "status": "passed"
+    },
+    {
+      "name": "Preview link opens Journey from saved Product without resetting the case",
+      "status": "passed"
+    }
+  ],
+  "errors": []
+}

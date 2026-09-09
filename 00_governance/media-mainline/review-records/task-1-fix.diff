@@ -1,0 +1,36 @@
+# Component fix round 1: print visibility + help semantics
+diff --git a/.superpowers/sdd/2026-09-07-media-mainline/review-base/prototype/batch-a-media.mjs b/prototype/batch-a-media.mjs
+index a413842..4b5a5f0 100644
+--- a/.superpowers/sdd/2026-09-07-media-mainline/review-base/prototype/batch-a-media.mjs
++++ b/prototype/batch-a-media.mjs
+@@ -206,13 +206,13 @@ export async function mountMedia(element, options = {}) {
+       <header class="case-strip"><div><span>DEMO-CTT-001</span><b>Entity A <small>/ FX forward</small></b></div><span class="read-only">${t('read_only')}</span><span class="status readiness-head">${t('not_ready')}</span><div><span>${t('booking')}</span><b>${t('not_provided')}</b></div><div><span>${t('eligibility')}</span><b>${t('not_assessed')}</b></div></header>
+       <div class="stage-body">
+         <aside class="people"><div class="portrait"><img src="${new URL('assets/personas/MED-A-PER-T__editorial__r01__4x5.webp', BUNDLE_ROOT).href}" alt="${t('portrait_t_alt')}"><span class="photo-label">SYNTHETIC</span></div><div class="person-identity"><h3>Person T</h3><p>${t('person_role')}</p><small>${t('person_claim')}</small></div><div class="ops"><img src="${new URL('assets/personas/MED-A-PER-OPS__editorial__r01__1x1.webp', BUNDLE_ROOT).href}" alt="${t('portrait_ops_alt')}"><div><b>${t('ops')}</b><small>${t('ops_note')}</small></div></div></aside>
+-        <div class="work-surface"><div class="surface-heading"><div class="surface-title"><h3 data-surface-title></h3><span class="help-wrap"><button type="button" data-help aria-label="${state.asset === 'DMO-A01' ? t('scope_help') : t('authority_help')}" aria-expanded="false">i</button><span class="help-content" data-help-content hidden role="tooltip"><span data-help-text></span><button type="button" data-help-close>${t('close_help')}</button></span></span></div><span class="status" data-scope-badge></span></div><div data-business-view></div></div>
++        <div class="work-surface"><div class="surface-heading"><div class="surface-title"><h3 id="media-surface-title" data-surface-title></h3><span class="help-wrap"><button type="button" data-help aria-label="${t('help_label')}" aria-expanded="false" aria-controls="media-help-dialog">i</button><span id="media-help-dialog" class="help-content" data-help-content hidden role="dialog" aria-labelledby="media-surface-title" aria-describedby="media-help-text"><span id="media-help-text" data-help-text></span><button type="button" data-help-close>${t('close_help')}</button></span></span></div><span class="status" data-scope-badge></span></div><div data-business-view></div></div>
+       </div>
+       <footer class="case-result"><div><span class="blocked-dot"></span><strong>${t('not_ready')}</strong><span data-result-reason></span></div><small>${t('publication')}</small></footer>
+     </section>
+     <section class="story-panel"><nav class="cue-controls" data-media-controls aria-label="${t('cue')}">${cues.map((cue, index) => `<button type="button" data-beat-index="${index}" aria-label="${cue.id}: ${t(cue.title)}">${String(index + 1).padStart(2, '0')} · ${t(cue.title)}</button>`).join('')}</nav><div class="story-commentary"><div><span data-cue-id></span><b data-cue-title></b><p data-cue-description></p></div><div class="actor"><span data-actor-label></span><small data-actor-note></small></div></div><div class="focus-chips" data-focus-chips aria-label="${t('cue')}"></div><p class="notice" data-notice role="status"></p></section>
+     <details class="diagram-section" open><summary>${t('relations')} <small data-diagram-id></small></summary><p data-diagram-description></p><div class="diagram-host"><img data-diagram alt=""></div><div class="diagram-fallback" data-diagram-fallback hidden><p>${t('diagram_fallback')}</p><div data-fallback-records></div></div></details>
+-    <details class="static-story"><summary>${t('overview')}</summary><div class="static-grid">${cues.map(cue => `<article><b>${cue.id} · ${t(cue.title)}</b><p>${t(cue.description)}</p></article>`).join('')}</div><p><strong>${t('not_ready')}</strong> · ${state.asset === 'DMO-A01' ? t('result_scope') : t('result_authority')}</p><p>${t('synthetic')} · ${t('publication')}</p></details>
++    <section class="static-story" aria-labelledby="static-story-heading"><h3 id="static-story-heading">${t('overview')}</h3><div class="static-grid">${cues.map(cue => `<article><b>${cue.id} · ${t(cue.title)}</b><p>${t(cue.description)}</p></article>`).join('')}</div><p><strong>${t('not_ready')}</strong> · ${state.asset === 'DMO-A01' ? t('result_scope') : t('result_authority')}</p><p>${t('synthetic')} · ${t('publication')}</p></section>
+   </section>`;
+   const template = document.createElement('template');
+   template.innerHTML = markup;
+diff --git a/.superpowers/sdd/2026-09-07-media-mainline/review-base/prototype/batch-a-media.css b/prototype/batch-a-media.css
+index bce5871..88d778e 100644
+--- a/.superpowers/sdd/2026-09-07-media-mainline/review-base/prototype/batch-a-media.css
++++ b/prototype/batch-a-media.css
+@@ -143,7 +143,9 @@ h2, h3, p { margin-top: 0; }
+ .notice { min-height: 16px; margin: 8px 0 0; color: #825823; font-size: 9px; }
+ 
+ .diagram-section, .static-story { padding: 12px 15px; margin-top: 12px; border: 1px solid #cfdeea; border-radius: 9px; background: #fff; }
+-.diagram-section summary, .static-story summary { color: var(--media-navy); font-size: 11px; font-weight: 500; cursor: pointer; }
++.diagram-section summary, .static-story h3 { color: var(--media-navy); font-size: 11px; font-weight: 500; }
++.diagram-section summary { cursor: pointer; }
++.static-story h3 { margin: 0; }
+ .diagram-section summary small { float: right; color: var(--media-muted); font-size: 8px; font-weight: 400; }
+ .diagram-section > p { margin: 10px 0 7px; color: var(--media-muted); font-size: 9px; }
+ .diagram-host img { display: block; width: 100%; height: auto; max-height: 390px; object-fit: contain; }

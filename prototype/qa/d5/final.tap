@@ -1,0 +1,64 @@
+TAP version 13
+# Subtest: D5U-07 never-started local result does not borrow finding queue timestamp
+ok 1 - D5U-07 never-started local result does not borrow finding queue timestamp
+  ---
+  duration_ms: 13.723458
+  type: 'test'
+  ...
+# Subtest: D5U-13 a basis string without confirmed target kind cannot certify overdue
+ok 2 - D5U-13 a basis string without confirmed target kind cannot certify overdue
+  ---
+  duration_ms: 0.088292
+  type: 'test'
+  ...
+# Subtest: D5U-37 reading every group never writes business state
+ok 3 - D5U-37 reading every group never writes business state
+  ---
+  duration_ms: 39.869125
+  type: 'test'
+  ...
+# Subtest: D5U-16 later intake quarantine invalidates current-assessment next action
+ok 4 - D5U-16 later intake quarantine invalidates current-assessment next action
+  ---
+  duration_ms: 30.098084
+  type: 'test'
+  ...
+# Subtest: D5U-08 independent Sydney residence oracle totals five hours, not five hours human work
+ok 5 - D5U-08 independent Sydney residence oracle totals five hours, not five hours human work
+  ---
+  duration_ms: 0.801792
+  type: 'test'
+  ...
+# Subtest: D5U-07 missing event time does not become page-open time
+ok 6 - D5U-07 missing event time does not become page-open time
+  ---
+  duration_ms: 0.063083
+  type: 'test'
+  ...
+# Subtest: D5U-29 finished historical work does not accumulate today waiting
+ok 7 - D5U-29 finished historical work does not accumulate today waiting
+  ---
+  duration_ms: 0.515292
+  type: 'test'
+  ...
+# Subtest: D5U-11 localisation changes formatting, not Sydney timestamps or calendar
+ok 8 - D5U-11 localisation changes formatting, not Sydney timestamps or calendar
+  ---
+  duration_ms: 9.296542
+  type: 'test'
+  ...
+# Subtest: D5U-33 internal, stale and unreviewed estimates cannot become client commitments
+ok 9 - D5U-33 internal, stale and unreviewed estimates cannot become client commitments
+  ---
+  duration_ms: 0.129333
+  type: 'test'
+  ...
+1..9
+# tests 9
+# suites 0
+# pass 9
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 122.057875

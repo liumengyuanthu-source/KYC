@@ -1,0 +1,100 @@
+{
+  "schema_version": 2,
+  "diagram_type": "workflow",
+  "meta": {
+    "title": "Define the relationship",
+    "locale": "en",
+    "quality_profile": "showcase",
+    "animation": "none"
+  },
+  "lanes": [
+    {
+      "id": "request",
+      "label": "Reported request"
+    },
+    {
+      "id": "review",
+      "label": "Human review · synthetic"
+    },
+    {
+      "id": "open",
+      "label": "Unresolved context"
+    }
+  ],
+  "mainPath": [
+    "request",
+    "group",
+    "entity",
+    "scope"
+  ],
+  "nodes": [
+    {
+      "id": "request",
+      "lane": "request",
+      "col": 0,
+      "type": "external",
+      "label": "FX forward request",
+      "sublabel": "USD procurement risk",
+      "width": 190
+    },
+    {
+      "id": "group",
+      "lane": "request",
+      "col": 1,
+      "type": "external",
+      "label": "Group A",
+      "sublabel": "Display name, not entity ID",
+      "width": 200
+    },
+    {
+      "id": "entity",
+      "lane": "review",
+      "col": 2,
+      "type": "backend",
+      "label": "Entity A · Australia",
+      "sublabel": "Proposed counterparty",
+      "width": 200
+    },
+    {
+      "id": "scope",
+      "lane": "review",
+      "col": 3,
+      "type": "backend",
+      "label": "Working scope",
+      "sublabel": "Versioned human record",
+      "width": 190
+    },
+    {
+      "id": "unknown",
+      "lane": "open",
+      "col": 3,
+      "type": "external",
+      "label": "Still not ready",
+      "sublabel": "Booking / eligibility unknown",
+      "width": 220
+    }
+  ],
+  "edges": [
+    {
+      "from": "request",
+      "to": "group",
+      "label": "describes"
+    },
+    {
+      "from": "group",
+      "to": "entity",
+      "label": "RM clarifies"
+    },
+    {
+      "from": "entity",
+      "to": "scope",
+      "label": "record"
+    },
+    {
+      "from": "scope",
+      "to": "unknown",
+      "label": "retains gaps",
+      "variant": "dashed"
+    }
+  ]
+}

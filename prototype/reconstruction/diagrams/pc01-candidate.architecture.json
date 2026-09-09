@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {"title": "要求确定 · Current 工作结构", "locale": "zh-CN", "quality_profile": "showcase", "animation": "none", "viewBox": [1000, 620], "legend": {"mode": "hidden"}},
+  "components": [
+    {"id": "BR03-CURRENT", "type": "external", "label": "要求确定", "sublabel": "来源工作的阅读归组", "pos": [70, 268], "size": [250, 84]},
+    {"id": "CURRENT-REQUIREMENTS-01", "type": "external", "label": "确定适用要求及减免", "sublabel": "保留适用范围与人工复核", "pos": [550, 118], "size": [330, 96]},
+    {"id": "CURRENT-REQUIREMENTS-03", "type": "external", "label": "汇总各项要求", "sublabel": "来源控制不因归组而消失", "pos": [550, 408], "size": [330, 96]}
+  ],
+  "connections": [
+    {"id": "CONTAINS-REQ-01", "from": "BR03-CURRENT", "to": "CURRENT-REQUIREMENTS-01", "label": "包含主题", "variant": "dashed"},
+    {"id": "CONTAINS-REQ-03", "from": "BR03-CURRENT", "to": "CURRENT-REQUIREMENTS-03", "label": "包含主题", "variant": "dashed"}
+  ]
+}

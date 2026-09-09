@@ -1,0 +1,109 @@
+{
+  "at": "2026-09-07T18:34:20.964Z",
+  "browser": "152.0.7977.76",
+  "results": [
+    {
+      "ids": [
+        "D5-04",
+        "D5-07",
+        "D5-10",
+        "D5-43",
+        "D5U-01",
+        "D5U-19"
+      ],
+      "name": "pilot-core-current-finding",
+      "status": "passed",
+      "screenshot": "audit/screenshots/actual/host/pilot-core-current-finding.png",
+      "errors": [],
+      "remote": []
+    },
+    {
+      "ids": [
+        "D5U-02",
+        "D5U-03",
+        "D5U-04",
+        "D5U-37"
+      ],
+      "name": "step-reading-does-not-execute",
+      "status": "passed",
+      "screenshot": "audit/screenshots/actual/host/step-reading-does-not-execute.png",
+      "errors": [],
+      "remote": []
+    },
+    {
+      "ids": [
+        "D5U-20",
+        "D5U-21",
+        "D5U-23",
+        "D5U-36",
+        "D5U-37"
+      ],
+      "name": "layout-save-reset-and-draft-isolation",
+      "status": "passed",
+      "screenshot": "audit/screenshots/actual/host/layout-save-reset-and-draft-isolation.png",
+      "errors": [],
+      "remote": []
+    },
+    {
+      "ids": [
+        "D5-14",
+        "D5-38",
+        "D5U-28"
+      ],
+      "name": "history-dirty-stay-failed-save-discard",
+      "status": "passed",
+      "screenshot": "audit/screenshots/actual/host/history-dirty-stay-failed-save-discard.png",
+      "errors": [],
+      "remote": []
+    },
+    {
+      "ids": [
+        "D5-39",
+        "D5U-28",
+        "D5U-37"
+      ],
+      "name": "saved-review-history-language-roundtrip",
+      "status": "passed",
+      "screenshot": "audit/screenshots/actual/host/saved-review-history-language-roundtrip.png",
+      "errors": [],
+      "remote": []
+    },
+    {
+      "ids": [
+        "D5-40",
+        "D5-41",
+        "D5U-22",
+        "D5U-30",
+        "D5U-31",
+        "D5U-38"
+      ],
+      "name": "safe-rm-client-projections",
+      "status": "passed",
+      "screenshot": "audit/screenshots/actual/host/safe-rm-client-projections.png",
+      "errors": [],
+      "remote": []
+    },
+    {
+      "ids": [
+        "D5-42",
+        "D5U-39"
+      ],
+      "name": "narrow-touch-reduced-motion",
+      "status": "passed",
+      "screenshot": "audit/screenshots/actual/host/narrow-touch-reduced-motion.png",
+      "errors": [],
+      "remote": []
+    },
+    {
+      "ids": [
+        "D5-39",
+        "D5U-39"
+      ],
+      "name": "three-language-current-input",
+      "status": "passed",
+      "screenshot": "audit/screenshots/actual/host/three-language-current-input.png",
+      "errors": [],
+      "remote": []
+    }
+  ]
+}

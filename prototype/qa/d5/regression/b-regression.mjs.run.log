@@ -1,0 +1,100 @@
+{
+  "results": [
+    {
+      "ids": [
+        "CH-01",
+        "CH-27"
+      ],
+      "name": "A3 entry preserves same case, unknown booking and two separate items",
+      "status": "passed"
+    },
+    {
+      "ids": [
+        "CH-09"
+      ],
+      "name": "Review creates no dispatch success",
+      "status": "passed"
+    },
+    {
+      "ids": [
+        "CH-12"
+      ],
+      "name": "RM DOM excludes restricted reasons and evidence",
+      "status": "passed"
+    },
+    {
+      "ids": [
+        "CH-03",
+        "CH-28"
+      ],
+      "name": "Locator alone gives no access; explicit mock authentication opens only grant scope",
+      "status": "passed"
+    },
+    {
+      "ids": [
+        "CH-08",
+        "CH-19"
+      ],
+      "name": "One submitted item leaves ownership open; repeated submit does not duplicate",
+      "status": "passed"
+    },
+    {
+      "ids": [
+        "CH-24"
+      ],
+      "name": "Client print contains only granted item and own receipt",
+      "status": "passed"
+    },
+    {
+      "ids": [
+        "CH-04",
+        "CH-12"
+      ],
+      "name": "Second contributor never sees T response or authority item",
+      "status": "passed"
+    },
+    {
+      "ids": [
+        "CH-16",
+        "CH-17",
+        "CH-27"
+      ],
+      "name": "Ops purpose assessment closes only coordination, not other authorities or case",
+      "status": "passed"
+    },
+    {
+      "ids": [
+        "CH-22"
+      ],
+      "name": "Return restores source Current scene and latest Chinese locale with saved case state",
+      "status": "passed"
+    },
+    {
+      "ids": [
+        "CH-23"
+      ],
+      "name": "Failed save on leaving retains editor input and exposes error",
+      "status": "passed"
+    },
+    {
+      "ids": [],
+      "name": "Mobile client view has no page overflow",
+      "status": "passed"
+    },
+    {
+      "ids": [
+        "CH-21"
+      ],
+      "name": "Continue Story through last beat changes no business data or collaboration session",
+      "status": "passed"
+    },
+    {
+      "ids": [
+        "CH-08"
+      ],
+      "name": "Direct client submit uses current input without requiring a saved draft",
+      "status": "passed"
+    }
+  ],
+  "errors": []
+}

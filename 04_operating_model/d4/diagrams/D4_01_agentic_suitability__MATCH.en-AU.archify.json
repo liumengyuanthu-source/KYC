@@ -1,0 +1,157 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "Choose how this work runs",
+    "locale": "en",
+    "animation": "none",
+    "quality_profile": "showcase",
+    "viewBox": [
+      1350,
+      800
+    ],
+    "legend": {
+      "mode": "hidden"
+    }
+  },
+  "components": [
+    {
+      "id": "access",
+      "type": "frontend",
+      "label": "Inputs and access",
+      "sublabel": "Check subject, source versions and permission",
+      "pos": [
+        60,
+        95
+      ],
+      "size": [
+        355,
+        96
+      ]
+    },
+    {
+      "id": "unknown",
+      "type": "frontend",
+      "label": "Stop on an unknown",
+      "sublabel": "No score can supply a missing rule",
+      "pos": [
+        935,
+        95
+      ],
+      "size": [
+        355,
+        96
+      ]
+    },
+    {
+      "id": "judgement",
+      "type": "frontend",
+      "label": "Professional judgement?",
+      "sublabel": "Risk materiality or formal authority",
+      "pos": [
+        60,
+        275
+      ],
+      "size": [
+        355,
+        96
+      ]
+    },
+    {
+      "id": "human",
+      "type": "frontend",
+      "label": "Human + prepared evidence",
+      "sublabel": "Hard gate · Skill only supports the person",
+      "pos": [
+        935,
+        275
+      ],
+      "size": [
+        355,
+        96
+      ]
+    },
+    {
+      "id": "bounded",
+      "type": "frontend",
+      "label": "Fixed input and output",
+      "sublabel": "A cited review pack is a bounded task",
+      "pos": [
+        60,
+        455
+      ],
+      "size": [
+        355,
+        96
+      ]
+    },
+    {
+      "id": "skill",
+      "type": "frontend",
+      "label": "Workflow + Semantic Skill",
+      "sublabel": "Prepare context · do not authorise",
+      "pos": [
+        935,
+        455
+      ],
+      "size": [
+        355,
+        96
+      ]
+    },
+    {
+      "id": "context",
+      "type": "frontend",
+      "label": "Paths change with feedback?",
+      "sublabel": "First compare a fixed source workflow",
+      "pos": [
+        60,
+        635
+      ],
+      "size": [
+        355,
+        96
+      ]
+    },
+    {
+      "id": "agent",
+      "type": "frontend",
+      "label": "Bounded Agent candidate",
+      "sublabel": "Permitted evidence plan only · not deployed",
+      "pos": [
+        935,
+        635
+      ],
+      "size": [
+        355,
+        96
+      ]
+    }
+  ],
+  "connections": [
+    {
+      "id": "relation-1",
+      "from": "access",
+      "to": "unknown",
+      "label": "missing / unclear"
+    },
+    {
+      "id": "relation-2",
+      "from": "judgement",
+      "to": "human",
+      "label": "required"
+    },
+    {
+      "id": "relation-3",
+      "from": "bounded",
+      "to": "skill",
+      "label": "bounded preparation"
+    },
+    {
+      "id": "relation-4",
+      "from": "context",
+      "to": "agent",
+      "label": "only if necessary"
+    }
+  ]
+}

@@ -1,0 +1,150 @@
+{
+  "schema_version": 2,
+  "diagram_type": "workflow",
+  "meta": {
+    "title": "信贷至协议的版本链",
+    "locale": "zh-CN",
+    "quality_profile": "showcase"
+  },
+  "lanes": [
+    {
+      "id": "credit",
+      "label": "信贷输出"
+    },
+    {
+      "id": "legal",
+      "label": "协议生命周期"
+    },
+    {
+      "id": "execution",
+      "label": "签署执行"
+    }
+  ],
+  "mainPath": [
+    "D02-ASSESS",
+    "D02-DECISION",
+    "D02-CONDITION",
+    "D02-INPUT",
+    "D02-REVISION",
+    "D02-REVIEW",
+    "D02-APPROVAL",
+    "D02-EXECUTION"
+  ],
+  "nodes": [
+    {
+      "id": "D02-ASSESS",
+      "lane": "credit",
+      "col": 0,
+      "type": "backend",
+      "label": "信贷评估",
+      "sublabel": "所需资料与评估版本"
+    },
+    {
+      "id": "D02-DECISION",
+      "lane": "credit",
+      "col": 1,
+      "type": "backend",
+      "label": "信贷决定",
+      "sublabel": "CD-01 · 合成批准"
+    },
+    {
+      "id": "D02-CONDITION",
+      "lane": "credit",
+      "col": 2,
+      "type": "backend",
+      "label": "信贷条件",
+      "sublabel": "CC-01 · 纳入产品协议"
+    },
+    {
+      "id": "D02-INPUT",
+      "lane": "credit",
+      "col": 3,
+      "type": "backend",
+      "label": "协议输入",
+      "sublabel": "AI-01 · 锁定信贷版本"
+    },
+    {
+      "id": "D02-REVISION",
+      "lane": "legal",
+      "col": 3,
+      "type": "backend",
+      "label": "协议版本",
+      "sublabel": "AGR-01 · 版本 03"
+    },
+    {
+      "id": "D02-REVIEW",
+      "lane": "legal",
+      "col": 4,
+      "type": "backend",
+      "label": "法律复核",
+      "sublabel": "针对具体协议版本"
+    },
+    {
+      "id": "D02-APPROVAL",
+      "lane": "legal",
+      "col": 5,
+      "type": "backend",
+      "label": "内部批准",
+      "sublabel": "不是签署完成"
+    },
+    {
+      "id": "D02-EXECUTION",
+      "lane": "execution",
+      "col": 5,
+      "type": "backend",
+      "label": "签署执行",
+      "sublabel": "仍需权限与条件"
+    }
+  ],
+  "edges": [
+    {
+      "id": "D02-E01",
+      "from": "D02-ASSESS",
+      "to": "D02-DECISION",
+      "label": "评估依据",
+      "variant": "default"
+    },
+    {
+      "id": "D02-E02",
+      "from": "D02-DECISION",
+      "to": "D02-CONDITION",
+      "label": "形成条件",
+      "variant": "default"
+    },
+    {
+      "id": "D02-E03",
+      "from": "D02-CONDITION",
+      "to": "D02-INPUT",
+      "label": "供给条款",
+      "variant": "default"
+    },
+    {
+      "id": "D02-E04",
+      "from": "D02-INPUT",
+      "to": "D02-REVISION",
+      "label": "纳入版本",
+      "variant": "emphasis"
+    },
+    {
+      "id": "D02-E05",
+      "from": "D02-REVISION",
+      "to": "D02-REVIEW",
+      "label": "复核版本",
+      "variant": "default"
+    },
+    {
+      "id": "D02-E06",
+      "from": "D02-REVIEW",
+      "to": "D02-APPROVAL",
+      "label": "批准版本",
+      "variant": "default"
+    },
+    {
+      "id": "D02-E07",
+      "from": "D02-APPROVAL",
+      "to": "D02-EXECUTION",
+      "label": "执行门槛",
+      "variant": "default"
+    }
+  ]
+}

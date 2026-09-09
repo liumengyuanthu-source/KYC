@@ -1,0 +1,21 @@
+{
+  "at": "2026-09-07T15:38:29.499Z",
+  "results": [
+    {
+      "scene": "SCN-REQUIREMENTS",
+      "status": "passed"
+    },
+    {
+      "scene": "SCN-SOURCE",
+      "status": "passed"
+    },
+    {
+      "scene": "SCN-GAP",
+      "status": "passed"
+    },
+    {
+      "scene": "SCN-VALIDATE",
+      "status": "passed"
+    }
+  ]
+}

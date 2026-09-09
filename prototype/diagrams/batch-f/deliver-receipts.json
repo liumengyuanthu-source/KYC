@@ -1,0 +1,118 @@
+[
+  {
+    "name": "DG-F01.en-AU",
+    "phase": "deliver",
+    "exit_code": 0,
+    "receipt": {
+      "schemaVersion": 1,
+      "ok": true,
+      "command": "deliver",
+      "type": "workflow",
+      "input": "/Users/christinaliu/Documents/ChatGPT/Australia Bank/clear-to-trade-product/prototype/diagrams/batch-f/specs/DG-F01.en-AU.json",
+      "output": "/Users/christinaliu/Documents/ChatGPT/Australia Bank/clear-to-trade-product/prototype/diagrams/batch-f/DG-F01.en-AU.html",
+      "specification": {
+        "sha256": "9d496a6b11970bcbd83dad8c1a6fa9d377db9df3a334a2e4a9d0af6bc083f82f",
+        "bytes": 4141
+      },
+      "artifact": {
+        "sha256": "62b30e3330f9e6dac5964f1194401a9ecb0a98c1d9be83e4216c1dbd789deb03",
+        "bytes": 712891
+      },
+      "validation": {
+        "checksPassed": 9,
+        "checkCount": 9,
+        "compositionProfile": "showcase",
+        "compositionStatus": "pass",
+        "errors": 0,
+        "warnings": 0
+      }
+    }
+  },
+  {
+    "name": "DG-F01.zh-CN",
+    "phase": "deliver",
+    "exit_code": 0,
+    "receipt": {
+      "schemaVersion": 1,
+      "ok": true,
+      "command": "deliver",
+      "type": "workflow",
+      "input": "/Users/christinaliu/Documents/ChatGPT/Australia Bank/clear-to-trade-product/prototype/diagrams/batch-f/specs/DG-F01.zh-CN.json",
+      "output": "/Users/christinaliu/Documents/ChatGPT/Australia Bank/clear-to-trade-product/prototype/diagrams/batch-f/DG-F01.zh-CN.html",
+      "specification": {
+        "sha256": "ad871b5ab24b5f56386da461fa8144e3522f0f0b5d1769bde4a265fbf0123b27",
+        "bytes": 4115
+      },
+      "artifact": {
+        "sha256": "2282cf0275761560e3dffc963819fb815adc515e6277d35705932e84bf66fc5a",
+        "bytes": 712494
+      },
+      "validation": {
+        "checksPassed": 9,
+        "checkCount": 9,
+        "compositionProfile": "showcase",
+        "compositionStatus": "pass",
+        "errors": 0,
+        "warnings": 0
+      }
+    }
+  },
+  {
+    "name": "DG-F03.en-AU",
+    "phase": "deliver",
+    "exit_code": 0,
+    "receipt": {
+      "schemaVersion": 1,
+      "ok": true,
+      "command": "deliver",
+      "type": "workflow",
+      "input": "/Users/christinaliu/Documents/ChatGPT/Australia Bank/clear-to-trade-product/prototype/diagrams/batch-f/specs/DG-F03.en-AU.json",
+      "output": "/Users/christinaliu/Documents/ChatGPT/Australia Bank/clear-to-trade-product/prototype/diagrams/batch-f/DG-F03.en-AU.html",
+      "specification": {
+        "sha256": "d8b073499ddc6b6e82871a28cd6208fd9ec04ec15919c7d75a7d765e6d622d01",
+        "bytes": 2128
+      },
+      "artifact": {
+        "sha256": "d6b9d11255f3102d4b46af2c447b9cbe1bb2aa5982983c1f6218e0ae2ee972f3",
+        "bytes": 702819
+      },
+      "validation": {
+        "checksPassed": 9,
+        "checkCount": 9,
+        "compositionProfile": "showcase",
+        "compositionStatus": "pass",
+        "errors": 0,
+        "warnings": 0
+      }
+    }
+  },
+  {
+    "name": "DG-F03.zh-CN",
+    "phase": "deliver",
+    "exit_code": 0,
+    "receipt": {
+      "schemaVersion": 1,
+      "ok": true,
+      "command": "deliver",
+      "type": "workflow",
+      "input": "/Users/christinaliu/Documents/ChatGPT/Australia Bank/clear-to-trade-product/prototype/diagrams/batch-f/specs/DG-F03.zh-CN.json",
+      "output": "/Users/christinaliu/Documents/ChatGPT/Australia Bank/clear-to-trade-product/prototype/diagrams/batch-f/DG-F03.zh-CN.html",
+      "specification": {
+        "sha256": "56eb32ecf06c42998f91f5eaf8c8b0c935035b00696ecfe556da0668e039650d",
+        "bytes": 2140
+      },
+      "artifact": {
+        "sha256": "1b855c636d066f32485e26c482d14747e19bdd08faf857c6fdf77e8bc4042815",
+        "bytes": 702511
+      },
+      "validation": {
+        "checksPassed": 9,
+        "checkCount": 9,
+        "compositionProfile": "showcase",
+        "compositionStatus": "pass",
+        "errors": 0,
+        "warnings": 0
+      }
+    }
+  }
+]

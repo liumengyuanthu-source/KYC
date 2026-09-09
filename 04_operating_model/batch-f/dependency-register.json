@@ -1,0 +1,4203 @@
+{
+  "derived": true,
+  "runtime_store": false,
+  "source_ref": "SRC-021",
+  "case_id": "DEMO-CTT-001",
+  "validation_status": "approved_demo_design_not_bank_validation",
+  "generator": "04_operating_model/batch-f/build-consolidation.mjs",
+  "canonical_collection": "dependencies",
+  "canonical_holds": "holds",
+  "snapshot_sources": [
+    "04_operating_model/round-a/batch-a-story-snapshots.json",
+    "04_operating_model/batch-b/collaboration-snapshots.json",
+    "04_operating_model/batch-c/screening-snapshots.json",
+    "04_operating_model/batch-d/specialist-snapshots.json",
+    "04_operating_model/batch-e/clearance-snapshots.json"
+  ],
+  "usage": "Historical export only. UI projects live dependencies/holds through prototype/consolidation.mjs; never loads this export.",
+  "dependencies": [
+    {
+      "canonical_collection": "dependencies",
+      "snapshot_refs": [
+        {
+          "source_path": "04_operating_model/round-a/batch-a-story-snapshots.json",
+          "snapshot_id": "SNAP-A0"
+        }
+      ],
+      "record": {
+        "id": "DEMO-CTT-001/dependency/d2-04-1",
+        "case_id": "DEMO-CTT-001",
+        "case_scope_id": "DEMO-CTT-001/scope/institutional",
+        "revision": 1,
+        "supersedes_ref": null,
+        "source_refs": [
+          "SRC-009",
+          "SRC-010"
+        ],
+        "source_status": "SYNTHETIC",
+        "simulation_flag": true,
+        "owner_role": "ROLE-KYCOPS",
+        "validation_owner": "Christina",
+        "authority_status": "unknown",
+        "sensitivity": "synthetic-restricted",
+        "created_at": "2026-09-07T00:00:00Z",
+        "updated_at": "2026-09-07T00:00:00Z",
+        "as_of": "2026-09-07T00:00:00Z",
+        "question_ref": "ROUND-A-Q-AUTHORITY",
+        "audit_event_refs": [],
+        "source_key": "SRC-010:DEP-04",
+        "ia_crosswalk_keys": [
+          "SRC-009:DEP-04"
+        ],
+        "from_ref": "DEMO-CTT-001/requirement/identity",
+        "to_ref": "DEMO-CTT-001/work/reuse",
+        "relation_type": "requires_input",
+        "required_input_revision": 1,
+        "status": "pending",
+        "wait_field": "status",
+        "resume_event": "requirements_confirmed",
+        "parallel_rule": "Only named input dependency holds this task; Legal, Credit and Conflicts have independent authored conditions."
+      }
+    },
+    {
+      "canonical_collection": "dependencies",
+      "snapshot_refs": [
+        {
+          "source_path": "04_operating_model/round-a/batch-a-story-snapshots.json",
+          "snapshot_id": "SNAP-A0"
+        }
+      ],
+      "record": {
+        "id": "DEMO-CTT-001/dependency/d2-05-2",
+        "case_id": "DEMO-CTT-001",
+        "case_scope_id": "DEMO-CTT-001/scope/institutional",
+        "revision": 1,
+        "supersedes_ref": null,
+        "source_refs": [
+          "SRC-009",
+          "SRC-010"
+        ],
+        "source_status": "SYNTHETIC",
+        "simulation_flag": true,
+        "owner_role": "ROLE-KYCOPS",
+        "validation_owner": "Christina",
+        "authority_status": "unknown",
+        "sensitivity": "synthetic-restricted",
+        "created_at": "2026-09-07T00:00:00Z",
+        "updated_at": "2026-09-07T00:00:00Z",
+        "as_of": "2026-09-07T00:00:00Z",
+        "question_ref": "ROUND-A-Q-AUTHORITY",
+        "audit_event_refs": [],
+        "source_key": "SRC-010:DEP-05",
+        "ia_crosswalk_keys": [
+          "SRC-009:DEP-04"
+        ],
+        "from_ref": "DEMO-CTT-001/assessment/registry-screening",
+        "to_ref": "DEMO-CTT-001/work/residual-request",
+        "relation_type": "triggers_review",
+        "required_input_revision": 1,
+        "status": "pending",
+        "wait_field": "sufficiency",
+        "resume_event": "residual_gap_confirmed",
+        "parallel_rule": "Only named input dependency holds this task; Legal, Credit and Conflicts have independent authored conditions."
+      }
+    },
+    {
+      "canonical_collection": "dependencies",
+      "snapshot_refs": [
+        {
+          "source_path": "04_operating_model/round-a/batch-a-story-snapshots.json",
+          "snapshot_id": "SNAP-A0"
+        }
+      ],
+      "record": {
+        "id": "DEMO-CTT-001/dependency/d2-05-3",
+        "case_id": "DEMO-CTT-001",
+        "case_scope_id": "DEMO-CTT-001/scope/institutional",
+        "revision": 1,
+        "supersedes_ref": null,
+        "source_refs": [
+          "SRC-009",
+          "SRC-010"
+        ],
+        "source_status": "SYNTHETIC",
+        "simulation_flag": true,
+        "owner_role": "ROLE-KYCOPS",
+        "validation_owner": "Christina",
+        "authority_status": "unknown",
+        "sensitivity": "synthetic-restricted",
+        "created_at": "2026-09-07T00:00:00Z",
+        "updated_at": "2026-09-07T00:00:00Z",
+        "as_of": "2026-09-07T00:00:00Z",
+        "question_ref": "ROUND-A-Q-AUTHORITY",
+        "audit_event_refs": [],
+        "source_key": "SRC-010:DEP-05",
+        "ia_crosswalk_keys": [
+          "SRC-009:DEP-04"
+        ],
+        "from_ref": "DEMO-CTT-001/evidence/supplement",
+        "to_ref": "DEMO-CTT-001/work/review-receive",
+        "relation_type": "waits_for",
+        "required_input_revision": 1,
+        "status": "pending",
+        "wait_field": "receipt_status",
+        "resume_event": "supplement_received",
+        "parallel_rule": "Only named input dependency holds this task; Legal, Credit and Conflicts have independent authored conditions."
+      }
+    },
+    {
+      "canonical_collection": "dependencies",
+      "snapshot_refs": [
+        {
+          "source_path": "04_operating_model/round-a/batch-a-story-snapshots.json",
+          "snapshot_id": "SNAP-A0"
+        }
+      ],
+      "record": {
+        "id": "DEMO-CTT-001/dependency/d2-07-4",
+        "case_id": "DEMO-CTT-001",
+        "case_scope_id": "DEMO-CTT-001/scope/institutional",
+        "revision": 1,
+        "supersedes_ref": null,
+        "source_refs": [
+          "SRC-009",
+          "SRC-010"
+        ],
+        "source_status": "SYNTHETIC",
+        "simulation_flag": true,
+        "owner_role": "ROLE-KYCOPS",
+        "validation_owner": "Christina",
+        "authority_status": "unknown",
+        "sensitivity": "synthetic-restricted",
+        "created_at": "2026-09-07T00:00:00Z",
+        "updated_at": "2026-09-07T00:00:00Z",
+        "as_of": "2026-09-07T00:00:00Z",
+        "question_ref": "ROUND-A-Q-AUTHORITY",
+        "audit_event_refs": [],
+        "source_key": "SRC-010:DEP-07",
+        "ia_crosswalk_keys": [
+          "SRC-009:DEP-08"
+        ],
+        "from_ref": "DEMO-CTT-001/assessment/supplement-screening",
+        "to_ref": "DEMO-CTT-001/work/screening-review",
+        "relation_type": "requires_input",
+        "required_input_revision": 1,
+        "status": "pending",
+        "wait_field": "sufficiency",
+        "resume_event": "purpose_assessment_recorded",
+        "parallel_rule": "Only named input dependency holds this task; Legal, Credit and Conflicts have independent authored conditions."
+      }
+    },
+    {
+      "canonical_collection": "dependencies",
+      "snapshot_refs": [
+        {
+          "source_path": "04_operating_model/round-a/batch-a-story-snapshots.json",
+          "snapshot_id": "SNAP-A0"
+        }
+      ],
+      "record": {
+        "id": "DEMO-CTT-001/dependency/d2-12-5",
+        "case_id": "DEMO-CTT-001",
+        "case_scope_id": "DEMO-CTT-001/scope/institutional",
+        "revision": 1,
+        "supersedes_ref": null,
+        "source_refs": [
+          "SRC-009",
+          "SRC-010"
+        ],
+        "source_status": "SYNTHETIC",
+        "simulation_flag": true,
+        "owner_role": "ROLE-KYCOPS",
+        "validation_owner": "Christina",
+        "authority_status": "unknown",
+        "sensitivity": "synthetic-restricted",
+        "created_at": "2026-09-07T00:00:00Z",
+        "updated_at": "2026-09-07T00:00:00Z",
+        "as_of": "2026-09-07T00:00:00Z",
+        "question_ref": "ROUND-A-Q-AUTHORITY",
+        "audit_event_refs": [],
+        "source_key": "SRC-010:DEP-12",
+        "ia_crosswalk_keys": [
+          "SRC-009:DEP-11"
+        ],
+        "from_ref": "DEMO-CTT-001/condition/screening",
+        "to_ref": "DEMO-CTT-001/work/readiness",
+        "relation_type": "aggregates_conditions",
+        "required_input_revision": 1,
+        "status": "pending",
+        "wait_field": "status",
+        "resume_event": "condition_changed",
+        "parallel_rule": "Only named input dependency holds this task; Legal, Credit and Conflicts have independent authored conditions."
+      }
+    },
+    {
+      "canonical_collection": "dependencies",
+      "snapshot_refs": [
+        {
+          "source_path": "04_operating_model/round-a/batch-a-story-snapshots.json",
+          "snapshot_id": "SNAP-A1"
+        }
+      ],
+      "record": {
+        "id": "DEMO-CTT-001/dependency/d2-04-1",
+        "case_id": "DEMO-CTT-001",
+        "case_scope_id": "DEMO-CTT-001/scope/institutional",
+        "revision": 2,
+        "supersedes_ref": null,
+        "source_refs": [
+          "SRC-009",
+          "SRC-010"
+        ],
+        "source_status": "SYNTHETIC",
+        "simulation_flag": true,
+        "owner_role": "ROLE-KYCOPS",
+        "validation_owner": "Christina",
+        "authority_status": "unknown",
+        "sensitivity": "synthetic-restricted",
+        "created_at": "2026-09-07T00:00:00Z",
+        "updated_at": "2026-09-07T08:01:00Z",
+        "as_of": "2026-09-07T00:00:00Z",
+        "question_ref": "ROUND-A-Q-AUTHORITY",
+        "audit_event_refs": [],
+        "source_key": "SRC-010:DEP-04",
+        "ia_crosswalk_keys": [
+          "SRC-009:DEP-04"
+        ],
+        "from_ref": "DEMO-CTT-001/requirement/identity",
+        "to_ref": "DEMO-CTT-001/work/reuse",
+        "relation_type": "requires_input",
+        "required_input_revision": 1,
+        "status": "pending",
+        "wait_field": "status",
+        "resume_event": "requirements_confirmed",
+        "parallel_rule": "Only named input dependency holds this task; Legal, Credit and Conflicts have independent authored conditions."
+      }
+    },
+    {
+      "canonical_collection": "dependencies",
+      "snapshot_refs": [
+        {
+          "source_path": "04_operating_model/round-a/batch-a-story-snapshots.json",
+          "snapshot_id": "SNAP-A1"
+        }
+      ],
+      "record": {
+        "id": "DEMO-CTT-001/dependency/d2-05-2",
+        "case_id": "DEMO-CTT-001",
+        "case_scope_id": "DEMO-CTT-001/scope/institutional",
+        "revision": 2,
+        "supersedes_ref": null,
+        "source_refs": [
+          "SRC-009",
+          "SRC-010"
+        ],
+        "source_status": "SYNTHETIC",
+        "simulation_flag": true,
+        "owner_role": "ROLE-KYCOPS",
+        "validation_owner": "Christina",
+        "authority_status": "unknown",
+        "sensitivity": "synthetic-restricted",
+        "created_at": "2026-09-07T00:00:00Z",
+        "updated_at": "2026-09-07T08:01:00Z",
+        "as_of": "2026-09-07T00:00:00Z",
+        "question_ref": "ROUND-A-Q-AUTHORITY",
+        "audit_event_refs": [],
+        "source_key": "SRC-010:DEP-05",
+        "ia_crosswalk_keys": [
+          "SRC-009:DEP-04"
+        ],
+        "from_ref": "DEMO-CTT-001/assessment/registry-screening",
+        "to_ref": "DEMO-CTT-001/work/residual-request",
+        "relation_type": "triggers_review",
+        "required_input_revision": 1,
+        "status": "pending",
+        "wait_field": "sufficiency",
+        "resume_event": "residual_gap_confirmed",
+        "parallel_rule": "Only named input dependency holds this task; Legal, Credit and Conflicts have independent authored conditions."
+      }
+    },
+    {
+      "canonical_collection": "dependencies",
+      "snapshot_refs": [
+        {
+          "source_path": "04_operating_model/round-a/batch-a-story-snapshots.json",
+          "snapshot_id": "SNAP-A1"
+        }
+      ],
+      "record": {
+        "id": "DEMO-CTT-001/dependency/d2-05-3",
+        "case_id": "DEMO-CTT-001",
+        "case_scope_id": "DEMO-CTT-001/scope/institutional",
+        "revision": 2,
+        "supersedes_ref": null,
+        "source_refs": [
+          "SRC-009",
+          "SRC-010"
+        ],
+        "source_status": "SYNTHETIC",
+        "simulation_flag": true,
+        "owner_role": "ROLE-KYCOPS",
+        "validation_owner": "Christina",
+        "authority_status": "unknown",
+        "sensitivity": "synthetic-restricted",
+        "created_at": "2026-09-07T00:00:00Z",
+        "updated_at": "2026-09-07T08:01:00Z",
+        "as_of": "2026-09-07T00:00:00Z",
+        "question_ref": "ROUND-A-Q-AUTHORITY",
+        "audit_event_refs": [],
+        "source_key": "SRC-010:DEP-05",
+        "ia_crosswalk_keys": [
+          "SRC-009:DEP-04"
+        ],
+        "from_ref": "DEMO-CTT-001/evidence/supplement",
+        "to_ref": "DEMO-CTT-001/work/review-receive",
+        "relation_type": "waits_for",
+        "required_input_revision": 1,
+        "status": "pending",
+        "wait_field": "receipt_status",
+        "resume_event": "supplement_received",
+        "parallel_rule": "Only named input dependency holds this task; Legal, Credit and Conflicts have independent authored conditions."
+      }
+    },
+    {
+      "canonical_collection": "dependencies",
+      "snapshot_refs": [
+        {
+          "source_path": "04_operating_model/round-a/batch-a-story-snapshots.json",
+          "snapshot_id": "SNAP-A1"
+        }
+      ],
+      "record": {
+        "id": "DEMO-CTT-001/dependency/d2-07-4",
+        "case_id": "DEMO-CTT-001",
+        "case_scope_id": "DEMO-CTT-001/scope/institutional",
+        "revision": 2,
+        "supersedes_ref": null,
+        "source_refs": [
+          "SRC-009",
+          "SRC-010"
+        ],
+        "source_status": "SYNTHETIC",
+        "simulation_flag": true,
+        "owner_role": "ROLE-KYCOPS",
+        "validation_owner": "Christina",
+        "authority_status": "unknown",
+        "sensitivity": "synthetic-restricted",
+        "created_at": "2026-09-07T00:00:00Z",
+        "updated_at": "2026-09-07T08:01:00Z",
+        "as_of": "2026-09-07T00:00:00Z",
+        "question_ref": "ROUND-A-Q-AUTHORITY",
+        "audit_event_refs": [],
+        "source_key": "SRC-010:DEP-07",
+        "ia_crosswalk_keys": [
+          "SRC-009:DEP-08"
+        ],
+        "from_ref": "DEMO-CTT-001/assessment/supplement-screening",
+        "to_ref": "DEMO-CTT-001/work/screening-review",
+        "relation_type": "requires_input",
+        "required_input_revision": 1,
+        "status": "pending",
+        "wait_field": "sufficiency",
+        "resume_event": "purpose_assessment_recorded",
+        "parallel_rule": "Only named input dependency holds this task; Legal, Credit and Conflicts have independent authored conditions."
+      }
+    },
+    {
+      "canonical_collection": "dependencies",
+      "snapshot_refs": [
+        {
+          "source_path": "04_operating_model/round-a/batch-a-story-snapshots.json",
+          "snapshot_id": "SNAP-A1"
+        }
+      ],
+      "record": {
+        "id": "DEMO-CTT-001/dependency/d2-12-5",
+        "case_id": "DEMO-CTT-001",
+        "case_scope_id": "DEMO-CTT-001/scope/institutional",
+        "revision": 2,
+        "supersedes_ref": null,
+        "source_refs": [
+          "SRC-009",
+          "SRC-010"
+        ],
+        "source_status": "SYNTHETIC",
+        "simulation_flag": true,
+        "owner_role": "ROLE-KYCOPS",
+        "validation_owner": "Christina",
+        "authority_status": "unknown",
+        "sensitivity": "synthetic-restricted",
+        "created_at": "2026-09-07T00:00:00Z",
+        "updated_at": "2026-09-07T08:01:00Z",
+        "as_of": "2026-09-07T00:00:00Z",
+        "question_ref": "ROUND-A-Q-AUTHORITY",
+        "audit_event_refs": [],
+        "source_key": "SRC-010:DEP-12",
+        "ia_crosswalk_keys": [
+          "SRC-009:DEP-11"
+        ],
+        "from_ref": "DEMO-CTT-001/condition/screening",
+        "to_ref": "DEMO-CTT-001/work/readiness",
+        "relation_type": "aggregates_conditions",
+        "required_input_revision": 1,
+        "status": "pending",
+        "wait_field": "status",
+        "resume_event": "condition_changed",
+        "parallel_rule": "Only named input dependency holds this task; Legal, Credit and Conflicts have independent authored conditions."
+      }
+    },
+    {
+      "canonical_collection": "dependencies",
+      "snapshot_refs": [
+        {
+          "source_path": "04_operating_model/round-a/batch-a-story-snapshots.json",
+          "snapshot_id": "SNAP-A2"
+        },
+        {
+          "source_path": "04_operating_model/round-a/batch-a-story-snapshots.json",
+          "snapshot_id": "SNAP-A3"
+        },
+        {
+          "source_path": "04_operating_model/batch-b/collaboration-snapshots.json",
+          "snapshot_id": "B-entry"
+        },
+        {
+          "source_path": "04_operating_model/batch-b/collaboration-snapshots.json",
+          "snapshot_id": "B-request-reviewed-dispatched"
+        },
+        {
+          "source_path": "04_operating_model/batch-b/collaboration-snapshots.json",
+          "snapshot_id": "B-one-item-submitted"
+        },
+        {
+          "source_path": "04_operating_model/batch-b/collaboration-snapshots.json",
+          "snapshot_id": "B-coordination-assessed"
+        },
+        {
+          "source_path": "04_operating_model/batch-c/screening-snapshots.json",
+          "snapshot_id": "C-entry"
+        },
+        {
+          "source_path": "04_operating_model/batch-c/screening-snapshots.json",
+          "snapshot_id": "C-pending"
+        },
+        {
+          "source_path": "04_operating_model/batch-c/screening-snapshots.json",
+          "snapshot_id": "C-result"
+        },
+        {
+          "source_path": "04_operating_model/batch-c/screening-snapshots.json",
+          "snapshot_id": "C-gap"
+        },
+        {
+          "source_path": "04_operating_model/batch-c/screening-snapshots.json",
+          "snapshot_id": "C-identity-received"
+        },
+        {
+          "source_path": "04_operating_model/batch-c/screening-snapshots.json",
+          "snapshot_id": "C-unresolved"
+        },
+        {
+          "source_path": "04_operating_model/batch-c/screening-snapshots.json",
+          "snapshot_id": "C-referred"
+        },
+        {
+          "source_path": "04_operating_model/batch-d/specialist-snapshots.json",
+          "snapshot_id": "D-entry"
+        },
+        {
+          "source_path": "04_operating_model/batch-d/specialist-snapshots.json",
+          "snapshot_id": "D-credit-changed"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-entry"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-gap"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-remediation-completed"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-qa-signed-alone"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-ready"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-cleared"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-publication-failed"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-published"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-evidence-changed"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-scope-changed"
+        }
+      ],
+      "record": {
+        "id": "DEMO-CTT-001/dependency/d2-04-1",
+        "case_id": "DEMO-CTT-001",
+        "case_scope_id": "DEMO-CTT-001/scope/institutional",
+        "revision": 3,
+        "supersedes_ref": null,
+        "source_refs": [
+          "SRC-009",
+          "SRC-010"
+        ],
+        "source_status": "SYNTHETIC",
+        "simulation_flag": true,
+        "owner_role": "ROLE-KYCOPS",
+        "validation_owner": "Christina",
+        "authority_status": "unknown",
+        "sensitivity": "synthetic-restricted",
+        "created_at": "2026-09-07T00:00:00Z",
+        "updated_at": "2026-09-07T08:01:00Z",
+        "as_of": "2026-09-07T00:00:00Z",
+        "question_ref": "ROUND-A-Q-AUTHORITY",
+        "audit_event_refs": [],
+        "source_key": "SRC-010:DEP-04",
+        "ia_crosswalk_keys": [
+          "SRC-009:DEP-04"
+        ],
+        "from_ref": "DEMO-CTT-001/requirement/identity",
+        "to_ref": "DEMO-CTT-001/work/reuse",
+        "relation_type": "requires_input",
+        "required_input_revision": 1,
+        "status": "pending",
+        "wait_field": "status",
+        "resume_event": "requirements_confirmed",
+        "parallel_rule": "Only named input dependency holds this task; Legal, Credit and Conflicts have independent authored conditions."
+      }
+    },
+    {
+      "canonical_collection": "dependencies",
+      "snapshot_refs": [
+        {
+          "source_path": "04_operating_model/round-a/batch-a-story-snapshots.json",
+          "snapshot_id": "SNAP-A2"
+        },
+        {
+          "source_path": "04_operating_model/round-a/batch-a-story-snapshots.json",
+          "snapshot_id": "SNAP-A3"
+        },
+        {
+          "source_path": "04_operating_model/batch-b/collaboration-snapshots.json",
+          "snapshot_id": "B-entry"
+        },
+        {
+          "source_path": "04_operating_model/batch-b/collaboration-snapshots.json",
+          "snapshot_id": "B-request-reviewed-dispatched"
+        },
+        {
+          "source_path": "04_operating_model/batch-b/collaboration-snapshots.json",
+          "snapshot_id": "B-one-item-submitted"
+        },
+        {
+          "source_path": "04_operating_model/batch-b/collaboration-snapshots.json",
+          "snapshot_id": "B-coordination-assessed"
+        },
+        {
+          "source_path": "04_operating_model/batch-c/screening-snapshots.json",
+          "snapshot_id": "C-entry"
+        },
+        {
+          "source_path": "04_operating_model/batch-c/screening-snapshots.json",
+          "snapshot_id": "C-pending"
+        },
+        {
+          "source_path": "04_operating_model/batch-c/screening-snapshots.json",
+          "snapshot_id": "C-result"
+        },
+        {
+          "source_path": "04_operating_model/batch-c/screening-snapshots.json",
+          "snapshot_id": "C-gap"
+        },
+        {
+          "source_path": "04_operating_model/batch-c/screening-snapshots.json",
+          "snapshot_id": "C-identity-received"
+        },
+        {
+          "source_path": "04_operating_model/batch-c/screening-snapshots.json",
+          "snapshot_id": "C-unresolved"
+        },
+        {
+          "source_path": "04_operating_model/batch-c/screening-snapshots.json",
+          "snapshot_id": "C-referred"
+        },
+        {
+          "source_path": "04_operating_model/batch-d/specialist-snapshots.json",
+          "snapshot_id": "D-entry"
+        },
+        {
+          "source_path": "04_operating_model/batch-d/specialist-snapshots.json",
+          "snapshot_id": "D-credit-changed"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-entry"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-gap"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-remediation-completed"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-qa-signed-alone"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-ready"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-cleared"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-publication-failed"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-published"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-evidence-changed"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-scope-changed"
+        }
+      ],
+      "record": {
+        "id": "DEMO-CTT-001/dependency/d2-05-2",
+        "case_id": "DEMO-CTT-001",
+        "case_scope_id": "DEMO-CTT-001/scope/institutional",
+        "revision": 3,
+        "supersedes_ref": null,
+        "source_refs": [
+          "SRC-009",
+          "SRC-010"
+        ],
+        "source_status": "SYNTHETIC",
+        "simulation_flag": true,
+        "owner_role": "ROLE-KYCOPS",
+        "validation_owner": "Christina",
+        "authority_status": "unknown",
+        "sensitivity": "synthetic-restricted",
+        "created_at": "2026-09-07T00:00:00Z",
+        "updated_at": "2026-09-07T08:01:00Z",
+        "as_of": "2026-09-07T00:00:00Z",
+        "question_ref": "ROUND-A-Q-AUTHORITY",
+        "audit_event_refs": [],
+        "source_key": "SRC-010:DEP-05",
+        "ia_crosswalk_keys": [
+          "SRC-009:DEP-04"
+        ],
+        "from_ref": "DEMO-CTT-001/assessment/registry-screening",
+        "to_ref": "DEMO-CTT-001/work/residual-request",
+        "relation_type": "triggers_review",
+        "required_input_revision": 1,
+        "status": "pending",
+        "wait_field": "sufficiency",
+        "resume_event": "residual_gap_confirmed",
+        "parallel_rule": "Only named input dependency holds this task; Legal, Credit and Conflicts have independent authored conditions."
+      }
+    },
+    {
+      "canonical_collection": "dependencies",
+      "snapshot_refs": [
+        {
+          "source_path": "04_operating_model/round-a/batch-a-story-snapshots.json",
+          "snapshot_id": "SNAP-A2"
+        },
+        {
+          "source_path": "04_operating_model/round-a/batch-a-story-snapshots.json",
+          "snapshot_id": "SNAP-A3"
+        },
+        {
+          "source_path": "04_operating_model/batch-b/collaboration-snapshots.json",
+          "snapshot_id": "B-entry"
+        },
+        {
+          "source_path": "04_operating_model/batch-b/collaboration-snapshots.json",
+          "snapshot_id": "B-request-reviewed-dispatched"
+        },
+        {
+          "source_path": "04_operating_model/batch-b/collaboration-snapshots.json",
+          "snapshot_id": "B-one-item-submitted"
+        },
+        {
+          "source_path": "04_operating_model/batch-b/collaboration-snapshots.json",
+          "snapshot_id": "B-coordination-assessed"
+        },
+        {
+          "source_path": "04_operating_model/batch-c/screening-snapshots.json",
+          "snapshot_id": "C-entry"
+        },
+        {
+          "source_path": "04_operating_model/batch-c/screening-snapshots.json",
+          "snapshot_id": "C-pending"
+        },
+        {
+          "source_path": "04_operating_model/batch-c/screening-snapshots.json",
+          "snapshot_id": "C-result"
+        },
+        {
+          "source_path": "04_operating_model/batch-c/screening-snapshots.json",
+          "snapshot_id": "C-gap"
+        },
+        {
+          "source_path": "04_operating_model/batch-c/screening-snapshots.json",
+          "snapshot_id": "C-identity-received"
+        },
+        {
+          "source_path": "04_operating_model/batch-c/screening-snapshots.json",
+          "snapshot_id": "C-unresolved"
+        },
+        {
+          "source_path": "04_operating_model/batch-c/screening-snapshots.json",
+          "snapshot_id": "C-referred"
+        },
+        {
+          "source_path": "04_operating_model/batch-d/specialist-snapshots.json",
+          "snapshot_id": "D-entry"
+        },
+        {
+          "source_path": "04_operating_model/batch-d/specialist-snapshots.json",
+          "snapshot_id": "D-credit-changed"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-entry"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-gap"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-remediation-completed"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-qa-signed-alone"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-ready"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-cleared"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-publication-failed"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-published"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-evidence-changed"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-scope-changed"
+        }
+      ],
+      "record": {
+        "id": "DEMO-CTT-001/dependency/d2-05-3",
+        "case_id": "DEMO-CTT-001",
+        "case_scope_id": "DEMO-CTT-001/scope/institutional",
+        "revision": 3,
+        "supersedes_ref": null,
+        "source_refs": [
+          "SRC-009",
+          "SRC-010"
+        ],
+        "source_status": "SYNTHETIC",
+        "simulation_flag": true,
+        "owner_role": "ROLE-KYCOPS",
+        "validation_owner": "Christina",
+        "authority_status": "unknown",
+        "sensitivity": "synthetic-restricted",
+        "created_at": "2026-09-07T00:00:00Z",
+        "updated_at": "2026-09-07T08:01:00Z",
+        "as_of": "2026-09-07T00:00:00Z",
+        "question_ref": "ROUND-A-Q-AUTHORITY",
+        "audit_event_refs": [],
+        "source_key": "SRC-010:DEP-05",
+        "ia_crosswalk_keys": [
+          "SRC-009:DEP-04"
+        ],
+        "from_ref": "DEMO-CTT-001/evidence/supplement",
+        "to_ref": "DEMO-CTT-001/work/review-receive",
+        "relation_type": "waits_for",
+        "required_input_revision": 1,
+        "status": "pending",
+        "wait_field": "receipt_status",
+        "resume_event": "supplement_received",
+        "parallel_rule": "Only named input dependency holds this task; Legal, Credit and Conflicts have independent authored conditions."
+      }
+    },
+    {
+      "canonical_collection": "dependencies",
+      "snapshot_refs": [
+        {
+          "source_path": "04_operating_model/round-a/batch-a-story-snapshots.json",
+          "snapshot_id": "SNAP-A2"
+        },
+        {
+          "source_path": "04_operating_model/round-a/batch-a-story-snapshots.json",
+          "snapshot_id": "SNAP-A3"
+        },
+        {
+          "source_path": "04_operating_model/batch-b/collaboration-snapshots.json",
+          "snapshot_id": "B-entry"
+        },
+        {
+          "source_path": "04_operating_model/batch-b/collaboration-snapshots.json",
+          "snapshot_id": "B-request-reviewed-dispatched"
+        },
+        {
+          "source_path": "04_operating_model/batch-b/collaboration-snapshots.json",
+          "snapshot_id": "B-one-item-submitted"
+        },
+        {
+          "source_path": "04_operating_model/batch-b/collaboration-snapshots.json",
+          "snapshot_id": "B-coordination-assessed"
+        },
+        {
+          "source_path": "04_operating_model/batch-c/screening-snapshots.json",
+          "snapshot_id": "C-entry"
+        },
+        {
+          "source_path": "04_operating_model/batch-c/screening-snapshots.json",
+          "snapshot_id": "C-pending"
+        },
+        {
+          "source_path": "04_operating_model/batch-c/screening-snapshots.json",
+          "snapshot_id": "C-result"
+        },
+        {
+          "source_path": "04_operating_model/batch-c/screening-snapshots.json",
+          "snapshot_id": "C-gap"
+        },
+        {
+          "source_path": "04_operating_model/batch-c/screening-snapshots.json",
+          "snapshot_id": "C-identity-received"
+        },
+        {
+          "source_path": "04_operating_model/batch-c/screening-snapshots.json",
+          "snapshot_id": "C-unresolved"
+        },
+        {
+          "source_path": "04_operating_model/batch-c/screening-snapshots.json",
+          "snapshot_id": "C-referred"
+        },
+        {
+          "source_path": "04_operating_model/batch-d/specialist-snapshots.json",
+          "snapshot_id": "D-entry"
+        },
+        {
+          "source_path": "04_operating_model/batch-d/specialist-snapshots.json",
+          "snapshot_id": "D-credit-changed"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-entry"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-gap"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-remediation-completed"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-qa-signed-alone"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-ready"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-cleared"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-publication-failed"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-published"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-evidence-changed"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-scope-changed"
+        }
+      ],
+      "record": {
+        "id": "DEMO-CTT-001/dependency/d2-07-4",
+        "case_id": "DEMO-CTT-001",
+        "case_scope_id": "DEMO-CTT-001/scope/institutional",
+        "revision": 3,
+        "supersedes_ref": null,
+        "source_refs": [
+          "SRC-009",
+          "SRC-010"
+        ],
+        "source_status": "SYNTHETIC",
+        "simulation_flag": true,
+        "owner_role": "ROLE-KYCOPS",
+        "validation_owner": "Christina",
+        "authority_status": "unknown",
+        "sensitivity": "synthetic-restricted",
+        "created_at": "2026-09-07T00:00:00Z",
+        "updated_at": "2026-09-07T08:01:00Z",
+        "as_of": "2026-09-07T00:00:00Z",
+        "question_ref": "ROUND-A-Q-AUTHORITY",
+        "audit_event_refs": [],
+        "source_key": "SRC-010:DEP-07",
+        "ia_crosswalk_keys": [
+          "SRC-009:DEP-08"
+        ],
+        "from_ref": "DEMO-CTT-001/assessment/supplement-screening",
+        "to_ref": "DEMO-CTT-001/work/screening-review",
+        "relation_type": "requires_input",
+        "required_input_revision": 1,
+        "status": "pending",
+        "wait_field": "sufficiency",
+        "resume_event": "purpose_assessment_recorded",
+        "parallel_rule": "Only named input dependency holds this task; Legal, Credit and Conflicts have independent authored conditions."
+      }
+    },
+    {
+      "canonical_collection": "dependencies",
+      "snapshot_refs": [
+        {
+          "source_path": "04_operating_model/round-a/batch-a-story-snapshots.json",
+          "snapshot_id": "SNAP-A2"
+        },
+        {
+          "source_path": "04_operating_model/round-a/batch-a-story-snapshots.json",
+          "snapshot_id": "SNAP-A3"
+        },
+        {
+          "source_path": "04_operating_model/batch-b/collaboration-snapshots.json",
+          "snapshot_id": "B-entry"
+        },
+        {
+          "source_path": "04_operating_model/batch-b/collaboration-snapshots.json",
+          "snapshot_id": "B-request-reviewed-dispatched"
+        },
+        {
+          "source_path": "04_operating_model/batch-b/collaboration-snapshots.json",
+          "snapshot_id": "B-one-item-submitted"
+        },
+        {
+          "source_path": "04_operating_model/batch-b/collaboration-snapshots.json",
+          "snapshot_id": "B-coordination-assessed"
+        },
+        {
+          "source_path": "04_operating_model/batch-c/screening-snapshots.json",
+          "snapshot_id": "C-entry"
+        },
+        {
+          "source_path": "04_operating_model/batch-c/screening-snapshots.json",
+          "snapshot_id": "C-pending"
+        },
+        {
+          "source_path": "04_operating_model/batch-c/screening-snapshots.json",
+          "snapshot_id": "C-result"
+        },
+        {
+          "source_path": "04_operating_model/batch-c/screening-snapshots.json",
+          "snapshot_id": "C-gap"
+        },
+        {
+          "source_path": "04_operating_model/batch-c/screening-snapshots.json",
+          "snapshot_id": "C-identity-received"
+        },
+        {
+          "source_path": "04_operating_model/batch-c/screening-snapshots.json",
+          "snapshot_id": "C-unresolved"
+        },
+        {
+          "source_path": "04_operating_model/batch-c/screening-snapshots.json",
+          "snapshot_id": "C-referred"
+        },
+        {
+          "source_path": "04_operating_model/batch-d/specialist-snapshots.json",
+          "snapshot_id": "D-entry"
+        },
+        {
+          "source_path": "04_operating_model/batch-d/specialist-snapshots.json",
+          "snapshot_id": "D-credit-changed"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-entry"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-gap"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-remediation-completed"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-qa-signed-alone"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-ready"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-cleared"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-publication-failed"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-published"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-evidence-changed"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-scope-changed"
+        }
+      ],
+      "record": {
+        "id": "DEMO-CTT-001/dependency/d2-12-5",
+        "case_id": "DEMO-CTT-001",
+        "case_scope_id": "DEMO-CTT-001/scope/institutional",
+        "revision": 3,
+        "supersedes_ref": null,
+        "source_refs": [
+          "SRC-009",
+          "SRC-010"
+        ],
+        "source_status": "SYNTHETIC",
+        "simulation_flag": true,
+        "owner_role": "ROLE-KYCOPS",
+        "validation_owner": "Christina",
+        "authority_status": "unknown",
+        "sensitivity": "synthetic-restricted",
+        "created_at": "2026-09-07T00:00:00Z",
+        "updated_at": "2026-09-07T08:01:00Z",
+        "as_of": "2026-09-07T00:00:00Z",
+        "question_ref": "ROUND-A-Q-AUTHORITY",
+        "audit_event_refs": [],
+        "source_key": "SRC-010:DEP-12",
+        "ia_crosswalk_keys": [
+          "SRC-009:DEP-11"
+        ],
+        "from_ref": "DEMO-CTT-001/condition/screening",
+        "to_ref": "DEMO-CTT-001/work/readiness",
+        "relation_type": "aggregates_conditions",
+        "required_input_revision": 1,
+        "status": "pending",
+        "wait_field": "status",
+        "resume_event": "condition_changed",
+        "parallel_rule": "Only named input dependency holds this task; Legal, Credit and Conflicts have independent authored conditions."
+      }
+    },
+    {
+      "canonical_collection": "dependencies",
+      "snapshot_refs": [
+        {
+          "source_path": "04_operating_model/batch-d/specialist-snapshots.json",
+          "snapshot_id": "D-entry"
+        },
+        {
+          "source_path": "04_operating_model/batch-d/specialist-snapshots.json",
+          "snapshot_id": "D-credit-changed"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-entry"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-gap"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-remediation-completed"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-qa-signed-alone"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-ready"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-cleared"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-publication-failed"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-published"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-evidence-changed"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-scope-changed"
+        }
+      ],
+      "record": {
+        "id": "DEMO-CTT-001/dependency/d-conflicts-start",
+        "case_id": "DEMO-CTT-001",
+        "case_scope_id": "DEMO-CTT-001/scope/institutional",
+        "scope_revision": 3,
+        "revision": 1,
+        "source_refs": [
+          "SRC-019"
+        ],
+        "source_status": "SYNTHETIC",
+        "synthetic": true,
+        "simulation_flag": true,
+        "provenance": "authored_demo_fixture",
+        "bank_authority_ref": null,
+        "authority_status": "unknown",
+        "created_at": "2026-09-07T12:00:00Z",
+        "updated_at": "2026-09-07T12:00:00Z",
+        "from_ref": "DEMO-CTT-001/scope/institutional",
+        "to_ref": "DEMO-CTT-001/conflict-review/d-01",
+        "from_object_ref": "DEMO-CTT-001/scope/institutional",
+        "from_revision": 3,
+        "to_object_ref": "DEMO-CTT-001/conflict-review/d-01",
+        "to_revision": 1,
+        "dependency_type": "start_condition",
+        "dependency_condition": "Scoped minimum inputs or single condition contribution",
+        "impact_scope": "task",
+        "status": "satisfied",
+        "created_from_ref": "SRC-019:5",
+        "validation_status": "reviewed_for_demo",
+        "source_aliases": [
+          "SRC-009:DEP-01",
+          "SRC-010:DEP-01"
+        ],
+        "required_input_revision": 3
+      }
+    },
+    {
+      "canonical_collection": "dependencies",
+      "snapshot_refs": [
+        {
+          "source_path": "04_operating_model/batch-d/specialist-snapshots.json",
+          "snapshot_id": "D-entry"
+        },
+        {
+          "source_path": "04_operating_model/batch-d/specialist-snapshots.json",
+          "snapshot_id": "D-credit-changed"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-entry"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-gap"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-remediation-completed"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-qa-signed-alone"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-ready"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-cleared"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-publication-failed"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-published"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-evidence-changed"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-scope-changed"
+        }
+      ],
+      "record": {
+        "id": "DEMO-CTT-001/dependency/d-credit-start",
+        "case_id": "DEMO-CTT-001",
+        "case_scope_id": "DEMO-CTT-001/scope/institutional",
+        "scope_revision": 3,
+        "revision": 1,
+        "source_refs": [
+          "SRC-019"
+        ],
+        "source_status": "SYNTHETIC",
+        "synthetic": true,
+        "simulation_flag": true,
+        "provenance": "authored_demo_fixture",
+        "bank_authority_ref": null,
+        "authority_status": "unknown",
+        "created_at": "2026-09-07T12:00:00Z",
+        "updated_at": "2026-09-07T12:00:00Z",
+        "from_ref": "DEMO-CTT-001/scope/institutional",
+        "to_ref": "DEMO-CTT-001/credit-assessment/d-01",
+        "from_object_ref": "DEMO-CTT-001/scope/institutional",
+        "from_revision": 3,
+        "to_object_ref": "DEMO-CTT-001/credit-assessment/d-01",
+        "to_revision": 1,
+        "dependency_type": "start_condition",
+        "dependency_condition": "Scoped minimum inputs or single condition contribution",
+        "impact_scope": "task",
+        "status": "satisfied",
+        "created_from_ref": "SRC-019:5",
+        "validation_status": "reviewed_for_demo",
+        "source_aliases": [
+          "SRC-009:DEP-06",
+          "SRC-010:DEP-10"
+        ],
+        "required_input_revision": 3
+      }
+    },
+    {
+      "canonical_collection": "dependencies",
+      "snapshot_refs": [
+        {
+          "source_path": "04_operating_model/batch-d/specialist-snapshots.json",
+          "snapshot_id": "D-entry"
+        },
+        {
+          "source_path": "04_operating_model/batch-d/specialist-snapshots.json",
+          "snapshot_id": "D-credit-changed"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-entry"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-gap"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-remediation-completed"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-qa-signed-alone"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-ready"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-cleared"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-publication-failed"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-published"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-evidence-changed"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-scope-changed"
+        }
+      ],
+      "record": {
+        "id": "DEMO-CTT-001/dependency/d-legal-start",
+        "case_id": "DEMO-CTT-001",
+        "case_scope_id": "DEMO-CTT-001/scope/institutional",
+        "scope_revision": 3,
+        "revision": 1,
+        "source_refs": [
+          "SRC-019"
+        ],
+        "source_status": "SYNTHETIC",
+        "synthetic": true,
+        "simulation_flag": true,
+        "provenance": "authored_demo_fixture",
+        "bank_authority_ref": null,
+        "authority_status": "unknown",
+        "created_at": "2026-09-07T12:00:00Z",
+        "updated_at": "2026-09-07T12:00:00Z",
+        "from_ref": "DEMO-CTT-001/scope/institutional",
+        "to_ref": "DEMO-CTT-001/agreement/d-01",
+        "from_object_ref": "DEMO-CTT-001/scope/institutional",
+        "from_revision": 3,
+        "to_object_ref": "DEMO-CTT-001/agreement/d-01",
+        "to_revision": 3,
+        "dependency_type": "start_condition",
+        "dependency_condition": "Scoped minimum inputs or single condition contribution",
+        "impact_scope": "task",
+        "status": "satisfied",
+        "created_from_ref": "SRC-019:5",
+        "validation_status": "reviewed_for_demo",
+        "source_aliases": [
+          "SRC-009:DEP-05",
+          "SRC-010:DEP-09"
+        ],
+        "required_input_revision": 3
+      }
+    },
+    {
+      "canonical_collection": "dependencies",
+      "snapshot_refs": [
+        {
+          "source_path": "04_operating_model/batch-d/specialist-snapshots.json",
+          "snapshot_id": "D-entry"
+        },
+        {
+          "source_path": "04_operating_model/batch-d/specialist-snapshots.json",
+          "snapshot_id": "D-credit-changed"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-entry"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-gap"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-remediation-completed"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-qa-signed-alone"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-ready"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-cleared"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-publication-failed"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-published"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-evidence-changed"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-scope-changed"
+        }
+      ],
+      "record": {
+        "id": "DEMO-CTT-001/dependency/d-assessment-decision-1",
+        "case_id": "DEMO-CTT-001",
+        "case_scope_id": "DEMO-CTT-001/scope/institutional",
+        "scope_revision": 3,
+        "revision": 1,
+        "source_refs": [
+          "SRC-019"
+        ],
+        "source_status": "SYNTHETIC",
+        "synthetic": true,
+        "simulation_flag": true,
+        "provenance": "authored_demo_fixture",
+        "bank_authority_ref": null,
+        "authority_status": "unknown",
+        "created_at": "2026-09-07T12:00:00Z",
+        "updated_at": "2026-09-07T12:00:00Z",
+        "from_ref": "DEMO-CTT-001/credit-assessment/d-01",
+        "to_ref": "DEMO-CTT-001/decision/d-credit-01",
+        "from_object_ref": "DEMO-CTT-001/credit-assessment/d-01",
+        "from_revision": 1,
+        "to_object_ref": "DEMO-CTT-001/decision/d-credit-01",
+        "to_revision": 1,
+        "dependency_type": "decision_input",
+        "dependency_condition": "Scoped minimum inputs or single condition contribution",
+        "impact_scope": "branch",
+        "status": "satisfied",
+        "created_from_ref": "SRC-019:5",
+        "validation_status": "reviewed_for_demo",
+        "source_aliases": [
+          "SRC-009:DEP-07"
+        ],
+        "required_input_revision": 1
+      }
+    },
+    {
+      "canonical_collection": "dependencies",
+      "snapshot_refs": [
+        {
+          "source_path": "04_operating_model/batch-d/specialist-snapshots.json",
+          "snapshot_id": "D-entry"
+        },
+        {
+          "source_path": "04_operating_model/batch-d/specialist-snapshots.json",
+          "snapshot_id": "D-credit-changed"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-entry"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-gap"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-remediation-completed"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-qa-signed-alone"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-ready"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-cleared"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-publication-failed"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-published"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-evidence-changed"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-scope-changed"
+        }
+      ],
+      "record": {
+        "id": "DEMO-CTT-001/dependency/d-decision-condition-1",
+        "case_id": "DEMO-CTT-001",
+        "case_scope_id": "DEMO-CTT-001/scope/institutional",
+        "scope_revision": 3,
+        "revision": 1,
+        "source_refs": [
+          "SRC-019"
+        ],
+        "source_status": "SYNTHETIC",
+        "synthetic": true,
+        "simulation_flag": true,
+        "provenance": "authored_demo_fixture",
+        "bank_authority_ref": null,
+        "authority_status": "unknown",
+        "created_at": "2026-09-07T12:00:00Z",
+        "updated_at": "2026-09-07T12:00:00Z",
+        "from_ref": "DEMO-CTT-001/decision/d-credit-01",
+        "to_ref": "DEMO-CTT-001/credit-condition/d-01",
+        "from_object_ref": "DEMO-CTT-001/decision/d-credit-01",
+        "from_revision": 1,
+        "to_object_ref": "DEMO-CTT-001/credit-condition/d-01",
+        "to_revision": 1,
+        "dependency_type": "decision_input",
+        "dependency_condition": "Scoped minimum inputs or single condition contribution",
+        "impact_scope": "branch",
+        "status": "satisfied",
+        "created_from_ref": "SRC-019:5",
+        "validation_status": "reviewed_for_demo",
+        "source_aliases": [
+          "SRC-009:DEP-07"
+        ],
+        "required_input_revision": 1
+      }
+    },
+    {
+      "canonical_collection": "dependencies",
+      "snapshot_refs": [
+        {
+          "source_path": "04_operating_model/batch-d/specialist-snapshots.json",
+          "snapshot_id": "D-entry"
+        },
+        {
+          "source_path": "04_operating_model/batch-d/specialist-snapshots.json",
+          "snapshot_id": "D-credit-changed"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-entry"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-gap"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-remediation-completed"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-qa-signed-alone"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-ready"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-cleared"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-publication-failed"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-published"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-evidence-changed"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-scope-changed"
+        }
+      ],
+      "record": {
+        "id": "DEMO-CTT-001/dependency/d-condition-input-1",
+        "case_id": "DEMO-CTT-001",
+        "case_scope_id": "DEMO-CTT-001/scope/institutional",
+        "scope_revision": 3,
+        "revision": 1,
+        "source_refs": [
+          "SRC-019"
+        ],
+        "source_status": "SYNTHETIC",
+        "synthetic": true,
+        "simulation_flag": true,
+        "provenance": "authored_demo_fixture",
+        "bank_authority_ref": null,
+        "authority_status": "unknown",
+        "created_at": "2026-09-07T12:00:00Z",
+        "updated_at": "2026-09-07T12:00:00Z",
+        "from_ref": "DEMO-CTT-001/credit-condition/d-01",
+        "to_ref": "DEMO-CTT-001/agreement-input/d-01",
+        "from_object_ref": "DEMO-CTT-001/credit-condition/d-01",
+        "from_revision": 1,
+        "to_object_ref": "DEMO-CTT-001/agreement-input/d-01",
+        "to_revision": 1,
+        "dependency_type": "data_input",
+        "dependency_condition": "Scoped minimum inputs or single condition contribution",
+        "impact_scope": "branch",
+        "status": "satisfied",
+        "created_from_ref": "SRC-019:5",
+        "validation_status": "reviewed_for_demo",
+        "source_aliases": [
+          "SRC-009:DEP-07"
+        ],
+        "required_input_revision": 1
+      }
+    },
+    {
+      "canonical_collection": "dependencies",
+      "snapshot_refs": [
+        {
+          "source_path": "04_operating_model/batch-d/specialist-snapshots.json",
+          "snapshot_id": "D-entry"
+        },
+        {
+          "source_path": "04_operating_model/batch-d/specialist-snapshots.json",
+          "snapshot_id": "D-credit-changed"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-entry"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-gap"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-remediation-completed"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-qa-signed-alone"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-ready"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-cleared"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-publication-failed"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-published"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-evidence-changed"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-scope-changed"
+        }
+      ],
+      "record": {
+        "id": "DEMO-CTT-001/dependency/d-credit-legal-1",
+        "case_id": "DEMO-CTT-001",
+        "case_scope_id": "DEMO-CTT-001/scope/institutional",
+        "scope_revision": 3,
+        "revision": 1,
+        "source_refs": [
+          "SRC-019"
+        ],
+        "source_status": "SYNTHETIC",
+        "synthetic": true,
+        "simulation_flag": true,
+        "provenance": "authored_demo_fixture",
+        "bank_authority_ref": null,
+        "authority_status": "unknown",
+        "created_at": "2026-09-07T12:00:00Z",
+        "updated_at": "2026-09-07T12:00:00Z",
+        "from_ref": "DEMO-CTT-001/agreement-input/d-01",
+        "to_ref": "DEMO-CTT-001/agreement/d-01",
+        "from_object_ref": "DEMO-CTT-001/agreement-input/d-01",
+        "from_revision": 1,
+        "to_object_ref": "DEMO-CTT-001/agreement/d-01",
+        "to_revision": 3,
+        "dependency_type": "credit_to_legal",
+        "dependency_condition": "Consumer must use current Credit input revision",
+        "impact_scope": "branch",
+        "status": "satisfied",
+        "created_from_ref": "SRC-019:5",
+        "validation_status": "reviewed_for_demo",
+        "source_aliases": [
+          "SRC-009:DEP-07"
+        ],
+        "required_input_revision": 1
+      }
+    },
+    {
+      "canonical_collection": "dependencies",
+      "snapshot_refs": [
+        {
+          "source_path": "04_operating_model/batch-d/specialist-snapshots.json",
+          "snapshot_id": "D-entry"
+        },
+        {
+          "source_path": "04_operating_model/batch-d/specialist-snapshots.json",
+          "snapshot_id": "D-credit-changed"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-entry"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-gap"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-remediation-completed"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-qa-signed-alone"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-ready"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-cleared"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-publication-failed"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-published"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-evidence-changed"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-scope-changed"
+        }
+      ],
+      "record": {
+        "id": "DEMO-CTT-001/dependency/d-readiness-conflicts",
+        "case_id": "DEMO-CTT-001",
+        "case_scope_id": "DEMO-CTT-001/scope/institutional",
+        "scope_revision": 3,
+        "revision": 1,
+        "source_refs": [
+          "SRC-019"
+        ],
+        "source_status": "SYNTHETIC",
+        "synthetic": true,
+        "simulation_flag": true,
+        "provenance": "authored_demo_fixture",
+        "bank_authority_ref": null,
+        "authority_status": "unknown",
+        "created_at": "2026-09-07T12:00:00Z",
+        "updated_at": "2026-09-07T12:00:00Z",
+        "from_ref": "DEMO-CTT-001/condition/conflicts",
+        "to_ref": "DEMO-CTT-001",
+        "from_object_ref": "DEMO-CTT-001/condition/conflicts",
+        "from_revision": 2,
+        "to_object_ref": "DEMO-CTT-001",
+        "to_revision": 35,
+        "dependency_type": "readiness_contribution",
+        "dependency_condition": "Scoped minimum inputs or single condition contribution",
+        "impact_scope": "branch",
+        "status": "pending",
+        "created_from_ref": "SRC-019:5",
+        "validation_status": "reviewed_for_demo",
+        "source_aliases": [
+          "SRC-009:DEP-11",
+          "SRC-010:DEP-12"
+        ],
+        "required_input_revision": 2
+      }
+    },
+    {
+      "canonical_collection": "dependencies",
+      "snapshot_refs": [
+        {
+          "source_path": "04_operating_model/batch-d/specialist-snapshots.json",
+          "snapshot_id": "D-entry"
+        },
+        {
+          "source_path": "04_operating_model/batch-d/specialist-snapshots.json",
+          "snapshot_id": "D-credit-changed"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-entry"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-gap"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-remediation-completed"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-qa-signed-alone"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-ready"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-cleared"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-publication-failed"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-published"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-evidence-changed"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-scope-changed"
+        }
+      ],
+      "record": {
+        "id": "DEMO-CTT-001/dependency/d-readiness-credit",
+        "case_id": "DEMO-CTT-001",
+        "case_scope_id": "DEMO-CTT-001/scope/institutional",
+        "scope_revision": 3,
+        "revision": 1,
+        "source_refs": [
+          "SRC-019"
+        ],
+        "source_status": "SYNTHETIC",
+        "synthetic": true,
+        "simulation_flag": true,
+        "provenance": "authored_demo_fixture",
+        "bank_authority_ref": null,
+        "authority_status": "unknown",
+        "created_at": "2026-09-07T12:00:00Z",
+        "updated_at": "2026-09-07T12:00:00Z",
+        "from_ref": "DEMO-CTT-001/condition/credit",
+        "to_ref": "DEMO-CTT-001",
+        "from_object_ref": "DEMO-CTT-001/condition/credit",
+        "from_revision": 2,
+        "to_object_ref": "DEMO-CTT-001",
+        "to_revision": 35,
+        "dependency_type": "readiness_contribution",
+        "dependency_condition": "Scoped minimum inputs or single condition contribution",
+        "impact_scope": "branch",
+        "status": "satisfied",
+        "created_from_ref": "SRC-019:5",
+        "validation_status": "reviewed_for_demo",
+        "source_aliases": [
+          "SRC-009:DEP-11",
+          "SRC-010:DEP-12"
+        ],
+        "required_input_revision": 2
+      }
+    },
+    {
+      "canonical_collection": "dependencies",
+      "snapshot_refs": [
+        {
+          "source_path": "04_operating_model/batch-d/specialist-snapshots.json",
+          "snapshot_id": "D-entry"
+        },
+        {
+          "source_path": "04_operating_model/batch-d/specialist-snapshots.json",
+          "snapshot_id": "D-credit-changed"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-entry"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-gap"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-remediation-completed"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-qa-signed-alone"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-ready"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-cleared"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-publication-failed"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-published"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-evidence-changed"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-scope-changed"
+        }
+      ],
+      "record": {
+        "id": "DEMO-CTT-001/dependency/d-readiness-legal",
+        "case_id": "DEMO-CTT-001",
+        "case_scope_id": "DEMO-CTT-001/scope/institutional",
+        "scope_revision": 3,
+        "revision": 1,
+        "source_refs": [
+          "SRC-019"
+        ],
+        "source_status": "SYNTHETIC",
+        "synthetic": true,
+        "simulation_flag": true,
+        "provenance": "authored_demo_fixture",
+        "bank_authority_ref": null,
+        "authority_status": "unknown",
+        "created_at": "2026-09-07T12:00:00Z",
+        "updated_at": "2026-09-07T12:00:00Z",
+        "from_ref": "DEMO-CTT-001/condition/legal",
+        "to_ref": "DEMO-CTT-001",
+        "from_object_ref": "DEMO-CTT-001/condition/legal",
+        "from_revision": 2,
+        "to_object_ref": "DEMO-CTT-001",
+        "to_revision": 35,
+        "dependency_type": "readiness_contribution",
+        "dependency_condition": "Scoped minimum inputs or single condition contribution",
+        "impact_scope": "branch",
+        "status": "pending",
+        "created_from_ref": "SRC-019:5",
+        "validation_status": "reviewed_for_demo",
+        "source_aliases": [
+          "SRC-009:DEP-11",
+          "SRC-010:DEP-12"
+        ],
+        "required_input_revision": 2
+      }
+    },
+    {
+      "canonical_collection": "dependencies",
+      "snapshot_refs": [
+        {
+          "source_path": "04_operating_model/batch-d/specialist-snapshots.json",
+          "snapshot_id": "D-credit-changed"
+        }
+      ],
+      "record": {
+        "id": "DEMO-CTT-001/dependency/d-assessment-decision-2",
+        "case_id": "DEMO-CTT-001",
+        "case_scope_id": "DEMO-CTT-001/scope/institutional",
+        "scope_revision": 3,
+        "revision": 1,
+        "source_refs": [
+          "SRC-019"
+        ],
+        "source_status": "SYNTHETIC",
+        "synthetic": true,
+        "simulation_flag": true,
+        "provenance": "authored_demo_fixture",
+        "bank_authority_ref": null,
+        "authority_status": "unknown",
+        "created_at": "2026-09-07T12:00:00Z",
+        "updated_at": "2026-09-07T12:00:00Z",
+        "from_ref": "DEMO-CTT-001/credit-assessment/d-01",
+        "to_ref": "DEMO-CTT-001/decision/d-credit-02",
+        "from_object_ref": "DEMO-CTT-001/credit-assessment/d-01",
+        "from_revision": 2,
+        "to_object_ref": "DEMO-CTT-001/decision/d-credit-02",
+        "to_revision": 1,
+        "dependency_type": "decision_input",
+        "dependency_condition": "Scoped minimum inputs or single condition contribution",
+        "impact_scope": "branch",
+        "status": "satisfied",
+        "created_from_ref": "SRC-019:5",
+        "validation_status": "reviewed_for_demo",
+        "source_aliases": [
+          "SRC-009:DEP-07"
+        ],
+        "required_input_revision": 2
+      }
+    },
+    {
+      "canonical_collection": "dependencies",
+      "snapshot_refs": [
+        {
+          "source_path": "04_operating_model/batch-d/specialist-snapshots.json",
+          "snapshot_id": "D-credit-changed"
+        }
+      ],
+      "record": {
+        "id": "DEMO-CTT-001/dependency/d-decision-condition-2",
+        "case_id": "DEMO-CTT-001",
+        "case_scope_id": "DEMO-CTT-001/scope/institutional",
+        "scope_revision": 3,
+        "revision": 1,
+        "source_refs": [
+          "SRC-019"
+        ],
+        "source_status": "SYNTHETIC",
+        "synthetic": true,
+        "simulation_flag": true,
+        "provenance": "authored_demo_fixture",
+        "bank_authority_ref": null,
+        "authority_status": "unknown",
+        "created_at": "2026-09-07T12:00:00Z",
+        "updated_at": "2026-09-07T12:00:00Z",
+        "from_ref": "DEMO-CTT-001/decision/d-credit-02",
+        "to_ref": "DEMO-CTT-001/credit-condition/d-01",
+        "from_object_ref": "DEMO-CTT-001/decision/d-credit-02",
+        "from_revision": 1,
+        "to_object_ref": "DEMO-CTT-001/credit-condition/d-01",
+        "to_revision": 2,
+        "dependency_type": "decision_input",
+        "dependency_condition": "Scoped minimum inputs or single condition contribution",
+        "impact_scope": "branch",
+        "status": "satisfied",
+        "created_from_ref": "SRC-019:5",
+        "validation_status": "reviewed_for_demo",
+        "source_aliases": [
+          "SRC-009:DEP-07"
+        ],
+        "required_input_revision": 1
+      }
+    },
+    {
+      "canonical_collection": "dependencies",
+      "snapshot_refs": [
+        {
+          "source_path": "04_operating_model/batch-d/specialist-snapshots.json",
+          "snapshot_id": "D-credit-changed"
+        }
+      ],
+      "record": {
+        "id": "DEMO-CTT-001/dependency/d-condition-input-2",
+        "case_id": "DEMO-CTT-001",
+        "case_scope_id": "DEMO-CTT-001/scope/institutional",
+        "scope_revision": 3,
+        "revision": 1,
+        "source_refs": [
+          "SRC-019"
+        ],
+        "source_status": "SYNTHETIC",
+        "synthetic": true,
+        "simulation_flag": true,
+        "provenance": "authored_demo_fixture",
+        "bank_authority_ref": null,
+        "authority_status": "unknown",
+        "created_at": "2026-09-07T12:00:00Z",
+        "updated_at": "2026-09-07T12:00:00Z",
+        "from_ref": "DEMO-CTT-001/credit-condition/d-01",
+        "to_ref": "DEMO-CTT-001/agreement-input/d-01",
+        "from_object_ref": "DEMO-CTT-001/credit-condition/d-01",
+        "from_revision": 2,
+        "to_object_ref": "DEMO-CTT-001/agreement-input/d-01",
+        "to_revision": 2,
+        "dependency_type": "data_input",
+        "dependency_condition": "Scoped minimum inputs or single condition contribution",
+        "impact_scope": "branch",
+        "status": "satisfied",
+        "created_from_ref": "SRC-019:5",
+        "validation_status": "reviewed_for_demo",
+        "source_aliases": [
+          "SRC-009:DEP-07"
+        ],
+        "required_input_revision": 2
+      }
+    },
+    {
+      "canonical_collection": "dependencies",
+      "snapshot_refs": [
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-entry"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-gap"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-remediation-completed"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-qa-signed-alone"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-ready"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-cleared"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-publication-failed"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-published"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-evidence-changed"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-scope-changed"
+        }
+      ],
+      "record": {
+        "id": "DEMO-CTT-001/dependency/e-requirement-use",
+        "case_id": "DEMO-CTT-001",
+        "case_scope_id": "DEMO-CTT-001/scope/institutional",
+        "case_scope_ref": "DEMO-CTT-001/scope/institutional",
+        "scope_revision": 3,
+        "revision": 1,
+        "source_refs": [
+          "SRC-020"
+        ],
+        "source_status": "SYNTHETIC",
+        "synthetic": true,
+        "simulation_flag": true,
+        "provenance": "authored_synthetic_scenario",
+        "bank_policy_ref": null,
+        "bank_authority_ref": null,
+        "authority_status": "demo_only_bank_unknown",
+        "created_at": "2026-09-08T08:00:00Z",
+        "updated_at": "2026-09-08T08:00:00Z",
+        "from_ref": "DEMO-CTT-001/requirement/ownership-control",
+        "to_ref": "DEMO-CTT-001/assessment/e-ownership",
+        "from_object_ref": "DEMO-CTT-001/requirement/ownership-control",
+        "from_revision": 1,
+        "to_object_ref": "DEMO-CTT-001/assessment/e-ownership",
+        "to_revision": 1,
+        "dependency_type": "e_purpose_remediation",
+        "impact_scope": "task",
+        "dependency_condition": "Current purpose-specific reference required",
+        "status": "satisfied",
+        "validation_status": "reviewed_for_demo",
+        "source_aliases": [
+          "SRC-009:DEP-09",
+          "SRC-020:4:E2"
+        ],
+        "created_from_ref": "SRC-020:4:E2",
+        "required_input_revision": 1
+      }
+    },
+    {
+      "canonical_collection": "dependencies",
+      "snapshot_refs": [
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-entry"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-gap"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-remediation-completed"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-qa-signed-alone"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-ready"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-cleared"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-publication-failed"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-published"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-evidence-changed"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-scope-changed"
+        }
+      ],
+      "record": {
+        "id": "DEMO-CTT-001/dependency/e-use-qa",
+        "case_id": "DEMO-CTT-001",
+        "case_scope_id": "DEMO-CTT-001/scope/institutional",
+        "case_scope_ref": "DEMO-CTT-001/scope/institutional",
+        "scope_revision": 3,
+        "revision": 1,
+        "source_refs": [
+          "SRC-020"
+        ],
+        "source_status": "SYNTHETIC",
+        "synthetic": true,
+        "simulation_flag": true,
+        "provenance": "authored_synthetic_scenario",
+        "bank_policy_ref": null,
+        "bank_authority_ref": null,
+        "authority_status": "demo_only_bank_unknown",
+        "created_at": "2026-09-08T08:00:00Z",
+        "updated_at": "2026-09-08T08:00:00Z",
+        "from_ref": "DEMO-CTT-001/assessment/e-ownership",
+        "to_ref": "DEMO-CTT-001/qa-check/e-04",
+        "from_object_ref": "DEMO-CTT-001/assessment/e-ownership",
+        "from_revision": 1,
+        "to_object_ref": "DEMO-CTT-001/qa-check/e-04",
+        "to_revision": 1,
+        "dependency_type": "e_purpose_remediation",
+        "impact_scope": "task",
+        "dependency_condition": "Current purpose-specific reference required",
+        "status": "satisfied",
+        "validation_status": "reviewed_for_demo",
+        "source_aliases": [
+          "SRC-009:DEP-09",
+          "SRC-020:4:E2"
+        ],
+        "created_from_ref": "SRC-020:4:E2",
+        "required_input_revision": 1
+      }
+    },
+    {
+      "canonical_collection": "dependencies",
+      "snapshot_refs": [
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-entry"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-gap"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-remediation-completed"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-qa-signed-alone"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-ready"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-cleared"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-publication-failed"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-published"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-evidence-changed"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-scope-changed"
+        }
+      ],
+      "record": {
+        "id": "DEMO-CTT-001/dependency/e-qa-gap",
+        "case_id": "DEMO-CTT-001",
+        "case_scope_id": "DEMO-CTT-001/scope/institutional",
+        "case_scope_ref": "DEMO-CTT-001/scope/institutional",
+        "scope_revision": 3,
+        "revision": 1,
+        "source_refs": [
+          "SRC-020"
+        ],
+        "source_status": "SYNTHETIC",
+        "synthetic": true,
+        "simulation_flag": true,
+        "provenance": "authored_synthetic_scenario",
+        "bank_policy_ref": null,
+        "bank_authority_ref": null,
+        "authority_status": "demo_only_bank_unknown",
+        "created_at": "2026-09-08T08:00:00Z",
+        "updated_at": "2026-09-08T08:00:00Z",
+        "from_ref": "DEMO-CTT-001/qa-check/e-04",
+        "to_ref": "DEMO-CTT-001/gap/e-qa-01",
+        "from_object_ref": "DEMO-CTT-001/qa-check/e-04",
+        "from_revision": 1,
+        "to_object_ref": "DEMO-CTT-001/gap/e-qa-01",
+        "to_revision": null,
+        "dependency_type": "e_purpose_remediation",
+        "impact_scope": "task",
+        "dependency_condition": "Current purpose-specific reference required",
+        "status": "unknown",
+        "validation_status": "reviewed_for_demo",
+        "source_aliases": [
+          "SRC-009:DEP-10",
+          "SRC-020:4:E2"
+        ],
+        "created_from_ref": "SRC-020:4:E2",
+        "required_input_revision": 1
+      }
+    },
+    {
+      "canonical_collection": "dependencies",
+      "snapshot_refs": [
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-entry"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-gap"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-remediation-completed"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-qa-signed-alone"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-ready"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-cleared"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-publication-failed"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-published"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-evidence-changed"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-scope-changed"
+        }
+      ],
+      "record": {
+        "id": "DEMO-CTT-001/dependency/e-gap-task",
+        "case_id": "DEMO-CTT-001",
+        "case_scope_id": "DEMO-CTT-001/scope/institutional",
+        "case_scope_ref": "DEMO-CTT-001/scope/institutional",
+        "scope_revision": 3,
+        "revision": 1,
+        "source_refs": [
+          "SRC-020"
+        ],
+        "source_status": "SYNTHETIC",
+        "synthetic": true,
+        "simulation_flag": true,
+        "provenance": "authored_synthetic_scenario",
+        "bank_policy_ref": null,
+        "bank_authority_ref": null,
+        "authority_status": "demo_only_bank_unknown",
+        "created_at": "2026-09-08T08:00:00Z",
+        "updated_at": "2026-09-08T08:00:00Z",
+        "from_ref": "DEMO-CTT-001/gap/e-qa-01",
+        "to_ref": "DEMO-CTT-001/work/e-remediation-01",
+        "from_object_ref": "DEMO-CTT-001/gap/e-qa-01",
+        "from_revision": null,
+        "to_object_ref": "DEMO-CTT-001/work/e-remediation-01",
+        "to_revision": null,
+        "dependency_type": "e_purpose_remediation",
+        "impact_scope": "task",
+        "dependency_condition": "Current purpose-specific reference required",
+        "status": "unknown",
+        "validation_status": "reviewed_for_demo",
+        "source_aliases": [
+          "SRC-010:DEP-11",
+          "SRC-020:4:E2"
+        ],
+        "created_from_ref": "SRC-020:4:E2",
+        "required_input_revision": null
+      }
+    },
+    {
+      "canonical_collection": "dependencies",
+      "snapshot_refs": [
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-entry"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-gap"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-remediation-completed"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-qa-signed-alone"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-ready"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-cleared"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-publication-failed"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-published"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-evidence-changed"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-scope-changed"
+        }
+      ],
+      "record": {
+        "id": "DEMO-CTT-001/dependency/e-task-qa",
+        "case_id": "DEMO-CTT-001",
+        "case_scope_id": "DEMO-CTT-001/scope/institutional",
+        "case_scope_ref": "DEMO-CTT-001/scope/institutional",
+        "scope_revision": 3,
+        "revision": 1,
+        "source_refs": [
+          "SRC-020"
+        ],
+        "source_status": "SYNTHETIC",
+        "synthetic": true,
+        "simulation_flag": true,
+        "provenance": "authored_synthetic_scenario",
+        "bank_policy_ref": null,
+        "bank_authority_ref": null,
+        "authority_status": "demo_only_bank_unknown",
+        "created_at": "2026-09-08T08:00:00Z",
+        "updated_at": "2026-09-08T08:00:00Z",
+        "from_ref": "DEMO-CTT-001/work/e-remediation-01",
+        "to_ref": "DEMO-CTT-001/qa-check/e-04",
+        "from_object_ref": "DEMO-CTT-001/work/e-remediation-01",
+        "from_revision": null,
+        "to_object_ref": "DEMO-CTT-001/qa-check/e-04",
+        "to_revision": 1,
+        "dependency_type": "e_purpose_remediation",
+        "impact_scope": "task",
+        "dependency_condition": "Current purpose-specific reference required",
+        "status": "unknown",
+        "validation_status": "reviewed_for_demo",
+        "source_aliases": [
+          "SRC-010:DEP-11",
+          "SRC-020:4:E2"
+        ],
+        "created_from_ref": "SRC-020:4:E2",
+        "required_input_revision": null
+      }
+    },
+    {
+      "canonical_collection": "dependencies",
+      "snapshot_refs": [
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-gap"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-remediation-completed"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-qa-signed-alone"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-ready"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-cleared"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-publication-failed"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-published"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-evidence-changed"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-scope-changed"
+        }
+      ],
+      "record": {
+        "id": "DEMO-CTT-001/dependency/e-use-qa",
+        "case_id": "DEMO-CTT-001",
+        "case_scope_id": "DEMO-CTT-001/scope/institutional",
+        "case_scope_ref": "DEMO-CTT-001/scope/institutional",
+        "scope_revision": 3,
+        "revision": 2,
+        "source_refs": [
+          "SRC-020"
+        ],
+        "source_status": "SYNTHETIC",
+        "synthetic": true,
+        "simulation_flag": true,
+        "provenance": "authored_synthetic_scenario",
+        "bank_policy_ref": null,
+        "bank_authority_ref": null,
+        "authority_status": "demo_only_bank_unknown",
+        "created_at": "2026-09-08T08:00:00Z",
+        "updated_at": "2026-09-08T09:00:00Z",
+        "from_ref": "DEMO-CTT-001/assessment/e-ownership",
+        "to_ref": "DEMO-CTT-001/qa-check/e-04",
+        "from_object_ref": "DEMO-CTT-001/assessment/e-ownership",
+        "from_revision": 1,
+        "to_object_ref": "DEMO-CTT-001/qa-check/e-04",
+        "to_revision": 2,
+        "dependency_type": "e_purpose_remediation",
+        "impact_scope": "task",
+        "dependency_condition": "Current purpose-specific reference required",
+        "status": "satisfied",
+        "validation_status": "reviewed_for_demo",
+        "source_aliases": [
+          "SRC-009:DEP-09",
+          "SRC-020:4:E2"
+        ],
+        "created_from_ref": "SRC-020:4:E2",
+        "required_input_revision": 1,
+        "supersedes_revision": 1
+      }
+    },
+    {
+      "canonical_collection": "dependencies",
+      "snapshot_refs": [
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-gap"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-remediation-completed"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-qa-signed-alone"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-ready"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-cleared"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-publication-failed"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-published"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-evidence-changed"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-scope-changed"
+        }
+      ],
+      "record": {
+        "id": "DEMO-CTT-001/dependency/e-qa-gap",
+        "case_id": "DEMO-CTT-001",
+        "case_scope_id": "DEMO-CTT-001/scope/institutional",
+        "case_scope_ref": "DEMO-CTT-001/scope/institutional",
+        "scope_revision": 3,
+        "revision": 2,
+        "source_refs": [
+          "SRC-020"
+        ],
+        "source_status": "SYNTHETIC",
+        "synthetic": true,
+        "simulation_flag": true,
+        "provenance": "authored_synthetic_scenario",
+        "bank_policy_ref": null,
+        "bank_authority_ref": null,
+        "authority_status": "demo_only_bank_unknown",
+        "created_at": "2026-09-08T08:00:00Z",
+        "updated_at": "2026-09-08T09:00:00Z",
+        "from_ref": "DEMO-CTT-001/qa-check/e-04",
+        "to_ref": "DEMO-CTT-001/gap/e-qa-01",
+        "from_object_ref": "DEMO-CTT-001/qa-check/e-04",
+        "from_revision": 2,
+        "to_object_ref": "DEMO-CTT-001/gap/e-qa-01",
+        "to_revision": 1,
+        "dependency_type": "e_purpose_remediation",
+        "impact_scope": "task",
+        "dependency_condition": "Current purpose-specific reference required",
+        "status": "satisfied",
+        "validation_status": "reviewed_for_demo",
+        "source_aliases": [
+          "SRC-009:DEP-10",
+          "SRC-020:4:E2"
+        ],
+        "created_from_ref": "SRC-020:4:E2",
+        "required_input_revision": 2,
+        "supersedes_revision": 1
+      }
+    },
+    {
+      "canonical_collection": "dependencies",
+      "snapshot_refs": [
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-gap"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-remediation-completed"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-qa-signed-alone"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-ready"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-cleared"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-publication-failed"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-published"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-evidence-changed"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-scope-changed"
+        }
+      ],
+      "record": {
+        "id": "DEMO-CTT-001/dependency/e-gap-task",
+        "case_id": "DEMO-CTT-001",
+        "case_scope_id": "DEMO-CTT-001/scope/institutional",
+        "case_scope_ref": "DEMO-CTT-001/scope/institutional",
+        "scope_revision": 3,
+        "revision": 2,
+        "source_refs": [
+          "SRC-020"
+        ],
+        "source_status": "SYNTHETIC",
+        "synthetic": true,
+        "simulation_flag": true,
+        "provenance": "authored_synthetic_scenario",
+        "bank_policy_ref": null,
+        "bank_authority_ref": null,
+        "authority_status": "demo_only_bank_unknown",
+        "created_at": "2026-09-08T08:00:00Z",
+        "updated_at": "2026-09-08T09:00:00Z",
+        "from_ref": "DEMO-CTT-001/gap/e-qa-01",
+        "to_ref": "DEMO-CTT-001/work/e-remediation-01",
+        "from_object_ref": "DEMO-CTT-001/gap/e-qa-01",
+        "from_revision": 1,
+        "to_object_ref": "DEMO-CTT-001/work/e-remediation-01",
+        "to_revision": 1,
+        "dependency_type": "e_purpose_remediation",
+        "impact_scope": "task",
+        "dependency_condition": "Current purpose-specific reference required",
+        "status": "satisfied",
+        "validation_status": "reviewed_for_demo",
+        "source_aliases": [
+          "SRC-010:DEP-11",
+          "SRC-020:4:E2"
+        ],
+        "created_from_ref": "SRC-020:4:E2",
+        "required_input_revision": 1,
+        "supersedes_revision": 1
+      }
+    },
+    {
+      "canonical_collection": "dependencies",
+      "snapshot_refs": [
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-gap"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-remediation-completed"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-qa-signed-alone"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-ready"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-cleared"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-publication-failed"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-published"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-evidence-changed"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-scope-changed"
+        }
+      ],
+      "record": {
+        "id": "DEMO-CTT-001/dependency/e-task-qa",
+        "case_id": "DEMO-CTT-001",
+        "case_scope_id": "DEMO-CTT-001/scope/institutional",
+        "case_scope_ref": "DEMO-CTT-001/scope/institutional",
+        "scope_revision": 3,
+        "revision": 2,
+        "source_refs": [
+          "SRC-020"
+        ],
+        "source_status": "SYNTHETIC",
+        "synthetic": true,
+        "simulation_flag": true,
+        "provenance": "authored_synthetic_scenario",
+        "bank_policy_ref": null,
+        "bank_authority_ref": null,
+        "authority_status": "demo_only_bank_unknown",
+        "created_at": "2026-09-08T08:00:00Z",
+        "updated_at": "2026-09-08T09:00:00Z",
+        "from_ref": "DEMO-CTT-001/work/e-remediation-01",
+        "to_ref": "DEMO-CTT-001/qa-check/e-04",
+        "from_object_ref": "DEMO-CTT-001/work/e-remediation-01",
+        "from_revision": 1,
+        "to_object_ref": "DEMO-CTT-001/qa-check/e-04",
+        "to_revision": 2,
+        "dependency_type": "e_purpose_remediation",
+        "impact_scope": "task",
+        "dependency_condition": "Current purpose-specific reference required",
+        "status": "satisfied",
+        "validation_status": "reviewed_for_demo",
+        "source_aliases": [
+          "SRC-010:DEP-11",
+          "SRC-020:4:E2"
+        ],
+        "created_from_ref": "SRC-020:4:E2",
+        "required_input_revision": 1,
+        "supersedes_revision": 1
+      }
+    },
+    {
+      "canonical_collection": "dependencies",
+      "snapshot_refs": [
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-remediation-completed"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-qa-signed-alone"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-ready"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-cleared"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-publication-failed"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-published"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-evidence-changed"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-scope-changed"
+        }
+      ],
+      "record": {
+        "id": "DEMO-CTT-001/dependency/e-gap-task",
+        "case_id": "DEMO-CTT-001",
+        "case_scope_id": "DEMO-CTT-001/scope/institutional",
+        "case_scope_ref": "DEMO-CTT-001/scope/institutional",
+        "scope_revision": 3,
+        "revision": 3,
+        "source_refs": [
+          "SRC-020"
+        ],
+        "source_status": "SYNTHETIC",
+        "synthetic": true,
+        "simulation_flag": true,
+        "provenance": "authored_synthetic_scenario",
+        "bank_policy_ref": null,
+        "bank_authority_ref": null,
+        "authority_status": "demo_only_bank_unknown",
+        "created_at": "2026-09-08T08:00:00Z",
+        "updated_at": "2026-09-08T09:00:00Z",
+        "from_ref": "DEMO-CTT-001/gap/e-qa-01",
+        "to_ref": "DEMO-CTT-001/work/e-remediation-01",
+        "from_object_ref": "DEMO-CTT-001/gap/e-qa-01",
+        "from_revision": 1,
+        "to_object_ref": "DEMO-CTT-001/work/e-remediation-01",
+        "to_revision": 2,
+        "dependency_type": "e_purpose_remediation",
+        "impact_scope": "task",
+        "dependency_condition": "Current purpose-specific reference required",
+        "status": "satisfied",
+        "validation_status": "reviewed_for_demo",
+        "source_aliases": [
+          "SRC-010:DEP-11",
+          "SRC-020:4:E2"
+        ],
+        "created_from_ref": "SRC-020:4:E2",
+        "required_input_revision": 1,
+        "supersedes_revision": 2
+      }
+    },
+    {
+      "canonical_collection": "dependencies",
+      "snapshot_refs": [
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-remediation-completed"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-qa-signed-alone"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-ready"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-cleared"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-publication-failed"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-published"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-evidence-changed"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-scope-changed"
+        }
+      ],
+      "record": {
+        "id": "DEMO-CTT-001/dependency/e-task-qa",
+        "case_id": "DEMO-CTT-001",
+        "case_scope_id": "DEMO-CTT-001/scope/institutional",
+        "case_scope_ref": "DEMO-CTT-001/scope/institutional",
+        "scope_revision": 3,
+        "revision": 3,
+        "source_refs": [
+          "SRC-020"
+        ],
+        "source_status": "SYNTHETIC",
+        "synthetic": true,
+        "simulation_flag": true,
+        "provenance": "authored_synthetic_scenario",
+        "bank_policy_ref": null,
+        "bank_authority_ref": null,
+        "authority_status": "demo_only_bank_unknown",
+        "created_at": "2026-09-08T08:00:00Z",
+        "updated_at": "2026-09-08T09:00:00Z",
+        "from_ref": "DEMO-CTT-001/work/e-remediation-01",
+        "to_ref": "DEMO-CTT-001/qa-check/e-04",
+        "from_object_ref": "DEMO-CTT-001/work/e-remediation-01",
+        "from_revision": 2,
+        "to_object_ref": "DEMO-CTT-001/qa-check/e-04",
+        "to_revision": 2,
+        "dependency_type": "e_purpose_remediation",
+        "impact_scope": "task",
+        "dependency_condition": "Current purpose-specific reference required",
+        "status": "satisfied",
+        "validation_status": "reviewed_for_demo",
+        "source_aliases": [
+          "SRC-010:DEP-11",
+          "SRC-020:4:E2"
+        ],
+        "created_from_ref": "SRC-020:4:E2",
+        "required_input_revision": 2,
+        "supersedes_revision": 2
+      }
+    },
+    {
+      "canonical_collection": "dependencies",
+      "snapshot_refs": [
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-remediation-completed"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-qa-signed-alone"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-ready"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-cleared"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-publication-failed"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-published"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-evidence-changed"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-scope-changed"
+        }
+      ],
+      "record": {
+        "id": "DEMO-CTT-001/dependency/e-requirement-use",
+        "case_id": "DEMO-CTT-001",
+        "case_scope_id": "DEMO-CTT-001/scope/institutional",
+        "case_scope_ref": "DEMO-CTT-001/scope/institutional",
+        "scope_revision": 3,
+        "revision": 2,
+        "source_refs": [
+          "SRC-020"
+        ],
+        "source_status": "SYNTHETIC",
+        "synthetic": true,
+        "simulation_flag": true,
+        "provenance": "authored_synthetic_scenario",
+        "bank_policy_ref": null,
+        "bank_authority_ref": null,
+        "authority_status": "demo_only_bank_unknown",
+        "created_at": "2026-09-08T08:00:00Z",
+        "updated_at": "2026-09-08T09:00:00Z",
+        "from_ref": "DEMO-CTT-001/requirement/ownership-control",
+        "to_ref": "DEMO-CTT-001/assessment/e-ownership",
+        "from_object_ref": "DEMO-CTT-001/requirement/ownership-control",
+        "from_revision": 2,
+        "to_object_ref": "DEMO-CTT-001/assessment/e-ownership",
+        "to_revision": 2,
+        "dependency_type": "e_purpose_remediation",
+        "impact_scope": "task",
+        "dependency_condition": "Current purpose-specific reference required",
+        "status": "satisfied",
+        "validation_status": "reviewed_for_demo",
+        "source_aliases": [
+          "SRC-009:DEP-09",
+          "SRC-020:4:E2"
+        ],
+        "created_from_ref": "SRC-020:4:E2",
+        "required_input_revision": 2,
+        "supersedes_revision": 1
+      }
+    },
+    {
+      "canonical_collection": "dependencies",
+      "snapshot_refs": [
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-remediation-completed"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-qa-signed-alone"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-ready"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-cleared"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-publication-failed"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-published"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-evidence-changed"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-scope-changed"
+        }
+      ],
+      "record": {
+        "id": "DEMO-CTT-001/dependency/e-use-qa",
+        "case_id": "DEMO-CTT-001",
+        "case_scope_id": "DEMO-CTT-001/scope/institutional",
+        "case_scope_ref": "DEMO-CTT-001/scope/institutional",
+        "scope_revision": 3,
+        "revision": 3,
+        "source_refs": [
+          "SRC-020"
+        ],
+        "source_status": "SYNTHETIC",
+        "synthetic": true,
+        "simulation_flag": true,
+        "provenance": "authored_synthetic_scenario",
+        "bank_policy_ref": null,
+        "bank_authority_ref": null,
+        "authority_status": "demo_only_bank_unknown",
+        "created_at": "2026-09-08T08:00:00Z",
+        "updated_at": "2026-09-08T09:00:00Z",
+        "from_ref": "DEMO-CTT-001/assessment/e-ownership",
+        "to_ref": "DEMO-CTT-001/qa-check/e-04",
+        "from_object_ref": "DEMO-CTT-001/assessment/e-ownership",
+        "from_revision": 2,
+        "to_object_ref": "DEMO-CTT-001/qa-check/e-04",
+        "to_revision": 3,
+        "dependency_type": "e_purpose_remediation",
+        "impact_scope": "task",
+        "dependency_condition": "Current purpose-specific reference required",
+        "status": "satisfied",
+        "validation_status": "reviewed_for_demo",
+        "source_aliases": [
+          "SRC-009:DEP-09",
+          "SRC-020:4:E2"
+        ],
+        "created_from_ref": "SRC-020:4:E2",
+        "required_input_revision": 2,
+        "supersedes_revision": 2
+      }
+    },
+    {
+      "canonical_collection": "dependencies",
+      "snapshot_refs": [
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-remediation-completed"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-qa-signed-alone"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-ready"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-cleared"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-publication-failed"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-published"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-evidence-changed"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-scope-changed"
+        }
+      ],
+      "record": {
+        "id": "DEMO-CTT-001/dependency/e-qa-gap",
+        "case_id": "DEMO-CTT-001",
+        "case_scope_id": "DEMO-CTT-001/scope/institutional",
+        "case_scope_ref": "DEMO-CTT-001/scope/institutional",
+        "scope_revision": 3,
+        "revision": 3,
+        "source_refs": [
+          "SRC-020"
+        ],
+        "source_status": "SYNTHETIC",
+        "synthetic": true,
+        "simulation_flag": true,
+        "provenance": "authored_synthetic_scenario",
+        "bank_policy_ref": null,
+        "bank_authority_ref": null,
+        "authority_status": "demo_only_bank_unknown",
+        "created_at": "2026-09-08T08:00:00Z",
+        "updated_at": "2026-09-08T09:00:00Z",
+        "from_ref": "DEMO-CTT-001/qa-check/e-04",
+        "to_ref": "DEMO-CTT-001/gap/e-qa-01",
+        "from_object_ref": "DEMO-CTT-001/qa-check/e-04",
+        "from_revision": 3,
+        "to_object_ref": "DEMO-CTT-001/gap/e-qa-01",
+        "to_revision": 1,
+        "dependency_type": "e_purpose_remediation",
+        "impact_scope": "task",
+        "dependency_condition": "Current purpose-specific reference required",
+        "status": "satisfied",
+        "validation_status": "reviewed_for_demo",
+        "source_aliases": [
+          "SRC-009:DEP-10",
+          "SRC-020:4:E2"
+        ],
+        "created_from_ref": "SRC-020:4:E2",
+        "required_input_revision": 3,
+        "supersedes_revision": 2
+      }
+    },
+    {
+      "canonical_collection": "dependencies",
+      "snapshot_refs": [
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-remediation-completed"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-qa-signed-alone"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-ready"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-cleared"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-publication-failed"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-published"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-evidence-changed"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-scope-changed"
+        }
+      ],
+      "record": {
+        "id": "DEMO-CTT-001/dependency/e-gap-task",
+        "case_id": "DEMO-CTT-001",
+        "case_scope_id": "DEMO-CTT-001/scope/institutional",
+        "case_scope_ref": "DEMO-CTT-001/scope/institutional",
+        "scope_revision": 3,
+        "revision": 4,
+        "source_refs": [
+          "SRC-020"
+        ],
+        "source_status": "SYNTHETIC",
+        "synthetic": true,
+        "simulation_flag": true,
+        "provenance": "authored_synthetic_scenario",
+        "bank_policy_ref": null,
+        "bank_authority_ref": null,
+        "authority_status": "demo_only_bank_unknown",
+        "created_at": "2026-09-08T08:00:00Z",
+        "updated_at": "2026-09-08T09:00:00Z",
+        "from_ref": "DEMO-CTT-001/gap/e-qa-01",
+        "to_ref": "DEMO-CTT-001/work/e-remediation-01",
+        "from_object_ref": "DEMO-CTT-001/gap/e-qa-01",
+        "from_revision": 1,
+        "to_object_ref": "DEMO-CTT-001/work/e-remediation-01",
+        "to_revision": 3,
+        "dependency_type": "e_purpose_remediation",
+        "impact_scope": "task",
+        "dependency_condition": "Current purpose-specific reference required",
+        "status": "satisfied",
+        "validation_status": "reviewed_for_demo",
+        "source_aliases": [
+          "SRC-010:DEP-11",
+          "SRC-020:4:E2"
+        ],
+        "created_from_ref": "SRC-020:4:E2",
+        "required_input_revision": 1,
+        "supersedes_revision": 3
+      }
+    },
+    {
+      "canonical_collection": "dependencies",
+      "snapshot_refs": [
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-remediation-completed"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-qa-signed-alone"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-ready"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-cleared"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-publication-failed"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-published"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-evidence-changed"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-scope-changed"
+        }
+      ],
+      "record": {
+        "id": "DEMO-CTT-001/dependency/e-task-qa",
+        "case_id": "DEMO-CTT-001",
+        "case_scope_id": "DEMO-CTT-001/scope/institutional",
+        "case_scope_ref": "DEMO-CTT-001/scope/institutional",
+        "scope_revision": 3,
+        "revision": 4,
+        "source_refs": [
+          "SRC-020"
+        ],
+        "source_status": "SYNTHETIC",
+        "synthetic": true,
+        "simulation_flag": true,
+        "provenance": "authored_synthetic_scenario",
+        "bank_policy_ref": null,
+        "bank_authority_ref": null,
+        "authority_status": "demo_only_bank_unknown",
+        "created_at": "2026-09-08T08:00:00Z",
+        "updated_at": "2026-09-08T09:00:00Z",
+        "from_ref": "DEMO-CTT-001/work/e-remediation-01",
+        "to_ref": "DEMO-CTT-001/qa-check/e-04",
+        "from_object_ref": "DEMO-CTT-001/work/e-remediation-01",
+        "from_revision": 3,
+        "to_object_ref": "DEMO-CTT-001/qa-check/e-04",
+        "to_revision": 3,
+        "dependency_type": "e_purpose_remediation",
+        "impact_scope": "task",
+        "dependency_condition": "Current purpose-specific reference required",
+        "status": "satisfied",
+        "validation_status": "reviewed_for_demo",
+        "source_aliases": [
+          "SRC-010:DEP-11",
+          "SRC-020:4:E2"
+        ],
+        "created_from_ref": "SRC-020:4:E2",
+        "required_input_revision": 3,
+        "supersedes_revision": 3
+      }
+    },
+    {
+      "canonical_collection": "dependencies",
+      "snapshot_refs": [
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-qa-signed-alone"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-ready"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-cleared"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-publication-failed"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-published"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-evidence-changed"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-scope-changed"
+        }
+      ],
+      "record": {
+        "id": "DEMO-CTT-001/dependency/e-use-qa",
+        "case_id": "DEMO-CTT-001",
+        "case_scope_id": "DEMO-CTT-001/scope/institutional",
+        "case_scope_ref": "DEMO-CTT-001/scope/institutional",
+        "scope_revision": 3,
+        "revision": 4,
+        "source_refs": [
+          "SRC-020"
+        ],
+        "source_status": "SYNTHETIC",
+        "synthetic": true,
+        "simulation_flag": true,
+        "provenance": "authored_synthetic_scenario",
+        "bank_policy_ref": null,
+        "bank_authority_ref": null,
+        "authority_status": "demo_only_bank_unknown",
+        "created_at": "2026-09-08T08:00:00Z",
+        "updated_at": "2026-09-08T09:00:00Z",
+        "from_ref": "DEMO-CTT-001/assessment/e-ownership",
+        "to_ref": "DEMO-CTT-001/qa-check/e-04",
+        "from_object_ref": "DEMO-CTT-001/assessment/e-ownership",
+        "from_revision": 2,
+        "to_object_ref": "DEMO-CTT-001/qa-check/e-04",
+        "to_revision": 4,
+        "dependency_type": "e_purpose_remediation",
+        "impact_scope": "task",
+        "dependency_condition": "Current purpose-specific reference required",
+        "status": "satisfied",
+        "validation_status": "reviewed_for_demo",
+        "source_aliases": [
+          "SRC-009:DEP-09",
+          "SRC-020:4:E2"
+        ],
+        "created_from_ref": "SRC-020:4:E2",
+        "required_input_revision": 2,
+        "supersedes_revision": 3
+      }
+    },
+    {
+      "canonical_collection": "dependencies",
+      "snapshot_refs": [
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-qa-signed-alone"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-ready"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-cleared"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-publication-failed"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-published"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-evidence-changed"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-scope-changed"
+        }
+      ],
+      "record": {
+        "id": "DEMO-CTT-001/dependency/e-qa-gap",
+        "case_id": "DEMO-CTT-001",
+        "case_scope_id": "DEMO-CTT-001/scope/institutional",
+        "case_scope_ref": "DEMO-CTT-001/scope/institutional",
+        "scope_revision": 3,
+        "revision": 4,
+        "source_refs": [
+          "SRC-020"
+        ],
+        "source_status": "SYNTHETIC",
+        "synthetic": true,
+        "simulation_flag": true,
+        "provenance": "authored_synthetic_scenario",
+        "bank_policy_ref": null,
+        "bank_authority_ref": null,
+        "authority_status": "demo_only_bank_unknown",
+        "created_at": "2026-09-08T08:00:00Z",
+        "updated_at": "2026-09-08T09:00:00Z",
+        "from_ref": "DEMO-CTT-001/qa-check/e-04",
+        "to_ref": "DEMO-CTT-001/gap/e-qa-01",
+        "from_object_ref": "DEMO-CTT-001/qa-check/e-04",
+        "from_revision": 4,
+        "to_object_ref": "DEMO-CTT-001/gap/e-qa-01",
+        "to_revision": 2,
+        "dependency_type": "e_purpose_remediation",
+        "impact_scope": "task",
+        "dependency_condition": "Current purpose-specific reference required",
+        "status": "satisfied",
+        "validation_status": "reviewed_for_demo",
+        "source_aliases": [
+          "SRC-009:DEP-10",
+          "SRC-020:4:E2"
+        ],
+        "created_from_ref": "SRC-020:4:E2",
+        "required_input_revision": 4,
+        "supersedes_revision": 3
+      }
+    },
+    {
+      "canonical_collection": "dependencies",
+      "snapshot_refs": [
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-qa-signed-alone"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-ready"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-cleared"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-publication-failed"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-published"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-evidence-changed"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-scope-changed"
+        }
+      ],
+      "record": {
+        "id": "DEMO-CTT-001/dependency/e-gap-task",
+        "case_id": "DEMO-CTT-001",
+        "case_scope_id": "DEMO-CTT-001/scope/institutional",
+        "case_scope_ref": "DEMO-CTT-001/scope/institutional",
+        "scope_revision": 3,
+        "revision": 5,
+        "source_refs": [
+          "SRC-020"
+        ],
+        "source_status": "SYNTHETIC",
+        "synthetic": true,
+        "simulation_flag": true,
+        "provenance": "authored_synthetic_scenario",
+        "bank_policy_ref": null,
+        "bank_authority_ref": null,
+        "authority_status": "demo_only_bank_unknown",
+        "created_at": "2026-09-08T08:00:00Z",
+        "updated_at": "2026-09-08T09:00:00Z",
+        "from_ref": "DEMO-CTT-001/gap/e-qa-01",
+        "to_ref": "DEMO-CTT-001/work/e-remediation-01",
+        "from_object_ref": "DEMO-CTT-001/gap/e-qa-01",
+        "from_revision": 2,
+        "to_object_ref": "DEMO-CTT-001/work/e-remediation-01",
+        "to_revision": 3,
+        "dependency_type": "e_purpose_remediation",
+        "impact_scope": "task",
+        "dependency_condition": "Current purpose-specific reference required",
+        "status": "satisfied",
+        "validation_status": "reviewed_for_demo",
+        "source_aliases": [
+          "SRC-010:DEP-11",
+          "SRC-020:4:E2"
+        ],
+        "created_from_ref": "SRC-020:4:E2",
+        "required_input_revision": 2,
+        "supersedes_revision": 4
+      }
+    },
+    {
+      "canonical_collection": "dependencies",
+      "snapshot_refs": [
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-qa-signed-alone"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-ready"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-cleared"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-publication-failed"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-published"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-evidence-changed"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-scope-changed"
+        }
+      ],
+      "record": {
+        "id": "DEMO-CTT-001/dependency/e-task-qa",
+        "case_id": "DEMO-CTT-001",
+        "case_scope_id": "DEMO-CTT-001/scope/institutional",
+        "case_scope_ref": "DEMO-CTT-001/scope/institutional",
+        "scope_revision": 3,
+        "revision": 5,
+        "source_refs": [
+          "SRC-020"
+        ],
+        "source_status": "SYNTHETIC",
+        "synthetic": true,
+        "simulation_flag": true,
+        "provenance": "authored_synthetic_scenario",
+        "bank_policy_ref": null,
+        "bank_authority_ref": null,
+        "authority_status": "demo_only_bank_unknown",
+        "created_at": "2026-09-08T08:00:00Z",
+        "updated_at": "2026-09-08T09:00:00Z",
+        "from_ref": "DEMO-CTT-001/work/e-remediation-01",
+        "to_ref": "DEMO-CTT-001/qa-check/e-04",
+        "from_object_ref": "DEMO-CTT-001/work/e-remediation-01",
+        "from_revision": 3,
+        "to_object_ref": "DEMO-CTT-001/qa-check/e-04",
+        "to_revision": 4,
+        "dependency_type": "e_purpose_remediation",
+        "impact_scope": "task",
+        "dependency_condition": "Current purpose-specific reference required",
+        "status": "satisfied",
+        "validation_status": "reviewed_for_demo",
+        "source_aliases": [
+          "SRC-010:DEP-11",
+          "SRC-020:4:E2"
+        ],
+        "created_from_ref": "SRC-020:4:E2",
+        "required_input_revision": 3,
+        "supersedes_revision": 4
+      }
+    },
+    {
+      "canonical_collection": "dependencies",
+      "snapshot_refs": [
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-qa-signed-alone"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-ready"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-cleared"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-publication-failed"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-published"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-evidence-changed"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-scope-changed"
+        }
+      ],
+      "record": {
+        "id": "DEMO-CTT-001/dependency/e-use-qa",
+        "case_id": "DEMO-CTT-001",
+        "case_scope_id": "DEMO-CTT-001/scope/institutional",
+        "case_scope_ref": "DEMO-CTT-001/scope/institutional",
+        "scope_revision": 3,
+        "revision": 5,
+        "source_refs": [
+          "SRC-020"
+        ],
+        "source_status": "SYNTHETIC",
+        "synthetic": true,
+        "simulation_flag": true,
+        "provenance": "authored_synthetic_scenario",
+        "bank_policy_ref": null,
+        "bank_authority_ref": null,
+        "authority_status": "demo_only_bank_unknown",
+        "created_at": "2026-09-08T08:00:00Z",
+        "updated_at": "2026-09-08T09:00:00Z",
+        "from_ref": "DEMO-CTT-001/assessment/e-ownership",
+        "to_ref": "DEMO-CTT-001/qa-check/e-04",
+        "from_object_ref": "DEMO-CTT-001/assessment/e-ownership",
+        "from_revision": 2,
+        "to_object_ref": "DEMO-CTT-001/qa-check/e-04",
+        "to_revision": 5,
+        "dependency_type": "e_purpose_remediation",
+        "impact_scope": "task",
+        "dependency_condition": "Current purpose-specific reference required",
+        "status": "satisfied",
+        "validation_status": "reviewed_for_demo",
+        "source_aliases": [
+          "SRC-009:DEP-09",
+          "SRC-020:4:E2"
+        ],
+        "created_from_ref": "SRC-020:4:E2",
+        "required_input_revision": 2,
+        "supersedes_revision": 4
+      }
+    },
+    {
+      "canonical_collection": "dependencies",
+      "snapshot_refs": [
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-qa-signed-alone"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-ready"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-cleared"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-publication-failed"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-published"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-evidence-changed"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-scope-changed"
+        }
+      ],
+      "record": {
+        "id": "DEMO-CTT-001/dependency/e-qa-gap",
+        "case_id": "DEMO-CTT-001",
+        "case_scope_id": "DEMO-CTT-001/scope/institutional",
+        "case_scope_ref": "DEMO-CTT-001/scope/institutional",
+        "scope_revision": 3,
+        "revision": 5,
+        "source_refs": [
+          "SRC-020"
+        ],
+        "source_status": "SYNTHETIC",
+        "synthetic": true,
+        "simulation_flag": true,
+        "provenance": "authored_synthetic_scenario",
+        "bank_policy_ref": null,
+        "bank_authority_ref": null,
+        "authority_status": "demo_only_bank_unknown",
+        "created_at": "2026-09-08T08:00:00Z",
+        "updated_at": "2026-09-08T09:00:00Z",
+        "from_ref": "DEMO-CTT-001/qa-check/e-04",
+        "to_ref": "DEMO-CTT-001/gap/e-qa-01",
+        "from_object_ref": "DEMO-CTT-001/qa-check/e-04",
+        "from_revision": 5,
+        "to_object_ref": "DEMO-CTT-001/gap/e-qa-01",
+        "to_revision": 2,
+        "dependency_type": "e_purpose_remediation",
+        "impact_scope": "task",
+        "dependency_condition": "Current purpose-specific reference required",
+        "status": "satisfied",
+        "validation_status": "reviewed_for_demo",
+        "source_aliases": [
+          "SRC-009:DEP-10",
+          "SRC-020:4:E2"
+        ],
+        "created_from_ref": "SRC-020:4:E2",
+        "required_input_revision": 5,
+        "supersedes_revision": 4
+      }
+    },
+    {
+      "canonical_collection": "dependencies",
+      "snapshot_refs": [
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-qa-signed-alone"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-ready"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-cleared"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-publication-failed"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-published"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-evidence-changed"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-scope-changed"
+        }
+      ],
+      "record": {
+        "id": "DEMO-CTT-001/dependency/e-task-qa",
+        "case_id": "DEMO-CTT-001",
+        "case_scope_id": "DEMO-CTT-001/scope/institutional",
+        "case_scope_ref": "DEMO-CTT-001/scope/institutional",
+        "scope_revision": 3,
+        "revision": 6,
+        "source_refs": [
+          "SRC-020"
+        ],
+        "source_status": "SYNTHETIC",
+        "synthetic": true,
+        "simulation_flag": true,
+        "provenance": "authored_synthetic_scenario",
+        "bank_policy_ref": null,
+        "bank_authority_ref": null,
+        "authority_status": "demo_only_bank_unknown",
+        "created_at": "2026-09-08T08:00:00Z",
+        "updated_at": "2026-09-08T09:00:00Z",
+        "from_ref": "DEMO-CTT-001/work/e-remediation-01",
+        "to_ref": "DEMO-CTT-001/qa-check/e-04",
+        "from_object_ref": "DEMO-CTT-001/work/e-remediation-01",
+        "from_revision": 3,
+        "to_object_ref": "DEMO-CTT-001/qa-check/e-04",
+        "to_revision": 5,
+        "dependency_type": "e_purpose_remediation",
+        "impact_scope": "task",
+        "dependency_condition": "Current purpose-specific reference required",
+        "status": "satisfied",
+        "validation_status": "reviewed_for_demo",
+        "source_aliases": [
+          "SRC-010:DEP-11",
+          "SRC-020:4:E2"
+        ],
+        "created_from_ref": "SRC-020:4:E2",
+        "required_input_revision": 3,
+        "supersedes_revision": 5
+      }
+    },
+    {
+      "canonical_collection": "dependencies",
+      "snapshot_refs": [
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-evidence-changed"
+        }
+      ],
+      "record": {
+        "id": "DEMO-CTT-001/dependency/e-use-qa",
+        "case_id": "DEMO-CTT-001",
+        "case_scope_id": "DEMO-CTT-001/scope/institutional",
+        "case_scope_ref": "DEMO-CTT-001/scope/institutional",
+        "scope_revision": 3,
+        "revision": 6,
+        "source_refs": [
+          "SRC-020"
+        ],
+        "source_status": "SYNTHETIC",
+        "synthetic": true,
+        "simulation_flag": true,
+        "provenance": "authored_synthetic_scenario",
+        "bank_policy_ref": null,
+        "bank_authority_ref": null,
+        "authority_status": "demo_only_bank_unknown",
+        "created_at": "2026-09-08T08:00:00Z",
+        "updated_at": "2026-09-08T09:00:00Z",
+        "from_ref": "DEMO-CTT-001/assessment/e-ownership",
+        "to_ref": "DEMO-CTT-001/qa-check/e-04",
+        "from_object_ref": "DEMO-CTT-001/assessment/e-ownership",
+        "from_revision": 2,
+        "to_object_ref": "DEMO-CTT-001/qa-check/e-04",
+        "to_revision": 6,
+        "dependency_type": "e_purpose_remediation",
+        "impact_scope": "task",
+        "dependency_condition": "Current purpose-specific reference required",
+        "status": "satisfied",
+        "validation_status": "reviewed_for_demo",
+        "source_aliases": [
+          "SRC-009:DEP-09",
+          "SRC-020:4:E2"
+        ],
+        "created_from_ref": "SRC-020:4:E2",
+        "required_input_revision": 2,
+        "supersedes_revision": 5
+      }
+    },
+    {
+      "canonical_collection": "dependencies",
+      "snapshot_refs": [
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-evidence-changed"
+        }
+      ],
+      "record": {
+        "id": "DEMO-CTT-001/dependency/e-qa-gap",
+        "case_id": "DEMO-CTT-001",
+        "case_scope_id": "DEMO-CTT-001/scope/institutional",
+        "case_scope_ref": "DEMO-CTT-001/scope/institutional",
+        "scope_revision": 3,
+        "revision": 6,
+        "source_refs": [
+          "SRC-020"
+        ],
+        "source_status": "SYNTHETIC",
+        "synthetic": true,
+        "simulation_flag": true,
+        "provenance": "authored_synthetic_scenario",
+        "bank_policy_ref": null,
+        "bank_authority_ref": null,
+        "authority_status": "demo_only_bank_unknown",
+        "created_at": "2026-09-08T08:00:00Z",
+        "updated_at": "2026-09-08T09:00:00Z",
+        "from_ref": "DEMO-CTT-001/qa-check/e-04",
+        "to_ref": "DEMO-CTT-001/gap/e-qa-01",
+        "from_object_ref": "DEMO-CTT-001/qa-check/e-04",
+        "from_revision": 6,
+        "to_object_ref": "DEMO-CTT-001/gap/e-qa-01",
+        "to_revision": 2,
+        "dependency_type": "e_purpose_remediation",
+        "impact_scope": "task",
+        "dependency_condition": "Current purpose-specific reference required",
+        "status": "satisfied",
+        "validation_status": "reviewed_for_demo",
+        "source_aliases": [
+          "SRC-009:DEP-10",
+          "SRC-020:4:E2"
+        ],
+        "created_from_ref": "SRC-020:4:E2",
+        "required_input_revision": 6,
+        "supersedes_revision": 5
+      }
+    },
+    {
+      "canonical_collection": "dependencies",
+      "snapshot_refs": [
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-evidence-changed"
+        }
+      ],
+      "record": {
+        "id": "DEMO-CTT-001/dependency/e-task-qa",
+        "case_id": "DEMO-CTT-001",
+        "case_scope_id": "DEMO-CTT-001/scope/institutional",
+        "case_scope_ref": "DEMO-CTT-001/scope/institutional",
+        "scope_revision": 3,
+        "revision": 7,
+        "source_refs": [
+          "SRC-020"
+        ],
+        "source_status": "SYNTHETIC",
+        "synthetic": true,
+        "simulation_flag": true,
+        "provenance": "authored_synthetic_scenario",
+        "bank_policy_ref": null,
+        "bank_authority_ref": null,
+        "authority_status": "demo_only_bank_unknown",
+        "created_at": "2026-09-08T08:00:00Z",
+        "updated_at": "2026-09-08T09:00:00Z",
+        "from_ref": "DEMO-CTT-001/work/e-remediation-01",
+        "to_ref": "DEMO-CTT-001/qa-check/e-04",
+        "from_object_ref": "DEMO-CTT-001/work/e-remediation-01",
+        "from_revision": 3,
+        "to_object_ref": "DEMO-CTT-001/qa-check/e-04",
+        "to_revision": 6,
+        "dependency_type": "e_purpose_remediation",
+        "impact_scope": "task",
+        "dependency_condition": "Current purpose-specific reference required",
+        "status": "satisfied",
+        "validation_status": "reviewed_for_demo",
+        "source_aliases": [
+          "SRC-010:DEP-11",
+          "SRC-020:4:E2"
+        ],
+        "created_from_ref": "SRC-020:4:E2",
+        "required_input_revision": 3,
+        "supersedes_revision": 6
+      }
+    }
+  ],
+  "holds": [
+    {
+      "canonical_collection": "holds",
+      "snapshot_refs": [
+        {
+          "source_path": "04_operating_model/batch-d/specialist-snapshots.json",
+          "snapshot_id": "D-entry"
+        },
+        {
+          "source_path": "04_operating_model/batch-d/specialist-snapshots.json",
+          "snapshot_id": "D-credit-changed"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-entry"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-gap"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-remediation-completed"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-qa-signed-alone"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-ready"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-cleared"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-publication-failed"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-published"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-evidence-changed"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-scope-changed"
+        }
+      ],
+      "record": {
+        "id": "DEMO-CTT-001/hold/d-conflicts",
+        "case_id": "DEMO-CTT-001",
+        "case_scope_id": "DEMO-CTT-001/scope/institutional",
+        "scope_revision": 3,
+        "revision": 1,
+        "source_refs": [
+          "SRC-019"
+        ],
+        "source_status": "SYNTHETIC",
+        "synthetic": true,
+        "simulation_flag": true,
+        "provenance": "authored_demo_fixture",
+        "bank_authority_ref": null,
+        "authority_status": "unknown",
+        "created_at": "2026-09-07T12:00:00Z",
+        "updated_at": "2026-09-07T12:00:00Z",
+        "case_scope_ref": "DEMO-CTT-001/scope/institutional",
+        "target_object_ref": "DEMO-CTT-001/conflict-review/d-01",
+        "hold_scope": "task",
+        "scope": "task",
+        "object_scope_refs": [
+          "DEMO-CTT-001/conflict-review/d-01"
+        ],
+        "action_scope": [
+          "conflict_clearance"
+        ],
+        "reason_code": "specialist_review_pending",
+        "trigger_ref": "DEMO-CTT-001/conflict-finding/d-01",
+        "basis_ref": "SRC-019:3:D2",
+        "owner_role_ref": "ROLE-CONFLICTS",
+        "applied_at": "2026-09-07T12:00:00Z",
+        "status": "active",
+        "release_condition": "Configured specialist decision required",
+        "release_condition_ref": "SRC-019:4:conflicts",
+        "released_at": null,
+        "release_decision_ref": null
+      }
+    },
+    {
+      "canonical_collection": "holds",
+      "snapshot_refs": [
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-ready"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-cleared"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-publication-failed"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-published"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-evidence-changed"
+        },
+        {
+          "source_path": "04_operating_model/batch-e/clearance-snapshots.json",
+          "snapshot_id": "E-scope-changed"
+        }
+      ],
+      "record": {
+        "id": "DEMO-CTT-001/hold/d-conflicts",
+        "case_id": "DEMO-CTT-001",
+        "case_scope_id": "DEMO-CTT-001/scope/institutional",
+        "scope_revision": 3,
+        "revision": 2,
+        "source_refs": [
+          "SRC-019",
+          "SRC-020"
+        ],
+        "source_status": "SYNTHETIC",
+        "synthetic": true,
+        "simulation_flag": true,
+        "provenance": "authored_demo_fixture",
+        "bank_authority_ref": null,
+        "authority_status": "unknown",
+        "created_at": "2026-09-07T12:00:00Z",
+        "updated_at": "2026-09-08T09:00:00Z",
+        "case_scope_ref": "DEMO-CTT-001/scope/institutional",
+        "target_object_ref": "DEMO-CTT-001/conflict-review/d-01",
+        "hold_scope": "task",
+        "scope": "task",
+        "object_scope_refs": [
+          "DEMO-CTT-001/conflict-review/d-01"
+        ],
+        "action_scope": [
+          "conflict_clearance"
+        ],
+        "reason_code": "specialist_review_pending",
+        "trigger_ref": "DEMO-CTT-001/conflict-finding/d-01",
+        "basis_ref": "SRC-019:3:D2",
+        "owner_role_ref": "ROLE-CONFLICTS",
+        "applied_at": "2026-09-07T12:00:00Z",
+        "status": "released",
+        "release_condition": "Configured specialist decision required",
+        "release_condition_ref": "SRC-019:4:conflicts",
+        "released_at": "2026-09-08T09:00:00Z",
+        "release_decision_ref": "DEMO-CTT-001/decision/e-conflicts",
+        "supersedes_revision": 1
+      }
+    }
+  ],
+  "missing_edge_semantics": "unknown; never proof of independence",
+  "alias_conflict": "SRC-009:DEP-07 Credit→Legal is distinct from SRC-010:DEP-07 finding→review"
+}

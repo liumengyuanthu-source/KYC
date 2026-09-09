@@ -1,0 +1,43 @@
+{
+  "at": "2026-09-07T16:52:50.136Z",
+  "command": "node /Users/christinaliu/Documents/ChatGPT/Australia Bank/clear-to-trade-product/prototype/qa/operating-model/product-return.mjs",
+  "browser": "152.0.7977.76",
+  "results": [
+    {
+      "ids": [
+        "OM-02",
+        "OM-17",
+        "OM-19",
+        "OM-21",
+        "OM-27"
+      ],
+      "name": "real-c-task-saved-roundtrip",
+      "status": "passed",
+      "screenshot": "prototype/qa/operating-model/host/real-c-task-saved-roundtrip.png",
+      "errors": [],
+      "remote": []
+    },
+    {
+      "ids": [
+        "OM-20"
+      ],
+      "name": "dirty-save-stay-discard-and-failure",
+      "status": "passed",
+      "screenshot": "prototype/qa/operating-model/host/dirty-save-stay-discard-and-failure.png",
+      "errors": [],
+      "remote": []
+    },
+    {
+      "ids": [
+        "OM-17",
+        "OM-19",
+        "OM-27"
+      ],
+      "name": "product-source-and-journey-return-with-request",
+      "status": "passed",
+      "screenshot": "prototype/qa/operating-model/host/product-source-and-journey-return-with-request.png",
+      "errors": [],
+      "remote": []
+    }
+  ]
+}

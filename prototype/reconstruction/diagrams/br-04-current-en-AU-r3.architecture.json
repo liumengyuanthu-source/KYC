@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "Evidence Sourcing & Use Assessment · Current",
+    "locale": "en",
+    "quality_profile": "showcase",
+    "animation": "none",
+    "viewBox": [
+      1380,
+      620
+    ],
+    "legend": {
+      "mode": "hidden"
+    }
+  },
+  "components": [
+    {
+      "id": "ROOT-BR-04-current",
+      "type": "external",
+      "label": "Evidence Sourcing & Use Assessment",
+      "sublabel": "Work grouping · not execution",
+      "pos": [
+        60,
+        266
+      ],
+      "size": [
+        400,
+        88
+      ]
+    },
+    {
+      "id": "CURRENT-BR04-M3-1-SOURCE-INFORMATION",
+      "type": "external",
+      "label": "Source public and commercial information",
+      "pos": [
+        850,
+        70
+      ],
+      "size": [
+        500,
+        92
+      ]
+    },
+    {
+      "id": "CURRENT-BR04-M3-4-CAPTURE-VALIDATE-EVIDENCE",
+      "type": "external",
+      "label": "Capture and validate evidence",
+      "pos": [
+        850,
+        458
+      ],
+      "size": [
+        500,
+        92
+      ]
+    }
+  ],
+  "connections": [
+    {
+      "id": "CONTAINS-BR-04-current-1",
+      "from": "ROOT-BR-04-current",
+      "to": "CURRENT-BR04-M3-1-SOURCE-INFORMATION",
+      "label": "Contains work",
+      "variant": "default"
+    },
+    {
+      "id": "CONTAINS-BR-04-current-2",
+      "from": "ROOT-BR-04-current",
+      "to": "CURRENT-BR04-M3-4-CAPTURE-VALIDATE-EVIDENCE",
+      "label": "Contains work",
+      "variant": "default"
+    }
+  ]
+}

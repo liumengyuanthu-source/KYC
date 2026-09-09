@@ -1,0 +1,45 @@
+{
+  "source_ref": "SRC-016",
+  "actions": {
+    "prepare_preliminary": "preliminary",
+    "request_preliminary": "preliminary",
+    "receive_result": "result",
+    "prepare_comprehensive": "comprehensive",
+    "request_comprehensive": "comprehensive",
+    "confirm_population": "comprehensive",
+    "save_review_draft": "review",
+    "request_identity": "request",
+    "assess_identity": "identity",
+    "refer": "referral",
+    "record_unresolved": "unresolved",
+    "record_disposition": "disposition",
+    "resume_branch": "resume",
+    "reassess_coverage": "coverage",
+    "record_edd_applicability": "edd",
+    "prepare_edd_pack": "eddPack"
+  },
+  "rules": {
+    "preliminary": "SRC-016:POP-C04",
+    "comprehensive": "SRC-016:POP-C08",
+    "review": "SRC-016:M03",
+    "identity": "SRC-016:M04",
+    "request": "SRC-016:M05",
+    "referral": "SRC-016:M10",
+    "disposition": "SRC-016:M08",
+    "resume": "SRC-016:19.4",
+    "coverage": "SRC-016:POP-C09",
+    "edd": "SRC-016:E02",
+    "eddPack": "SRC-016:E07",
+    "unresolved": "SRC-016:M07"
+  },
+  "command_fields": [
+    "type",
+    "role",
+    "expectedRevision",
+    "expectedScopeRevision",
+    "expectedInputRevisions",
+    "key",
+    "rationale"
+  ],
+  "error_contract": "Error.code is a stable locale key; input and saved draft remain unchanged on failure"
+}

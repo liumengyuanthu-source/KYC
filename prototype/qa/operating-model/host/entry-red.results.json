@@ -1,0 +1,17 @@
+{
+  "at": "2026-09-07T16:24:34.376Z",
+  "command": "node /Users/christinaliu/Documents/ChatGPT/Australia Bank/clear-to-trade-product/prototype/qa/operating-model/entry-red.mjs",
+  "browser": "152.0.7977.76",
+  "results": [
+    {
+      "ids": [
+        "OM-01"
+      ],
+      "name": "initial-entry-red",
+      "status": "failed",
+      "error": "Expected values to be strictly equal:\n+ actual - expected\n\n+ undefined\n- 'operating-model'\n",
+      "errors": [],
+      "remote": []
+    }
+  ]
+}

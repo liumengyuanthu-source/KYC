@@ -1,0 +1,28 @@
+{
+  "at": "2026-09-08T00:18:58.346Z",
+  "results": [
+    {
+      "name": "Native beforeprint from Journey includes all 30 activities, not the last scene",
+      "status": "passed"
+    },
+    {
+      "name": "Native print of a role activity is scoped and restores the activity modal",
+      "status": "passed"
+    },
+    {
+      "name": "Explicit activity Print entry remains scoped",
+      "status": "passed"
+    },
+    {
+      "name": "E session Cmd-P from Journey uses complete Journey scope",
+      "status": "passed"
+    },
+    {
+      "name": "E Product Cmd-P retains the specialized clearance print",
+      "status": "passed"
+    }
+  ],
+  "errors": [],
+  "passed": 5,
+  "failed": []
+}

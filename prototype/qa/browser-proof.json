@@ -1,0 +1,232 @@
+{
+  "capturedAt": "2026-09-07T05:54:19.448Z",
+  "sourceHashes": {
+    "app.mjs": "d922d09e50162a17240fe0d5c153d3d6e1111810ed263eb838a347c30641a9fc",
+    "navigation.mjs": "bfe02374a6c9375ff29845c583f84a9262f4e832e81c08d70efaf3012bbf1ad3",
+    "studio.css": "2916e22cd9ee88775366d8217f25d8d646b4e65902aac94ed30891df9dae78f1",
+    "content.mjs": "163be571d4f9efa3d2f53266ca860d262db0d4daaf41423becd10ef06557168d",
+    "case-engine.mjs": "2d459e2155c09272370af76e39a151dfb73549911489e175bbfa817b9494dd88",
+    "../04_operating_model/round-a/synthetic-case-fixture.json": "dbd77a1d4217fcb6384cdb1cdf6ab61617d49ff243d10df7dfddb6b272e7da41"
+  },
+  "reports": [
+    {
+      "locale": "en-AU",
+      "studio": {
+        "innerWidth": 1440,
+        "scrollWidth": 1440,
+        "scrollHeight": 2785,
+        "journeyWidth": 1154,
+        "journeyScrollWidth": 2025
+      },
+      "print": {
+        "text": "CLEAR TO TRADE / ROUND A\n\nJourney & first vertical slice\nInternal review · synthetic data · not bank-approved policy\nDEMO-CTT-001 · en-AU · Case revision 1 · IA v0.4 / D2 v0.1\n\nFive reading stages: S1 Initiate & scope / S2 Determine & source / S3 Screen & assess / S4 Assure & resolve / S5 Clear to trade\n\nBoth Current and Target are printed for all six authored scenarios, including content outside the screen viewport. Nine additional scenarios are listed as structural scope.\n\n01 · SCN-REQUIREMENTS · S2 · M2.1–M2.5\nMake requirements explicit\nCurrent\n\nDetermine AML and non-AML requirements, exceptions and risk indicators for the relationship.\n\nTarget\n\nPrepare a versioned requirement set. Show the subject, purpose and basis of each requirement; retain unknown applicability.\n\nWait / input: Scope and policy context must be known. Exceptions require a designated reviewer.\n\nHuman boundary: Confirm the demo requirement set. No client policy is inferred.\n\nExpected result: Requirements confirmed for this synthetic scope; evidence still needs assessment.\n\nSRC-007 · M2.1–M2.5 / SRC-010 §6 · Design hypothesis + synthetic record · J-M2-01\n\n02 · SCN-SOURCE · S2 · M3.1–M3.2\nUse evidence already available\nCurrent\n\nSearch public and commercial sources, then identify residual gaps. This already exists in the Current map.\n\nTarget\n\nLink a source item to a specific subject, requirement and purpose, with its original version intact.\n\nWait / input: Access permission, source provenance and purpose-specific sufficiency.\n\nHuman boundary: Review proposed reuse. One accepted file does not satisfy every requirement.\n\nExpected result: Entity identity may be supported; screening disambiguation remains a separate use.\n\nSRC-007 · M3.1–M3.2 / SRC-010 §6 · Design hypothesis + synthetic record · J-M3-01\n\n03 · SCN-GAP · S2 · M2.5 · M3.2–M3.3\nAsk only for remaining gaps\nCurrent\n\nIssue requirements and request outstanding information from the client.\n\nTarget\n\nConsolidate only unresolved facts into a purpose-specific request, with an owner and response link.\n\nWait / input: A permitted sender confirms the request; the review then waits for the named response.\n\nHuman boundary: Review the missing fact, purpose and response owner before simulating release.\n\nExpected result: Request recorded locally. No email is sent. Receipt returns evidence to review.\n\nSRC-007 · M2.5 · M3.2–M3.3 / SRC-010 §6 · Design hypothesis + synthetic record · J-M3-02, J-M3-03\n\n04 · SCN-VALIDATE · S2 · M3.4–M3.5\nAssess evidence for its purpose\nCurrent\n\nCapture and validate evidence; maintain outstanding gaps and the sourcing trail.\n\nTarget\n\nKeep the artifact and its use assessment separate. A received supplement needs its own reviewed assessment.\n\nWait / input: The received supplement and a reasoned sufficiency assessment for the screening purpose.\n\nHuman boundary: A configured demo reviewer records sufficiency with rationale; bank authority remains open.\n\nExpected result: Evidence use assessed. Screening still requires a separate human disposition.\n\nSRC-007 · M3.4–M3.5 / SRC-010 §6 · Design hypothesis + synthetic record · J-M3-04\n\n05 · SCN-MATCH · S3 · M4.5–M4.7\nResolve a possible match\nCurrent\n\nAdjudicate possible hits, assess materiality and record the screening outcome.\n\nTarget\n\nPrepare subject-to-record comparisons and evidence-use links. A human records the disposition or requests more information.\n\nWait / input: Sufficient current evidence, rationale and explicit simulated authority. Similarity is not a decision.\n\nHuman boundary: Only the demo reviewer may record disposition. No autonomous approval or automatic EDD.\n\nExpected result: This finding is resolved for its input version. Legal, Credit and final QA remain open.\n\nSRC-007 · M4.5–M4.7 / SRC-010 §6 · Design hypothesis + synthetic record · SCN-MATCH\n\n06 · SCN-READINESS · S5 · M8.1\nKnow exactly what remains\nCurrent\n\nConfirm completion of all applicable clearance prerequisites.\n\nTarget\n\nDerive a versioned snapshot from explicit conditions, each with its own owner, reason and next action.\n\nWait / input: Legal execution, Credit conditions, QA review and any unresolved applicability.\n\nHuman boundary: Final bank authority is not configured. Publishing and real trades are outside this slice.\n\nExpected result: Not ready is an explainable result, not a percentage. Authorisation and publication stay separate.\n\nSRC-007 · M8.1 / SRC-010 §6 · Design hypothesis + synthetic record · SCN-READINESS\n\nAdditional journey structure\n\nSCN-SCOPE / M0 · M1 — Define the relationship · Not interactive in Round A\n\nSCN-ENTITY / M1 · M3.4 — Establish entity & authority · Not interactive in Round A\n\nSCN-POPULATION / M4.1–M4.4 — Screen the right subjects · Not interactive in Round A\n\nSCN-EDD / M5 — Assess elevated risk, if applicable · Not interactive in Round A\n\nSCN-QA / M6 — Close a specific quality gap · Not interactive in Round A\n\nSCN-CONFLICTS / M1 → M7 — Start conflicts early · Not interactive in Round A\n\nSCN-LEGAL / C1 — Complete applicable agreements · Not interactive in Round A\n\nSCN-CREDIT / C2 — Resolve credit conditions · Not interactive in Round A\n\nSCN-PUBLISH / M8.2–M8.5 — Publish the scoped outcome · Not interactive in Round A\n\nReadiness proof — not ready\n\nEvidence — Review required · KYC Operations\nPurpose-specific evidence review remains open.\n\nScreening — Review required · Financial Crime reviewer\nA possible match needs evidence and a human decision.\n\nLegal — Awaiting execution · Legal\nThe applicable agreement is not yet executed.\n\nCredit — Condition pending · Credit\nAn independent Credit condition remains unresolved.\n\nQA — Pending final review · QA\nFinal review and sign-off remain pending.\n\nConflicts — Condition satisfied · Conflicts\nAn independent synthetic outcome is retained.\n\nEDD — Unknown · Financial Crime reviewer\nApplicability unknown; a separate risk rationale is required.\n\nAuthority unconfirmed. Publication not requested. No transaction is executed.\n\nCurrent\n\nArchify 2.17 · static host embed · SRC-007, slides 1–2 · fields and authority proposed. Open diagram viewer ↗\n\nTarget\n\nArchify 2.17 · static host embed · SRC-007, slides 1–2 · fields and authority proposed. Open diagram viewer ↗\n\nScreening collaboration\n\nArchify 2.17 · static host embed · SRC-007, slides 1–2 · fields and authority proposed. Open diagram viewer ↗\n\nOpen validation questions\n\nValidate source permissions, requirement applicability, evidence sufficiency, human authority, EDD rationale and final QA/publication mandates. No client KPI, policy threshold or production integration is assumed.",
+        "sectionCount": 9,
+        "diagrams": [
+          {
+            "src": "./diagrams/current.en-AU.svg",
+            "loaded": true,
+            "width": 1165,
+            "height": 652
+          },
+          {
+            "src": "./diagrams/target.en-AU.svg",
+            "loaded": true,
+            "width": 1165,
+            "height": 652
+          },
+          {
+            "src": "./diagrams/screening.en-AU.svg",
+            "loaded": true,
+            "width": 992,
+            "height": 528
+          }
+        ],
+        "caseRevision": 1
+      },
+      "pageErrors": [],
+      "pdf": "round-a-print-proof.en-AU.pdf"
+    },
+    {
+      "locale": "zh-CN",
+      "studio": {
+        "innerWidth": 1440,
+        "scrollWidth": 1440,
+        "scrollHeight": 2764,
+        "journeyWidth": 1154,
+        "journeyScrollWidth": 2025
+      },
+      "print": {
+        "text": "CLEAR TO TRADE / ROUND A\n\n旅程与首个纵向切片\n内部评审 · 合成数据 · 非银行已批准政策\nDEMO-CTT-001 · zh-CN · 案件版本 1 · IA v0.4 / D2 v0.1\n\n五个阅读阶段： S1 发起与界定 / S2 明确要求与取证 / S3 筛查与评估 / S4 复核与解决 / S5 交易准入\n\n打印全部六个已编制场景的 Current 与 Target，包含屏幕之外的内容。另列九个结构场景。\n\n01 · SCN-REQUIREMENTS · S2 · M2.1–M2.5\n明确适用要求\nCurrent\n\n按关系范围确定 AML 与非 AML 要求、例外及风险指标。\n\nTarget\n\n编制版本化要求集；逐项关联主体、用途和依据，保留未知适用性。\n\n等待 / 输入: 需明确范围与政策背景；例外须交指定复核人员。\n\n人工边界: 确认演示要求集，不据此推断客户政策。\n\n预期结果: 仅确认本合成范围内的要求；证据仍待评估。\n\nSRC-007 · M2.1–M2.5 / SRC-010 §6 · 设计假设 + 合成记录 · J-M2-01\n\n02 · SCN-SOURCE · S2 · M3.1–M3.2\n复用已有证据\nCurrent\n\n检索公开与商业来源并识别剩余缺口；Current 源图已包含这些活动。\n\nTarget\n\n将来源资料关联到具体主体、要求和用途，保留原版本。\n\n等待 / 输入: 等待来源许可、出处核验及特定用途的充分性判断。\n\n人工边界: 复核拟议复用；接受一份文件不等于满足所有要求。\n\n预期结果: 主体身份可获得支持；筛查身份区分仍是独立用途。\n\nSRC-007 · M3.1–M3.2 / SRC-010 §6 · 设计假设 + 合成记录 · J-M3-01\n\n03 · SCN-GAP · S2 · M2.5 · M3.2–M3.3\n只询问剩余缺口\nCurrent\n\n发布要求并向客户请求尚缺信息。\n\nTarget\n\n仅将未解决事实汇总为用途明确的请求，并指定责任人与响应关联。\n\n等待 / 输入: 允许发送的角色确认请求后，复核等待指定响应。\n\n人工边界: 模拟发出前复核缺失事实、用途与响应责任人。\n\n预期结果: 本地记录请求，不发送邮件；收到响应后回到证据复核。\n\nSRC-007 · M2.5 · M3.2–M3.3 / SRC-010 §6 · 设计假设 + 合成记录 · J-M3-02, J-M3-03\n\n04 · SCN-VALIDATE · S2 · M3.4–M3.5\n按用途评估证据\nCurrent\n\n接收并核验证据，维护剩余缺口与来源记录。\n\nTarget\n\n分开保存资料与用途评估；收到补充资料后仍须独立复核。\n\n等待 / 输入: 等待收到补充资料，以及针对筛查用途的充分性理由。\n\n人工边界: 配置的演示复核角色记录充分性及理由；银行权限仍未确认。\n\n预期结果: 完成证据用途评估；筛查仍须独立人工处置。\n\nSRC-007 · M3.4–M3.5 / SRC-010 §6 · 设计假设 + 合成记录 · J-M3-04\n\n05 · SCN-MATCH · S3 · M4.5–M4.7\n处理疑似筛查命中\nCurrent\n\n处置疑似命中、判断重大性并记录筛查结果。\n\nTarget\n\n整理主体与记录的逐项对照及证据用途；由人工记录处置或请求更多信息。\n\n等待 / 输入: 等待当前充分证据、理由及明确演示权限；相似性不等于决定。\n\n人工边界: 仅演示复核角色可记录处置；不自主批准，也不自动触发 EDD。\n\n预期结果: 仅对该输入版本完成本项处置；法务、信贷与最终 QA 仍未闭合。\n\nSRC-007 · M4.5–M4.7 / SRC-010 §6 · 设计假设 + 合成记录 · SCN-MATCH\n\n06 · SCN-READINESS · S5 · M8.1\n明确还剩哪些条件\nCurrent\n\n核对所有适用准入前置条件是否完成。\n\nTarget\n\n依据明确条件计算版本化快照；每项保留责任人、理由和下一步。\n\n等待 / 输入: 等待协议执行、信贷条件、QA 复核及所有未知适用性。\n\n人工边界: 未配置银行最终授权；发布及真实交易不属于本切片。\n\n预期结果: 未就绪是可解释结果，而非百分比；授权确认与发布保持独立。\n\nSRC-007 · M8.1 / SRC-010 §6 · 设计假设 + 合成记录 · SCN-READINESS\n\n其余旅程结构\n\nSCN-SCOPE / M0 · M1 — 明确关系范围 · Round A 未制作完整交互\n\nSCN-ENTITY / M1 · M3.4 — 确认主体与代表权限 · Round A 未制作完整交互\n\nSCN-POPULATION / M4.1–M4.4 — 明确筛查群体 · Round A 未制作完整交互\n\nSCN-EDD / M5 — 按适用性进入 EDD · Round A 未制作完整交互\n\nSCN-QA / M6 — 关闭具体质量缺口 · Round A 未制作完整交互\n\nSCN-CONFLICTS / M1 → M7 — 尽早启动利益冲突检查 · Round A 未制作完整交互\n\nSCN-LEGAL / C1 — 完成适用协议 · Round A 未制作完整交互\n\nSCN-CREDIT / C2 — 解决信贷条件 · Round A 未制作完整交互\n\nSCN-PUBLISH / M8.2–M8.5 — 发布有范围的结果 · Round A 未制作完整交互\n\n就绪状态证明 — 尚未就绪\n\n证据 — 需复核 · KYC 运营\n特定用途证据仍待复核。\n\n筛查 — 需复核 · 金融犯罪复核人员\n疑似命中需要证据与人工决定。\n\n法务 — 等待协议执行 · 法务\n适用协议尚未执行。\n\n信贷 — 条件未闭合 · 信贷\n一项独立信贷条件尚未闭合。\n\nQA — 等待最终复核 · QA\n最终复核与签核尚未完成。\n\n利益冲突 — 条件已满足 · 利益冲突\n保留独立的合成检查结果。\n\nEDD — 未知 · 金融犯罪复核人员\n适用性未知，需独立风险理由。\n\n最终权限未确认，未请求发布，不执行交易。\n\nCurrent\n\nArchify 2.17 · 宿主静态嵌入 · SRC-007 第 1–2 页 · 字段与权限为设计提案。 打开独立图示查看器 ↗\n\nTarget\n\nArchify 2.17 · 宿主静态嵌入 · SRC-007 第 1–2 页 · 字段与权限为设计提案。 打开独立图示查看器 ↗\n\n筛查协作\n\nArchify 2.17 · 宿主静态嵌入 · SRC-007 第 1–2 页 · 字段与权限为设计提案。 打开独立图示查看器 ↗\n\n待验证问题\n\n需验证来源许可、要求适用性、证据充分性、人工权限、EDD 理由及最终 QA / 发布职责。未假设客户 KPI、政策阈值或生产集成。",
+        "sectionCount": 9,
+        "diagrams": [
+          {
+            "src": "./diagrams/current.zh-CN.svg",
+            "loaded": true,
+            "width": 1122,
+            "height": 652
+          },
+          {
+            "src": "./diagrams/target.zh-CN.svg",
+            "loaded": true,
+            "width": 1122,
+            "height": 652
+          },
+          {
+            "src": "./diagrams/screening.zh-CN.svg",
+            "loaded": true,
+            "width": 973,
+            "height": 528
+          }
+        ],
+        "caseRevision": 1
+      },
+      "pageErrors": [],
+      "pdf": "round-a-print-proof.zh-CN.pdf"
+    }
+  ],
+  "interactions": {
+    "drag": {
+      "method": "Playwright mouse emits real browser pointer events over measured stage-header coordinates",
+      "box": {
+        "x": 239.078125,
+        "y": 35.4375,
+        "width": 1153.84375,
+        "height": 830
+      },
+      "dragY": 120.4375,
+      "hit": "stage-heading",
+      "before": 405,
+      "after": 728,
+      "restored": 728,
+      "passed": true
+    },
+    "roleStay": {
+      "uiRole": "ROLE-KYCOPS",
+      "storedRole": "ROLE-KYCOPS",
+      "notice": "Your current demo role cannot record a disposition. A configured Financial Crime reviewer must take over. Bank authority remains unconfirmed."
+    },
+    "unsupportedTrigger": {
+      "navigationTrigger": "product-extension",
+      "caseTrigger": "new_relationship",
+      "caseRevision": 1,
+      "lastEvent": "synthetic_fixture_authored",
+      "confirmActionEnabled": false
+    },
+    "readOnlyRoles": [
+      {
+        "role": "ROLE-CLIENT",
+        "uiRole": "ROLE-CLIENT",
+        "label": "Client · read-only",
+        "enabledActions": 0
+      },
+      {
+        "role": "ROLE-RM",
+        "uiRole": "ROLE-RM",
+        "label": "Relationship Manager · read-only",
+        "enabledActions": 0
+      },
+      {
+        "role": "ROLE-REVIEWER",
+        "uiRole": "ROLE-REVIEWER",
+        "label": "Risk / Financial Crime / QA · read-only",
+        "enabledActions": 0
+      },
+      {
+        "role": "ROLE-SPECIALISTS",
+        "uiRole": "ROLE-SPECIALISTS",
+        "label": "Legal / Credit / Conflicts · read-only",
+        "enabledActions": 0
+      }
+    ]
+  },
+  "finalRoute": {
+    "sceneLocale": {
+      "before": {
+        "locale": "en-AU",
+        "scenario": "SCN-MATCH",
+        "comparison": "current",
+        "scrollTop": 160
+      },
+      "after": {
+        "locale": "zh-CN",
+        "scenario": "SCN-MATCH",
+        "comparison": "current",
+        "scrollTop": 160
+      },
+      "preserved": true
+    },
+    "screeningBeforeDecision": {
+      "role": "ROLE-FINCRIME",
+      "comparisonText": "Attribute\tSubject\tProvider record\tAssessment\nLegal name\tHarbour Institutional Holdings (Synthetic)\tHarbour Institutional Holdings (Provider Demo)\tSimilar name · review\nRegistration reference\tSYN-A-104\tSYN-B-207\tDifferent demo references\nIncorporation context\tAU\tNZ\tCompare with source\nEntity type\tCorporation · synthetic\tCorporation · synthetic\tSame demo type",
+      "caseRevision": 6
+    },
+    "finalCase": {
+      "revision": 7,
+      "decisions": 1,
+      "events": [
+        "synthetic_fixture_authored",
+        "confirm_requirements",
+        "reuse_identity",
+        "send_residual_request",
+        "receive_supplement",
+        "assess_supplement",
+        "record_disposition"
+      ],
+      "conditions": [
+        {
+          "domain": "evidence",
+          "status": "satisfied",
+          "applicability": "required"
+        },
+        {
+          "domain": "screening",
+          "status": "satisfied",
+          "applicability": "required"
+        },
+        {
+          "domain": "legal",
+          "status": "awaiting_execution",
+          "applicability": "required"
+        },
+        {
+          "domain": "credit",
+          "status": "condition_pending",
+          "applicability": "required"
+        },
+        {
+          "domain": "qa",
+          "status": "pending",
+          "applicability": "required"
+        },
+        {
+          "domain": "conflicts",
+          "status": "satisfied",
+          "applicability": "required"
+        },
+        {
+          "domain": "edd",
+          "status": "unknown",
+          "applicability": "unknown"
+        }
+      ],
+      "readiness": "not_ready",
+      "publication": "not_requested",
+      "transaction": "out_of_scope"
+    },
+    "autoplay": {
+      "scenario": "SCN-MATCH",
+      "cursor": 4,
+      "modalOpen": true,
+      "caseRevision": 1,
+      "decisions": 0,
+      "buttonText": "Play story"
+    }
+  },
+  "pdfVerification": {
+    "pagesPerLocale": 8,
+    "stableScenarioIdsPerLocale": 15,
+    "canonicalSvgFiguresPerLocale": 3,
+    "expectedResultLabelsPerLocale": 6,
+    "scope": "Fresh baseline print-mode sessions. PDF visible content unchanged by final Product labels and modal fix; all original pages and changed narrative pages visually reviewed."
+  }
+}

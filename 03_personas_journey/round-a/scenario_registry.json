@@ -1,0 +1,1016 @@
+[
+  {
+    "scenario_id": "SCN-SCOPE",
+    "revision": 2,
+    "case_id": "DEMO-CTT-001",
+    "route_id": "ROUTE-NEW-REL-01",
+    "authoring_status": "authored_d2_batch_a",
+    "source_status": "DESIGN-HYPOTHESIS",
+    "source_refs": [
+      "SRC-007",
+      "SRC-009",
+      "SRC-010",
+      "SRC-011",
+      "SRC-013",
+      "SRC-014"
+    ],
+    "process_refs": [
+      "SRC-007:slide2:Target:M0.1-M0.4",
+      "SRC-007:slide2:Target:M1.1"
+    ],
+    "current_process_refs": [
+      "SRC-007:slide1:Current:M0.1-M0.4",
+      "SRC-007:slide1:Current:M1.1"
+    ],
+    "source_mapping_status": "ACTIVITY_SEEDS_FROM_SRC-009/010; atomic lane/occurrence validation deferred",
+    "journey_crosswalk": [],
+    "crosswalk_status": "no_existing_journey_id",
+    "label_zh": "明确交易范围",
+    "label_en_au": "Clarify trading scope",
+    "label_en_us": "Clarify trading scope",
+    "print_order": 1,
+    "work_item_ids": [],
+    "contract": {
+      "trigger": "Synthetic relationship request received",
+      "preconditions": [
+        "EV-A01/02/03 available; EV-A04 missing; EV-A05 not received"
+      ],
+      "current_work": "Clarify proposed trading entity and request across source records.",
+      "target_work": "Save a scope draft; record explicit RM clarification; record working scope.",
+      "human_decision": "Configured demo actor records working scope, not eligibility or CDD.",
+      "wait": "Booking, eligibility, DD and bank permission remain unknown.",
+      "output": "Versioned Scope + audit events; counterparty A only; B reported parent.",
+      "resume": "Current scope revision supports individual preparation gates.",
+      "impact": "Each downstream task checks its own inputs, permission, applicability and hold. Overall case remains not_ready.",
+      "acceptance": [
+        "RT-A01–RT-A28; see Batch A review for actual passed / failed / not-run coverage"
+      ],
+      "decision": {
+        "authority_basis": "demoConfig.batchA.permissions",
+        "bank_authority_status": "unknown",
+        "prohibited": [
+          "Publish clearance",
+          "Execute trade",
+          "Infer bank policy"
+        ]
+      },
+      "story": {
+        "next_scene_ids": [
+          "SCN-ENTITY"
+        ],
+        "presentation_only": true
+      },
+      "ui_media": {
+        "prototype_target": "scope",
+        "diagram_ids": [
+          "DG-SCOPE-A",
+          "DG-ENABLE-A"
+        ],
+        "media_status": "not_received",
+        "print_fallback": "Full Batch A objects, relationships, task prerequisites and static SVGs"
+      }
+    },
+    "journey_location": {
+      "stage_id": "S1",
+      "scenario_id": "SCN-SCOPE",
+      "route_id": "ROUTE-NEW-REL-01"
+    }
+  },
+  {
+    "scenario_id": "SCN-ENTITY",
+    "revision": 2,
+    "case_id": "DEMO-CTT-001",
+    "route_id": "ROUTE-NEW-REL-01",
+    "authoring_status": "authored_d2_batch_a",
+    "source_status": "DESIGN-HYPOTHESIS",
+    "source_refs": [
+      "SRC-007",
+      "SRC-009",
+      "SRC-010",
+      "SRC-011",
+      "SRC-013",
+      "SRC-014"
+    ],
+    "process_refs": [
+      "SRC-007:slide2:Target:M1.3-M1.5",
+      "SRC-007:slide2:Target:M3.4"
+    ],
+    "current_process_refs": [
+      "SRC-007:slide1:Current:M1.3-M1.5",
+      "SRC-007:slide1:Current:M3.4"
+    ],
+    "source_mapping_status": "ACTIVITY_SEEDS_FROM_SRC-009/010; atomic lane/occurrence validation deferred",
+    "journey_crosswalk": [],
+    "crosswalk_status": "no_existing_journey_id",
+    "label_zh": "区分主体与代表权限",
+    "label_en_au": "Resolve parties and authority",
+    "label_en_us": "Resolve parties and authority",
+    "print_order": 2,
+    "work_item_ids": [],
+    "contract": {
+      "trigger": "Working scope available; reported parent and representative claim require distinct review",
+      "preconditions": [
+        "Same Entity A scope and revisions retained; Person T employed by B, claimed principal A"
+      ],
+      "current_work": "Review registry and appointment evidence separately; do not equate employment with A authority.",
+      "target_work": "Receive synthetic source, review entity context, assess purpose-specific authority and create one targeted gap task.",
+      "human_decision": "Configured demo reviewer records insufficient A coordination basis; no signing/trading grant.",
+      "wait": "EV-A05 absent; principal-specific authority gap; task owner Unassigned.",
+      "output": "Separate A/B/T records, immutable EV-A03, purpose EvidenceUseAssessment, idempotent WorkItem + request draft.",
+      "resume": "Named evidence or context revision requires new assessment; no auto-clearance.",
+      "impact": "Each downstream task checks its own inputs, permission, applicability and hold. Overall case remains not_ready.",
+      "acceptance": [
+        "RT-A01–RT-A28; see Batch A review for actual passed / failed / not-run coverage"
+      ],
+      "decision": {
+        "authority_basis": "demoConfig.batchA.permissions",
+        "bank_authority_status": "unknown",
+        "prohibited": [
+          "Publish clearance",
+          "Execute trade",
+          "Infer bank policy"
+        ]
+      },
+      "story": {
+        "next_scene_ids": [
+          "SCN-REQUIREMENTS"
+        ],
+        "presentation_only": true
+      },
+      "ui_media": {
+        "prototype_target": "parties",
+        "diagram_ids": [
+          "DG-ENTITY-A",
+          "DG-ENABLE-A"
+        ],
+        "media_status": "not_received",
+        "print_fallback": "Full Batch A objects, relationships, task prerequisites and static SVGs"
+      }
+    },
+    "journey_location": {
+      "stage_id": "S1",
+      "scenario_id": "SCN-ENTITY",
+      "route_id": "ROUTE-NEW-REL-01"
+    }
+  },
+  {
+    "scenario_id": "SCN-REQUIREMENTS",
+    "revision": 1,
+    "case_id": "DEMO-CTT-001",
+    "route_id": "ROUTE-NEW-REL-01",
+    "authoring_status": "authored_round_a",
+    "source_status": "DESIGN-HYPOTHESIS",
+    "source_refs": [
+      "SRC-007",
+      "SRC-009",
+      "SRC-010",
+      "SRC-011"
+    ],
+    "process_refs": [
+      "SRC-007:slide2:Target:M2.1-M2.5"
+    ],
+    "current_process_refs": [
+      "SRC-007:slide1:Current:M2.1-M2.5"
+    ],
+    "source_mapping_status": "ACTIVITY_SEEDS_FROM_SRC-009/010; atomic lane/occurrence validation deferred",
+    "journey_crosswalk": [
+      "J-M2-01",
+      "J-M3-03"
+    ],
+    "crosswalk_status": "existing_exact_ids",
+    "label_zh": "明确适用要求",
+    "label_en_au": "Make requirements explicit",
+    "label_en_us": "Make requirements explicit",
+    "print_order": 3,
+    "work_item_ids": [
+      "DEMO-CTT-001/work/requirements"
+    ],
+    "contract": {
+      "trigger": "Confirmed synthetic scope revision is available",
+      "preconditions": [
+        "Scope.revision=1",
+        "Requirement.rule_ref references synthetic rule; bank_policy_ref=null"
+      ],
+      "current_work": "Interpret AML/non-AML requirements and consolidate requirements (M2.1–M2.5); interpretation friction is ASM-002 hypothesis.",
+      "target_work": "Prepare versioned requirements; KYC Ops confirms this synthetic set.",
+      "human_decision": "Confirm demo requirements; unknown bank policy stays visible.",
+      "wait": "Scope context or applicability judgment; owner ROLE-KYCOPS",
+      "output": "Requirement.status=review_required; set_revision retained; requirements task completed",
+      "resume": "requirements_confirmed at current scope revision",
+      "impact": "Evidence reuse may begin; no requirement satisfied by confirmation",
+      "acceptance": [
+        "Confirmation is distinct from send",
+        "Unknown policy remains unknown",
+        "Back does not revert requirement revision",
+        "Wrong configured demo role cannot execute the action"
+      ],
+      "applicability": {
+        "case_scope_id": "DEMO-CTT-001/scope/institutional",
+        "subject_id": "DEMO-CTT-001/entity/harbour",
+        "value": true,
+        "basis": "Authored Round A scope only; bank applicability requires validation",
+        "confirmed_by": "ROLE-DEMO-AUTHOR"
+      },
+      "objective": "Make requirements explicit",
+      "concurrency": {
+        "may_continue": [
+          "SCN-LEGAL",
+          "SCN-CREDIT",
+          "SCN-CONFLICTS"
+        ],
+        "minimum_input": "Each branch has its own sufficiently identified synthetic scope/input",
+        "hold_scope": "Only named task or linked requirement; no new case-wide hold inferred"
+      },
+      "decision": {
+        "actions": [
+          "Confirm demo requirements; unknown bank policy stays visible."
+        ],
+        "authority_basis": "demoConfig.allowed_actions_by_role only",
+        "bank_authority_status": "unknown",
+        "prohibited": [
+          "Auto-approve from confidence score",
+          "Publish clearance",
+          "Execute trade"
+        ],
+        "escalation": "Missing evidence, unresolved applicability or absent configured demo permission"
+      },
+      "story": {
+        "tension": "Scope context or applicability judgment; owner ROLE-KYCOPS",
+        "key_reveal": "Evidence reuse may begin; no requirement satisfied by confirmation",
+        "consequence": "Requirement.status=review_required; set_revision retained; requirements task completed",
+        "next_scene_ids": [
+          "SCN-SOURCE"
+        ]
+      },
+      "ui_media": {
+        "journey_card": [
+          "objective",
+          "wait"
+        ],
+        "scenario_modal": [
+          "current_work",
+          "target_work",
+          "human_decision",
+          "impact"
+        ],
+        "prototype_target": "SCN-REQUIREMENTS",
+        "print_fallback": "Static scene contract and current blockers",
+        "diagram_status": "Owned by separate Round A diagram work; not asserted here"
+      },
+      "benchmark": {
+        "refs": [],
+        "status": "DEFERRED_THIS_ROUND"
+      }
+    }
+  },
+  {
+    "scenario_id": "SCN-SOURCE",
+    "revision": 1,
+    "case_id": "DEMO-CTT-001",
+    "route_id": "ROUTE-NEW-REL-01",
+    "authoring_status": "authored_round_a",
+    "source_status": "DESIGN-HYPOTHESIS",
+    "source_refs": [
+      "SRC-007",
+      "SRC-009",
+      "SRC-010",
+      "SRC-011"
+    ],
+    "process_refs": [
+      "SRC-007:slide2:Target:M3.1-M3.2"
+    ],
+    "current_process_refs": [
+      "SRC-007:slide1:Current:M3.1-M3.2"
+    ],
+    "source_mapping_status": "ACTIVITY_SEEDS_FROM_SRC-009/010; atomic lane/occurrence validation deferred",
+    "journey_crosswalk": [
+      "J-M3-01"
+    ],
+    "crosswalk_status": "existing_exact_ids",
+    "label_zh": "使用已有证据",
+    "label_en_au": "Use available evidence",
+    "label_en_us": "Use available evidence",
+    "print_order": 4,
+    "work_item_ids": [
+      "DEMO-CTT-001/work/reuse"
+    ],
+    "contract": {
+      "trigger": "Synthetic requirements confirmed",
+      "preconditions": [
+        "Identity evidence receipt_status=available",
+        "Identity requirement current revision"
+      ],
+      "current_work": "Search public/commercial sources and locate residual gaps (M3.1–M3.2); repeated retrieval friction is ASM-002 hypothesis.",
+      "target_work": "Show registry provenance and evaluate each purpose separately.",
+      "human_decision": "Review identity reuse; registry use for screening remains insufficient.",
+      "wait": "Subject ambiguity/source provenance; owner ROLE-KYCOPS",
+      "output": "Identity EvidenceUseAssessment sufficient; screening use insufficient; identity Requirement satisfied",
+      "resume": "identity_reuse_reviewed",
+      "impact": "Only identity requirement closes; screening residual request becomes actionable",
+      "acceptance": [
+        "Same artifact has two distinct purpose assessments",
+        "Missing source cannot be silently accepted",
+        "Return preserves scope and scene",
+        "Wrong configured demo role cannot execute the action"
+      ],
+      "applicability": {
+        "case_scope_id": "DEMO-CTT-001/scope/institutional",
+        "subject_id": "DEMO-CTT-001/entity/harbour",
+        "value": true,
+        "basis": "Authored Round A scope only; bank applicability requires validation",
+        "confirmed_by": "ROLE-DEMO-AUTHOR"
+      },
+      "objective": "Use available evidence",
+      "concurrency": {
+        "may_continue": [
+          "SCN-LEGAL",
+          "SCN-CREDIT",
+          "SCN-CONFLICTS"
+        ],
+        "minimum_input": "Each branch has its own sufficiently identified synthetic scope/input",
+        "hold_scope": "Only named task or linked requirement; no new case-wide hold inferred"
+      },
+      "decision": {
+        "actions": [
+          "Review identity reuse; registry use for screening remains insufficient."
+        ],
+        "authority_basis": "demoConfig.allowed_actions_by_role only",
+        "bank_authority_status": "unknown",
+        "prohibited": [
+          "Auto-approve from confidence score",
+          "Publish clearance",
+          "Execute trade"
+        ],
+        "escalation": "Missing evidence, unresolved applicability or absent configured demo permission"
+      },
+      "story": {
+        "tension": "Subject ambiguity/source provenance; owner ROLE-KYCOPS",
+        "key_reveal": "Only identity requirement closes; screening residual request becomes actionable",
+        "consequence": "Identity EvidenceUseAssessment sufficient; screening use insufficient; identity Requirement satisfied",
+        "next_scene_ids": [
+          "SCN-GAP"
+        ]
+      },
+      "ui_media": {
+        "journey_card": [
+          "objective",
+          "wait"
+        ],
+        "scenario_modal": [
+          "current_work",
+          "target_work",
+          "human_decision",
+          "impact"
+        ],
+        "prototype_target": "SCN-SOURCE",
+        "print_fallback": "Static scene contract and current blockers",
+        "diagram_status": "Owned by separate Round A diagram work; not asserted here"
+      },
+      "benchmark": {
+        "refs": [],
+        "status": "DEFERRED_THIS_ROUND"
+      }
+    }
+  },
+  {
+    "scenario_id": "SCN-GAP",
+    "revision": 1,
+    "case_id": "DEMO-CTT-001",
+    "route_id": "ROUTE-NEW-REL-01",
+    "authoring_status": "authored_round_a",
+    "source_status": "DESIGN-HYPOTHESIS",
+    "source_refs": [
+      "SRC-007",
+      "SRC-009",
+      "SRC-010",
+      "SRC-011"
+    ],
+    "process_refs": [
+      "SRC-007:slide2:Target:M2.5",
+      "SRC-007:slide2:Target:M3.2-M3.3"
+    ],
+    "current_process_refs": [
+      "SRC-007:slide1:Current:M2.5",
+      "SRC-007:slide1:Current:M3.2-M3.3"
+    ],
+    "source_mapping_status": "ACTIVITY_SEEDS_FROM_SRC-009/010; atomic lane/occurrence validation deferred",
+    "journey_crosswalk": [
+      "J-M3-02",
+      "J-M3-03"
+    ],
+    "crosswalk_status": "existing_exact_ids",
+    "label_zh": "仅请求剩余缺口",
+    "label_en_au": "Request residual gaps",
+    "label_en_us": "Request residual gaps",
+    "print_order": 5,
+    "work_item_ids": [
+      "DEMO-CTT-001/work/residual-request"
+    ],
+    "contract": {
+      "trigger": "Screening-purpose registry assessment is insufficient",
+      "preconditions": [
+        "Residual gap names screening_distinguishing_identifier",
+        "Confirmed requirements and completed identity reuse"
+      ],
+      "current_work": "Identify gaps and request missing information (M3.2–M3.3); request fragmentation is ASM-002 hypothesis.",
+      "target_work": "Prepare one synthetic request containing the unresolved screening fact only.",
+      "human_decision": "Configured KYC Ops sends locally simulated request.",
+      "wait": "Client response for evidence/supplement; owner ROLE-KYCOPS",
+      "output": "Residual-request WorkItem becomes awaiting_input until response; audit event records local send",
+      "resume": "supplement_received",
+      "impact": "Unrelated Legal/Credit/Conflicts continue; request sending does not satisfy evidence",
+      "acceptance": [
+        "Identity evidence is excluded from residual request",
+        "Repeated send does not duplicate event",
+        "Return restores draft and request state",
+        "Wrong configured demo role cannot execute the action"
+      ],
+      "applicability": {
+        "case_scope_id": "DEMO-CTT-001/scope/institutional",
+        "subject_id": "DEMO-CTT-001/entity/harbour",
+        "value": true,
+        "basis": "Authored Round A scope only; bank applicability requires validation",
+        "confirmed_by": "ROLE-DEMO-AUTHOR"
+      },
+      "objective": "Request residual gaps",
+      "concurrency": {
+        "may_continue": [
+          "SCN-LEGAL",
+          "SCN-CREDIT",
+          "SCN-CONFLICTS"
+        ],
+        "minimum_input": "Each branch has its own sufficiently identified synthetic scope/input",
+        "hold_scope": "Only named task or linked requirement; no new case-wide hold inferred"
+      },
+      "decision": {
+        "actions": [
+          "Configured KYC Ops sends locally simulated request."
+        ],
+        "authority_basis": "demoConfig.allowed_actions_by_role only",
+        "bank_authority_status": "unknown",
+        "prohibited": [
+          "Auto-approve from confidence score",
+          "Publish clearance",
+          "Execute trade"
+        ],
+        "escalation": "Missing evidence, unresolved applicability or absent configured demo permission"
+      },
+      "story": {
+        "tension": "Client response for evidence/supplement; owner ROLE-KYCOPS",
+        "key_reveal": "Unrelated Legal/Credit/Conflicts continue; request sending does not satisfy evidence",
+        "consequence": "Residual-request WorkItem becomes awaiting_input until response; audit event records local send",
+        "next_scene_ids": [
+          "SCN-VALIDATE"
+        ]
+      },
+      "ui_media": {
+        "journey_card": [
+          "objective",
+          "wait"
+        ],
+        "scenario_modal": [
+          "current_work",
+          "target_work",
+          "human_decision",
+          "impact"
+        ],
+        "prototype_target": "SCN-GAP",
+        "print_fallback": "Static scene contract and current blockers",
+        "diagram_status": "Owned by separate Round A diagram work; not asserted here"
+      },
+      "benchmark": {
+        "refs": [],
+        "status": "DEFERRED_THIS_ROUND"
+      }
+    }
+  },
+  {
+    "scenario_id": "SCN-VALIDATE",
+    "revision": 1,
+    "case_id": "DEMO-CTT-001",
+    "route_id": "ROUTE-NEW-REL-01",
+    "authoring_status": "authored_round_a",
+    "source_status": "DESIGN-HYPOTHESIS",
+    "source_refs": [
+      "SRC-007",
+      "SRC-009",
+      "SRC-010",
+      "SRC-011"
+    ],
+    "process_refs": [
+      "SRC-007:slide2:Target:M3.4-M3.5"
+    ],
+    "current_process_refs": [
+      "SRC-007:slide1:Current:M3.4-M3.5"
+    ],
+    "source_mapping_status": "ACTIVITY_SEEDS_FROM_SRC-009/010; atomic lane/occurrence validation deferred",
+    "journey_crosswalk": [
+      "J-M3-04"
+    ],
+    "crosswalk_status": "existing_exact_ids",
+    "label_zh": "接收并评估具体用途",
+    "label_en_au": "Receive and assess purpose",
+    "label_en_us": "Receive and assess purpose",
+    "print_order": 6,
+    "work_item_ids": [
+      "DEMO-CTT-001/work/review-receive"
+    ],
+    "contract": {
+      "trigger": "Synthetic supplement receipt",
+      "preconditions": [
+        "Residual request sent",
+        "Evidence revision and purpose association intact"
+      ],
+      "current_work": "Capture/validate evidence and preserve sourcing trail (M3.4–M3.5).",
+      "target_work": "Receive supplement, then separately assess verification and purpose sufficiency.",
+      "human_decision": "Configured KYC Ops assesses or pauses with a reason.",
+      "wait": "Supplement content/provenance or reviewer judgment; owner ROLE-KYCOPS",
+      "output": "Receipt alone leaves assessment not_assessed; later sufficient assessment updates linked requirement",
+      "resume": "purpose_assessment_recorded for current evidence revision",
+      "impact": "Screening human review becomes actionable; Legal/Credit/QA remain unchanged",
+      "acceptance": [
+        "Receipt never auto-satisfies requirement",
+        "Missing rationale or stale evidence blocks assessment",
+        "Return preserves receipt and review as separate states",
+        "Wrong configured demo role cannot execute the action"
+      ],
+      "applicability": {
+        "case_scope_id": "DEMO-CTT-001/scope/institutional",
+        "subject_id": "DEMO-CTT-001/entity/harbour",
+        "value": true,
+        "basis": "Authored Round A scope only; bank applicability requires validation",
+        "confirmed_by": "ROLE-DEMO-AUTHOR"
+      },
+      "objective": "Receive and assess purpose",
+      "concurrency": {
+        "may_continue": [
+          "SCN-LEGAL",
+          "SCN-CREDIT",
+          "SCN-CONFLICTS"
+        ],
+        "minimum_input": "Each branch has its own sufficiently identified synthetic scope/input",
+        "hold_scope": "Only named task or linked requirement; no new case-wide hold inferred"
+      },
+      "decision": {
+        "actions": [
+          "Configured KYC Ops assesses or pauses with a reason."
+        ],
+        "authority_basis": "demoConfig.allowed_actions_by_role only",
+        "bank_authority_status": "unknown",
+        "prohibited": [
+          "Auto-approve from confidence score",
+          "Publish clearance",
+          "Execute trade"
+        ],
+        "escalation": "Missing evidence, unresolved applicability or absent configured demo permission"
+      },
+      "story": {
+        "tension": "Supplement content/provenance or reviewer judgment; owner ROLE-KYCOPS",
+        "key_reveal": "Screening human review becomes actionable; Legal/Credit/QA remain unchanged",
+        "consequence": "Receipt alone leaves assessment not_assessed; later sufficient assessment updates linked requirement",
+        "next_scene_ids": [
+          "SCN-MATCH"
+        ]
+      },
+      "ui_media": {
+        "journey_card": [
+          "objective",
+          "wait"
+        ],
+        "scenario_modal": [
+          "current_work",
+          "target_work",
+          "human_decision",
+          "impact"
+        ],
+        "prototype_target": "SCN-VALIDATE",
+        "print_fallback": "Static scene contract and current blockers",
+        "diagram_status": "Owned by separate Round A diagram work; not asserted here"
+      },
+      "benchmark": {
+        "refs": [],
+        "status": "DEFERRED_THIS_ROUND"
+      }
+    }
+  },
+  {
+    "scenario_id": "SCN-POPULATION",
+    "revision": 1,
+    "case_id": "DEMO-CTT-001",
+    "route_id": "ROUTE-NEW-REL-01",
+    "authoring_status": "skeleton",
+    "source_status": "DESIGN-HYPOTHESIS",
+    "source_refs": [
+      "SRC-007",
+      "SRC-009",
+      "SRC-010",
+      "SRC-011"
+    ],
+    "process_refs": [
+      "SRC-007:slide2:Target:M4.1-M4.4"
+    ],
+    "current_process_refs": [
+      "SRC-007:slide1:Current:M4.1-M4.4"
+    ],
+    "source_mapping_status": "ACTIVITY_SEEDS_FROM_SRC-009/010; atomic lane/occurrence validation deferred",
+    "journey_crosswalk": [],
+    "crosswalk_status": "no_existing_journey_id",
+    "label_zh": "POPULATION",
+    "label_en_au": "POPULATION",
+    "label_en_us": "POPULATION",
+    "print_order": 7,
+    "work_item_ids": [],
+    "contract": null
+  },
+  {
+    "scenario_id": "SCN-MATCH",
+    "revision": 1,
+    "case_id": "DEMO-CTT-001",
+    "route_id": "ROUTE-NEW-REL-01",
+    "authoring_status": "authored_round_a",
+    "source_status": "DESIGN-HYPOTHESIS",
+    "source_refs": [
+      "SRC-007",
+      "SRC-009",
+      "SRC-010",
+      "SRC-011"
+    ],
+    "process_refs": [
+      "SRC-007:slide2:Target:M4.5-M4.7"
+    ],
+    "current_process_refs": [
+      "SRC-007:slide1:Current:M4.5-M4.7"
+    ],
+    "source_mapping_status": "ACTIVITY_SEEDS_FROM_SRC-009/010; atomic lane/occurrence validation deferred",
+    "journey_crosswalk": [],
+    "crosswalk_status": "no_existing_journey_id",
+    "label_zh": "处理疑似命中",
+    "label_en_au": "Resolve a possible match",
+    "label_en_us": "Resolve a possible match",
+    "print_order": 8,
+    "work_item_ids": [
+      "DEMO-CTT-001/work/screening-review"
+    ],
+    "contract": {
+      "trigger": "Synthetic possible match exists and purpose evidence becomes sufficient",
+      "preconditions": [
+        "Supplement assessment sufficient",
+        "Finding subject/purpose/revisions align",
+        "ROLE-FINCRIME demo action permission"
+      ],
+      "current_work": "Adjudicate hit, assess materiality and determine outcome (M4.5–M4.7).",
+      "target_work": "Compare matching/different/unknown attributes and preserve evidence basis for human disposition.",
+      "human_decision": "Configured demo reviewer records not_a_match, requests evidence, pauses or refers; no score grants authority.",
+      "wait": "Purpose evidence or human disposition; owner ROLE-FINCRIME",
+      "output": "Decision with input_revisions; finding resolved only for valid disposition; screening condition updated",
+      "resume": "disposition_recorded",
+      "impact": "Local screening outcome may resolve; EDD remains separate applicability question and overall readiness remains blocked",
+      "acceptance": [
+        "Wrong role is blocked",
+        "Incomplete basis/stale revision is blocked",
+        "Duplicate action creates no second decision",
+        "Back preserves recorded disposition",
+        "Wrong configured demo role cannot execute the action"
+      ],
+      "applicability": {
+        "case_scope_id": "DEMO-CTT-001/scope/institutional",
+        "subject_id": "DEMO-CTT-001/entity/harbour",
+        "value": true,
+        "basis": "Authored Round A scope only; bank applicability requires validation",
+        "confirmed_by": "ROLE-DEMO-AUTHOR"
+      },
+      "objective": "Resolve a possible match",
+      "concurrency": {
+        "may_continue": [
+          "SCN-LEGAL",
+          "SCN-CREDIT",
+          "SCN-CONFLICTS"
+        ],
+        "minimum_input": "Each branch has its own sufficiently identified synthetic scope/input",
+        "hold_scope": "Only named task or linked requirement; no new case-wide hold inferred"
+      },
+      "decision": {
+        "actions": [
+          "record_disposition",
+          "request_evidence",
+          "pause",
+          "refer"
+        ],
+        "authority_basis": "demoConfig.allowed_actions_by_role only",
+        "bank_authority_status": "unknown",
+        "prohibited": [
+          "Auto-approve from confidence score",
+          "Publish clearance",
+          "Execute trade"
+        ],
+        "escalation": "Missing evidence, unresolved applicability or absent configured demo permission"
+      },
+      "story": {
+        "tension": "Purpose evidence or human disposition; owner ROLE-FINCRIME",
+        "key_reveal": "Local screening outcome may resolve; EDD remains separate applicability question and overall readiness remains blocked",
+        "consequence": "Decision with input_revisions; finding resolved only for valid disposition; screening condition updated",
+        "next_scene_ids": [
+          "SCN-READINESS"
+        ]
+      },
+      "ui_media": {
+        "journey_card": [
+          "objective",
+          "wait"
+        ],
+        "scenario_modal": [
+          "current_work",
+          "target_work",
+          "human_decision",
+          "impact"
+        ],
+        "prototype_target": "SCN-MATCH",
+        "print_fallback": "Static scene contract and current blockers",
+        "diagram_status": "Owned by separate Round A diagram work; not asserted here"
+      },
+      "benchmark": {
+        "refs": [],
+        "status": "DEFERRED_THIS_ROUND"
+      }
+    }
+  },
+  {
+    "scenario_id": "SCN-EDD",
+    "revision": 1,
+    "case_id": "DEMO-CTT-001",
+    "route_id": "ROUTE-NEW-REL-01",
+    "authoring_status": "skeleton",
+    "source_status": "DESIGN-HYPOTHESIS",
+    "source_refs": [
+      "SRC-007",
+      "SRC-009",
+      "SRC-010",
+      "SRC-011"
+    ],
+    "process_refs": [
+      "SRC-007:slide2:Target:M5"
+    ],
+    "current_process_refs": [
+      "SRC-007:slide1:Current:M5"
+    ],
+    "source_mapping_status": "ACTIVITY_SEEDS_FROM_SRC-009/010; atomic lane/occurrence validation deferred",
+    "journey_crosswalk": [],
+    "crosswalk_status": "no_existing_journey_id",
+    "label_zh": "EDD",
+    "label_en_au": "EDD",
+    "label_en_us": "EDD",
+    "print_order": 9,
+    "work_item_ids": [],
+    "contract": null
+  },
+  {
+    "scenario_id": "SCN-CONFLICTS",
+    "revision": 1,
+    "case_id": "DEMO-CTT-001",
+    "route_id": "ROUTE-NEW-REL-01",
+    "authoring_status": "skeleton",
+    "source_status": "DESIGN-HYPOTHESIS",
+    "source_refs": [
+      "SRC-007",
+      "SRC-009",
+      "SRC-010",
+      "SRC-011"
+    ],
+    "process_refs": [
+      "SRC-007:slide2:Target:M7"
+    ],
+    "current_process_refs": [
+      "SRC-007:slide1:Current:M7"
+    ],
+    "source_mapping_status": "ACTIVITY_SEEDS_FROM_SRC-009/010; atomic lane/occurrence validation deferred",
+    "journey_crosswalk": [],
+    "crosswalk_status": "no_existing_journey_id",
+    "label_zh": "CONFLICTS",
+    "label_en_au": "CONFLICTS",
+    "label_en_us": "CONFLICTS",
+    "print_order": 10,
+    "work_item_ids": [],
+    "contract": null
+  },
+  {
+    "scenario_id": "SCN-LEGAL",
+    "revision": 1,
+    "case_id": "DEMO-CTT-001",
+    "route_id": "ROUTE-NEW-REL-01",
+    "authoring_status": "skeleton",
+    "source_status": "DESIGN-HYPOTHESIS",
+    "source_refs": [
+      "SRC-007",
+      "SRC-009",
+      "SRC-010",
+      "SRC-011"
+    ],
+    "process_refs": [
+      "SRC-007:slide2:Target:C1"
+    ],
+    "current_process_refs": [
+      "SRC-007:slide1:Current:C1"
+    ],
+    "source_mapping_status": "ACTIVITY_SEEDS_FROM_SRC-009/010; atomic lane/occurrence validation deferred",
+    "journey_crosswalk": [],
+    "crosswalk_status": "no_existing_journey_id",
+    "label_zh": "LEGAL",
+    "label_en_au": "LEGAL",
+    "label_en_us": "LEGAL",
+    "print_order": 11,
+    "work_item_ids": [],
+    "contract": null
+  },
+  {
+    "scenario_id": "SCN-CREDIT",
+    "revision": 1,
+    "case_id": "DEMO-CTT-001",
+    "route_id": "ROUTE-NEW-REL-01",
+    "authoring_status": "skeleton",
+    "source_status": "DESIGN-HYPOTHESIS",
+    "source_refs": [
+      "SRC-007",
+      "SRC-009",
+      "SRC-010",
+      "SRC-011"
+    ],
+    "process_refs": [
+      "SRC-007:slide2:Target:C2"
+    ],
+    "current_process_refs": [
+      "SRC-007:slide1:Current:C2"
+    ],
+    "source_mapping_status": "ACTIVITY_SEEDS_FROM_SRC-009/010; atomic lane/occurrence validation deferred",
+    "journey_crosswalk": [],
+    "crosswalk_status": "no_existing_journey_id",
+    "label_zh": "CREDIT",
+    "label_en_au": "CREDIT",
+    "label_en_us": "CREDIT",
+    "print_order": 12,
+    "work_item_ids": [],
+    "contract": null
+  },
+  {
+    "scenario_id": "SCN-QA",
+    "revision": 1,
+    "case_id": "DEMO-CTT-001",
+    "route_id": "ROUTE-NEW-REL-01",
+    "authoring_status": "skeleton",
+    "source_status": "DESIGN-HYPOTHESIS",
+    "source_refs": [
+      "SRC-007",
+      "SRC-009",
+      "SRC-010",
+      "SRC-011"
+    ],
+    "process_refs": [
+      "SRC-007:slide2:Target:M6"
+    ],
+    "current_process_refs": [
+      "SRC-007:slide1:Current:M6"
+    ],
+    "source_mapping_status": "ACTIVITY_SEEDS_FROM_SRC-009/010; atomic lane/occurrence validation deferred",
+    "journey_crosswalk": [],
+    "crosswalk_status": "no_existing_journey_id",
+    "label_zh": "QA",
+    "label_en_au": "QA",
+    "label_en_us": "QA",
+    "print_order": 13,
+    "work_item_ids": [],
+    "contract": null
+  },
+  {
+    "scenario_id": "SCN-READINESS",
+    "revision": 1,
+    "case_id": "DEMO-CTT-001",
+    "route_id": "ROUTE-NEW-REL-01",
+    "authoring_status": "authored_round_a",
+    "source_status": "DESIGN-HYPOTHESIS",
+    "source_refs": [
+      "SRC-007",
+      "SRC-009",
+      "SRC-010",
+      "SRC-011"
+    ],
+    "process_refs": [
+      "SRC-007:slide2:Target:M8.1"
+    ],
+    "current_process_refs": [
+      "SRC-007:slide1:Current:M8.1"
+    ],
+    "source_mapping_status": "ACTIVITY_SEEDS_FROM_SRC-009/010; atomic lane/occurrence validation deferred",
+    "journey_crosswalk": [],
+    "crosswalk_status": "no_existing_journey_id",
+    "label_zh": "明确未就绪原因",
+    "label_en_au": "Explain what remains",
+    "label_en_us": "Explain what remains",
+    "print_order": 14,
+    "work_item_ids": [
+      "DEMO-CTT-001/work/readiness"
+    ],
+    "contract": {
+      "trigger": "Any linked condition version changes",
+      "preconditions": [
+        "Current scope revision",
+        "All condition statuses and applicability explicit"
+      ],
+      "current_work": "Confirm clearance prerequisites (M8.1).",
+      "target_work": "Derive versioned blocker summary from current conditions.",
+      "human_decision": "No approval granted by readiness calculation; publication remains not_requested.",
+      "wait": "Legal awaiting execution; Credit condition pending; QA pending; EDD applicability unknown",
+      "output": "New ReadinessSnapshot result=not_ready with exact blocker and unknown IDs",
+      "resume": "A named condition changes version",
+      "impact": "Local screening completion cannot clear Legal/Credit/QA or unknown applicability",
+      "acceptance": [
+        "No false green after screening",
+        "Unknown EDD is not not_required",
+        "Locale/navigation/playback never changes readiness",
+        "Wrong configured demo role cannot execute the action"
+      ],
+      "applicability": {
+        "case_scope_id": "DEMO-CTT-001/scope/institutional",
+        "subject_id": "DEMO-CTT-001/entity/harbour",
+        "value": true,
+        "basis": "Authored Round A scope only; bank applicability requires validation",
+        "confirmed_by": "ROLE-DEMO-AUTHOR"
+      },
+      "objective": "Explain what remains",
+      "concurrency": {
+        "may_continue": [
+          "SCN-LEGAL",
+          "SCN-CREDIT",
+          "SCN-CONFLICTS"
+        ],
+        "minimum_input": "Each branch has its own sufficiently identified synthetic scope/input",
+        "hold_scope": "Only named task or linked requirement; no new case-wide hold inferred"
+      },
+      "decision": {
+        "actions": [
+          "No approval granted by readiness calculation; publication remains not_requested."
+        ],
+        "authority_basis": "demoConfig.allowed_actions_by_role only",
+        "bank_authority_status": "unknown",
+        "prohibited": [
+          "Auto-approve from confidence score",
+          "Publish clearance",
+          "Execute trade"
+        ],
+        "escalation": "Missing evidence, unresolved applicability or absent configured demo permission"
+      },
+      "story": {
+        "tension": "Legal awaiting execution; Credit condition pending; QA pending; EDD applicability unknown",
+        "key_reveal": "Local screening completion cannot clear Legal/Credit/QA or unknown applicability",
+        "consequence": "New ReadinessSnapshot result=not_ready with exact blocker and unknown IDs",
+        "next_scene_ids": []
+      },
+      "ui_media": {
+        "journey_card": [
+          "objective",
+          "wait"
+        ],
+        "scenario_modal": [
+          "current_work",
+          "target_work",
+          "human_decision",
+          "impact"
+        ],
+        "prototype_target": "SCN-READINESS",
+        "print_fallback": "Static scene contract and current blockers",
+        "diagram_status": "Owned by separate Round A diagram work; not asserted here"
+      },
+      "benchmark": {
+        "refs": [],
+        "status": "DEFERRED_THIS_ROUND"
+      }
+    }
+  },
+  {
+    "scenario_id": "SCN-PUBLISH",
+    "revision": 1,
+    "case_id": "DEMO-CTT-001",
+    "route_id": "ROUTE-NEW-REL-01",
+    "authoring_status": "skeleton",
+    "source_status": "DESIGN-HYPOTHESIS",
+    "source_refs": [
+      "SRC-007",
+      "SRC-009",
+      "SRC-010",
+      "SRC-011"
+    ],
+    "process_refs": [
+      "SRC-007:slide2:Target:M8.2-M8.5"
+    ],
+    "current_process_refs": [
+      "SRC-007:slide1:Current:M8.2-M8.5"
+    ],
+    "source_mapping_status": "ACTIVITY_SEEDS_FROM_SRC-009/010; atomic lane/occurrence validation deferred",
+    "journey_crosswalk": [],
+    "crosswalk_status": "no_existing_journey_id",
+    "label_zh": "PUBLISH",
+    "label_en_au": "PUBLISH",
+    "label_en_us": "PUBLISH",
+    "print_order": 15,
+    "work_item_ids": [],
+    "contract": null
+  }
+]

@@ -1,0 +1,20 @@
+{
+  "date": "2026-09-07T20:56:18.822Z",
+  "checks": [
+    {
+      "id": "E-HISTORY-ROLE-BACK",
+      "rt": [
+        "RT19"
+      ],
+      "status": "failed",
+      "name": "Back restores QA draft and tokens; displayed gap action commits as QA",
+      "error": "Visible open_qa_gap must dispatch for the restored role\n\n1 !== 0\n",
+      "evidence": [
+        "prototype/qa/batch-e/evidence-fix-1-red/E-HISTORY-ROLE-BACK-failed.png"
+      ]
+    }
+  ],
+  "consoleErrors": [],
+  "passed": 0,
+  "failed": 1
+}

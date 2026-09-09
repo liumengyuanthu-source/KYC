@@ -1,0 +1,21 @@
+{
+  "at": "2026-09-07T17:54:34.131Z",
+  "browser": "152.0.7977.76",
+  "results": [
+    {
+      "ids": [
+        "D5-08",
+        "D5-23",
+        "D5-25",
+        "D5U-06",
+        "D5U-07",
+        "D5U-16"
+      ],
+      "name": "assessed-identity-resumes-native-review",
+      "status": "passed",
+      "screenshot": "prototype/qa/d5/host/assessed-identity-resumes-native-review.png",
+      "errors": [],
+      "remote": []
+    }
+  ]
+}

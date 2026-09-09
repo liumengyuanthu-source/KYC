@@ -1,0 +1,74 @@
+[
+  {
+    "id": "requirements",
+    "status": "ready_for_preparation",
+    "basis": "scope / known product / demo rule pack; booking-dependent applicability unresolved",
+    "dependency": "SRC-010:DEP-03",
+    "scope_revision": 3,
+    "hold": null
+  },
+  {
+    "id": "source",
+    "status": "ready_for_preparation",
+    "basis": "queryable subject / synthetic access basis",
+    "dependency": "SRC-010:DEP-04",
+    "scope_revision": 3,
+    "hold": null
+  },
+  {
+    "id": "conflicts",
+    "status": "ready_for_preparation",
+    "basis": "distinguishable parties / relationship request / no hold; preparation only",
+    "dependency": "SRC-010:DEP-01",
+    "scope_revision": 3,
+    "hold": null
+  },
+  {
+    "id": "pre_screen",
+    "status": "ready_for_preparation",
+    "basis": "subject revision / preliminary query; not comprehensive screening",
+    "dependency": "SRC-010:DEP-02",
+    "scope_revision": 3,
+    "hold": null
+  },
+  {
+    "id": "legal",
+    "status": "awaiting_input",
+    "basis": "agreement applicability unknown; no execution",
+    "dependency": "SRC-010:DEP-09",
+    "scope_revision": 3,
+    "hold": null
+  },
+  {
+    "id": "credit",
+    "status": "awaiting_input",
+    "basis": "credit applicability unknown; no inferred limit",
+    "dependency": "SRC-010:DEP-10",
+    "scope_revision": 3,
+    "hold": null
+  },
+  {
+    "id": "client_request",
+    "status": "awaiting_input",
+    "basis": "recipient / disclosure / send permission unresolved; draft only",
+    "dependency": "SRC-010:DEP-05",
+    "scope_revision": 3,
+    "hold": null
+  },
+  {
+    "id": "agreement_execution",
+    "status": "awaiting_input",
+    "basis": "execution authority not established",
+    "dependency": "SRC-010:DEP-09",
+    "scope_revision": 3,
+    "hold": null
+  },
+  {
+    "id": "publication",
+    "status": "awaiting_input",
+    "basis": "conditions / booking / final bank authority unresolved",
+    "dependency": "SRC-010:DEP-13",
+    "scope_revision": 3,
+    "hold": null
+  }
+]

@@ -1,0 +1,22 @@
+PASS MH-01 Mainline selected local r01; initially paused
+PASS MH-02 Next / Previous / Replay are read-only; Replay stays paused
+PASS MH-03 Play advances, Pause stops, end does not loop
+PASS MH-04 Current/Target and all 3 locales preserve cue and case
+PASS MH-05 Close and reopen restores media position paused
+PASS MH-06 Current→Target Product→Scenario restores Current, locale, role, camera and scroll
+PASS MH-07 Dirty Stay / Discard / Save preserve correct return contract
+PASS MH-08 Back to Journey and Continue Story retain business state; scene times independent
+PASS MH-09 A02 playback stops at 9.5s; Play cannot pass; Next alone unlocks preparation
+PASS MH-10 Malicious/repeated media messages and focus never change live business data
+PASS MH-11 Simulated blur / hidden lifecycle pause without autoplay on return
+PASS MH-12 Keyboard help Escape does not close host; reduced motion gives static controls
+PASS MH-13 1440 / 1366 / mobile and 200%-equivalent reflow: no component horizontal clipping
+PASS MH-21 Horizontal journey drag→scene→close restores semantic camera and offset
+PASS MH-14 Print all 11 cues in every locale, not just active beat
+PASS MH-15 Healthy runtime uses local packaged assets only with no 404/page errors
+PASS MH-16 module blocked: host, text, static print and return usable
+PASS MH-17 all-media blocked: host, text, static print and return usable
+PASS MH-18 visual-assets blocked: host, text, static print and return usable
+PASS MH-19 JavaScript-disabled mainline offers the six original A static pages
+PASS MH-22 Both player stylesheets blocked: readable emergency layout and controls
+{"passed":21,"failed":0,"not_run":1}

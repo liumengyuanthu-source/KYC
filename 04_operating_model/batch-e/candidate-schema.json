@@ -1,0 +1,547 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Batch E additive candidate v0.1",
+  "status": "additive_candidate_v0.1_not_production_schema",
+  "type": "object",
+  "required": [
+    "decisions",
+    "qaChecks",
+    "workItems",
+    "clearancePrerequisites",
+    "readinessSnapshots",
+    "clearanceDecisions",
+    "publicationEvents",
+    "dependencies",
+    "evidenceUseAssessments"
+  ],
+  "additionalProperties": true,
+  "properties": {
+    "decisions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "if": {
+          "required": [
+            "source_refs"
+          ],
+          "properties": {
+            "source_refs": {
+              "contains": {
+                "const": "SRC-020"
+              }
+            }
+          }
+        },
+        "then": {
+          "required": [
+            "id",
+            "case_id",
+            "case_scope_id",
+            "revision",
+            "case_scope_ref",
+            "decision_type",
+            "record_status",
+            "package_ref",
+            "event_ref",
+            "demo_role_ref",
+            "input_revisions"
+          ],
+          "allOf": [
+            {
+              "if": {
+                "required": [
+                  "decision_type"
+                ],
+                "properties": {
+                  "decision_type": {
+                    "const": "screening_coverage"
+                  }
+                }
+              },
+              "then": {
+                "required": [
+                  "reviewed_screening_bindings",
+                  "historical_finding_exclusions"
+                ]
+              }
+            },
+            {
+              "if": {
+                "required": [
+                  "decision_type"
+                ],
+                "properties": {
+                  "decision_type": {
+                    "const": "legal_execution"
+                  }
+                }
+              },
+              "then": {
+                "required": [
+                  "executed_document_ref",
+                  "executed_document_revision",
+                  "executed_evidence_revision",
+                  "executed_content_revision",
+                  "executed_document_fingerprint",
+                  "agreement_ref",
+                  "agreement_revision",
+                  "agreement_fingerprint"
+                ]
+              }
+            }
+          ],
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "case_id": {
+              "const": "DEMO-CTT-001"
+            },
+            "case_scope_id": {
+              "const": "DEMO-CTT-001/scope/institutional"
+            },
+            "revision": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "bank_authority_ref": {
+              "type": "null"
+            }
+          },
+          "additionalProperties": true
+        }
+      }
+    },
+    "qaChecks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "if": {
+          "required": [
+            "source_refs"
+          ],
+          "properties": {
+            "source_refs": {
+              "contains": {
+                "const": "SRC-020"
+              }
+            }
+          }
+        },
+        "then": {
+          "required": [
+            "id",
+            "case_id",
+            "case_scope_id",
+            "revision",
+            "case_scope_ref",
+            "check_type",
+            "requirement_refs",
+            "evidence_use_refs",
+            "condition_refs",
+            "check_status",
+            "finding_refs",
+            "reviewed_by_ref",
+            "reviewed_at"
+          ],
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "case_id": {
+              "const": "DEMO-CTT-001"
+            },
+            "case_scope_id": {
+              "const": "DEMO-CTT-001/scope/institutional"
+            },
+            "revision": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "bank_authority_ref": {
+              "type": "null"
+            }
+          },
+          "additionalProperties": true
+        }
+      }
+    },
+    "workItems": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "if": {
+          "required": [
+            "source_refs",
+            "work_type"
+          ],
+          "properties": {
+            "source_refs": {
+              "contains": {
+                "const": "SRC-020"
+              }
+            },
+            "work_type": {
+              "const": "qa_remediation"
+            }
+          }
+        },
+        "then": {
+          "required": [
+            "id",
+            "case_id",
+            "case_scope_id",
+            "revision",
+            "source_check_ref",
+            "affected_object_refs",
+            "reason_code",
+            "required_action",
+            "owner_role_ref",
+            "status",
+            "resolution_refs",
+            "re_review_required"
+          ],
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "case_id": {
+              "const": "DEMO-CTT-001"
+            },
+            "case_scope_id": {
+              "const": "DEMO-CTT-001/scope/institutional"
+            },
+            "revision": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "bank_authority_ref": {
+              "type": "null"
+            }
+          },
+          "additionalProperties": true
+        }
+      }
+    },
+    "clearancePrerequisites": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "if": {
+          "required": [
+            "source_refs"
+          ],
+          "properties": {
+            "source_refs": {
+              "contains": {
+                "const": "SRC-020"
+              }
+            }
+          }
+        },
+        "then": {
+          "required": [
+            "id",
+            "case_id",
+            "case_scope_id",
+            "revision",
+            "case_scope_ref",
+            "prerequisite_type",
+            "applicability",
+            "condition_refs",
+            "dependency_refs",
+            "status",
+            "blocking_reason_refs",
+            "owner_role_ref",
+            "last_evaluated_at"
+          ],
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "case_id": {
+              "const": "DEMO-CTT-001"
+            },
+            "case_scope_id": {
+              "const": "DEMO-CTT-001/scope/institutional"
+            },
+            "revision": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "bank_authority_ref": {
+              "type": "null"
+            }
+          },
+          "additionalProperties": true
+        }
+      }
+    },
+    "readinessSnapshots": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "if": {
+          "required": [
+            "source_refs"
+          ],
+          "properties": {
+            "source_refs": {
+              "contains": {
+                "const": "SRC-020"
+              }
+            }
+          }
+        },
+        "then": {
+          "required": [
+            "id",
+            "case_id",
+            "case_scope_id",
+            "revision",
+            "case_scope_ref",
+            "scope_revision",
+            "decision_scope",
+            "evaluated_at",
+            "prerequisite_snapshot_refs",
+            "blocking_condition_refs",
+            "unknown_condition_refs",
+            "readiness_state",
+            "basis_refs",
+            "supersedes_ref"
+          ],
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "case_id": {
+              "const": "DEMO-CTT-001"
+            },
+            "case_scope_id": {
+              "const": "DEMO-CTT-001/scope/institutional"
+            },
+            "revision": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "bank_authority_ref": {
+              "type": "null"
+            }
+          },
+          "additionalProperties": true
+        }
+      }
+    },
+    "clearanceDecisions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "if": {
+          "required": [
+            "source_refs"
+          ],
+          "properties": {
+            "source_refs": {
+              "contains": {
+                "const": "SRC-020"
+              }
+            }
+          }
+        },
+        "then": {
+          "required": [
+            "id",
+            "case_id",
+            "case_scope_id",
+            "revision",
+            "readiness_snapshot_ref",
+            "case_scope_ref",
+            "decision",
+            "decision_scope",
+            "confirmed_by_ref",
+            "authority_ref",
+            "confirmed_at",
+            "rationale"
+          ],
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "case_id": {
+              "const": "DEMO-CTT-001"
+            },
+            "case_scope_id": {
+              "const": "DEMO-CTT-001/scope/institutional"
+            },
+            "revision": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "bank_authority_ref": {
+              "type": "null"
+            }
+          },
+          "additionalProperties": true
+        }
+      }
+    },
+    "publicationEvents": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "if": {
+          "required": [
+            "source_refs"
+          ],
+          "properties": {
+            "source_refs": {
+              "contains": {
+                "const": "SRC-020"
+              }
+            }
+          }
+        },
+        "then": {
+          "required": [
+            "id",
+            "case_id",
+            "case_scope_id",
+            "revision",
+            "clearance_decision_ref",
+            "published_scope",
+            "target_system_refs",
+            "publication_status",
+            "published_at",
+            "failure_refs"
+          ],
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "case_id": {
+              "const": "DEMO-CTT-001"
+            },
+            "case_scope_id": {
+              "const": "DEMO-CTT-001/scope/institutional"
+            },
+            "revision": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "bank_authority_ref": {
+              "type": "null"
+            }
+          },
+          "additionalProperties": true
+        }
+      }
+    },
+    "dependencies": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "if": {
+          "required": [
+            "source_refs"
+          ],
+          "properties": {
+            "source_refs": {
+              "contains": {
+                "const": "SRC-020"
+              }
+            }
+          }
+        },
+        "then": {
+          "required": [
+            "id",
+            "case_id",
+            "case_scope_id",
+            "revision",
+            "from_object_ref",
+            "from_revision",
+            "to_object_ref",
+            "to_revision",
+            "dependency_type",
+            "impact_scope",
+            "status",
+            "source_aliases",
+            "validation_status"
+          ],
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "case_id": {
+              "const": "DEMO-CTT-001"
+            },
+            "case_scope_id": {
+              "const": "DEMO-CTT-001/scope/institutional"
+            },
+            "revision": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "bank_authority_ref": {
+              "type": "null"
+            }
+          },
+          "additionalProperties": true
+        }
+      }
+    },
+    "evidenceUseAssessments": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "if": {
+          "required": [
+            "source_refs"
+          ],
+          "properties": {
+            "source_refs": {
+              "contains": {
+                "const": "SRC-020"
+              }
+            }
+          }
+        },
+        "then": {
+          "required": [
+            "id",
+            "case_id",
+            "case_scope_id",
+            "revision",
+            "evidence_id",
+            "evidence_revision",
+            "evidence_record_revision",
+            "subject_id",
+            "purpose_code",
+            "sufficiency",
+            "basis_refs",
+            "assessed_by_ref"
+          ],
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "case_id": {
+              "const": "DEMO-CTT-001"
+            },
+            "case_scope_id": {
+              "const": "DEMO-CTT-001/scope/institutional"
+            },
+            "revision": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "bank_authority_ref": {
+              "type": "null"
+            }
+          },
+          "additionalProperties": true
+        }
+      }
+    }
+  }
+}

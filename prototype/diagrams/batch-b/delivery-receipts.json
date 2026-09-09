@@ -1,0 +1,74 @@
+[
+  {
+    "schemaVersion": 1,
+    "ok": true,
+    "command": "deliver",
+    "type": "workflow",
+    "input": "/Users/christinaliu/Documents/ChatGPT/Australia Bank/clear-to-trade-product/prototype/diagrams/batch-b/client-collaboration.en-AU.json",
+    "output": "/Users/christinaliu/Documents/ChatGPT/Australia Bank/clear-to-trade-product/prototype/diagrams/batch-b/client-collaboration.en-AU.html",
+    "specification": {
+      "sha256": "3f26d344d3908efce22ab978e586986c06d679eed8746659df5e37a6c9c4a200",
+      "bytes": 3090
+    },
+    "artifact": {
+      "sha256": "fd30d103fcbceb6fd714315a08eaee9a2642f7a323dc5ca2853a40b1d989dfa1",
+      "bytes": 707543
+    },
+    "validation": {
+      "checksPassed": 9,
+      "checkCount": 9,
+      "compositionProfile": "showcase",
+      "compositionStatus": "pass",
+      "errors": 0,
+      "warnings": 0
+    }
+  },
+  {
+    "schemaVersion": 1,
+    "ok": true,
+    "command": "deliver",
+    "type": "workflow",
+    "input": "/Users/christinaliu/Documents/ChatGPT/Australia Bank/clear-to-trade-product/prototype/diagrams/batch-b/client-collaboration.en-US.json",
+    "output": "/Users/christinaliu/Documents/ChatGPT/Australia Bank/clear-to-trade-product/prototype/diagrams/batch-b/client-collaboration.en-US.html",
+    "specification": {
+      "sha256": "3f26d344d3908efce22ab978e586986c06d679eed8746659df5e37a6c9c4a200",
+      "bytes": 3090
+    },
+    "artifact": {
+      "sha256": "fd30d103fcbceb6fd714315a08eaee9a2642f7a323dc5ca2853a40b1d989dfa1",
+      "bytes": 707543
+    },
+    "validation": {
+      "checksPassed": 9,
+      "checkCount": 9,
+      "compositionProfile": "showcase",
+      "compositionStatus": "pass",
+      "errors": 0,
+      "warnings": 0
+    }
+  },
+  {
+    "schemaVersion": 1,
+    "ok": true,
+    "command": "deliver",
+    "type": "workflow",
+    "input": "/Users/christinaliu/Documents/ChatGPT/Australia Bank/clear-to-trade-product/prototype/diagrams/batch-b/client-collaboration.zh-CN.json",
+    "output": "/Users/christinaliu/Documents/ChatGPT/Australia Bank/clear-to-trade-product/prototype/diagrams/batch-b/client-collaboration.zh-CN.html",
+    "specification": {
+      "sha256": "7d4b6241ef0d71abf42a2bbe710260d1e1c99d0e3682ed09bb0ee0ca1c78bd74",
+      "bytes": 3104
+    },
+    "artifact": {
+      "sha256": "17ea5ffdefa3e7527fd6fafd36cdf586cd0c28a1d87c89cc7558826487798e02",
+      "bytes": 707198
+    },
+    "validation": {
+      "checksPassed": 9,
+      "checkCount": 9,
+      "compositionProfile": "showcase",
+      "compositionStatus": "pass",
+      "errors": 0,
+      "warnings": 0
+    }
+  }
+]

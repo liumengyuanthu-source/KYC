@@ -1,0 +1,1012 @@
+[
+  {
+    "name": "01-studio",
+    "status": "captured",
+    "scene": null,
+    "errors": [],
+    "metrics": {
+      "width": 1440,
+      "overflow": false,
+      "headings": [
+        "共同看清准入条件。",
+        "机构业务旅程",
+        "发起与界定",
+        "明确本次关系范围",
+        "明确要求与取证",
+        "明确适用要求",
+        "筛查与评估",
+        "处理疑似筛查命中",
+        "复核与解决",
+        "关闭具体质量缺口",
+        "交易准入",
+        "明确还剩哪些条件"
+      ],
+      "technical": [
+        {
+          "text": "合成案件",
+          "size": "10px",
+          "color": "rgb(91, 96, 103)"
+        },
+        {
+          "text": "主体与用途",
+          "size": "10px",
+          "color": "rgb(91, 96, 103)"
+        },
+        {
+          "text": "范围 · 版本",
+          "size": "10px",
+          "color": "rgb(91, 96, 103)"
+        },
+        {
+          "text": "场景 01",
+          "size": "10px",
+          "color": "rgb(96, 105, 113)"
+        },
+        {
+          "text": "场景 02",
+          "size": "10px",
+          "color": "rgb(96, 105, 113)"
+        },
+        {
+          "text": "场景 03",
+          "size": "10px",
+          "color": "rgb(96, 105, 113)"
+        },
+        {
+          "text": "场景 04",
+          "size": "10px",
+          "color": "rgb(96, 105, 113)"
+        },
+        {
+          "text": "场景 05",
+          "size": "10px",
+          "color": "rgb(96, 105, 113)"
+        },
+        {
+          "text": "场景 06",
+          "size": "10px",
+          "color": "rgb(96, 105, 113)"
+        },
+        {
+          "text": "场景 07",
+          "size": "10px",
+          "color": "rgb(96, 105, 113)"
+        },
+        {
+          "text": "场景 08",
+          "size": "10px",
+          "color": "rgb(96, 105, 113)"
+        },
+        {
+          "text": "场景 09",
+          "size": "10px",
+          "color": "rgb(96, 105, 113)"
+        },
+        {
+          "text": "D1 · 讲解节点",
+          "size": "10px",
+          "color": "rgb(96, 105, 113)"
+        },
+        {
+          "text": "D2 · 讲解节点",
+          "size": "10px",
+          "color": "rgb(96, 105, 113)"
+        },
+        {
+          "text": "D3 · 讲解节点",
+          "size": "10px",
+          "color": "rgb(96, 105, 113)"
+        },
+        {
+          "text": "D4 · 讲解节点",
+          "size": "10px",
+          "color": "rgb(96, 105, 113)"
+        },
+        {
+          "text": "D5 · 讲解节点",
+          "size": "10px",
+          "color": "rgb(96, 105, 113)"
+        },
+        {
+          "text": "01",
+          "size": "11px",
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "text": "02",
+          "size": "11px",
+          "color": "rgb(100, 106, 114)"
+        },
+        {
+          "text": "03",
+          "size": "11px",
+          "color": "rgb(100, 106, 114)"
+        },
+        {
+          "text": "04",
+          "size": "11px",
+          "color": "rgb(100, 106, 114)"
+        },
+        {
+          "text": "05",
+          "size": "11px",
+          "color": "rgb(100, 106, 114)"
+        },
+        {
+          "text": "01 / M0 · M1",
+          "size": "9px",
+          "color": "rgb(91, 96, 103)"
+        },
+        {
+          "text": "M0.1–M0.4 · M1.1",
+          "size": "10px",
+          "color": "rgb(101, 110, 120)"
+        },
+        {
+          "text": "02 / M2 · M3",
+          "size": "9px",
+          "color": "rgb(91, 96, 103)"
+        }
+      ]
+    },
+    "screenshot": "prototype/qa/d3/before/01-studio.png"
+  },
+  {
+    "name": "02-gap",
+    "status": "captured",
+    "scene": "SCN-GAP",
+    "errors": [],
+    "metrics": {
+      "width": 1440,
+      "overflow": false,
+      "headings": [
+        "共同看清准入条件。",
+        "机构业务旅程",
+        "发起与界定",
+        "明确本次关系范围",
+        "明确要求与取证",
+        "明确适用要求",
+        "筛查与评估",
+        "处理疑似筛查命中",
+        "复核与解决",
+        "关闭具体质量缺口",
+        "交易准入",
+        "明确还剩哪些条件",
+        "只询问剩余缺口",
+        "从要求到经复核的响应"
+      ],
+      "technical": [
+        {
+          "text": "合成案件",
+          "size": "10px",
+          "color": "rgb(91, 96, 103)"
+        },
+        {
+          "text": "主体与用途",
+          "size": "10px",
+          "color": "rgb(91, 96, 103)"
+        },
+        {
+          "text": "范围 · 版本",
+          "size": "10px",
+          "color": "rgb(91, 96, 103)"
+        },
+        {
+          "text": "场景 01",
+          "size": "10px",
+          "color": "rgb(96, 105, 113)"
+        },
+        {
+          "text": "场景 02",
+          "size": "10px",
+          "color": "rgb(96, 105, 113)"
+        },
+        {
+          "text": "场景 03",
+          "size": "10px",
+          "color": "rgb(96, 105, 113)"
+        },
+        {
+          "text": "场景 04",
+          "size": "10px",
+          "color": "rgb(96, 105, 113)"
+        },
+        {
+          "text": "场景 05",
+          "size": "10px",
+          "color": "rgb(96, 105, 113)"
+        },
+        {
+          "text": "场景 06",
+          "size": "10px",
+          "color": "rgb(96, 105, 113)"
+        },
+        {
+          "text": "场景 07",
+          "size": "10px",
+          "color": "rgb(96, 105, 113)"
+        },
+        {
+          "text": "场景 08",
+          "size": "10px",
+          "color": "rgb(96, 105, 113)"
+        },
+        {
+          "text": "场景 09",
+          "size": "10px",
+          "color": "rgb(96, 105, 113)"
+        },
+        {
+          "text": "D1 · 讲解节点",
+          "size": "10px",
+          "color": "rgb(96, 105, 113)"
+        },
+        {
+          "text": "D2 · 讲解节点",
+          "size": "10px",
+          "color": "rgb(96, 105, 113)"
+        },
+        {
+          "text": "D3 · 讲解节点",
+          "size": "10px",
+          "color": "rgb(96, 105, 113)"
+        },
+        {
+          "text": "D4 · 讲解节点",
+          "size": "10px",
+          "color": "rgb(96, 105, 113)"
+        },
+        {
+          "text": "D5 · 讲解节点",
+          "size": "10px",
+          "color": "rgb(96, 105, 113)"
+        },
+        {
+          "text": "01",
+          "size": "11px",
+          "color": "rgb(100, 106, 114)"
+        },
+        {
+          "text": "02",
+          "size": "11px",
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "text": "03",
+          "size": "11px",
+          "color": "rgb(100, 106, 114)"
+        },
+        {
+          "text": "04",
+          "size": "11px",
+          "color": "rgb(100, 106, 114)"
+        },
+        {
+          "text": "05",
+          "size": "11px",
+          "color": "rgb(100, 106, 114)"
+        },
+        {
+          "text": "01 / M0 · M1",
+          "size": "9px",
+          "color": "rgb(91, 96, 103)"
+        },
+        {
+          "text": "M0.1–M0.4 · M1.1",
+          "size": "10px",
+          "color": "rgb(101, 110, 120)"
+        },
+        {
+          "text": "02 / M2 · M3",
+          "size": "9px",
+          "color": "rgb(91, 96, 103)"
+        }
+      ]
+    },
+    "screenshot": "prototype/qa/d3/before/02-gap.png"
+  },
+  {
+    "name": "03-match",
+    "status": "captured",
+    "scene": "SCN-MATCH",
+    "errors": [],
+    "metrics": {
+      "width": 1440,
+      "overflow": false,
+      "headings": [
+        "共同看清准入条件。",
+        "机构业务旅程",
+        "发起与界定",
+        "明确本次关系范围",
+        "明确要求与取证",
+        "明确适用要求",
+        "筛查与评估",
+        "处理疑似筛查命中",
+        "复核与解决",
+        "关闭具体质量缺口",
+        "交易准入",
+        "明确还剩哪些条件",
+        "处理疑似筛查命中"
+      ],
+      "technical": [
+        {
+          "text": "合成案件",
+          "size": "10px",
+          "color": "rgb(91, 96, 103)"
+        },
+        {
+          "text": "主体与用途",
+          "size": "10px",
+          "color": "rgb(91, 96, 103)"
+        },
+        {
+          "text": "范围 · 版本",
+          "size": "10px",
+          "color": "rgb(91, 96, 103)"
+        },
+        {
+          "text": "场景 01",
+          "size": "10px",
+          "color": "rgb(96, 105, 113)"
+        },
+        {
+          "text": "场景 02",
+          "size": "10px",
+          "color": "rgb(96, 105, 113)"
+        },
+        {
+          "text": "场景 03",
+          "size": "10px",
+          "color": "rgb(96, 105, 113)"
+        },
+        {
+          "text": "场景 04",
+          "size": "10px",
+          "color": "rgb(96, 105, 113)"
+        },
+        {
+          "text": "场景 05",
+          "size": "10px",
+          "color": "rgb(96, 105, 113)"
+        },
+        {
+          "text": "场景 06",
+          "size": "10px",
+          "color": "rgb(96, 105, 113)"
+        },
+        {
+          "text": "场景 07",
+          "size": "10px",
+          "color": "rgb(96, 105, 113)"
+        },
+        {
+          "text": "场景 08",
+          "size": "10px",
+          "color": "rgb(96, 105, 113)"
+        },
+        {
+          "text": "场景 09",
+          "size": "10px",
+          "color": "rgb(96, 105, 113)"
+        },
+        {
+          "text": "D1 · 讲解节点",
+          "size": "10px",
+          "color": "rgb(96, 105, 113)"
+        },
+        {
+          "text": "D2 · 讲解节点",
+          "size": "10px",
+          "color": "rgb(96, 105, 113)"
+        },
+        {
+          "text": "D3 · 讲解节点",
+          "size": "10px",
+          "color": "rgb(96, 105, 113)"
+        },
+        {
+          "text": "D4 · 讲解节点",
+          "size": "10px",
+          "color": "rgb(96, 105, 113)"
+        },
+        {
+          "text": "D5 · 讲解节点",
+          "size": "10px",
+          "color": "rgb(96, 105, 113)"
+        },
+        {
+          "text": "01",
+          "size": "11px",
+          "color": "rgb(100, 106, 114)"
+        },
+        {
+          "text": "02",
+          "size": "11px",
+          "color": "rgb(100, 106, 114)"
+        },
+        {
+          "text": "03",
+          "size": "11px",
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "text": "04",
+          "size": "11px",
+          "color": "rgb(100, 106, 114)"
+        },
+        {
+          "text": "05",
+          "size": "11px",
+          "color": "rgb(100, 106, 114)"
+        },
+        {
+          "text": "01 / M0 · M1",
+          "size": "9px",
+          "color": "rgb(91, 96, 103)"
+        },
+        {
+          "text": "M0.1–M0.4 · M1.1",
+          "size": "10px",
+          "color": "rgb(101, 110, 120)"
+        },
+        {
+          "text": "02 / M2 · M3",
+          "size": "9px",
+          "color": "rgb(91, 96, 103)"
+        }
+      ]
+    },
+    "screenshot": "prototype/qa/d3/before/03-match.png"
+  },
+  {
+    "name": "04-scope",
+    "status": "captured",
+    "scene": "SCN-SCOPE",
+    "errors": [],
+    "metrics": {
+      "width": 1440,
+      "overflow": false,
+      "headings": [
+        "案件工作台",
+        "范围",
+        "案件条件"
+      ],
+      "technical": [
+        {
+          "text": "产品原型 / TARGET",
+          "size": "10px",
+          "color": "rgb(91, 96, 103)"
+        },
+        {
+          "text": "合成案件",
+          "size": "10px",
+          "color": "rgb(91, 96, 103)"
+        },
+        {
+          "text": "主体与用途",
+          "size": "10px",
+          "color": "rgb(91, 96, 103)"
+        },
+        {
+          "text": "范围 · 版本",
+          "size": "10px",
+          "color": "rgb(91, 96, 103)"
+        },
+        {
+          "text": "案件工作",
+          "size": "9px",
+          "color": "rgb(91, 96, 103)"
+        },
+        {
+          "text": "01",
+          "size": "11px",
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "text": "02",
+          "size": "11px",
+          "color": "rgb(90, 98, 106)"
+        },
+        {
+          "text": "03",
+          "size": "11px",
+          "color": "rgb(90, 98, 106)"
+        },
+        {
+          "text": "04",
+          "size": "11px",
+          "color": "rgb(90, 98, 106)"
+        },
+        {
+          "text": "05",
+          "size": "11px",
+          "color": "rgb(90, 98, 106)"
+        },
+        {
+          "text": "06",
+          "size": "11px",
+          "color": "rgb(90, 98, 106)"
+        },
+        {
+          "text": "07",
+          "size": "11px",
+          "color": "rgb(90, 98, 106)"
+        },
+        {
+          "text": "08",
+          "size": "11px",
+          "color": "rgb(90, 98, 106)"
+        },
+        {
+          "text": "09",
+          "size": "11px",
+          "color": "rgb(90, 98, 106)"
+        },
+        {
+          "text": "010",
+          "size": "11px",
+          "color": "rgb(90, 98, 106)"
+        },
+        {
+          "text": "记录",
+          "size": "9px",
+          "color": "rgb(91, 96, 103)"
+        }
+      ]
+    },
+    "screenshot": "prototype/qa/d3/before/04-scope.png"
+  },
+  {
+    "name": "05-condition",
+    "status": "captured",
+    "scene": "SCN-CONFLICTS",
+    "errors": [],
+    "metrics": {
+      "width": 1440,
+      "overflow": false,
+      "headings": [
+        "条件详情",
+        "利益冲突",
+        "利益冲突复核",
+        "协议版本 3",
+        "依赖视图",
+        "修订信贷输入"
+      ],
+      "technical": [
+        {
+          "text": "合成案件",
+          "size": "10px",
+          "color": "rgb(91, 96, 103)"
+        },
+        {
+          "text": "主体与用途",
+          "size": "10px",
+          "color": "rgb(91, 96, 103)"
+        },
+        {
+          "text": "范围 · 版本",
+          "size": "10px",
+          "color": "rgb(91, 96, 103)"
+        },
+        {
+          "text": "BATCH D · SRC-019 · 活动中的合成会话",
+          "size": "10px",
+          "color": "rgb(90, 118, 140)"
+        },
+        {
+          "text": "Credit Assessment · v1",
+          "size": "11px",
+          "color": "rgb(28, 49, 69)"
+        },
+        {
+          "text": "CD-01 · v1",
+          "size": "11px",
+          "color": "rgb(28, 49, 69)"
+        },
+        {
+          "text": "CC-01 · v1",
+          "size": "11px",
+          "color": "rgb(28, 49, 69)"
+        },
+        {
+          "text": "AI-01 · v1",
+          "size": "11px",
+          "color": "rgb(28, 49, 69)"
+        },
+        {
+          "text": "AGR-01 · v3",
+          "size": "11px",
+          "color": "rgb(28, 49, 69)"
+        },
+        {
+          "text": "仅主持人可用的模拟",
+          "size": "10px",
+          "color": "rgb(90, 118, 140)"
+        }
+      ]
+    },
+    "screenshot": "prototype/qa/d3/before/05-condition.png"
+  },
+  {
+    "name": "06-references",
+    "status": "captured",
+    "scene": "SCN-MATCH",
+    "errors": [],
+    "metrics": {
+      "width": 1440,
+      "overflow": false,
+      "headings": [
+        "共同看清准入条件。",
+        "机构业务旅程",
+        "发起与界定",
+        "明确本次关系范围",
+        "明确要求与取证",
+        "明确适用要求",
+        "筛查与评估",
+        "处理疑似筛查命中",
+        "复核与解决",
+        "关闭具体质量缺口",
+        "交易准入",
+        "明确还剩哪些条件",
+        "研究依据",
+        "ING Wholesale — Direct Online Onboarding Request (DOOR)",
+        "ANZ — KYC SecureReply",
+        "HSBC Bermuda — SmartServe",
+        "HSBC Singapore — International business / SmartServe",
+        "Citi — APAC institutional digital onboarding launch",
+        "Citi — CitiDirect BE Digital Onboarding video",
+        "Citi — CitiDirect Commercial Banking enhancements",
+        "Citi — CitiDirect Commercial Banking product video page",
+        "NatWest Business — Mitek identity verification",
+        "HSBC Hong Kong — Chat with your Relationship Manager",
+        "SWIFT — KYC Registry opens to corporates",
+        "Wolfsberg Group — Correspondent Banking / CBDDQ resources",
+        "GLEIF — Level 2 Data: Who Owns Whom",
+        "GLEIF — The verifiable LEI (vLEI)",
+        "ISDA — DRR and CDM documentation",
+        "EUROCONTROL — Airport Collaborative Decision Making specification",
+        "IATA — ONE Record",
+        "GS1 — Global Traceability Standard explanation",
+        "NIST — Digital Thread for Manufacturing",
+        "HL7 FHIR R4 — Provenance",
+        "FDA / ICH — Q9(R1) Quality Risk Management",
+        "FDA / ICH — Q10 Pharmaceutical Quality System",
+        "SEC — Off-channel communications enforcement, 2023-91",
+        "NIST SP 800-63B-4 — Authentication and authenticator management",
+        "OWASP — File Upload Cheat Sheet",
+        "AUSTRAC — Initial CDD for body corporate, partnership or unincorporated association",
+        "AUSTRAC — Source of funds and source of wealth",
+        "AUSTRAC — Enhanced customer due diligence",
+        "Basel Committee — Guidelines for counterparty credit risk management",
+        "DFAT — Consolidated List",
+        "Wolfsberg Group — Guidance on Sanctions Screening",
+        "Apple — Meet Liquid Glass",
+        "W3C — Modal Dialog Pattern",
+        "W3C — Content on Hover or Focus",
+        "W3C — Dragging Movements",
+        "Australian Government Style Manual — Spelling",
+        "Wolfsberg — Sanctions Screening Guidance",
+        "DFAT — Guide to Australia's Consolidated List",
+        "AUSTRAC — Enhanced customer due diligence",
+        "AUSTRAC — Politically exposed persons",
+        "HL7 FHIR R5 — Provenance",
+        "Population and coverage are separate",
+        "Human authority, evidence use and versions",
+        "EDD has three applicability outcomes",
+        "Evidence-use changes affect linked work",
+        "Process context: screening and parallel specialist work",
+        "Approved Batch B collaboration boundary",
+        "P0/P1 boundary — original source unavailable"
+      ],
+      "technical": [
+        {
+          "text": "合成案件",
+          "size": "10px",
+          "color": "rgb(91, 96, 103)"
+        },
+        {
+          "text": "主体与用途",
+          "size": "10px",
+          "color": "rgb(91, 96, 103)"
+        },
+        {
+          "text": "范围 · 版本",
+          "size": "10px",
+          "color": "rgb(91, 96, 103)"
+        },
+        {
+          "text": "场景 01",
+          "size": "10px",
+          "color": "rgb(96, 105, 113)"
+        },
+        {
+          "text": "场景 02",
+          "size": "10px",
+          "color": "rgb(96, 105, 113)"
+        },
+        {
+          "text": "场景 03",
+          "size": "10px",
+          "color": "rgb(96, 105, 113)"
+        },
+        {
+          "text": "场景 04",
+          "size": "10px",
+          "color": "rgb(96, 105, 113)"
+        },
+        {
+          "text": "场景 05",
+          "size": "10px",
+          "color": "rgb(96, 105, 113)"
+        },
+        {
+          "text": "场景 06",
+          "size": "10px",
+          "color": "rgb(96, 105, 113)"
+        },
+        {
+          "text": "场景 07",
+          "size": "10px",
+          "color": "rgb(96, 105, 113)"
+        },
+        {
+          "text": "场景 08",
+          "size": "10px",
+          "color": "rgb(96, 105, 113)"
+        },
+        {
+          "text": "场景 09",
+          "size": "10px",
+          "color": "rgb(96, 105, 113)"
+        },
+        {
+          "text": "D1 · 讲解节点",
+          "size": "10px",
+          "color": "rgb(96, 105, 113)"
+        },
+        {
+          "text": "D2 · 讲解节点",
+          "size": "10px",
+          "color": "rgb(96, 105, 113)"
+        },
+        {
+          "text": "D3 · 讲解节点",
+          "size": "10px",
+          "color": "rgb(96, 105, 113)"
+        },
+        {
+          "text": "D4 · 讲解节点",
+          "size": "10px",
+          "color": "rgb(96, 105, 113)"
+        },
+        {
+          "text": "D5 · 讲解节点",
+          "size": "10px",
+          "color": "rgb(96, 105, 113)"
+        },
+        {
+          "text": "01",
+          "size": "11px",
+          "color": "rgb(100, 106, 114)"
+        },
+        {
+          "text": "02",
+          "size": "11px",
+          "color": "rgb(100, 106, 114)"
+        },
+        {
+          "text": "03",
+          "size": "11px",
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "text": "04",
+          "size": "11px",
+          "color": "rgb(100, 106, 114)"
+        },
+        {
+          "text": "05",
+          "size": "11px",
+          "color": "rgb(100, 106, 114)"
+        },
+        {
+          "text": "01 / M0 · M1",
+          "size": "9px",
+          "color": "rgb(91, 96, 103)"
+        },
+        {
+          "text": "M0.1–M0.4 · M1.1",
+          "size": "10px",
+          "color": "rgb(101, 110, 120)"
+        },
+        {
+          "text": "02 / M2 · M3",
+          "size": "9px",
+          "color": "rgb(91, 96, 103)"
+        }
+      ]
+    },
+    "screenshot": "prototype/qa/d3/before/06-references.png"
+  },
+  {
+    "name": "07-client",
+    "status": "captured",
+    "scene": "SCN-GAP",
+    "errors": [],
+    "metrics": {
+      "width": 1440,
+      "overflow": false,
+      "headings": [
+        "你的任务",
+        "暂不可访问"
+      ],
+      "technical": [
+        {
+          "text": "WORKSHOP 工具 · 合成环境 · LOCAL_SIMULATION",
+          "size": "10px",
+          "color": "rgb(91, 96, 103)"
+        },
+        {
+          "text": "ENTITY A · DEMO-CTT-001",
+          "size": "10px",
+          "color": "rgb(91, 96, 103)"
+        }
+      ]
+    },
+    "screenshot": "prototype/qa/d3/before/07-client.png"
+  },
+  {
+    "name": "08-mobile",
+    "status": "captured",
+    "scene": "SCN-GAP",
+    "errors": [],
+    "metrics": {
+      "width": 390,
+      "overflow": false,
+      "headings": [
+        "共同看清准入条件。",
+        "机构业务旅程",
+        "发起与界定",
+        "明确本次关系范围",
+        "明确要求与取证",
+        "明确适用要求",
+        "筛查与评估",
+        "处理疑似筛查命中",
+        "复核与解决",
+        "关闭具体质量缺口",
+        "交易准入",
+        "明确还剩哪些条件",
+        "只询问剩余缺口",
+        "从要求到经复核的响应"
+      ],
+      "technical": [
+        {
+          "text": "合成案件",
+          "size": "9px",
+          "color": "rgb(91, 96, 103)"
+        },
+        {
+          "text": "主体与用途",
+          "size": "9px",
+          "color": "rgb(91, 96, 103)"
+        },
+        {
+          "text": "范围 · 版本",
+          "size": "9px",
+          "color": "rgb(91, 96, 103)"
+        },
+        {
+          "text": "场景 01",
+          "size": "10px",
+          "color": "rgb(96, 105, 113)"
+        },
+        {
+          "text": "场景 02",
+          "size": "10px",
+          "color": "rgb(96, 105, 113)"
+        },
+        {
+          "text": "场景 03",
+          "size": "10px",
+          "color": "rgb(96, 105, 113)"
+        },
+        {
+          "text": "场景 04",
+          "size": "10px",
+          "color": "rgb(96, 105, 113)"
+        },
+        {
+          "text": "场景 05",
+          "size": "10px",
+          "color": "rgb(96, 105, 113)"
+        },
+        {
+          "text": "场景 06",
+          "size": "10px",
+          "color": "rgb(96, 105, 113)"
+        },
+        {
+          "text": "场景 07",
+          "size": "10px",
+          "color": "rgb(96, 105, 113)"
+        },
+        {
+          "text": "场景 08",
+          "size": "10px",
+          "color": "rgb(96, 105, 113)"
+        },
+        {
+          "text": "场景 09",
+          "size": "10px",
+          "color": "rgb(96, 105, 113)"
+        },
+        {
+          "text": "D1 · 讲解节点",
+          "size": "10px",
+          "color": "rgb(96, 105, 113)"
+        },
+        {
+          "text": "D2 · 讲解节点",
+          "size": "10px",
+          "color": "rgb(96, 105, 113)"
+        },
+        {
+          "text": "D3 · 讲解节点",
+          "size": "10px",
+          "color": "rgb(96, 105, 113)"
+        },
+        {
+          "text": "D4 · 讲解节点",
+          "size": "10px",
+          "color": "rgb(96, 105, 113)"
+        },
+        {
+          "text": "D5 · 讲解节点",
+          "size": "10px",
+          "color": "rgb(96, 105, 113)"
+        },
+        {
+          "text": "01",
+          "size": "11px",
+          "color": "rgb(100, 106, 114)"
+        },
+        {
+          "text": "02",
+          "size": "11px",
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "text": "03",
+          "size": "11px",
+          "color": "rgb(100, 106, 114)"
+        },
+        {
+          "text": "04",
+          "size": "11px",
+          "color": "rgb(100, 106, 114)"
+        },
+        {
+          "text": "05",
+          "size": "11px",
+          "color": "rgb(100, 106, 114)"
+        },
+        {
+          "text": "01 / M0 · M1",
+          "size": "9px",
+          "color": "rgb(91, 96, 103)"
+        },
+        {
+          "text": "M0.1–M0.4 · M1.1",
+          "size": "10px",
+          "color": "rgb(101, 110, 120)"
+        },
+        {
+          "text": "02 / M2 · M3",
+          "size": "9px",
+          "color": "rgb(91, 96, 103)"
+        }
+      ]
+    },
+    "screenshot": "prototype/qa/d3/before/08-mobile.png"
+  }
+]

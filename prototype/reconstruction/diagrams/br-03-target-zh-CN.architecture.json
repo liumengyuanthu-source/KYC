@@ -1,0 +1,99 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "要求确定 · To-be",
+    "locale": "zh-CN",
+    "quality_profile": "showcase",
+    "animation": "none",
+    "viewBox": [
+      1000,
+      620
+    ],
+    "legend": {
+      "mode": "hidden"
+    }
+  },
+  "components": [
+    {
+      "id": "ROOT-BR-03-target",
+      "type": "external",
+      "label": "要求确定",
+      "sublabel": "工作归组 · 非执行顺序",
+      "pos": [
+        60,
+        266
+      ],
+      "size": [
+        300,
+        88
+      ]
+    },
+    {
+      "id": "TOBE-D3-REQUIREMENTS-01-RULE",
+      "type": "external",
+      "label": "绑定规则与语境",
+      "pos": [
+        590,
+        70
+      ],
+      "size": [
+        360,
+        92
+      ]
+    },
+    {
+      "id": "TOBE-D3-REQUIREMENTS-01-REVIEW",
+      "type": "external",
+      "label": "建立适用性复核",
+      "pos": [
+        590,
+        230
+      ],
+      "size": [
+        360,
+        92
+      ]
+    },
+    {
+      "id": "TOBE-D3-REQUIREMENTS-03-REQUIREMENT-SET",
+      "type": "external",
+      "label": "组织版本化要求集",
+      "pos": [
+        590,
+        390
+      ],
+      "size": [
+        360,
+        92
+      ]
+    }
+  ],
+  "connections": [
+    {
+      "id": "CONTAINS-BR-03-target-1",
+      "from": "ROOT-BR-03-target",
+      "to": "TOBE-D3-REQUIREMENTS-01-RULE",
+      "label": "包含工作",
+      "variant": "default"
+    },
+    {
+      "id": "CONTAINS-BR-03-target-2",
+      "from": "ROOT-BR-03-target",
+      "to": "TOBE-D3-REQUIREMENTS-01-REVIEW",
+      "label": "包含工作",
+      "variant": "default",
+      "labelAt": [
+        535,
+        276
+      ]
+    },
+    {
+      "id": "CONTAINS-BR-03-target-3",
+      "from": "ROOT-BR-03-target",
+      "to": "TOBE-D3-REQUIREMENTS-03-REQUIREMENT-SET",
+      "label": "包含工作",
+      "variant": "default"
+    }
+  ]
+}

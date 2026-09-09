@@ -1,0 +1,16 @@
+{
+  "at": "2026-09-07T16:58:52.806Z",
+  "browser": "152.0.7977.76",
+  "results": [
+    {
+      "ids": [
+        "UX-23",
+        "UX-24"
+      ],
+      "name": "branch-print-url-product-reentry",
+      "status": "passed",
+      "screenshot": "prototype/qa/operating-model/regression/host/branch-print-url-product-reentry.png",
+      "errors": []
+    }
+  ]
+}

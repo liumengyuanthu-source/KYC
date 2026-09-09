@@ -1,0 +1,14 @@
+import {chromium} from '/Users/christinaliu/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright/index.mjs';
+import fs from 'node:fs';
+const dir='prototype/qa/d5/baseline';fs.mkdirSync(dir,{recursive:true});
+const seed=JSON.parse(fs.readFileSync('prototype/qa/operating-model/host/c-live-session.json'));
+seed.navigation={...seed.navigation,page:'product',step:'screening',modal:false,studioPage:'journey',locale:'en-AU'};
+const browser=await chromium.launch({executablePath:'/Applications/Google Chrome.app/Contents/MacOS/Google Chrome',headless:true});
+const context=await browser.newContext({viewport:{width:1440,height:1000},reducedMotion:'reduce'});
+await context.addInitScript(s=>sessionStorage.setItem('ctt-round-a-v1',JSON.stringify(s)),seed);
+const page=await context.newPage();const errors=[];page.on('pageerror',e=>errors.push(e.message));
+await page.goto('http://127.0.0.1:8765/prototype/');await page.waitForSelector('[data-c-panel="screening"]');
+await page.screenshot({path:dir+'/screening-before.png'});
+const visual=await page.evaluate(()=>({body:{font:getComputedStyle(document.body).fontFamily,color:getComputedStyle(document.body).color,background:getComputedStyle(document.body).backgroundImage},tokens:Object.fromEntries(['--ink','--muted','--blue','--deep-blue','--paper','--panel'].map(k=>[k,getComputedStyle(document.documentElement).getPropertyValue(k)])),width:innerWidth,scrollWidth:document.documentElement.scrollWidth,title:document.title}));
+fs.writeFileSync(dir+'/result.json',JSON.stringify({at:new Date().toISOString(),browser:browser.version(),visual,errors,seed:'Existing D4 QA current C session; navigation only changed to Product'},null,2));
+await browser.close();console.log(visual);if(errors.length)throw Error(errors.join('\n'));

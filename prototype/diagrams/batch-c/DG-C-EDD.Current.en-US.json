@@ -1,0 +1,119 @@
+{
+  "schema_version": 2,
+  "diagram_type": "workflow",
+  "meta": {
+    "title": "Independent EDD applicability · Current",
+    "locale": "en",
+    "quality_profile": "showcase",
+    "animation": "none"
+  },
+  "lanes": [
+    {
+      "id": "upper",
+      "label": "Independent assessment"
+    },
+    {
+      "id": "main",
+      "label": "Human work and judgement"
+    },
+    {
+      "id": "lower",
+      "label": "Unresolved, protection and return",
+      "variant": "exception"
+    }
+  ],
+  "mainPath": [
+    "context",
+    "required",
+    "impact"
+  ],
+  "nodes": [
+    {
+      "id": "context",
+      "col": 0,
+      "lane": "main",
+      "type": "frontend",
+      "label": "Risk, scope and basis",
+      "sublabel": "E01 · E02",
+      "width": 240
+    },
+    {
+      "id": "required",
+      "col": 1,
+      "lane": "main",
+      "type": "frontend",
+      "label": "Required targeted work",
+      "sublabel": "E05 · E06 · E07 · E08 · E09 · E10 · E12",
+      "width": 240
+    },
+    {
+      "id": "notrequired",
+      "col": 1,
+      "lane": "upper",
+      "type": "frontend",
+      "label": "Not required for scope",
+      "sublabel": "E03",
+      "width": 240
+    },
+    {
+      "id": "unknown",
+      "col": 1,
+      "lane": "lower",
+      "type": "frontend",
+      "label": "Applicability unknown",
+      "sublabel": "E04",
+      "width": 240
+    },
+    {
+      "id": "impact",
+      "col": 2,
+      "lane": "main",
+      "type": "frontend",
+      "label": "Conditions and readiness",
+      "sublabel": "E11",
+      "width": 240
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge0",
+      "from": "context",
+      "to": "required",
+      "label": "required · with basis"
+    },
+    {
+      "id": "edge1",
+      "from": "context",
+      "to": "notrequired",
+      "label": "not_required · authorised",
+      "role": "branch"
+    },
+    {
+      "id": "edge2",
+      "from": "context",
+      "to": "unknown",
+      "label": "unknown / stale / no authority",
+      "role": "branch"
+    },
+    {
+      "id": "edge3",
+      "from": "required",
+      "to": "impact",
+      "label": "Authorised result / conditions"
+    },
+    {
+      "id": "edge4",
+      "from": "notrequired",
+      "to": "impact",
+      "label": "Applicability only",
+      "role": "branch"
+    },
+    {
+      "id": "edge5",
+      "from": "unknown",
+      "to": "impact",
+      "label": "Still pending, not closed",
+      "role": "branch"
+    }
+  ]
+}

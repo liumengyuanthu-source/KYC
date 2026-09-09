@@ -1,0 +1,128 @@
+00:00:06 Speaker 1
+You're joining probably one other device, but it's nice to meet you. This is the first time we're meeting. I know Pratik connected us, but we can still do a quick round of introduction. So hi, my name is Ronak. I'm based out of Hong Kong and I'm also part of the advisory team, same as Pratik.
+00:00:36 Speaker 1
+We're just working on this, supporting. I think we're also probably in the same team, like other overall advisory team. That's what I understood that even Megan is also part of the advisory team if I'm not wrong. We're just happy to be working together. I'll quickly pass on to Kobe; I'm also part of the financial advisory team.
+00:01:05 Speaker 2
+In a sense, I always have this kind of insurance banking background, not much of super funds, but then we joined to support the practice to grow a bit more, not only selling tech but also doing the end-to-end advisory piece for banks. Hence, one of the key topics is KYC, so we're going to go through that with you today. Unlike Ronak, I am based in Melbourne, so you get a bit of different coverage around different cities.
+00:01:38 Speaker 2
+We're basically an APEX team, so really excited to work with you. I have some process re-engineering experience that always comes across with customer journey and customer experience itself, but we're not experts. So we're leaning on you today to tell us the right way to actually do that.
+00:02:00 Speaker 3
+Thank you all. Hello, boss. I'm Christina, and I'm now located in Hanghai. I support the Megan advisory supply solution sharing, and I previously supported the APAC team on cases like last month's PHKL solution, where we prepared the demo and preworks. It's good that we can collaborate together. Sorry, my notebook is slow, so sometimes I cannot open my camera if I need to show my screen.
+00:02:38 Speaker 3
+It's good to see you, please do it.
+00:02:44 Speaker 1
+Here is the polished transcript:---Christina, thank you for going through what I sent earlier this morning. I see you've already mapped some of the things out, so thank you for that. Let me give you a bit of a brief. What we're doing is currently trying to help the client build a product, and the product is more on end-to-end KYC. Essentially, they're not targeting just a KYC tool—there are plenty of workflow orchestration tools that can help with that—but what they want is a clear-to-trade tool. So basically, if there is a new...
+00:03:30 Speaker 1
+A client that gets onboarded wants to have the journey until the point where they have not just cleared KYC but also is clear to trade. So go through legal, compliance, and a few other things, then complete the journey as part of what clear to trade should look like. That's the overall product journey they're looking at.
+00:04:01 Speaker 1
+What we need your help on is essentially what I've mentioned: we would like to build a journey. Kobe has built process maps for the current state and target state. This platform needs to be purely agentic at first, though not everything will be agentic—the workflow will be agentic, with some deterministic rules, integrations with third-party systems, and decisioning.
+00:04:35 Speaker 1
+I don't know if there needs to be ML help modeling this decisioning, but we can also think of that. Something along those lines is what this whole platform needs to do and what we need your help on. I saw the timelines you shared; let me just share your mail, Ron, if you could share your screen.
+00:05:00 Speaker 2
+Do you want me to share your screen? Your day is already quite lucky. Give me a sec.
+00:05:08 Speaker 1
+Thank you. I will turn off my camera.
+00:05:11 Speaker 2
+Ron has been having 10 drums. He doesn't want to have a meeting with me since this morning.
+00:05:22 Speaker 1
+That's not true, but the internet doesn't want me to have meetings. So I saw this, and thank you for it. What we want to see is how we can build a user journey out of the target states. Obviously, we will need your inputs and help in questioning some of the things we've done so that we can highlight them back to the client quickly.
+00:05:53 Speaker 1
+What. So the timeline that we're sort of looking for is that we have a workshop in October, first week. What I want to do is after 17th of September do a pre-meet with the client.
+00:06:14 Speaker 1
+In that pre-meet with the client, I would like to showcase some of the things we've done. Depending on how we can map the journey, I would like to see if this can also be included as part of our initial discussion with them.
+00:06:34 Speaker 1
+That's the background. I'll pause here to see if you have any questions.
+00:06:41 Speaker 3
+Thank you so much. You've already seen the overall framework for how we can build this unit, including the journey and product requirements that you mentioned in your email about showing the client in the workshop. I've taken this first-step approach, and from the current process—and thank you to the team—it's really clear, which helps us understand the context. Based on that, we need to build a robust user journey.
+00:07:14 Speaker 3
+For example, each rose, how they're targeting in each stage of this user journey so we can analyze what is the pain point and what is the opportunity that we can attract based on. The overall plan is to start to build the organic operation model and also to sketch the product requirements. It's more like a hypothesis, but we try to make it more specific like the real one, instead of just making a prototype and that features and the requirements needed then help to show us the requirements, then help to solve by the final requirement.
+00:08:01 Speaker 3
+Here is the polished version of your transcript:---I quite agree, and it's important. We need to set ourselves up and check, maybe meet in September because it's just the internal approach. By the week of the 17th of September, we will have some outputs—deliverables covering steps 1 and 2, mainly for the user journey and what we have done for this use case, and how we try to organize and guide the clients to discuss in the workshop.---
+00:08:40 Speaker 3
+It's more like the workshop, storyline, and what will be shown in the workshop, then get their feedback, and we can still optimize the final steps. To optimize the Step 1 and Step 2 deliverables, and then proceed with the Step 3 outcomes, I quite agree. Based on this approach and our understanding, I also listed some questions that I may need your input.
+00:09:11 Speaker 3
+For example, it's a little bit smaller. For example, the persona and job to be done. I listed it as a first item because in the process map, we only understand that there are certain, segments of people that need to proceed. But we also need to know the objectives in each steps. And also i- if possible, we can have the KPI and SLA, which can help us to estimate how we can improve the efficiency and how we can track or monitor the performance at the end when we.
+00:09:50 Speaker 3
+Here is the polished version of your transcript:---And I'm positive and designed. I might pause here to show more in the limited time. Based on that, we agree that by mid-September, we can have the first round of touch-up with the client and what we can deliver. Before that is the overall design for the workshop. From our side, we can deliver our current user journey target, adjacent user journey, hero case analysis, and some concept designs for the human-in-the-loop or general model.
+00:10:32 Speaker 3
+And the final product environment concept.
+00:10:36 Speaker 1
+I agree with what you said about what we should be getting ready with.
+00:10:46 Speaker 1
+At this point, I don't think we have all the details around the KPIs and SLAs because this is basically building a product from scratch. In terms of those details, we may be able to get them later in the cycle, maybe after the workshop. I don't think we can get the exact details even during the workshop for KPIs and SLAs; perhaps quite late. At least we first need to start having some thoughts on what high level.
+00:11:25 Speaker 1
+The journey should look like basically what Kobe has already drawn me. That is the first step, and we probably need to go into how that journey should look like as a role-based journey if we have to focus on that as the next step. In that, we should focus first on the case manager, the KYC ops person, because that would be the biggest and would show the entry journey quite well.
+00:11:55 Speaker 1
+Irrespective, I think the first needs to be the end-to-end journey. If we can show that across all, it would be a good view for us to help have discussion with the client.
+00:12:11 Speaker 3
+Here is the polished version of your transcript:---Thank you. And no worries. In that case, we can make some assumptions based on the industrial benchmark and also conduct some research. For certain specific cases, I may seek your guidance to leverage your expertise in industrial knowledge, so we can help build the overall product user journey based on those assumptions and understanding of the industrial benchmark. I just want to add something that I can't touch on.---
+00:12:51 Speaker 2
+I think pain points we can have, it's quite high level, so it's not on like step by step basics, but we can, I can definitely add on like what are the current user journey pain points are. It will be more internal focus other than like client focus. That will be my point. So then like we can like we do know that there are common kind of processing in within like for example, wheelchairs and then manually accessing things they need to do like multiple system handles.
+00:13:23 Speaker 2
+But most of the pain point is because we're talking to the bank and haven't actually gone through the client bit yet. The client, as in whoever goes through the clear-to-trade part, will serve us. It's more within the bank, so if we're doing our end-to-end mapping journey, we wanted to include as much party as possible to make that clear-to-trade process and journey as end-to-end as possible.
+00:13:58 Speaker 2
+Clear to trade, it's not only about new relationship, they might wanna appreciate a new product, so then the trigger will be different. Maybe the client have another like as in the cli-, the client as in the customer wanted to go through like they're expanding from one country to another, so then you need to clear to trade for a new country. So the process itself, high level, it should be the same, but then the trigger is different. So then for the hero scenario, I think the trigger will be kind of all of them.
+00:14:35 Speaker 2
+The process will be the same, but then the trigger that we're saying will have like different triggers. So then based on that, then your requirements will be dynamic enough or especially in your target kind of journey, it should be dynamic and for the agent to actually kind of revise base on your context. What exactly do you need? And then we only have human, not even human in the loop like in target. I think in MVP, we definitely have human in the loop. In target, it's like only review by exception.
+00:15:09 Speaker 2
+So then like some of the points that I kind of made on the process map, it's not even, they're, they're not even really in the loop at the end. So not like every steps there is a human in the loop. I think in the MVP it will make sense, but in Target Human should only review by like kind of really exception things.
+00:15:31 Speaker 3
+Actually, the technical focus in the recent agenda is when to switch to human monitoring or review and when we keep the agents to work. It's a good point for us to show our expertise in the agent part, but I don't only want to show our expertise; it should solve real-life problems.
+00:16:07 Speaker 3
+So that's why we need to highlight the hero case. And Kobe, can I, may I trouble you to contribute for this hero case? Like, can you show me like most of the complicated real-life cases and we can just consolidate all the complications together in each alien, and then we can just have a streamline of how we can fulfill each requirement in each stage. Then we may face most of the difficulties in along with all the user journey and it can show we can handle all love these issues and to create the future features and user journey.
+00:16:51 Speaker 2
+I think Ronak and I can definitely chip in. We haven't actually have the process walk through a client I. I. My previously KYC experience is more on retail. So then like they're, they're, I don't know whether Ronak or Pritam mentioned that already, the client that we're working on, it's not retail KYC, it's more trading institutional meet banking tier KYC. So then that will be slightly different. I can give you all the comments 1, but I can't walk you through with the real life systems cuz we don't have access there, but we can definitely go through the process together. And if you have any questions I can try to tap into some of my contacts and ask them from their day to day job how does that work.
+00:17:37 Speaker 3
+Thank you so much. Based on the copy in your previous sharing, that leads us to my second question: multi-language and multi-region. Shall we also show these features in the overall prototype?
+00:17:58 Speaker 1
+I think multi-region, multi-language maybe not right now. Let's keep it as English first and we can inform that later.
+00:18:09 Speaker 3
+Can. Can. Multi-region refers to my concerning about like the compliance and also the security perspective, like how we handle with PII data and cyber security. That's important. So that's important.
+00:18:31 Speaker 1
+Agree.
+00:18:35 Speaker 1
+Any other questions for us?
+00:18:39 Speaker 3
+And the next one might be that our position is based on adopting the existing systems altogether without any removal or upgrade of the current system.
+00:09:52 Speaker 2
+So then there will be it will run away.
+00:19:10 Speaker 1
+Go ahead. I was saying it will basically remove a bunch of different systems, but this is not going to sit on top of existing KYC systems. This is to remove existing KYC systems and interface with the existing trade systems probably and all of that, but existing KYC systems it will remove.
+00:19:37 Speaker 3
+Thank you. And I notice that there are still some applications and systems, which may work as a backbone of the overall architecture.
+00:19:53 Speaker 1
+Which system do that be like back? Because backbone is something it will be again, like this product will be built from scratch, ground up, for example. It won't use any of the for example like the for now Fanner grow will go away.
+00:20:13 Speaker 1
+It will go away.
+00:20:14 Speaker 3
+And how about the Salesforce shop points and the other regional management system, Salesforce?
+00:20:32 Speaker 1
+I am not sure, but maybe let's not include it for now, because that's just another way to tag. I think we need to understand that further, so maybe we can not include that at first and we can. I'll add that as a question for them.
+00:20:57 Speaker 3
+We can assume not there for now. I will treat it like we can fetch the data from Salesforce with the gentic platform and just keep it as is.
+00:21:13 Speaker 1
+If you see the next slide, we've already given three things where we think we would be interfacing with other applications and systems. This can be our starting point. If there is anything else, we're going to ask questions and work with them, and then we can flesh that out later.
+00:21:39 Speaker 3
+Thank you. So I mean summarize as for the three parts, it's the word check, RDC, the Nicea, and also the docu sign and I manage. So this part we will keep it and integrate with it, right? Right.
+00:21:58 Speaker 1
+Yeah, yeah, yeah. Okay.
+00:22:01 Speaker 3
+For the other parts, like the regional management system, the sales force, and the sales folder, we keep them as is. If data is needed, we use the agentic platform to fetch it.
+00:22:14 Speaker 3
+And one final question. Thank you. A final question about the workshop. Are we planning to share the architecture, maybe some concept or design? Is the high-level one overall one to the client, or do we just show it?
+00:22:39 Speaker 1
+I don't think we need to get into that phase yet. Let's do this first. We can, when we do the workshop and have more requirements, then we can sort of get into it, and obviously we'll bring you in on this journey as well. Removing this, we'll tell you more about the deal construction and all of that later once we have done the workshop and there is a signal of intent from the client. Then yes, we'll include you in all of those things as well.
+00:23:18 Speaker 3
+[  {    "cleaned_text": "I think that we can prepare the first bunch of deliverables maybe at the end of next week. I will show you then, and if needed, we can have a quick catch up to see what's the plan for the next week. Our targeting is that at the end of the 17th week, we can have clients base deliverables and also the overall plan for the workshop."  }]
+00:23:59 Speaker 3
+Yeah, yeah, yeah. Okay.
+00:24:03 Speaker 1
+So when do you think we should meet next? Is there any time you think we can have a chat about a draft of what you've started to build, so that we can work together closely on this?
+00:24:24 Speaker 3
+I think we can build a Teams group for chat, so if anything comes up or you have questions, I can share with you. For the deliverables, I need the next four days to prepare, then I'll try to share with the team by the end of next Thursday so we can catch up next Friday.
+00:24:47 Speaker 1
+Le- let's do that. Let's do that.
+00:24:50 Speaker 3
+Thank you. So thank you. Thank you. Thank you, Christina. Thank you. Bye. Bye.
+
+【内容由 AI 生成，仅供参考】

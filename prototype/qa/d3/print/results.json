@@ -1,0 +1,59 @@
+{
+  "at": "2026-09-07T14:42:18.990Z",
+  "results": [
+    {
+      "scene": "SCN-GAP",
+      "locale": "en-AU",
+      "status": "passed",
+      "changes": 6,
+      "pdf": "prototype/qa/d3/print/SCN-GAP.en-AU.pdf",
+      "businessStateUnchanged": true,
+      "visualInspection": "pending"
+    },
+    {
+      "scene": "SCN-GAP",
+      "locale": "en-US",
+      "status": "passed",
+      "changes": 6,
+      "pdf": "prototype/qa/d3/print/SCN-GAP.en-US.pdf",
+      "businessStateUnchanged": true,
+      "visualInspection": "pending"
+    },
+    {
+      "scene": "SCN-GAP",
+      "locale": "zh-CN",
+      "status": "passed",
+      "changes": 6,
+      "pdf": "prototype/qa/d3/print/SCN-GAP.zh-CN.pdf",
+      "businessStateUnchanged": true,
+      "visualInspection": "pending"
+    },
+    {
+      "scene": "SCN-MATCH",
+      "locale": "en-AU",
+      "status": "passed",
+      "changes": 7,
+      "pdf": "prototype/qa/d3/print/SCN-MATCH.en-AU.pdf",
+      "businessStateUnchanged": true,
+      "visualInspection": "pending"
+    },
+    {
+      "scene": "SCN-MATCH",
+      "locale": "en-US",
+      "status": "passed",
+      "changes": 7,
+      "pdf": "prototype/qa/d3/print/SCN-MATCH.en-US.pdf",
+      "businessStateUnchanged": true,
+      "visualInspection": "pending"
+    },
+    {
+      "scene": "SCN-MATCH",
+      "locale": "zh-CN",
+      "status": "passed",
+      "changes": 7,
+      "pdf": "prototype/qa/d3/print/SCN-MATCH.zh-CN.pdf",
+      "businessStateUnchanged": true,
+      "visualInspection": "pending"
+    }
+  ]
+}

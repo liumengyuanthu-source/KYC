@@ -1,0 +1,75 @@
+{
+  "at": "2026-09-07T16:56:03.399Z",
+  "results": [
+    {
+      "ids": [
+        "OM-23",
+        "OM-25"
+      ],
+      "name": "scenario.zh-CN",
+      "status": "passed",
+      "pdf": "output/pdf/operating-model/scenario.zh-CN.pdf",
+      "visualStatus": "passed — first/middle/last rendered samples inspected; all physical pages separately checked for content/bounds/context/legend"
+    },
+    {
+      "ids": [
+        "OM-23",
+        "OM-25"
+      ],
+      "name": "skill.zh-CN",
+      "status": "passed",
+      "pdf": "output/pdf/operating-model/skill.zh-CN.pdf",
+      "visualStatus": "passed — first/middle/last rendered samples inspected; all physical pages separately checked for content/bounds/context/legend"
+    },
+    {
+      "ids": [
+        "OM-23",
+        "OM-25"
+      ],
+      "name": "scenario.en-AU",
+      "status": "passed",
+      "pdf": "output/pdf/operating-model/scenario.en-AU.pdf",
+      "visualStatus": "passed — first/middle/last rendered samples inspected; all physical pages separately checked for content/bounds/context/legend"
+    },
+    {
+      "ids": [
+        "OM-23",
+        "OM-25"
+      ],
+      "name": "skill.en-AU",
+      "status": "passed",
+      "pdf": "output/pdf/operating-model/skill.en-AU.pdf",
+      "visualStatus": "passed — first/middle/last rendered samples inspected; all physical pages separately checked for content/bounds/context/legend"
+    },
+    {
+      "ids": [
+        "OM-23",
+        "OM-25"
+      ],
+      "name": "scenario.en-US",
+      "status": "passed",
+      "pdf": "output/pdf/operating-model/scenario.en-US.pdf",
+      "visualStatus": "passed — first/middle/last rendered samples inspected; all physical pages separately checked for content/bounds/context/legend"
+    },
+    {
+      "ids": [
+        "OM-23",
+        "OM-25"
+      ],
+      "name": "skill.en-US",
+      "status": "passed",
+      "pdf": "output/pdf/operating-model/skill.en-US.pdf",
+      "visualStatus": "passed — first/middle/last rendered samples inspected; all physical pages separately checked for content/bounds/context/legend"
+    },
+    {
+      "ids": [
+        "OM-23",
+        "OM-25"
+      ],
+      "name": "customer.en-AU",
+      "status": "passed",
+      "pdf": "output/pdf/operating-model/customer.en-AU.pdf",
+      "visualStatus": "passed — first/middle/last rendered samples inspected; all physical pages separately checked for content/bounds/context/legend"
+    }
+  ]
+}

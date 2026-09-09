@@ -1,0 +1,263 @@
+{
+  "selection_status": "user_accepted_sample_direction_for_integration",
+  "source": "experiments/d2-batch-a-media",
+  "runtime_origin": "same_origin_only",
+  "revision": "r01",
+  "files": [
+    {
+      "path": "DMO-A01__panel-first__r01__manifest.json",
+      "sha256": "63f587d712ba59309fabe91d468d1bb7867ee3c284dbb6dc5b8aff72c2c4639f",
+      "bytes": 13524
+    },
+    {
+      "path": "DMO-A02__panel-first__r01__manifest.json",
+      "sha256": "a284618b20154398260b3d729be04a0dd0f8e6c4587ba481c3b8ea856c2c6d65",
+      "bytes": 14508
+    },
+    {
+      "path": "MAINLINE_INTEGRATION_HANDOFF.md",
+      "sha256": "a94548c81be4a585512c3db6d72446b8ae14c4b80eb04003e8adde6a5cad1381",
+      "bytes": 6266
+    },
+    {
+      "path": "asset-manifest.json",
+      "sha256": "6bed5da1a381318f8fb8eccc5d8fa83868fa568d97531af553795c09267e0435",
+      "bytes": 60132
+    },
+    {
+      "path": "assets/diagrams/DG-ENABLE-A__r01__en-AU.html",
+      "sha256": "29d1830725c22086207aaf21257f48122bd4324c9268ad19664f8921eebfba64",
+      "bytes": 700807
+    },
+    {
+      "path": "assets/diagrams/DG-ENABLE-A__r01__en-AU.svg",
+      "sha256": "b9187889f3cc7fb3c6ac87642a140acf7e08405c24c8f180a5a0c6f87b13800b",
+      "bytes": 45463
+    },
+    {
+      "path": "assets/diagrams/DG-ENABLE-A__r01__zh-CN.html",
+      "sha256": "cd22164d70cd52858ec799ecbd0c3f705a6896ac2a5652c723f6a6d2f05897a8",
+      "bytes": 700269
+    },
+    {
+      "path": "assets/diagrams/DG-ENABLE-A__r01__zh-CN.svg",
+      "sha256": "74166fbc3b4669bb25b12a1ff5319c195807198ab3de772075afde84ddcc5f5a",
+      "bytes": 45252
+    },
+    {
+      "path": "assets/diagrams/DG-ENTITY-A__r01__en-AU.html",
+      "sha256": "8401ba6b65ec28fb6bb2601309e2d48bd030bd13890c2d3b9bb52e6355a6488b",
+      "bytes": 701358
+    },
+    {
+      "path": "assets/diagrams/DG-ENTITY-A__r01__en-AU.svg",
+      "sha256": "e82baa45c0f0d892a13ecc5f5ddc03ea8abccc7c902b983f19890c36b42e04aa",
+      "bytes": 45964
+    },
+    {
+      "path": "assets/diagrams/DG-ENTITY-A__r01__zh-CN.html",
+      "sha256": "5559045b702a4005ca4e97ad14e1c3365adb4878ffcb9cddefd5cf2632dde6db",
+      "bytes": 700878
+    },
+    {
+      "path": "assets/diagrams/DG-ENTITY-A__r01__zh-CN.svg",
+      "sha256": "bec1b7f39e6b0330f738c08c7b672531bd3646bc560ba085ce36d6b93e1ed20f",
+      "bytes": 45803
+    },
+    {
+      "path": "assets/diagrams/DG-SCOPE-A__r01__en-AU.html",
+      "sha256": "b34f1915ed162331587b788e077c1d019169d57275a4b2677eb2213eedeca7e6",
+      "bytes": 700604
+    },
+    {
+      "path": "assets/diagrams/DG-SCOPE-A__r01__en-AU.svg",
+      "sha256": "96c35e92e88fa1b04bfd44c7b045a3f9c1c59fac80807b82bc26af264fde81f2",
+      "bytes": 45246
+    },
+    {
+      "path": "assets/diagrams/DG-SCOPE-A__r01__zh-CN.html",
+      "sha256": "ce06385f6156ccc669ae48d1c962a8c6d6e094d5a383f541dc5efcabb5897a82",
+      "bytes": 700169
+    },
+    {
+      "path": "assets/diagrams/DG-SCOPE-A__r01__zh-CN.svg",
+      "sha256": "23fea75e2fd66208a1f754cb5f592fa24b5ef621c78017efed5d55577d027a7b",
+      "bytes": 45122
+    },
+    {
+      "path": "assets/personas/MED-A-PER-OPS__editorial__r01__1x1.webp",
+      "sha256": "6daa8a7633531ebfc3ce701058fd59a8f2661f5fd81bee2fc8723e4d03c4be95",
+      "bytes": 68392
+    },
+    {
+      "path": "assets/personas/MED-A-PER-OPS__editorial__r01__4x5.webp",
+      "sha256": "c4f861e4772a24aab0cbb675defb4b2cc49a777a97b5f76063983631f6c234e4",
+      "bytes": 60006
+    },
+    {
+      "path": "assets/personas/MED-A-PER-T__editorial__r01__1x1.webp",
+      "sha256": "1fcedc0a365162086f253f91067649636bdbf15873cd45fe15d81bf306a2cbce",
+      "bytes": 61664
+    },
+    {
+      "path": "assets/personas/MED-A-PER-T__editorial__r01__4x5.webp",
+      "sha256": "e1d92cc2da2352a72cf0d83bb0214747e43fe266a75336e0f3dd2bfb0bedc958",
+      "bytes": 48710
+    },
+    {
+      "path": "assets/posters/DMO-A01__panel-first__r01__en-AU__C1.png",
+      "sha256": "40f56e286afb3149a9a00118dc10f87722f01603d21d1c54379e2f3aa53210e1",
+      "bytes": 132487
+    },
+    {
+      "path": "assets/posters/DMO-A01__panel-first__r01__en-US__C1.png",
+      "sha256": "758cef8c10b9bb4deceff5824daf517799a53fbd7b2fd9dad9bc415e2c403398",
+      "bytes": 132490
+    },
+    {
+      "path": "assets/posters/DMO-A01__panel-first__r01__zh-CN__C1.png",
+      "sha256": "c06b31a5b41e9aadcb21b545ad6cbeee7ae440f0d2ada8e58e68ec48227354c4",
+      "bytes": 132023
+    },
+    {
+      "path": "assets/posters/DMO-A02__panel-first__r01__en-AU__C1.png",
+      "sha256": "1d14ef5bffb5ce22b9fd60d3367210f5d3e29ff7a7863fd986858289cf926580",
+      "bytes": 131246
+    },
+    {
+      "path": "assets/posters/DMO-A02__panel-first__r01__en-US__C1.png",
+      "sha256": "1d14ef5bffb5ce22b9fd60d3367210f5d3e29ff7a7863fd986858289cf926580",
+      "bytes": 131246
+    },
+    {
+      "path": "assets/posters/DMO-A02__panel-first__r01__zh-CN__C1.png",
+      "sha256": "c3b9360349053e42b1d784847ed19426d63c435b29355b6b4b24932be649e156",
+      "bytes": 132398
+    },
+    {
+      "path": "integration-selection.json",
+      "sha256": "703a6d196e6f0c88dc84469b93e2cc8b7d772d98793d9f238930e25db32f6d39",
+      "bytes": 1572
+    },
+    {
+      "path": "locales/en-AU.json",
+      "sha256": "f66443cd1b1e58ec1b48aef9115ab0bd7df575eaab7445d95347b9318ccdcb4c",
+      "bytes": 9060
+    },
+    {
+      "path": "locales/en-US.json",
+      "sha256": "19d849b7bfbf206b54bf234ee921c38889c391ba57c40a5b673d27d927c1f0b3",
+      "bytes": 9060
+    },
+    {
+      "path": "locales/zh-CN.json",
+      "sha256": "274c8fab27876bbbbdb6a0727bb2624c233643007fbc680c58428c037aaa2e98",
+      "bytes": 8327
+    },
+    {
+      "path": "print/DMO-A01__r01__en-AU.html",
+      "sha256": "78cbf4ee9d7da53fdaa153011bde9f70fcdde552a24fe2bf59fd7215c0aee689",
+      "bytes": 15660
+    },
+    {
+      "path": "print/DMO-A01__r01__en-US.html",
+      "sha256": "423af448519b86a2a8385741961885124419d667b416e42a59bbf608b3aa5166",
+      "bytes": 15660
+    },
+    {
+      "path": "print/DMO-A01__r01__zh-CN.html",
+      "sha256": "a29139a2c950d32cafcee7c4b2332905335b1ddc24d09cff1c19f0f1335d3721",
+      "bytes": 14894
+    },
+    {
+      "path": "print/DMO-A02__r01__en-AU.html",
+      "sha256": "1a9634be85d95fe17915308a49167e4d878ee90db742fd51b256745f41fdc141",
+      "bytes": 20042
+    },
+    {
+      "path": "print/DMO-A02__r01__en-US.html",
+      "sha256": "b2adbd6b02e0133380c05fdee90523d83d944104a91f4945217e8c95d3d17e52",
+      "bytes": 20042
+    },
+    {
+      "path": "print/DMO-A02__r01__zh-CN.html",
+      "sha256": "ce782e022393682cfb366da46b75012dccbde5984326dfbeea7ae2bdf905937c",
+      "bytes": 18924
+    },
+    {
+      "path": "source/Clear_to_Trade_D2_Batch_A_Media_Format_and_Demo_Brief_v1.0.md",
+      "sha256": "96667637c8970a50100c53a0ba83989c51627cc81e90242949e145d391a56f1a",
+      "bytes": 28521
+    },
+    {
+      "path": "source/Clear_to_Trade_D2_Batch_A_Scope_Entity_Final_v1.0.md",
+      "sha256": "a179172c336bd25025a510021d17957309a4bcf042e025f2de3eb69eb19f1e99",
+      "bytes": 69762
+    },
+    {
+      "path": "source/cue-manifest.json",
+      "sha256": "d4ebd3b5c87d9fda3ebbaac3d4bc627348a3d7a05540aa4d88fe26bb23e23ca3",
+      "bytes": 4942
+    },
+    {
+      "path": "source/diagram-contract.json",
+      "sha256": "c4a7ca07974bd5c273c51d63454cdde2242db100519aed3adbeebb1fd7b66781",
+      "bytes": 4110
+    },
+    {
+      "path": "source/diagrams/DG-ENABLE-A__r01__en-AU.json",
+      "sha256": "f2f841d3b351b1ee0573c5ea0ccff5fb3bb5a14bb0959bf38fc5d04089f68088",
+      "bytes": 1806
+    },
+    {
+      "path": "source/diagrams/DG-ENABLE-A__r01__zh-CN.json",
+      "sha256": "49d82e44092fa03c8b9b3d063300c72a6990c129615460e9845d38bca1f3439b",
+      "bytes": 1783
+    },
+    {
+      "path": "source/diagrams/DG-ENTITY-A__r01__en-AU.json",
+      "sha256": "f5a6cee4de023cedb840f5b936e0f0c7b744549ee7d428909e1893bf763d79ff",
+      "bytes": 1958
+    },
+    {
+      "path": "source/diagrams/DG-ENTITY-A__r01__zh-CN.json",
+      "sha256": "235575732689b531297b02b39db8c394a51c14f5279b195bb39de007d560ae2d",
+      "bytes": 1949
+    },
+    {
+      "path": "source/diagrams/DG-SCOPE-A__r01__en-AU.json",
+      "sha256": "f1719bf5f5882e525784f2aadcacd3dc81ff7677e25cdedbf235c19f5e711d5f",
+      "bytes": 1731
+    },
+    {
+      "path": "source/diagrams/DG-SCOPE-A__r01__zh-CN.json",
+      "sha256": "02d9bf1bc73ef57cc725588037fac56519c091844a81d68986569fc172ba8399",
+      "bytes": 1731
+    },
+    {
+      "path": "source/image-generation.md",
+      "sha256": "7aa5b682d862a9463aaacac7c74f16a023b2d0c324150a779303b7c65408a1f2",
+      "bytes": 2259
+    },
+    {
+      "path": "src/content.js",
+      "sha256": "a57d1d24107fe8b4f88369a2bde9e2600ceb415ebb875d706841d427aad6f73b",
+      "bytes": 4353
+    },
+    {
+      "path": "src/player.js",
+      "sha256": "5aa21875f25c0827f4adefe58685269f3bc194b739b590d1b2016ad2a461f6f4",
+      "bytes": 950
+    },
+    {
+      "path": "src/views.js",
+      "sha256": "3ab1e7b3ff7d16fe88c7896b5db7be44d3d2edfcbbccd48f73182039a2aea2fa",
+      "bytes": 4156
+    },
+    {
+      "path": "styles/media.css",
+      "sha256": "7ed9a0eca211509814cb4f994ed5a081412d455ded48a6118be9e2a596373cc7",
+      "bytes": 18126
+    }
+  ]
+}

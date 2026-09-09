@@ -1,0 +1,22 @@
+{
+  "command": "node --test prototype/tests/*.test.mjs",
+  "exit_code": 0,
+  "counts": {
+    "tests": 85,
+    "pass": 85,
+    "fail": 0,
+    "skipped": 0
+  },
+  "browser": {
+    "passed": 13,
+    "failed": 0,
+    "errors": []
+  },
+  "scope": "Local synthetic behavior only; no production authentication, messaging or security certification",
+  "files": {
+    "prototype/app.mjs": "47682d1cddfa8ede7d902deae8c5caede749960c30a1bac7182902cd3224757a",
+    "prototype/collaboration-engine.mjs": "c371d64760044b50b4c85f65f98eb04ea3e4d1979ea0e3a47cfb51e346ad19bb",
+    "prototype/collaboration-ui.mjs": "a22ccb20001fdd4968e9213d92e3b47d4eae7f9919ec940ecf07575c99273214",
+    "prototype/qa/collaboration-browser.mjs": "a1592ec63f5bc00823cb3f8093e4b5bfc2d71ba98b9f87b67e0ee94b0f8123cb"
+  }
+}

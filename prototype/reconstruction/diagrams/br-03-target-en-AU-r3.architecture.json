@@ -1,0 +1,99 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "Requirements Determination · To-be",
+    "locale": "en",
+    "quality_profile": "showcase",
+    "animation": "none",
+    "viewBox": [
+      1380,
+      620
+    ],
+    "legend": {
+      "mode": "hidden"
+    }
+  },
+  "components": [
+    {
+      "id": "ROOT-BR-03-target",
+      "type": "external",
+      "label": "Requirements Determination",
+      "sublabel": "Work grouping · not execution",
+      "pos": [
+        60,
+        266
+      ],
+      "size": [
+        400,
+        88
+      ]
+    },
+    {
+      "id": "TOBE-D3-REQUIREMENTS-01-RULE",
+      "type": "external",
+      "label": "Bind rule and context",
+      "pos": [
+        850,
+        70
+      ],
+      "size": [
+        500,
+        92
+      ]
+    },
+    {
+      "id": "TOBE-D3-REQUIREMENTS-01-REVIEW",
+      "type": "external",
+      "label": "Create applicability review",
+      "pos": [
+        850,
+        264
+      ],
+      "size": [
+        500,
+        92
+      ]
+    },
+    {
+      "id": "TOBE-D3-REQUIREMENTS-03-REQUIREMENT-SET",
+      "type": "external",
+      "label": "Organise a versioned requirement set",
+      "pos": [
+        850,
+        458
+      ],
+      "size": [
+        500,
+        92
+      ]
+    }
+  ],
+  "connections": [
+    {
+      "id": "CONTAINS-BR-03-target-1",
+      "from": "ROOT-BR-03-target",
+      "to": "TOBE-D3-REQUIREMENTS-01-RULE",
+      "label": "Contains work",
+      "variant": "default"
+    },
+    {
+      "id": "CONTAINS-BR-03-target-2",
+      "from": "ROOT-BR-03-target",
+      "to": "TOBE-D3-REQUIREMENTS-01-REVIEW",
+      "label": "Contains work",
+      "variant": "default",
+      "labelAt": [
+        755,
+        310
+      ]
+    },
+    {
+      "id": "CONTAINS-BR-03-target-3",
+      "from": "ROOT-BR-03-target",
+      "to": "TOBE-D3-REQUIREMENTS-03-REQUIREMENT-SET",
+      "label": "Contains work",
+      "variant": "default"
+    }
+  ]
+}

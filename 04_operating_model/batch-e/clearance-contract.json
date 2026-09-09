@@ -1,0 +1,18 @@
+{
+  "status": "additive_candidate_v0.1_not_production_schema",
+  "source_ref": "SRC-020",
+  "models": {
+    "ReviewedDecision": "decisions",
+    "QACheck": "qaChecks",
+    "Remediation": "workItems",
+    "ClearancePrerequisite": "clearancePrerequisites",
+    "ReadinessSnapshot": "readinessSnapshots",
+    "ClearanceDecision": "clearanceDecisions",
+    "PublicationEvent": "publicationEvents",
+    "DependencyEdge": "dependencies",
+    "EvidenceUseAssessment": "evidenceUseAssessments"
+  },
+  "bank_policy_ref": null,
+  "bank_authority_ref": null,
+  "physical_aliases": "logical *_id fields map to existing physical id"
+}

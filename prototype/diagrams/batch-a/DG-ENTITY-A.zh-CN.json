@@ -1,0 +1,114 @@
+{
+  "schema_version": 2,
+  "diagram_type": "workflow",
+  "meta": {
+    "title": "确认主体与代表权限",
+    "locale": "zh-CN",
+    "quality_profile": "showcase",
+    "animation": "none",
+    "views": [
+      {
+        "id": "person-t",
+        "label": "Person T 与权限",
+        "focus": [
+          "a",
+          "b",
+          "t",
+          "evidence",
+          "gap"
+        ],
+        "note": "任职组织 B 并非被代表主体 A；EV-A03 未建立协调资料用途权限。"
+      }
+    ]
+  },
+  "lanes": [
+    {
+      "id": "entities",
+      "label": "法人主体 · 合成"
+    },
+    {
+      "id": "person",
+      "label": "人员与具体用途"
+    }
+  ],
+  "mainPath": [
+    "evidence",
+    "t",
+    "gap"
+  ],
+  "nodes": [
+    {
+      "id": "b",
+      "lane": "entities",
+      "col": 0,
+      "type": "external",
+      "label": "Entity B · 新加坡",
+      "sublabel": "声称的母公司，非担保人",
+      "width": 220
+    },
+    {
+      "id": "a",
+      "lane": "entities",
+      "col": 2,
+      "type": "external",
+      "label": "Entity A · 澳大利亚",
+      "sublabel": "唯一拟准入交易主体",
+      "width": 220
+    },
+    {
+      "id": "evidence",
+      "lane": "person",
+      "col": 0,
+      "type": "database",
+      "label": "EV-A03",
+      "sublabel": "在 Entity B 任职的资料",
+      "width": 210
+    },
+    {
+      "id": "t",
+      "lane": "person",
+      "col": 1,
+      "type": "external",
+      "label": "Person T",
+      "sublabel": "集团资金联系人",
+      "width": 210
+    },
+    {
+      "id": "gap",
+      "lane": "person",
+      "col": 2,
+      "type": "security",
+      "label": "为 Entity A 协调资料",
+      "sublabel": "需要证据",
+      "width": 220
+    }
+  ],
+  "edges": [
+    {
+      "from": "b",
+      "to": "a",
+      "label": "声称的母公司"
+    },
+    {
+      "from": "evidence",
+      "to": "t",
+      "label": "支持岗位声明"
+    },
+    {
+      "from": "t",
+      "to": "b",
+      "label": "任职于"
+    },
+    {
+      "from": "t",
+      "to": "gap",
+      "label": "声称有权协调"
+    },
+    {
+      "from": "gap",
+      "to": "a",
+      "label": "被代表主体范围未建立",
+      "variant": "dashed"
+    }
+  ]
+}

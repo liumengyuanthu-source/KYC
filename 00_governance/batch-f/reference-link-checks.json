@@ -1,0 +1,336 @@
+{
+  "schemaVersion": 1,
+  "checkedAtLocalDate": "2026-09-08",
+  "timezone": "Asia/Shanghai",
+  "method": "Read-only web tool open of every registered external canonical URL; provider may return a cached crawl. This is a retrieved-page/title check, not an origin HTTP uptime check or a full claim/policy re-verification.",
+  "preservesOriginalVerification": true,
+  "changesToSourceRegistry": false,
+  "counts": {
+    "attempted": 40,
+    "retrieved": 39,
+    "inconclusive": 1
+  },
+  "scope": "No bank applicability, currency of regulation, production capability or permission inferred. Original observation verification remains distinct. R4 and R5 retain separate source IDs and versions.",
+  "checks": [
+    {
+      "sourceId": "REFSRC-c87950d327fe",
+      "url": "https://www.ingwb.com/en/insidebusiness/self-service/onboarding",
+      "registeredTitle": "ING Wholesale — Direct Online Onboarding Request (DOOR)",
+      "sourceVersion": null,
+      "status": "retrieved",
+      "note": "Official page returned with matching subject/title; existing interpretation not re-certified."
+    },
+    {
+      "sourceId": "REFSRC-3f0c51e665c8",
+      "url": "https://www.anz.com.au/support/business/secure-reply/",
+      "registeredTitle": "ANZ — KYC SecureReply",
+      "sourceVersion": null,
+      "status": "retrieved",
+      "note": "Official page returned with matching subject/title; existing interpretation not re-certified."
+    },
+    {
+      "sourceId": "REFSRC-fc2a14663b0d",
+      "url": "https://www.business.hsbc.bm/en-gb/smartserve",
+      "registeredTitle": "HSBC Bermuda — SmartServe",
+      "sourceVersion": null,
+      "status": "retrieved",
+      "note": "Official page returned with matching subject/title; existing interpretation not re-certified."
+    },
+    {
+      "sourceId": "REFSRC-6cc73c38d7be",
+      "url": "https://www.business.hsbc.com.sg/en-sg/campaigns/international-business",
+      "registeredTitle": "HSBC Singapore — International business / SmartServe",
+      "sourceVersion": null,
+      "status": "retrieved",
+      "note": "Official page returned with matching subject/title; existing interpretation not re-certified."
+    },
+    {
+      "sourceId": "REFSRC-5007fcbd71dc",
+      "url": "https://www.citigroup.com/global/news/press-release/2019/citi-launches-digital-onboarding-for-institutional-clients-in-asia-pacific",
+      "registeredTitle": "Citi — APAC institutional digital onboarding launch",
+      "sourceVersion": null,
+      "status": "retrieved",
+      "note": "Official page returned with matching subject/title; existing interpretation not re-certified."
+    },
+    {
+      "sourceId": "REFSRC-593eb3d2134d",
+      "url": "https://www.citigroup.com/global/insights/citidirect-be-digital-onboarding",
+      "registeredTitle": "Citi — CitiDirect BE Digital Onboarding video",
+      "sourceVersion": null,
+      "status": "retrieved",
+      "note": "Official page returned with matching subject/title; existing interpretation not re-certified."
+    },
+    {
+      "sourceId": "REFSRC-609062df61e2",
+      "url": "https://www.citigroup.com/global/news/press-release/2025/citi-global-roll-out-enhancements-citidirect-commercial-banking-platform",
+      "registeredTitle": "Citi — CitiDirect Commercial Banking enhancements",
+      "sourceVersion": null,
+      "status": "retrieved",
+      "note": "Official page returned with matching subject/title; existing interpretation not re-certified."
+    },
+    {
+      "sourceId": "REFSRC-7d39967abdab",
+      "url": "https://www.citigroup.com/global/insights/citidirect-commercial-banking-delivering-the-power-of-citi-on-a-single-platform",
+      "registeredTitle": "Citi — CitiDirect Commercial Banking product video page",
+      "sourceVersion": null,
+      "status": "retrieved",
+      "note": "Official page returned with matching subject/title; existing interpretation not re-certified."
+    },
+    {
+      "sourceId": "REFSRC-3691009688e5",
+      "url": "https://www.natwest.com/business/bank-accounts/what-is-mitek.html",
+      "registeredTitle": "NatWest Business — Mitek identity verification",
+      "sourceVersion": null,
+      "status": "retrieved",
+      "note": "Official page returned with matching subject/title; existing interpretation not re-certified."
+    },
+    {
+      "sourceId": "REFSRC-1e88f1a0dc43",
+      "url": "https://www.hsbc.com.hk/ways-to-bank/chat-with-relationship-manager/",
+      "registeredTitle": "HSBC Hong Kong — Chat with your Relationship Manager",
+      "sourceVersion": null,
+      "status": "retrieved",
+      "note": "Official page returned with matching subject/title; existing interpretation not re-certified."
+    },
+    {
+      "sourceId": "REFSRC-58eef49f44a6",
+      "url": "https://www.swift.com/news-events/press-releases/swift-opens-its-kyc-registry-corporates",
+      "registeredTitle": "SWIFT — KYC Registry opens to corporates",
+      "sourceVersion": null,
+      "status": "retrieved",
+      "note": "Official page returned with matching subject/title; existing interpretation not re-certified."
+    },
+    {
+      "sourceId": "REFSRC-c48c6d8deca0",
+      "url": "https://wolfsberg-group.org/resources/correspondent-banking/",
+      "registeredTitle": "Wolfsberg Group — Correspondent Banking / CBDDQ resources",
+      "sourceVersion": null,
+      "status": "retrieved",
+      "note": "Official page returned with matching subject/title; existing interpretation not re-certified."
+    },
+    {
+      "sourceId": "REFSRC-08762a0163df",
+      "url": "https://www.gleif.org/en/lei-data/access-and-use-lei-data/level-2-data-who-owns-whom",
+      "registeredTitle": "GLEIF — Level 2 Data: Who Owns Whom",
+      "sourceVersion": null,
+      "status": "retrieved",
+      "note": "Official page returned with matching subject/title; existing interpretation not re-certified."
+    },
+    {
+      "sourceId": "REFSRC-4f617c2d4b50",
+      "url": "https://www.gleif.org/en/organizational-identity/lei-vlei/the-verifiable-lei-vlei",
+      "registeredTitle": "GLEIF — The verifiable LEI (vLEI)",
+      "sourceVersion": null,
+      "status": "retrieved",
+      "note": "Official page returned with matching subject/title; existing interpretation not re-certified."
+    },
+    {
+      "sourceId": "REFSRC-2f2f723a6c8c",
+      "url": "https://drr-docs.isda.org/docs/get-started/drr-and-cdm/",
+      "registeredTitle": "ISDA — DRR and CDM documentation",
+      "sourceVersion": null,
+      "status": "retrieved",
+      "note": "Official page returned with matching subject/title; existing interpretation not re-certified."
+    },
+    {
+      "sourceId": "REFSRC-278ac9ad8738",
+      "url": "https://www.eurocontrol.int/publication/eurocontrol-specification-airport-collaborative-decision-making-cdm",
+      "registeredTitle": "EUROCONTROL — Airport Collaborative Decision Making specification",
+      "sourceVersion": null,
+      "status": "retrieved",
+      "note": "Official page returned with matching subject/title; existing interpretation not re-certified."
+    },
+    {
+      "sourceId": "REFSRC-31432d782d31",
+      "url": "https://www.iata.org/one-record/",
+      "registeredTitle": "IATA — ONE Record",
+      "sourceVersion": null,
+      "status": "retrieved",
+      "note": "Official page returned with matching subject/title; existing interpretation not re-certified."
+    },
+    {
+      "sourceId": "REFSRC-3e10e7311eba",
+      "url": "https://support.gs1.org/support/solutions/articles/43000734535-what-is-the-gs1-traceability-standard-",
+      "registeredTitle": "GS1 — Global Traceability Standard explanation",
+      "sourceVersion": null,
+      "status": "retrieved",
+      "note": "Official page returned with matching subject/title; existing interpretation not re-certified."
+    },
+    {
+      "sourceId": "REFSRC-e1fe72472bf9",
+      "url": "https://www.nist.gov/programs-projects/digital-thread-manufacturing",
+      "registeredTitle": "NIST — Digital Thread for Manufacturing",
+      "sourceVersion": null,
+      "status": "retrieved",
+      "note": "Official page returned with matching subject/title; existing interpretation not re-certified."
+    },
+    {
+      "sourceId": "REFSRC-f9e731b2c4ac",
+      "url": "https://hl7.org/fhir/R4/provenance.html",
+      "registeredTitle": "HL7 FHIR R4 — Provenance",
+      "sourceVersion": "R4",
+      "status": "retrieved",
+      "note": "Official page returned with matching subject/title; existing interpretation not re-certified."
+    },
+    {
+      "sourceId": "REFSRC-a69324ba5269",
+      "url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/q9r1-quality-risk-management",
+      "registeredTitle": "FDA / ICH — Q9(R1) Quality Risk Management",
+      "sourceVersion": null,
+      "status": "retrieved",
+      "note": "Official page returned with matching subject/title; existing interpretation not re-certified."
+    },
+    {
+      "sourceId": "REFSRC-cc616f5c6867",
+      "url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/q10-pharmaceutical-quality-system",
+      "registeredTitle": "FDA / ICH — Q10 Pharmaceutical Quality System",
+      "sourceVersion": null,
+      "status": "retrieved",
+      "note": "Official page returned with matching subject/title; existing interpretation not re-certified."
+    },
+    {
+      "sourceId": "REFSRC-c507f2d5fad0",
+      "url": "https://www.sec.gov/newsroom/press-releases/2023-91",
+      "registeredTitle": "SEC — Off-channel communications enforcement, 2023-91",
+      "sourceVersion": null,
+      "status": "retrieved",
+      "note": "Official page returned with matching subject/title; existing interpretation not re-certified."
+    },
+    {
+      "sourceId": "REFSRC-8bde3fcd6188",
+      "url": "https://pages.nist.gov/800-63-4/sp800-63b/authenticators/",
+      "registeredTitle": "NIST SP 800-63B-4 — Authentication and authenticator management",
+      "sourceVersion": null,
+      "status": "retrieved",
+      "note": "Official page returned with matching subject/title; existing interpretation not re-certified."
+    },
+    {
+      "sourceId": "REFSRC-653e4d1a3bb2",
+      "url": "https://cheatsheetseries.owasp.org/cheatsheets/File_Upload_Cheat_Sheet.html",
+      "registeredTitle": "OWASP — File Upload Cheat Sheet",
+      "sourceVersion": null,
+      "status": "retrieved",
+      "note": "Official page returned with matching subject/title; existing interpretation not re-certified."
+    },
+    {
+      "sourceId": "REFSRC-0c59d273e815",
+      "url": "https://www.austrac.gov.au/industry-and-business/obligations-and-guidance/your-amlctf-program/customer-due-diligence/initial-customer-due-diligence/initial-customer-due-diligence-guides-customer-type/initial-cdd-body-corporate-partnership-or-unincorporated-association",
+      "registeredTitle": "AUSTRAC — Initial CDD for body corporate, partnership or unincorporated association",
+      "sourceVersion": null,
+      "status": "retrieved",
+      "note": "Official page returned with matching subject/title; existing interpretation not re-certified."
+    },
+    {
+      "sourceId": "REFSRC-7e03129fa2bc",
+      "url": "https://www.austrac.gov.au/industry-and-business/obligations-and-guidance/your-amlctf-program/customer-due-diligence/source-funds-and-source-wealth",
+      "registeredTitle": "AUSTRAC — Source of funds and source of wealth",
+      "sourceVersion": null,
+      "status": "retrieved",
+      "note": "Official page returned with matching subject/title; existing interpretation not re-certified."
+    },
+    {
+      "sourceId": "REFSRC-2c963446a9c8",
+      "url": "https://www.austrac.gov.au/industry-and-business/obligations-and-guidance/your-amlctf-program/customer-due-diligence/enhanced-customer-due-diligence",
+      "registeredTitle": "AUSTRAC — Enhanced customer due diligence",
+      "sourceVersion": null,
+      "status": "retrieved",
+      "note": "Official page returned with matching subject/title; existing interpretation not re-certified."
+    },
+    {
+      "sourceId": "REFSRC-930e9fabf23c",
+      "url": "https://www.bis.org/publications/202412-guidelines-final-guidelines-counterparty-credit-risk-management",
+      "registeredTitle": "Basel Committee — Guidelines for counterparty credit risk management",
+      "sourceVersion": null,
+      "status": "retrieved",
+      "note": "Official page returned with matching subject/title; existing interpretation not re-certified."
+    },
+    {
+      "sourceId": "REFSRC-6dd2afd31911",
+      "url": "https://www.dfat.gov.au/international-relations/security/sanctions/consolidated-list",
+      "registeredTitle": "DFAT — Consolidated List",
+      "sourceVersion": null,
+      "status": "retrieved",
+      "note": "Official page returned with matching subject/title; existing interpretation not re-certified."
+    },
+    {
+      "sourceId": "REFSRC-2870f362d315",
+      "url": "https://db.wolfsberg-group.org/assets/4b6c2db6-696d-492e-bdd5-c51552708597/Wolfsberg%20Guidance%20on%20Sanctions%20Screening.pdf",
+      "registeredTitle": "Wolfsberg Group — Guidance on Sanctions Screening",
+      "sourceVersion": "2019",
+      "status": "inconclusive_fetch_error",
+      "note": "Web provider returned Internal Error for registered PDF; not proof of 404 or withdrawn guidance. Registered official landing page REFSRC-f6ba73964d9b retrieved separately; no silent URL substitution."
+    },
+    {
+      "sourceId": "REFSRC-9a64ff203519",
+      "url": "https://developer.apple.com/videos/play/wwdc2025/219/",
+      "registeredTitle": "Apple — Meet Liquid Glass",
+      "sourceVersion": null,
+      "status": "retrieved",
+      "note": "Official page returned with matching subject/title; existing interpretation not re-certified."
+    },
+    {
+      "sourceId": "REFSRC-ced9cf672600",
+      "url": "https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/",
+      "registeredTitle": "W3C — Modal Dialog Pattern",
+      "sourceVersion": null,
+      "status": "retrieved",
+      "note": "Official page returned with matching subject/title; existing interpretation not re-certified."
+    },
+    {
+      "sourceId": "REFSRC-a6041f5d6736",
+      "url": "https://www.w3.org/WAI/WCAG22/Understanding/content-on-hover-or-focus.html",
+      "registeredTitle": "W3C — Content on Hover or Focus",
+      "sourceVersion": null,
+      "status": "retrieved",
+      "note": "Official page returned with matching subject/title; existing interpretation not re-certified."
+    },
+    {
+      "sourceId": "REFSRC-1644eed6024a",
+      "url": "https://www.w3.org/WAI/WCAG22/Understanding/dragging-movements.html",
+      "registeredTitle": "W3C — Dragging Movements",
+      "sourceVersion": null,
+      "status": "retrieved",
+      "note": "Official page returned with matching subject/title; existing interpretation not re-certified."
+    },
+    {
+      "sourceId": "REFSRC-72049fdc31f1",
+      "url": "https://www.stylemanual.gov.au/grammar-punctuation-and-conventions/spelling",
+      "registeredTitle": "Australian Government Style Manual — Spelling",
+      "sourceVersion": null,
+      "status": "retrieved",
+      "note": "Official page returned with matching subject/title; existing interpretation not re-certified."
+    },
+    {
+      "sourceId": "REFSRC-f6ba73964d9b",
+      "url": "https://wolfsberg-group.org/resources/legacy/53",
+      "registeredTitle": "Wolfsberg — Sanctions Screening Guidance",
+      "sourceVersion": null,
+      "status": "retrieved",
+      "note": "Official page returned with matching subject/title; existing interpretation not re-certified."
+    },
+    {
+      "sourceId": "REFSRC-5572948bb336",
+      "url": "https://www.dfat.gov.au/international-relations/security/sanctions/consolidated-list/guide-australias-consolidated-list",
+      "registeredTitle": "DFAT — Guide to Australia's Consolidated List",
+      "sourceVersion": null,
+      "status": "retrieved",
+      "note": "Official page returned with matching subject/title; existing interpretation not re-certified."
+    },
+    {
+      "sourceId": "REFSRC-40253f160832",
+      "url": "https://www.austrac.gov.au/industry-and-business/obligations-and-guidance/your-amlctf-program/customer-due-diligence/politically-exposed-persons-pep",
+      "registeredTitle": "AUSTRAC — Politically exposed persons",
+      "sourceVersion": null,
+      "status": "retrieved",
+      "note": "Official page returned with matching subject/title; existing interpretation not re-certified."
+    },
+    {
+      "sourceId": "REFSRC-251cbc0d0dec",
+      "url": "https://hl7.org/fhir/R5/provenance.html",
+      "registeredTitle": "HL7 FHIR R5 — Provenance",
+      "sourceVersion": "R5",
+      "status": "retrieved",
+      "note": "Official page returned with matching subject/title; existing interpretation not re-certified."
+    }
+  ]
+}

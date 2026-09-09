@@ -1,0 +1,421 @@
+合成演示记录 · 未获银行批准
+
+内部评审 · 本地操作模拟 · SRC-016 · D5 v0.2
+
+本记录不构成生产权限、SLA 或全案准入。
+
+筛查复核 Person T · Entity A
+
+DEMO-CTT-001 · 范围: FX forward for future USD procurement payments · 范围版本 3 · 案件版本 31 · KYC 运营
+
+尚未就绪
+当前问题: 身份未决的本项结果已记录
+处理责任: 未分配 · 下一责任方: 未分配
+建议下一步: 等待配置后续责任方 · 不重复记录已有本项结果，且该结果不构成本案准入。
+S1 发起与界定
+S2 明确要求与取证
+S3 筛查与评估
+S4 复核与解决
+S5 交易准入
+01 绑定查询
+✓
+本步骤已完成
+02 比较信息
+→
+需要你处理
+03 按需补证
+◷
+等待资料/他人
+04 复核包
+→
+需要你处理
+05 人判断
+✓
+本步骤已完成
+06 记录局部结果
+✓
+本步骤已完成
+
+必需步骤清单仍在确认；选择步骤仅用于阅读。 实际工作: 
+◷
+等待资料/他人
+
+查看全部步骤、责任与时间
+绑定查询
+
+✓
+本步骤已完成 · 处理责任: 未分配 · 具体人员: 未分配
+
+下一责任方: 未分配 · 查看绑定查询
+
+进入 / 入列
+2026年9月8日 04:16 · Australia/Sydney
+开始
+2026年9月8日 04:16 · Australia/Sydney
+开始等待
+未记录
+完成
+2026年9月8日 04:16 · Australia/Sydney
+经过
+0 小时
+排队 / 处理中驻留 / 等待
+0 小时 / 0 小时 / 0 小时
+人工净工时
+未知 — 状态驻留不是已测工时
+观察时点
+2027年9月8日 10:00 · Australia/Sydney
+2027-09-08T00:00:00.000Z
+
+预计：尚无法估计，需具备可复核资料及责任方估计；未配置已确认目标或 SLA。
+
+时间健康: 
+?
+待确认/无法确定
+
+DEMO-CTT-001/work/screening-review-c
+D5-v0.2:3:31 · 00_sources/d5/Clear_to_Trade_D5_Product_Experience_Bindings_v0.2.json
+比较信息
+
+→
+需要你处理 · 处理责任: 未分配 · 具体人员: 未分配
+
+下一责任方: 未分配 · 复核现有对照
+
+进入 / 入列
+2026年9月8日 04:16 · Australia/Sydney
+开始
+未记录
+开始等待
+未记录
+完成
+未记录
+经过
+8765.72 小时
+排队 / 处理中驻留 / 等待
+8765.72 小时 / 0 小时 / 0 小时
+人工净工时
+未知 — 状态驻留不是已测工时
+观察时点
+2027年9月8日 10:00 · Australia/Sydney
+2027-09-08T00:00:00.000Z
+
+预计：尚无法估计，需具备可复核资料及责任方估计；未配置已确认目标或 SLA。
+
+时间健康: 
+?
+待确认/无法确定
+
+DEMO-CTT-001/work/screening-review-c
+D5-v0.2:3:31 · 00_sources/d5/Clear_to_Trade_D5_Product_Experience_Bindings_v0.2.json
+按需补证
+
+◷
+等待资料/他人 · 处理责任: 未分配 · 具体人员: 未分配
+
+下一责任方: KYC 运营 · 依据当前用途评估恢复复核
+
+进入 / 入列
+2026年9月8日 04:16 · Australia/Sydney
+开始
+未记录
+开始等待
+2026年9月8日 04:16 · Australia/Sydney
+完成
+未记录
+经过
+8765.72 小时
+排队 / 处理中驻留 / 等待
+0 小时 / 0 小时 / 8765.72 小时
+人工净工时
+未知 — 状态驻留不是已测工时
+观察时点
+2027年9月8日 10:00 · Australia/Sydney
+2027-09-08T00:00:00.000Z
+
+预计：尚无法估计，需具备可复核资料及责任方估计；未配置已确认目标或 SLA。
+
+时间健康: 
+?
+待确认/无法确定
+
+DEMO-CTT-001/work/screening-review-c · DEMO-CTT-001/work/c-information_gap-9
+D5-v0.2:3:31 · 00_sources/d5/Clear_to_Trade_D5_Product_Experience_Bindings_v0.2.json
+复核包
+
+→
+需要你处理 · 处理责任: 未分配 · 具体人员: 未分配
+
+下一责任方: 未分配 · 复核已准备输入和未知项
+
+进入 / 入列
+2026年9月8日 04:16 · Australia/Sydney
+开始
+未记录
+开始等待
+未记录
+完成
+未记录
+经过
+8765.72 小时
+排队 / 处理中驻留 / 等待
+8765.72 小时 / 0 小时 / 0 小时
+人工净工时
+未知 — 状态驻留不是已测工时
+观察时点
+2027年9月8日 10:00 · Australia/Sydney
+2027-09-08T00:00:00.000Z
+
+预计：尚无法估计，需具备可复核资料及责任方估计；未配置已确认目标或 SLA。
+
+时间健康: 
+?
+待确认/无法确定
+
+DEMO-CTT-001/work/screening-review-c
+D5-v0.2:3:31 · 00_sources/d5/Clear_to_Trade_D5_Product_Experience_Bindings_v0.2.json
+人判断
+
+✓
+本步骤已完成 · 处理责任: 未分配 · 具体人员: 未分配
+
+下一责任方: 未分配 · 补充信息或转交复核
+
+进入 / 入列
+2026年9月8日 04:16 · Australia/Sydney
+开始
+未记录
+开始等待
+未记录
+完成
+2026年9月8日 04:16 · Australia/Sydney
+经过
+0 小时
+排队 / 处理中驻留 / 等待
+0 小时 / 0 小时 / 0 小时
+人工净工时
+未知 — 状态驻留不是已测工时
+观察时点
+2027年9月8日 10:00 · Australia/Sydney
+2027-09-08T00:00:00.000Z
+
+预计：尚无法估计，需具备可复核资料及责任方估计；未配置已确认目标或 SLA。
+
+时间健康: 
+?
+待确认/无法确定
+
+DEMO-CTT-001/work/screening-review-c
+D5-v0.2:3:31 · 00_sources/d5/Clear_to_Trade_D5_Product_Experience_Bindings_v0.2.json
+记录局部结果
+
+✓
+本步骤已完成 · 处理责任: 未分配 · 具体人员: 未分配
+
+下一责任方: 未分配 · 仅记录配置允许且有依据的本项结果
+
+进入 / 入列
+2026年9月8日 04:16 · Australia/Sydney
+开始
+未记录
+开始等待
+未记录
+完成
+2026年9月8日 04:16 · Australia/Sydney
+经过
+0 小时
+排队 / 处理中驻留 / 等待
+0 小时 / 0 小时 / 0 小时
+人工净工时
+未知 — 状态驻留不是已测工时
+观察时点
+2027年9月8日 10:00 · Australia/Sydney
+2027-09-08T00:00:00.000Z
+
+预计：尚无法估计，需具备可复核资料及责任方估计；未配置已确认目标或 SLA。
+
+时间健康: 
+?
+待确认/无法确定
+
+DEMO-CTT-001/work/screening-review-c
+D5-v0.2:3:31 · 00_sources/d5/Clear_to_Trade_D5_Product_Experience_Bindings_v0.2.json
+
+根据当前范围、任务与已记录产物投影；未确认的完整性保持未知。
+
+对照身份信息
+属性	Person T	来源记录	对照
+姓名	Person T	Person T	相似 · 需复核
+出生日期	未提供	1970 (仅年份) / 1971 (仅年份)	无法确定
+出生地	未提供	未提供	无法确定
+国籍	未提供	未提供	无法确定
+身份区分依据
+
+EV-ID-C01 · 接收状态: released · v1
+
+DEMO-CTT-001/person/person-t · DEMO-CTT-001/evidence/collaboration-2
+
+用途评估: 不足 · v1
+
+已收到不等于已评估。协调权限资料不会自动满足筛查身份用途。
+
+原查询、来源与版本
+命中
+DEMO-CTT-001/finding/person-t-c01 · v3
+原查询
+DEMO-CTT-001/screening-run/c-1
+主体快照
+DEMO-CTT-001/run-subject/c-1
+来源快照
+DEMO-CTT-001/provider-snapshot/c-1
+
+姓名: Synthetic name similarity; no identity conclusion
+DEMO-CTT-001/provider-snapshot/c-1
+
+出生日期: Available subject evidence does not support a precise comparison
+DEMO-CTT-001/provider-snapshot/c-1
+
+出生地: Available subject evidence does not support a precise comparison
+DEMO-CTT-001/provider-snapshot/c-1
+
+国籍: Available subject evidence does not support a precise comparison
+DEMO-CTT-001/provider-snapshot/c-1
+
+编制的合成来源内容；没有实时模型或来源调用。
+
+你的复核
+
+人工问题：身份仍无法确定；已配置的复核人员仅可记录未决或转交；这不构成本案准入。
+
+已保存复核理由: Person T identity remains unresolved; request distinguishing identity context only.
+
+排除处置不可用：尚无经复核的排除样例或权限配置。转交去向在配置前保持未分配。
+
+记录未决需要已配置的复核角色。
+
+本项结果已记录
+
+未决 · Identity remains unresolved for these inputs; specialist follow-up remains necessary.
+
+DEMO-CTT-001/screening-decision/c-1 · 2026-09-07T18:16:55.340Z
+
+本操作仅改变绑定任务或命中。筛查覆盖仍不完整；本案尚未就绪。
+
+其他案件条件 · 并行工作
+信贷
+?
+待确认/无法确定
+适用性: 未知 · 旧范围 · 需当前复核
+法务
+?
+待确认/无法确定
+适用性: 未知 · 旧范围 · 需当前复核
+利益冲突
+?
+待确认/无法确定
+适用性: 适用 · 旧范围 · 需当前复核
+金融犯罪复核人员
+?
+待确认/无法确定
+适用性: 未知 · 旧范围 · 需当前复核
+QA 复核人员
+?
+待确认/无法确定
+适用性: 适用 · 旧范围 · 需当前复核
+
+最终清单完整性未知；本项复核结果不产生全案完成日期或准入。
+
+完整处理时间线
+
+2026年9月8日 04:16 · Australia/Sydney · 已请求初筛
+DEMO-CTT-001/event/screening-c-19
+
+2026年9月8日 04:16 · Australia/Sydney · 合成查询结果已收到
+DEMO-CTT-001/event/screening-c-20
+
+2026年9月8日 04:16 · Australia/Sydney · 复核草稿已保存
+DEMO-CTT-001/event/screening-c-21
+
+2026年9月8日 04:16 · Australia/Sydney · 已请求身份资料
+DEMO-CTT-001/event/screening-c-22
+
+2026年9月8日 04:16 · Australia/Sydney · 任务事件已记录
+DEMO-CTT-001/event/collaboration-23-25
+
+2026年9月8日 04:16 · Australia/Sydney · 任务事件已记录
+DEMO-CTT-001/event/collaboration-24-26
+
+2026年9月8日 04:16 · Australia/Sydney · 请求已派发
+DEMO-CTT-001/event/collaboration-25-27
+
+2026年9月8日 04:16 · Australia/Sydney · 任务事件已记录
+DEMO-CTT-001/event/collaboration-26-28
+
+2026年9月8日 04:16 · Australia/Sydney · 任务事件已记录
+DEMO-CTT-001/event/collaboration-27-29
+
+2026年9月8日 04:16 · Australia/Sydney · 任务事件已记录
+DEMO-CTT-001/event/collaboration-28-30
+
+2026年9月8日 04:16 · Australia/Sydney · 任务事件已记录
+DEMO-CTT-001/event/collaboration-29-31
+
+2026年9月8日 04:16 · Australia/Sydney · 身份用途已评估
+DEMO-CTT-001/event/screening-c-30
+
+2026年9月8日 04:16 · Australia/Sydney · 本项复核结果已记录
+DEMO-CTT-001/event/screening-c-31
+
+相关依赖图
+
+身份输入 → 用途评估 → 有权人工复核。信贷、法务与利益冲突按各自输入推进。
+
+静态 Archify 总览；不是实时工作流或完成任务控件。
+相关资料概览
+身份区分依据
+
+EV-ID-C01 · 接收状态: released · v1
+
+DEMO-CTT-001/person/person-t · DEMO-CTT-001/evidence/collaboration-2
+
+用途评估: 不足 · v1
+
+已收到不等于已评估。协调权限资料不会自动满足筛查身份用途。
+
+联系人与沟通历史
+
+Email 为默认关系沟通渠道。联系人及收件信息须来自已审阅请求；敏感资料使用获准的安全提交任务。
+
+最近查看的历史记录
+
+历史记录依据当前访问权限，使用冻结快照。
+
+工作备注
+
+复核备注保存在任务理由草稿中；联系备注使用现有协作范围内的操作。
+
+时间演示样例 · 与本会话分开
+D5U-TIME-DEMO-01
+
+仅为合成时间演示；不是本案业务事件或银行 SLA。
+
+进入 / 入列
+2026年9月7日 09:00 · Australia/Sydney
+开始
+2026年9月7日 09:30 · Australia/Sydney
+开始等待
+2026年9月7日 10:00 · Australia/Sydney
+完成
+未记录
+经过
+5 小时
+排队 / 处理中驻留 / 等待
+0.5 小时 / 0.5 小时 / 4 小时
+人工净工时
+未知 — 状态驻留不是已测工时
+观察时点
+2026年9月7日 14:00 · Australia/Sydney
+2026-09-07T14:00:00+10:00
+
+所有本次复核所需资料具备后：预计 1–2 个工作日。内部合成参数，不可向客户承诺。资料到齐时间与业务日历未知；不计算日历完成日或全案日期。
+
+D5-v0.2 §18.5 · 2026-09-07T14:00:00+10:00 · D5-v0.2 · 人工工时未知

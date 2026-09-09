@@ -1,0 +1,58 @@
+{
+  "source_ref": "SRC-019",
+  "status": "independently_authored_literal_expectations",
+  "expected": {
+    "entry": {
+      "case_id": "DEMO-CTT-001",
+      "conflicts_search": "complete",
+      "conflict_finding": "open",
+      "conflicts_clearance": "pending",
+      "credit_applicability": "required",
+      "credit_approval": "approved_subject_to_condition",
+      "legal_agreement_revision": 3,
+      "legal_credit_input_revision": 1,
+      "legal_input_currency": "current",
+      "legal_approval": "internally_approved",
+      "legal_execution": "pending",
+      "signatory_authority": "unknown",
+      "readiness": "not_ready"
+    },
+    "credit_changed": {
+      "credit_revision": 2,
+      "agreement_input_revision": 2,
+      "legal_agreement_revision": 3,
+      "legal_credit_input_revision": 1,
+      "legal_input_currency": "superseded",
+      "readiness": "not_ready"
+    },
+    "permission_unknown": {
+      "allowed": false
+    },
+    "not_required": {
+      "credit_approved": false
+    },
+    "applicability_unknown": {
+      "credit_approved": false
+    },
+    "legal_dependency_unknown": {
+      "legal_drafting_allowed": false,
+      "legal_impact": "unknown",
+      "credit_assessment_allowed": true
+    },
+    "incomplete_current_credit_terms": {
+      "incorporate_credit_allowed": false
+    },
+    "legal_product_scope_missing": {
+      "legal_intake_allowed": false
+    },
+    "restricted_views": {
+      "rm_conflict_detail": false,
+      "client_conflict_detail": false
+    },
+    "hold": {
+      "task_is_case": false,
+      "branch_is_case": false,
+      "unknown_is_unaffected": false
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "run": "host-red",
+  "date": "2026-09-07T21:18:48.575Z",
+  "results": [
+    {
+      "id": "F-FAILURE",
+      "status": "failed",
+      "error": "Product Definition must be available as secondary Studio view\n\n0 !== 1\n"
+    }
+  ],
+  "errors": []
+}

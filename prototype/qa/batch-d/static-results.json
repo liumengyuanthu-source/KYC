@@ -1,0 +1,51 @@
+{
+  "results": [
+    {
+      "kind": "missing-image",
+      "status": "passed",
+      "evidence": "missing-image.png",
+      "ids": [
+        "RT-D15"
+      ]
+    },
+    {
+      "kind": "reduced-motion",
+      "status": "passed",
+      "evidence": "reduced-motion.png",
+      "ids": [
+        "RT-D15"
+      ]
+    },
+    {
+      "kind": "client-print",
+      "status": "passed",
+      "evidence": "client-print.png",
+      "ids": [
+        "RT-D12"
+      ]
+    },
+    {
+      "kind": "rm-mobile",
+      "status": "passed",
+      "evidence": "rm-mobile.png",
+      "ids": [
+        "RT-D12"
+      ]
+    },
+    {
+      "kind": "javascript-disabled-static-links",
+      "status": "passed",
+      "ids": [
+        "RT-D15"
+      ],
+      "evidence": [
+        "./diagrams/batch-d/DG-D01.en-AU.r02.svg",
+        "./diagrams/batch-d/DG-D02.en-AU.r02.svg",
+        "./diagrams/batch-d/DG-D03.en-AU.r02.svg",
+        "./diagrams/batch-d/DG-D01.zh-CN.r02.svg",
+        "./diagrams/batch-d/DG-D02.zh-CN.r02.svg",
+        "./diagrams/batch-d/DG-D03.zh-CN.r02.svg"
+      ]
+    }
+  ]
+}

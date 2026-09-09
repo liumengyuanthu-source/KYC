@@ -1,0 +1,11 @@
+{
+  "sourceCount": 40,
+  "observationCount": 41,
+  "changedBindings": [
+    "SRC-017:R19",
+    "SRC-017:R29",
+    "SRC-017:R16"
+  ],
+  "newResearch": 0,
+  "verificationStatus": "inherited_unchanged"
+}

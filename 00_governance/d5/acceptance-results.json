@@ -1,0 +1,940 @@
+{
+  "at": "2026-09-07T18:05:58.858Z",
+  "scope": "D5U-T00–T06 Person T pilot, not full D5 rollout",
+  "counts": {
+    "PASSED": 72,
+    "NOT_RUN": 16
+  },
+  "results": [
+    {
+      "id": "D5-01",
+      "situation": "从OM的Finding动作进入",
+      "expected": "同Case/Scope/Finding，无需再找案件",
+      "execution_status": "PASSED",
+      "evidence": [
+        "prototype/qa/d5/om-regression/host/product-return.results.json",
+        "prototype/qa/d5/regression-runs.json"
+      ],
+      "note": "D4→Product、Current/Target、来源/播放/未实现任务的现有宿主回归已重跑；不改变业务会话。"
+    },
+    {
+      "id": "D5-02",
+      "situation": "从Current对照进产品并返回",
+      "expected": "产品为Target，回原Current/Mapping",
+      "execution_status": "PASSED",
+      "evidence": [
+        "prototype/qa/d5/om-regression/host/product-return.results.json",
+        "prototype/qa/d5/regression-runs.json"
+      ],
+      "note": "D4→Product、Current/Target、来源/播放/未实现任务的现有宿主回归已重跑；不改变业务会话。"
+    },
+    {
+      "id": "D5-03",
+      "situation": "Story检查点与操作session不同",
+      "expected": "不静默重置；明确当前会话或独立示例",
+      "execution_status": "PASSED",
+      "evidence": [
+        "prototype/qa/d5/om-regression/host/product-return.results.json",
+        "prototype/qa/d5/regression-runs.json"
+      ],
+      "note": "D4→Product、Current/Target、来源/播放/未实现任务的现有宿主回归已重跑；不改变业务会话。"
+    },
+    {
+      "id": "D5-04",
+      "situation": "产品直接打开且有已有session",
+      "expected": "可恢复已保存工作，不生成重复Case",
+      "execution_status": "PASSED",
+      "evidence": [
+        "prototype/qa/d5/host/host-browser.results.json#pilot-core-current-finding",
+        "prototype/qa/d5/host/navigation-extra.results.json#reload-keeps-current-saved-task",
+        "prototype/qa/d5/host/preview-proof.results.json#direct-preview-fresh-explicit-entry",
+        "prototype/qa/d5/host/preview-proof.results.json#direct-preview-restores-live-without-write"
+      ],
+      "note": "实际本机浏览器断言；仅限本切片和所列测试条件。"
+    },
+    {
+      "id": "D5-05",
+      "situation": "任务已分配但无决定权限",
+      "expected": "可准备/阅读获准内容，不能正式记录",
+      "execution_status": "NOT_RUN",
+      "evidence": [],
+      "note": "尚无覆盖此完整预期的执行证据，不从邻近检查推断通过。"
+    },
+    {
+      "id": "D5-06",
+      "situation": "字段点击/展开/来源/拖动",
+      "expected": "动作目标不重叠，焦点可辨",
+      "execution_status": "PASSED",
+      "evidence": [
+        "prototype/qa/d5/host/navigation-extra.results.json#keyboard-control-keeps-semantic-focus"
+      ],
+      "note": "实际本机浏览器断言；仅限本切片和所列测试条件。"
+    },
+    {
+      "id": "D5-07",
+      "situation": "资料缺出生日期或精度不同",
+      "expected": "未知/不可比较，不自动Different/排除",
+      "execution_status": "PASSED",
+      "evidence": [
+        "prototype/qa/d5/regression/c-regression/browser-results.json",
+        "prototype/qa/d5/regression/unit-results.json"
+      ],
+      "note": "实际 C/B 纵向流程：未知出生日期、独立用途、权限/理由、身份补件、接收/评估、双击去重、未决/移交及原场景返回。"
+    },
+    {
+      "id": "D5-08",
+      "situation": "文件已收到、用途尚未评估",
+      "expected": "不能让Finding依据自动充分",
+      "execution_status": "PASSED",
+      "evidence": [
+        "prototype/qa/d5/regression/c-regression/browser-results.json",
+        "prototype/qa/d5/regression/unit-results.json"
+      ],
+      "note": "实际 C/B 纵向流程：未知出生日期、独立用途、权限/理由、身份补件、接收/评估、双击去重、未决/移交及原场景返回。"
+    },
+    {
+      "id": "D5-09",
+      "situation": "Coordination资料关联身份用途",
+      "expected": "独立评估，不自动继承",
+      "execution_status": "PASSED",
+      "evidence": [
+        "prototype/qa/d5/regression/c-regression/browser-results.json",
+        "prototype/qa/d5/regression/unit-results.json"
+      ],
+      "note": "实际 C/B 纵向流程：未知出生日期、独立用途、权限/理由、身份补件、接收/评估、双击去重、未决/移交及原场景返回。"
+    },
+    {
+      "id": "D5-10",
+      "situation": "Reviewer无权限或资料不足",
+      "expected": "不能Record；直接说明相关原因",
+      "execution_status": "PASSED",
+      "evidence": [
+        "prototype/qa/d5/regression/c-regression/browser-results.json",
+        "prototype/qa/d5/regression/unit-results.json"
+      ],
+      "note": "实际 C/B 纵向流程：未知出生日期、独立用途、权限/理由、身份补件、接收/评估、双击去重、未决/移交及原场景返回。"
+    },
+    {
+      "id": "D5-11",
+      "situation": "Rationale为空",
+      "expected": "草稿可保留；正式记录按规则校验",
+      "execution_status": "PASSED",
+      "evidence": [
+        "prototype/qa/d5/regression/c-regression/browser-results.json",
+        "prototype/qa/d5/regression/unit-results.json"
+      ],
+      "note": "实际 C/B 纵向流程：未知出生日期、独立用途、权限/理由、身份补件、接收/评估、双击去重、未决/移交及原场景返回。"
+    },
+    {
+      "id": "D5-12",
+      "situation": "AI准备摘要含不支持的结论",
+      "expected": "不成为默认rationale或决定；可查原依据",
+      "execution_status": "NOT_RUN",
+      "evidence": [],
+      "note": "没有可注入任意 AI 摘要的 runtime；界面不自动生成正式判断理由，但未执行该对抗输入场景。"
+    },
+    {
+      "id": "D5-13",
+      "situation": "旧输入版本提交",
+      "expected": "保留草稿、提示差异、不写旧版新决定",
+      "execution_status": "NOT_RUN",
+      "evidence": [],
+      "note": "旧输入引擎拒绝已有单元证据；本轮未完整执行该特定宿主过期版本+草稿保留组合。"
+    },
+    {
+      "id": "D5-14",
+      "situation": "保存失败",
+      "expected": "表单和错误保留，无假Saved",
+      "execution_status": "PASSED",
+      "evidence": [
+        "prototype/qa/d5/host/host-browser.results.json#history-dirty-stay-failed-save-discard"
+      ],
+      "note": "实际本机浏览器断言；仅限本切片和所列测试条件。"
+    },
+    {
+      "id": "D5-15",
+      "situation": "双击提交/刷新",
+      "expected": "不重复创建逻辑Submission/Decision",
+      "execution_status": "PASSED",
+      "evidence": [
+        "prototype/qa/d5/regression/c-regression/browser-results.json",
+        "prototype/qa/d5/regression/unit-results.json"
+      ],
+      "note": "实际 C/B 纵向流程：未知出生日期、独立用途、权限/理由、身份补件、接收/评估、双击去重、未决/移交及原场景返回。"
+    },
+    {
+      "id": "D5-16",
+      "situation": "Request草稿修改",
+      "expected": "旧审阅不自动覆盖新内容/收件范围",
+      "execution_status": "PASSED",
+      "evidence": [
+        "prototype/qa/d5/regression/b-regression/browser-results.json",
+        "prototype/qa/d5/regression/unit-results.json"
+      ],
+      "note": "现有 B 宿主和业务单元回归：请求审阅与派发分离、grant 重验和代上传来源保留。"
+    },
+    {
+      "id": "D5-17",
+      "situation": "Request approved",
+      "expected": "不自动显示已派发/已送达",
+      "execution_status": "PASSED",
+      "evidence": [
+        "prototype/qa/d5/regression/b-regression/browser-results.json",
+        "prototype/qa/d5/regression/unit-results.json"
+      ],
+      "note": "现有 B 宿主和业务单元回归：请求审阅与派发分离、grant 重验和代上传来源保留。"
+    },
+    {
+      "id": "D5-18",
+      "situation": "新身份补件",
+      "expected": "原两个请求项保留，Grant独立核验",
+      "execution_status": "PASSED",
+      "evidence": [
+        "prototype/qa/d5/regression/c-regression/browser-results.json",
+        "prototype/qa/d5/regression/unit-results.json"
+      ],
+      "note": "实际 C/B 纵向流程：未知出生日期、独立用途、权限/理由、身份补件、接收/评估、双击去重、未决/移交及原场景返回。"
+    },
+    {
+      "id": "D5-19",
+      "situation": "客户正确Reference无Grant",
+      "expected": "不能读取任务资料",
+      "execution_status": "PASSED",
+      "evidence": [
+        "prototype/qa/d5/host/safe-request-proof.results.json#rm-request-entry-retains-safe-audience",
+        "prototype/qa/d5/host/safe-request-proof.results.json#client-request-entry-retains-safe-audience"
+      ],
+      "note": "实际本机浏览器断言；仅限本切片和所列测试条件。"
+    },
+    {
+      "id": "D5-20",
+      "situation": "Client部分提交",
+      "expected": "只有本人Item更新，不显露他人文件",
+      "execution_status": "PASSED",
+      "evidence": [
+        "prototype/qa/d5/regression/c-regression/browser-results.json",
+        "prototype/qa/d5/regression/unit-results.json"
+      ],
+      "note": "实际 C/B 纵向流程：未知出生日期、独立用途、权限/理由、身份补件、接收/评估、双击去重、未决/移交及原场景返回。"
+    },
+    {
+      "id": "D5-21",
+      "situation": "客户Grant撤销",
+      "expected": "后续读写阻止，不靠旧页面状态继续",
+      "execution_status": "PASSED",
+      "evidence": [
+        "prototype/qa/d5/regression/b-regression/browser-results.json",
+        "prototype/qa/d5/regression/unit-results.json"
+      ],
+      "note": "现有 B 宿主和业务单元回归：请求审阅与派发分离、grant 重验和代上传来源保留。"
+    },
+    {
+      "id": "D5-22",
+      "situation": "代上传",
+      "expected": "原提供人与代上传者可辨，不伪造客户操作",
+      "execution_status": "PASSED",
+      "evidence": [
+        "prototype/qa/d5/regression/b-regression/browser-results.json",
+        "prototype/qa/d5/regression/unit-results.json"
+      ],
+      "note": "现有 B 宿主和业务单元回归：请求审阅与派发分离、grant 重验和代上传来源保留。"
+    },
+    {
+      "id": "D5-23",
+      "situation": "技术接收released",
+      "expected": "不写业务Sufficient/identity verified",
+      "execution_status": "PASSED",
+      "evidence": [
+        "prototype/qa/d5/regression/c-regression/browser-results.json",
+        "prototype/qa/d5/regression/unit-results.json"
+      ],
+      "note": "实际 C/B 纵向流程：未知出生日期、独立用途、权限/理由、身份补件、接收/评估、双击去重、未决/移交及原场景返回。"
+    },
+    {
+      "id": "D5-24",
+      "situation": "来源不可用/查询失败",
+      "expected": "不显示No match或零风险",
+      "execution_status": "PASSED",
+      "evidence": [
+        "prototype/qa/d5/regression/unit-results.json"
+      ],
+      "note": "C 引擎查询失败/适用性未知的边界单元回归；不代表真实供应商或 EDD 完整产品流程。"
+    },
+    {
+      "id": "D5-25",
+      "situation": "人选择补件/移交/未决",
+      "expected": "不自动当批准，不继续全部路径",
+      "execution_status": "PASSED",
+      "evidence": [
+        "prototype/qa/d5/regression/c-regression/browser-results.json",
+        "prototype/qa/d5/regression/unit-results.json"
+      ],
+      "note": "实际 C/B 纵向流程：未知出生日期、独立用途、权限/理由、身份补件、接收/评估、双击去重、未决/移交及原场景返回。"
+    },
+    {
+      "id": "D5-26",
+      "situation": "移交目标未知",
+      "expected": "Unassigned/待配置，不虚构已送达人员",
+      "execution_status": "PASSED",
+      "evidence": [
+        "prototype/qa/d5/regression/c-regression/browser-results.json",
+        "prototype/qa/d5/regression/unit-results.json"
+      ],
+      "note": "实际 C/B 纵向流程：未知出生日期、独立用途、权限/理由、身份补件、接收/评估、双击去重、未决/移交及原场景返回。"
+    },
+    {
+      "id": "D5-27",
+      "situation": "处置成功",
+      "expected": "回原任务看限定结果，其他条件真实保留",
+      "execution_status": "PASSED",
+      "evidence": [
+        "prototype/qa/d5/regression/c-regression/browser-results.json",
+        "prototype/qa/d5/regression/unit-results.json"
+      ],
+      "note": "实际 C/B 纵向流程：未知出生日期、独立用途、权限/理由、身份补件、接收/评估、双击去重、未决/移交及原场景返回。"
+    },
+    {
+      "id": "D5-28",
+      "situation": "Credit已批准条件",
+      "expected": "不等同条件已履行或Legal已执行",
+      "execution_status": "PASSED",
+      "evidence": [
+        "prototype/qa/d5/regression-runs.json",
+        "prototype/qa/d5/regression/unit-results.json"
+      ],
+      "note": "现有 D 专家线浏览器/单元回归：Credit 批准条件不等于履行；Legal 消费旧版输入可辨。"
+    },
+    {
+      "id": "D5-29",
+      "situation": "Agreement用旧Credit输入",
+      "expected": "显示版本问题，不以新页面掩盖",
+      "execution_status": "PASSED",
+      "evidence": [
+        "prototype/qa/d5/regression-runs.json",
+        "prototype/qa/d5/regression/unit-results.json"
+      ],
+      "note": "现有 D 专家线浏览器/单元回归：Credit 批准条件不等于履行；Legal 消费旧版输入可辨。"
+    },
+    {
+      "id": "D5-30",
+      "situation": "QA缺评估",
+      "expected": "回到缺评估工作，不自动判资料无效或全案重做",
+      "execution_status": "NOT_RUN",
+      "evidence": [],
+      "note": "QA缺评估→定点回流完整可操作切片未在本组展开。"
+    },
+    {
+      "id": "D5-31",
+      "situation": "Remediation completed",
+      "expected": "QA仍需对应重审，不自动signoff",
+      "execution_status": "NOT_RUN",
+      "evidence": [],
+      "note": "QA remediation后重审/signoff完整runtime未在本组展开。"
+    },
+    {
+      "id": "D5-32",
+      "situation": "Clearance manifest未知/空/加载失败",
+      "expected": "不Ready；清楚显示无法完整核对",
+      "execution_status": "PASSED",
+      "evidence": [
+        "prototype/qa/d5/host/host-browser.results.json",
+        "prototype/qa/d5/regression/unit-results.json"
+      ],
+      "note": "当前缺少已确认完整 manifest 时保持 unknown/not_ready；未模拟生产加载服务。"
+    },
+    {
+      "id": "D5-33",
+      "situation": "EDD或其他适用性unknown",
+      "expected": "不当not_required隐藏",
+      "execution_status": "PASSED",
+      "evidence": [
+        "prototype/qa/d5/regression/unit-results.json"
+      ],
+      "note": "C 引擎查询失败/适用性未知的边界单元回归；不代表真实供应商或 EDD 完整产品流程。"
+    },
+    {
+      "id": "D5-34",
+      "situation": "Ready但无最终权限",
+      "expected": "可看依据，不可确认；分配不能代替权限",
+      "execution_status": "NOT_RUN",
+      "evidence": [],
+      "note": "最终准入授权工作台不在本 Person T pilot；不虚构权限。"
+    },
+    {
+      "id": "D5-35",
+      "situation": "确认时scope/证据版本改变",
+      "expected": "拒绝旧依据确认，保留待处理内容",
+      "execution_status": "NOT_RUN",
+      "evidence": [],
+      "note": "最终准入确认时scope变化的可操作工作流未展开。"
+    },
+    {
+      "id": "D5-36",
+      "situation": "Publication失败/重试",
+      "expected": "原决定保留，各目标独立，不执行Trade",
+      "execution_status": "NOT_RUN",
+      "evidence": [],
+      "note": "无发布服务/重试runtime；没有伪造成功或交易执行。"
+    },
+    {
+      "id": "D5-37",
+      "situation": "来源/证据详情返回",
+      "expected": "回原Requirement/Finding/版本与筛选",
+      "execution_status": "PASSED",
+      "evidence": [
+        "prototype/qa/d5/om-regression/host/product-return.results.json",
+        "prototype/qa/d5/regression-runs.json"
+      ],
+      "note": "D4→Product、Current/Target、来源/播放/未实现任务的现有宿主回归已重跑；不改变业务会话。"
+    },
+    {
+      "id": "D5-38",
+      "situation": "未保存离开",
+      "expected": "Save/Discard/Stay；Discard不撤销已存决定",
+      "execution_status": "PASSED",
+      "evidence": [
+        "prototype/qa/d5/host/host-browser.results.json#history-dirty-stay-failed-save-discard"
+      ],
+      "note": "实际本机浏览器断言；仅限本切片和所列测试条件。"
+    },
+    {
+      "id": "D5-39",
+      "situation": "语言切换后返回",
+      "expected": "最新语言与输入原文保持，不改Policy",
+      "execution_status": "PASSED",
+      "evidence": [
+        "prototype/qa/d5/host/host-browser.results.json#saved-review-history-language-roundtrip",
+        "prototype/qa/d5/host/host-browser.results.json#three-language-current-input",
+        "prototype/qa/d5/host/navigation-extra.results.json#step-and-language-preserve-open-reading-detail"
+      ],
+      "note": "实际本机浏览器断言；仅限本切片和所列测试条件。"
+    },
+    {
+      "id": "D5-40",
+      "situation": "Role切换",
+      "expected": "旧未保存输入处理；新投影无他人受限数据",
+      "execution_status": "PASSED",
+      "evidence": [
+        "prototype/qa/d5/host/host-browser.results.json#safe-rm-client-projections",
+        "prototype/qa/d5/host/safe-request-proof.results.json#rm-request-entry-retains-safe-audience",
+        "prototype/qa/d5/host/safe-request-proof.results.json#client-request-entry-retains-safe-audience"
+      ],
+      "note": "实际本机浏览器断言；仅限本切片和所列测试条件。"
+    },
+    {
+      "id": "D5-41",
+      "situation": "Print/Tooltip/搜索计数/导出",
+      "expected": "不含未经允许资料或内部评分",
+      "execution_status": "PASSED",
+      "evidence": [
+        "prototype/qa/d5/host/host-browser.results.json#safe-rm-client-projections",
+        "prototype/qa/d5/host/safe-request-proof.results.json#rm-request-entry-retains-safe-audience",
+        "prototype/qa/d5/host/safe-request-proof.results.json#client-request-entry-retains-safe-audience"
+      ],
+      "note": "实际本机浏览器断言；仅限本切片和所列测试条件。"
+    },
+    {
+      "id": "D5-42",
+      "situation": "长内容/窄屏/键盘/减少动画",
+      "expected": "全部必要信息可读，非拖动路径可用",
+      "execution_status": "PASSED",
+      "evidence": [
+        "prototype/qa/d5/host/host-browser.results.json#narrow-touch-reduced-motion",
+        "prototype/qa/d5/host/navigation-extra.results.json#keyboard-control-keeps-semantic-focus"
+      ],
+      "note": "实际本机浏览器断言；仅限本切片和所列测试条件。"
+    },
+    {
+      "id": "D5-43",
+      "situation": "模型/银行网络未连接",
+      "expected": "样例明确，保存等本地动作仍可测试；无假远程成功",
+      "execution_status": "PASSED",
+      "evidence": [
+        "prototype/qa/d5/host/host-browser.results.json#pilot-core-current-finding",
+        "prototype/qa/d5/host/modules-proof.results.json#static-dependency-missing-readable-fallback",
+        "prototype/qa/d5/host/preview-proof.results.json#direct-preview-fresh-explicit-entry"
+      ],
+      "note": "实际本机浏览器断言；仅限本切片和所列测试条件。"
+    },
+    {
+      "id": "D5-44",
+      "situation": "Play/Next/Skill查看/评分",
+      "expected": "Case事件日志不变，不产生批准",
+      "execution_status": "PASSED",
+      "evidence": [
+        "prototype/qa/d5/om-regression/host/product-return.results.json",
+        "prototype/qa/d5/regression-runs.json"
+      ],
+      "note": "D4→Product、Current/Target、来源/播放/未实现任务的现有宿主回归已重跑；不改变业务会话。"
+    },
+    {
+      "id": "D5-45",
+      "situation": "Lab Shadow变化",
+      "expected": "正确variant，退出不覆盖产品主会话",
+      "execution_status": "NOT_RUN",
+      "evidence": [],
+      "note": "Living Case Lab Shadow未接入本组。"
+    },
+    {
+      "id": "D5-46",
+      "situation": "当前结果与历史记录不同",
+      "expected": "历史保留，当前适用性可辨，不悄悄删除",
+      "execution_status": "NOT_RUN",
+      "evidence": [],
+      "note": "只读快照机制已有验证，但三类真实历史业务结果fixture缺失，未完整验证结果冲突场景。"
+    },
+    {
+      "id": "D5-47",
+      "situation": "没有对应产品任务",
+      "expected": "明确本版范围，不跳无关Dashboard",
+      "execution_status": "PASSED",
+      "evidence": [
+        "prototype/qa/d5/om-regression/host/product-return.results.json",
+        "prototype/qa/d5/regression-runs.json"
+      ],
+      "note": "D4→Product、Current/Target、来源/播放/未实现任务的现有宿主回归已重跑；不改变业务会话。"
+    },
+    {
+      "id": "D5-48",
+      "situation": "全场景覆盖核对",
+      "expected": "15场景/94原工作/229动作均有位置或范围说明，不强制造按钮",
+      "execution_status": "PASSED",
+      "evidence": [
+        "00_governance/d5/source-crosswalk.json"
+      ],
+      "note": "对照原始 D4 全量文件验证229动作、94工作、15场景；有映射不等于全部产品动作已实现。"
+    },
+    {
+      "id": "D5U-01",
+      "situation": "最新颜色",
+      "expected": "使用当前repo token/组件；无旧蓝白/hex覆盖，无视觉回滚",
+      "execution_status": "PASSED",
+      "evidence": [
+        "prototype/qa/d5/host/host-browser.results.json#pilot-core-current-finding"
+      ],
+      "note": "实际本机浏览器断言；仅限本切片和所列测试条件。"
+    },
+    {
+      "id": "D5U-02",
+      "situation": "总览与本地进度",
+      "expected": "五阶段锚点可见；本任务步骤可展开；浏览步骤不改变业务阶段",
+      "execution_status": "PASSED",
+      "evidence": [
+        "prototype/qa/d5/host/host-browser.results.json#step-reading-does-not-execute",
+        "prototype/qa/d5/host/navigation-extra.results.json#step-and-language-preserve-open-reading-detail"
+      ],
+      "note": "实际本机浏览器断言；仅限本切片和所列测试条件。"
+    },
+    {
+      "id": "D5U-03",
+      "situation": "并行工作",
+      "expected": "Credit/Legal/Conflicts可同时显示；选中一阶段不强制其他未开始",
+      "execution_status": "PASSED",
+      "evidence": [
+        "prototype/qa/d5/host/host-browser.results.json#step-reading-does-not-execute"
+      ],
+      "note": "实际本机浏览器断言；仅限本切片和所列测试条件。"
+    },
+    {
+      "id": "D5U-04",
+      "situation": "步骤全集",
+      "expected": "对获准scope列出适用/条件/未定/不适用；空manifest不显示全部完成",
+      "execution_status": "PASSED",
+      "evidence": [
+        "prototype/qa/d5/host/host-browser.results.json#step-reading-does-not-execute"
+      ],
+      "note": "实际本机浏览器断言；仅限本切片和所列测试条件。"
+    },
+    {
+      "id": "D5U-05",
+      "situation": "动态步骤调整",
+      "expected": "新增要求/重审创建版本和原因；历史步骤不丢失，count变化可解释",
+      "execution_status": "NOT_RUN",
+      "evidence": [],
+      "note": "当前输入版本和plan revision已投影；运行中动态增删步骤及专门变更原因链未全面实现。"
+    },
+    {
+      "id": "D5U-06",
+      "situation": "Owner与下一责任方",
+      "expected": "处理Owner和待客户/待专家分别显示；无assignee为Unassigned",
+      "execution_status": "PASSED",
+      "evidence": [
+        "prototype/qa/d5/regression/unit-results.json",
+        "prototype/qa/d5/final.json"
+      ],
+      "note": "共享纯投影/时间组件验证；包含独立5小时算术、未开始为null、当前/历史时钟、条件预计及episode；不是银行时限或真实客户承诺。"
+    },
+    {
+      "id": "D5U-07",
+      "situation": "进入/开始/等待",
+      "expected": "三个时间由对应事件产生，不用页面打开时间填充",
+      "execution_status": "PASSED",
+      "evidence": [
+        "prototype/qa/d5/regression/unit-results.json",
+        "prototype/qa/d5/final.json"
+      ],
+      "note": "共享纯投影/时间组件验证；包含独立5小时算术、未开始为null、当前/历史时钟、条件预计及episode；不是银行时限或真实客户承诺。"
+    },
+    {
+      "id": "D5U-08",
+      "situation": "状态时长",
+      "expected": "状态区间不重复累计；不把in_progress驻留时长当人工净工时",
+      "execution_status": "PASSED",
+      "evidence": [
+        "prototype/qa/d5/regression/unit-results.json",
+        "prototype/qa/d5/final.json"
+      ],
+      "note": "共享纯投影/时间组件验证；包含独立5小时算术、未开始为null、当前/历史时钟、条件预计及episode；不是银行时限或真实客户承诺。"
+    },
+    {
+      "id": "D5U-09",
+      "situation": "无预计依据",
+      "expected": "明确未能预计的原因与所需确认；不填0或随意两天",
+      "execution_status": "PASSED",
+      "evidence": [
+        "prototype/qa/d5/regression/unit-results.json",
+        "prototype/qa/d5/final.json"
+      ],
+      "note": "共享纯投影/时间组件验证；包含独立5小时算术、未开始为null、当前/历史时钟、条件预计及episode；不是银行时限或真实客户承诺。"
+    },
+    {
+      "id": "D5U-10",
+      "situation": "有条件的预计",
+      "expected": "显示起算条件与区间；前置未满足时不假造日历完成日期",
+      "execution_status": "PASSED",
+      "evidence": [
+        "prototype/qa/d5/regression/unit-results.json",
+        "prototype/qa/d5/final.json"
+      ],
+      "note": "共享纯投影/时间组件验证；包含独立5小时算术、未开始为null、当前/历史时钟、条件预计及episode；不是银行时限或真实客户承诺。"
+    },
+    {
+      "id": "D5U-11",
+      "situation": "时区/日历",
+      "expected": "UTC事实+IANA zone；locale只格式化；未知节假日/日历不计算business-day日期",
+      "execution_status": "PASSED",
+      "evidence": [
+        "prototype/qa/d5/regression/unit-results.json",
+        "prototype/qa/d5/final.json"
+      ],
+      "note": "共享纯投影/时间组件验证；包含独立5小时算术、未开始为null、当前/历史时钟、条件预计及episode；不是银行时限或真实客户承诺。"
+    },
+    {
+      "id": "D5U-12",
+      "situation": "预估更新",
+      "expected": "保留估计来源、as-of、输入版本；变化说明原因，旧客户承诺不被自动改写",
+      "execution_status": "PASSED",
+      "evidence": [
+        "prototype/qa/d5/regression/unit-results.json",
+        "prototype/qa/d5/final.json"
+      ],
+      "note": "共享纯投影/时间组件验证；包含独立5小时算术、未开始为null、当前/历史时钟、条件预计及episode；不是银行时限或真实客户承诺。"
+    },
+    {
+      "id": "D5U-13",
+      "situation": "预估超时",
+      "expected": "预测窗口超出不伪报SLA breach；有确认目标才显示相应Overdue类型",
+      "execution_status": "PASSED",
+      "evidence": [
+        "prototype/qa/d5/regression/unit-results.json",
+        "prototype/qa/d5/final.json"
+      ],
+      "note": "共享纯投影/时间组件验证；包含独立5小时算术、未开始为null、当前/历史时钟、条件预计及episode；不是银行时限或真实客户承诺。"
+    },
+    {
+      "id": "D5U-14",
+      "situation": "审批预计",
+      "expected": "预计时长结束不批准、不解除hold，不创建业务完成事件",
+      "execution_status": "PASSED",
+      "evidence": [
+        "prototype/qa/d5/regression/unit-results.json",
+        "prototype/qa/d5/final.json"
+      ],
+      "note": "共享纯投影/时间组件验证；包含独立5小时算术、未开始为null、当前/历史时钟、条件预计及episode；不是银行时限或真实客户承诺。"
+    },
+    {
+      "id": "D5U-15",
+      "situation": "全案预计",
+      "expected": "不简单求和并行时长；依赖未知时无确定全案日期",
+      "execution_status": "PASSED",
+      "evidence": [
+        "prototype/qa/d5/regression/unit-results.json",
+        "prototype/qa/d5/final.json"
+      ],
+      "note": "共享纯投影/时间组件验证；包含独立5小时算术、未开始为null、当前/历史时钟、条件预计及episode；不是银行时限或真实客户承诺。"
+    },
+    {
+      "id": "D5U-16",
+      "situation": "等待与block",
+      "expected": "waiting客户可以只是等待；指定Record动作blocked；不一律全案暂停",
+      "execution_status": "PASSED",
+      "evidence": [
+        "prototype/qa/d5/regression/unit-results.json",
+        "prototype/qa/d5/final.json"
+      ],
+      "note": "共享纯投影/时间组件验证；包含独立5小时算术、未开始为null、当前/历史时钟、条件预计及episode；不是银行时限或真实客户承诺。"
+    },
+    {
+      "id": "D5U-17",
+      "situation": "顺利与完成",
+      "expected": "On track需依据，不替代Step complete；completed不等于clearance",
+      "execution_status": "PASSED",
+      "evidence": [
+        "prototype/qa/d5/regression/unit-results.json",
+        "prototype/qa/d5/final.json"
+      ],
+      "note": "共享纯投影/时间组件验证；包含独立5小时算术、未开始为null、当前/历史时钟、条件预计及episode；不是银行时限或真实客户承诺。"
+    },
+    {
+      "id": "D5U-18",
+      "situation": "标识一致",
+      "expected": "Tasks/Progress/Condition/History/RM使用相同语义adapter与图标标签，不硬编码颜色",
+      "execution_status": "NOT_RUN",
+      "evidence": [],
+      "note": "D5 pilot使用共享adapter；所有旧Tasks/Condition/RM界面的统一改造属于后续扩展，未声称全站完成。"
+    },
+    {
+      "id": "D5U-19",
+      "situation": "核心模块",
+      "expected": "不能移除/覆盖固定定位、进度、必需依据与关键提醒/动作",
+      "execution_status": "PASSED",
+      "evidence": [
+        "prototype/qa/d5/host/host-browser.results.json#pilot-core-current-finding",
+        "prototype/qa/d5/host/modules-proof.results.json#layout-preview-cancel-move-collapse"
+      ],
+      "note": "实际本机浏览器断言；仅限本切片和所列测试条件。"
+    },
+    {
+      "id": "D5U-20",
+      "situation": "可选模块",
+      "expected": "添加/移除/排序/保存/恢复默认只写布局偏好，不改Case、Grant或Workflow",
+      "execution_status": "PASSED",
+      "evidence": [
+        "prototype/qa/d5/host/host-browser.results.json#layout-save-reset-and-draft-isolation",
+        "prototype/qa/d5/host/modules-proof.results.json#layout-preview-cancel-move-collapse",
+        "prototype/qa/d5/host/modules-proof.results.json#layout-storage-error-keeps-task-input",
+        "prototype/qa/d5/host/modules-proof.results.json#layout-collapse-overrides-prior-reading-but-cancel-restores"
+      ],
+      "note": "实际本机浏览器断言；仅限本切片和所列测试条件。"
+    },
+    {
+      "id": "D5U-21",
+      "situation": "个性化隔离",
+      "expected": "偏好按用户+角色+工作区类型；切角色/案件不继承他人草稿/敏感缓存",
+      "execution_status": "PASSED",
+      "evidence": [
+        "prototype/qa/d5/host/host-browser.results.json#layout-save-reset-and-draft-isolation",
+        "prototype/qa/d5/host/navigation-extra.results.json#persona-preferences-and-dirty-input-do-not-cross"
+      ],
+      "note": "实际本机浏览器断言；仅限本切片和所列测试条件。"
+    },
+    {
+      "id": "D5U-22",
+      "situation": "模块无权限",
+      "expected": "未获准模块不下发数据或暴露名称/计数；旧布局失去权限仍重验",
+      "execution_status": "PASSED",
+      "evidence": [
+        "prototype/qa/d5/host/host-browser.results.json#safe-rm-client-projections"
+      ],
+      "note": "实际本机浏览器断言；仅限本切片和所列测试条件。"
+    },
+    {
+      "id": "D5U-23",
+      "situation": "布局深链",
+      "expected": "任务必须模块缺失或被旧偏好隐藏时自动恢复必要视图，不要求用户重新组装",
+      "execution_status": "PASSED",
+      "evidence": [
+        "prototype/qa/d5/host/host-browser.results.json#layout-save-reset-and-draft-isolation",
+        "prototype/qa/d5/host/modules-proof.results.json#layout-preview-cancel-move-collapse"
+      ],
+      "note": "实际本机浏览器断言；仅限本切片和所列测试条件。"
+    },
+    {
+      "id": "D5U-24",
+      "situation": "My completed work",
+      "expected": "我的Screening任务完成但Case仍active：进本人历史，不把Case归档/清除",
+      "execution_status": "NOT_RUN",
+      "evidence": [],
+      "note": "没有归属当前操作者的已完成Person T work fixture；不凭Unassigned任务伪造My completed work。"
+    },
+    {
+      "id": "D5U-25",
+      "situation": "归档筛选",
+      "expected": "只对获准记录搜索/计数/分页；零结果与请求失败不同，不能列出他人案件",
+      "execution_status": "PASSED",
+      "evidence": [
+        "prototype/qa/d5/host/navigation-extra.results.json#readonly-record-and-zero-results",
+        "prototype/qa/d5/host/navigation-extra.results.json#unavailable-history-distinct-from-no-results"
+      ],
+      "note": "实际本机浏览器断言；仅限本切片和所列测试条件。"
+    },
+    {
+      "id": "D5U-26",
+      "situation": "归档只读",
+      "expected": "历史时间与结果按当时版本；浏览不新开session、不修改active案、无解锁审批按钮",
+      "execution_status": "PASSED",
+      "evidence": [
+        "prototype/qa/d5/host/navigation-extra.results.json#readonly-record-and-zero-results"
+      ],
+      "note": "实际本机浏览器断言；仅限本切片和所列测试条件。"
+    },
+    {
+      "id": "D5U-27",
+      "situation": "归档当前权限",
+      "expected": "以当前授权控制历史查看；当时处理过不等于永久访问",
+      "execution_status": "PASSED",
+      "evidence": [
+        "prototype/qa/d5/regression/unit-results.json",
+        "prototype/qa/d5/host/navigation-extra.results.json"
+      ],
+      "note": "当前权限过滤先于历史搜索；有效既有grant只见本人回执，撤销后不可见；无跨案身份时联系RM。"
+    },
+    {
+      "id": "D5U-28",
+      "situation": "归档切换返回",
+      "expected": "处理未保存输入；回active恢复其当前已保存状态与列表筛选",
+      "execution_status": "PASSED",
+      "evidence": [
+        "prototype/qa/d5/host/host-browser.results.json#history-dirty-stay-failed-save-discard",
+        "prototype/qa/d5/host/host-browser.results.json#saved-review-history-language-roundtrip",
+        "prototype/qa/d5/host/navigation-extra.results.json#persona-preferences-and-dirty-input-do-not-cross",
+        "prototype/qa/d5/host/navigation-extra.results.json#readonly-record-and-zero-results"
+      ],
+      "note": "实际本机浏览器断言；仅限本切片和所列测试条件。"
+    },
+    {
+      "id": "D5U-29",
+      "situation": "历史估时",
+      "expected": "归档的相对时长冻结到完成/最后快照，不随今天增长或显示仍等待",
+      "execution_status": "PASSED",
+      "evidence": [
+        "prototype/qa/d5/regression/unit-results.json",
+        "prototype/qa/d5/final.json"
+      ],
+      "note": "共享纯投影/时间组件验证；包含独立5小时算术、未开始为null、当前/历史时钟、条件预计及episode；不是银行时限或真实客户承诺。"
+    },
+    {
+      "id": "D5U-30",
+      "situation": "客户历史",
+      "expected": "仅本人获准请求/回执；无有效跨案身份时提示RM协助，不开放整案搜索",
+      "execution_status": "PASSED",
+      "evidence": [
+        "prototype/qa/d5/regression/unit-results.json",
+        "prototype/qa/d5/host/navigation-extra.results.json"
+      ],
+      "note": "当前权限过滤先于历史搜索；有效既有grant只见本人回执，撤销后不可见；无跨案身份时联系RM。"
+    },
+    {
+      "id": "D5U-31",
+      "situation": "邮件默认",
+      "expected": "默认RM邮件联系；安全提交路径保留；不把附件自动当作验证通过",
+      "execution_status": "PASSED",
+      "evidence": [
+        "prototype/qa/d5/host/host-browser.results.json#safe-rm-client-projections",
+        "prototype/qa/d5/host/safe-request-proof.results.json#rm-request-entry-retains-safe-audience",
+        "prototype/qa/d5/host/safe-request-proof.results.json#client-request-entry-retains-safe-audience"
+      ],
+      "note": "实际本机浏览器断言；仅限本切片和所列测试条件。"
+    },
+    {
+      "id": "D5U-32",
+      "situation": "邮件模板",
+      "expected": "只用允许对外的当前事实；受限screening/conflict原因不进入草稿/DOM/导出",
+      "execution_status": "NOT_RUN",
+      "evidence": [],
+      "note": "OPT-EMAIL模板为可选延期项；未制作或发送邮件。"
+    },
+    {
+      "id": "D5U-33",
+      "situation": "邮件时间",
+      "expected": "内部合成估时不自动对外；无依据则无完成日期；已审阅承诺与预计分开",
+      "execution_status": "PASSED",
+      "evidence": [
+        "prototype/qa/d5/regression/unit-results.json",
+        "prototype/qa/d5/final.json"
+      ],
+      "note": "共享纯投影/时间组件验证；包含独立5小时算术、未开始为null、当前/历史时钟、条件预计及episode；不是银行时限或真实客户承诺。"
+    },
+    {
+      "id": "D5U-34",
+      "situation": "邮件状态改变",
+      "expected": "草稿绑定snapshot，数据改变时标needs refresh/review且不覆盖人工编辑",
+      "execution_status": "NOT_RUN",
+      "evidence": [],
+      "note": "OPT-EMAIL编辑草稿与refresh流程未实现。"
+    },
+    {
+      "id": "D5U-35",
+      "situation": "复制邮件",
+      "expected": "Copy只是复制；不写sent/delivered；无真实邮箱API、smtp或发送动作",
+      "execution_status": "NOT_RUN",
+      "evidence": [],
+      "note": "OPT-EMAIL Copy未实现；无发送API或sent事件。"
+    },
+    {
+      "id": "D5U-36",
+      "situation": "可选草稿关闭",
+      "expected": "移除/不实现OPT-EMAIL仍可完整处理核心场景与进度",
+      "execution_status": "PASSED",
+      "evidence": [
+        "prototype/qa/d5/host/host-browser.results.json#layout-save-reset-and-draft-isolation"
+      ],
+      "note": "实际本机浏览器断言；仅限本切片和所列测试条件。"
+    },
+    {
+      "id": "D5U-37",
+      "situation": "播放/布局/筛选",
+      "expected": "Case/Decision/Grant事件不变；归档/Current/语言/模块选取非审批",
+      "execution_status": "PASSED",
+      "evidence": [
+        "prototype/qa/d5/host/host-browser.results.json#step-reading-does-not-execute",
+        "prototype/qa/d5/host/host-browser.results.json#layout-save-reset-and-draft-isolation",
+        "prototype/qa/d5/host/host-browser.results.json#saved-review-history-language-roundtrip",
+        "prototype/qa/d5/host/navigation-extra.results.json#reload-keeps-current-saved-task",
+        "prototype/qa/d5/host/modules-proof.results.json#layout-preview-cancel-move-collapse",
+        "prototype/qa/d5/host/modules-proof.results.json#static-dependency-missing-readable-fallback",
+        "prototype/qa/d5/host/modules-proof.results.json#layout-collapse-overrides-prior-reading-but-cancel-restores",
+        "prototype/qa/d5/host/preview-proof.results.json#direct-preview-restores-live-without-write"
+      ],
+      "note": "实际本机浏览器断言；仅限本切片和所列测试条件。"
+    },
+    {
+      "id": "D5U-38",
+      "situation": "角色投影",
+      "expected": "RM/客户只看允许phase与真实可披露信息；必要限制不泄漏但不谎称全案无阻塞",
+      "execution_status": "PASSED",
+      "evidence": [
+        "prototype/qa/d5/host/host-browser.results.json#safe-rm-client-projections",
+        "prototype/qa/d5/host/safe-request-proof.results.json#rm-request-entry-retains-safe-audience",
+        "prototype/qa/d5/host/safe-request-proof.results.json#client-request-entry-retains-safe-audience"
+      ],
+      "note": "实际本机浏览器断言；仅限本切片和所列测试条件。"
+    },
+    {
+      "id": "D5U-39",
+      "situation": "Print与可访问性",
+      "expected": "完整所选步骤、时间依据、状态/版本；不只屏幕截图；键盘替代拖拽，图标附文字",
+      "execution_status": "PASSED",
+      "evidence": [
+        "prototype/qa/d5/host/host-browser.results.json#narrow-touch-reduced-motion",
+        "prototype/qa/d5/host/host-browser.results.json#three-language-current-input",
+        "prototype/qa/d5/host/navigation-extra.results.json#keyboard-control-keeps-semantic-focus",
+        "prototype/qa/d5/host/navigation-extra.results.json#step-and-language-preserve-open-reading-detail",
+        "prototype/qa/d5/host/modules-proof.results.json#layout-storage-error-keeps-task-input",
+        "prototype/qa/d5/host/modules-proof.results.json#static-dependency-missing-readable-fallback"
+      ],
+      "note": "实际本机浏览器断言；仅限本切片和所列测试条件。"
+    },
+    {
+      "id": "D5U-40",
+      "situation": "重审周期",
+      "expected": "新episode保留原入列时间与累计等待；不擦掉既往时长改善报表",
+      "execution_status": "PASSED",
+      "evidence": [
+        "prototype/qa/d5/regression/unit-results.json",
+        "prototype/qa/d5/final.json"
+      ],
+      "note": "共享纯投影/时间组件验证；包含独立5小时算术、未开始为null、当前/历史时钟、条件预计及episode；不是银行时限或真实客户承诺。"
+    }
+  ]
+}

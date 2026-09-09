@@ -1,0 +1,24 @@
+{
+  "at": "2026-09-07T17:12:00.659Z",
+  "browser": "152.0.7977.76",
+  "visual": {
+    "body": {
+      "font": "\"Helvetica Neue\", Helvetica, Arial, \"PingFang SC\", \"Microsoft YaHei\", sans-serif",
+      "color": "rgb(23, 25, 28)",
+      "background": "radial-gradient(at 100% 0%, rgb(187, 201, 214) 0px, rgba(0, 0, 0, 0) 42%), radial-gradient(at 4% 35%, rgb(250, 249, 247) 0px, rgba(0, 0, 0, 0) 58%), none"
+    },
+    "tokens": {
+      "--ink": "#17191c",
+      "--muted": "#5b6067",
+      "--blue": "#086bb5",
+      "--deep-blue": "#004d86",
+      "--paper": "#efede9",
+      "--panel": "rgba(255,255,255,.53)"
+    },
+    "width": 1440,
+    "scrollWidth": 1440,
+    "title": "Clear to Trade — Scenario Studio"
+  },
+  "errors": [],
+  "seed": "Existing D4 QA current C session; navigation only changed to Product"
+}

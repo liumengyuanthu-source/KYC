@@ -1,0 +1,43 @@
+09-04 Meeting: Institutional Trading KYC "Clear to Trade" Product Kickoff & Planning
+
+Summary:
+## Meeting Information
+> Date: 2026-09-04 11:04:11
+> Location: [Insert Location]
+> Participants: [Speaker 1] [Speaker 2] [Speaker 3]
+## Meeting Notes
+### Team Introductions and Project Background
+- Ronak (based in Hong Kong, advisory team), Kobe (based in Melbourne, financial advisory team with an insurance banking and process re-engineering background), and Christina (based in Shanghai, supporting Megan on advisory supply solutions) introduced themselves; the connection was facilitated by Pratik.
+- The team is developing an end-to-end institutional trading KYC "clear to trade" product for a bank client. The product covers KYC, legal, compliance, and pre-trade approval workflows, rather than functioning as only a standalone KYC tool.
+- The core platform design is primarily agentic, with built-in deterministic rules, third-party system integrations, and potential machine learning-powered decision support. The MVP will include a human-in-the-loop mechanism, while the target end state will only require human review for exception cases.
+- Kobe has completed drafting the current-state and target-state process maps for the project.
+### Project Timeline and Deliverable Plan
+- Key project milestones have been confirmed: a pre-client meeting is scheduled for the week of September 17, and a client workshop will be held in the first week of October.
+- Initial deliverables for the pre-client meeting include end-to-end role-based user journeys (with KYC ops and case manager roles prioritized), hero case analysis, human-in-the-loop concept designs, and product environment concept plans.
+- Since the product is being built from scratch and detailed KPIs and SLAs will only be finalized after the client workshop, the team will use industry benchmarks as initial working assumptions.
+- The initial prototype will only support English, with multi-language functionality deferred to later development stages. Multi-region compliance requirements and PII/cybersecurity standards are confirmed as core key considerations for the project.
+### Project Scope and Integration Details
+- The new product will replace existing KYC systems (such as Fenergo) rather than integrating as an add-on layer on top of existing systems. It will interface with the client's existing trade systems, as well as third-party tools including World-Check, RDC, NICE Actimize, DocuSign, and iManage.
+- Integrations with systems such as Salesforce and regional management platforms are not included in the initial scope, and will be confirmed with the client at a later stage. The platform will only pull data from these systems if required for core workflows.
+- Full architecture design and detailed technical work will be postponed until after the October client workshop, once client intent and complete product requirements are confirmed.
+- Hero cases will cover multiple core trigger scenarios: new client onboarding, new product applications, and cross-border business expansion. All scenarios share a standardized core process with dynamic trigger mechanisms.
+### Open Questions and Input Requirements
+- Christina requested that Kobe and Ronak share complex real-world institutional KYC cases to be consolidated into the project's hero case, to demonstrate the product's problem-solving capabilities.
+- Kobe noted that her existing KYC experience is primarily focused on retail banking, so she will consult industry contacts to collect detailed information on institutional banking KYC processes.
+- Since direct pain point input from the client's end users has not been collected yet, the team will prioritize documenting high-level internal operational pain points (such as manual multi-system logins and repetitive manual tasks) for the initial deliverable draft.
+## Follow-up Actions
+- [ ] Christina will prepare the initial draft of deliverables (user journey maps, hero case analysis, concept designs) and share the draft with the full team by the end of next Thursday
+- [ ] The team will hold a catch-up meeting next Friday to review the draft deliverables and align on next steps
+- [ ] Create a shared Microsoft Teams group for the project to support ongoing real-time communication and question coordination
+- [ ] Kobe and Ronak will contribute complex institutional KYC pain points and real-world cases to develop the hero scenario; Kobe will consult her industry contacts to gather additional insights on institutional KYC processes
+- [ ] Finalize client-facing deliverables and the workshop storyline ahead of the September 17 pre-client meeting
+- [ ] Confirm integration requirements for systems including Salesforce and other regional management platforms during client discussions
+## AI Recommendations
+> **AI Recommendations**
+> AI has identified the following unresolved issues and items without clear assigned action items from the meeting, for your attention:
+> 1. The team currently does not have direct access to the client's existing institutional KYC systems, which may lead to gaps in process accuracy for initial deliverables; arrangements for additional client access or information gathering need to be made.
+> 2. Detailed KPIs, SLAs, and pain point input from the client's end users are not yet available, which may reduce the specificity of initial user journey designs; a plan to collect these details from the client needs to be drafted.
+> 3. The scope of integration with systems including Salesforce and regional management platforms is currently unresolved, which requires targeted questions to be prepared in advance for the September 17 pre-client meeting to avoid future scope creep.
+> 4. The team currently only has retail KYC experience as a reference, which may lead to misalignment with the actual requirements of institutional trading KYC; contingency plans for expert support should be arranged in case industry contacts cannot provide sufficient actionable insights.
+
+【内容由 AI 生成，仅供参考】

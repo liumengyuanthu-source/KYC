@@ -1,0 +1,125 @@
+{
+  "schema_version": 2,
+  "diagram_type": "workflow",
+  "meta": {
+    "title": "准入确认与结果发布",
+    "locale": "zh-CN",
+    "quality_profile": "showcase",
+    "animation": "none",
+    "legend": {
+      "mode": "auto",
+      "entries": {
+        "frontend": {
+          "label": "只读活动"
+        }
+      }
+    }
+  },
+  "lanes": [
+    {
+      "id": "decision",
+      "label": "有权人员确认"
+    },
+    {
+      "id": "publication",
+      "label": "独立的发布事件"
+    }
+  ],
+  "mainPath": [
+    "E03-ready",
+    "E03-confirm",
+    "E03-decision",
+    "E03-publish",
+    "E03-communicate"
+  ],
+  "nodes": [
+    {
+      "id": "E03-ready",
+      "lane": "decision",
+      "col": 0,
+      "width": 154,
+      "type": "frontend",
+      "label": "审阅就绪快照",
+      "sublabel": "当前范围与完整依据",
+      "height": 150
+    },
+    {
+      "id": "E03-confirm",
+      "lane": "decision",
+      "col": 1,
+      "width": 154,
+      "type": "frontend",
+      "label": "确认准入",
+      "sublabel": "明确的演示角色与权限",
+      "height": 150
+    },
+    {
+      "id": "E03-decision",
+      "lane": "decision",
+      "col": 2,
+      "width": 154,
+      "type": "frontend",
+      "label": "记录决定",
+      "sublabel": "限定范围的结果与时间戳",
+      "height": 150
+    },
+    {
+      "id": "E03-publish",
+      "lane": "publication",
+      "col": 2,
+      "width": 180,
+      "type": "frontend",
+      "label": "发布获准披露的结果",
+      "sublabel": "仅向本地模拟目标发布",
+      "height": 150
+    },
+    {
+      "id": "E03-communicate",
+      "lane": "publication",
+      "col": 3,
+      "width": 154,
+      "type": "frontend",
+      "label": "传达状态",
+      "sublabel": "不执行任何交易",
+      "height": 150
+    },
+    {
+      "id": "E03-failure",
+      "lane": "publication",
+      "col": 1,
+      "width": 154,
+      "type": "frontend",
+      "label": "发布失败",
+      "sublabel": "保留决定，跟踪传递状态",
+      "height": 150
+    }
+  ],
+  "edges": [
+    {
+      "from": "E03-ready",
+      "to": "E03-confirm",
+      "label": "版本当前且权限有效"
+    },
+    {
+      "from": "E03-confirm",
+      "to": "E03-decision",
+      "label": "人工确认"
+    },
+    {
+      "from": "E03-decision",
+      "to": "E03-publish",
+      "label": "独立动作"
+    },
+    {
+      "from": "E03-publish",
+      "to": "E03-communicate",
+      "label": "记录传递结果"
+    },
+    {
+      "from": "E03-publish",
+      "to": "E03-failure",
+      "label": "传递失败",
+      "role": "branch"
+    }
+  ]
+}

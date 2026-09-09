@@ -1,0 +1,851 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Batch C additive candidate collections",
+  "status": "additive_candidate_not_production_merged_schema",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "screeningPopulations",
+    "screeningMemberships",
+    "screeningRuns",
+    "runSubjectSnapshots",
+    "screeningQueryPlans",
+    "screeningResultSnapshots",
+    "screeningCoverageItems",
+    "providerRecordSnapshots",
+    "screeningFindings",
+    "attributeComparisons",
+    "screeningReviewDecisions",
+    "screeningReviewDrafts",
+    "eddApplicabilityAssessments",
+    "eddAssessments",
+    "holds"
+  ],
+  "properties": {
+    "screeningPopulations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "if": {
+          "required": [
+            "source_refs"
+          ],
+          "properties": {
+            "source_refs": {
+              "type": "array",
+              "contains": {
+                "const": "SRC-016"
+              }
+            }
+          }
+        },
+        "then": {
+          "required": [
+            "id",
+            "case_id",
+            "case_scope_id",
+            "revision",
+            "population_revision",
+            "scope_revision",
+            "membership_refs",
+            "inventory_status",
+            "inventory_gap_refs",
+            "population_review_status",
+            "policy_profile_ref",
+            "completeness_basis_refs",
+            "confirmed_by_ref",
+            "confirmation_permission_ref",
+            "confirmed_at"
+          ],
+          "additionalProperties": true,
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "case_id": {
+              "const": "DEMO-CTT-001"
+            },
+            "revision": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "inventory_status": {
+              "enum": [
+                "incomplete",
+                "complete_for_scope",
+                "unknown"
+              ]
+            },
+            "population_review_status": {
+              "enum": [
+                "draft",
+                "in_review",
+                "confirmed",
+                "superseded"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "screeningMemberships": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "if": {
+          "required": [
+            "source_refs"
+          ],
+          "properties": {
+            "source_refs": {
+              "type": "array",
+              "contains": {
+                "const": "SRC-016"
+              }
+            }
+          }
+        },
+        "then": {
+          "required": [
+            "id",
+            "case_id",
+            "case_scope_id",
+            "revision",
+            "party_ref",
+            "party_revision",
+            "screening_category",
+            "membership_decision",
+            "criterion_ref",
+            "basis_refs",
+            "query_input_status"
+          ],
+          "additionalProperties": true,
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "case_id": {
+              "const": "DEMO-CTT-001"
+            },
+            "revision": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "membership_decision": {
+              "enum": [
+                "included",
+                "excluded",
+                "unresolved"
+              ]
+            },
+            "query_input_status": {
+              "enum": [
+                "ready",
+                "insufficient",
+                "conflicted",
+                "unknown"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "screeningRuns": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "if": {
+          "required": [
+            "source_refs"
+          ],
+          "properties": {
+            "source_refs": {
+              "type": "array",
+              "contains": {
+                "const": "SRC-016"
+              }
+            }
+          }
+        },
+        "then": {
+          "required": [
+            "id",
+            "case_id",
+            "case_scope_id",
+            "revision",
+            "run_kind",
+            "population_ref",
+            "population_revision",
+            "subject_snapshot_refs",
+            "category_scope",
+            "query_plan_ref",
+            "query_plan_revision",
+            "run_status",
+            "result_count",
+            "data_version_status",
+            "input_fingerprint"
+          ],
+          "additionalProperties": true,
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "case_id": {
+              "const": "DEMO-CTT-001"
+            },
+            "revision": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "run_kind": {
+              "enum": [
+                "preliminary",
+                "comprehensive"
+              ]
+            },
+            "run_status": {
+              "enum": [
+                "not_started",
+                "pending",
+                "completed",
+                "partial",
+                "failed",
+                "cancelled"
+              ]
+            },
+            "data_version_status": {
+              "enum": [
+                "known",
+                "unknown"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "runSubjectSnapshots": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "if": {
+          "required": [
+            "source_refs"
+          ],
+          "properties": {
+            "source_refs": {
+              "type": "array",
+              "contains": {
+                "const": "SRC-016"
+              }
+            }
+          }
+        },
+        "then": {
+          "required": [
+            "id",
+            "case_id",
+            "case_scope_id",
+            "revision",
+            "party_ref",
+            "party_revision",
+            "name_claims",
+            "attribute_claim_refs",
+            "provenance_refs",
+            "permitted_query_scope_refs"
+          ],
+          "additionalProperties": true,
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "case_id": {
+              "const": "DEMO-CTT-001"
+            },
+            "revision": {
+              "type": "integer",
+              "minimum": 1
+            }
+          }
+        }
+      }
+    },
+    "screeningQueryPlans": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "if": {
+          "required": [
+            "source_refs"
+          ],
+          "properties": {
+            "source_refs": {
+              "type": "array",
+              "contains": {
+                "const": "SRC-016"
+              }
+            }
+          }
+        },
+        "then": {
+          "required": [
+            "id",
+            "case_id",
+            "case_scope_id",
+            "revision",
+            "population_ref",
+            "population_revision",
+            "subject_refs",
+            "query_scope_ref",
+            "input_fingerprint"
+          ],
+          "additionalProperties": true,
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "case_id": {
+              "const": "DEMO-CTT-001"
+            },
+            "revision": {
+              "type": "integer",
+              "minimum": 1
+            }
+          }
+        }
+      }
+    },
+    "screeningResultSnapshots": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "if": {
+          "required": [
+            "source_refs"
+          ],
+          "properties": {
+            "source_refs": {
+              "type": "array",
+              "contains": {
+                "const": "SRC-016"
+              }
+            }
+          }
+        },
+        "then": {
+          "required": [
+            "id",
+            "case_id",
+            "case_scope_id",
+            "revision",
+            "run_ref",
+            "result_count",
+            "result_status",
+            "historical",
+            "provider_snapshot_refs"
+          ],
+          "additionalProperties": true,
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "case_id": {
+              "const": "DEMO-CTT-001"
+            },
+            "revision": {
+              "type": "integer",
+              "minimum": 1
+            }
+          }
+        }
+      }
+    },
+    "screeningCoverageItems": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "if": {
+          "required": [
+            "source_refs"
+          ],
+          "properties": {
+            "source_refs": {
+              "type": "array",
+              "contains": {
+                "const": "SRC-016"
+              }
+            }
+          }
+        },
+        "then": {
+          "required": [
+            "id",
+            "case_id",
+            "case_scope_id",
+            "revision",
+            "population_ref",
+            "population_revision",
+            "subject_ref",
+            "subject_revision",
+            "category",
+            "query_scope_ref",
+            "applicability",
+            "supporting_run_refs"
+          ],
+          "additionalProperties": true,
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "case_id": {
+              "const": "DEMO-CTT-001"
+            },
+            "revision": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "applicability": {
+              "enum": [
+                "required",
+                "not_required",
+                "unknown"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "providerRecordSnapshots": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "if": {
+          "required": [
+            "source_refs"
+          ],
+          "properties": {
+            "source_refs": {
+              "type": "array",
+              "contains": {
+                "const": "SRC-016"
+              }
+            }
+          }
+        },
+        "then": {
+          "required": [
+            "id",
+            "case_id",
+            "case_scope_id",
+            "revision",
+            "provider_record_ref",
+            "category",
+            "identifier_claim_refs",
+            "record_completeness",
+            "claims"
+          ],
+          "additionalProperties": true,
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "case_id": {
+              "const": "DEMO-CTT-001"
+            },
+            "revision": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "record_completeness": {
+              "enum": [
+                "partial",
+                "complete_as_supplied",
+                "unknown"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "screeningFindings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "if": {
+          "required": [
+            "source_refs"
+          ],
+          "properties": {
+            "source_refs": {
+              "type": "array",
+              "contains": {
+                "const": "SRC-016"
+              }
+            }
+          }
+        },
+        "then": {
+          "required": [
+            "id",
+            "case_id",
+            "case_scope_id",
+            "revision",
+            "subject_ref",
+            "run_ref",
+            "subject_snapshot_ref",
+            "provider_snapshot_ref",
+            "triage_status",
+            "comparison_refs",
+            "decision_ref"
+          ],
+          "additionalProperties": true,
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "case_id": {
+              "const": "DEMO-CTT-001"
+            },
+            "revision": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "triage_status": {
+              "enum": [
+                "new",
+                "prepared",
+                "assigned",
+                "awaiting_information",
+                "under_review",
+                "referred",
+                "resolved"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "attributeComparisons": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "if": {
+          "required": [
+            "source_refs"
+          ],
+          "properties": {
+            "source_refs": {
+              "type": "array",
+              "contains": {
+                "const": "SRC-016"
+              }
+            }
+          }
+        },
+        "then": {
+          "required": [
+            "id",
+            "case_id",
+            "case_scope_id",
+            "revision",
+            "attribute_code",
+            "subject_claim_refs",
+            "provider_claim_refs",
+            "subject_value",
+            "provider_value",
+            "comparison_result",
+            "comparison_basis",
+            "reviewer_status"
+          ],
+          "additionalProperties": true,
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "case_id": {
+              "const": "DEMO-CTT-001"
+            },
+            "revision": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "comparison_result": {
+              "enum": [
+                "similar",
+                "different",
+                "inconclusive",
+                "not_comparable"
+              ]
+            },
+            "reviewer_status": {
+              "enum": [
+                "unreviewed",
+                "reviewed",
+                "disputed"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "screeningReviewDecisions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "if": {
+          "required": [
+            "source_refs"
+          ],
+          "properties": {
+            "source_refs": {
+              "type": "array",
+              "contains": {
+                "const": "SRC-016"
+              }
+            }
+          }
+        },
+        "then": {
+          "required": [
+            "id",
+            "case_id",
+            "case_scope_id",
+            "revision",
+            "finding_ref",
+            "decision_type",
+            "disposition",
+            "decision_status",
+            "rationale",
+            "scope_revision",
+            "population_revision",
+            "subject_revision",
+            "provider_revision",
+            "permission_basis_ref",
+            "expected_input_revision_refs"
+          ],
+          "additionalProperties": true,
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "case_id": {
+              "const": "DEMO-CTT-001"
+            },
+            "revision": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "disposition": {
+              "enum": [
+                "not_same_party_for_inputs",
+                "unresolved",
+                "refer_specialist"
+              ]
+            },
+            "decision_status": {
+              "enum": [
+                "draft",
+                "awaiting_authorisation",
+                "recorded",
+                "superseded"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "screeningReviewDrafts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "if": {
+          "required": [
+            "source_refs"
+          ],
+          "properties": {
+            "source_refs": {
+              "type": "array",
+              "contains": {
+                "const": "SRC-016"
+              }
+            }
+          }
+        },
+        "then": {
+          "required": [
+            "id",
+            "case_id",
+            "case_scope_id",
+            "revision",
+            "finding_ref",
+            "text",
+            "actor_ref",
+            "expected_input_revision_refs"
+          ],
+          "additionalProperties": true,
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "case_id": {
+              "const": "DEMO-CTT-001"
+            },
+            "revision": {
+              "type": "integer",
+              "minimum": 1
+            }
+          }
+        }
+      }
+    },
+    "eddApplicabilityAssessments": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "if": {
+          "required": [
+            "source_refs"
+          ],
+          "properties": {
+            "source_refs": {
+              "type": "array",
+              "contains": {
+                "const": "SRC-016"
+              }
+            }
+          }
+        },
+        "then": {
+          "required": [
+            "id",
+            "case_id",
+            "case_scope_id",
+            "revision",
+            "scope_revision",
+            "trigger_reason_refs",
+            "policy_basis_ref",
+            "applicability",
+            "review_status",
+            "permission_ref",
+            "owner_ref",
+            "question_ref"
+          ],
+          "additionalProperties": true,
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "case_id": {
+              "const": "DEMO-CTT-001"
+            },
+            "revision": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "applicability": {
+              "enum": [
+                "required",
+                "not_required",
+                "unknown"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "eddAssessments": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "if": {
+          "required": [
+            "source_refs"
+          ],
+          "properties": {
+            "source_refs": {
+              "type": "array",
+              "contains": {
+                "const": "SRC-016"
+              }
+            }
+          }
+        },
+        "then": {
+          "required": [
+            "id",
+            "case_id",
+            "case_scope_id",
+            "revision",
+            "applicability_ref",
+            "risk_question_refs",
+            "evidence_pack_revision",
+            "open_issue_refs",
+            "measures",
+            "condition_refs",
+            "approval_refs",
+            "approval_status",
+            "status"
+          ],
+          "additionalProperties": true,
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "case_id": {
+              "const": "DEMO-CTT-001"
+            },
+            "revision": {
+              "type": "integer",
+              "minimum": 1
+            }
+          }
+        }
+      }
+    },
+    "holds": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "if": {
+          "required": [
+            "source_refs"
+          ],
+          "properties": {
+            "source_refs": {
+              "type": "array",
+              "contains": {
+                "const": "SRC-016"
+              }
+            }
+          }
+        },
+        "then": {
+          "required": [
+            "id",
+            "case_id",
+            "case_scope_id",
+            "revision",
+            "object_scope_refs",
+            "action_scope",
+            "basis_ref",
+            "status",
+            "release_condition_ref",
+            "release_decision_ref"
+          ],
+          "additionalProperties": true,
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "case_id": {
+              "const": "DEMO-CTT-001"
+            },
+            "revision": {
+              "type": "integer",
+              "minimum": 1
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "name": "DG-F02.en-AU",
+  "phase": "validate",
+  "exit_code": 1,
+  "receipt": {
+    "schemaVersion": 1,
+    "ok": false,
+    "command": "validate",
+    "stage": "render",
+    "type": "workflow",
+    "input": "/Users/christinaliu/Documents/ChatGPT/Australia Bank/clear-to-trade-product/prototype/diagrams/batch-f/specs/DG-F02.en-AU.json",
+    "error": "Workflow edge \"F02-dependency->F02-unaffected\" has explicit geometry that violates explicit route-route crossing.",
+    "diagnostics": [
+      {
+        "code": "workflow/explicit-pin-conflict",
+        "severity": "error",
+        "message": "Workflow edge \"F02-dependency->F02-unaffected\" has explicit geometry that violates explicit route-route crossing.",
+        "subject": {
+          "diagramType": "workflow",
+          "edge": null,
+          "from": "F02-dependency",
+          "to": "F02-unaffected",
+          "path": "/edges/10/via"
+        },
+        "evidence": {
+          "invariant": "explicit route-route crossing",
+          "conflictingPins": [
+            {
+              "edge": "F02-dependency->F02-unaffected",
+              "field": "via",
+              "path": "/edges/10/via",
+              "value": [
+                [
+                  346,
+                  20
+                ],
+                [
+                  900,
+                  20
+                ],
+                [
+                  900,
+                  394
+                ],
+                [
+                  346,
+                  394
+                ]
+              ]
+            }
+          ],
+          "point": [
+            742,
+            394
+          ],
+          "segmentIndex": 3,
+          "otherSegmentIndex": 0,
+          "routeSegments": [
+            {
+              "edge": null,
+              "from": [
+                900,
+                394
+              ],
+              "to": [
+                346,
+                394
+              ]
+            },
+            {
+              "edge": null,
+              "from": [
+                742,
+                344
+              ],
+              "to": [
+                742,
+                452
+              ]
+            }
+          ],
+          "sourceRouteSegments": [
+            {
+              "edge": null,
+              "from": [
+                900,
+                394
+              ],
+              "to": [
+                346,
+                394
+              ]
+            },
+            {
+              "edge": null,
+              "from": [
+                742,
+                344
+              ],
+              "to": [
+                742,
+                452
+              ]
+            }
+          ]
+        },
+        "supportedFixes": []
+      }
+    ]
+  }
+}

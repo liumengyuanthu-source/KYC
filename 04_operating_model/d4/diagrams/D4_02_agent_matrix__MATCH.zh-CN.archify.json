@@ -1,0 +1,123 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "能力复用 · 责任仍然分开",
+    "locale": "zh-CN",
+    "animation": "none",
+    "quality_profile": "showcase",
+    "viewBox": [
+      1080,
+      640
+    ],
+    "legend": {
+      "mode": "hidden"
+    }
+  },
+  "components": [
+    {
+      "id": "SK-03",
+      "type": "frontend",
+      "label": "比较识别信息",
+      "sublabel": "已选声明 + 合成记录 + 来源版本",
+      "pos": [
+        60,
+        95
+      ],
+      "size": [
+        355,
+        96
+      ]
+    },
+    {
+      "id": "comparison",
+      "type": "frontend",
+      "label": "带出处的属性对照",
+      "sublabel": "缺出生日期不等于日期不同",
+      "pos": [
+        665,
+        95
+      ],
+      "size": [
+        355,
+        96
+      ]
+    },
+    {
+      "id": "SK-06",
+      "type": "frontend",
+      "label": "准备复核材料",
+      "sublabel": "事实、未知、矛盾与允许动作",
+      "pos": [
+        60,
+        275
+      ],
+      "size": [
+        355,
+        96
+      ]
+    },
+    {
+      "id": "reviewer",
+      "type": "frontend",
+      "label": "有权复核人员",
+      "sublabel": "能力支持 · 人承担判断",
+      "pos": [
+        665,
+        275
+      ],
+      "size": [
+        355,
+        96
+      ]
+    },
+    {
+      "id": "reuse",
+      "type": "frontend",
+      "label": "复用能力家族",
+      "sublabel": "沿用原动作与能力引用",
+      "pos": [
+        60,
+        455
+      ],
+      "size": [
+        355,
+        96
+      ]
+    },
+    {
+      "id": "boundary",
+      "type": "frontend",
+      "label": "每项用途独立约束",
+      "sublabel": "不是共享权限或相同专业标准",
+      "pos": [
+        665,
+        455
+      ],
+      "size": [
+        355,
+        96
+      ]
+    }
+  ],
+  "connections": [
+    {
+      "id": "relation-1",
+      "from": "SK-03",
+      "to": "comparison",
+      "label": "产出"
+    },
+    {
+      "id": "relation-2",
+      "from": "SK-06",
+      "to": "reviewer",
+      "label": "支持"
+    },
+    {
+      "id": "relation-3",
+      "from": "reuse",
+      "to": "boundary",
+      "label": "仍受约束"
+    }
+  ]
+}

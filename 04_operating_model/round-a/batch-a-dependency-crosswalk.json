@@ -1,0 +1,281 @@
+[
+  {
+    "source_ref": "SRC-009",
+    "raw_id": "DEP-01",
+    "semantic_relation": "Intake → Conflicts",
+    "canonical_dependency_id": "SRC-010:DEP-01",
+    "runtime_record_ids": [],
+    "source_status": "DESIGN-HYPOTHESIS",
+    "scope": "A uses preparation gates only; other relations retained as interfaces"
+  },
+  {
+    "source_ref": "SRC-010",
+    "raw_id": "DEP-01",
+    "semantic_relation": "Intake → Conflicts",
+    "canonical_dependency_id": "SRC-010:DEP-01",
+    "runtime_record_ids": [],
+    "source_status": "DESIGN-HYPOTHESIS",
+    "scope": "A uses preparation gates only; other relations retained as interfaces"
+  },
+  {
+    "source_ref": "SRC-009",
+    "raw_id": "DEP-02",
+    "semantic_relation": "Entity → preliminary screening",
+    "canonical_dependency_id": "SRC-010:DEP-02",
+    "runtime_record_ids": [],
+    "source_status": "DESIGN-HYPOTHESIS",
+    "scope": "A uses preparation gates only; other relations retained as interfaces"
+  },
+  {
+    "source_ref": "SRC-010",
+    "raw_id": "DEP-02",
+    "semantic_relation": "Entity → preliminary screening",
+    "canonical_dependency_id": "SRC-010:DEP-02",
+    "runtime_record_ids": [],
+    "source_status": "DESIGN-HYPOTHESIS",
+    "scope": "A uses preparation gates only; other relations retained as interfaces"
+  },
+  {
+    "source_ref": "SRC-009",
+    "raw_id": "DEP-02",
+    "semantic_relation": "Population → comprehensive screening",
+    "canonical_dependency_id": "SRC-010:DEP-06",
+    "runtime_record_ids": [],
+    "source_status": "DESIGN-HYPOTHESIS",
+    "scope": "A uses preparation gates only; other relations retained as interfaces"
+  },
+  {
+    "source_ref": "SRC-010",
+    "raw_id": "DEP-06",
+    "semantic_relation": "Population → comprehensive screening",
+    "canonical_dependency_id": "SRC-010:DEP-06",
+    "runtime_record_ids": [],
+    "source_status": "DESIGN-HYPOTHESIS",
+    "scope": "A uses preparation gates only; other relations retained as interfaces"
+  },
+  {
+    "source_ref": "SRC-009",
+    "raw_id": "DEP-03",
+    "semantic_relation": "Scope → Requirements",
+    "canonical_dependency_id": "SRC-010:DEP-03",
+    "runtime_record_ids": [],
+    "source_status": "DESIGN-HYPOTHESIS",
+    "scope": "A uses preparation gates only; other relations retained as interfaces"
+  },
+  {
+    "source_ref": "SRC-010",
+    "raw_id": "DEP-03",
+    "semantic_relation": "Scope → Requirements",
+    "canonical_dependency_id": "SRC-010:DEP-03",
+    "runtime_record_ids": [],
+    "source_status": "DESIGN-HYPOTHESIS",
+    "scope": "A uses preparation gates only; other relations retained as interfaces"
+  },
+  {
+    "source_ref": "SRC-009",
+    "raw_id": "DEP-04",
+    "semantic_relation": "Requirements → retrieval",
+    "canonical_dependency_id": "SRC-010:DEP-04",
+    "runtime_record_ids": [
+      "DEMO-CTT-001/dependency/d2-04-1"
+    ],
+    "source_status": "DESIGN-HYPOTHESIS",
+    "scope": "A uses preparation gates only; other relations retained as interfaces"
+  },
+  {
+    "source_ref": "SRC-010",
+    "raw_id": "DEP-04",
+    "semantic_relation": "Requirements → retrieval",
+    "canonical_dependency_id": "SRC-010:DEP-04",
+    "runtime_record_ids": [
+      "DEMO-CTT-001/dependency/d2-04-1"
+    ],
+    "source_status": "DESIGN-HYPOTHESIS",
+    "scope": "A uses preparation gates only; other relations retained as interfaces"
+  },
+  {
+    "source_ref": "SRC-009",
+    "raw_id": "DEP-04",
+    "semantic_relation": "Evidence gap → residual request",
+    "canonical_dependency_id": "SRC-010:DEP-05",
+    "runtime_record_ids": [
+      "DEMO-CTT-001/dependency/d2-05-2",
+      "DEMO-CTT-001/dependency/d2-05-3"
+    ],
+    "source_status": "DESIGN-HYPOTHESIS",
+    "scope": "A uses preparation gates only; other relations retained as interfaces"
+  },
+  {
+    "source_ref": "SRC-010",
+    "raw_id": "DEP-05",
+    "semantic_relation": "Evidence gap → residual request",
+    "canonical_dependency_id": "SRC-010:DEP-05",
+    "runtime_record_ids": [
+      "DEMO-CTT-001/dependency/d2-05-2",
+      "DEMO-CTT-001/dependency/d2-05-3"
+    ],
+    "source_status": "DESIGN-HYPOTHESIS",
+    "scope": "A uses preparation gates only; other relations retained as interfaces"
+  },
+  {
+    "source_ref": "SRC-009",
+    "raw_id": "DEP-05",
+    "semantic_relation": "Scope → Legal",
+    "canonical_dependency_id": "SRC-010:DEP-09",
+    "runtime_record_ids": [],
+    "source_status": "DESIGN-HYPOTHESIS",
+    "scope": "A uses preparation gates only; other relations retained as interfaces"
+  },
+  {
+    "source_ref": "SRC-010",
+    "raw_id": "DEP-09",
+    "semantic_relation": "Scope → Legal",
+    "canonical_dependency_id": "SRC-010:DEP-09",
+    "runtime_record_ids": [],
+    "source_status": "DESIGN-HYPOTHESIS",
+    "scope": "A uses preparation gates only; other relations retained as interfaces"
+  },
+  {
+    "source_ref": "SRC-009",
+    "raw_id": "DEP-06",
+    "semantic_relation": "Scope → Credit",
+    "canonical_dependency_id": "SRC-010:DEP-10",
+    "runtime_record_ids": [],
+    "source_status": "DESIGN-HYPOTHESIS",
+    "scope": "A uses preparation gates only; other relations retained as interfaces"
+  },
+  {
+    "source_ref": "SRC-010",
+    "raw_id": "DEP-10",
+    "semantic_relation": "Scope → Credit",
+    "canonical_dependency_id": "SRC-010:DEP-10",
+    "runtime_record_ids": [],
+    "source_status": "DESIGN-HYPOTHESIS",
+    "scope": "A uses preparation gates only; other relations retained as interfaces"
+  },
+  {
+    "source_ref": "SRC-009",
+    "raw_id": "DEP-07",
+    "semantic_relation": "Credit → Legal agreement revision",
+    "canonical_dependency_id": "SRC-009:DEP-07",
+    "runtime_record_ids": [],
+    "source_status": "DESIGN-HYPOTHESIS",
+    "scope": "A uses preparation gates only; other relations retained as interfaces"
+  },
+  {
+    "source_ref": "SRC-009",
+    "raw_id": "DEP-08",
+    "semantic_relation": "Finding → human review",
+    "canonical_dependency_id": "SRC-010:DEP-07",
+    "runtime_record_ids": [
+      "DEMO-CTT-001/dependency/d2-07-4"
+    ],
+    "source_status": "DESIGN-HYPOTHESIS",
+    "scope": "A uses preparation gates only; other relations retained as interfaces"
+  },
+  {
+    "source_ref": "SRC-010",
+    "raw_id": "DEP-07",
+    "semantic_relation": "Finding → human review",
+    "canonical_dependency_id": "SRC-010:DEP-07",
+    "runtime_record_ids": [
+      "DEMO-CTT-001/dependency/d2-07-4"
+    ],
+    "source_status": "DESIGN-HYPOTHESIS",
+    "scope": "A uses preparation gates only; other relations retained as interfaces"
+  },
+  {
+    "source_ref": "SRC-009",
+    "raw_id": "DEP-08",
+    "semantic_relation": "Independent risk → EDD",
+    "canonical_dependency_id": "SRC-010:DEP-08",
+    "runtime_record_ids": [],
+    "source_status": "DESIGN-HYPOTHESIS",
+    "scope": "A uses preparation gates only; other relations retained as interfaces"
+  },
+  {
+    "source_ref": "SRC-010",
+    "raw_id": "DEP-08",
+    "semantic_relation": "Independent risk → EDD",
+    "canonical_dependency_id": "SRC-010:DEP-08",
+    "runtime_record_ids": [],
+    "source_status": "DESIGN-HYPOTHESIS",
+    "scope": "A uses preparation gates only; other relations retained as interfaces"
+  },
+  {
+    "source_ref": "SRC-009",
+    "raw_id": "DEP-09",
+    "semantic_relation": "Continuous QA / final sign-off",
+    "canonical_dependency_id": "SRC-009:DEP-09",
+    "runtime_record_ids": [],
+    "source_status": "DESIGN-HYPOTHESIS",
+    "scope": "A uses preparation gates only; other relations retained as interfaces"
+  },
+  {
+    "source_ref": "SRC-009",
+    "raw_id": "DEP-10",
+    "semantic_relation": "QA gap → remediation",
+    "canonical_dependency_id": "SRC-010:DEP-11",
+    "runtime_record_ids": [],
+    "source_status": "DESIGN-HYPOTHESIS",
+    "scope": "A uses preparation gates only; other relations retained as interfaces"
+  },
+  {
+    "source_ref": "SRC-010",
+    "raw_id": "DEP-11",
+    "semantic_relation": "QA gap → remediation",
+    "canonical_dependency_id": "SRC-010:DEP-11",
+    "runtime_record_ids": [],
+    "source_status": "DESIGN-HYPOTHESIS",
+    "scope": "A uses preparation gates only; other relations retained as interfaces"
+  },
+  {
+    "source_ref": "SRC-009",
+    "raw_id": "DEP-11",
+    "semantic_relation": "Conditions → readiness",
+    "canonical_dependency_id": "SRC-010:DEP-12",
+    "runtime_record_ids": [
+      "DEMO-CTT-001/dependency/d2-12-5"
+    ],
+    "source_status": "DESIGN-HYPOTHESIS",
+    "scope": "A uses preparation gates only; other relations retained as interfaces"
+  },
+  {
+    "source_ref": "SRC-010",
+    "raw_id": "DEP-12",
+    "semantic_relation": "Conditions → readiness",
+    "canonical_dependency_id": "SRC-010:DEP-12",
+    "runtime_record_ids": [
+      "DEMO-CTT-001/dependency/d2-12-5"
+    ],
+    "source_status": "DESIGN-HYPOTHESIS",
+    "scope": "A uses preparation gates only; other relations retained as interfaces"
+  },
+  {
+    "source_ref": "SRC-009",
+    "raw_id": "DEP-12",
+    "semantic_relation": "Readiness / authority → publication",
+    "canonical_dependency_id": "SRC-010:DEP-13",
+    "runtime_record_ids": [],
+    "source_status": "DESIGN-HYPOTHESIS",
+    "scope": "A uses preparation gates only; other relations retained as interfaces"
+  },
+  {
+    "source_ref": "SRC-010",
+    "raw_id": "DEP-13",
+    "semantic_relation": "Readiness / authority → publication",
+    "canonical_dependency_id": "SRC-010:DEP-13",
+    "runtime_record_ids": [],
+    "source_status": "DESIGN-HYPOTHESIS",
+    "scope": "A uses preparation gates only; other relations retained as interfaces"
+  },
+  {
+    "source_ref": "SRC-010",
+    "raw_id": "DEP-14",
+    "semantic_relation": "Evidence adequacy change → re-evaluation",
+    "canonical_dependency_id": "SRC-010:DEP-14",
+    "runtime_record_ids": [],
+    "source_status": "DESIGN-HYPOTHESIS",
+    "scope": "A uses preparation gates only; other relations retained as interfaces"
+  }
+]

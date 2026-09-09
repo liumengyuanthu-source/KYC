@@ -1,0 +1,53 @@
+{
+  "at": "2026-09-07T18:05:06.956Z",
+  "browser": "152.0.7977.76",
+  "results": [
+    {
+      "ids": [
+        "D5U-19",
+        "D5U-20",
+        "D5U-23",
+        "D5U-37"
+      ],
+      "name": "layout-preview-cancel-move-collapse",
+      "status": "passed",
+      "screenshot": "prototype/qa/d5/host/layout-preview-cancel-move-collapse.png",
+      "errors": [],
+      "remote": []
+    },
+    {
+      "ids": [
+        "D5U-20",
+        "D5U-39"
+      ],
+      "name": "layout-storage-error-keeps-task-input",
+      "status": "passed",
+      "screenshot": "prototype/qa/d5/host/layout-storage-error-keeps-task-input.png",
+      "errors": [],
+      "remote": []
+    },
+    {
+      "ids": [
+        "D5-43",
+        "D5U-37",
+        "D5U-39"
+      ],
+      "name": "static-dependency-missing-readable-fallback",
+      "status": "passed",
+      "screenshot": "prototype/qa/d5/host/static-dependency-missing-readable-fallback.png",
+      "errors": [],
+      "remote": []
+    },
+    {
+      "ids": [
+        "D5U-20",
+        "D5U-37"
+      ],
+      "name": "layout-collapse-overrides-prior-reading-but-cancel-restores",
+      "status": "passed",
+      "screenshot": "prototype/qa/d5/host/layout-collapse-overrides-prior-reading-but-cancel-restores.png",
+      "errors": [],
+      "remote": []
+    }
+  ]
+}

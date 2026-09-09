@@ -1,0 +1,5467 @@
+{
+  "scenes": [
+    {
+      "id": "SCN-SCOPE",
+      "stage": "Initiate",
+      "name": "Define relationship and business scope",
+      "direction": "Optimize",
+      "pain": "Context can get mixed across emails and teams, so downstream users may act on different assumptions or versions.",
+      "opp": "Keep scope, product intent, eligibility, booking context and revisions explicit so every downstream activity uses the same case context.",
+      "seed": [
+        3,
+        4,
+        4,
+        4,
+        4
+      ],
+      "features": [
+        "Scope summary and revision history",
+        "Product intent vs eligibility",
+        "Booking context and unknowns",
+        "Downstream context links",
+        "Owner and next-action visibility",
+        "Requirement impact notice"
+      ],
+      "title": "Establish the relationship",
+      "owner": "rm",
+      "process": [
+        "SRC-007|p1|SALES / RM (Front Office)|shape20|M1.1|occ1",
+        "SRC-007|p1|CLIENT FULFILMENT / KYC OPS|shape284|M1.2|occ1",
+        "SRC-007|p2|SALES / RM (Front Office)|shape20|M1.1|occ1",
+        "SRC-007|p2|Agentic execution|shape284|M1.2|occ1",
+        "SRC-007|p2|SALES / RM (Front Office)|shape283|M0.1|occ1",
+        "SRC-007|p1|SALES / RM (Front Office)|shape283|M0.1|occ1",
+        "SRC-007|p2|Agentic execution|shape279|M0.1|occ1",
+        "SRC-007|p1|SALES / RM (Front Office)|shape283|M0.2|occ2",
+        "SRC-007|p2|Agentic execution|shape279|M0.2|occ2",
+        "SRC-007|p1|CLIENT FULFILMENT / KYC OPS|shape3|M0.3|occ1",
+        "SRC-007|p1|CLIENT FULFILMENT / KYC OPS|shape18|M2.4|occ4",
+        "SRC-007|p2|Agentic execution|shape279|M0.3|occ3",
+        "SRC-007|p2|Agentic execution|shape18|M2.4|occ4",
+        "SRC-007|p1|CLIENT FULFILMENT / KYC OPS|shape3|M0.4|occ2",
+        "SRC-007|p1|CLIENT FULFILMENT / KYC OPS|shape284|M1.3|occ2",
+        "SRC-007|p2|Agentic execution|shape279|M0.4|occ4",
+        "SRC-007|p2|Agentic execution|shape284|M1.3|occ2"
+      ],
+      "parents": [
+        "D3-SCOPE-01",
+        "D3-SCOPE-02",
+        "D3-SCOPE-03",
+        "D3-SCOPE-04",
+        "D3-SCOPE-05"
+      ],
+      "actions": [
+        "D4A-SCOPE-01-01",
+        "D4A-SCOPE-01-02",
+        "D4A-SCOPE-01-03",
+        "D4A-SCOPE-01-04",
+        "D4A-SCOPE-02-01",
+        "D4A-SCOPE-02-02",
+        "D4A-SCOPE-03-01",
+        "D4A-SCOPE-03-02",
+        "D4A-SCOPE-04-01",
+        "D4A-SCOPE-04-02",
+        "D4A-SCOPE-04-03",
+        "D4A-SCOPE-05-01",
+        "D4A-SCOPE-05-02"
+      ],
+      "principles": [
+        {
+          "change_id": "D3-SCOPE-01",
+          "scenario_id": "SCN-SCOPE",
+          "action_ids": [
+            "D4A-SCOPE-01-01",
+            "D4A-SCOPE-01-02",
+            "D4A-SCOPE-01-03",
+            "D4A-SCOPE-01-04"
+          ],
+          "principle_links": {
+            "WB-P01": "02_Action_Pain_Opp!A5:M5",
+            "WB-P02": [
+              "02_Action_Pain_Opp!K5",
+              "02_Action_Pain_Opp!AC5:AD5"
+            ],
+            "WB-P03": "02_Action_Pain_Opp!N5:R5",
+            "WB-P04": "03_AI_Work_Map!A5:T5",
+            "WB-P05": "05_Feature_List!E5:O5",
+            "WB-P06": [
+              "08_Reference_Mapping!A5:I5",
+              "08_Reference_Mapping!A6:I6",
+              "08_Reference_Mapping!A7:I7",
+              "08_Reference_Mapping!A8:I8"
+            ],
+            "WB-P07": [
+              "06_Research_Cases!L5:M5"
+            ]
+          },
+          "principle_id_status": "WB-P01–07 are new local review handles for workbook README rules, not IDs authored in Excel.",
+          "exact_action_excel_rows": [
+            5,
+            6,
+            7,
+            8
+          ]
+        },
+        {
+          "change_id": "D3-SCOPE-02",
+          "scenario_id": "SCN-SCOPE",
+          "action_ids": [
+            "D4A-SCOPE-02-01",
+            "D4A-SCOPE-02-02"
+          ],
+          "principle_links": {
+            "WB-P01": "02_Action_Pain_Opp!A6:M6",
+            "WB-P02": [
+              "02_Action_Pain_Opp!K6",
+              "02_Action_Pain_Opp!AC6:AD6"
+            ],
+            "WB-P03": "02_Action_Pain_Opp!N6:R6",
+            "WB-P04": "03_AI_Work_Map!A6:T6",
+            "WB-P05": "05_Feature_List!E6:O6",
+            "WB-P06": [
+              "08_Reference_Mapping!A5:I5",
+              "08_Reference_Mapping!A6:I6",
+              "08_Reference_Mapping!A7:I7",
+              "08_Reference_Mapping!A8:I8"
+            ],
+            "WB-P07": [
+              "06_Research_Cases!L5:M5"
+            ]
+          },
+          "principle_id_status": "WB-P01–07 are new local review handles for workbook README rules, not IDs authored in Excel.",
+          "exact_action_excel_rows": [
+            9,
+            10
+          ]
+        },
+        {
+          "change_id": "D3-SCOPE-03",
+          "scenario_id": "SCN-SCOPE",
+          "action_ids": [
+            "D4A-SCOPE-03-01",
+            "D4A-SCOPE-03-02"
+          ],
+          "principle_links": {
+            "WB-P01": "02_Action_Pain_Opp!A7:M7",
+            "WB-P02": [
+              "02_Action_Pain_Opp!K7",
+              "02_Action_Pain_Opp!AC7:AD7"
+            ],
+            "WB-P03": "02_Action_Pain_Opp!N7:R7",
+            "WB-P04": "03_AI_Work_Map!A7:T7",
+            "WB-P05": "05_Feature_List!E7:O7",
+            "WB-P06": [
+              "08_Reference_Mapping!A5:I5",
+              "08_Reference_Mapping!A6:I6",
+              "08_Reference_Mapping!A7:I7",
+              "08_Reference_Mapping!A8:I8"
+            ],
+            "WB-P07": [
+              "06_Research_Cases!L5:M5"
+            ]
+          },
+          "principle_id_status": "WB-P01–07 are new local review handles for workbook README rules, not IDs authored in Excel.",
+          "exact_action_excel_rows": [
+            11,
+            12
+          ]
+        },
+        {
+          "change_id": "D3-SCOPE-04",
+          "scenario_id": "SCN-SCOPE",
+          "action_ids": [
+            "D4A-SCOPE-04-01",
+            "D4A-SCOPE-04-02",
+            "D4A-SCOPE-04-03"
+          ],
+          "principle_links": {
+            "WB-P01": "02_Action_Pain_Opp!A8:M8",
+            "WB-P02": [
+              "02_Action_Pain_Opp!K8",
+              "02_Action_Pain_Opp!AC8:AD8"
+            ],
+            "WB-P03": "02_Action_Pain_Opp!N8:R8",
+            "WB-P04": "03_AI_Work_Map!A8:T8",
+            "WB-P05": "05_Feature_List!E8:O8",
+            "WB-P06": [
+              "08_Reference_Mapping!A5:I5",
+              "08_Reference_Mapping!A6:I6",
+              "08_Reference_Mapping!A7:I7",
+              "08_Reference_Mapping!A8:I8"
+            ],
+            "WB-P07": [
+              "06_Research_Cases!L5:M5"
+            ]
+          },
+          "principle_id_status": "WB-P01–07 are new local review handles for workbook README rules, not IDs authored in Excel.",
+          "exact_action_excel_rows": [
+            13,
+            14,
+            15
+          ]
+        },
+        {
+          "change_id": "D3-SCOPE-05",
+          "scenario_id": "SCN-SCOPE",
+          "action_ids": [
+            "D4A-SCOPE-05-01",
+            "D4A-SCOPE-05-02"
+          ],
+          "principle_links": {
+            "WB-P01": "02_Action_Pain_Opp!A9:M9",
+            "WB-P02": [
+              "02_Action_Pain_Opp!K9",
+              "02_Action_Pain_Opp!AC9:AD9"
+            ],
+            "WB-P03": "02_Action_Pain_Opp!N9:R9",
+            "WB-P04": "03_AI_Work_Map!A9:T9",
+            "WB-P05": "05_Feature_List!E9:O9",
+            "WB-P06": [
+              "08_Reference_Mapping!A5:I5",
+              "08_Reference_Mapping!A6:I6",
+              "08_Reference_Mapping!A7:I7",
+              "08_Reference_Mapping!A8:I8"
+            ],
+            "WB-P07": [
+              "06_Research_Cases!L5:M5"
+            ]
+          },
+          "principle_id_status": "WB-P01–07 are new local review handles for workbook README rules, not IDs authored in Excel.",
+          "exact_action_excel_rows": [
+            16,
+            17
+          ]
+        }
+      ],
+      "fields": [
+        "IntakeArtifact.content",
+        "SourcePermission",
+        "CandidateClaim[]",
+        "CaseSearchScope",
+        "DuplicateCandidate[]",
+        "OriginalRequest",
+        "IntakeLinkDecision",
+        "ExpectedRevision",
+        "Case.request_source_ref",
+        "Case.link_revision",
+        "CaseScope.sales_location",
+        "BookingPolicy.revision",
+        "CandidateBookingEntity",
+        "BookingContextCheck",
+        "ContextGap[]",
+        "BookingContextDecision",
+        "RequestedProduct[]",
+        "EligibilityPolicy.revision",
+        "CaseScope.revision",
+        "ProductEligibilityCheck",
+        "ApprovalContext",
+        "ProductEligibility.decision_ref",
+        "CaseScope",
+        "RiskIndicator[]",
+        "DDPolicy.revision",
+        "DDContext.candidate",
+        "DDContext.unknown_refs",
+        "EvidenceRefs",
+        "DDLevelDecision",
+        "TriggerEvent",
+        "DDContext.revision",
+        "RequirementReassessmentTask",
+        "ScopeDecision",
+        "CaseScope.expected_revision",
+        "ScopeChange",
+        "DependencyEdge[]",
+        "AffectedConsumer[]",
+        "UnknownImpact[]"
+      ],
+      "surfaces": [
+        "PX-02"
+      ],
+      "execution": [
+        "Semantic Skill",
+        "Deterministic Skill",
+        "Human",
+        "Rule"
+      ]
+    },
+    {
+      "id": "SCN-ENTITY",
+      "stage": "Initiate",
+      "name": "Separate entities, relationships and authority",
+      "direction": "Optimize",
+      "pain": "Entity, employer, principal and authority can be blurred together, making it hard to know who is acting for whom and for what purpose.",
+      "opp": "Model entity, relationship, role and purpose-specific authority separately and show the evidence behind each relationship.",
+      "seed": [
+        3,
+        4,
+        4,
+        4,
+        5
+      ],
+      "features": [
+        "Entity relationship graph",
+        "Employer vs principal separation",
+        "Purpose-specific authority",
+        "Authority evidence links",
+        "Contributor access boundary",
+        "Change-impact notice"
+      ],
+      "title": "Separate entity and authority",
+      "owner": "ops",
+      "process": [
+        "SRC-007|p1|CLIENT FULFILMENT / KYC OPS|shape284|M1.4|occ3",
+        "SRC-007|p2|Agentic execution|shape284|M1.4|occ3",
+        "SRC-007|p1|CLIENT FULFILMENT / KYC OPS|shape284|M1.5|occ4",
+        "SRC-007|p2|Agentic execution|shape284|M1.5|occ4",
+        "SRC-007|p2|CLIENT FULFILMENT / KYC OPS — Human in the Loop|shape280|unnumbered|occ1",
+        "SRC-007|p1|CLIENT FULFILMENT / KYC OPS|shape284|M1.4|occ3",
+        "SRC-007|p1|CLIENT FULFILMENT / KYC OPS|shape292|M3.4|occ4",
+        "SRC-007|p2|Agentic execution|shape284|M1.4|occ3",
+        "SRC-007|p2|Agentic execution|shape292|M3.4|occ4",
+        "SRC-007|p1|CLIENT FULFILMENT / KYC OPS|shape284|M1.4|occ3",
+        "SRC-007|p1|CLIENT FULFILMENT / KYC OPS|shape18|M2.1|occ1",
+        "SRC-007|p1|CLIENT FULFILMENT / KYC OPS|shape292|M3.4|occ4",
+        "SRC-007|p2|Agentic execution|shape284|M1.4|occ3",
+        "SRC-007|p2|Agentic execution|shape18|M2.1|occ1",
+        "SRC-007|p2|Agentic execution|shape292|M3.4|occ4",
+        "SRC-007|p1|CLIENT FULFILMENT / KYC OPS|shape18|M2.1|occ1",
+        "SRC-007|p1|CLIENT FULFILMENT / KYC OPS|shape292|M3.4|occ4",
+        "SRC-007|p2|Agentic execution|shape18|M2.1|occ1",
+        "SRC-007|p2|Agentic execution|shape292|M3.4|occ4",
+        "SRC-007|p2|CLIENT FULFILMENT / KYC OPS — Human in the Loop|shape281|unnumbered|occ1",
+        "SRC-007|p1|CLIENT FULFILMENT / KYC OPS|shape284|M1.3|occ2",
+        "SRC-007|p1|CLIENT FULFILMENT / KYC OPS|shape292|M3.3|occ3",
+        "SRC-007|p1|SALES / RM (Front Office)|shape9|M3.3|occ1",
+        "SRC-007|p2|Agentic execution|shape284|M1.3|occ2",
+        "SRC-007|p2|Agentic execution|shape292|M3.3|occ3"
+      ],
+      "parents": [
+        "D3-ENTITY-01",
+        "D3-ENTITY-02",
+        "D3-ENTITY-03",
+        "D3-ENTITY-04",
+        "D3-ENTITY-05",
+        "D3-ENTITY-06"
+      ],
+      "actions": [
+        "D4A-ENTITY-01-01",
+        "D4A-ENTITY-01-02",
+        "D4A-ENTITY-02-01",
+        "D4A-ENTITY-02-02",
+        "D4A-ENTITY-02-03",
+        "D4A-ENTITY-03-01",
+        "D4A-ENTITY-03-02",
+        "D4A-ENTITY-03-03",
+        "D4A-ENTITY-04-01",
+        "D4A-ENTITY-04-02",
+        "D4A-ENTITY-04-03",
+        "D4A-ENTITY-05-01",
+        "D4A-ENTITY-05-02",
+        "D4A-ENTITY-05-03",
+        "D4A-ENTITY-06-01",
+        "D4A-ENTITY-06-02"
+      ],
+      "principles": [
+        {
+          "change_id": "D3-ENTITY-01",
+          "scenario_id": "SCN-ENTITY",
+          "action_ids": [
+            "D4A-ENTITY-01-01",
+            "D4A-ENTITY-01-02"
+          ],
+          "principle_links": {
+            "WB-P01": "02_Action_Pain_Opp!A10:M10",
+            "WB-P02": [
+              "02_Action_Pain_Opp!K10",
+              "02_Action_Pain_Opp!AC10:AD10"
+            ],
+            "WB-P03": "02_Action_Pain_Opp!N10:R10",
+            "WB-P04": "03_AI_Work_Map!A10:T10",
+            "WB-P05": "05_Feature_List!E10:O10",
+            "WB-P06": [
+              "08_Reference_Mapping!A9:I9",
+              "08_Reference_Mapping!A10:I10",
+              "08_Reference_Mapping!A11:I11",
+              "08_Reference_Mapping!A12:I12",
+              "08_Reference_Mapping!A13:I13",
+              "08_Reference_Mapping!A14:I14",
+              "08_Reference_Mapping!A15:I15"
+            ],
+            "WB-P07": [
+              "06_Research_Cases!L5:M5",
+              "06_Research_Cases!L9:M9"
+            ]
+          },
+          "principle_id_status": "WB-P01–07 are new local review handles for workbook README rules, not IDs authored in Excel.",
+          "exact_action_excel_rows": [
+            18,
+            19
+          ]
+        },
+        {
+          "change_id": "D3-ENTITY-02",
+          "scenario_id": "SCN-ENTITY",
+          "action_ids": [
+            "D4A-ENTITY-02-01",
+            "D4A-ENTITY-02-02",
+            "D4A-ENTITY-02-03"
+          ],
+          "principle_links": {
+            "WB-P01": "02_Action_Pain_Opp!A11:M11",
+            "WB-P02": [
+              "02_Action_Pain_Opp!K11",
+              "02_Action_Pain_Opp!AC11:AD11"
+            ],
+            "WB-P03": "02_Action_Pain_Opp!N11:R11",
+            "WB-P04": "03_AI_Work_Map!A11:T11",
+            "WB-P05": "05_Feature_List!E11:O11",
+            "WB-P06": [
+              "08_Reference_Mapping!A9:I9",
+              "08_Reference_Mapping!A10:I10",
+              "08_Reference_Mapping!A11:I11",
+              "08_Reference_Mapping!A12:I12",
+              "08_Reference_Mapping!A13:I13",
+              "08_Reference_Mapping!A14:I14",
+              "08_Reference_Mapping!A15:I15"
+            ],
+            "WB-P07": [
+              "06_Research_Cases!L5:M5",
+              "06_Research_Cases!L9:M9"
+            ]
+          },
+          "principle_id_status": "WB-P01–07 are new local review handles for workbook README rules, not IDs authored in Excel.",
+          "exact_action_excel_rows": [
+            20,
+            21,
+            22
+          ]
+        },
+        {
+          "change_id": "D3-ENTITY-03",
+          "scenario_id": "SCN-ENTITY",
+          "action_ids": [
+            "D4A-ENTITY-03-01",
+            "D4A-ENTITY-03-02",
+            "D4A-ENTITY-03-03"
+          ],
+          "principle_links": {
+            "WB-P01": "02_Action_Pain_Opp!A12:M12",
+            "WB-P02": [
+              "02_Action_Pain_Opp!K12",
+              "02_Action_Pain_Opp!AC12:AD12"
+            ],
+            "WB-P03": "02_Action_Pain_Opp!N12:R12",
+            "WB-P04": "03_AI_Work_Map!A12:T12",
+            "WB-P05": "05_Feature_List!E12:O12",
+            "WB-P06": [
+              "08_Reference_Mapping!A9:I9",
+              "08_Reference_Mapping!A10:I10",
+              "08_Reference_Mapping!A11:I11",
+              "08_Reference_Mapping!A12:I12",
+              "08_Reference_Mapping!A13:I13",
+              "08_Reference_Mapping!A14:I14",
+              "08_Reference_Mapping!A15:I15"
+            ],
+            "WB-P07": [
+              "06_Research_Cases!L5:M5",
+              "06_Research_Cases!L9:M9"
+            ]
+          },
+          "principle_id_status": "WB-P01–07 are new local review handles for workbook README rules, not IDs authored in Excel.",
+          "exact_action_excel_rows": [
+            23,
+            24,
+            25
+          ]
+        },
+        {
+          "change_id": "D3-ENTITY-04",
+          "scenario_id": "SCN-ENTITY",
+          "action_ids": [
+            "D4A-ENTITY-04-01",
+            "D4A-ENTITY-04-02",
+            "D4A-ENTITY-04-03"
+          ],
+          "principle_links": {
+            "WB-P01": "02_Action_Pain_Opp!A13:M13",
+            "WB-P02": [
+              "02_Action_Pain_Opp!K13",
+              "02_Action_Pain_Opp!AC13:AD13"
+            ],
+            "WB-P03": "02_Action_Pain_Opp!N13:R13",
+            "WB-P04": "03_AI_Work_Map!A13:T13",
+            "WB-P05": "05_Feature_List!E13:O13",
+            "WB-P06": [
+              "08_Reference_Mapping!A9:I9",
+              "08_Reference_Mapping!A10:I10",
+              "08_Reference_Mapping!A11:I11",
+              "08_Reference_Mapping!A12:I12",
+              "08_Reference_Mapping!A13:I13",
+              "08_Reference_Mapping!A14:I14",
+              "08_Reference_Mapping!A15:I15"
+            ],
+            "WB-P07": [
+              "06_Research_Cases!L5:M5",
+              "06_Research_Cases!L9:M9"
+            ]
+          },
+          "principle_id_status": "WB-P01–07 are new local review handles for workbook README rules, not IDs authored in Excel.",
+          "exact_action_excel_rows": [
+            26,
+            27,
+            28
+          ]
+        },
+        {
+          "change_id": "D3-ENTITY-05",
+          "scenario_id": "SCN-ENTITY",
+          "action_ids": [
+            "D4A-ENTITY-05-01",
+            "D4A-ENTITY-05-02",
+            "D4A-ENTITY-05-03"
+          ],
+          "principle_links": {
+            "WB-P01": "02_Action_Pain_Opp!A14:M14",
+            "WB-P02": [
+              "02_Action_Pain_Opp!K14",
+              "02_Action_Pain_Opp!AC14:AD14"
+            ],
+            "WB-P03": "02_Action_Pain_Opp!N14:R14",
+            "WB-P04": "03_AI_Work_Map!A14:T14",
+            "WB-P05": "05_Feature_List!E14:O14",
+            "WB-P06": [
+              "08_Reference_Mapping!A9:I9",
+              "08_Reference_Mapping!A10:I10",
+              "08_Reference_Mapping!A11:I11",
+              "08_Reference_Mapping!A12:I12",
+              "08_Reference_Mapping!A13:I13",
+              "08_Reference_Mapping!A14:I14",
+              "08_Reference_Mapping!A15:I15"
+            ],
+            "WB-P07": [
+              "06_Research_Cases!L5:M5",
+              "06_Research_Cases!L9:M9"
+            ]
+          },
+          "principle_id_status": "WB-P01–07 are new local review handles for workbook README rules, not IDs authored in Excel.",
+          "exact_action_excel_rows": [
+            29,
+            30,
+            31
+          ]
+        },
+        {
+          "change_id": "D3-ENTITY-06",
+          "scenario_id": "SCN-ENTITY",
+          "action_ids": [
+            "D4A-ENTITY-06-01",
+            "D4A-ENTITY-06-02"
+          ],
+          "principle_links": {
+            "WB-P01": "02_Action_Pain_Opp!A15:M15",
+            "WB-P02": [
+              "02_Action_Pain_Opp!K15",
+              "02_Action_Pain_Opp!AC15:AD15"
+            ],
+            "WB-P03": "02_Action_Pain_Opp!N15:R15",
+            "WB-P04": "03_AI_Work_Map!A15:T15",
+            "WB-P05": "05_Feature_List!E15:O15",
+            "WB-P06": [
+              "08_Reference_Mapping!A9:I9",
+              "08_Reference_Mapping!A10:I10",
+              "08_Reference_Mapping!A11:I11",
+              "08_Reference_Mapping!A12:I12",
+              "08_Reference_Mapping!A13:I13",
+              "08_Reference_Mapping!A14:I14",
+              "08_Reference_Mapping!A15:I15"
+            ],
+            "WB-P07": [
+              "06_Research_Cases!L5:M5",
+              "06_Research_Cases!L9:M9"
+            ]
+          },
+          "principle_id_status": "WB-P01–07 are new local review handles for workbook README rules, not IDs authored in Excel.",
+          "exact_action_excel_rows": [
+            32,
+            33
+          ]
+        }
+      ],
+      "fields": [
+        "PartyClaims[]",
+        "RegistrySnapshot",
+        "EntityMatchCandidate[]",
+        "EvidenceRefs",
+        "EntityIdentityDecision",
+        "EntityClaims",
+        "ClassificationRules.revision",
+        "EntityClassificationCandidate",
+        "PartyRelationship[]",
+        "ClassificationReviewPack",
+        "EntityClassification.decision_ref",
+        "OwnershipArtifact",
+        "EntityRefs",
+        "RelationshipClaim[]",
+        "VerificationBasis",
+        "PartyRelationship.verification_ref",
+        "RelationshipDecision",
+        "PartyRelationship.revision",
+        "Request",
+        "RoleLetter",
+        "PartyRegistry",
+        "RepresentativeCandidate",
+        "OriginalRequest",
+        "RepresentativeClarification",
+        "PartyRefs",
+        "Person.ref",
+        "Representative.ref",
+        "AuthorityRequirement[]",
+        "RoleClaims",
+        "EvidenceUse[]",
+        "AuthorityEvidenceMatrix",
+        "ApplicableCriteria",
+        "AuthorityDecision",
+        "ExpectedRevision",
+        "AuthorityRecord.revision",
+        "ContactCheck",
+        "RequestedResources",
+        "DisclosurePolicy",
+        "RequestAccessDecision",
+        "ActorSession",
+        "AccessGrant",
+        "AllowedResourceProjection"
+      ],
+      "surfaces": [
+        "PX-02"
+      ],
+      "execution": [
+        "Semantic Skill",
+        "Human",
+        "Rule"
+      ]
+    },
+    {
+      "id": "SCN-REQUIREMENTS",
+      "stage": "Determine",
+      "name": "Build an explainable requirement set",
+      "direction": "Optimize",
+      "pain": "Requirement and exception logic can be scattered, making it hard to explain why something is required, optional or still unknown.",
+      "opp": "Make applicability, rationale, policy version, exceptions and remaining unknowns explicit and traceable.",
+      "seed": [
+        3,
+        4,
+        4,
+        4,
+        5
+      ],
+      "features": [
+        "Requirement applicability view",
+        "Policy-version reference",
+        "Relief / exemption workflow",
+        "Unknown-state handling",
+        "Requirement-to-evidence links",
+        "Requirement change impact"
+      ],
+      "title": "Determine applicable requirements",
+      "owner": "manager",
+      "process": [
+        "SRC-007|p1|CLIENT FULFILMENT / KYC OPS|shape18|M2.1|occ1",
+        "SRC-007|p2|Agentic execution|shape18|M2.1|occ1",
+        "SRC-007|p1|CLIENT FULFILMENT / KYC OPS|shape18|M2.2|occ2",
+        "SRC-007|p2|Agentic execution|shape18|M2.2|occ2",
+        "SRC-007|p1|CLIENT FULFILMENT / KYC OPS|shape18|M2.3|occ3",
+        "SRC-007|p2|Agentic execution|shape18|M2.3|occ3",
+        "SRC-007|p1|CLIENT FULFILMENT / KYC OPS|shape18|M2.4|occ4",
+        "SRC-007|p2|Agentic execution|shape18|M2.4|occ4",
+        "SRC-007|p1|CLIENT FULFILMENT / KYC OPS|shape291|M2.5|occ1",
+        "SRC-007|p1|CLIENT FULFILMENT / KYC OPS|shape292|M3.3|occ3",
+        "SRC-007|p1|SALES / RM (Front Office)|shape9|M3.3|occ1",
+        "SRC-007|p2|Agentic execution|shape18|M2.5|occ5",
+        "SRC-007|p2|Agentic execution|shape292|M3.3|occ3",
+        "SRC-007|p1|CLIENT FULFILMENT / KYC OPS|shape18|M2.1|occ1",
+        "SRC-007|p1|CLIENT FULFILMENT / KYC OPS|shape18|M2.3|occ3",
+        "SRC-007|p1|CLIENT FULFILMENT / KYC OPS|shape3|M0.4|occ2",
+        "SRC-007|p2|Agentic execution|shape18|M2.1|occ1",
+        "SRC-007|p2|Agentic execution|shape18|M2.3|occ3",
+        "SRC-007|p2|Agentic execution|shape279|M0.4|occ4"
+      ],
+      "parents": [
+        "D3-REQUIREMENTS-01",
+        "D3-REQUIREMENTS-02",
+        "D3-REQUIREMENTS-03",
+        "D3-REQUIREMENTS-04",
+        "D3-REQUIREMENTS-05",
+        "D3-REQUIREMENTS-06"
+      ],
+      "actions": [
+        "D4A-REQUIREMENTS-01-01",
+        "D4A-REQUIREMENTS-01-02",
+        "D4A-REQUIREMENTS-01-03",
+        "D4A-REQUIREMENTS-02-01",
+        "D4A-REQUIREMENTS-02-02",
+        "D4A-REQUIREMENTS-02-03",
+        "D4A-REQUIREMENTS-03-01",
+        "D4A-REQUIREMENTS-03-02",
+        "D4A-REQUIREMENTS-04-01",
+        "D4A-REQUIREMENTS-04-02",
+        "D4A-REQUIREMENTS-04-03",
+        "D4A-REQUIREMENTS-05-01",
+        "D4A-REQUIREMENTS-05-02",
+        "D4A-REQUIREMENTS-05-03",
+        "D4A-REQUIREMENTS-06-01",
+        "D4A-REQUIREMENTS-06-02",
+        "D4A-REQUIREMENTS-06-03"
+      ],
+      "principles": [
+        {
+          "change_id": "D3-REQUIREMENTS-01",
+          "scenario_id": "SCN-REQUIREMENTS",
+          "action_ids": [
+            "D4A-REQUIREMENTS-01-01",
+            "D4A-REQUIREMENTS-01-02",
+            "D4A-REQUIREMENTS-01-03"
+          ],
+          "principle_links": {
+            "WB-P01": "02_Action_Pain_Opp!A16:M16",
+            "WB-P02": [
+              "02_Action_Pain_Opp!K16",
+              "02_Action_Pain_Opp!AC16:AD16"
+            ],
+            "WB-P03": "02_Action_Pain_Opp!N16:R16",
+            "WB-P04": "03_AI_Work_Map!A16:T16",
+            "WB-P05": "05_Feature_List!E16:O16",
+            "WB-P06": [
+              "08_Reference_Mapping!A16:I16",
+              "08_Reference_Mapping!A17:I17",
+              "08_Reference_Mapping!A18:I18",
+              "08_Reference_Mapping!A19:I19",
+              "08_Reference_Mapping!A20:I20",
+              "08_Reference_Mapping!A21:I21",
+              "08_Reference_Mapping!A22:I22",
+              "08_Reference_Mapping!A23:I23",
+              "08_Reference_Mapping!A24:I24",
+              "08_Reference_Mapping!A25:I25"
+            ],
+            "WB-P07": [
+              "06_Research_Cases!L5:M5",
+              "06_Research_Cases!L8:M8",
+              "06_Research_Cases!L9:M9"
+            ]
+          },
+          "principle_id_status": "WB-P01–07 are new local review handles for workbook README rules, not IDs authored in Excel.",
+          "exact_action_excel_rows": [
+            34,
+            35,
+            36
+          ]
+        },
+        {
+          "change_id": "D3-REQUIREMENTS-02",
+          "scenario_id": "SCN-REQUIREMENTS",
+          "action_ids": [
+            "D4A-REQUIREMENTS-02-01",
+            "D4A-REQUIREMENTS-02-02",
+            "D4A-REQUIREMENTS-02-03"
+          ],
+          "principle_links": {
+            "WB-P01": "02_Action_Pain_Opp!A17:M17",
+            "WB-P02": [
+              "02_Action_Pain_Opp!K17",
+              "02_Action_Pain_Opp!AC17:AD17"
+            ],
+            "WB-P03": "02_Action_Pain_Opp!N17:R17",
+            "WB-P04": "03_AI_Work_Map!A17:T17",
+            "WB-P05": "05_Feature_List!E17:O17",
+            "WB-P06": [
+              "08_Reference_Mapping!A16:I16",
+              "08_Reference_Mapping!A17:I17",
+              "08_Reference_Mapping!A18:I18",
+              "08_Reference_Mapping!A19:I19",
+              "08_Reference_Mapping!A20:I20",
+              "08_Reference_Mapping!A21:I21",
+              "08_Reference_Mapping!A22:I22",
+              "08_Reference_Mapping!A23:I23",
+              "08_Reference_Mapping!A24:I24",
+              "08_Reference_Mapping!A25:I25"
+            ],
+            "WB-P07": [
+              "06_Research_Cases!L5:M5",
+              "06_Research_Cases!L8:M8",
+              "06_Research_Cases!L9:M9"
+            ]
+          },
+          "principle_id_status": "WB-P01–07 are new local review handles for workbook README rules, not IDs authored in Excel.",
+          "exact_action_excel_rows": [
+            37,
+            38,
+            39
+          ]
+        },
+        {
+          "change_id": "D3-REQUIREMENTS-03",
+          "scenario_id": "SCN-REQUIREMENTS",
+          "action_ids": [
+            "D4A-REQUIREMENTS-03-01",
+            "D4A-REQUIREMENTS-03-02"
+          ],
+          "principle_links": {
+            "WB-P01": "02_Action_Pain_Opp!A18:M18",
+            "WB-P02": [
+              "02_Action_Pain_Opp!K18",
+              "02_Action_Pain_Opp!AC18:AD18"
+            ],
+            "WB-P03": "02_Action_Pain_Opp!N18:R18",
+            "WB-P04": "03_AI_Work_Map!A18:T18",
+            "WB-P05": "05_Feature_List!E18:O18",
+            "WB-P06": [
+              "08_Reference_Mapping!A16:I16",
+              "08_Reference_Mapping!A17:I17",
+              "08_Reference_Mapping!A18:I18",
+              "08_Reference_Mapping!A19:I19",
+              "08_Reference_Mapping!A20:I20",
+              "08_Reference_Mapping!A21:I21",
+              "08_Reference_Mapping!A22:I22",
+              "08_Reference_Mapping!A23:I23",
+              "08_Reference_Mapping!A24:I24",
+              "08_Reference_Mapping!A25:I25"
+            ],
+            "WB-P07": [
+              "06_Research_Cases!L5:M5",
+              "06_Research_Cases!L8:M8",
+              "06_Research_Cases!L9:M9"
+            ]
+          },
+          "principle_id_status": "WB-P01–07 are new local review handles for workbook README rules, not IDs authored in Excel.",
+          "exact_action_excel_rows": [
+            40,
+            41
+          ]
+        },
+        {
+          "change_id": "D3-REQUIREMENTS-04",
+          "scenario_id": "SCN-REQUIREMENTS",
+          "action_ids": [
+            "D4A-REQUIREMENTS-04-01",
+            "D4A-REQUIREMENTS-04-02",
+            "D4A-REQUIREMENTS-04-03"
+          ],
+          "principle_links": {
+            "WB-P01": "02_Action_Pain_Opp!A19:M19",
+            "WB-P02": [
+              "02_Action_Pain_Opp!K19",
+              "02_Action_Pain_Opp!AC19:AD19"
+            ],
+            "WB-P03": "02_Action_Pain_Opp!N19:R19",
+            "WB-P04": "03_AI_Work_Map!A19:T19",
+            "WB-P05": "05_Feature_List!E19:O19",
+            "WB-P06": [
+              "08_Reference_Mapping!A16:I16",
+              "08_Reference_Mapping!A17:I17",
+              "08_Reference_Mapping!A18:I18",
+              "08_Reference_Mapping!A19:I19",
+              "08_Reference_Mapping!A20:I20",
+              "08_Reference_Mapping!A21:I21",
+              "08_Reference_Mapping!A22:I22",
+              "08_Reference_Mapping!A23:I23",
+              "08_Reference_Mapping!A24:I24",
+              "08_Reference_Mapping!A25:I25"
+            ],
+            "WB-P07": [
+              "06_Research_Cases!L5:M5",
+              "06_Research_Cases!L8:M8",
+              "06_Research_Cases!L9:M9"
+            ]
+          },
+          "principle_id_status": "WB-P01–07 are new local review handles for workbook README rules, not IDs authored in Excel.",
+          "exact_action_excel_rows": [
+            42,
+            43,
+            44
+          ]
+        },
+        {
+          "change_id": "D3-REQUIREMENTS-05",
+          "scenario_id": "SCN-REQUIREMENTS",
+          "action_ids": [
+            "D4A-REQUIREMENTS-05-01",
+            "D4A-REQUIREMENTS-05-02",
+            "D4A-REQUIREMENTS-05-03"
+          ],
+          "principle_links": {
+            "WB-P01": "02_Action_Pain_Opp!A20:M20",
+            "WB-P02": [
+              "02_Action_Pain_Opp!K20",
+              "02_Action_Pain_Opp!AC20:AD20"
+            ],
+            "WB-P03": "02_Action_Pain_Opp!N20:R20",
+            "WB-P04": "03_AI_Work_Map!A20:T20",
+            "WB-P05": "05_Feature_List!E20:O20",
+            "WB-P06": [
+              "08_Reference_Mapping!A16:I16",
+              "08_Reference_Mapping!A17:I17",
+              "08_Reference_Mapping!A18:I18",
+              "08_Reference_Mapping!A19:I19",
+              "08_Reference_Mapping!A20:I20",
+              "08_Reference_Mapping!A21:I21",
+              "08_Reference_Mapping!A22:I22",
+              "08_Reference_Mapping!A23:I23",
+              "08_Reference_Mapping!A24:I24",
+              "08_Reference_Mapping!A25:I25"
+            ],
+            "WB-P07": [
+              "06_Research_Cases!L5:M5",
+              "06_Research_Cases!L8:M8",
+              "06_Research_Cases!L9:M9"
+            ]
+          },
+          "principle_id_status": "WB-P01–07 are new local review handles for workbook README rules, not IDs authored in Excel.",
+          "exact_action_excel_rows": [
+            45,
+            46,
+            47
+          ]
+        },
+        {
+          "change_id": "D3-REQUIREMENTS-06",
+          "scenario_id": "SCN-REQUIREMENTS",
+          "action_ids": [
+            "D4A-REQUIREMENTS-06-01",
+            "D4A-REQUIREMENTS-06-02",
+            "D4A-REQUIREMENTS-06-03"
+          ],
+          "principle_links": {
+            "WB-P01": "02_Action_Pain_Opp!A21:M21",
+            "WB-P02": [
+              "02_Action_Pain_Opp!K21",
+              "02_Action_Pain_Opp!AC21:AD21"
+            ],
+            "WB-P03": "02_Action_Pain_Opp!N21:R21",
+            "WB-P04": "03_AI_Work_Map!A21:T21",
+            "WB-P05": "05_Feature_List!E21:O21",
+            "WB-P06": [
+              "08_Reference_Mapping!A16:I16",
+              "08_Reference_Mapping!A17:I17",
+              "08_Reference_Mapping!A18:I18",
+              "08_Reference_Mapping!A19:I19",
+              "08_Reference_Mapping!A20:I20",
+              "08_Reference_Mapping!A21:I21",
+              "08_Reference_Mapping!A22:I22",
+              "08_Reference_Mapping!A23:I23",
+              "08_Reference_Mapping!A24:I24",
+              "08_Reference_Mapping!A25:I25"
+            ],
+            "WB-P07": [
+              "06_Research_Cases!L5:M5",
+              "06_Research_Cases!L8:M8",
+              "06_Research_Cases!L9:M9"
+            ]
+          },
+          "principle_id_status": "WB-P01–07 are new local review handles for workbook README rules, not IDs authored in Excel.",
+          "exact_action_excel_rows": [
+            48,
+            49,
+            50
+          ]
+        }
+      ],
+      "fields": [
+        "CaseScope",
+        "ApprovedPolicyCatalogue",
+        "PolicyExcerpt[]",
+        "ScopeInputs",
+        "PolicyRules.revision",
+        "RequirementApplicability[]",
+        "ReliefDecision",
+        "NonAMLRuleSet",
+        "NonAMLRequirement[]",
+        "OpenApplicability[]",
+        "ExpertContext",
+        "ExemptionDecision",
+        "RequirementRefs",
+        "RequirementDecisionLink",
+        "RequirementCandidate[]",
+        "RequirementGroupingProposal",
+        "AcceptedRequirement[]",
+        "ScopeRevision",
+        "RequirementSet.revision",
+        "OriginLinks",
+        "RiskEvent",
+        "PolicyRuleSet",
+        "DependencyEdge[]",
+        "RequirementReassessmentProposal",
+        "RiskEvidence",
+        "RiskAdjustmentDecision",
+        "RequirementChange",
+        "ReviewTask[]",
+        "AllowedRequirementProjection",
+        "ApprovedResponseOptions",
+        "ClientRequestDraft",
+        "DisclosurePolicy",
+        "RequestReviewDecision",
+        "ApprovedRequestRevision",
+        "AllowedRecipient",
+        "NotificationDispatch",
+        "DeliveryObservation",
+        "ScopeChange",
+        "RequirementSet",
+        "KnownImpact",
+        "UnknownImpact",
+        "AllowedSkills",
+        "CaseReadContext",
+        "ReassessmentPlanProposal",
+        "CurrencyEvidence",
+        "RequirementReuseDecision"
+      ],
+      "surfaces": [
+        "PX-03"
+      ],
+      "execution": [
+        "Deterministic Skill",
+        "Rule",
+        "Human",
+        "Semantic Skill",
+        "Bounded Agent candidate"
+      ]
+    },
+    {
+      "id": "SCN-SOURCE",
+      "stage": "Determine",
+      "name": "Reuse permitted sources before asking again",
+      "direction": "Optimize",
+      "pain": "Teams may repeat searches or reuse information without a clear source, timestamp or purpose.",
+      "opp": "Reuse permitted information first while preserving source, time, version and intended use; make failures and unknowns visible.",
+      "seed": [
+        4,
+        4,
+        4,
+        5,
+        5
+      ],
+      "features": [
+        "Permitted-source retrieval",
+        "Source timestamp and version",
+        "Claim extraction with provenance",
+        "Duplicate candidate detection",
+        "Source failure state",
+        "Evidence-use suggestion"
+      ],
+      "title": "Reuse permitted evidence",
+      "owner": "ops",
+      "process": [
+        "SRC-007|p1|CLIENT FULFILMENT / KYC OPS|shape292|M3.1|occ1",
+        "SRC-007|p2|Agentic execution|shape292|M3.1|occ1",
+        "SRC-007|p1|CLIENT FULFILMENT / KYC OPS|shape292|M3.1|occ1",
+        "SRC-007|p1|CLIENT FULFILMENT / KYC OPS|shape292|M3.5|occ5",
+        "SRC-007|p2|Agentic execution|shape292|M3.1|occ1",
+        "SRC-007|p2|Agentic execution|shape292|M3.5|occ5",
+        "SRC-007|p1|CLIENT FULFILMENT / KYC OPS|shape292|M3.1|occ1",
+        "SRC-007|p1|CLIENT FULFILMENT / KYC OPS|shape292|M3.4|occ4",
+        "SRC-007|p2|Agentic execution|shape292|M3.1|occ1",
+        "SRC-007|p2|Agentic execution|shape292|M3.4|occ4",
+        "SRC-007|p1|CLIENT FULFILMENT / KYC OPS|shape292|M3.1|occ1",
+        "SRC-007|p1|CLIENT FULFILMENT / KYC OPS|shape292|M3.2|occ2",
+        "SRC-007|p2|Agentic execution|shape292|M3.1|occ1",
+        "SRC-007|p2|Agentic execution|shape292|M3.2|occ2",
+        "SRC-007|p1|CLIENT FULFILMENT / KYC OPS|shape292|M3.1|occ1",
+        "SRC-007|p1|CLIENT FULFILMENT / KYC OPS|shape292|M3.5|occ5",
+        "SRC-007|p2|Agentic execution|shape292|M3.1|occ1",
+        "SRC-007|p2|Agentic execution|shape292|M3.5|occ5",
+        "SRC-007|p1|CLIENT FULFILMENT / KYC OPS|shape292|M3.2|occ2",
+        "SRC-007|p1|CLIENT FULFILMENT / KYC OPS|shape292|M3.4|occ4",
+        "SRC-007|p2|Agentic execution|shape292|M3.2|occ2",
+        "SRC-007|p2|Agentic execution|shape292|M3.4|occ4"
+      ],
+      "parents": [
+        "D3-SOURCE-01",
+        "D3-SOURCE-02",
+        "D3-SOURCE-03",
+        "D3-SOURCE-04",
+        "D3-SOURCE-05",
+        "D3-SOURCE-06"
+      ],
+      "actions": [
+        "D4A-SOURCE-01-01",
+        "D4A-SOURCE-01-02",
+        "D4A-SOURCE-01-03",
+        "D4A-SOURCE-02-01",
+        "D4A-SOURCE-02-02",
+        "D4A-SOURCE-03-01",
+        "D4A-SOURCE-03-02",
+        "D4A-SOURCE-04-01",
+        "D4A-SOURCE-04-02",
+        "D4A-SOURCE-04-03",
+        "D4A-SOURCE-05-01",
+        "D4A-SOURCE-05-02",
+        "D4A-SOURCE-06-01",
+        "D4A-SOURCE-06-02"
+      ],
+      "principles": [
+        {
+          "change_id": "D3-SOURCE-01",
+          "scenario_id": "SCN-SOURCE",
+          "action_ids": [
+            "D4A-SOURCE-01-01",
+            "D4A-SOURCE-01-02",
+            "D4A-SOURCE-01-03"
+          ],
+          "principle_links": {
+            "WB-P01": "02_Action_Pain_Opp!A22:M22",
+            "WB-P02": [
+              "02_Action_Pain_Opp!K22",
+              "02_Action_Pain_Opp!AC22:AD22"
+            ],
+            "WB-P03": "02_Action_Pain_Opp!N22:R22",
+            "WB-P04": "03_AI_Work_Map!A22:T22",
+            "WB-P05": "05_Feature_List!E22:O22",
+            "WB-P06": [
+              "08_Reference_Mapping!A26:I26",
+              "08_Reference_Mapping!A27:I27",
+              "08_Reference_Mapping!A28:I28",
+              "08_Reference_Mapping!A29:I29",
+              "08_Reference_Mapping!A30:I30",
+              "08_Reference_Mapping!A31:I31",
+              "08_Reference_Mapping!A32:I32"
+            ],
+            "WB-P07": [
+              "06_Research_Cases!L5:M5",
+              "06_Research_Cases!L8:M8"
+            ]
+          },
+          "principle_id_status": "WB-P01–07 are new local review handles for workbook README rules, not IDs authored in Excel.",
+          "exact_action_excel_rows": [
+            51,
+            52,
+            53
+          ]
+        },
+        {
+          "change_id": "D3-SOURCE-02",
+          "scenario_id": "SCN-SOURCE",
+          "action_ids": [
+            "D4A-SOURCE-02-01",
+            "D4A-SOURCE-02-02"
+          ],
+          "principle_links": {
+            "WB-P01": "02_Action_Pain_Opp!A23:M23",
+            "WB-P02": [
+              "02_Action_Pain_Opp!K23",
+              "02_Action_Pain_Opp!AC23:AD23"
+            ],
+            "WB-P03": "02_Action_Pain_Opp!N23:R23",
+            "WB-P04": "03_AI_Work_Map!A23:T23",
+            "WB-P05": "05_Feature_List!E23:O23",
+            "WB-P06": [
+              "08_Reference_Mapping!A26:I26",
+              "08_Reference_Mapping!A27:I27",
+              "08_Reference_Mapping!A28:I28",
+              "08_Reference_Mapping!A29:I29",
+              "08_Reference_Mapping!A30:I30",
+              "08_Reference_Mapping!A31:I31",
+              "08_Reference_Mapping!A32:I32"
+            ],
+            "WB-P07": [
+              "06_Research_Cases!L5:M5",
+              "06_Research_Cases!L8:M8"
+            ]
+          },
+          "principle_id_status": "WB-P01–07 are new local review handles for workbook README rules, not IDs authored in Excel.",
+          "exact_action_excel_rows": [
+            54,
+            55
+          ]
+        },
+        {
+          "change_id": "D3-SOURCE-03",
+          "scenario_id": "SCN-SOURCE",
+          "action_ids": [
+            "D4A-SOURCE-03-01",
+            "D4A-SOURCE-03-02"
+          ],
+          "principle_links": {
+            "WB-P01": "02_Action_Pain_Opp!A24:M24",
+            "WB-P02": [
+              "02_Action_Pain_Opp!K24",
+              "02_Action_Pain_Opp!AC24:AD24"
+            ],
+            "WB-P03": "02_Action_Pain_Opp!N24:R24",
+            "WB-P04": "03_AI_Work_Map!A24:T24",
+            "WB-P05": "05_Feature_List!E24:O24",
+            "WB-P06": [
+              "08_Reference_Mapping!A26:I26",
+              "08_Reference_Mapping!A27:I27",
+              "08_Reference_Mapping!A28:I28",
+              "08_Reference_Mapping!A29:I29",
+              "08_Reference_Mapping!A30:I30",
+              "08_Reference_Mapping!A31:I31",
+              "08_Reference_Mapping!A32:I32"
+            ],
+            "WB-P07": [
+              "06_Research_Cases!L5:M5",
+              "06_Research_Cases!L8:M8"
+            ]
+          },
+          "principle_id_status": "WB-P01–07 are new local review handles for workbook README rules, not IDs authored in Excel.",
+          "exact_action_excel_rows": [
+            56,
+            57
+          ]
+        },
+        {
+          "change_id": "D3-SOURCE-04",
+          "scenario_id": "SCN-SOURCE",
+          "action_ids": [
+            "D4A-SOURCE-04-01",
+            "D4A-SOURCE-04-02",
+            "D4A-SOURCE-04-03"
+          ],
+          "principle_links": {
+            "WB-P01": "02_Action_Pain_Opp!A25:M25",
+            "WB-P02": [
+              "02_Action_Pain_Opp!K25",
+              "02_Action_Pain_Opp!AC25:AD25"
+            ],
+            "WB-P03": "02_Action_Pain_Opp!N25:R25",
+            "WB-P04": "03_AI_Work_Map!A25:T25",
+            "WB-P05": "05_Feature_List!E25:O25",
+            "WB-P06": [
+              "08_Reference_Mapping!A26:I26",
+              "08_Reference_Mapping!A27:I27",
+              "08_Reference_Mapping!A28:I28",
+              "08_Reference_Mapping!A29:I29",
+              "08_Reference_Mapping!A30:I30",
+              "08_Reference_Mapping!A31:I31",
+              "08_Reference_Mapping!A32:I32"
+            ],
+            "WB-P07": [
+              "06_Research_Cases!L5:M5",
+              "06_Research_Cases!L8:M8"
+            ]
+          },
+          "principle_id_status": "WB-P01–07 are new local review handles for workbook README rules, not IDs authored in Excel.",
+          "exact_action_excel_rows": [
+            58,
+            59,
+            60
+          ]
+        },
+        {
+          "change_id": "D3-SOURCE-05",
+          "scenario_id": "SCN-SOURCE",
+          "action_ids": [
+            "D4A-SOURCE-05-01",
+            "D4A-SOURCE-05-02"
+          ],
+          "principle_links": {
+            "WB-P01": "02_Action_Pain_Opp!A26:M26",
+            "WB-P02": [
+              "02_Action_Pain_Opp!K26",
+              "02_Action_Pain_Opp!AC26:AD26"
+            ],
+            "WB-P03": "02_Action_Pain_Opp!N26:R26",
+            "WB-P04": "03_AI_Work_Map!A26:T26",
+            "WB-P05": "05_Feature_List!E26:O26",
+            "WB-P06": [
+              "08_Reference_Mapping!A26:I26",
+              "08_Reference_Mapping!A27:I27",
+              "08_Reference_Mapping!A28:I28",
+              "08_Reference_Mapping!A29:I29",
+              "08_Reference_Mapping!A30:I30",
+              "08_Reference_Mapping!A31:I31",
+              "08_Reference_Mapping!A32:I32"
+            ],
+            "WB-P07": [
+              "06_Research_Cases!L5:M5",
+              "06_Research_Cases!L8:M8"
+            ]
+          },
+          "principle_id_status": "WB-P01–07 are new local review handles for workbook README rules, not IDs authored in Excel.",
+          "exact_action_excel_rows": [
+            61,
+            62
+          ]
+        },
+        {
+          "change_id": "D3-SOURCE-06",
+          "scenario_id": "SCN-SOURCE",
+          "action_ids": [
+            "D4A-SOURCE-06-01",
+            "D4A-SOURCE-06-02"
+          ],
+          "principle_links": {
+            "WB-P01": "02_Action_Pain_Opp!A27:M27",
+            "WB-P02": [
+              "02_Action_Pain_Opp!K27",
+              "02_Action_Pain_Opp!AC27:AD27"
+            ],
+            "WB-P03": "02_Action_Pain_Opp!N27:R27",
+            "WB-P04": "03_AI_Work_Map!A27:T27",
+            "WB-P05": "05_Feature_List!E27:O27",
+            "WB-P06": [
+              "08_Reference_Mapping!A26:I26",
+              "08_Reference_Mapping!A27:I27",
+              "08_Reference_Mapping!A28:I28",
+              "08_Reference_Mapping!A29:I29",
+              "08_Reference_Mapping!A30:I30",
+              "08_Reference_Mapping!A31:I31",
+              "08_Reference_Mapping!A32:I32"
+            ],
+            "WB-P07": [
+              "06_Research_Cases!L5:M5",
+              "06_Research_Cases!L8:M8"
+            ]
+          },
+          "principle_id_status": "WB-P01–07 are new local review handles for workbook README rules, not IDs authored in Excel.",
+          "exact_action_excel_rows": [
+            63,
+            64
+          ]
+        }
+      ],
+      "fields": [
+        "RequiredFact",
+        "ApprovedSourceCatalogue",
+        "AccessPolicy",
+        "AllowedSourceSet",
+        "ExistingEvidence",
+        "RetrievalResult[]",
+        "EvidenceSearchPlan",
+        "ResidualUnknowns",
+        "ApprovedQueryIntent",
+        "SubjectSnapshot",
+        "SourceResponse",
+        "RetrievalReceipt",
+        "AdapterReceipt",
+        "ProvenanceRecord",
+        "EvidenceArtifact.data_as_of",
+        "RequiredMetadata",
+        "MetadataGap[]",
+        "EvidenceArtifact",
+        "ExtractionSchema",
+        "EvidenceClaim[]",
+        "AllowedDocumentScope",
+        "ExtractionValidation",
+        "RejectedClaim[]",
+        "EvidenceArtifact[]",
+        "SubmissionHistory",
+        "ExactDuplicateCandidate[]",
+        "NonExactArtifactPairs",
+        "NearDuplicateReview",
+        "DuplicateAssessment",
+        "SubmissionRefs",
+        "EvidenceLineageLinks",
+        "QueryIntent",
+        "RetrievalStatus",
+        "FailureReason",
+        "RetryPolicy",
+        "IdempotencyKey",
+        "LastReceipt",
+        "RetryReceipt",
+        "SourceUnavailableTask",
+        "Requirement[]",
+        "EvidenceUseCandidate[]",
+        "ScopeRevision",
+        "EvidenceUseAssessment.not_assessed"
+      ],
+      "surfaces": [
+        "PX-03"
+      ],
+      "execution": [
+        "Rule",
+        "Bounded Agent candidate",
+        "Deterministic Skill",
+        "Semantic Skill"
+      ]
+    },
+    {
+      "id": "SCN-GAP",
+      "stage": "Determine",
+      "name": "Turn residual gaps into answerable client requests",
+      "direction": "Optimize",
+      "pain": "Clients can receive vague or repeated requests and may not know exactly what is missing, who should respond or what happens next.",
+      "opp": "Convert each real gap into a specific request item with the right recipient, bounded access, clear status and a defined next step.",
+      "seed": [
+        4,
+        5,
+        4,
+        5,
+        5
+      ],
+      "features": [
+        "Gap-to-request conversion",
+        "Recipient and access boundary",
+        "Save vs submit states",
+        "RM-safe progress view",
+        "Delivery / receipt status",
+        "Targeted clarification draft"
+      ],
+      "title": "Request the specific missing facts",
+      "owner": "rm",
+      "process": [
+        "SRC-007|p1|CLIENT FULFILMENT / KYC OPS|shape292|M3.2|occ2",
+        "SRC-007|p2|Agentic execution|shape292|M3.2|occ2",
+        "SRC-007|p1|CLIENT FULFILMENT / KYC OPS|shape291|M2.5|occ1",
+        "SRC-007|p1|CLIENT FULFILMENT / KYC OPS|shape292|M3.3|occ3",
+        "SRC-007|p1|SALES / RM (Front Office)|shape9|M3.3|occ1",
+        "SRC-007|p2|Agentic execution|shape18|M2.5|occ5",
+        "SRC-007|p2|Agentic execution|shape292|M3.3|occ3",
+        "SRC-007|p1|CLIENT FULFILMENT / KYC OPS|shape292|M3.3|occ3",
+        "SRC-007|p1|SALES / RM (Front Office)|shape9|M3.3|occ1",
+        "SRC-007|p2|Agentic execution|shape292|M3.3|occ3",
+        "SRC-007|p1|CLIENT FULFILMENT / KYC OPS|shape292|M3.3|occ3",
+        "SRC-007|p1|SALES / RM (Front Office)|shape9|M3.3|occ1",
+        "SRC-007|p2|Agentic execution|shape292|M3.3|occ3",
+        "SRC-007|p1|CLIENT FULFILMENT / KYC OPS|shape292|M3.3|occ3",
+        "SRC-007|p1|SALES / RM (Front Office)|shape9|M3.3|occ1",
+        "SRC-007|p1|CLIENT FULFILMENT / KYC OPS|shape292|M3.4|occ4",
+        "SRC-007|p2|Agentic execution|shape292|M3.3|occ3",
+        "SRC-007|p2|Agentic execution|shape292|M3.4|occ4",
+        "SRC-007|p1|CLIENT FULFILMENT / KYC OPS|shape292|M3.3|occ3",
+        "SRC-007|p1|SALES / RM (Front Office)|shape9|M3.3|occ1",
+        "SRC-007|p1|CLIENT FULFILMENT / KYC OPS|shape292|M3.5|occ5",
+        "SRC-007|p2|Agentic execution|shape292|M3.3|occ3",
+        "SRC-007|p2|Agentic execution|shape292|M3.5|occ5"
+      ],
+      "parents": [
+        "D3-GAP-01",
+        "D3-GAP-02",
+        "D3-GAP-03",
+        "D3-GAP-04",
+        "D3-GAP-05",
+        "D3-GAP-06"
+      ],
+      "actions": [
+        "D4A-GAP-01-01",
+        "D4A-GAP-01-02",
+        "D4A-GAP-02-01",
+        "D4A-GAP-02-02",
+        "D4A-GAP-03-01",
+        "D4A-GAP-03-02",
+        "D4A-GAP-04-01",
+        "D4A-GAP-04-02",
+        "D4A-GAP-04-03",
+        "D4A-GAP-05-01",
+        "D4A-GAP-05-02",
+        "D4A-GAP-05-03",
+        "D4A-GAP-06-01",
+        "D4A-GAP-06-02",
+        "D4A-GAP-06-03"
+      ],
+      "principles": [
+        {
+          "change_id": "D3-GAP-01",
+          "scenario_id": "SCN-GAP",
+          "action_ids": [
+            "D4A-GAP-01-01",
+            "D4A-GAP-01-02"
+          ],
+          "principle_links": {
+            "WB-P01": "02_Action_Pain_Opp!A28:M28",
+            "WB-P02": [
+              "02_Action_Pain_Opp!K28",
+              "02_Action_Pain_Opp!AC28:AD28"
+            ],
+            "WB-P03": "02_Action_Pain_Opp!N28:R28",
+            "WB-P04": "03_AI_Work_Map!A28:T28",
+            "WB-P05": "05_Feature_List!E28:O28",
+            "WB-P06": [
+              "08_Reference_Mapping!A33:I33",
+              "08_Reference_Mapping!A34:I34",
+              "08_Reference_Mapping!A35:I35",
+              "08_Reference_Mapping!A36:I36",
+              "08_Reference_Mapping!A37:I37",
+              "08_Reference_Mapping!A38:I38",
+              "08_Reference_Mapping!A39:I39"
+            ],
+            "WB-P07": [
+              "06_Research_Cases!L5:M5",
+              "06_Research_Cases!L6:M6",
+              "06_Research_Cases!L7:M7",
+              "06_Research_Cases!L8:M8"
+            ]
+          },
+          "principle_id_status": "WB-P01–07 are new local review handles for workbook README rules, not IDs authored in Excel.",
+          "exact_action_excel_rows": [
+            65,
+            66
+          ]
+        },
+        {
+          "change_id": "D3-GAP-02",
+          "scenario_id": "SCN-GAP",
+          "action_ids": [
+            "D4A-GAP-02-01",
+            "D4A-GAP-02-02"
+          ],
+          "principle_links": {
+            "WB-P01": "02_Action_Pain_Opp!A29:M29",
+            "WB-P02": [
+              "02_Action_Pain_Opp!K29",
+              "02_Action_Pain_Opp!AC29:AD29"
+            ],
+            "WB-P03": "02_Action_Pain_Opp!N29:R29",
+            "WB-P04": "03_AI_Work_Map!A29:T29",
+            "WB-P05": "05_Feature_List!E29:O29",
+            "WB-P06": [
+              "08_Reference_Mapping!A33:I33",
+              "08_Reference_Mapping!A34:I34",
+              "08_Reference_Mapping!A35:I35",
+              "08_Reference_Mapping!A36:I36",
+              "08_Reference_Mapping!A37:I37",
+              "08_Reference_Mapping!A38:I38",
+              "08_Reference_Mapping!A39:I39"
+            ],
+            "WB-P07": [
+              "06_Research_Cases!L5:M5",
+              "06_Research_Cases!L6:M6",
+              "06_Research_Cases!L7:M7",
+              "06_Research_Cases!L8:M8"
+            ]
+          },
+          "principle_id_status": "WB-P01–07 are new local review handles for workbook README rules, not IDs authored in Excel.",
+          "exact_action_excel_rows": [
+            67,
+            68
+          ]
+        },
+        {
+          "change_id": "D3-GAP-03",
+          "scenario_id": "SCN-GAP",
+          "action_ids": [
+            "D4A-GAP-03-01",
+            "D4A-GAP-03-02"
+          ],
+          "principle_links": {
+            "WB-P01": "02_Action_Pain_Opp!A30:M30",
+            "WB-P02": [
+              "02_Action_Pain_Opp!K30",
+              "02_Action_Pain_Opp!AC30:AD30"
+            ],
+            "WB-P03": "02_Action_Pain_Opp!N30:R30",
+            "WB-P04": "03_AI_Work_Map!A30:T30",
+            "WB-P05": "05_Feature_List!E30:O30",
+            "WB-P06": [
+              "08_Reference_Mapping!A33:I33",
+              "08_Reference_Mapping!A34:I34",
+              "08_Reference_Mapping!A35:I35",
+              "08_Reference_Mapping!A36:I36",
+              "08_Reference_Mapping!A37:I37",
+              "08_Reference_Mapping!A38:I38",
+              "08_Reference_Mapping!A39:I39"
+            ],
+            "WB-P07": [
+              "06_Research_Cases!L5:M5",
+              "06_Research_Cases!L6:M6",
+              "06_Research_Cases!L7:M7",
+              "06_Research_Cases!L8:M8"
+            ]
+          },
+          "principle_id_status": "WB-P01–07 are new local review handles for workbook README rules, not IDs authored in Excel.",
+          "exact_action_excel_rows": [
+            69,
+            70
+          ]
+        },
+        {
+          "change_id": "D3-GAP-04",
+          "scenario_id": "SCN-GAP",
+          "action_ids": [
+            "D4A-GAP-04-01",
+            "D4A-GAP-04-02",
+            "D4A-GAP-04-03"
+          ],
+          "principle_links": {
+            "WB-P01": "02_Action_Pain_Opp!A31:M31",
+            "WB-P02": [
+              "02_Action_Pain_Opp!K31",
+              "02_Action_Pain_Opp!AC31:AD31"
+            ],
+            "WB-P03": "02_Action_Pain_Opp!N31:R31",
+            "WB-P04": "03_AI_Work_Map!A31:T31",
+            "WB-P05": "05_Feature_List!E31:O31",
+            "WB-P06": [
+              "08_Reference_Mapping!A33:I33",
+              "08_Reference_Mapping!A34:I34",
+              "08_Reference_Mapping!A35:I35",
+              "08_Reference_Mapping!A36:I36",
+              "08_Reference_Mapping!A37:I37",
+              "08_Reference_Mapping!A38:I38",
+              "08_Reference_Mapping!A39:I39"
+            ],
+            "WB-P07": [
+              "06_Research_Cases!L5:M5",
+              "06_Research_Cases!L6:M6",
+              "06_Research_Cases!L7:M7",
+              "06_Research_Cases!L8:M8"
+            ]
+          },
+          "principle_id_status": "WB-P01–07 are new local review handles for workbook README rules, not IDs authored in Excel.",
+          "exact_action_excel_rows": [
+            71,
+            72,
+            73
+          ]
+        },
+        {
+          "change_id": "D3-GAP-05",
+          "scenario_id": "SCN-GAP",
+          "action_ids": [
+            "D4A-GAP-05-01",
+            "D4A-GAP-05-02",
+            "D4A-GAP-05-03"
+          ],
+          "principle_links": {
+            "WB-P01": "02_Action_Pain_Opp!A32:M32",
+            "WB-P02": [
+              "02_Action_Pain_Opp!K32",
+              "02_Action_Pain_Opp!AC32:AD32"
+            ],
+            "WB-P03": "02_Action_Pain_Opp!N32:R32",
+            "WB-P04": "03_AI_Work_Map!A32:T32",
+            "WB-P05": "05_Feature_List!E32:O32",
+            "WB-P06": [
+              "08_Reference_Mapping!A33:I33",
+              "08_Reference_Mapping!A34:I34",
+              "08_Reference_Mapping!A35:I35",
+              "08_Reference_Mapping!A36:I36",
+              "08_Reference_Mapping!A37:I37",
+              "08_Reference_Mapping!A38:I38",
+              "08_Reference_Mapping!A39:I39"
+            ],
+            "WB-P07": [
+              "06_Research_Cases!L5:M5",
+              "06_Research_Cases!L6:M6",
+              "06_Research_Cases!L7:M7",
+              "06_Research_Cases!L8:M8"
+            ]
+          },
+          "principle_id_status": "WB-P01–07 are new local review handles for workbook README rules, not IDs authored in Excel.",
+          "exact_action_excel_rows": [
+            74,
+            75,
+            76
+          ]
+        },
+        {
+          "change_id": "D3-GAP-06",
+          "scenario_id": "SCN-GAP",
+          "action_ids": [
+            "D4A-GAP-06-01",
+            "D4A-GAP-06-02",
+            "D4A-GAP-06-03"
+          ],
+          "principle_links": {
+            "WB-P01": "02_Action_Pain_Opp!A33:M33",
+            "WB-P02": [
+              "02_Action_Pain_Opp!K33",
+              "02_Action_Pain_Opp!AC33:AD33"
+            ],
+            "WB-P03": "02_Action_Pain_Opp!N33:R33",
+            "WB-P04": "03_AI_Work_Map!A33:T33",
+            "WB-P05": "05_Feature_List!E33:O33",
+            "WB-P06": [
+              "08_Reference_Mapping!A33:I33",
+              "08_Reference_Mapping!A34:I34",
+              "08_Reference_Mapping!A35:I35",
+              "08_Reference_Mapping!A36:I36",
+              "08_Reference_Mapping!A37:I37",
+              "08_Reference_Mapping!A38:I38",
+              "08_Reference_Mapping!A39:I39"
+            ],
+            "WB-P07": [
+              "06_Research_Cases!L5:M5",
+              "06_Research_Cases!L6:M6",
+              "06_Research_Cases!L7:M7",
+              "06_Research_Cases!L8:M8"
+            ]
+          },
+          "principle_id_status": "WB-P01–07 are new local review handles for workbook README rules, not IDs authored in Excel.",
+          "exact_action_excel_rows": [
+            77,
+            78,
+            79
+          ]
+        }
+      ],
+      "fields": [
+        "RequirementApplicability",
+        "EvidenceUseAssessment[]",
+        "OpenGap[]",
+        "GapDelta",
+        "ExpectedRevision",
+        "Gap.revision",
+        "ApplicabilityReviewTask",
+        "AllowedGapProjection",
+        "ResponseOptions",
+        "RequestItemDraft[]",
+        "RequirementRefs",
+        "DisclosureConstraints",
+        "RequestDraftValidation",
+        "ContactRecord",
+        "ProposedRequestScope",
+        "RequestAccessDecision",
+        "GrantPolicy",
+        "AccessGrant",
+        "AuthorisedProjection",
+        "RequestDraft",
+        "RecipientScope",
+        "ApprovalRule",
+        "RequestApproval",
+        "SentRevision",
+        "IdempotencyKey",
+        "DispatchReceipt",
+        "ChannelObservation",
+        "DeliveryObservation",
+        "RequestActivity",
+        "AllowedRequestItems",
+        "ClientInput",
+        "SubmissionIntent",
+        "FileReceipt",
+        "Submission",
+        "RequestItem.response_status",
+        "RequestItemStates",
+        "EvidenceUseStates",
+        "RequestResponseSummary",
+        "ApprovedInteractionInput",
+        "CaseScope",
+        "InteractionSummaryDraft",
+        "OriginalInteraction",
+        "ReviewedInteractionSummary",
+        "StaffSubmission",
+        "InteractionRecord",
+        "Submission.provenance"
+      ],
+      "surfaces": [
+        "PX-04",
+        "PX-06",
+        "PX-05"
+      ],
+      "execution": [
+        "Rule",
+        "Semantic Skill",
+        "Human",
+        "Deterministic Skill"
+      ]
+    },
+    {
+      "id": "SCN-VALIDATE",
+      "stage": "Determine",
+      "name": "Assess evidence by subject and purpose",
+      "direction": "Optimize",
+      "pain": "Received, technically valid and sufficient can be treated as the same thing, and one piece of evidence may be over-generalised across purposes.",
+      "opp": "Separate receipt, technical checks, source/subject verification and purpose-specific sufficiency; update only affected dependencies.",
+      "seed": [
+        3,
+        4,
+        4,
+        4,
+        5
+      ],
+      "features": [
+        "Evidence review workspace",
+        "Source / subject verification",
+        "Purpose-specific sufficiency",
+        "Accepted vs candidate values",
+        "Targeted resubmission",
+        "Dependency update"
+      ],
+      "title": "Assess evidence for its purpose",
+      "owner": "ops",
+      "process": [
+        "SRC-007|p1|CLIENT FULFILMENT / KYC OPS|shape292|M3.4|occ4",
+        "SRC-007|p2|Agentic execution|shape292|M3.4|occ4",
+        "SRC-007|p1|CLIENT FULFILMENT / KYC OPS|shape292|M3.4|occ4",
+        "SRC-007|p2|Agentic execution|shape292|M3.4|occ4",
+        "SRC-007|p1|CLIENT FULFILMENT / KYC OPS|shape292|M3.4|occ4",
+        "SRC-007|p2|Agentic execution|shape292|M3.4|occ4",
+        "SRC-007|p1|CLIENT FULFILMENT / KYC OPS|shape292|M3.4|occ4",
+        "SRC-007|p2|Agentic execution|shape292|M3.4|occ4",
+        "SRC-007|p2|CLIENT FULFILMENT / KYC OPS — Human in the Loop|shape281|unnumbered|occ1",
+        "SRC-007|p2|CLIENT FULFILMENT / KYC OPS — Human in the Loop|shape392|unnumbered|occ1",
+        "SRC-007|p1|CLIENT FULFILMENT / KYC OPS|shape292|M3.5|occ5",
+        "SRC-007|p2|Agentic execution|shape292|M3.5|occ5",
+        "SRC-007|p1|CLIENT FULFILMENT / KYC OPS|shape292|M3.3|occ3",
+        "SRC-007|p1|SALES / RM (Front Office)|shape9|M3.3|occ1",
+        "SRC-007|p1|CLIENT FULFILMENT / KYC OPS|shape292|M3.5|occ5",
+        "SRC-007|p2|Agentic execution|shape292|M3.3|occ3",
+        "SRC-007|p2|Agentic execution|shape292|M3.5|occ5"
+      ],
+      "parents": [
+        "D3-VALIDATE-01",
+        "D3-VALIDATE-02",
+        "D3-VALIDATE-03",
+        "D3-VALIDATE-04",
+        "D3-VALIDATE-05",
+        "D3-VALIDATE-06"
+      ],
+      "actions": [
+        "D4A-VALIDATE-01-01",
+        "D4A-VALIDATE-01-02",
+        "D4A-VALIDATE-02-01",
+        "D4A-VALIDATE-02-02",
+        "D4A-VALIDATE-03-01",
+        "D4A-VALIDATE-03-02",
+        "D4A-VALIDATE-03-03",
+        "D4A-VALIDATE-04-01",
+        "D4A-VALIDATE-04-02",
+        "D4A-VALIDATE-04-03",
+        "D4A-VALIDATE-05-01",
+        "D4A-VALIDATE-05-02",
+        "D4A-VALIDATE-06-01",
+        "D4A-VALIDATE-06-02"
+      ],
+      "principles": [
+        {
+          "change_id": "D3-VALIDATE-01",
+          "scenario_id": "SCN-VALIDATE",
+          "action_ids": [
+            "D4A-VALIDATE-01-01",
+            "D4A-VALIDATE-01-02"
+          ],
+          "principle_links": {
+            "WB-P01": "02_Action_Pain_Opp!A34:M34",
+            "WB-P02": [
+              "02_Action_Pain_Opp!K34",
+              "02_Action_Pain_Opp!AC34:AD34"
+            ],
+            "WB-P03": "02_Action_Pain_Opp!N34:R34",
+            "WB-P04": "03_AI_Work_Map!A34:T34",
+            "WB-P05": "05_Feature_List!E34:O34",
+            "WB-P06": [
+              "08_Reference_Mapping!A40:I40",
+              "08_Reference_Mapping!A41:I41",
+              "08_Reference_Mapping!A42:I42",
+              "08_Reference_Mapping!A43:I43",
+              "08_Reference_Mapping!A44:I44",
+              "08_Reference_Mapping!A45:I45",
+              "08_Reference_Mapping!A46:I46",
+              "08_Reference_Mapping!A47:I47",
+              "08_Reference_Mapping!A48:I48",
+              "08_Reference_Mapping!A49:I49"
+            ],
+            "WB-P07": [
+              "06_Research_Cases!L5:M5",
+              "06_Research_Cases!L6:M6",
+              "06_Research_Cases!L7:M7",
+              "06_Research_Cases!L12:M12"
+            ]
+          },
+          "principle_id_status": "WB-P01–07 are new local review handles for workbook README rules, not IDs authored in Excel.",
+          "exact_action_excel_rows": [
+            80,
+            81
+          ]
+        },
+        {
+          "change_id": "D3-VALIDATE-02",
+          "scenario_id": "SCN-VALIDATE",
+          "action_ids": [
+            "D4A-VALIDATE-02-01",
+            "D4A-VALIDATE-02-02"
+          ],
+          "principle_links": {
+            "WB-P01": "02_Action_Pain_Opp!A35:M35",
+            "WB-P02": [
+              "02_Action_Pain_Opp!K35",
+              "02_Action_Pain_Opp!AC35:AD35"
+            ],
+            "WB-P03": "02_Action_Pain_Opp!N35:R35",
+            "WB-P04": "03_AI_Work_Map!A35:T35",
+            "WB-P05": "05_Feature_List!E35:O35",
+            "WB-P06": [
+              "08_Reference_Mapping!A40:I40",
+              "08_Reference_Mapping!A41:I41",
+              "08_Reference_Mapping!A42:I42",
+              "08_Reference_Mapping!A43:I43",
+              "08_Reference_Mapping!A44:I44",
+              "08_Reference_Mapping!A45:I45",
+              "08_Reference_Mapping!A46:I46",
+              "08_Reference_Mapping!A47:I47",
+              "08_Reference_Mapping!A48:I48",
+              "08_Reference_Mapping!A49:I49"
+            ],
+            "WB-P07": [
+              "06_Research_Cases!L5:M5",
+              "06_Research_Cases!L6:M6",
+              "06_Research_Cases!L7:M7",
+              "06_Research_Cases!L12:M12"
+            ]
+          },
+          "principle_id_status": "WB-P01–07 are new local review handles for workbook README rules, not IDs authored in Excel.",
+          "exact_action_excel_rows": [
+            82,
+            83
+          ]
+        },
+        {
+          "change_id": "D3-VALIDATE-03",
+          "scenario_id": "SCN-VALIDATE",
+          "action_ids": [
+            "D4A-VALIDATE-03-01",
+            "D4A-VALIDATE-03-02",
+            "D4A-VALIDATE-03-03"
+          ],
+          "principle_links": {
+            "WB-P01": "02_Action_Pain_Opp!A36:M36",
+            "WB-P02": [
+              "02_Action_Pain_Opp!K36",
+              "02_Action_Pain_Opp!AC36:AD36"
+            ],
+            "WB-P03": "02_Action_Pain_Opp!N36:R36",
+            "WB-P04": "03_AI_Work_Map!A36:T36",
+            "WB-P05": "05_Feature_List!E36:O36",
+            "WB-P06": [
+              "08_Reference_Mapping!A40:I40",
+              "08_Reference_Mapping!A41:I41",
+              "08_Reference_Mapping!A42:I42",
+              "08_Reference_Mapping!A43:I43",
+              "08_Reference_Mapping!A44:I44",
+              "08_Reference_Mapping!A45:I45",
+              "08_Reference_Mapping!A46:I46",
+              "08_Reference_Mapping!A47:I47",
+              "08_Reference_Mapping!A48:I48",
+              "08_Reference_Mapping!A49:I49"
+            ],
+            "WB-P07": [
+              "06_Research_Cases!L5:M5",
+              "06_Research_Cases!L6:M6",
+              "06_Research_Cases!L7:M7",
+              "06_Research_Cases!L12:M12"
+            ]
+          },
+          "principle_id_status": "WB-P01–07 are new local review handles for workbook README rules, not IDs authored in Excel.",
+          "exact_action_excel_rows": [
+            84,
+            85,
+            86
+          ]
+        },
+        {
+          "change_id": "D3-VALIDATE-04",
+          "scenario_id": "SCN-VALIDATE",
+          "action_ids": [
+            "D4A-VALIDATE-04-01",
+            "D4A-VALIDATE-04-02",
+            "D4A-VALIDATE-04-03"
+          ],
+          "principle_links": {
+            "WB-P01": "02_Action_Pain_Opp!A37:M37",
+            "WB-P02": [
+              "02_Action_Pain_Opp!K37",
+              "02_Action_Pain_Opp!AC37:AD37"
+            ],
+            "WB-P03": "02_Action_Pain_Opp!N37:R37",
+            "WB-P04": "03_AI_Work_Map!A37:T37",
+            "WB-P05": "05_Feature_List!E37:O37",
+            "WB-P06": [
+              "08_Reference_Mapping!A40:I40",
+              "08_Reference_Mapping!A41:I41",
+              "08_Reference_Mapping!A42:I42",
+              "08_Reference_Mapping!A43:I43",
+              "08_Reference_Mapping!A44:I44",
+              "08_Reference_Mapping!A45:I45",
+              "08_Reference_Mapping!A46:I46",
+              "08_Reference_Mapping!A47:I47",
+              "08_Reference_Mapping!A48:I48",
+              "08_Reference_Mapping!A49:I49"
+            ],
+            "WB-P07": [
+              "06_Research_Cases!L5:M5",
+              "06_Research_Cases!L6:M6",
+              "06_Research_Cases!L7:M7",
+              "06_Research_Cases!L12:M12"
+            ]
+          },
+          "principle_id_status": "WB-P01–07 are new local review handles for workbook README rules, not IDs authored in Excel.",
+          "exact_action_excel_rows": [
+            87,
+            88,
+            89
+          ]
+        },
+        {
+          "change_id": "D3-VALIDATE-05",
+          "scenario_id": "SCN-VALIDATE",
+          "action_ids": [
+            "D4A-VALIDATE-05-01",
+            "D4A-VALIDATE-05-02"
+          ],
+          "principle_links": {
+            "WB-P01": "02_Action_Pain_Opp!A38:M38",
+            "WB-P02": [
+              "02_Action_Pain_Opp!K38",
+              "02_Action_Pain_Opp!AC38:AD38"
+            ],
+            "WB-P03": "02_Action_Pain_Opp!N38:R38",
+            "WB-P04": "03_AI_Work_Map!A38:T38",
+            "WB-P05": "05_Feature_List!E38:O38",
+            "WB-P06": [
+              "08_Reference_Mapping!A40:I40",
+              "08_Reference_Mapping!A41:I41",
+              "08_Reference_Mapping!A42:I42",
+              "08_Reference_Mapping!A43:I43",
+              "08_Reference_Mapping!A44:I44",
+              "08_Reference_Mapping!A45:I45",
+              "08_Reference_Mapping!A46:I46",
+              "08_Reference_Mapping!A47:I47",
+              "08_Reference_Mapping!A48:I48",
+              "08_Reference_Mapping!A49:I49"
+            ],
+            "WB-P07": [
+              "06_Research_Cases!L5:M5",
+              "06_Research_Cases!L6:M6",
+              "06_Research_Cases!L7:M7",
+              "06_Research_Cases!L12:M12"
+            ]
+          },
+          "principle_id_status": "WB-P01–07 are new local review handles for workbook README rules, not IDs authored in Excel.",
+          "exact_action_excel_rows": [
+            90,
+            91
+          ]
+        },
+        {
+          "change_id": "D3-VALIDATE-06",
+          "scenario_id": "SCN-VALIDATE",
+          "action_ids": [
+            "D4A-VALIDATE-06-01",
+            "D4A-VALIDATE-06-02"
+          ],
+          "principle_links": {
+            "WB-P01": "02_Action_Pain_Opp!A39:M39",
+            "WB-P02": [
+              "02_Action_Pain_Opp!K39",
+              "02_Action_Pain_Opp!AC39:AD39"
+            ],
+            "WB-P03": "02_Action_Pain_Opp!N39:R39",
+            "WB-P04": "03_AI_Work_Map!A39:T39",
+            "WB-P05": "05_Feature_List!E39:O39",
+            "WB-P06": [
+              "08_Reference_Mapping!A40:I40",
+              "08_Reference_Mapping!A41:I41",
+              "08_Reference_Mapping!A42:I42",
+              "08_Reference_Mapping!A43:I43",
+              "08_Reference_Mapping!A44:I44",
+              "08_Reference_Mapping!A45:I45",
+              "08_Reference_Mapping!A46:I46",
+              "08_Reference_Mapping!A47:I47",
+              "08_Reference_Mapping!A48:I48",
+              "08_Reference_Mapping!A49:I49"
+            ],
+            "WB-P07": [
+              "06_Research_Cases!L5:M5",
+              "06_Research_Cases!L6:M6",
+              "06_Research_Cases!L7:M7",
+              "06_Research_Cases!L12:M12"
+            ]
+          },
+          "principle_id_status": "WB-P01–07 are new local review handles for workbook README rules, not IDs authored in Excel.",
+          "exact_action_excel_rows": [
+            92,
+            93
+          ]
+        }
+      ],
+      "fields": [
+        "Submission",
+        "FilePolicy",
+        "IntakeReceipt",
+        "SecurityScanResult",
+        "IntakePolicy",
+        "Artifact.intake_status",
+        "ReviewEligibility",
+        "EvidenceClaim[]",
+        "RequiredSubjectPurpose",
+        "EvidenceContextComparison",
+        "SourceMaterial",
+        "EvidenceContextDecision",
+        "EvidenceArtifact",
+        "ExistingClaims",
+        "CandidateClaim[]",
+        "ConflictingClaims",
+        "Criteria",
+        "ClaimAdoptionDecision",
+        "ExpectedRevision",
+        "ClaimAdoptionRecord",
+        "Requirement",
+        "EvidenceClaims",
+        "UseCriteria",
+        "EvidenceUseReviewPack",
+        "CurrentInputs",
+        "EvidenceSufficiencyDecision",
+        "UseScope",
+        "EvidenceUseAssessment.revision",
+        "EvidenceAssessmentChange",
+        "DependencyEdge[]",
+        "ImpactSet",
+        "UnknownImpact",
+        "ReviewedImpactSet",
+        "CurrentTaskRegistry",
+        "ReassessmentTask[]",
+        "AuditEvent",
+        "AllowedGapReason",
+        "RequestItem",
+        "ResponseOptions",
+        "FeedbackDraft",
+        "ApprovedFeedback",
+        "RecipientGrant",
+        "RequestRevision",
+        "FeedbackEvent",
+        "NotificationReceipt"
+      ],
+      "surfaces": [
+        "PX-07"
+      ],
+      "execution": [
+        "Deterministic Skill",
+        "Rule",
+        "Semantic Skill",
+        "Human"
+      ]
+    },
+    {
+      "id": "SCN-POPULATION",
+      "stage": "Assess",
+      "name": "Define complete screening population and coverage",
+      "direction": "Optimize",
+      "pain": "Checking the names already known can be mistaken for complete screening coverage, while missing or failed checks are easy to overlook.",
+      "opp": "Maintain an explicit population and query plan by subject, category and version, including partial or failed coverage.",
+      "seed": [
+        3,
+        3,
+        4,
+        4,
+        5
+      ],
+      "features": [
+        "Population manifest",
+        "Inclusion / exclusion rationale",
+        "Query-plan version",
+        "Partial / failed coverage",
+        "Coverage freshness",
+        "Outstanding-subject alert"
+      ],
+      "title": "Define who and what to screen",
+      "owner": "ops",
+      "process": [
+        "SRC-007|p1|CLIENT FULFILMENT / KYC OPS|shape296|M4.1|occ1",
+        "SRC-007|p2|Agentic execution|shape296|M4.1|occ1",
+        "SRC-007|p1|CLIENT FULFILMENT / KYC OPS|shape296|M4.2|occ2",
+        "SRC-007|p2|Agentic execution|shape296|M4.2|occ2",
+        "SRC-007|p1|CLIENT FULFILMENT / KYC OPS|shape296|M4.3|occ3",
+        "SRC-007|p2|Agentic execution|shape296|M4.3|occ3",
+        "SRC-007|p1|CLIENT FULFILMENT / KYC OPS|shape296|M4.3|occ3",
+        "SRC-007|p1|CLIENT FULFILMENT / KYC OPS|shape296|M4.4|occ4",
+        "SRC-007|p2|Agentic execution|shape296|M4.3|occ3",
+        "SRC-007|p2|Agentic execution|shape296|M4.4|occ4",
+        "SRC-007|p1|CLIENT FULFILMENT / KYC OPS|shape296|M4.4|occ4",
+        "SRC-007|p2|Agentic execution|shape296|M4.4|occ4",
+        "SRC-007|p1|CLIENT FULFILMENT / KYC OPS|shape296|M4.4|occ4",
+        "SRC-007|p1|FINANCIAL CRIME / RISK / COMPLIANCE|shape177|M4.7|occ2",
+        "SRC-007|p2|Agentic execution|shape296|M4.4|occ4",
+        "SRC-007|p2|Agentic execution|shape296|M4.7|occ7"
+      ],
+      "parents": [
+        "D3-POPULATION-01",
+        "D3-POPULATION-02",
+        "D3-POPULATION-03",
+        "D3-POPULATION-04",
+        "D3-POPULATION-05",
+        "D3-POPULATION-06"
+      ],
+      "actions": [
+        "D4A-POPULATION-01-01",
+        "D4A-POPULATION-01-02",
+        "D4A-POPULATION-02-01",
+        "D4A-POPULATION-02-02",
+        "D4A-POPULATION-02-03",
+        "D4A-POPULATION-03-01",
+        "D4A-POPULATION-03-02",
+        "D4A-POPULATION-04-01",
+        "D4A-POPULATION-04-02",
+        "D4A-POPULATION-05-01",
+        "D4A-POPULATION-05-02",
+        "D4A-POPULATION-06-01",
+        "D4A-POPULATION-06-02"
+      ],
+      "principles": [
+        {
+          "change_id": "D3-POPULATION-01",
+          "scenario_id": "SCN-POPULATION",
+          "action_ids": [
+            "D4A-POPULATION-01-01",
+            "D4A-POPULATION-01-02"
+          ],
+          "principle_links": {
+            "WB-P01": "02_Action_Pain_Opp!A40:M40",
+            "WB-P02": [
+              "02_Action_Pain_Opp!K40",
+              "02_Action_Pain_Opp!AC40:AD40"
+            ],
+            "WB-P03": "02_Action_Pain_Opp!N40:R40",
+            "WB-P04": "03_AI_Work_Map!A40:T40",
+            "WB-P05": "05_Feature_List!E40:O40",
+            "WB-P06": [
+              "08_Reference_Mapping!A50:I50",
+              "08_Reference_Mapping!A51:I51",
+              "08_Reference_Mapping!A52:I52"
+            ],
+            "WB-P07": [
+              "06_Research_Cases!L5:M5"
+            ]
+          },
+          "principle_id_status": "WB-P01–07 are new local review handles for workbook README rules, not IDs authored in Excel.",
+          "exact_action_excel_rows": [
+            94,
+            95
+          ]
+        },
+        {
+          "change_id": "D3-POPULATION-02",
+          "scenario_id": "SCN-POPULATION",
+          "action_ids": [
+            "D4A-POPULATION-02-01",
+            "D4A-POPULATION-02-02",
+            "D4A-POPULATION-02-03"
+          ],
+          "principle_links": {
+            "WB-P01": "02_Action_Pain_Opp!A41:M41",
+            "WB-P02": [
+              "02_Action_Pain_Opp!K41",
+              "02_Action_Pain_Opp!AC41:AD41"
+            ],
+            "WB-P03": "02_Action_Pain_Opp!N41:R41",
+            "WB-P04": "03_AI_Work_Map!A41:T41",
+            "WB-P05": "05_Feature_List!E41:O41",
+            "WB-P06": [
+              "08_Reference_Mapping!A50:I50",
+              "08_Reference_Mapping!A51:I51",
+              "08_Reference_Mapping!A52:I52"
+            ],
+            "WB-P07": [
+              "06_Research_Cases!L5:M5"
+            ]
+          },
+          "principle_id_status": "WB-P01–07 are new local review handles for workbook README rules, not IDs authored in Excel.",
+          "exact_action_excel_rows": [
+            96,
+            97,
+            98
+          ]
+        },
+        {
+          "change_id": "D3-POPULATION-03",
+          "scenario_id": "SCN-POPULATION",
+          "action_ids": [
+            "D4A-POPULATION-03-01",
+            "D4A-POPULATION-03-02"
+          ],
+          "principle_links": {
+            "WB-P01": "02_Action_Pain_Opp!A42:M42",
+            "WB-P02": [
+              "02_Action_Pain_Opp!K42",
+              "02_Action_Pain_Opp!AC42:AD42"
+            ],
+            "WB-P03": "02_Action_Pain_Opp!N42:R42",
+            "WB-P04": "03_AI_Work_Map!A42:T42",
+            "WB-P05": "05_Feature_List!E42:O42",
+            "WB-P06": [
+              "08_Reference_Mapping!A50:I50",
+              "08_Reference_Mapping!A51:I51",
+              "08_Reference_Mapping!A52:I52"
+            ],
+            "WB-P07": [
+              "06_Research_Cases!L5:M5"
+            ]
+          },
+          "principle_id_status": "WB-P01–07 are new local review handles for workbook README rules, not IDs authored in Excel.",
+          "exact_action_excel_rows": [
+            99,
+            100
+          ]
+        },
+        {
+          "change_id": "D3-POPULATION-04",
+          "scenario_id": "SCN-POPULATION",
+          "action_ids": [
+            "D4A-POPULATION-04-01",
+            "D4A-POPULATION-04-02"
+          ],
+          "principle_links": {
+            "WB-P01": "02_Action_Pain_Opp!A43:M43",
+            "WB-P02": [
+              "02_Action_Pain_Opp!K43",
+              "02_Action_Pain_Opp!AC43:AD43"
+            ],
+            "WB-P03": "02_Action_Pain_Opp!N43:R43",
+            "WB-P04": "03_AI_Work_Map!A43:T43",
+            "WB-P05": "05_Feature_List!E43:O43",
+            "WB-P06": [
+              "08_Reference_Mapping!A50:I50",
+              "08_Reference_Mapping!A51:I51",
+              "08_Reference_Mapping!A52:I52"
+            ],
+            "WB-P07": [
+              "06_Research_Cases!L5:M5"
+            ]
+          },
+          "principle_id_status": "WB-P01–07 are new local review handles for workbook README rules, not IDs authored in Excel.",
+          "exact_action_excel_rows": [
+            101,
+            102
+          ]
+        },
+        {
+          "change_id": "D3-POPULATION-05",
+          "scenario_id": "SCN-POPULATION",
+          "action_ids": [
+            "D4A-POPULATION-05-01",
+            "D4A-POPULATION-05-02"
+          ],
+          "principle_links": {
+            "WB-P01": "02_Action_Pain_Opp!A44:M44",
+            "WB-P02": [
+              "02_Action_Pain_Opp!K44",
+              "02_Action_Pain_Opp!AC44:AD44"
+            ],
+            "WB-P03": "02_Action_Pain_Opp!N44:R44",
+            "WB-P04": "03_AI_Work_Map!A44:T44",
+            "WB-P05": "05_Feature_List!E44:O44",
+            "WB-P06": [
+              "08_Reference_Mapping!A50:I50",
+              "08_Reference_Mapping!A51:I51",
+              "08_Reference_Mapping!A52:I52"
+            ],
+            "WB-P07": [
+              "06_Research_Cases!L5:M5"
+            ]
+          },
+          "principle_id_status": "WB-P01–07 are new local review handles for workbook README rules, not IDs authored in Excel.",
+          "exact_action_excel_rows": [
+            103,
+            104
+          ]
+        },
+        {
+          "change_id": "D3-POPULATION-06",
+          "scenario_id": "SCN-POPULATION",
+          "action_ids": [
+            "D4A-POPULATION-06-01",
+            "D4A-POPULATION-06-02"
+          ],
+          "principle_links": {
+            "WB-P01": "02_Action_Pain_Opp!A45:M45",
+            "WB-P02": [
+              "02_Action_Pain_Opp!K45",
+              "02_Action_Pain_Opp!AC45:AD45"
+            ],
+            "WB-P03": "02_Action_Pain_Opp!N45:R45",
+            "WB-P04": "03_AI_Work_Map!A45:T45",
+            "WB-P05": "05_Feature_List!E45:O45",
+            "WB-P06": [
+              "08_Reference_Mapping!A50:I50",
+              "08_Reference_Mapping!A51:I51",
+              "08_Reference_Mapping!A52:I52"
+            ],
+            "WB-P07": [
+              "06_Research_Cases!L5:M5"
+            ]
+          },
+          "principle_id_status": "WB-P01–07 are new local review handles for workbook README rules, not IDs authored in Excel.",
+          "exact_action_excel_rows": [
+            105,
+            106
+          ]
+        }
+      ],
+      "fields": [
+        "CaseScope",
+        "PreScreenPolicy",
+        "KnownPartyRefs",
+        "PreScreenPlan",
+        "UnresolvedScope",
+        "ApprovedPreScreenPlan",
+        "AccessScope",
+        "PreScreenRunReceipt",
+        "ApprovedMediaQuery",
+        "SubjectSnapshot",
+        "MediaSourceSnapshot[]",
+        "SubjectClaims",
+        "MediaAttributionDraft",
+        "SourceEvidence",
+        "MediaRelevanceDecision",
+        "PartyInventory",
+        "ScreeningCriteria.revision",
+        "MembershipCandidate[]",
+        "InventoryGap[]",
+        "InventoryEvidence",
+        "PopulationMembershipDecision",
+        "ConfirmedMembership",
+        "PartyClaims",
+        "ScopeRevision",
+        "RunSubjectSnapshot",
+        "PopulationRevision",
+        "QueryRequirements",
+        "InventoryGaps",
+        "PlanConfirmationEligibility",
+        "ApprovedQueryPlan",
+        "FrozenSubjects",
+        "IdempotencyKey",
+        "ScreeningRun",
+        "ProviderRecordSnapshot",
+        "RequiredCoverageTuple[]",
+        "ScreeningCoverageItem.execution_status",
+        "CoverageManifest",
+        "RunResults",
+        "FindingDecisions",
+        "CoverageAssessment",
+        "BlockingRefs",
+        "CurrencyReviewPack",
+        "OldResultRefs",
+        "CoverageReuseDecision"
+      ],
+      "surfaces": [
+        "PX-08"
+      ],
+      "execution": [
+        "Rule",
+        "Deterministic Skill",
+        "Semantic Skill",
+        "Human"
+      ]
+    },
+    {
+      "id": "SCN-MATCH",
+      "stage": "Assess",
+      "name": "Resolve a possible match with the same evidence",
+      "direction": "Optimize",
+      "pain": "Reviewers may need to rebuild context manually, while missing data or similarity scores can be over-interpreted.",
+      "opp": "Prepare a sourced comparison and precise missing-information request, then let an authorised reviewer record the scoped judgement.",
+      "seed": [
+        4,
+        5,
+        5,
+        5,
+        5
+      ],
+      "features": [
+        "Attribute comparison",
+        "Evidence-backed review pack",
+        "Unknown / contradiction display",
+        "Targeted information request",
+        "Human disposition task",
+        "Case-impact update"
+      ],
+      "title": "Review a potential match",
+      "owner": "specialist",
+      "process": [
+        "SRC-007|p1|CLIENT FULFILMENT / KYC OPS|shape296|M4.5|occ5",
+        "SRC-007|p2|Agentic execution|shape296|M4.5|occ5",
+        "SRC-007|p2|CLIENT FULFILMENT / KYC OPS — Human in the Loop|shape376|unnumbered|occ1",
+        "SRC-007|p1|CLIENT FULFILMENT / KYC OPS|shape296|M4.5|occ5",
+        "SRC-007|p2|Agentic execution|shape296|M4.5|occ5",
+        "SRC-007|p2|CLIENT FULFILMENT / KYC OPS — Human in the Loop|shape376|unnumbered|occ1",
+        "SRC-007|p1|CLIENT FULFILMENT / KYC OPS|shape296|M4.5|occ5",
+        "SRC-007|p1|CLIENT FULFILMENT / KYC OPS|shape292|M3.3|occ3",
+        "SRC-007|p1|SALES / RM (Front Office)|shape9|M3.3|occ1",
+        "SRC-007|p1|CLIENT FULFILMENT / KYC OPS|shape292|M3.4|occ4",
+        "SRC-007|p2|Agentic execution|shape296|M4.5|occ5",
+        "SRC-007|p2|Agentic execution|shape292|M3.3|occ3",
+        "SRC-007|p2|Agentic execution|shape292|M3.4|occ4",
+        "SRC-007|p2|CLIENT FULFILMENT / KYC OPS — Human in the Loop|shape392|unnumbered|occ1",
+        "SRC-007|p1|CLIENT FULFILMENT / KYC OPS|shape296|M4.5|occ5",
+        "SRC-007|p2|Agentic execution|shape296|M4.5|occ5",
+        "SRC-007|p2|CLIENT FULFILMENT / KYC OPS — Human in the Loop|shape376|unnumbered|occ1",
+        "SRC-007|p1|FINANCIAL CRIME / RISK / COMPLIANCE|shape177|M4.6|occ1",
+        "SRC-007|p2|Agentic execution|shape296|M4.6|occ6",
+        "SRC-007|p2|FINANCIAL CRIME / RISK / COMPLIANCE — Human in the Loop|shape409|unnumbered|occ1",
+        "SRC-007|p1|FINANCIAL CRIME / RISK / COMPLIANCE|shape177|M4.7|occ2",
+        "SRC-007|p2|Agentic execution|shape296|M4.7|occ7",
+        "SRC-007|p2|FINANCIAL CRIME / RISK / COMPLIANCE — Human in the Loop|shape409|unnumbered|occ1",
+        "SRC-007|p1|FINANCIAL CRIME / RISK / COMPLIANCE|shape177|M4.7|occ2",
+        "SRC-007|p1|CLIENT FULFILMENT / KYC OPS|shape65|M8.1|occ1",
+        "SRC-007|p2|Agentic execution|shape296|M4.7|occ7",
+        "SRC-007|p2|Agentic execution|shape65|M8.1|occ1"
+      ],
+      "parents": [
+        "D3-MATCH-01",
+        "D3-MATCH-02",
+        "D3-MATCH-03",
+        "D3-MATCH-04",
+        "D3-MATCH-05",
+        "D3-MATCH-06",
+        "D3-MATCH-07"
+      ],
+      "actions": [
+        "D4A-MATCH-01-01",
+        "D4A-MATCH-01-02",
+        "D4A-MATCH-02-01",
+        "D4A-MATCH-02-02",
+        "D4A-MATCH-03-01",
+        "D4A-MATCH-03-02",
+        "D4A-MATCH-03-03",
+        "D4A-MATCH-04-01",
+        "D4A-MATCH-04-02",
+        "D4A-MATCH-05-01",
+        "D4A-MATCH-05-02",
+        "D4A-MATCH-05-03",
+        "D4A-MATCH-06-01",
+        "D4A-MATCH-06-02",
+        "D4A-MATCH-06-03",
+        "D4A-MATCH-07-01",
+        "D4A-MATCH-07-02"
+      ],
+      "principles": [
+        {
+          "change_id": "D3-MATCH-01",
+          "scenario_id": "SCN-MATCH",
+          "action_ids": [
+            "D4A-MATCH-01-01",
+            "D4A-MATCH-01-02"
+          ],
+          "principle_links": {
+            "WB-P01": "02_Action_Pain_Opp!A46:M46",
+            "WB-P02": [
+              "02_Action_Pain_Opp!K46",
+              "02_Action_Pain_Opp!AC46:AD46"
+            ],
+            "WB-P03": "02_Action_Pain_Opp!N46:R46",
+            "WB-P04": "03_AI_Work_Map!A46:T46",
+            "WB-P05": "05_Feature_List!E46:O46",
+            "WB-P06": [
+              "08_Reference_Mapping!A53:I53",
+              "08_Reference_Mapping!A54:I54",
+              "08_Reference_Mapping!A55:I55",
+              "08_Reference_Mapping!A56:I56",
+              "08_Reference_Mapping!A57:I57",
+              "08_Reference_Mapping!A58:I58",
+              "08_Reference_Mapping!A59:I59"
+            ],
+            "WB-P07": [
+              "06_Research_Cases!L5:M5",
+              "06_Research_Cases!L12:M12"
+            ]
+          },
+          "principle_id_status": "WB-P01–07 are new local review handles for workbook README rules, not IDs authored in Excel.",
+          "exact_action_excel_rows": [
+            107,
+            108
+          ]
+        },
+        {
+          "change_id": "D3-MATCH-02",
+          "scenario_id": "SCN-MATCH",
+          "action_ids": [
+            "D4A-MATCH-02-01",
+            "D4A-MATCH-02-02"
+          ],
+          "principle_links": {
+            "WB-P01": "02_Action_Pain_Opp!A47:M47",
+            "WB-P02": [
+              "02_Action_Pain_Opp!K47",
+              "02_Action_Pain_Opp!AC47:AD47"
+            ],
+            "WB-P03": "02_Action_Pain_Opp!N47:R47",
+            "WB-P04": "03_AI_Work_Map!A47:T47",
+            "WB-P05": "05_Feature_List!E47:O47",
+            "WB-P06": [
+              "08_Reference_Mapping!A53:I53",
+              "08_Reference_Mapping!A54:I54",
+              "08_Reference_Mapping!A55:I55",
+              "08_Reference_Mapping!A56:I56",
+              "08_Reference_Mapping!A57:I57",
+              "08_Reference_Mapping!A58:I58",
+              "08_Reference_Mapping!A59:I59"
+            ],
+            "WB-P07": [
+              "06_Research_Cases!L5:M5",
+              "06_Research_Cases!L12:M12"
+            ]
+          },
+          "principle_id_status": "WB-P01–07 are new local review handles for workbook README rules, not IDs authored in Excel.",
+          "exact_action_excel_rows": [
+            109,
+            110
+          ]
+        },
+        {
+          "change_id": "D3-MATCH-03",
+          "scenario_id": "SCN-MATCH",
+          "action_ids": [
+            "D4A-MATCH-03-01",
+            "D4A-MATCH-03-02",
+            "D4A-MATCH-03-03"
+          ],
+          "principle_links": {
+            "WB-P01": "02_Action_Pain_Opp!A48:M48",
+            "WB-P02": [
+              "02_Action_Pain_Opp!K48",
+              "02_Action_Pain_Opp!AC48:AD48"
+            ],
+            "WB-P03": "02_Action_Pain_Opp!N48:R48",
+            "WB-P04": "03_AI_Work_Map!A48:T48",
+            "WB-P05": "05_Feature_List!E48:O48",
+            "WB-P06": [
+              "08_Reference_Mapping!A53:I53",
+              "08_Reference_Mapping!A54:I54",
+              "08_Reference_Mapping!A55:I55",
+              "08_Reference_Mapping!A56:I56",
+              "08_Reference_Mapping!A57:I57",
+              "08_Reference_Mapping!A58:I58",
+              "08_Reference_Mapping!A59:I59"
+            ],
+            "WB-P07": [
+              "06_Research_Cases!L5:M5",
+              "06_Research_Cases!L12:M12"
+            ]
+          },
+          "principle_id_status": "WB-P01–07 are new local review handles for workbook README rules, not IDs authored in Excel.",
+          "exact_action_excel_rows": [
+            111,
+            112,
+            113
+          ]
+        },
+        {
+          "change_id": "D3-MATCH-04",
+          "scenario_id": "SCN-MATCH",
+          "action_ids": [
+            "D4A-MATCH-04-01",
+            "D4A-MATCH-04-02"
+          ],
+          "principle_links": {
+            "WB-P01": "02_Action_Pain_Opp!A49:M49",
+            "WB-P02": [
+              "02_Action_Pain_Opp!K49",
+              "02_Action_Pain_Opp!AC49:AD49"
+            ],
+            "WB-P03": "02_Action_Pain_Opp!N49:R49",
+            "WB-P04": "03_AI_Work_Map!A49:T49",
+            "WB-P05": "05_Feature_List!E49:O49",
+            "WB-P06": [
+              "08_Reference_Mapping!A53:I53",
+              "08_Reference_Mapping!A54:I54",
+              "08_Reference_Mapping!A55:I55",
+              "08_Reference_Mapping!A56:I56",
+              "08_Reference_Mapping!A57:I57",
+              "08_Reference_Mapping!A58:I58",
+              "08_Reference_Mapping!A59:I59"
+            ],
+            "WB-P07": [
+              "06_Research_Cases!L5:M5",
+              "06_Research_Cases!L12:M12"
+            ]
+          },
+          "principle_id_status": "WB-P01–07 are new local review handles for workbook README rules, not IDs authored in Excel.",
+          "exact_action_excel_rows": [
+            114,
+            115
+          ]
+        },
+        {
+          "change_id": "D3-MATCH-05",
+          "scenario_id": "SCN-MATCH",
+          "action_ids": [
+            "D4A-MATCH-05-01",
+            "D4A-MATCH-05-02",
+            "D4A-MATCH-05-03"
+          ],
+          "principle_links": {
+            "WB-P01": "02_Action_Pain_Opp!A50:M50",
+            "WB-P02": [
+              "02_Action_Pain_Opp!K50",
+              "02_Action_Pain_Opp!AC50:AD50"
+            ],
+            "WB-P03": "02_Action_Pain_Opp!N50:R50",
+            "WB-P04": "03_AI_Work_Map!A50:T50",
+            "WB-P05": "05_Feature_List!E50:O50",
+            "WB-P06": [
+              "08_Reference_Mapping!A53:I53",
+              "08_Reference_Mapping!A54:I54",
+              "08_Reference_Mapping!A55:I55",
+              "08_Reference_Mapping!A56:I56",
+              "08_Reference_Mapping!A57:I57",
+              "08_Reference_Mapping!A58:I58",
+              "08_Reference_Mapping!A59:I59"
+            ],
+            "WB-P07": [
+              "06_Research_Cases!L5:M5",
+              "06_Research_Cases!L12:M12"
+            ]
+          },
+          "principle_id_status": "WB-P01–07 are new local review handles for workbook README rules, not IDs authored in Excel.",
+          "exact_action_excel_rows": [
+            116,
+            117,
+            118
+          ]
+        },
+        {
+          "change_id": "D3-MATCH-06",
+          "scenario_id": "SCN-MATCH",
+          "action_ids": [
+            "D4A-MATCH-06-01",
+            "D4A-MATCH-06-02",
+            "D4A-MATCH-06-03"
+          ],
+          "principle_links": {
+            "WB-P01": "02_Action_Pain_Opp!A51:M51",
+            "WB-P02": [
+              "02_Action_Pain_Opp!K51",
+              "02_Action_Pain_Opp!AC51:AD51"
+            ],
+            "WB-P03": "02_Action_Pain_Opp!N51:R51",
+            "WB-P04": "03_AI_Work_Map!A51:T51",
+            "WB-P05": "05_Feature_List!E51:O51",
+            "WB-P06": [
+              "08_Reference_Mapping!A53:I53",
+              "08_Reference_Mapping!A54:I54",
+              "08_Reference_Mapping!A55:I55",
+              "08_Reference_Mapping!A56:I56",
+              "08_Reference_Mapping!A57:I57",
+              "08_Reference_Mapping!A58:I58",
+              "08_Reference_Mapping!A59:I59"
+            ],
+            "WB-P07": [
+              "06_Research_Cases!L5:M5",
+              "06_Research_Cases!L12:M12"
+            ]
+          },
+          "principle_id_status": "WB-P01–07 are new local review handles for workbook README rules, not IDs authored in Excel.",
+          "exact_action_excel_rows": [
+            119,
+            120,
+            121
+          ]
+        },
+        {
+          "change_id": "D3-MATCH-07",
+          "scenario_id": "SCN-MATCH",
+          "action_ids": [
+            "D4A-MATCH-07-01",
+            "D4A-MATCH-07-02"
+          ],
+          "principle_links": {
+            "WB-P01": "02_Action_Pain_Opp!A52:M52",
+            "WB-P02": [
+              "02_Action_Pain_Opp!K52",
+              "02_Action_Pain_Opp!AC52:AD52"
+            ],
+            "WB-P03": "02_Action_Pain_Opp!N52:R52",
+            "WB-P04": "03_AI_Work_Map!A52:T52",
+            "WB-P05": "05_Feature_List!E52:O52",
+            "WB-P06": [
+              "08_Reference_Mapping!A53:I53",
+              "08_Reference_Mapping!A54:I54",
+              "08_Reference_Mapping!A55:I55",
+              "08_Reference_Mapping!A56:I56",
+              "08_Reference_Mapping!A57:I57",
+              "08_Reference_Mapping!A58:I58",
+              "08_Reference_Mapping!A59:I59"
+            ],
+            "WB-P07": [
+              "06_Research_Cases!L5:M5",
+              "06_Research_Cases!L12:M12"
+            ]
+          },
+          "principle_id_status": "WB-P01–07 are new local review handles for workbook README rules, not IDs authored in Excel.",
+          "exact_action_excel_rows": [
+            122,
+            123
+          ]
+        }
+      ],
+      "fields": [
+        "ProviderRecordSnapshot",
+        "RunSubjectSnapshot",
+        "RunId",
+        "ScreeningFinding",
+        "KnownFindingRegistry",
+        "FindingConsistencyCheck",
+        "SubjectClaims",
+        "ProviderClaims",
+        "TypedComparableClaims",
+        "AttributeComparison[]",
+        "FindingUnknowns",
+        "ExistingEvidence",
+        "AllowedSources",
+        "PreviousReceipts",
+        "IdentityEvidencePlanProposal",
+        "AllowedClientReason",
+        "IdentityRequestDraft",
+        "ExistingGrant",
+        "IdentityRequestAccessDecision",
+        "Finding",
+        "CurrentEvidenceUse",
+        "Comparison",
+        "AllowedActionSet",
+        "ScreeningDecisionPack",
+        "AccessScope",
+        "CurrentRevisions",
+        "DecisionPackValidation",
+        "Evidence",
+        "RiskContext",
+        "MaterialityBrief",
+        "ApplicableControlContext",
+        "RiskMaterialityDecision",
+        "HoldPolicy",
+        "ScopedHold",
+        "EscalationTask",
+        "CurrentInputManifest",
+        "ProposedDisposition",
+        "HumanRationale",
+        "ApprovalPolicy",
+        "ReviewerPermission",
+        "AuthorisedDisposition",
+        "ExpectedRevisions",
+        "IdempotencyKey",
+        "ScreeningReviewDecision",
+        "AuditEvent",
+        "CoverageManifest",
+        "DependencyEdge[]",
+        "CoverageDelta",
+        "ReadinessReevaluationEvent",
+        "CurrentCaseState",
+        "AllowedRoleProjection",
+        "CaseImpactView"
+      ],
+      "surfaces": [
+        "PX-09"
+      ],
+      "execution": [
+        "Rule",
+        "Semantic Skill",
+        "Bounded Agent candidate",
+        "Human"
+      ]
+    },
+    {
+      "id": "SCN-EDD",
+      "stage": "Assess",
+      "name": "Run EDD around specific risk questions",
+      "direction": "Optimize",
+      "pain": "Large evidence packs can hide the actual risk questions, ownership and outstanding decisions.",
+      "opp": "Organise EDD around specific risk questions, evidence gaps, owners and authorised decisions rather than a generic evidence bundle.",
+      "seed": [
+        3,
+        4,
+        5,
+        4,
+        4
+      ],
+      "features": [
+        "Independent EDD applicability",
+        "Question-led evidence pack",
+        "Owner and status view",
+        "Targeted gap workflow",
+        "Specialist decision record",
+        "Condition handoff"
+      ],
+      "title": "Assess enhanced due diligence when applicable",
+      "owner": "specialist",
+      "process": [
+        "SRC-007|p1|CLIENT FULFILMENT / KYC OPS|shape18|M2.4|occ4",
+        "SRC-007|p2|Agentic execution|shape18|M2.4|occ4",
+        "SRC-007|p1|FINANCIAL CRIME / RISK / COMPLIANCE|shape297|M5.1|occ1",
+        "SRC-007|p2|Agentic execution|shape297|M5.1|occ1",
+        "SRC-007|p1|FINANCIAL CRIME / RISK / COMPLIANCE|shape297|M5.2|occ2",
+        "SRC-007|p2|Agentic execution|shape297|M5.2|occ2",
+        "SRC-007|p1|FINANCIAL CRIME / RISK / COMPLIANCE|shape297|M5.3|occ3",
+        "SRC-007|p2|Agentic execution|shape297|M5.3|occ3",
+        "SRC-007|p2|FINANCIAL CRIME / RISK / COMPLIANCE — Human in the Loop|shape410|M5.9|occ1",
+        "SRC-007|p1|FINANCIAL CRIME / RISK / COMPLIANCE|shape297|M5.4|occ4",
+        "SRC-007|p2|Agentic execution|shape297|M5.4|occ4",
+        "SRC-007|p2|CLIENT FULFILMENT / KYC OPS — Human in the Loop|shape392|unnumbered|occ1",
+        "SRC-007|p1|FINANCIAL CRIME / RISK / COMPLIANCE|shape297|M5.5|occ5",
+        "SRC-007|p2|Agentic execution|shape297|M5.5|occ5",
+        "SRC-007|p1|FINANCIAL CRIME / RISK / COMPLIANCE|shape297|M5.6|occ6",
+        "SRC-007|p1|FINANCIAL CRIME / RISK / COMPLIANCE|shape297|M5.7|occ7",
+        "SRC-007|p2|Agentic execution|shape297|M5.6|occ6",
+        "SRC-007|p2|Agentic execution|shape297|M5.7|occ7",
+        "SRC-007|p2|FINANCIAL CRIME / RISK / COMPLIANCE — Human in the Loop|shape410|M5.9|occ1",
+        "SRC-007|p2|FINANCIAL CRIME / RISK / COMPLIANCE — Human in the Loop|shape410|M5.10|occ2",
+        "SRC-007|p1|FINANCIAL CRIME / RISK / COMPLIANCE|shape297|M5.8|occ8",
+        "SRC-007|p2|Agentic execution|shape297|M5.8|occ8"
+      ],
+      "parents": [
+        "D3-EDD-01",
+        "D3-EDD-02",
+        "D3-EDD-03",
+        "D3-EDD-04",
+        "D3-EDD-05",
+        "D3-EDD-06",
+        "D3-EDD-07",
+        "D3-EDD-08"
+      ],
+      "actions": [
+        "D4A-EDD-01-01",
+        "D4A-EDD-01-02",
+        "D4A-EDD-02-01",
+        "D4A-EDD-02-02",
+        "D4A-EDD-03-01",
+        "D4A-EDD-03-02",
+        "D4A-EDD-04-01",
+        "D4A-EDD-04-02",
+        "D4A-EDD-05-01",
+        "D4A-EDD-05-02",
+        "D4A-EDD-06-01",
+        "D4A-EDD-06-02",
+        "D4A-EDD-06-03",
+        "D4A-EDD-07-01",
+        "D4A-EDD-07-02",
+        "D4A-EDD-07-03",
+        "D4A-EDD-07-04",
+        "D4A-EDD-08-01",
+        "D4A-EDD-08-02"
+      ],
+      "principles": [
+        {
+          "change_id": "D3-EDD-01",
+          "scenario_id": "SCN-EDD",
+          "action_ids": [
+            "D4A-EDD-01-01",
+            "D4A-EDD-01-02"
+          ],
+          "principle_links": {
+            "WB-P01": "02_Action_Pain_Opp!A53:M53",
+            "WB-P02": [
+              "02_Action_Pain_Opp!K53",
+              "02_Action_Pain_Opp!AC53:AD53"
+            ],
+            "WB-P03": "02_Action_Pain_Opp!N53:R53",
+            "WB-P04": "03_AI_Work_Map!A53:T53",
+            "WB-P05": "05_Feature_List!E53:O53",
+            "WB-P06": [
+              "08_Reference_Mapping!A60:I60",
+              "08_Reference_Mapping!A61:I61",
+              "08_Reference_Mapping!A62:I62",
+              "08_Reference_Mapping!A63:I63",
+              "08_Reference_Mapping!A64:I64"
+            ],
+            "WB-P07": [
+              "06_Research_Cases!L5:M5"
+            ]
+          },
+          "principle_id_status": "WB-P01–07 are new local review handles for workbook README rules, not IDs authored in Excel.",
+          "exact_action_excel_rows": [
+            124,
+            125
+          ]
+        },
+        {
+          "change_id": "D3-EDD-02",
+          "scenario_id": "SCN-EDD",
+          "action_ids": [
+            "D4A-EDD-02-01",
+            "D4A-EDD-02-02"
+          ],
+          "principle_links": {
+            "WB-P01": "02_Action_Pain_Opp!A54:M54",
+            "WB-P02": [
+              "02_Action_Pain_Opp!K54",
+              "02_Action_Pain_Opp!AC54:AD54"
+            ],
+            "WB-P03": "02_Action_Pain_Opp!N54:R54",
+            "WB-P04": "03_AI_Work_Map!A54:T54",
+            "WB-P05": "05_Feature_List!E54:O54",
+            "WB-P06": [
+              "08_Reference_Mapping!A60:I60",
+              "08_Reference_Mapping!A61:I61",
+              "08_Reference_Mapping!A62:I62",
+              "08_Reference_Mapping!A63:I63",
+              "08_Reference_Mapping!A64:I64"
+            ],
+            "WB-P07": [
+              "06_Research_Cases!L5:M5"
+            ]
+          },
+          "principle_id_status": "WB-P01–07 are new local review handles for workbook README rules, not IDs authored in Excel.",
+          "exact_action_excel_rows": [
+            126,
+            127
+          ]
+        },
+        {
+          "change_id": "D3-EDD-03",
+          "scenario_id": "SCN-EDD",
+          "action_ids": [
+            "D4A-EDD-03-01",
+            "D4A-EDD-03-02"
+          ],
+          "principle_links": {
+            "WB-P01": "02_Action_Pain_Opp!A55:M55",
+            "WB-P02": [
+              "02_Action_Pain_Opp!K55",
+              "02_Action_Pain_Opp!AC55:AD55"
+            ],
+            "WB-P03": "02_Action_Pain_Opp!N55:R55",
+            "WB-P04": "03_AI_Work_Map!A55:T55",
+            "WB-P05": "05_Feature_List!E55:O55",
+            "WB-P06": [
+              "08_Reference_Mapping!A60:I60",
+              "08_Reference_Mapping!A61:I61",
+              "08_Reference_Mapping!A62:I62",
+              "08_Reference_Mapping!A63:I63",
+              "08_Reference_Mapping!A64:I64"
+            ],
+            "WB-P07": [
+              "06_Research_Cases!L5:M5"
+            ]
+          },
+          "principle_id_status": "WB-P01–07 are new local review handles for workbook README rules, not IDs authored in Excel.",
+          "exact_action_excel_rows": [
+            128,
+            129
+          ]
+        },
+        {
+          "change_id": "D3-EDD-04",
+          "scenario_id": "SCN-EDD",
+          "action_ids": [
+            "D4A-EDD-04-01",
+            "D4A-EDD-04-02"
+          ],
+          "principle_links": {
+            "WB-P01": "02_Action_Pain_Opp!A56:M56",
+            "WB-P02": [
+              "02_Action_Pain_Opp!K56",
+              "02_Action_Pain_Opp!AC56:AD56"
+            ],
+            "WB-P03": "02_Action_Pain_Opp!N56:R56",
+            "WB-P04": "03_AI_Work_Map!A56:T56",
+            "WB-P05": "05_Feature_List!E56:O56",
+            "WB-P06": [
+              "08_Reference_Mapping!A60:I60",
+              "08_Reference_Mapping!A61:I61",
+              "08_Reference_Mapping!A62:I62",
+              "08_Reference_Mapping!A63:I63",
+              "08_Reference_Mapping!A64:I64"
+            ],
+            "WB-P07": [
+              "06_Research_Cases!L5:M5"
+            ]
+          },
+          "principle_id_status": "WB-P01–07 are new local review handles for workbook README rules, not IDs authored in Excel.",
+          "exact_action_excel_rows": [
+            130,
+            131
+          ]
+        },
+        {
+          "change_id": "D3-EDD-05",
+          "scenario_id": "SCN-EDD",
+          "action_ids": [
+            "D4A-EDD-05-01",
+            "D4A-EDD-05-02"
+          ],
+          "principle_links": {
+            "WB-P01": "02_Action_Pain_Opp!A57:M57",
+            "WB-P02": [
+              "02_Action_Pain_Opp!K57",
+              "02_Action_Pain_Opp!AC57:AD57"
+            ],
+            "WB-P03": "02_Action_Pain_Opp!N57:R57",
+            "WB-P04": "03_AI_Work_Map!A57:T57",
+            "WB-P05": "05_Feature_List!E57:O57",
+            "WB-P06": [
+              "08_Reference_Mapping!A60:I60",
+              "08_Reference_Mapping!A61:I61",
+              "08_Reference_Mapping!A62:I62",
+              "08_Reference_Mapping!A63:I63",
+              "08_Reference_Mapping!A64:I64"
+            ],
+            "WB-P07": [
+              "06_Research_Cases!L5:M5"
+            ]
+          },
+          "principle_id_status": "WB-P01–07 are new local review handles for workbook README rules, not IDs authored in Excel.",
+          "exact_action_excel_rows": [
+            132,
+            133
+          ]
+        },
+        {
+          "change_id": "D3-EDD-06",
+          "scenario_id": "SCN-EDD",
+          "action_ids": [
+            "D4A-EDD-06-01",
+            "D4A-EDD-06-02",
+            "D4A-EDD-06-03"
+          ],
+          "principle_links": {
+            "WB-P01": "02_Action_Pain_Opp!A58:M58",
+            "WB-P02": [
+              "02_Action_Pain_Opp!K58",
+              "02_Action_Pain_Opp!AC58:AD58"
+            ],
+            "WB-P03": "02_Action_Pain_Opp!N58:R58",
+            "WB-P04": "03_AI_Work_Map!A58:T58",
+            "WB-P05": "05_Feature_List!E58:O58",
+            "WB-P06": [
+              "08_Reference_Mapping!A60:I60",
+              "08_Reference_Mapping!A61:I61",
+              "08_Reference_Mapping!A62:I62",
+              "08_Reference_Mapping!A63:I63",
+              "08_Reference_Mapping!A64:I64"
+            ],
+            "WB-P07": [
+              "06_Research_Cases!L5:M5"
+            ]
+          },
+          "principle_id_status": "WB-P01–07 are new local review handles for workbook README rules, not IDs authored in Excel.",
+          "exact_action_excel_rows": [
+            134,
+            135,
+            136
+          ]
+        },
+        {
+          "change_id": "D3-EDD-07",
+          "scenario_id": "SCN-EDD",
+          "action_ids": [
+            "D4A-EDD-07-01",
+            "D4A-EDD-07-02",
+            "D4A-EDD-07-03",
+            "D4A-EDD-07-04"
+          ],
+          "principle_links": {
+            "WB-P01": "02_Action_Pain_Opp!A59:M59",
+            "WB-P02": [
+              "02_Action_Pain_Opp!K59",
+              "02_Action_Pain_Opp!AC59:AD59"
+            ],
+            "WB-P03": "02_Action_Pain_Opp!N59:R59",
+            "WB-P04": "03_AI_Work_Map!A59:T59",
+            "WB-P05": "05_Feature_List!E59:O59",
+            "WB-P06": [
+              "08_Reference_Mapping!A60:I60",
+              "08_Reference_Mapping!A61:I61",
+              "08_Reference_Mapping!A62:I62",
+              "08_Reference_Mapping!A63:I63",
+              "08_Reference_Mapping!A64:I64"
+            ],
+            "WB-P07": [
+              "06_Research_Cases!L5:M5"
+            ]
+          },
+          "principle_id_status": "WB-P01–07 are new local review handles for workbook README rules, not IDs authored in Excel.",
+          "exact_action_excel_rows": [
+            137,
+            138,
+            139,
+            140
+          ]
+        },
+        {
+          "change_id": "D3-EDD-08",
+          "scenario_id": "SCN-EDD",
+          "action_ids": [
+            "D4A-EDD-08-01",
+            "D4A-EDD-08-02"
+          ],
+          "principle_links": {
+            "WB-P01": "02_Action_Pain_Opp!A60:M60",
+            "WB-P02": [
+              "02_Action_Pain_Opp!K60",
+              "02_Action_Pain_Opp!AC60:AD60"
+            ],
+            "WB-P03": "02_Action_Pain_Opp!N60:R60",
+            "WB-P04": "03_AI_Work_Map!A60:T60",
+            "WB-P05": "05_Feature_List!E60:O60",
+            "WB-P06": [
+              "08_Reference_Mapping!A60:I60",
+              "08_Reference_Mapping!A61:I61",
+              "08_Reference_Mapping!A62:I62",
+              "08_Reference_Mapping!A63:I63",
+              "08_Reference_Mapping!A64:I64"
+            ],
+            "WB-P07": [
+              "06_Research_Cases!L5:M5"
+            ]
+          },
+          "principle_id_status": "WB-P01–07 are new local review handles for workbook README rules, not IDs authored in Excel.",
+          "exact_action_excel_rows": [
+            141,
+            142
+          ]
+        }
+      ],
+      "fields": [
+        "CaseScope",
+        "RiskIndicators",
+        "EDDPolicy.revision",
+        "EDDApplicabilityCandidate",
+        "RiskEvidence",
+        "EDDApplicabilityDecision",
+        "HoldRefs",
+        "EDDStartEligibility",
+        "AssignmentCatalogue",
+        "EDDAssessment",
+        "WorkItem",
+        "ApprovedRiskQuestions",
+        "AvailableEvidence",
+        "AllowedSources",
+        "EDDEvidencePlanProposal",
+        "EDDEvidencePlan",
+        "EvidenceUse[]",
+        "RiskQuestion[]",
+        "EDDEvidencePack",
+        "OpenIssue[]",
+        "RiskFactorReviewPack",
+        "PolicyContext",
+        "EDDRiskJudgment",
+        "RiskQuestionGaps",
+        "PriorResponses",
+        "TargetedEnquiryPlan",
+        "DisclosureRules",
+        "ApprovedRiskInformationRequest",
+        "RiskQuestion",
+        "CaseAllowedProjection",
+        "SpecialistConsultationPack",
+        "RoleDirectory",
+        "ConsultationTask",
+        "ResumeAnchor",
+        "EvidenceRefs",
+        "SpecialistOpinion",
+        "RiskJudgments",
+        "ExpertOpinions",
+        "EvidencePack.revision",
+        "EDDOutcomeDraft",
+        "CurrentEvidence",
+        "EDDOutcomeDecision",
+        "EDDConditionDefinition[]",
+        "ApprovalPolicy",
+        "EDDApproval",
+        "Conditions",
+        "ScopeRevision",
+        "EDDOutcome",
+        "ClearanceCondition[]",
+        "CurrentConditionRefs",
+        "EDDConditionHandoffEvent",
+        "RolePolicy",
+        "EDDAllowedSummary"
+      ],
+      "surfaces": [
+        "PX-10"
+      ],
+      "execution": [
+        "Rule",
+        "Human",
+        "Bounded Agent candidate",
+        "Semantic Skill"
+      ]
+    },
+    {
+      "id": "SCN-CONFLICTS",
+      "stage": "Resolve",
+      "name": "Separate conflicts search, judgement and clearance",
+      "direction": "Optimize",
+      "pain": "A completed search can be mistaken for specialist clearance, and the scope of a hold may be unclear.",
+      "opp": "Separate search execution, specialist judgement, hold scope and clearance so independent work can continue where permitted.",
+      "seed": [
+        3,
+        3,
+        4,
+        4,
+        4
+      ],
+      "features": [
+        "Early conflicts trigger",
+        "Search-result state",
+        "Scoped hold",
+        "Specialist judgement task",
+        "Clearance record",
+        "Independent-work visibility"
+      ],
+      "title": "Investigate conflicts early",
+      "owner": "control",
+      "process": [
+        "SRC-007|p1|RMG CONTROL ROOM|shape312|M7.1|occ1",
+        "SRC-007|p1|SALES / RM (Front Office)|shape20|M1.1|occ1",
+        "SRC-007|p2|Agentic execution|shape312|M7.1|occ1",
+        "SRC-007|p2|SALES / RM (Front Office)|shape20|M1.1|occ1",
+        "SRC-007|p1|RMG CONTROL ROOM|shape312|M7.2|occ2",
+        "SRC-007|p2|Agentic execution|shape312|M7.2|occ2",
+        "SRC-007|p1|RMG CONTROL ROOM|shape312|M7.3|occ3",
+        "SRC-007|p2|Agentic execution|shape312|M7.3|occ3",
+        "SRC-007|p2|RMG CONTROL ROOM — Human in the Loop|shape311|M7.5|occ1",
+        "SRC-007|p1|RMG CONTROL ROOM|shape312|M7.3|occ3",
+        "SRC-007|p2|RMG CONTROL ROOM — Human in the Loop|shape311|M7.6|occ2",
+        "SRC-007|p1|RMG CONTROL ROOM|shape312|M7.4|occ4",
+        "SRC-007|p2|Agentic execution|shape312|M7.4|occ4",
+        "SRC-007|p2|RMG CONTROL ROOM — Human in the Loop|shape311|M7.7|occ3"
+      ],
+      "parents": [
+        "D3-CONFLICTS-01",
+        "D3-CONFLICTS-02",
+        "D3-CONFLICTS-03",
+        "D3-CONFLICTS-04",
+        "D3-CONFLICTS-05"
+      ],
+      "actions": [
+        "D4A-CONFLICTS-01-01",
+        "D4A-CONFLICTS-01-02",
+        "D4A-CONFLICTS-02-01",
+        "D4A-CONFLICTS-02-02",
+        "D4A-CONFLICTS-03-01",
+        "D4A-CONFLICTS-03-02",
+        "D4A-CONFLICTS-04-01",
+        "D4A-CONFLICTS-04-02",
+        "D4A-CONFLICTS-05-01",
+        "D4A-CONFLICTS-05-02"
+      ],
+      "principles": [
+        {
+          "change_id": "D3-CONFLICTS-01",
+          "scenario_id": "SCN-CONFLICTS",
+          "action_ids": [
+            "D4A-CONFLICTS-01-01",
+            "D4A-CONFLICTS-01-02"
+          ],
+          "principle_links": {
+            "WB-P01": "02_Action_Pain_Opp!A61:M61",
+            "WB-P02": [
+              "02_Action_Pain_Opp!K61",
+              "02_Action_Pain_Opp!AC61:AD61"
+            ],
+            "WB-P03": "02_Action_Pain_Opp!N61:R61",
+            "WB-P04": "03_AI_Work_Map!A61:T61",
+            "WB-P05": "05_Feature_List!E61:O61",
+            "WB-P06": [
+              "08_Reference_Mapping!A65:I65",
+              "08_Reference_Mapping!A66:I66",
+              "08_Reference_Mapping!A67:I67",
+              "08_Reference_Mapping!A68:I68"
+            ],
+            "WB-P07": [
+              "06_Research_Cases!L5:M5",
+              "06_Research_Cases!L11:M11"
+            ]
+          },
+          "principle_id_status": "WB-P01–07 are new local review handles for workbook README rules, not IDs authored in Excel.",
+          "exact_action_excel_rows": [
+            143,
+            144
+          ]
+        },
+        {
+          "change_id": "D3-CONFLICTS-02",
+          "scenario_id": "SCN-CONFLICTS",
+          "action_ids": [
+            "D4A-CONFLICTS-02-01",
+            "D4A-CONFLICTS-02-02"
+          ],
+          "principle_links": {
+            "WB-P01": "02_Action_Pain_Opp!A62:M62",
+            "WB-P02": [
+              "02_Action_Pain_Opp!K62",
+              "02_Action_Pain_Opp!AC62:AD62"
+            ],
+            "WB-P03": "02_Action_Pain_Opp!N62:R62",
+            "WB-P04": "03_AI_Work_Map!A62:T62",
+            "WB-P05": "05_Feature_List!E62:O62",
+            "WB-P06": [
+              "08_Reference_Mapping!A65:I65",
+              "08_Reference_Mapping!A66:I66",
+              "08_Reference_Mapping!A67:I67",
+              "08_Reference_Mapping!A68:I68"
+            ],
+            "WB-P07": [
+              "06_Research_Cases!L5:M5",
+              "06_Research_Cases!L11:M11"
+            ]
+          },
+          "principle_id_status": "WB-P01–07 are new local review handles for workbook README rules, not IDs authored in Excel.",
+          "exact_action_excel_rows": [
+            145,
+            146
+          ]
+        },
+        {
+          "change_id": "D3-CONFLICTS-03",
+          "scenario_id": "SCN-CONFLICTS",
+          "action_ids": [
+            "D4A-CONFLICTS-03-01",
+            "D4A-CONFLICTS-03-02"
+          ],
+          "principle_links": {
+            "WB-P01": "02_Action_Pain_Opp!A63:M63",
+            "WB-P02": [
+              "02_Action_Pain_Opp!K63",
+              "02_Action_Pain_Opp!AC63:AD63"
+            ],
+            "WB-P03": "02_Action_Pain_Opp!N63:R63",
+            "WB-P04": "03_AI_Work_Map!A63:T63",
+            "WB-P05": "05_Feature_List!E63:O63",
+            "WB-P06": [
+              "08_Reference_Mapping!A65:I65",
+              "08_Reference_Mapping!A66:I66",
+              "08_Reference_Mapping!A67:I67",
+              "08_Reference_Mapping!A68:I68"
+            ],
+            "WB-P07": [
+              "06_Research_Cases!L5:M5",
+              "06_Research_Cases!L11:M11"
+            ]
+          },
+          "principle_id_status": "WB-P01–07 are new local review handles for workbook README rules, not IDs authored in Excel.",
+          "exact_action_excel_rows": [
+            147,
+            148
+          ]
+        },
+        {
+          "change_id": "D3-CONFLICTS-04",
+          "scenario_id": "SCN-CONFLICTS",
+          "action_ids": [
+            "D4A-CONFLICTS-04-01",
+            "D4A-CONFLICTS-04-02"
+          ],
+          "principle_links": {
+            "WB-P01": "02_Action_Pain_Opp!A64:M64",
+            "WB-P02": [
+              "02_Action_Pain_Opp!K64",
+              "02_Action_Pain_Opp!AC64:AD64"
+            ],
+            "WB-P03": "02_Action_Pain_Opp!N64:R64",
+            "WB-P04": "03_AI_Work_Map!A64:T64",
+            "WB-P05": "05_Feature_List!E64:O64",
+            "WB-P06": [
+              "08_Reference_Mapping!A65:I65",
+              "08_Reference_Mapping!A66:I66",
+              "08_Reference_Mapping!A67:I67",
+              "08_Reference_Mapping!A68:I68"
+            ],
+            "WB-P07": [
+              "06_Research_Cases!L5:M5",
+              "06_Research_Cases!L11:M11"
+            ]
+          },
+          "principle_id_status": "WB-P01–07 are new local review handles for workbook README rules, not IDs authored in Excel.",
+          "exact_action_excel_rows": [
+            149,
+            150
+          ]
+        },
+        {
+          "change_id": "D3-CONFLICTS-05",
+          "scenario_id": "SCN-CONFLICTS",
+          "action_ids": [
+            "D4A-CONFLICTS-05-01",
+            "D4A-CONFLICTS-05-02"
+          ],
+          "principle_links": {
+            "WB-P01": "02_Action_Pain_Opp!A65:M65",
+            "WB-P02": [
+              "02_Action_Pain_Opp!K65",
+              "02_Action_Pain_Opp!AC65:AD65"
+            ],
+            "WB-P03": "02_Action_Pain_Opp!N65:R65",
+            "WB-P04": "03_AI_Work_Map!A65:T65",
+            "WB-P05": "05_Feature_List!E65:O65",
+            "WB-P06": [
+              "08_Reference_Mapping!A65:I65",
+              "08_Reference_Mapping!A66:I66",
+              "08_Reference_Mapping!A67:I67",
+              "08_Reference_Mapping!A68:I68"
+            ],
+            "WB-P07": [
+              "06_Research_Cases!L5:M5",
+              "06_Research_Cases!L11:M11"
+            ]
+          },
+          "principle_id_status": "WB-P01–07 are new local review handles for workbook README rules, not IDs authored in Excel.",
+          "exact_action_excel_rows": [
+            151,
+            152
+          ]
+        }
+      ],
+      "fields": [
+        "CaseScope",
+        "PartyContext",
+        "ConflictPolicy",
+        "HoldRefs",
+        "ConflictStartEligibility",
+        "TriggerEvent",
+        "ConflictReview",
+        "WorkItem",
+        "ApprovedConflictSearch",
+        "PartySnapshot",
+        "ConflictSearchReceipt",
+        "CandidateFinding[]",
+        "ScopeRevision",
+        "ConflictFinding",
+        "SearchAudit",
+        "PermittedRelationshipContext",
+        "ConflictReviewPack",
+        "ApplicableControlContext",
+        "ConflictDecisionProposal",
+        "DependencyEvidence",
+        "ConflictImpactDecision",
+        "HoldPolicy",
+        "DependencyEdge[]",
+        "Hold",
+        "EscalationTask",
+        "UnknownImpact",
+        "CurrentEvidence",
+        "Permission",
+        "AuthorisedConflictOutcome",
+        "ExpectedRevision",
+        "ConflictReview.clearance_ref",
+        "ConditionEvent"
+      ],
+      "surfaces": [
+        "PX-10"
+      ],
+      "execution": [
+        "Rule",
+        "Deterministic Skill",
+        "Semantic Skill",
+        "Human"
+      ]
+    },
+    {
+      "id": "SCN-LEGAL",
+      "stage": "Resolve",
+      "name": "Link Legal versions to the inputs they consume",
+      "direction": "Optimize",
+      "pain": "Drafts, professional conditions, approvals and executed agreement versions can drift apart.",
+      "opp": "Link every agreement revision to professional inputs and keep draft, approval, execution and stored terms distinct.",
+      "seed": [
+        3,
+        4,
+        5,
+        4,
+        5
+      ],
+      "features": [
+        "Agreement revision chain",
+        "Credit condition links",
+        "Draft origin / template trace",
+        "Negotiation change impact",
+        "Approval version check",
+        "Execution evidence"
+      ],
+      "title": "Prepare and review agreements",
+      "owner": "legal",
+      "process": [
+        "SRC-007|p1|CGM LEGAL|shape330|C1.1|occ1",
+        "SRC-007|p2|CGM LEGAL|shape330|C1.1|occ1",
+        "SRC-007|p1|CGM LEGAL|shape332|C1.2|occ1",
+        "SRC-007|p2|CGM LEGAL|shape332|C1.2|occ1",
+        "SRC-007|p1|CGM LEGAL|shape334|C1.3|occ1",
+        "SRC-007|p2|CGM LEGAL|shape334|C1.3|occ1",
+        "SRC-007|p1|CGM LEGAL|shape336|C1.4|occ1",
+        "SRC-007|p1|CREDIT|shape326|C2.6|occ1",
+        "SRC-007|p2|CGM LEGAL|shape336|C1.4|occ1",
+        "SRC-007|p2|CREDIT|shape326|C2.6|occ1",
+        "SRC-007|p1|CGM LEGAL|shape338|C1.5|occ1",
+        "SRC-007|p2|CGM LEGAL|shape338|C1.5|occ1",
+        "SRC-007|p1|CGM LEGAL|shape340|C1.6|occ1",
+        "SRC-007|p1|CREDIT|shape328|C2.7|occ1",
+        "SRC-007|p2|CGM LEGAL|shape340|C1.6|occ1",
+        "SRC-007|p2|CREDIT|shape328|C2.7|occ1",
+        "SRC-007|p1|CGM LEGAL|shape342|C1.7|occ1",
+        "SRC-007|p2|CGM LEGAL|shape342|C1.7|occ1",
+        "SRC-007|p1|CGM LEGAL|shape344|C1.8|occ1",
+        "SRC-007|p2|CGM LEGAL|shape344|C1.8|occ1"
+      ],
+      "parents": [
+        "D3-LEGAL-01",
+        "D3-LEGAL-02",
+        "D3-LEGAL-03",
+        "D3-LEGAL-04",
+        "D3-LEGAL-05",
+        "D3-LEGAL-06",
+        "D3-LEGAL-07",
+        "D3-LEGAL-08"
+      ],
+      "actions": [
+        "D4A-LEGAL-01-01",
+        "D4A-LEGAL-01-02",
+        "D4A-LEGAL-02-01",
+        "D4A-LEGAL-02-02",
+        "D4A-LEGAL-03-01",
+        "D4A-LEGAL-03-02",
+        "D4A-LEGAL-04-01",
+        "D4A-LEGAL-04-02",
+        "D4A-LEGAL-04-03",
+        "D4A-LEGAL-05-01",
+        "D4A-LEGAL-05-02",
+        "D4A-LEGAL-05-03",
+        "D4A-LEGAL-06-01",
+        "D4A-LEGAL-06-02",
+        "D4A-LEGAL-06-03",
+        "D4A-LEGAL-07-01",
+        "D4A-LEGAL-07-02",
+        "D4A-LEGAL-07-03",
+        "D4A-LEGAL-08-01",
+        "D4A-LEGAL-08-02",
+        "D4A-LEGAL-08-03"
+      ],
+      "principles": [
+        {
+          "change_id": "D3-LEGAL-01",
+          "scenario_id": "SCN-LEGAL",
+          "action_ids": [
+            "D4A-LEGAL-01-01",
+            "D4A-LEGAL-01-02"
+          ],
+          "principle_links": {
+            "WB-P01": "02_Action_Pain_Opp!A66:M66",
+            "WB-P02": [
+              "02_Action_Pain_Opp!K66",
+              "02_Action_Pain_Opp!AC66:AD66"
+            ],
+            "WB-P03": "02_Action_Pain_Opp!N66:R66",
+            "WB-P04": "03_AI_Work_Map!A66:T66",
+            "WB-P05": "05_Feature_List!E66:O66",
+            "WB-P06": [
+              "08_Reference_Mapping!A69:I69",
+              "08_Reference_Mapping!A70:I70",
+              "08_Reference_Mapping!A71:I71",
+              "08_Reference_Mapping!A72:I72",
+              "08_Reference_Mapping!A73:I73",
+              "08_Reference_Mapping!A74:I74",
+              "08_Reference_Mapping!A75:I75"
+            ],
+            "WB-P07": [
+              "06_Research_Cases!L5:M5",
+              "06_Research_Cases!L10:M10",
+              "06_Research_Cases!L12:M12"
+            ]
+          },
+          "principle_id_status": "WB-P01–07 are new local review handles for workbook README rules, not IDs authored in Excel.",
+          "exact_action_excel_rows": [
+            153,
+            154
+          ]
+        },
+        {
+          "change_id": "D3-LEGAL-02",
+          "scenario_id": "SCN-LEGAL",
+          "action_ids": [
+            "D4A-LEGAL-02-01",
+            "D4A-LEGAL-02-02"
+          ],
+          "principle_links": {
+            "WB-P01": "02_Action_Pain_Opp!A67:M67",
+            "WB-P02": [
+              "02_Action_Pain_Opp!K67",
+              "02_Action_Pain_Opp!AC67:AD67"
+            ],
+            "WB-P03": "02_Action_Pain_Opp!N67:R67",
+            "WB-P04": "03_AI_Work_Map!A67:T67",
+            "WB-P05": "05_Feature_List!E67:O67",
+            "WB-P06": [
+              "08_Reference_Mapping!A69:I69",
+              "08_Reference_Mapping!A70:I70",
+              "08_Reference_Mapping!A71:I71",
+              "08_Reference_Mapping!A72:I72",
+              "08_Reference_Mapping!A73:I73",
+              "08_Reference_Mapping!A74:I74",
+              "08_Reference_Mapping!A75:I75"
+            ],
+            "WB-P07": [
+              "06_Research_Cases!L5:M5",
+              "06_Research_Cases!L10:M10",
+              "06_Research_Cases!L12:M12"
+            ]
+          },
+          "principle_id_status": "WB-P01–07 are new local review handles for workbook README rules, not IDs authored in Excel.",
+          "exact_action_excel_rows": [
+            155,
+            156
+          ]
+        },
+        {
+          "change_id": "D3-LEGAL-03",
+          "scenario_id": "SCN-LEGAL",
+          "action_ids": [
+            "D4A-LEGAL-03-01",
+            "D4A-LEGAL-03-02"
+          ],
+          "principle_links": {
+            "WB-P01": "02_Action_Pain_Opp!A68:M68",
+            "WB-P02": [
+              "02_Action_Pain_Opp!K68",
+              "02_Action_Pain_Opp!AC68:AD68"
+            ],
+            "WB-P03": "02_Action_Pain_Opp!N68:R68",
+            "WB-P04": "03_AI_Work_Map!A68:T68",
+            "WB-P05": "05_Feature_List!E68:O68",
+            "WB-P06": [
+              "08_Reference_Mapping!A69:I69",
+              "08_Reference_Mapping!A70:I70",
+              "08_Reference_Mapping!A71:I71",
+              "08_Reference_Mapping!A72:I72",
+              "08_Reference_Mapping!A73:I73",
+              "08_Reference_Mapping!A74:I74",
+              "08_Reference_Mapping!A75:I75"
+            ],
+            "WB-P07": [
+              "06_Research_Cases!L5:M5",
+              "06_Research_Cases!L10:M10",
+              "06_Research_Cases!L12:M12"
+            ]
+          },
+          "principle_id_status": "WB-P01–07 are new local review handles for workbook README rules, not IDs authored in Excel.",
+          "exact_action_excel_rows": [
+            157,
+            158
+          ]
+        },
+        {
+          "change_id": "D3-LEGAL-04",
+          "scenario_id": "SCN-LEGAL",
+          "action_ids": [
+            "D4A-LEGAL-04-01",
+            "D4A-LEGAL-04-02",
+            "D4A-LEGAL-04-03"
+          ],
+          "principle_links": {
+            "WB-P01": "02_Action_Pain_Opp!A69:M69",
+            "WB-P02": [
+              "02_Action_Pain_Opp!K69",
+              "02_Action_Pain_Opp!AC69:AD69"
+            ],
+            "WB-P03": "02_Action_Pain_Opp!N69:R69",
+            "WB-P04": "03_AI_Work_Map!A69:T69",
+            "WB-P05": "05_Feature_List!E69:O69",
+            "WB-P06": [
+              "08_Reference_Mapping!A69:I69",
+              "08_Reference_Mapping!A70:I70",
+              "08_Reference_Mapping!A71:I71",
+              "08_Reference_Mapping!A72:I72",
+              "08_Reference_Mapping!A73:I73",
+              "08_Reference_Mapping!A74:I74",
+              "08_Reference_Mapping!A75:I75"
+            ],
+            "WB-P07": [
+              "06_Research_Cases!L5:M5",
+              "06_Research_Cases!L10:M10",
+              "06_Research_Cases!L12:M12"
+            ]
+          },
+          "principle_id_status": "WB-P01–07 are new local review handles for workbook README rules, not IDs authored in Excel.",
+          "exact_action_excel_rows": [
+            159,
+            160,
+            161
+          ]
+        },
+        {
+          "change_id": "D3-LEGAL-05",
+          "scenario_id": "SCN-LEGAL",
+          "action_ids": [
+            "D4A-LEGAL-05-01",
+            "D4A-LEGAL-05-02",
+            "D4A-LEGAL-05-03"
+          ],
+          "principle_links": {
+            "WB-P01": "02_Action_Pain_Opp!A70:M70",
+            "WB-P02": [
+              "02_Action_Pain_Opp!K70",
+              "02_Action_Pain_Opp!AC70:AD70"
+            ],
+            "WB-P03": "02_Action_Pain_Opp!N70:R70",
+            "WB-P04": "03_AI_Work_Map!A70:T70",
+            "WB-P05": "05_Feature_List!E70:O70",
+            "WB-P06": [
+              "08_Reference_Mapping!A69:I69",
+              "08_Reference_Mapping!A70:I70",
+              "08_Reference_Mapping!A71:I71",
+              "08_Reference_Mapping!A72:I72",
+              "08_Reference_Mapping!A73:I73",
+              "08_Reference_Mapping!A74:I74",
+              "08_Reference_Mapping!A75:I75"
+            ],
+            "WB-P07": [
+              "06_Research_Cases!L5:M5",
+              "06_Research_Cases!L10:M10",
+              "06_Research_Cases!L12:M12"
+            ]
+          },
+          "principle_id_status": "WB-P01–07 are new local review handles for workbook README rules, not IDs authored in Excel.",
+          "exact_action_excel_rows": [
+            162,
+            163,
+            164
+          ]
+        },
+        {
+          "change_id": "D3-LEGAL-06",
+          "scenario_id": "SCN-LEGAL",
+          "action_ids": [
+            "D4A-LEGAL-06-01",
+            "D4A-LEGAL-06-02",
+            "D4A-LEGAL-06-03"
+          ],
+          "principle_links": {
+            "WB-P01": "02_Action_Pain_Opp!A71:M71",
+            "WB-P02": [
+              "02_Action_Pain_Opp!K71",
+              "02_Action_Pain_Opp!AC71:AD71"
+            ],
+            "WB-P03": "02_Action_Pain_Opp!N71:R71",
+            "WB-P04": "03_AI_Work_Map!A71:T71",
+            "WB-P05": "05_Feature_List!E71:O71",
+            "WB-P06": [
+              "08_Reference_Mapping!A69:I69",
+              "08_Reference_Mapping!A70:I70",
+              "08_Reference_Mapping!A71:I71",
+              "08_Reference_Mapping!A72:I72",
+              "08_Reference_Mapping!A73:I73",
+              "08_Reference_Mapping!A74:I74",
+              "08_Reference_Mapping!A75:I75"
+            ],
+            "WB-P07": [
+              "06_Research_Cases!L5:M5",
+              "06_Research_Cases!L10:M10",
+              "06_Research_Cases!L12:M12"
+            ]
+          },
+          "principle_id_status": "WB-P01–07 are new local review handles for workbook README rules, not IDs authored in Excel.",
+          "exact_action_excel_rows": [
+            165,
+            166,
+            167
+          ]
+        },
+        {
+          "change_id": "D3-LEGAL-07",
+          "scenario_id": "SCN-LEGAL",
+          "action_ids": [
+            "D4A-LEGAL-07-01",
+            "D4A-LEGAL-07-02",
+            "D4A-LEGAL-07-03"
+          ],
+          "principle_links": {
+            "WB-P01": "02_Action_Pain_Opp!A72:M72",
+            "WB-P02": [
+              "02_Action_Pain_Opp!K72",
+              "02_Action_Pain_Opp!AC72:AD72"
+            ],
+            "WB-P03": "02_Action_Pain_Opp!N72:R72",
+            "WB-P04": "03_AI_Work_Map!A72:T72",
+            "WB-P05": "05_Feature_List!E72:O72",
+            "WB-P06": [
+              "08_Reference_Mapping!A69:I69",
+              "08_Reference_Mapping!A70:I70",
+              "08_Reference_Mapping!A71:I71",
+              "08_Reference_Mapping!A72:I72",
+              "08_Reference_Mapping!A73:I73",
+              "08_Reference_Mapping!A74:I74",
+              "08_Reference_Mapping!A75:I75"
+            ],
+            "WB-P07": [
+              "06_Research_Cases!L5:M5",
+              "06_Research_Cases!L10:M10",
+              "06_Research_Cases!L12:M12"
+            ]
+          },
+          "principle_id_status": "WB-P01–07 are new local review handles for workbook README rules, not IDs authored in Excel.",
+          "exact_action_excel_rows": [
+            168,
+            169,
+            170
+          ]
+        },
+        {
+          "change_id": "D3-LEGAL-08",
+          "scenario_id": "SCN-LEGAL",
+          "action_ids": [
+            "D4A-LEGAL-08-01",
+            "D4A-LEGAL-08-02",
+            "D4A-LEGAL-08-03"
+          ],
+          "principle_links": {
+            "WB-P01": "02_Action_Pain_Opp!A73:M73",
+            "WB-P02": [
+              "02_Action_Pain_Opp!K73",
+              "02_Action_Pain_Opp!AC73:AD73"
+            ],
+            "WB-P03": "02_Action_Pain_Opp!N73:R73",
+            "WB-P04": "03_AI_Work_Map!A73:T73",
+            "WB-P05": "05_Feature_List!E73:O73",
+            "WB-P06": [
+              "08_Reference_Mapping!A69:I69",
+              "08_Reference_Mapping!A70:I70",
+              "08_Reference_Mapping!A71:I71",
+              "08_Reference_Mapping!A72:I72",
+              "08_Reference_Mapping!A73:I73",
+              "08_Reference_Mapping!A74:I74",
+              "08_Reference_Mapping!A75:I75"
+            ],
+            "WB-P07": [
+              "06_Research_Cases!L5:M5",
+              "06_Research_Cases!L10:M10",
+              "06_Research_Cases!L12:M12"
+            ]
+          },
+          "principle_id_status": "WB-P01–07 are new local review handles for workbook README rules, not IDs authored in Excel.",
+          "exact_action_excel_rows": [
+            171,
+            172,
+            173
+          ]
+        }
+      ],
+      "fields": [
+        "CaseScope.revision",
+        "LegalRoleProjection",
+        "LegalIntakeContext",
+        "LegalIntakeDefinition",
+        "LegalRequest",
+        "LegalInputGap[]",
+        "CaseScope",
+        "ApprovedAgreementCatalogue",
+        "AgreementApplicabilityCandidate",
+        "ProductContext",
+        "AgreementRequirementDecision",
+        "ApprovedTemplate.revision",
+        "AcceptedScopeFields",
+        "DraftOrigin",
+        "AgreementDraft",
+        "DraftProvenance",
+        "ApplicableLegalContext",
+        "LegalDraftReview",
+        "CreditCondition.spec_ref",
+        "AgreementDraft.revision",
+        "ConditionIncorporationCandidate",
+        "CreditInput.revision",
+        "ConditionIncorporationReview",
+        "ExpectedRevisions",
+        "AgreementInput",
+        "ConditionIncorporation",
+        "DependencyEdge",
+        "CurrentAgreement",
+        "NegotiationContext",
+        "NegotiationResponse",
+        "AgreementRevisions",
+        "ClauseChangeCandidate[]",
+        "ReviewedClauseChanges",
+        "DependencyEdge[]",
+        "ApprovalCurrencyReviewTask[]",
+        "UnknownImpact[]",
+        "Agreement.revision",
+        "ApprovalManifest",
+        "AgreementApprovalEligibility",
+        "DomainApproval[]",
+        "AgreementApproval",
+        "CreditAgreementReview",
+        "SignatoryAuthority",
+        "HoldRefs",
+        "ExecutionEligibility",
+        "ExecutionDocument",
+        "SigningAction",
+        "ExecutionAdapter",
+        "ExecutionReceipt",
+        "SignedArtifactRef",
+        "SignedArtifact",
+        "KeyTermSchema",
+        "KeyTermCandidate[]",
+        "KeyTermAdoptionDecision",
+        "KeyTermRecord",
+        "ExecutedDocumentLink"
+      ],
+      "surfaces": [
+        "PX-10"
+      ],
+      "execution": [
+        "Deterministic Skill",
+        "Rule",
+        "Human",
+        "Semantic Skill"
+      ]
+    },
+    {
+      "id": "SCN-CREDIT",
+      "stage": "Resolve",
+      "name": "Separate Credit decision, conditions and fulfilment",
+      "direction": "Optimize",
+      "pain": "Credit approval, conditions, condition fulfilment and the final agreement check can be mistaken for the same state.",
+      "opp": "Keep the Credit decision, conditions, fulfilment evidence and Legal consumption of the current version separately traceable.",
+      "seed": [
+        3,
+        4,
+        5,
+        4,
+        5
+      ],
+      "features": [
+        "Credit decision record",
+        "Condition specification",
+        "Condition fulfilment evidence",
+        "Credit-to-Legal handoff",
+        "Version-consumption trace",
+        "Final agreement check"
+      ],
+      "title": "Assess credit risk and conditions",
+      "owner": "credit",
+      "process": [
+        "SRC-007|p1|CREDIT|shape316|C2.1|occ1",
+        "SRC-007|p2|CREDIT|shape316|C2.1|occ1",
+        "SRC-007|p1|CREDIT|shape318|C2.2|occ1",
+        "SRC-007|p2|CREDIT|shape318|C2.2|occ1",
+        "SRC-007|p1|CREDIT|shape320|C2.3|occ1",
+        "SRC-007|p2|CREDIT|shape320|C2.3|occ1",
+        "SRC-007|p1|CREDIT|shape322|C2.4|occ1",
+        "SRC-007|p2|CREDIT|shape322|C2.4|occ1",
+        "SRC-007|p1|CREDIT|shape324|C2.5|occ1",
+        "SRC-007|p2|CREDIT|shape324|C2.5|occ1",
+        "SRC-007|p1|CREDIT|shape326|C2.6|occ1",
+        "SRC-007|p1|CGM LEGAL|shape336|C1.4|occ1",
+        "SRC-007|p2|CREDIT|shape326|C2.6|occ1",
+        "SRC-007|p2|CGM LEGAL|shape336|C1.4|occ1",
+        "SRC-007|p1|CREDIT|shape328|C2.7|occ1",
+        "SRC-007|p1|CGM LEGAL|shape340|C1.6|occ1",
+        "SRC-007|p2|CREDIT|shape328|C2.7|occ1",
+        "SRC-007|p2|CGM LEGAL|shape340|C1.6|occ1"
+      ],
+      "parents": [
+        "D3-CREDIT-01",
+        "D3-CREDIT-02",
+        "D3-CREDIT-03",
+        "D3-CREDIT-04",
+        "D3-CREDIT-05",
+        "D3-CREDIT-06",
+        "D3-CREDIT-07"
+      ],
+      "actions": [
+        "D4A-CREDIT-01-01",
+        "D4A-CREDIT-01-02",
+        "D4A-CREDIT-02-01",
+        "D4A-CREDIT-02-02",
+        "D4A-CREDIT-02-03",
+        "D4A-CREDIT-03-01",
+        "D4A-CREDIT-03-02",
+        "D4A-CREDIT-04-01",
+        "D4A-CREDIT-04-02",
+        "D4A-CREDIT-05-01",
+        "D4A-CREDIT-05-02",
+        "D4A-CREDIT-06-01",
+        "D4A-CREDIT-06-02",
+        "D4A-CREDIT-07-01",
+        "D4A-CREDIT-07-02",
+        "D4A-CREDIT-07-03"
+      ],
+      "principles": [
+        {
+          "change_id": "D3-CREDIT-01",
+          "scenario_id": "SCN-CREDIT",
+          "action_ids": [
+            "D4A-CREDIT-01-01",
+            "D4A-CREDIT-01-02"
+          ],
+          "principle_links": {
+            "WB-P01": "02_Action_Pain_Opp!A74:M74",
+            "WB-P02": [
+              "02_Action_Pain_Opp!K74",
+              "02_Action_Pain_Opp!AC74:AD74"
+            ],
+            "WB-P03": "02_Action_Pain_Opp!N74:R74",
+            "WB-P04": "03_AI_Work_Map!A74:T74",
+            "WB-P05": "05_Feature_List!E74:O74",
+            "WB-P06": [
+              "08_Reference_Mapping!A76:I76",
+              "08_Reference_Mapping!A77:I77",
+              "08_Reference_Mapping!A78:I78",
+              "08_Reference_Mapping!A79:I79",
+              "08_Reference_Mapping!A80:I80"
+            ],
+            "WB-P07": [
+              "06_Research_Cases!L5:M5",
+              "06_Research_Cases!L10:M10",
+              "06_Research_Cases!L12:M12"
+            ]
+          },
+          "principle_id_status": "WB-P01–07 are new local review handles for workbook README rules, not IDs authored in Excel.",
+          "exact_action_excel_rows": [
+            174,
+            175
+          ]
+        },
+        {
+          "change_id": "D3-CREDIT-02",
+          "scenario_id": "SCN-CREDIT",
+          "action_ids": [
+            "D4A-CREDIT-02-01",
+            "D4A-CREDIT-02-02",
+            "D4A-CREDIT-02-03"
+          ],
+          "principle_links": {
+            "WB-P01": "02_Action_Pain_Opp!A75:M75",
+            "WB-P02": [
+              "02_Action_Pain_Opp!K75",
+              "02_Action_Pain_Opp!AC75:AD75"
+            ],
+            "WB-P03": "02_Action_Pain_Opp!N75:R75",
+            "WB-P04": "03_AI_Work_Map!A75:T75",
+            "WB-P05": "05_Feature_List!E75:O75",
+            "WB-P06": [
+              "08_Reference_Mapping!A76:I76",
+              "08_Reference_Mapping!A77:I77",
+              "08_Reference_Mapping!A78:I78",
+              "08_Reference_Mapping!A79:I79",
+              "08_Reference_Mapping!A80:I80"
+            ],
+            "WB-P07": [
+              "06_Research_Cases!L5:M5",
+              "06_Research_Cases!L10:M10",
+              "06_Research_Cases!L12:M12"
+            ]
+          },
+          "principle_id_status": "WB-P01–07 are new local review handles for workbook README rules, not IDs authored in Excel.",
+          "exact_action_excel_rows": [
+            176,
+            177,
+            178
+          ]
+        },
+        {
+          "change_id": "D3-CREDIT-03",
+          "scenario_id": "SCN-CREDIT",
+          "action_ids": [
+            "D4A-CREDIT-03-01",
+            "D4A-CREDIT-03-02"
+          ],
+          "principle_links": {
+            "WB-P01": "02_Action_Pain_Opp!A76:M76",
+            "WB-P02": [
+              "02_Action_Pain_Opp!K76",
+              "02_Action_Pain_Opp!AC76:AD76"
+            ],
+            "WB-P03": "02_Action_Pain_Opp!N76:R76",
+            "WB-P04": "03_AI_Work_Map!A76:T76",
+            "WB-P05": "05_Feature_List!E76:O76",
+            "WB-P06": [
+              "08_Reference_Mapping!A76:I76",
+              "08_Reference_Mapping!A77:I77",
+              "08_Reference_Mapping!A78:I78",
+              "08_Reference_Mapping!A79:I79",
+              "08_Reference_Mapping!A80:I80"
+            ],
+            "WB-P07": [
+              "06_Research_Cases!L5:M5",
+              "06_Research_Cases!L10:M10",
+              "06_Research_Cases!L12:M12"
+            ]
+          },
+          "principle_id_status": "WB-P01–07 are new local review handles for workbook README rules, not IDs authored in Excel.",
+          "exact_action_excel_rows": [
+            179,
+            180
+          ]
+        },
+        {
+          "change_id": "D3-CREDIT-04",
+          "scenario_id": "SCN-CREDIT",
+          "action_ids": [
+            "D4A-CREDIT-04-01",
+            "D4A-CREDIT-04-02"
+          ],
+          "principle_links": {
+            "WB-P01": "02_Action_Pain_Opp!A77:M77",
+            "WB-P02": [
+              "02_Action_Pain_Opp!K77",
+              "02_Action_Pain_Opp!AC77:AD77"
+            ],
+            "WB-P03": "02_Action_Pain_Opp!N77:R77",
+            "WB-P04": "03_AI_Work_Map!A77:T77",
+            "WB-P05": "05_Feature_List!E77:O77",
+            "WB-P06": [
+              "08_Reference_Mapping!A76:I76",
+              "08_Reference_Mapping!A77:I77",
+              "08_Reference_Mapping!A78:I78",
+              "08_Reference_Mapping!A79:I79",
+              "08_Reference_Mapping!A80:I80"
+            ],
+            "WB-P07": [
+              "06_Research_Cases!L5:M5",
+              "06_Research_Cases!L10:M10",
+              "06_Research_Cases!L12:M12"
+            ]
+          },
+          "principle_id_status": "WB-P01–07 are new local review handles for workbook README rules, not IDs authored in Excel.",
+          "exact_action_excel_rows": [
+            181,
+            182
+          ]
+        },
+        {
+          "change_id": "D3-CREDIT-05",
+          "scenario_id": "SCN-CREDIT",
+          "action_ids": [
+            "D4A-CREDIT-05-01",
+            "D4A-CREDIT-05-02"
+          ],
+          "principle_links": {
+            "WB-P01": "02_Action_Pain_Opp!A78:M78",
+            "WB-P02": [
+              "02_Action_Pain_Opp!K78",
+              "02_Action_Pain_Opp!AC78:AD78"
+            ],
+            "WB-P03": "02_Action_Pain_Opp!N78:R78",
+            "WB-P04": "03_AI_Work_Map!A78:T78",
+            "WB-P05": "05_Feature_List!E78:O78",
+            "WB-P06": [
+              "08_Reference_Mapping!A76:I76",
+              "08_Reference_Mapping!A77:I77",
+              "08_Reference_Mapping!A78:I78",
+              "08_Reference_Mapping!A79:I79",
+              "08_Reference_Mapping!A80:I80"
+            ],
+            "WB-P07": [
+              "06_Research_Cases!L5:M5",
+              "06_Research_Cases!L10:M10",
+              "06_Research_Cases!L12:M12"
+            ]
+          },
+          "principle_id_status": "WB-P01–07 are new local review handles for workbook README rules, not IDs authored in Excel.",
+          "exact_action_excel_rows": [
+            183,
+            184
+          ]
+        },
+        {
+          "change_id": "D3-CREDIT-06",
+          "scenario_id": "SCN-CREDIT",
+          "action_ids": [
+            "D4A-CREDIT-06-01",
+            "D4A-CREDIT-06-02"
+          ],
+          "principle_links": {
+            "WB-P01": "02_Action_Pain_Opp!A79:M79",
+            "WB-P02": [
+              "02_Action_Pain_Opp!K79",
+              "02_Action_Pain_Opp!AC79:AD79"
+            ],
+            "WB-P03": "02_Action_Pain_Opp!N79:R79",
+            "WB-P04": "03_AI_Work_Map!A79:T79",
+            "WB-P05": "05_Feature_List!E79:O79",
+            "WB-P06": [
+              "08_Reference_Mapping!A76:I76",
+              "08_Reference_Mapping!A77:I77",
+              "08_Reference_Mapping!A78:I78",
+              "08_Reference_Mapping!A79:I79",
+              "08_Reference_Mapping!A80:I80"
+            ],
+            "WB-P07": [
+              "06_Research_Cases!L5:M5",
+              "06_Research_Cases!L10:M10",
+              "06_Research_Cases!L12:M12"
+            ]
+          },
+          "principle_id_status": "WB-P01–07 are new local review handles for workbook README rules, not IDs authored in Excel.",
+          "exact_action_excel_rows": [
+            185,
+            186
+          ]
+        },
+        {
+          "change_id": "D3-CREDIT-07",
+          "scenario_id": "SCN-CREDIT",
+          "action_ids": [
+            "D4A-CREDIT-07-01",
+            "D4A-CREDIT-07-02",
+            "D4A-CREDIT-07-03"
+          ],
+          "principle_links": {
+            "WB-P01": "02_Action_Pain_Opp!A80:M80",
+            "WB-P02": [
+              "02_Action_Pain_Opp!K80",
+              "02_Action_Pain_Opp!AC80:AD80"
+            ],
+            "WB-P03": "02_Action_Pain_Opp!N80:R80",
+            "WB-P04": "03_AI_Work_Map!A80:T80",
+            "WB-P05": "05_Feature_List!E80:O80",
+            "WB-P06": [
+              "08_Reference_Mapping!A76:I76",
+              "08_Reference_Mapping!A77:I77",
+              "08_Reference_Mapping!A78:I78",
+              "08_Reference_Mapping!A79:I79",
+              "08_Reference_Mapping!A80:I80"
+            ],
+            "WB-P07": [
+              "06_Research_Cases!L5:M5",
+              "06_Research_Cases!L10:M10",
+              "06_Research_Cases!L12:M12"
+            ]
+          },
+          "principle_id_status": "WB-P01–07 are new local review handles for workbook README rules, not IDs authored in Excel.",
+          "exact_action_excel_rows": [
+            187,
+            188,
+            189
+          ]
+        }
+      ],
+      "fields": [
+        "CaseScope",
+        "CreditApplicabilityRules",
+        "CreditApplicabilityCandidate",
+        "ScopeEvidence",
+        "CreditApplicabilityDecision",
+        "Counterparty",
+        "FinancialSourceScope",
+        "AccessPolicy",
+        "FinancialArtifact",
+        "ExposureSnapshot",
+        "FieldSchema",
+        "FinancialClaim[]",
+        "DataDefinition",
+        "CreditInputCheck",
+        "DataGap[]",
+        "ReviewedFinancialData",
+        "Scope",
+        "CreditAssessmentPack",
+        "ApplicableCreditContext",
+        "CreditRiskAssessment",
+        "ProductScope",
+        "CreditConditionDefinition",
+        "ScopeRevision",
+        "CreditCondition.spec_ref",
+        "CreditCondition.fulfilment_status",
+        "ConditionDefinition",
+        "ApprovalPolicy",
+        "CreditApprovalDecision",
+        "ExpectedInputRevisions",
+        "CreditDecision",
+        "ApprovedConditionRefs",
+        "ConditionPackage.revision",
+        "LegalAccess",
+        "AgreementInputReceipt",
+        "CurrentCreditRevision",
+        "CreditLegalCurrency",
+        "TargetedReviewTask",
+        "CurrentAgreement",
+        "PriorAgreement",
+        "CreditConditionSpec",
+        "CreditRelevantClauseDelta",
+        "AgreementRevision",
+        "CreditTerms",
+        "CreditAgreementDecision",
+        "ExpectedRevisions",
+        "CreditAgreementReview",
+        "CurrencyRecord"
+      ],
+      "surfaces": [
+        "PX-10"
+      ],
+      "execution": [
+        "Rule",
+        "Human",
+        "Deterministic Skill",
+        "Semantic Skill"
+      ]
+    },
+    {
+      "id": "SCN-QA",
+      "stage": "Resolve",
+      "name": "Trace QA findings to precise remediation and re-review",
+      "direction": "Optimize",
+      "pain": "A QA issue can be described too broadly, and completing remediation can be mistaken for passing re-review or QA sign-off.",
+      "opp": "Identify the exact check or evidence-use gap; remediate only what is affected and require independent re-review.",
+      "seed": [
+        3,
+        4,
+        4,
+        5,
+        5
+      ],
+      "features": [
+        "QA scope manifest",
+        "Precise finding link",
+        "Targeted remediation task",
+        "Return-to-source workflow",
+        "Independent re-review",
+        "QA sign-off record"
+      ],
+      "title": "Remediate a precise finding",
+      "owner": "qa",
+      "process": [
+        "SRC-007|p1|QA TEAM (explicit label inside source block)|shape298|M6.1|occ1",
+        "SRC-007|p2|Agentic execution|shape298|M6.1|occ1",
+        "SRC-007|p1|QA TEAM (explicit label inside source block)|shape298|M6.2|occ2",
+        "SRC-007|p2|Agentic execution|shape298|M6.2|occ2",
+        "SRC-007|p1|QA TEAM (explicit label inside source block)|shape298|M6.3|occ3",
+        "SRC-007|p2|Agentic execution|shape298|M6.3|occ3",
+        "SRC-007|p1|QA TEAM (explicit label inside source block)|shape298|M6.4|occ4",
+        "SRC-007|p2|Agentic execution|shape298|M6.4|occ4",
+        "SRC-007|p1|QA TEAM (explicit label inside source block)|shape298|M6.5|occ5",
+        "SRC-007|p2|Agentic execution|shape298|M6.5|occ5",
+        "SRC-007|p1|QA TEAM (explicit label inside source block)|shape298|M6.6|occ6",
+        "SRC-007|p2|Agentic execution|shape298|M6.6|occ6",
+        "SRC-007|p1|QA TEAM (explicit label inside source block)|shape298|M6.7|occ7",
+        "SRC-007|p2|Agentic execution|shape298|M6.7|occ7",
+        "SRC-007|p1|QA TEAM (explicit label inside source block)|shape298|M6.8|occ8",
+        "SRC-007|p2|Agentic execution|shape298|M6.8|occ8"
+      ],
+      "parents": [
+        "D3-QA-01",
+        "D3-QA-02",
+        "D3-QA-03",
+        "D3-QA-04",
+        "D3-QA-05",
+        "D3-QA-06",
+        "D3-QA-07",
+        "D3-QA-08"
+      ],
+      "actions": [
+        "D4A-QA-01-01",
+        "D4A-QA-01-02",
+        "D4A-QA-02-01",
+        "D4A-QA-02-02",
+        "D4A-QA-03-01",
+        "D4A-QA-03-02",
+        "D4A-QA-03-03",
+        "D4A-QA-04-01",
+        "D4A-QA-04-02",
+        "D4A-QA-04-03",
+        "D4A-QA-05-01",
+        "D4A-QA-05-02",
+        "D4A-QA-06-01",
+        "D4A-QA-06-02",
+        "D4A-QA-06-03",
+        "D4A-QA-07-01",
+        "D4A-QA-07-02",
+        "D4A-QA-07-03",
+        "D4A-QA-08-01",
+        "D4A-QA-08-02",
+        "D4A-QA-08-03"
+      ],
+      "principles": [
+        {
+          "change_id": "D3-QA-01",
+          "scenario_id": "SCN-QA",
+          "action_ids": [
+            "D4A-QA-01-01",
+            "D4A-QA-01-02"
+          ],
+          "principle_links": {
+            "WB-P01": "02_Action_Pain_Opp!A81:M81",
+            "WB-P02": [
+              "02_Action_Pain_Opp!K81",
+              "02_Action_Pain_Opp!AC81:AD81"
+            ],
+            "WB-P03": "02_Action_Pain_Opp!N81:R81",
+            "WB-P04": "03_AI_Work_Map!A81:T81",
+            "WB-P05": "05_Feature_List!E81:O81",
+            "WB-P06": [
+              "08_Reference_Mapping!A81:I81",
+              "08_Reference_Mapping!A82:I82",
+              "08_Reference_Mapping!A83:I83",
+              "08_Reference_Mapping!A84:I84",
+              "08_Reference_Mapping!A85:I85",
+              "08_Reference_Mapping!A86:I86"
+            ],
+            "WB-P07": [
+              "06_Research_Cases!L5:M5",
+              "06_Research_Cases!L12:M12"
+            ]
+          },
+          "principle_id_status": "WB-P01–07 are new local review handles for workbook README rules, not IDs authored in Excel.",
+          "exact_action_excel_rows": [
+            190,
+            191
+          ]
+        },
+        {
+          "change_id": "D3-QA-02",
+          "scenario_id": "SCN-QA",
+          "action_ids": [
+            "D4A-QA-02-01",
+            "D4A-QA-02-02"
+          ],
+          "principle_links": {
+            "WB-P01": "02_Action_Pain_Opp!A82:M82",
+            "WB-P02": [
+              "02_Action_Pain_Opp!K82",
+              "02_Action_Pain_Opp!AC82:AD82"
+            ],
+            "WB-P03": "02_Action_Pain_Opp!N82:R82",
+            "WB-P04": "03_AI_Work_Map!A82:T82",
+            "WB-P05": "05_Feature_List!E82:O82",
+            "WB-P06": [
+              "08_Reference_Mapping!A81:I81",
+              "08_Reference_Mapping!A82:I82",
+              "08_Reference_Mapping!A83:I83",
+              "08_Reference_Mapping!A84:I84",
+              "08_Reference_Mapping!A85:I85",
+              "08_Reference_Mapping!A86:I86"
+            ],
+            "WB-P07": [
+              "06_Research_Cases!L5:M5",
+              "06_Research_Cases!L12:M12"
+            ]
+          },
+          "principle_id_status": "WB-P01–07 are new local review handles for workbook README rules, not IDs authored in Excel.",
+          "exact_action_excel_rows": [
+            192,
+            193
+          ]
+        },
+        {
+          "change_id": "D3-QA-03",
+          "scenario_id": "SCN-QA",
+          "action_ids": [
+            "D4A-QA-03-01",
+            "D4A-QA-03-02",
+            "D4A-QA-03-03"
+          ],
+          "principle_links": {
+            "WB-P01": "02_Action_Pain_Opp!A83:M83",
+            "WB-P02": [
+              "02_Action_Pain_Opp!K83",
+              "02_Action_Pain_Opp!AC83:AD83"
+            ],
+            "WB-P03": "02_Action_Pain_Opp!N83:R83",
+            "WB-P04": "03_AI_Work_Map!A83:T83",
+            "WB-P05": "05_Feature_List!E83:O83",
+            "WB-P06": [
+              "08_Reference_Mapping!A81:I81",
+              "08_Reference_Mapping!A82:I82",
+              "08_Reference_Mapping!A83:I83",
+              "08_Reference_Mapping!A84:I84",
+              "08_Reference_Mapping!A85:I85",
+              "08_Reference_Mapping!A86:I86"
+            ],
+            "WB-P07": [
+              "06_Research_Cases!L5:M5",
+              "06_Research_Cases!L12:M12"
+            ]
+          },
+          "principle_id_status": "WB-P01–07 are new local review handles for workbook README rules, not IDs authored in Excel.",
+          "exact_action_excel_rows": [
+            194,
+            195,
+            196
+          ]
+        },
+        {
+          "change_id": "D3-QA-04",
+          "scenario_id": "SCN-QA",
+          "action_ids": [
+            "D4A-QA-04-01",
+            "D4A-QA-04-02",
+            "D4A-QA-04-03"
+          ],
+          "principle_links": {
+            "WB-P01": "02_Action_Pain_Opp!A84:M84",
+            "WB-P02": [
+              "02_Action_Pain_Opp!K84",
+              "02_Action_Pain_Opp!AC84:AD84"
+            ],
+            "WB-P03": "02_Action_Pain_Opp!N84:R84",
+            "WB-P04": "03_AI_Work_Map!A84:T84",
+            "WB-P05": "05_Feature_List!E84:O84",
+            "WB-P06": [
+              "08_Reference_Mapping!A81:I81",
+              "08_Reference_Mapping!A82:I82",
+              "08_Reference_Mapping!A83:I83",
+              "08_Reference_Mapping!A84:I84",
+              "08_Reference_Mapping!A85:I85",
+              "08_Reference_Mapping!A86:I86"
+            ],
+            "WB-P07": [
+              "06_Research_Cases!L5:M5",
+              "06_Research_Cases!L12:M12"
+            ]
+          },
+          "principle_id_status": "WB-P01–07 are new local review handles for workbook README rules, not IDs authored in Excel.",
+          "exact_action_excel_rows": [
+            197,
+            198,
+            199
+          ]
+        },
+        {
+          "change_id": "D3-QA-05",
+          "scenario_id": "SCN-QA",
+          "action_ids": [
+            "D4A-QA-05-01",
+            "D4A-QA-05-02"
+          ],
+          "principle_links": {
+            "WB-P01": "02_Action_Pain_Opp!A85:M85",
+            "WB-P02": [
+              "02_Action_Pain_Opp!K85",
+              "02_Action_Pain_Opp!AC85:AD85"
+            ],
+            "WB-P03": "02_Action_Pain_Opp!N85:R85",
+            "WB-P04": "03_AI_Work_Map!A85:T85",
+            "WB-P05": "05_Feature_List!E85:O85",
+            "WB-P06": [
+              "08_Reference_Mapping!A81:I81",
+              "08_Reference_Mapping!A82:I82",
+              "08_Reference_Mapping!A83:I83",
+              "08_Reference_Mapping!A84:I84",
+              "08_Reference_Mapping!A85:I85",
+              "08_Reference_Mapping!A86:I86"
+            ],
+            "WB-P07": [
+              "06_Research_Cases!L5:M5",
+              "06_Research_Cases!L12:M12"
+            ]
+          },
+          "principle_id_status": "WB-P01–07 are new local review handles for workbook README rules, not IDs authored in Excel.",
+          "exact_action_excel_rows": [
+            200,
+            201
+          ]
+        },
+        {
+          "change_id": "D3-QA-06",
+          "scenario_id": "SCN-QA",
+          "action_ids": [
+            "D4A-QA-06-01",
+            "D4A-QA-06-02",
+            "D4A-QA-06-03"
+          ],
+          "principle_links": {
+            "WB-P01": "02_Action_Pain_Opp!A86:M86",
+            "WB-P02": [
+              "02_Action_Pain_Opp!K86",
+              "02_Action_Pain_Opp!AC86:AD86"
+            ],
+            "WB-P03": "02_Action_Pain_Opp!N86:R86",
+            "WB-P04": "03_AI_Work_Map!A86:T86",
+            "WB-P05": "05_Feature_List!E86:O86",
+            "WB-P06": [
+              "08_Reference_Mapping!A81:I81",
+              "08_Reference_Mapping!A82:I82",
+              "08_Reference_Mapping!A83:I83",
+              "08_Reference_Mapping!A84:I84",
+              "08_Reference_Mapping!A85:I85",
+              "08_Reference_Mapping!A86:I86"
+            ],
+            "WB-P07": [
+              "06_Research_Cases!L5:M5",
+              "06_Research_Cases!L12:M12"
+            ]
+          },
+          "principle_id_status": "WB-P01–07 are new local review handles for workbook README rules, not IDs authored in Excel.",
+          "exact_action_excel_rows": [
+            202,
+            203,
+            204
+          ]
+        },
+        {
+          "change_id": "D3-QA-07",
+          "scenario_id": "SCN-QA",
+          "action_ids": [
+            "D4A-QA-07-01",
+            "D4A-QA-07-02",
+            "D4A-QA-07-03"
+          ],
+          "principle_links": {
+            "WB-P01": "02_Action_Pain_Opp!A87:M87",
+            "WB-P02": [
+              "02_Action_Pain_Opp!K87",
+              "02_Action_Pain_Opp!AC87:AD87"
+            ],
+            "WB-P03": "02_Action_Pain_Opp!N87:R87",
+            "WB-P04": "03_AI_Work_Map!A87:T87",
+            "WB-P05": "05_Feature_List!E87:O87",
+            "WB-P06": [
+              "08_Reference_Mapping!A81:I81",
+              "08_Reference_Mapping!A82:I82",
+              "08_Reference_Mapping!A83:I83",
+              "08_Reference_Mapping!A84:I84",
+              "08_Reference_Mapping!A85:I85",
+              "08_Reference_Mapping!A86:I86"
+            ],
+            "WB-P07": [
+              "06_Research_Cases!L5:M5",
+              "06_Research_Cases!L12:M12"
+            ]
+          },
+          "principle_id_status": "WB-P01–07 are new local review handles for workbook README rules, not IDs authored in Excel.",
+          "exact_action_excel_rows": [
+            205,
+            206,
+            207
+          ]
+        },
+        {
+          "change_id": "D3-QA-08",
+          "scenario_id": "SCN-QA",
+          "action_ids": [
+            "D4A-QA-08-01",
+            "D4A-QA-08-02",
+            "D4A-QA-08-03"
+          ],
+          "principle_links": {
+            "WB-P01": "02_Action_Pain_Opp!A88:M88",
+            "WB-P02": [
+              "02_Action_Pain_Opp!K88",
+              "02_Action_Pain_Opp!AC88:AD88"
+            ],
+            "WB-P03": "02_Action_Pain_Opp!N88:R88",
+            "WB-P04": "03_AI_Work_Map!A88:T88",
+            "WB-P05": "05_Feature_List!E88:O88",
+            "WB-P06": [
+              "08_Reference_Mapping!A81:I81",
+              "08_Reference_Mapping!A82:I82",
+              "08_Reference_Mapping!A83:I83",
+              "08_Reference_Mapping!A84:I84",
+              "08_Reference_Mapping!A85:I85",
+              "08_Reference_Mapping!A86:I86"
+            ],
+            "WB-P07": [
+              "06_Research_Cases!L5:M5",
+              "06_Research_Cases!L12:M12"
+            ]
+          },
+          "principle_id_status": "WB-P01–07 are new local review handles for workbook README rules, not IDs authored in Excel.",
+          "exact_action_excel_rows": [
+            208,
+            209,
+            210
+          ]
+        }
+      ],
+      "fields": [
+        "CaseScope",
+        "RequirementSet",
+        "QACheckDefinition",
+        "QAManifest",
+        "ManifestUnknowns",
+        "QAScopeReview",
+        "CurrentCaseObjects",
+        "QACheckResult[]",
+        "MissingObjectRefs",
+        "ExpectedRevision",
+        "QACheck.revision",
+        "QAObservation",
+        "EvidenceProvenance",
+        "SourcePolicy",
+        "CurrentRevision",
+        "SourceMetadataCheck",
+        "ConflictingClaims",
+        "SourceReviewBrief",
+        "OriginalEvidence",
+        "SourceReviewDecision",
+        "Requirement",
+        "Subject",
+        "Purpose",
+        "EvidenceUseAssessment",
+        "AssessmentPresenceCheck",
+        "EvidenceUseRefs",
+        "SufficiencyReviewBrief",
+        "ActualEvidence",
+        "QASufficiencyJudgment",
+        "ScreeningCoverage",
+        "EDDApplicability",
+        "EDDConditions",
+        "CrossConditionCheck",
+        "SpecificIssueRefs",
+        "ExistingWorkItems",
+        "QAFinding",
+        "LinkedSpecialistTask",
+        "ExistingGap[]",
+        "DependencyEdge[]",
+        "RemediationScope",
+        "EvidenceStatus",
+        "RemediationProposal",
+        "ReviewedRemediationProposal",
+        "AssignmentRule",
+        "Remediation",
+        "WorkItem",
+        "ResumeAnchor",
+        "RemediationResolution",
+        "RevisedEvidenceUse",
+        "CheckDefinition",
+        "QARecheckCandidate",
+        "RevisedEvidence",
+        "QARecheckDecision",
+        "QACheck.recheck_revision",
+        "RemediationResolutionLink",
+        "QACheck[]",
+        "ScopeRevision",
+        "HoldRefs",
+        "QASignoffEligibility",
+        "ReviewPack",
+        "Permission",
+        "AuthorisedQASignoff",
+        "ExpectedRevisions",
+        "QASignoff",
+        "AuditEvent"
+      ],
+      "surfaces": [
+        "PX-11"
+      ],
+      "execution": [
+        "Rule",
+        "Human",
+        "Semantic Skill"
+      ]
+    },
+    {
+      "id": "SCN-READINESS",
+      "stage": "Clear",
+      "name": "Make readiness complete, current and explainable",
+      "direction": "Add-on",
+      "pain": "A green checklist can still miss an applicable condition, while owners, blockers and the next action may remain unclear.",
+      "opp": "Calculate readiness from a complete, current manifest of applicable conditions and show blockers, owners and next actions transparently.",
+      "seed": [
+        4,
+        5,
+        5,
+        5,
+        5
+      ],
+      "features": [
+        "Complete condition manifest",
+        "Deterministic readiness calculation",
+        "Blocker and owner view",
+        "Next-action recommendation",
+        "Current-version validation",
+        "Ready vs authorised separation"
+      ],
+      "title": "Understand open prerequisites",
+      "owner": "manager",
+      "process": [
+        "SRC-007|p1|CLIENT FULFILMENT / KYC OPS|shape65|M8.1|occ1",
+        "SRC-007|p1|QA TEAM (explicit label inside source block)|shape298|M6.1|occ1",
+        "SRC-007|p2|Agentic execution|shape65|M8.1|occ1",
+        "SRC-007|p2|Agentic execution|shape298|M6.1|occ1",
+        "SRC-007|p1|CLIENT FULFILMENT / KYC OPS|shape65|M8.1|occ1",
+        "SRC-007|p2|Agentic execution|shape65|M8.1|occ1",
+        "SRC-007|p1|CLIENT FULFILMENT / KYC OPS|shape65|M8.1|occ1",
+        "SRC-007|p2|Agentic execution|shape65|M8.1|occ1",
+        "SRC-007|p1|CLIENT FULFILMENT / KYC OPS|shape65|M8.1|occ1",
+        "SRC-007|p2|Agentic execution|shape65|M8.1|occ1",
+        "SRC-007|p1|CLIENT FULFILMENT / KYC OPS|shape65|M8.1|occ1",
+        "SRC-007|p1|CLIENT FULFILMENT / KYC OPS|shape65|M8.3|occ3",
+        "SRC-007|p2|Agentic execution|shape65|M8.1|occ1",
+        "SRC-007|p2|Agentic execution|shape65|M8.3|occ3"
+      ],
+      "parents": [
+        "D3-READINESS-01",
+        "D3-READINESS-02",
+        "D3-READINESS-03",
+        "D3-READINESS-04",
+        "D3-READINESS-05"
+      ],
+      "actions": [
+        "D4A-READINESS-01-01",
+        "D4A-READINESS-01-02",
+        "D4A-READINESS-02-01",
+        "D4A-READINESS-02-02",
+        "D4A-READINESS-03-01",
+        "D4A-READINESS-03-02",
+        "D4A-READINESS-04-01",
+        "D4A-READINESS-04-02",
+        "D4A-READINESS-04-03",
+        "D4A-READINESS-05-01",
+        "D4A-READINESS-05-02"
+      ],
+      "principles": [
+        {
+          "change_id": "D3-READINESS-01",
+          "scenario_id": "SCN-READINESS",
+          "action_ids": [
+            "D4A-READINESS-01-01",
+            "D4A-READINESS-01-02"
+          ],
+          "principle_links": {
+            "WB-P01": "02_Action_Pain_Opp!A89:M89",
+            "WB-P02": [
+              "02_Action_Pain_Opp!K89",
+              "02_Action_Pain_Opp!AC89:AD89"
+            ],
+            "WB-P03": "02_Action_Pain_Opp!N89:R89",
+            "WB-P04": "03_AI_Work_Map!A89:T89",
+            "WB-P05": "05_Feature_List!E89:O89",
+            "WB-P06": [
+              "08_Reference_Mapping!A87:I87",
+              "08_Reference_Mapping!A88:I88",
+              "08_Reference_Mapping!A89:I89",
+              "08_Reference_Mapping!A90:I90",
+              "08_Reference_Mapping!A91:I91",
+              "08_Reference_Mapping!A92:I92",
+              "08_Reference_Mapping!A93:I93",
+              "08_Reference_Mapping!A94:I94"
+            ],
+            "WB-P07": [
+              "06_Research_Cases!L5:M5",
+              "06_Research_Cases!L11:M11",
+              "06_Research_Cases!L12:M12"
+            ]
+          },
+          "principle_id_status": "WB-P01–07 are new local review handles for workbook README rules, not IDs authored in Excel.",
+          "exact_action_excel_rows": [
+            211,
+            212
+          ]
+        },
+        {
+          "change_id": "D3-READINESS-02",
+          "scenario_id": "SCN-READINESS",
+          "action_ids": [
+            "D4A-READINESS-02-01",
+            "D4A-READINESS-02-02"
+          ],
+          "principle_links": {
+            "WB-P01": "02_Action_Pain_Opp!A90:M90",
+            "WB-P02": [
+              "02_Action_Pain_Opp!K90",
+              "02_Action_Pain_Opp!AC90:AD90"
+            ],
+            "WB-P03": "02_Action_Pain_Opp!N90:R90",
+            "WB-P04": "03_AI_Work_Map!A90:T90",
+            "WB-P05": "05_Feature_List!E90:O90",
+            "WB-P06": [
+              "08_Reference_Mapping!A87:I87",
+              "08_Reference_Mapping!A88:I88",
+              "08_Reference_Mapping!A89:I89",
+              "08_Reference_Mapping!A90:I90",
+              "08_Reference_Mapping!A91:I91",
+              "08_Reference_Mapping!A92:I92",
+              "08_Reference_Mapping!A93:I93",
+              "08_Reference_Mapping!A94:I94"
+            ],
+            "WB-P07": [
+              "06_Research_Cases!L5:M5",
+              "06_Research_Cases!L11:M11",
+              "06_Research_Cases!L12:M12"
+            ]
+          },
+          "principle_id_status": "WB-P01–07 are new local review handles for workbook README rules, not IDs authored in Excel.",
+          "exact_action_excel_rows": [
+            213,
+            214
+          ]
+        },
+        {
+          "change_id": "D3-READINESS-03",
+          "scenario_id": "SCN-READINESS",
+          "action_ids": [
+            "D4A-READINESS-03-01",
+            "D4A-READINESS-03-02"
+          ],
+          "principle_links": {
+            "WB-P01": "02_Action_Pain_Opp!A91:M91",
+            "WB-P02": [
+              "02_Action_Pain_Opp!K91",
+              "02_Action_Pain_Opp!AC91:AD91"
+            ],
+            "WB-P03": "02_Action_Pain_Opp!N91:R91",
+            "WB-P04": "03_AI_Work_Map!A91:T91",
+            "WB-P05": "05_Feature_List!E91:O91",
+            "WB-P06": [
+              "08_Reference_Mapping!A87:I87",
+              "08_Reference_Mapping!A88:I88",
+              "08_Reference_Mapping!A89:I89",
+              "08_Reference_Mapping!A90:I90",
+              "08_Reference_Mapping!A91:I91",
+              "08_Reference_Mapping!A92:I92",
+              "08_Reference_Mapping!A93:I93",
+              "08_Reference_Mapping!A94:I94"
+            ],
+            "WB-P07": [
+              "06_Research_Cases!L5:M5",
+              "06_Research_Cases!L11:M11",
+              "06_Research_Cases!L12:M12"
+            ]
+          },
+          "principle_id_status": "WB-P01–07 are new local review handles for workbook README rules, not IDs authored in Excel.",
+          "exact_action_excel_rows": [
+            215,
+            216
+          ]
+        },
+        {
+          "change_id": "D3-READINESS-04",
+          "scenario_id": "SCN-READINESS",
+          "action_ids": [
+            "D4A-READINESS-04-01",
+            "D4A-READINESS-04-02",
+            "D4A-READINESS-04-03"
+          ],
+          "principle_links": {
+            "WB-P01": "02_Action_Pain_Opp!A92:M92",
+            "WB-P02": [
+              "02_Action_Pain_Opp!K92",
+              "02_Action_Pain_Opp!AC92:AD92"
+            ],
+            "WB-P03": "02_Action_Pain_Opp!N92:R92",
+            "WB-P04": "03_AI_Work_Map!A92:T92",
+            "WB-P05": "05_Feature_List!E92:O92",
+            "WB-P06": [
+              "08_Reference_Mapping!A87:I87",
+              "08_Reference_Mapping!A88:I88",
+              "08_Reference_Mapping!A89:I89",
+              "08_Reference_Mapping!A90:I90",
+              "08_Reference_Mapping!A91:I91",
+              "08_Reference_Mapping!A92:I92",
+              "08_Reference_Mapping!A93:I93",
+              "08_Reference_Mapping!A94:I94"
+            ],
+            "WB-P07": [
+              "06_Research_Cases!L5:M5",
+              "06_Research_Cases!L11:M11",
+              "06_Research_Cases!L12:M12"
+            ]
+          },
+          "principle_id_status": "WB-P01–07 are new local review handles for workbook README rules, not IDs authored in Excel.",
+          "exact_action_excel_rows": [
+            217,
+            218,
+            219
+          ]
+        },
+        {
+          "change_id": "D3-READINESS-05",
+          "scenario_id": "SCN-READINESS",
+          "action_ids": [
+            "D4A-READINESS-05-01",
+            "D4A-READINESS-05-02"
+          ],
+          "principle_links": {
+            "WB-P01": "02_Action_Pain_Opp!A93:M93",
+            "WB-P02": [
+              "02_Action_Pain_Opp!K93",
+              "02_Action_Pain_Opp!AC93:AD93"
+            ],
+            "WB-P03": "02_Action_Pain_Opp!N93:R93",
+            "WB-P04": "03_AI_Work_Map!A93:T93",
+            "WB-P05": "05_Feature_List!E93:O93",
+            "WB-P06": [
+              "08_Reference_Mapping!A87:I87",
+              "08_Reference_Mapping!A88:I88",
+              "08_Reference_Mapping!A89:I89",
+              "08_Reference_Mapping!A90:I90",
+              "08_Reference_Mapping!A91:I91",
+              "08_Reference_Mapping!A92:I92",
+              "08_Reference_Mapping!A93:I93",
+              "08_Reference_Mapping!A94:I94"
+            ],
+            "WB-P07": [
+              "06_Research_Cases!L5:M5",
+              "06_Research_Cases!L11:M11",
+              "06_Research_Cases!L12:M12"
+            ]
+          },
+          "principle_id_status": "WB-P01–07 are new local review handles for workbook README rules, not IDs authored in Excel.",
+          "exact_action_excel_rows": [
+            220,
+            221
+          ]
+        }
+      ],
+      "fields": [
+        "CaseScope",
+        "ApprovedPrerequisiteDefinition",
+        "ConditionRegistry",
+        "ConditionManifest",
+        "MissingConditionRefs",
+        "ScopeUnknowns",
+        "PrerequisiteScopeDecision",
+        "CompleteConditionManifest",
+        "CurrentConditionStates",
+        "QASignoff",
+        "PrerequisiteEvaluation",
+        "InputManifest",
+        "ReadinessSnapshot",
+        "ConditionInputs",
+        "DependencyEdge[]",
+        "HoldRefs",
+        "CurrentRevisions",
+        "CurrencyCheck",
+        "BlockingRef[]",
+        "UnknownRef[]",
+        "DeclaredImpact",
+        "ExpectedRevision",
+        "CurrencyReviewTask",
+        "HistoricalDecisionLink",
+        "RolePermission",
+        "TaskRegistry",
+        "AllowedReadinessView",
+        "Dependencies",
+        "CapacityContextIfKnown",
+        "NextWorkPlanProposal",
+        "AllowedConditionProjection",
+        "ReadinessExplanation",
+        "Manifest",
+        "ReadyForConfirmationOrNotReady",
+        "ActorPermission",
+        "AllowedClearanceActions"
+      ],
+      "surfaces": [
+        "PX-12"
+      ],
+      "execution": [
+        "Rule",
+        "Human",
+        "Bounded Agent candidate",
+        "Semantic Skill"
+      ]
+    },
+    {
+      "id": "SCN-PUBLISH",
+      "stage": "Clear",
+      "name": "Separate authorised decision, publication and communication",
+      "direction": "Add-on",
+      "pain": "Authorised confirmation, recording, publication, receipt and actual trade execution can be collapsed into one status.",
+      "opp": "Separate authorised decision, timestamp, downstream publication and client communication, with target-specific receipts and failures.",
+      "seed": [
+        3,
+        4,
+        5,
+        5,
+        5
+      ],
+      "features": [
+        "Authorised confirmation record",
+        "Decision timestamp semantics",
+        "Target-specific publication",
+        "Delivery / failure receipt",
+        "RM-safe outcome view",
+        "Publication retry without re-approval"
+      ],
+      "title": "Record and communicate a scoped outcome",
+      "owner": "approver",
+      "process": [
+        "SRC-007|p1|CLIENT FULFILMENT / KYC OPS|shape65|M8.2|occ2",
+        "SRC-007|p2|Agentic execution|shape65|M8.2|occ2",
+        "SRC-007|p1|CLIENT FULFILMENT / KYC OPS|shape65|M8.3|occ3",
+        "SRC-007|p2|Agentic execution|shape65|M8.3|occ3",
+        "SRC-007|p1|CLIENT FULFILMENT / KYC OPS|shape65|M8.4|occ4",
+        "SRC-007|p2|Agentic execution|shape65|M8.4|occ4",
+        "SRC-007|p1|CLIENT FULFILMENT / KYC OPS|shape65|M8.3|occ3",
+        "SRC-007|p1|CLIENT FULFILMENT / KYC OPS|shape65|M8.4|occ4",
+        "SRC-007|p2|Agentic execution|shape65|M8.3|occ3",
+        "SRC-007|p2|Agentic execution|shape65|M8.4|occ4",
+        "SRC-007|p1|SALES / RM (Front Office)|shape289|M8.5|occ1",
+        "SRC-007|p2|SALES / RM (Front Office)|shape289|M8.5|occ1"
+      ],
+      "parents": [
+        "D3-PUBLISH-01",
+        "D3-PUBLISH-02",
+        "D3-PUBLISH-03",
+        "D3-PUBLISH-04",
+        "D3-PUBLISH-05"
+      ],
+      "actions": [
+        "D4A-PUBLISH-01-01",
+        "D4A-PUBLISH-01-02",
+        "D4A-PUBLISH-02-01",
+        "D4A-PUBLISH-02-02",
+        "D4A-PUBLISH-02-03",
+        "D4A-PUBLISH-03-01",
+        "D4A-PUBLISH-04-01",
+        "D4A-PUBLISH-04-02",
+        "D4A-PUBLISH-04-03",
+        "D4A-PUBLISH-05-01",
+        "D4A-PUBLISH-05-02",
+        "D4A-PUBLISH-05-03"
+      ],
+      "principles": [
+        {
+          "change_id": "D3-PUBLISH-01",
+          "scenario_id": "SCN-PUBLISH",
+          "action_ids": [
+            "D4A-PUBLISH-01-01",
+            "D4A-PUBLISH-01-02"
+          ],
+          "principle_links": {
+            "WB-P01": "02_Action_Pain_Opp!A94:M94",
+            "WB-P02": [
+              "02_Action_Pain_Opp!K94",
+              "02_Action_Pain_Opp!AC94:AD94"
+            ],
+            "WB-P03": "02_Action_Pain_Opp!N94:R94",
+            "WB-P04": "03_AI_Work_Map!A94:T94",
+            "WB-P05": "05_Feature_List!E94:O94",
+            "WB-P06": [
+              "08_Reference_Mapping!A95:I95",
+              "08_Reference_Mapping!A96:I96",
+              "08_Reference_Mapping!A97:I97",
+              "08_Reference_Mapping!A98:I98",
+              "08_Reference_Mapping!A99:I99",
+              "08_Reference_Mapping!A100:I100",
+              "08_Reference_Mapping!A101:I101",
+              "08_Reference_Mapping!A102:I102",
+              "08_Reference_Mapping!A103:I103"
+            ],
+            "WB-P07": [
+              "06_Research_Cases!L5:M5",
+              "06_Research_Cases!L10:M10",
+              "06_Research_Cases!L11:M11"
+            ]
+          },
+          "principle_id_status": "WB-P01–07 are new local review handles for workbook README rules, not IDs authored in Excel.",
+          "exact_action_excel_rows": [
+            222,
+            223
+          ]
+        },
+        {
+          "change_id": "D3-PUBLISH-02",
+          "scenario_id": "SCN-PUBLISH",
+          "action_ids": [
+            "D4A-PUBLISH-02-01",
+            "D4A-PUBLISH-02-02",
+            "D4A-PUBLISH-02-03"
+          ],
+          "principle_links": {
+            "WB-P01": "02_Action_Pain_Opp!A95:M95",
+            "WB-P02": [
+              "02_Action_Pain_Opp!K95",
+              "02_Action_Pain_Opp!AC95:AD95"
+            ],
+            "WB-P03": "02_Action_Pain_Opp!N95:R95",
+            "WB-P04": "03_AI_Work_Map!A95:T95",
+            "WB-P05": "05_Feature_List!E95:O95",
+            "WB-P06": [
+              "08_Reference_Mapping!A95:I95",
+              "08_Reference_Mapping!A96:I96",
+              "08_Reference_Mapping!A97:I97",
+              "08_Reference_Mapping!A98:I98",
+              "08_Reference_Mapping!A99:I99",
+              "08_Reference_Mapping!A100:I100",
+              "08_Reference_Mapping!A101:I101",
+              "08_Reference_Mapping!A102:I102",
+              "08_Reference_Mapping!A103:I103"
+            ],
+            "WB-P07": [
+              "06_Research_Cases!L5:M5",
+              "06_Research_Cases!L10:M10",
+              "06_Research_Cases!L11:M11"
+            ]
+          },
+          "principle_id_status": "WB-P01–07 are new local review handles for workbook README rules, not IDs authored in Excel.",
+          "exact_action_excel_rows": [
+            224,
+            225,
+            226
+          ]
+        },
+        {
+          "change_id": "D3-PUBLISH-03",
+          "scenario_id": "SCN-PUBLISH",
+          "action_ids": [
+            "D4A-PUBLISH-03-01"
+          ],
+          "principle_links": {
+            "WB-P01": "02_Action_Pain_Opp!A96:M96",
+            "WB-P02": [
+              "02_Action_Pain_Opp!K96",
+              "02_Action_Pain_Opp!AC96:AD96"
+            ],
+            "WB-P03": "02_Action_Pain_Opp!N96:R96",
+            "WB-P04": "03_AI_Work_Map!A96:T96",
+            "WB-P05": "05_Feature_List!E96:O96",
+            "WB-P06": [
+              "08_Reference_Mapping!A95:I95",
+              "08_Reference_Mapping!A96:I96",
+              "08_Reference_Mapping!A97:I97",
+              "08_Reference_Mapping!A98:I98",
+              "08_Reference_Mapping!A99:I99",
+              "08_Reference_Mapping!A100:I100",
+              "08_Reference_Mapping!A101:I101",
+              "08_Reference_Mapping!A102:I102",
+              "08_Reference_Mapping!A103:I103"
+            ],
+            "WB-P07": [
+              "06_Research_Cases!L5:M5",
+              "06_Research_Cases!L10:M10",
+              "06_Research_Cases!L11:M11"
+            ]
+          },
+          "principle_id_status": "WB-P01–07 are new local review handles for workbook README rules, not IDs authored in Excel.",
+          "exact_action_excel_rows": [
+            227
+          ]
+        },
+        {
+          "change_id": "D3-PUBLISH-04",
+          "scenario_id": "SCN-PUBLISH",
+          "action_ids": [
+            "D4A-PUBLISH-04-01",
+            "D4A-PUBLISH-04-02",
+            "D4A-PUBLISH-04-03"
+          ],
+          "principle_links": {
+            "WB-P01": "02_Action_Pain_Opp!A97:M97",
+            "WB-P02": [
+              "02_Action_Pain_Opp!K97",
+              "02_Action_Pain_Opp!AC97:AD97"
+            ],
+            "WB-P03": "02_Action_Pain_Opp!N97:R97",
+            "WB-P04": "03_AI_Work_Map!A97:T97",
+            "WB-P05": "05_Feature_List!E97:O97",
+            "WB-P06": [
+              "08_Reference_Mapping!A95:I95",
+              "08_Reference_Mapping!A96:I96",
+              "08_Reference_Mapping!A97:I97",
+              "08_Reference_Mapping!A98:I98",
+              "08_Reference_Mapping!A99:I99",
+              "08_Reference_Mapping!A100:I100",
+              "08_Reference_Mapping!A101:I101",
+              "08_Reference_Mapping!A102:I102",
+              "08_Reference_Mapping!A103:I103"
+            ],
+            "WB-P07": [
+              "06_Research_Cases!L5:M5",
+              "06_Research_Cases!L10:M10",
+              "06_Research_Cases!L11:M11"
+            ]
+          },
+          "principle_id_status": "WB-P01–07 are new local review handles for workbook README rules, not IDs authored in Excel.",
+          "exact_action_excel_rows": [
+            228,
+            229,
+            230
+          ]
+        },
+        {
+          "change_id": "D3-PUBLISH-05",
+          "scenario_id": "SCN-PUBLISH",
+          "action_ids": [
+            "D4A-PUBLISH-05-01",
+            "D4A-PUBLISH-05-02",
+            "D4A-PUBLISH-05-03"
+          ],
+          "principle_links": {
+            "WB-P01": "02_Action_Pain_Opp!A98:M98",
+            "WB-P02": [
+              "02_Action_Pain_Opp!K98",
+              "02_Action_Pain_Opp!AC98:AD98"
+            ],
+            "WB-P03": "02_Action_Pain_Opp!N98:R98",
+            "WB-P04": "03_AI_Work_Map!A98:T98",
+            "WB-P05": "05_Feature_List!E98:O98",
+            "WB-P06": [
+              "08_Reference_Mapping!A95:I95",
+              "08_Reference_Mapping!A96:I96",
+              "08_Reference_Mapping!A97:I97",
+              "08_Reference_Mapping!A98:I98",
+              "08_Reference_Mapping!A99:I99",
+              "08_Reference_Mapping!A100:I100",
+              "08_Reference_Mapping!A101:I101",
+              "08_Reference_Mapping!A102:I102",
+              "08_Reference_Mapping!A103:I103"
+            ],
+            "WB-P07": [
+              "06_Research_Cases!L5:M5",
+              "06_Research_Cases!L10:M10",
+              "06_Research_Cases!L11:M11"
+            ]
+          },
+          "principle_id_status": "WB-P01–07 are new local review handles for workbook README rules, not IDs authored in Excel.",
+          "exact_action_excel_rows": [
+            231,
+            232,
+            233
+          ]
+        }
+      ],
+      "fields": [
+        "ReadinessSnapshot",
+        "CurrentDecisionRefs",
+        "EvidenceRefs",
+        "ClearancePack",
+        "InputManifest",
+        "RolePolicy",
+        "AllowedClearancePackView",
+        "ActorPermission",
+        "ExpectedRevisions",
+        "HoldRefs",
+        "ClearanceConfirmationEligibility",
+        "AuthorisedClearanceDecision",
+        "IdempotencyKey",
+        "ClearanceDecision",
+        "AuditEvent",
+        "DecisionEvent",
+        "DispatchReceipt",
+        "Acknowledgement",
+        "TimestampedEventRecords",
+        "PublicationPolicy",
+        "TargetAllowlist",
+        "ApprovedPublicationIntent",
+        "RetryPolicy",
+        "PerTargetDispatchReceipt",
+        "ClearanceDecision.ref",
+        "PublicationEvent",
+        "FailureRecord",
+        "AllowedOutcomeProjection",
+        "ApprovedCommunicationTemplate",
+        "OutcomeCommunicationDraft",
+        "ClientContext",
+        "ReviewedOutcomeCommunication",
+        "ApprovedOutcomeCommunication",
+        "RecipientGrant",
+        "OutcomeNotificationReceipt"
+      ],
+      "surfaces": [
+        "PX-12"
+      ],
+      "execution": [
+        "Rule",
+        "Human",
+        "Deterministic Skill",
+        "Semantic Skill"
+      ]
+    }
+  ],
+  "personas": [
+    {
+      "id": "PERSONA-CLIENT-T",
+      "name": "Person T",
+      "role": "Client contributor",
+      "image": "../studio-next/assets/PERSONA-CLIENT-T.jpg"
+    },
+    {
+      "id": "PERSONA-RM",
+      "name": "Alex Morgan",
+      "role": "Relationship Manager",
+      "image": "../studio-next/assets/PERSONA-RM.jpg"
+    },
+    {
+      "id": "PERSONA-CASEMGR",
+      "name": "Jamie Park",
+      "role": "Case Manager",
+      "image": "../studio-next/assets/PERSONA-CASEMGR.jpg"
+    },
+    {
+      "id": "PERSONA-KYCOPS",
+      "name": "Morgan Lee",
+      "role": "KYC Operations",
+      "image": "../studio-next/assets/PERSONA-KYCOPS.jpg"
+    },
+    {
+      "id": "PERSONA-RISK",
+      "name": "Sam Ellis",
+      "role": "Specialist reviewer",
+      "image": "../studio-next/assets/PERSONA-RISK.jpg"
+    },
+    {
+      "id": "PERSONA-QA",
+      "name": "Robin Hale",
+      "role": "Quality Assurance",
+      "image": "../studio-next/assets/PERSONA-QA.jpg"
+    },
+    {
+      "id": "PERSONA-CONTROL",
+      "name": "Taylor Shaw",
+      "role": "Conflicts specialist",
+      "image": "../studio-next/assets/PERSONA-CONTROL.jpg"
+    },
+    {
+      "id": "PERSONA-LEGAL",
+      "name": "Casey Reed",
+      "role": "Legal specialist",
+      "image": "../studio-next/assets/PERSONA-LEGAL.jpg"
+    },
+    {
+      "id": "PERSONA-CREDIT",
+      "name": "Jordan Blake",
+      "role": "Credit specialist",
+      "image": "../studio-next/assets/PERSONA-CREDIT.jpg"
+    }
+  ]
+}

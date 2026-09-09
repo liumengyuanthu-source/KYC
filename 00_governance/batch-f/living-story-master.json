@@ -1,0 +1,2190 @@
+{
+  "derived": true,
+  "runtime_store": false,
+  "source_ref": "SRC-021",
+  "case_id": "DEMO-CTT-001",
+  "validation_status": "approved_demo_design_not_bank_validation",
+  "generator": "04_operating_model/batch-f/build-consolidation.mjs",
+  "canonical_sources": [
+    "prototype/navigation.mjs",
+    "prototype/content.mjs",
+    "prototype/clearance-ui.mjs"
+  ],
+  "route_id": "ROUTE-NEW-REL-01",
+  "reading_beats": [
+    {
+      "beat_id": "STORY-1",
+      "scene_id": "SCN-SCOPE",
+      "case_id": "DEMO-CTT-001",
+      "stage": "S1",
+      "process_refs": [
+        "M0.1–M0.4 · M1.1"
+      ],
+      "title": {
+        "en-AU": "Define the relationship",
+        "en-US": "Define the relationship",
+        "zh-CN": "明确本次关系范围"
+      },
+      "trigger": "new-relationship",
+      "primary_roles": [
+        "ROLE-KYCOPS",
+        "ROLE-CASEMGR"
+      ],
+      "goal": {
+        "en-AU": "Define the relationship",
+        "en-US": "Define the relationship",
+        "zh-CN": "明确本次关系范围"
+      },
+      "current_work": {
+        "en-AU": "RM and Ops clarify the requested relationship, proposed legal entity, product and booking context. Current already performs this work.",
+        "en-US": "RM and Ops clarify the requested relationship, proposed legal entity, product and booking context. Current already performs this work.",
+        "zh-CN": "客户经理与运营澄清申请关系、拟交易法人、产品和 booking 背景。Current 已包含这些工作。"
+      },
+      "target_work": {
+        "en-AU": "Product organises Group A, Entity A and requested FX forward as separate, sourced fields. Human records the working scope and visible unknowns.",
+        "en-US": "Product organises Group A, Entity A and requested FX forward as separate, sourced fields. Human records the working scope and visible unknowns.",
+        "zh-CN": "产品将 Group A、Entity A 与申请的 FX forward 分为有来源的字段。人工记录工作范围并保留未知事项。"
+      },
+      "inputs": [
+        {
+          "en-AU": "Counterparty clarification; booking, eligibility and DD remain unresolved.",
+          "en-US": "Counterparty clarification; booking, eligibility and DD remain unresolved.",
+          "zh-CN": "等待交易主体澄清；booking、产品资格与尽调等级尚未确定。"
+        }
+      ],
+      "outputs": [
+        {
+          "en-AU": "A versioned working scope feeds entity review and a requirements draft. It is not a product, KYC or clearance approval.",
+          "en-US": "A versioned working scope feeds entity review and a requirements draft. It is not a product, KYC or clearance approval.",
+          "zh-CN": "版本化工作范围供主体复核与要求草稿使用，不代表产品、KYC 或准入批准。"
+        }
+      ],
+      "decision_refs": [
+        {
+          "en-AU": "Explicit demo permission to record working scope; actual bank authority remains a validation question.",
+          "en-US": "Explicit demo permission to record working scope; actual bank authority remains a validation question.",
+          "zh-CN": "以明确演示权限记录工作范围；银行实际权限仍待验证。"
+        }
+      ],
+      "wait_refs": [
+        {
+          "en-AU": "Counterparty clarification; booking, eligibility and DD remain unresolved.",
+          "en-US": "Counterparty clarification; booking, eligibility and DD remain unresolved.",
+          "zh-CN": "等待交易主体澄清；booking、产品资格与尽调等级尚未确定。"
+        }
+      ],
+      "dependency_refs": [
+        "SRC-010:DEP-03"
+      ],
+      "state_change_refs": [
+        {
+          "en-AU": "A versioned working scope feeds entity review and a requirements draft. It is not a product, KYC or clearance approval.",
+          "en-US": "A versioned working scope feeds entity review and a requirements draft. It is not a product, KYC or clearance approval.",
+          "zh-CN": "版本化工作范围供主体复核与要求草稿使用，不代表产品、KYC 或准入批准。"
+        }
+      ],
+      "next_scene_id": "SCN-ENTITY",
+      "next_beat_ref": "STORY-2",
+      "prototype_entry_ref": {
+        "scene": "SCN-SCOPE",
+        "step": "scope",
+        "beat": null,
+        "action": "PRODUCT",
+        "loads_snapshot": false
+      },
+      "return_ref": {
+        "action": "RETURN",
+        "destination": "scenario",
+        "scene": "SCN-SCOPE",
+        "storyCursor": 0,
+        "latest_locale": true
+      },
+      "reference_refs": [
+        "SRC-007",
+        "SRC-010"
+      ],
+      "evidence_status": "approved_demo_design; synthetic_case; bank_validation_required",
+      "reading_writes": false,
+      "snapshot_boundary": "Existing explicit same-case entry; reading never loads business outcomes",
+      "requirement_refs": [
+        "CTT-REQ-001",
+        "CTT-REQ-010"
+      ],
+      "observation_refs": [
+        "SRC-017:R15"
+      ]
+    },
+    {
+      "beat_id": "STORY-2",
+      "scene_id": "SCN-ENTITY",
+      "case_id": "DEMO-CTT-001",
+      "stage": "S1",
+      "process_refs": [
+        "M1.3–M1.5 · M3.4"
+      ],
+      "title": {
+        "en-AU": "Establish entity and authority",
+        "en-US": "Establish entity and authority",
+        "zh-CN": "确认主体与代表权限"
+      },
+      "trigger": "new-relationship",
+      "primary_roles": [
+        "ROLE-KYCOPS",
+        "ROLE-CASEMGR"
+      ],
+      "goal": {
+        "en-AU": "Establish entity and authority",
+        "en-US": "Establish entity and authority",
+        "zh-CN": "确认主体与代表权限"
+      },
+      "current_work": {
+        "en-AU": "Ops checks legal entity details and supplied evidence. Specific representative authority is assessed separately; authority detail is an industry-informed extension.",
+        "en-US": "Ops checks legal entity details and supplied evidence. Specific representative authority is assessed separately; authority detail is an industry-informed extension.",
+        "zh-CN": "运营核对法人资料与所提供证据。代表权限单独评估；具体权限建模为行业参考扩展。"
+      },
+      "target_work": {
+        "en-AU": "Separate Entity A, reported parent B and Person T. Assess EV-A03 only for coordinating information for A; open a purpose-specific gap.",
+        "en-US": "Separate Entity A, reported parent B and Person T. Assess EV-A03 only for coordinating information for A; open a purpose-specific gap.",
+        "zh-CN": "分开 Entity A、声称的母公司 B 与 Person T。仅评估 EV-A03 对为 A 协调资料的支持，并建立用途级缺口。"
+      },
+      "inputs": [
+        {
+          "en-AU": "Person T is employed by B. Evidence establishing the specific authority for A has not arrived.",
+          "en-US": "Person T is employed by B. Evidence establishing the specific authority for A has not arrived.",
+          "zh-CN": "Person T 任职于 B，尚未收到建立为 A 行事之具体权限的证据。"
+        }
+      ],
+      "outputs": [
+        {
+          "en-AU": "Entity context becomes clearer, authority work awaits evidence, and only eligible preparation continues. Overall Not ready.",
+          "en-US": "Entity context becomes clearer, authority work awaits evidence, and only eligible preparation continues. Overall Not ready.",
+          "zh-CN": "主体背景更清楚；权限任务等待证据；仅满足门槛的准备工作继续。整体尚未就绪。"
+        }
+      ],
+      "decision_refs": [
+        {
+          "en-AU": "A configured employee records an evidence-use assessment, not a blanket approval of Person T. Unknown task owner is Unassigned.",
+          "en-US": "A configured employee records an evidence-use assessment, not a blanket approval of Person T. Unknown task owner is Unassigned.",
+          "zh-CN": "配置的员工记录证据用途评估，而非全权批准 Person T。未知任务责任人保留未分派。"
+        }
+      ],
+      "wait_refs": [
+        {
+          "en-AU": "Person T is employed by B. Evidence establishing the specific authority for A has not arrived.",
+          "en-US": "Person T is employed by B. Evidence establishing the specific authority for A has not arrived.",
+          "zh-CN": "Person T 任职于 B，尚未收到建立为 A 行事之具体权限的证据。"
+        }
+      ],
+      "dependency_refs": [
+        "SRC-010:DEP-02"
+      ],
+      "state_change_refs": [
+        {
+          "en-AU": "Entity context becomes clearer, authority work awaits evidence, and only eligible preparation continues. Overall Not ready.",
+          "en-US": "Entity context becomes clearer, authority work awaits evidence, and only eligible preparation continues. Overall Not ready.",
+          "zh-CN": "主体背景更清楚；权限任务等待证据；仅满足门槛的准备工作继续。整体尚未就绪。"
+        }
+      ],
+      "next_scene_id": "SCN-REQUIREMENTS",
+      "next_beat_ref": "STORY-3",
+      "prototype_entry_ref": {
+        "scene": "SCN-ENTITY",
+        "step": "entity",
+        "beat": null,
+        "action": "PRODUCT",
+        "loads_snapshot": false
+      },
+      "return_ref": {
+        "action": "RETURN",
+        "destination": "scenario",
+        "scene": "SCN-ENTITY",
+        "storyCursor": 1,
+        "latest_locale": true
+      },
+      "reference_refs": [
+        "SRC-007",
+        "SRC-010"
+      ],
+      "evidence_status": "approved_demo_design; synthetic_case; bank_validation_required",
+      "reading_writes": false,
+      "snapshot_boundary": "Existing explicit same-case entry; reading never loads business outcomes",
+      "requirement_refs": [
+        "CTT-REQ-001",
+        "CTT-REQ-007"
+      ],
+      "observation_refs": [
+        "SRC-017:R13",
+        "SRC-017:R14"
+      ]
+    },
+    {
+      "beat_id": "STORY-3",
+      "scene_id": "SCN-REQUIREMENTS",
+      "case_id": "DEMO-CTT-001",
+      "stage": "S2",
+      "process_refs": [
+        "M2.1–M2.5"
+      ],
+      "title": {
+        "en-AU": "Make requirements explicit",
+        "en-US": "Make requirements explicit",
+        "zh-CN": "明确适用要求"
+      },
+      "trigger": "new-relationship",
+      "primary_roles": [
+        "ROLE-KYCOPS",
+        "ROLE-CASEMGR"
+      ],
+      "goal": {
+        "en-AU": "Make requirements explicit",
+        "en-US": "Make requirements explicit",
+        "zh-CN": "明确适用要求"
+      },
+      "current_work": {
+        "en-AU": "Determine AML and non-AML requirements, exceptions and risk indicators for the relationship.",
+        "en-US": "Determine AML and non-AML requirements, exceptions and risk indicators for the relationship.",
+        "zh-CN": "按关系范围确定 AML 与非 AML 要求、例外及风险指标。"
+      },
+      "target_work": {
+        "en-AU": "Prepare a versioned requirement set. Show the subject, purpose and basis of each requirement; retain unknown applicability.",
+        "en-US": "Prepare a versioned requirement set. Show the subject, purpose and basis of each requirement; retain unknown applicability.",
+        "zh-CN": "编制版本化要求集；逐项关联主体、用途和依据，保留未知适用性。"
+      },
+      "inputs": [
+        {
+          "en-AU": "Scope and policy context must be known. Exceptions require a designated reviewer.",
+          "en-US": "Scope and policy context must be known. Exceptions require a designated reviewer.",
+          "zh-CN": "需明确范围与政策背景；例外须交指定复核人员。"
+        }
+      ],
+      "outputs": [
+        {
+          "en-AU": "Requirements confirmed for this synthetic scope; evidence still needs assessment.",
+          "en-US": "Requirements confirmed for this synthetic scope; evidence still needs assessment.",
+          "zh-CN": "仅确认本合成范围内的要求；证据仍待评估。"
+        }
+      ],
+      "decision_refs": [
+        {
+          "en-AU": "Confirm the demo requirement set. No client policy is inferred.",
+          "en-US": "Confirm the demo requirement set. No client policy is inferred.",
+          "zh-CN": "确认演示要求集，不据此推断客户政策。"
+        }
+      ],
+      "wait_refs": [
+        {
+          "en-AU": "Scope and policy context must be known. Exceptions require a designated reviewer.",
+          "en-US": "Scope and policy context must be known. Exceptions require a designated reviewer.",
+          "zh-CN": "需明确范围与政策背景；例外须交指定复核人员。"
+        }
+      ],
+      "dependency_refs": [
+        "SRC-010:DEP-03",
+        "SRC-010:DEP-04"
+      ],
+      "state_change_refs": [
+        {
+          "en-AU": "Requirements confirmed for this synthetic scope; evidence still needs assessment.",
+          "en-US": "Requirements confirmed for this synthetic scope; evidence still needs assessment.",
+          "zh-CN": "仅确认本合成范围内的要求；证据仍待评估。"
+        }
+      ],
+      "next_scene_id": "SCN-SOURCE",
+      "next_beat_ref": "STORY-4",
+      "prototype_entry_ref": {
+        "scene": "SCN-REQUIREMENTS",
+        "step": "requirements",
+        "beat": null,
+        "action": "PRODUCT",
+        "loads_snapshot": false
+      },
+      "return_ref": {
+        "action": "RETURN",
+        "destination": "scenario",
+        "scene": "SCN-REQUIREMENTS",
+        "storyCursor": 2,
+        "latest_locale": true
+      },
+      "reference_refs": [
+        "SRC-007",
+        "SRC-010"
+      ],
+      "evidence_status": "approved_demo_design; synthetic_case; bank_validation_required",
+      "reading_writes": false,
+      "snapshot_boundary": "Existing explicit same-case entry; reading never loads business outcomes",
+      "requirement_refs": [
+        "CTT-REQ-002"
+      ],
+      "observation_refs": [
+        "SRC-017:R11",
+        "SRC-017:R12"
+      ]
+    },
+    {
+      "beat_id": "STORY-4",
+      "scene_id": "SCN-SOURCE",
+      "case_id": "DEMO-CTT-001",
+      "stage": "S2",
+      "process_refs": [
+        "M3.1–M3.2"
+      ],
+      "title": {
+        "en-AU": "Use evidence already available",
+        "en-US": "Use evidence already available",
+        "zh-CN": "复用已有证据"
+      },
+      "trigger": "new-relationship",
+      "primary_roles": [
+        "ROLE-KYCOPS",
+        "ROLE-CASEMGR"
+      ],
+      "goal": {
+        "en-AU": "Use evidence already available",
+        "en-US": "Use evidence already available",
+        "zh-CN": "复用已有证据"
+      },
+      "current_work": {
+        "en-AU": "Search public and commercial sources, then identify residual gaps. This already exists in the Current map.",
+        "en-US": "Search public and commercial sources, then identify residual gaps. This already exists in the Current map.",
+        "zh-CN": "检索公开与商业来源并识别剩余缺口；Current 源图已包含这些活动。"
+      },
+      "target_work": {
+        "en-AU": "Link a source item to a specific subject, requirement and purpose, with its original version intact.",
+        "en-US": "Link a source item to a specific subject, requirement and purpose, with its original version intact.",
+        "zh-CN": "将来源资料关联到具体主体、要求和用途，保留原版本。"
+      },
+      "inputs": [
+        {
+          "en-AU": "Access permission, source provenance and purpose-specific sufficiency.",
+          "en-US": "Access permission, source provenance and purpose-specific sufficiency.",
+          "zh-CN": "等待来源许可、出处核验及特定用途的充分性判断。"
+        }
+      ],
+      "outputs": [
+        {
+          "en-AU": "Entity identity may be supported; screening disambiguation remains a separate use.",
+          "en-US": "Entity identity may be supported; screening disambiguation remains a separate use.",
+          "zh-CN": "主体身份可获得支持；筛查身份区分仍是独立用途。"
+        }
+      ],
+      "decision_refs": [
+        {
+          "en-AU": "Review proposed reuse. One accepted file does not satisfy every requirement.",
+          "en-US": "Review proposed reuse. One accepted file does not satisfy every requirement.",
+          "zh-CN": "复核拟议复用；接受一份文件不等于满足所有要求。"
+        }
+      ],
+      "wait_refs": [
+        {
+          "en-AU": "Access permission, source provenance and purpose-specific sufficiency.",
+          "en-US": "Access permission, source provenance and purpose-specific sufficiency.",
+          "zh-CN": "等待来源许可、出处核验及特定用途的充分性判断。"
+        }
+      ],
+      "dependency_refs": [
+        "SRC-010:DEP-04",
+        "SRC-010:DEP-05"
+      ],
+      "state_change_refs": [
+        {
+          "en-AU": "Entity identity may be supported; screening disambiguation remains a separate use.",
+          "en-US": "Entity identity may be supported; screening disambiguation remains a separate use.",
+          "zh-CN": "主体身份可获得支持；筛查身份区分仍是独立用途。"
+        }
+      ],
+      "next_scene_id": "SCN-GAP",
+      "next_beat_ref": "STORY-5",
+      "prototype_entry_ref": {
+        "scene": "SCN-SOURCE",
+        "step": "evidence",
+        "beat": null,
+        "action": "PRODUCT",
+        "loads_snapshot": false
+      },
+      "return_ref": {
+        "action": "RETURN",
+        "destination": "scenario",
+        "scene": "SCN-SOURCE",
+        "storyCursor": 3,
+        "latest_locale": true
+      },
+      "reference_refs": [
+        "SRC-007",
+        "SRC-010"
+      ],
+      "evidence_status": "approved_demo_design; synthetic_case; bank_validation_required",
+      "reading_writes": false,
+      "snapshot_boundary": "Existing explicit same-case entry; reading never loads business outcomes",
+      "requirement_refs": [
+        "CTT-REQ-003"
+      ],
+      "observation_refs": []
+    },
+    {
+      "beat_id": "STORY-5",
+      "scene_id": "SCN-GAP",
+      "case_id": "DEMO-CTT-001",
+      "stage": "S2",
+      "process_refs": [
+        "M2.5 · M3.2–M3.3"
+      ],
+      "title": {
+        "en-AU": "Ask only for remaining gaps",
+        "en-US": "Ask only for remaining gaps",
+        "zh-CN": "只询问剩余缺口"
+      },
+      "trigger": "new-relationship",
+      "primary_roles": [
+        "ROLE-KYCOPS",
+        "ROLE-CASEMGR"
+      ],
+      "goal": {
+        "en-AU": "Ask only for remaining gaps",
+        "en-US": "Ask only for remaining gaps",
+        "zh-CN": "只询问剩余缺口"
+      },
+      "current_work": {
+        "en-AU": "Issue requirements and request outstanding information from the client.",
+        "en-US": "Issue requirements and request outstanding information from the client.",
+        "zh-CN": "发布要求并向客户请求尚缺信息。"
+      },
+      "target_work": {
+        "en-AU": "Consolidate only unresolved facts into a purpose-specific request, with an owner and response link.",
+        "en-US": "Consolidate only unresolved facts into a purpose-specific request, with an owner and response link.",
+        "zh-CN": "仅将未解决事实汇总为用途明确的请求，并指定责任人与响应关联。"
+      },
+      "inputs": [
+        {
+          "en-AU": "A permitted sender confirms the request; the review then waits for the named response.",
+          "en-US": "A permitted sender confirms the request; the review then waits for the named response.",
+          "zh-CN": "允许发送的角色确认请求后，复核等待指定响应。"
+        }
+      ],
+      "outputs": [
+        {
+          "en-AU": "Request recorded locally. No email is sent. Receipt returns evidence to review.",
+          "en-US": "Request recorded locally. No email is sent. Receipt returns evidence to review.",
+          "zh-CN": "本地记录请求，不发送邮件；收到响应后回到证据复核。"
+        }
+      ],
+      "decision_refs": [
+        {
+          "en-AU": "Review the missing fact, purpose and response owner before simulating release.",
+          "en-US": "Review the missing fact, purpose and response owner before simulating release.",
+          "zh-CN": "模拟发出前复核缺失事实、用途与响应责任人。"
+        }
+      ],
+      "wait_refs": [
+        {
+          "en-AU": "A permitted sender confirms the request; the review then waits for the named response.",
+          "en-US": "A permitted sender confirms the request; the review then waits for the named response.",
+          "zh-CN": "允许发送的角色确认请求后，复核等待指定响应。"
+        }
+      ],
+      "dependency_refs": [
+        "SRC-010:DEP-05"
+      ],
+      "state_change_refs": [
+        {
+          "en-AU": "Request recorded locally. No email is sent. Receipt returns evidence to review.",
+          "en-US": "Request recorded locally. No email is sent. Receipt returns evidence to review.",
+          "zh-CN": "本地记录请求，不发送邮件；收到响应后回到证据复核。"
+        }
+      ],
+      "next_scene_id": "SCN-VALIDATE",
+      "next_beat_ref": "STORY-6",
+      "prototype_entry_ref": {
+        "scene": "SCN-GAP",
+        "step": "collaboration",
+        "beat": null,
+        "action": "PRODUCT",
+        "loads_snapshot": false
+      },
+      "return_ref": {
+        "action": "RETURN",
+        "destination": "scenario",
+        "scene": "SCN-GAP",
+        "storyCursor": 4,
+        "latest_locale": true
+      },
+      "reference_refs": [
+        "SRC-007",
+        "SRC-010"
+      ],
+      "evidence_status": "approved_demo_design; synthetic_case; bank_validation_required",
+      "reading_writes": false,
+      "snapshot_boundary": "Existing explicit same-case entry; reading never loads business outcomes",
+      "requirement_refs": [
+        "CTT-REQ-004",
+        "CTT-REQ-010"
+      ],
+      "observation_refs": [
+        "SRC-017:R01",
+        "SRC-017:R02",
+        "SRC-017:R03",
+        "SRC-017:R04",
+        "SRC-017:R05",
+        "SRC-017:R06",
+        "SRC-017:R07",
+        "SRC-017:R08",
+        "SRC-017:R09",
+        "SRC-017:R10",
+        "SRC-017:R23",
+        "SRC-017:R24",
+        "SRC-017:R25",
+        "SRC-017:R26"
+      ]
+    },
+    {
+      "beat_id": "STORY-6",
+      "scene_id": "SCN-VALIDATE",
+      "case_id": "DEMO-CTT-001",
+      "stage": "S2",
+      "process_refs": [
+        "M3.4–M3.5"
+      ],
+      "title": {
+        "en-AU": "Assess evidence for its purpose",
+        "en-US": "Assess evidence for its purpose",
+        "zh-CN": "按用途评估证据"
+      },
+      "trigger": "new-relationship",
+      "primary_roles": [
+        "ROLE-KYCOPS",
+        "ROLE-CASEMGR"
+      ],
+      "goal": {
+        "en-AU": "Assess evidence for its purpose",
+        "en-US": "Assess evidence for its purpose",
+        "zh-CN": "按用途评估证据"
+      },
+      "current_work": {
+        "en-AU": "Capture and validate evidence; maintain outstanding gaps and the sourcing trail.",
+        "en-US": "Capture and validate evidence; maintain outstanding gaps and the sourcing trail.",
+        "zh-CN": "接收并核验证据，维护剩余缺口与来源记录。"
+      },
+      "target_work": {
+        "en-AU": "Keep the artifact and its use assessment separate. A received supplement needs its own reviewed assessment.",
+        "en-US": "Keep the artifact and its use assessment separate. A received supplement needs its own reviewed assessment.",
+        "zh-CN": "分开保存资料与用途评估；收到补充资料后仍须独立复核。"
+      },
+      "inputs": [
+        {
+          "en-AU": "The received supplement and a reasoned sufficiency assessment for the screening purpose.",
+          "en-US": "The received supplement and a reasoned sufficiency assessment for the screening purpose.",
+          "zh-CN": "等待收到补充资料，以及针对筛查用途的充分性理由。"
+        }
+      ],
+      "outputs": [
+        {
+          "en-AU": "Evidence use assessed. Screening still requires a separate human disposition.",
+          "en-US": "Evidence use assessed. Screening still requires a separate human disposition.",
+          "zh-CN": "完成证据用途评估；筛查仍须独立人工处置。"
+        }
+      ],
+      "decision_refs": [
+        {
+          "en-AU": "A configured demo reviewer records sufficiency with rationale; bank authority remains open.",
+          "en-US": "A configured demo reviewer records sufficiency with rationale; bank authority remains open.",
+          "zh-CN": "配置的演示复核角色记录充分性及理由；银行权限仍未确认。"
+        }
+      ],
+      "wait_refs": [
+        {
+          "en-AU": "The received supplement and a reasoned sufficiency assessment for the screening purpose.",
+          "en-US": "The received supplement and a reasoned sufficiency assessment for the screening purpose.",
+          "zh-CN": "等待收到补充资料，以及针对筛查用途的充分性理由。"
+        }
+      ],
+      "dependency_refs": [
+        "SRC-010:DEP-05",
+        "SRC-010:DEP-14"
+      ],
+      "state_change_refs": [
+        {
+          "en-AU": "Evidence use assessed. Screening still requires a separate human disposition.",
+          "en-US": "Evidence use assessed. Screening still requires a separate human disposition.",
+          "zh-CN": "完成证据用途评估；筛查仍须独立人工处置。"
+        }
+      ],
+      "next_scene_id": "SCN-POPULATION",
+      "next_beat_ref": "STORY-7",
+      "prototype_entry_ref": {
+        "scene": "SCN-VALIDATE",
+        "step": "collaboration",
+        "beat": null,
+        "action": "PRODUCT",
+        "loads_snapshot": false
+      },
+      "return_ref": {
+        "action": "RETURN",
+        "destination": "scenario",
+        "scene": "SCN-VALIDATE",
+        "storyCursor": 5,
+        "latest_locale": true
+      },
+      "reference_refs": [
+        "SRC-007",
+        "SRC-010"
+      ],
+      "evidence_status": "approved_demo_design; synthetic_case; bank_validation_required",
+      "reading_writes": false,
+      "snapshot_boundary": "Existing explicit same-case entry; reading never loads business outcomes",
+      "requirement_refs": [
+        "CTT-REQ-003",
+        "CTT-REQ-004"
+      ],
+      "observation_refs": [
+        "SRC-017:R01",
+        "SRC-017:R02",
+        "SRC-017:R03",
+        "SRC-017:R04",
+        "SRC-017:R05",
+        "SRC-017:R06",
+        "SRC-017:R07",
+        "SRC-017:R08",
+        "SRC-017:R09",
+        "SRC-017:R10",
+        "SRC-017:R23",
+        "SRC-017:R24",
+        "SRC-017:R25",
+        "SRC-017:R26"
+      ]
+    },
+    {
+      "beat_id": "STORY-7",
+      "scene_id": "SCN-POPULATION",
+      "case_id": "DEMO-CTT-001",
+      "stage": "S3",
+      "process_refs": [
+        "M4.1–M4.4"
+      ],
+      "title": {
+        "en-AU": "Screen the right subjects",
+        "en-US": "Screen the right subjects",
+        "zh-CN": "明确筛查群体"
+      },
+      "trigger": "new-relationship",
+      "primary_roles": [
+        "ROLE-KYCOPS",
+        "ROLE-CASEMGR"
+      ],
+      "goal": {
+        "en-AU": "Screen the right subjects",
+        "en-US": "Screen the right subjects",
+        "zh-CN": "明确筛查群体"
+      },
+      "current_work": {
+        "en-AU": "Teams assemble parties and categories from available case material, while unconfirmed ownership and related-party membership remain open.",
+        "en-US": "Teams assemble parties and categories from available case material, while unconfirmed ownership and related-party membership remain open.",
+        "zh-CN": "团队依据现有案件资料整理主体与类别；未确认的 ownership 及关联方成员关系保持未决。"
+      },
+      "target_work": {
+        "en-AU": "A versioned population shows Entity A, Entity B and Person T separately. A permitted preliminary run can proceed for Person T without claiming comprehensive coverage.",
+        "en-US": "A versioned population shows Entity A, Entity B and Person T separately. A permitted preliminary run can proceed for Person T without claiming comprehensive coverage.",
+        "zh-CN": "版本化筛查群体分别展示 Entity A、Entity B 与 Person T。可对 Person T 执行获准初筛，但不宣称完整覆盖。"
+      },
+      "inputs": [
+        {
+          "en-AU": "Ownership input and an upstream-confirmed complete inventory interface.",
+          "en-US": "Ownership input and an upstream-confirmed complete inventory interface.",
+          "zh-CN": "等待 ownership 输入及上游确认完整清单的接口。"
+        }
+      ],
+      "outputs": [
+        {
+          "en-AU": "Population remains incomplete; the permitted subject and any missing members are explicit.",
+          "en-US": "Population remains incomplete; the permitted subject and any missing members are explicit.",
+          "zh-CN": "群体保持不完整；明确显示获准筛查主体及缺失成员。"
+        }
+      ],
+      "decision_refs": [
+        {
+          "en-AU": "A human reviews inclusion basis and current inputs. No hidden category or comprehensive run is configured.",
+          "en-US": "A human reviews inclusion basis and current inputs. No hidden category or comprehensive run is configured.",
+          "zh-CN": "人工复核纳入依据与当前输入；不配置隐藏类别或完整筛查。"
+        }
+      ],
+      "wait_refs": [
+        {
+          "en-AU": "Ownership input and an upstream-confirmed complete inventory interface.",
+          "en-US": "Ownership input and an upstream-confirmed complete inventory interface.",
+          "zh-CN": "等待 ownership 输入及上游确认完整清单的接口。"
+        }
+      ],
+      "dependency_refs": [
+        "SRC-010:DEP-06"
+      ],
+      "state_change_refs": [
+        {
+          "en-AU": "Population remains incomplete; the permitted subject and any missing members are explicit.",
+          "en-US": "Population remains incomplete; the permitted subject and any missing members are explicit.",
+          "zh-CN": "群体保持不完整；明确显示获准筛查主体及缺失成员。"
+        }
+      ],
+      "next_scene_id": "SCN-MATCH",
+      "next_beat_ref": "STORY-8",
+      "prototype_entry_ref": {
+        "scene": "SCN-POPULATION",
+        "step": "population",
+        "beat": null,
+        "action": "PRODUCT",
+        "loads_snapshot": false
+      },
+      "return_ref": {
+        "action": "RETURN",
+        "destination": "scenario",
+        "scene": "SCN-POPULATION",
+        "storyCursor": 6,
+        "latest_locale": true
+      },
+      "reference_refs": [
+        "SRC-007",
+        "SRC-010"
+      ],
+      "evidence_status": "approved_demo_design; synthetic_case; bank_validation_required",
+      "reading_writes": false,
+      "snapshot_boundary": "Existing explicit same-case entry; reading never loads business outcomes",
+      "requirement_refs": [
+        "CTT-REQ-005"
+      ],
+      "observation_refs": [
+        "SRC-017:R30",
+        "SRC-017:R31",
+        "SRC-016:R-C01",
+        "SRC-016:R-C02",
+        "SRC-016:R-C04",
+        "SRC-016:INT-C01",
+        "SRC-016:S-C01",
+        "SRC-016:S-C03"
+      ]
+    },
+    {
+      "beat_id": "STORY-8",
+      "scene_id": "SCN-MATCH",
+      "case_id": "DEMO-CTT-001",
+      "stage": "S3",
+      "process_refs": [
+        "M4.5–M4.7"
+      ],
+      "title": {
+        "en-AU": "Resolve a possible match",
+        "en-US": "Resolve a possible match",
+        "zh-CN": "处理疑似筛查命中"
+      },
+      "trigger": "new-relationship",
+      "primary_roles": [
+        "ROLE-KYCOPS",
+        "ROLE-CASEMGR"
+      ],
+      "goal": {
+        "en-AU": "Resolve a possible match",
+        "en-US": "Resolve a possible match",
+        "zh-CN": "处理疑似筛查命中"
+      },
+      "current_work": {
+        "en-AU": "Adjudicate possible hits, assess materiality and record the screening outcome.",
+        "en-US": "Adjudicate possible hits, assess materiality and record the screening outcome.",
+        "zh-CN": "处置疑似命中、判断重大性并记录筛查结果。"
+      },
+      "target_work": {
+        "en-AU": "Prepare subject-to-record comparisons and evidence-use links. A human records the disposition or requests more information.",
+        "en-US": "Prepare subject-to-record comparisons and evidence-use links. A human records the disposition or requests more information.",
+        "zh-CN": "整理主体与记录的逐项对照及证据用途；由人工记录处置或请求更多信息。"
+      },
+      "inputs": [
+        {
+          "en-AU": "Sufficient current evidence, rationale and explicit simulated authority. Similarity is not a decision.",
+          "en-US": "Sufficient current evidence, rationale and explicit simulated authority. Similarity is not a decision.",
+          "zh-CN": "等待当前充分证据、理由及明确演示权限；相似性不等于决定。"
+        }
+      ],
+      "outputs": [
+        {
+          "en-AU": "A bounded decision records unresolved or referral against current inputs. Identity, population, EDD and other case conditions remain separately visible.",
+          "en-US": "A bounded decision records unresolved or referral against current inputs. Identity, population, EDD and other case conditions remain separately visible.",
+          "zh-CN": "针对当前输入记录有范围的未决或转交决定；身份、筛查群体、EDD 及其他案件条件继续分别可见。"
+        }
+      ],
+      "decision_refs": [
+        {
+          "en-AU": "Only a configured reviewer may record the permitted unresolved outcome. Exclusion is disabled; there is no autonomous approval or automatic EDD.",
+          "en-US": "Only a configured reviewer may record the permitted unresolved outcome. Exclusion is disabled; there is no autonomous approval or automatic EDD.",
+          "zh-CN": "仅配置的复核人员可记录获准的未决结果。排除结论未开放；不自主批准，也不自动触发 EDD。"
+        }
+      ],
+      "wait_refs": [
+        {
+          "en-AU": "Sufficient current evidence, rationale and explicit simulated authority. Similarity is not a decision.",
+          "en-US": "Sufficient current evidence, rationale and explicit simulated authority. Similarity is not a decision.",
+          "zh-CN": "等待当前充分证据、理由及明确演示权限；相似性不等于决定。"
+        }
+      ],
+      "dependency_refs": [
+        "SRC-010:DEP-07"
+      ],
+      "state_change_refs": [
+        {
+          "en-AU": "A bounded decision records unresolved or referral against current inputs. Identity, population, EDD and other case conditions remain separately visible.",
+          "en-US": "A bounded decision records unresolved or referral against current inputs. Identity, population, EDD and other case conditions remain separately visible.",
+          "zh-CN": "针对当前输入记录有范围的未决或转交决定；身份、筛查群体、EDD 及其他案件条件继续分别可见。"
+        }
+      ],
+      "next_scene_id": "SCN-EDD",
+      "next_beat_ref": "STORY-9",
+      "prototype_entry_ref": {
+        "scene": "SCN-MATCH",
+        "step": "screening",
+        "beat": null,
+        "action": "PRODUCT",
+        "loads_snapshot": false
+      },
+      "return_ref": {
+        "action": "RETURN",
+        "destination": "scenario",
+        "scene": "SCN-MATCH",
+        "storyCursor": 7,
+        "latest_locale": true
+      },
+      "reference_refs": [
+        "SRC-007",
+        "SRC-010"
+      ],
+      "evidence_status": "approved_demo_design; synthetic_case; bank_validation_required",
+      "reading_writes": false,
+      "snapshot_boundary": "Existing explicit same-case entry; reading never loads business outcomes",
+      "requirement_refs": [
+        "CTT-REQ-005"
+      ],
+      "observation_refs": [
+        "SRC-017:R16",
+        "SRC-017:R17",
+        "SRC-017:R18",
+        "SRC-017:R19",
+        "SRC-017:R20",
+        "SRC-017:R30",
+        "SRC-017:R31",
+        "SRC-016:R-C01",
+        "SRC-016:R-C02",
+        "SRC-016:R-C05",
+        "SRC-016:INT-C02",
+        "SRC-016:INT-C04",
+        "SRC-016:S-C01",
+        "SRC-016:S-C03",
+        "SRC-016:S-C06"
+      ]
+    },
+    {
+      "beat_id": "STORY-9",
+      "scene_id": "SCN-EDD",
+      "case_id": "DEMO-CTT-001",
+      "stage": "S3",
+      "process_refs": [
+        "M5"
+      ],
+      "title": {
+        "en-AU": "Assess elevated risk, if applicable",
+        "en-US": "Assess elevated risk, if applicable",
+        "zh-CN": "按适用性进入 EDD"
+      },
+      "trigger": "new-relationship",
+      "primary_roles": [
+        "ROLE-KYCOPS",
+        "ROLE-CASEMGR"
+      ],
+      "goal": {
+        "en-AU": "Assess elevated risk, if applicable",
+        "en-US": "Assess elevated risk, if applicable",
+        "zh-CN": "按适用性进入 EDD"
+      },
+      "current_work": {
+        "en-AU": "EDD applicability is assessed separately from sanctions finding review; missing reasons remain unknown.",
+        "en-US": "EDD applicability is assessed separately from sanctions finding review; missing reasons remain unknown.",
+        "zh-CN": "EDD 适用性与制裁命中复核分开评估；缺少理由时保持未知。"
+      },
+      "target_work": {
+        "en-AU": "Show required, not required or unknown with its exact reviewed basis. If required, open only a bounded targeted pack and keep approval unknown.",
+        "en-US": "Show required, not required or unknown with its exact reviewed basis. If required, open only a bounded targeted pack and keep approval unknown.",
+        "zh-CN": "以精确的经复核依据展示 required、not required 或 unknown。若为 required，仅建立有限的针对性资料包，并保持批准未知。"
+      },
+      "inputs": [
+        {
+          "en-AU": "A reviewed, current-scope reason and explicit permission. The approved default contains neither.",
+          "en-US": "A reviewed, current-scope reason and explicit permission. The approved default contains neither.",
+          "zh-CN": "等待当前范围内经复核的理由及明确权限；已批准默认状态两者均未配置。"
+        }
+      ],
+      "outputs": [
+        {
+          "en-AU": "Applicability remains unknown and readiness remains Not ready; screening and EDD do not overwrite one another.",
+          "en-US": "Applicability remains unknown and readiness remains Not ready; screening and EDD do not overwrite one another.",
+          "zh-CN": "适用性保持未知，就绪状态仍为尚未就绪；筛查与 EDD 不相互覆盖。"
+        }
+      ],
+      "decision_refs": [
+        {
+          "en-AU": "A human records applicability and any specialist assessment. No EDD approval or clearance writer is configured.",
+          "en-US": "A human records applicability and any specialist assessment. No EDD approval or clearance writer is configured.",
+          "zh-CN": "由人工记录适用性及专业评估；未配置 EDD 批准或准入写入。"
+        }
+      ],
+      "wait_refs": [
+        {
+          "en-AU": "A reviewed, current-scope reason and explicit permission. The approved default contains neither.",
+          "en-US": "A reviewed, current-scope reason and explicit permission. The approved default contains neither.",
+          "zh-CN": "等待当前范围内经复核的理由及明确权限；已批准默认状态两者均未配置。"
+        }
+      ],
+      "dependency_refs": [
+        "SRC-010:DEP-08"
+      ],
+      "state_change_refs": [
+        {
+          "en-AU": "Applicability remains unknown and readiness remains Not ready; screening and EDD do not overwrite one another.",
+          "en-US": "Applicability remains unknown and readiness remains Not ready; screening and EDD do not overwrite one another.",
+          "zh-CN": "适用性保持未知，就绪状态仍为尚未就绪；筛查与 EDD 不相互覆盖。"
+        }
+      ],
+      "next_scene_id": "SCN-CONFLICTS",
+      "next_beat_ref": "D1",
+      "prototype_entry_ref": {
+        "scene": "SCN-EDD",
+        "step": "edd",
+        "beat": null,
+        "action": "PRODUCT",
+        "loads_snapshot": false
+      },
+      "return_ref": {
+        "action": "RETURN",
+        "destination": "scenario",
+        "scene": "SCN-EDD",
+        "storyCursor": 8,
+        "latest_locale": true
+      },
+      "reference_refs": [
+        "SRC-007",
+        "SRC-010"
+      ],
+      "evidence_status": "approved_demo_design; synthetic_case; bank_validation_required",
+      "reading_writes": false,
+      "snapshot_boundary": "Existing explicit same-case entry; reading never loads business outcomes",
+      "requirement_refs": [
+        "CTT-REQ-005"
+      ],
+      "observation_refs": [
+        "SRC-017:R27",
+        "SRC-017:R28",
+        "SRC-016:R-C03",
+        "SRC-016:R-C04",
+        "SRC-016:R-C05",
+        "SRC-016:INT-C03",
+        "SRC-016:S-C01",
+        "SRC-016:S-C03",
+        "SRC-016:S-C06"
+      ]
+    },
+    {
+      "beat_id": "D1",
+      "scene_id": "SCN-CONFLICTS",
+      "case_id": "DEMO-CTT-001",
+      "stage": "S1",
+      "process_refs": [
+        "M1 → M7"
+      ],
+      "title": {
+        "en-AU": "Parallel work, one shared case",
+        "en-US": "Parallel work, one shared case",
+        "zh-CN": "并行工作，同一案件"
+      },
+      "trigger": "new-relationship",
+      "primary_roles": [
+        "ROLE-KYCOPS",
+        "ROLE-CASEMGR"
+      ],
+      "goal": {
+        "en-AU": "Parallel work, one shared case",
+        "en-US": "Parallel work, one shared case",
+        "zh-CN": "并行工作，同一案件"
+      },
+      "current_work": {
+        "en-AU": "Current: handoffs are interpreted across separate records and version currency is easy to miss.",
+        "en-US": "Current: handoffs are interpreted across separate records and version currency is easy to miss.",
+        "zh-CN": "Current：交接分散在多个记录中，版本是否最新容易被忽略。"
+      },
+      "target_work": {
+        "en-AU": "Conflicts, Credit and Legal advance on their own prerequisites.",
+        "en-US": "Conflicts, Credit and Legal advance on their own prerequisites.",
+        "zh-CN": "利益冲突、信贷与法务依据各自前置条件推进。"
+      },
+      "inputs": [
+        {
+          "en-AU": "Conflicts review, Legal execution, QA and unresolved C conditions.",
+          "en-US": "Conflicts review, Legal execution, QA and unresolved C conditions.",
+          "zh-CN": "等待利益冲突复核、法务签署、QA 及 C 阶段未决条件。"
+        }
+      ],
+      "outputs": [
+        {
+          "en-AU": "A scoped contribution to a still Not Ready case.",
+          "en-US": "A scoped contribution to a still Not Ready case.",
+          "zh-CN": "对仍为尚未就绪案件的一项限定贡献。"
+        }
+      ],
+      "decision_refs": [
+        {
+          "en-AU": "Only configured Conflicts roles see restricted detail. No misconduct finding, clearance decision or whole-case approval is inferred.",
+          "en-US": "Only configured Conflicts roles see restricted detail. No misconduct finding, clearance decision or whole-case approval is inferred.",
+          "zh-CN": "仅已配置的利益冲突角色可查看受限详情；不据此推断不当行为、准入决定或全案批准。"
+        }
+      ],
+      "wait_refs": [
+        {
+          "en-AU": "Conflicts review, Legal execution, QA and unresolved C conditions.",
+          "en-US": "Conflicts review, Legal execution, QA and unresolved C conditions.",
+          "zh-CN": "等待利益冲突复核、法务签署、QA 及 C 阶段未决条件。"
+        }
+      ],
+      "dependency_refs": [
+        "SRC-010:DEP-01"
+      ],
+      "state_change_refs": [
+        {
+          "en-AU": "A scoped contribution to a still Not Ready case.",
+          "en-US": "A scoped contribution to a still Not Ready case.",
+          "zh-CN": "对仍为尚未就绪案件的一项限定贡献。"
+        }
+      ],
+      "next_scene_id": "SCN-CONFLICTS",
+      "next_beat_ref": "D2",
+      "prototype_entry_ref": {
+        "scene": "SCN-CONFLICTS",
+        "step": "condition",
+        "beat": "D1",
+        "action": "PRODUCT",
+        "loads_snapshot": false
+      },
+      "return_ref": {
+        "action": "RETURN",
+        "destination": "scenario",
+        "scene": "SCN-CONFLICTS",
+        "storyCursor": 9,
+        "latest_locale": true
+      },
+      "reference_refs": [
+        "SRC-019",
+        "SRC-019"
+      ],
+      "evidence_status": "approved_demo_design; synthetic_case; bank_validation_required",
+      "reading_writes": false,
+      "snapshot_boundary": "Explicit reviewed D entry archives previous session",
+      "requirement_refs": [
+        "CTT-REQ-006",
+        "CTT-REQ-008"
+      ],
+      "observation_refs": [
+        "SRC-017:R16",
+        "SRC-017:R19",
+        "SRC-017:R29",
+        "SRC-016:S-C01"
+      ]
+    },
+    {
+      "beat_id": "D2",
+      "scene_id": "SCN-CONFLICTS",
+      "case_id": "DEMO-CTT-001",
+      "stage": "S1",
+      "process_refs": [
+        "M1 → M7"
+      ],
+      "title": {
+        "en-AU": "Conflicts starts early and stays bounded",
+        "en-US": "Conflicts starts early and stays bounded",
+        "zh-CN": "利益冲突尽早启动且边界清晰"
+      },
+      "trigger": "new-relationship",
+      "primary_roles": [
+        "ROLE-KYCOPS",
+        "ROLE-CASEMGR"
+      ],
+      "goal": {
+        "en-AU": "Conflicts starts early and stays bounded",
+        "en-US": "Conflicts starts early and stays bounded",
+        "zh-CN": "利益冲突尽早启动且边界清晰"
+      },
+      "current_work": {
+        "en-AU": "Current: handoffs are interpreted across separate records and version currency is easy to miss.",
+        "en-US": "Current: handoffs are interpreted across separate records and version currency is easy to miss.",
+        "zh-CN": "Current：交接分散在多个记录中，版本是否最新容易被忽略。"
+      },
+      "target_work": {
+        "en-AU": "Search is complete; a specialist reviews the open finding.",
+        "en-US": "Search is complete; a specialist reviews the open finding.",
+        "zh-CN": "搜索已完成；专业人员复核未决发现。"
+      },
+      "inputs": [
+        {
+          "en-AU": "Configured Conflicts review and scoped hold resolution.",
+          "en-US": "Configured Conflicts review and scoped hold resolution.",
+          "zh-CN": "等待已配置的利益冲突复核及限定 Hold 解决。"
+        }
+      ],
+      "outputs": [
+        {
+          "en-AU": "A scoped contribution to a still Not Ready case.",
+          "en-US": "A scoped contribution to a still Not Ready case.",
+          "zh-CN": "对仍为尚未就绪案件的一项限定贡献。"
+        }
+      ],
+      "decision_refs": [
+        {
+          "en-AU": "Only configured Conflicts roles see restricted detail. No misconduct finding, clearance decision or whole-case approval is inferred.",
+          "en-US": "Only configured Conflicts roles see restricted detail. No misconduct finding, clearance decision or whole-case approval is inferred.",
+          "zh-CN": "仅已配置的利益冲突角色可查看受限详情；不据此推断不当行为、准入决定或全案批准。"
+        }
+      ],
+      "wait_refs": [
+        {
+          "en-AU": "Configured Conflicts review and scoped hold resolution.",
+          "en-US": "Configured Conflicts review and scoped hold resolution.",
+          "zh-CN": "等待已配置的利益冲突复核及限定 Hold 解决。"
+        }
+      ],
+      "dependency_refs": [
+        "SRC-010:DEP-01"
+      ],
+      "state_change_refs": [
+        {
+          "en-AU": "A scoped contribution to a still Not Ready case.",
+          "en-US": "A scoped contribution to a still Not Ready case.",
+          "zh-CN": "对仍为尚未就绪案件的一项限定贡献。"
+        }
+      ],
+      "next_scene_id": "SCN-CREDIT",
+      "next_beat_ref": "D3",
+      "prototype_entry_ref": {
+        "scene": "SCN-CONFLICTS",
+        "step": "condition",
+        "beat": "D2",
+        "action": "PRODUCT",
+        "loads_snapshot": false
+      },
+      "return_ref": {
+        "action": "RETURN",
+        "destination": "scenario",
+        "scene": "SCN-CONFLICTS",
+        "storyCursor": 10,
+        "latest_locale": true
+      },
+      "reference_refs": [
+        "SRC-019",
+        "SRC-019"
+      ],
+      "evidence_status": "approved_demo_design; synthetic_case; bank_validation_required",
+      "reading_writes": false,
+      "snapshot_boundary": "Explicit reviewed D entry archives previous session",
+      "requirement_refs": [
+        "CTT-REQ-006",
+        "CTT-REQ-008"
+      ],
+      "observation_refs": [
+        "SRC-017:R16",
+        "SRC-017:R19",
+        "SRC-017:R29",
+        "SRC-016:S-C01"
+      ]
+    },
+    {
+      "beat_id": "D3",
+      "scene_id": "SCN-CREDIT",
+      "case_id": "DEMO-CTT-001",
+      "stage": "S4",
+      "process_refs": [
+        "C2.1–C2.3"
+      ],
+      "title": {
+        "en-AU": "Credit produces a versioned condition",
+        "en-US": "Credit produces a versioned condition",
+        "zh-CN": "信贷生成版本化条件"
+      },
+      "trigger": "new-relationship",
+      "primary_roles": [
+        "ROLE-KYCOPS",
+        "ROLE-CASEMGR"
+      ],
+      "goal": {
+        "en-AU": "Credit produces a versioned condition",
+        "en-US": "Credit produces a versioned condition",
+        "zh-CN": "信贷生成版本化条件"
+      },
+      "current_work": {
+        "en-AU": "Current: handoffs are interpreted across separate records and version currency is easy to miss.",
+        "en-US": "Current: handoffs are interpreted across separate records and version currency is easy to miss.",
+        "zh-CN": "Current：交接分散在多个记录中，版本是否最新容易被忽略。"
+      },
+      "target_work": {
+        "en-AU": "Track CC-01 and pass a revision-addressed AI-01 to Legal.",
+        "en-US": "Track CC-01 and pass a revision-addressed AI-01 to Legal.",
+        "zh-CN": "跟踪 CC-01，并向法务传递带版本的 AI-01。"
+      },
+      "inputs": [
+        {
+          "en-AU": "Documentation incorporation before execution.",
+          "en-US": "Documentation incorporation before execution.",
+          "zh-CN": "等待签署前纳入文件条件。"
+        }
+      ],
+      "outputs": [
+        {
+          "en-AU": "A versioned Credit condition and agreement input, not case clearance.",
+          "en-US": "A versioned Credit condition and agreement input, not case clearance.",
+          "zh-CN": "形成版本化信贷条件与协议输入，不代表案件准入。"
+        }
+      ],
+      "decision_refs": [
+        {
+          "en-AU": "The facilitator may simulate one guarded revision. It is not a monetary decision, policy change, approval or case clearance.",
+          "en-US": "The facilitator may simulate one guarded revision. It is not a monetary decision, policy change, approval or case clearance.",
+          "zh-CN": "主持人可模拟一次受保护的版本修订；这不是金额决定、政策变更、批准或案件准入。"
+        }
+      ],
+      "wait_refs": [
+        {
+          "en-AU": "Documentation incorporation before execution.",
+          "en-US": "Documentation incorporation before execution.",
+          "zh-CN": "等待签署前纳入文件条件。"
+        }
+      ],
+      "dependency_refs": [
+        "SRC-010:DEP-10",
+        "SRC-009:DEP-07"
+      ],
+      "state_change_refs": [
+        {
+          "en-AU": "A versioned Credit condition and agreement input, not case clearance.",
+          "en-US": "A versioned Credit condition and agreement input, not case clearance.",
+          "zh-CN": "形成版本化信贷条件与协议输入，不代表案件准入。"
+        }
+      ],
+      "next_scene_id": "SCN-LEGAL",
+      "next_beat_ref": "D4",
+      "prototype_entry_ref": {
+        "scene": "SCN-CREDIT",
+        "step": "condition",
+        "beat": "D3",
+        "action": "PRODUCT",
+        "loads_snapshot": false
+      },
+      "return_ref": {
+        "action": "RETURN",
+        "destination": "scenario",
+        "scene": "SCN-CREDIT",
+        "storyCursor": 11,
+        "latest_locale": true
+      },
+      "reference_refs": [
+        "SRC-019",
+        "SRC-019"
+      ],
+      "evidence_status": "approved_demo_design; synthetic_case; bank_validation_required",
+      "reading_writes": false,
+      "snapshot_boundary": "Explicit reviewed D entry archives previous session",
+      "requirement_refs": [
+        "CTT-REQ-006"
+      ],
+      "observation_refs": [
+        "SRC-017:R16",
+        "SRC-017:R19",
+        "SRC-017:R29",
+        "SRC-016:S-C01"
+      ]
+    },
+    {
+      "beat_id": "D4",
+      "scene_id": "SCN-LEGAL",
+      "case_id": "DEMO-CTT-001",
+      "stage": "S4",
+      "process_refs": [
+        "C1.1–C1.3"
+      ],
+      "title": {
+        "en-AU": "Legal consumes a named Credit input",
+        "en-US": "Legal consumes a named Credit input",
+        "zh-CN": "法务使用明确版本的信贷输入"
+      },
+      "trigger": "new-relationship",
+      "primary_roles": [
+        "ROLE-KYCOPS",
+        "ROLE-CASEMGR"
+      ],
+      "goal": {
+        "en-AU": "Legal consumes a named Credit input",
+        "en-US": "Legal consumes a named Credit input",
+        "zh-CN": "法务使用明确版本的信贷输入"
+      },
+      "current_work": {
+        "en-AU": "Current: handoffs are interpreted across separate records and version currency is easy to miss.",
+        "en-US": "Current: handoffs are interpreted across separate records and version currency is easy to miss.",
+        "zh-CN": "Current：交接分散在多个记录中，版本是否最新容易被忽略。"
+      },
+      "target_work": {
+        "en-AU": "Keep AGR-01 revision 03 frozen while checking whether its Credit input remains current.",
+        "en-US": "Keep AGR-01 revision 03 frozen while checking whether its Credit input remains current.",
+        "zh-CN": "冻结查看 AGR-01 版本 03，同时检查其信贷输入是否仍为当前版本。"
+      },
+      "inputs": [
+        {
+          "en-AU": "Validated signatory authority and execution; current Credit input if revised.",
+          "en-US": "Validated signatory authority and execution; current Credit input if revised.",
+          "zh-CN": "等待经验证的签署权限与签署；如信贷已修订，还需当前输入。"
+        }
+      ],
+      "outputs": [
+        {
+          "en-AU": "An internally approved agreement remains pending execution.",
+          "en-US": "An internally approved agreement remains pending execution.",
+          "zh-CN": "内部已批准的协议仍等待签署。"
+        }
+      ],
+      "decision_refs": [
+        {
+          "en-AU": "Internal approval is not execution or signing authority. The prototype exposes no Legal approval, execution or clearance writer.",
+          "en-US": "Internal approval is not execution or signing authority. The prototype exposes no Legal approval, execution or clearance writer.",
+          "zh-CN": "内部批准不等于签署或签署权限；原型不提供法务批准、签署或准入写入。"
+        }
+      ],
+      "wait_refs": [
+        {
+          "en-AU": "Validated signatory authority and execution; current Credit input if revised.",
+          "en-US": "Validated signatory authority and execution; current Credit input if revised.",
+          "zh-CN": "等待经验证的签署权限与签署；如信贷已修订，还需当前输入。"
+        }
+      ],
+      "dependency_refs": [
+        "SRC-010:DEP-09",
+        "SRC-009:DEP-07"
+      ],
+      "state_change_refs": [
+        {
+          "en-AU": "An internally approved agreement remains pending execution.",
+          "en-US": "An internally approved agreement remains pending execution.",
+          "zh-CN": "内部已批准的协议仍等待签署。"
+        }
+      ],
+      "next_scene_id": "SCN-READINESS",
+      "next_beat_ref": "D5",
+      "prototype_entry_ref": {
+        "scene": "SCN-LEGAL",
+        "step": "condition",
+        "beat": "D4",
+        "action": "PRODUCT",
+        "loads_snapshot": false
+      },
+      "return_ref": {
+        "action": "RETURN",
+        "destination": "scenario",
+        "scene": "SCN-LEGAL",
+        "storyCursor": 12,
+        "latest_locale": true
+      },
+      "reference_refs": [
+        "SRC-019",
+        "SRC-019"
+      ],
+      "evidence_status": "approved_demo_design; synthetic_case; bank_validation_required",
+      "reading_writes": false,
+      "snapshot_boundary": "Explicit reviewed D entry archives previous session",
+      "requirement_refs": [
+        "CTT-REQ-006",
+        "CTT-REQ-008"
+      ],
+      "observation_refs": [
+        "SRC-017:R16",
+        "SRC-017:R19",
+        "SRC-017:R29",
+        "SRC-016:S-C01"
+      ]
+    },
+    {
+      "beat_id": "D5",
+      "scene_id": "SCN-READINESS",
+      "case_id": "DEMO-CTT-001",
+      "stage": "S5",
+      "process_refs": [
+        "M8.1"
+      ],
+      "title": {
+        "en-AU": "Readiness keeps every unresolved condition visible",
+        "en-US": "Readiness keeps every unresolved condition visible",
+        "zh-CN": "就绪状态保留每项未决条件"
+      },
+      "trigger": "new-relationship",
+      "primary_roles": [
+        "ROLE-KYCOPS",
+        "ROLE-CASEMGR"
+      ],
+      "goal": {
+        "en-AU": "Readiness keeps every unresolved condition visible",
+        "en-US": "Readiness keeps every unresolved condition visible",
+        "zh-CN": "就绪状态保留每项未决条件"
+      },
+      "current_work": {
+        "en-AU": "Current: handoffs are interpreted across separate records and version currency is easy to miss.",
+        "en-US": "Current: handoffs are interpreted across separate records and version currency is easy to miss.",
+        "zh-CN": "Current：交接分散在多个记录中，版本是否最新容易被忽略。"
+      },
+      "target_work": {
+        "en-AU": "Inspect every unresolved condition and the authority boundary.",
+        "en-US": "Inspect every unresolved condition and the authority boundary.",
+        "zh-CN": "检查每项未决条件及权限边界。"
+      },
+      "inputs": [
+        {
+          "en-AU": "Conflicts review, Legal execution, QA and unresolved C conditions.",
+          "en-US": "Conflicts review, Legal execution, QA and unresolved C conditions.",
+          "zh-CN": "等待利益冲突复核、法务签署、QA 及 C 阶段未决条件。"
+        }
+      ],
+      "outputs": [
+        {
+          "en-AU": "A scoped contribution to a still Not Ready case.",
+          "en-US": "A scoped contribution to a still Not Ready case.",
+          "zh-CN": "对仍为尚未就绪案件的一项限定贡献。"
+        }
+      ],
+      "decision_refs": [
+        {
+          "en-AU": "Final bank authority is not configured. Publishing and real trades are outside this slice.",
+          "en-US": "Final bank authority is not configured. Publishing and real trades are outside this slice.",
+          "zh-CN": "未配置银行最终授权；发布及真实交易不属于本切片。"
+        }
+      ],
+      "wait_refs": [
+        {
+          "en-AU": "Conflicts review, Legal execution, QA and unresolved C conditions.",
+          "en-US": "Conflicts review, Legal execution, QA and unresolved C conditions.",
+          "zh-CN": "等待利益冲突复核、法务签署、QA 及 C 阶段未决条件。"
+        }
+      ],
+      "dependency_refs": [
+        "SRC-010:DEP-12"
+      ],
+      "state_change_refs": [
+        {
+          "en-AU": "A scoped contribution to a still Not Ready case.",
+          "en-US": "A scoped contribution to a still Not Ready case.",
+          "zh-CN": "对仍为尚未就绪案件的一项限定贡献。"
+        }
+      ],
+      "next_scene_id": "SCN-QA",
+      "next_beat_ref": "E1",
+      "prototype_entry_ref": {
+        "scene": "SCN-READINESS",
+        "step": "condition",
+        "beat": "D5",
+        "action": "PRODUCT",
+        "loads_snapshot": false
+      },
+      "return_ref": {
+        "action": "RETURN",
+        "destination": "scenario",
+        "scene": "SCN-READINESS",
+        "storyCursor": 13,
+        "latest_locale": true
+      },
+      "reference_refs": [
+        "SRC-019",
+        "SRC-019"
+      ],
+      "evidence_status": "approved_demo_design; synthetic_case; bank_validation_required",
+      "reading_writes": false,
+      "snapshot_boundary": "Explicit reviewed D entry archives previous session",
+      "requirement_refs": [
+        "CTT-REQ-007",
+        "CTT-REQ-009",
+        "CTT-REQ-010"
+      ],
+      "observation_refs": [
+        "SRC-017:R16",
+        "SRC-017:R17",
+        "SRC-017:R18",
+        "SRC-017:R19",
+        "SRC-017:R20",
+        "SRC-017:R22",
+        "SRC-017:R26",
+        "SRC-017:R28",
+        "SRC-016:R-C03",
+        "SRC-016:INT-C04",
+        "SRC-020:M6-M8"
+      ]
+    },
+    {
+      "beat_id": "E1",
+      "scene_id": "SCN-QA",
+      "case_id": "DEMO-CTT-001",
+      "stage": "S4",
+      "process_refs": [
+        "M6"
+      ],
+      "title": {
+        "en-AU": "QA reviews the assembled case",
+        "en-US": "QA reviews the assembled case",
+        "zh-CN": "QA 复核已汇集案件"
+      },
+      "trigger": "new-relationship",
+      "primary_roles": [
+        "ROLE-QA",
+        "ROLE-KYCOPS"
+      ],
+      "goal": {
+        "en-AU": "QA reviews the assembled case",
+        "en-US": "QA reviews the assembled case",
+        "zh-CN": "QA 复核已汇集案件"
+      },
+      "current_work": {
+        "en-AU": "Task completion and evidence receipt can hide an unassessed purpose.",
+        "en-US": "Task completion and evidence receipt can hide an unassessed purpose.",
+        "zh-CN": "任务完成与证据收取可能掩盖未评估的用途。"
+      },
+      "target_work": {
+        "en-AU": "Inspect current scope, requirements, evidence uses, screening / EDD and specialist outputs.",
+        "en-US": "Inspect current scope, requirements, evidence uses, screening / EDD and specialist outputs.",
+        "zh-CN": "检查当前范围、要求、证据用途、筛查／EDD 与专业条线输出。"
+      },
+      "inputs": [
+        {
+          "en-AU": "Current scope and assembled case records",
+          "en-US": "Current scope and assembled case records",
+          "zh-CN": "当前范围与汇集案件记录"
+        }
+      ],
+      "outputs": [
+        {
+          "en-AU": "Identify the exact ownership evidence use that needs QA review.",
+          "en-US": "Identify the exact ownership evidence use that needs QA review.",
+          "zh-CN": "找出需要 QA 复核的具体所有权证据用途。"
+        }
+      ],
+      "decision_refs": [
+        {
+          "en-AU": "Explicit configured human review; bank authority remains to validate",
+          "en-US": "Explicit configured human review; bank authority remains to validate",
+          "zh-CN": "已配置的明确人工复核；银行权限仍待验证"
+        }
+      ],
+      "wait_refs": [
+        {
+          "en-AU": "Current scope and assembled case records",
+          "en-US": "Current scope and assembled case records",
+          "zh-CN": "当前范围与汇集案件记录"
+        }
+      ],
+      "dependency_refs": [
+        "SRC-009:DEP-09",
+        "SRC-009:DEP-10",
+        "SRC-010:DEP-11"
+      ],
+      "state_change_refs": [
+        {
+          "en-AU": "Identify the exact ownership evidence use that needs QA review.",
+          "en-US": "Identify the exact ownership evidence use that needs QA review.",
+          "zh-CN": "找出需要 QA 复核的具体所有权证据用途。"
+        }
+      ],
+      "next_scene_id": "SCN-QA",
+      "next_beat_ref": "E2",
+      "prototype_entry_ref": {
+        "scene": "SCN-QA",
+        "step": "qa-remediation",
+        "beat": "E1",
+        "action": "PRODUCT",
+        "loads_snapshot": false
+      },
+      "return_ref": {
+        "action": "RETURN",
+        "destination": "scenario",
+        "scene": "SCN-QA",
+        "storyCursor": 14,
+        "latest_locale": true
+      },
+      "reference_refs": [
+        "SRC-020",
+        "SRC-020"
+      ],
+      "evidence_status": "approved_demo_design; synthetic_case; bank_validation_required",
+      "reading_writes": false,
+      "snapshot_boundary": "Explicit reviewed D → E continuation archives current session",
+      "requirement_refs": [
+        "CTT-REQ-008",
+        "CTT-REQ-009",
+        "CTT-REQ-010"
+      ],
+      "observation_refs": [
+        "SRC-017:R18",
+        "SRC-017:R20",
+        "SRC-017:R21",
+        "SRC-017:R22",
+        "SRC-017:R26",
+        "SRC-017:R28",
+        "SRC-016:R-C03",
+        "SRC-020:M6-M8"
+      ]
+    },
+    {
+      "beat_id": "E2",
+      "scene_id": "SCN-QA",
+      "case_id": "DEMO-CTT-001",
+      "stage": "S4",
+      "process_refs": [
+        "M6"
+      ],
+      "title": {
+        "en-AU": "Issue a precise QA gap",
+        "en-US": "Issue a precise QA gap",
+        "zh-CN": "发起精确 QA 缺口"
+      },
+      "trigger": "new-relationship",
+      "primary_roles": [
+        "ROLE-QA",
+        "ROLE-KYCOPS"
+      ],
+      "goal": {
+        "en-AU": "Issue a precise QA gap",
+        "en-US": "Issue a precise QA gap",
+        "zh-CN": "发起精确 QA 缺口"
+      },
+      "current_work": {
+        "en-AU": "A broad return to KYC obscures the affected requirement and owner.",
+        "en-US": "A broad return to KYC obscures the affected requirement and owner.",
+        "zh-CN": "笼统退回 KYC 会模糊受影响要求与责任人。"
+      },
+      "target_work": {
+        "en-AU": "QA records the ownership-purpose gap and assigns its specific remediation.",
+        "en-US": "QA records the ownership-purpose gap and assigns its specific remediation.",
+        "zh-CN": "QA 记录所有权用途缺口，并分配具体补正。"
+      },
+      "inputs": [
+        {
+          "en-AU": "Current scope and assembled case records",
+          "en-US": "Current scope and assembled case records",
+          "zh-CN": "当前范围与汇集案件记录"
+        }
+      ],
+      "outputs": [
+        {
+          "en-AU": "Open the specific remediation; retain unrelated Legal and Credit work.",
+          "en-US": "Open the specific remediation; retain unrelated Legal and Credit work.",
+          "zh-CN": "打开具体补正；保留无关法务与信贷工作。"
+        }
+      ],
+      "decision_refs": [
+        {
+          "en-AU": "Explicit configured human review; bank authority remains to validate",
+          "en-US": "Explicit configured human review; bank authority remains to validate",
+          "zh-CN": "已配置的明确人工复核；银行权限仍待验证"
+        }
+      ],
+      "wait_refs": [
+        {
+          "en-AU": "Current scope and assembled case records",
+          "en-US": "Current scope and assembled case records",
+          "zh-CN": "当前范围与汇集案件记录"
+        }
+      ],
+      "dependency_refs": [
+        "SRC-009:DEP-09",
+        "SRC-009:DEP-10",
+        "SRC-010:DEP-11"
+      ],
+      "state_change_refs": [
+        {
+          "en-AU": "Open the specific remediation; retain unrelated Legal and Credit work.",
+          "en-US": "Open the specific remediation; retain unrelated Legal and Credit work.",
+          "zh-CN": "打开具体补正；保留无关法务与信贷工作。"
+        }
+      ],
+      "next_scene_id": "SCN-QA",
+      "next_beat_ref": "E3",
+      "prototype_entry_ref": {
+        "scene": "SCN-QA",
+        "step": "qa-remediation",
+        "beat": "E2",
+        "action": "PRODUCT",
+        "loads_snapshot": false
+      },
+      "return_ref": {
+        "action": "RETURN",
+        "destination": "scenario",
+        "scene": "SCN-QA",
+        "storyCursor": 15,
+        "latest_locale": true
+      },
+      "reference_refs": [
+        "SRC-020",
+        "SRC-020"
+      ],
+      "evidence_status": "approved_demo_design; synthetic_case; bank_validation_required",
+      "reading_writes": false,
+      "snapshot_boundary": "Explicit reviewed D → E continuation archives current session",
+      "requirement_refs": [
+        "CTT-REQ-008",
+        "CTT-REQ-009",
+        "CTT-REQ-010"
+      ],
+      "observation_refs": [
+        "SRC-017:R18",
+        "SRC-017:R20",
+        "SRC-017:R21",
+        "SRC-017:R22",
+        "SRC-017:R26",
+        "SRC-017:R28",
+        "SRC-016:R-C03",
+        "SRC-020:M6-M8"
+      ]
+    },
+    {
+      "beat_id": "E3",
+      "scene_id": "SCN-QA",
+      "case_id": "DEMO-CTT-001",
+      "stage": "S4",
+      "process_refs": [
+        "M6"
+      ],
+      "title": {
+        "en-AU": "Remediate and re-review",
+        "en-US": "Remediate and re-review",
+        "zh-CN": "补正与重新复核"
+      },
+      "trigger": "new-relationship",
+      "primary_roles": [
+        "ROLE-QA",
+        "ROLE-KYCOPS"
+      ],
+      "goal": {
+        "en-AU": "Remediate and re-review",
+        "en-US": "Remediate and re-review",
+        "zh-CN": "补正与重新复核"
+      },
+      "current_work": {
+        "en-AU": "A completed remediation can be mistaken for a passed QA check.",
+        "en-US": "A completed remediation can be mistaken for a passed QA check.",
+        "zh-CN": "补正完成可能被误认为 QA 检查通过。"
+      },
+      "target_work": {
+        "en-AU": "KYC Operations submits and completes a purpose assessment; QA independently re-reviews it.",
+        "en-US": "KYC Operations submits and completes a purpose assessment; QA independently re-reviews it.",
+        "zh-CN": "KYC 运营提交并完成用途评估；QA 独立重新复核。"
+      },
+      "inputs": [
+        {
+          "en-AU": "Current scope and assembled case records",
+          "en-US": "Current scope and assembled case records",
+          "zh-CN": "当前范围与汇集案件记录"
+        }
+      ],
+      "outputs": [
+        {
+          "en-AU": "Return the current evidence-use assessment to QA for re-review and separate sign-off.",
+          "en-US": "Return the current evidence-use assessment to QA for re-review and separate sign-off.",
+          "zh-CN": "将当前证据用途评估交回 QA，重新复核并单独签核。"
+        }
+      ],
+      "decision_refs": [
+        {
+          "en-AU": "Explicit configured human review; bank authority remains to validate",
+          "en-US": "Explicit configured human review; bank authority remains to validate",
+          "zh-CN": "已配置的明确人工复核；银行权限仍待验证"
+        }
+      ],
+      "wait_refs": [
+        {
+          "en-AU": "Current scope and assembled case records",
+          "en-US": "Current scope and assembled case records",
+          "zh-CN": "当前范围与汇集案件记录"
+        }
+      ],
+      "dependency_refs": [
+        "SRC-009:DEP-09",
+        "SRC-009:DEP-10",
+        "SRC-010:DEP-11"
+      ],
+      "state_change_refs": [
+        {
+          "en-AU": "Return the current evidence-use assessment to QA for re-review and separate sign-off.",
+          "en-US": "Return the current evidence-use assessment to QA for re-review and separate sign-off.",
+          "zh-CN": "将当前证据用途评估交回 QA，重新复核并单独签核。"
+        }
+      ],
+      "next_scene_id": "SCN-READINESS",
+      "next_beat_ref": "E4",
+      "prototype_entry_ref": {
+        "scene": "SCN-QA",
+        "step": "qa-remediation",
+        "beat": "E3",
+        "action": "PRODUCT",
+        "loads_snapshot": false
+      },
+      "return_ref": {
+        "action": "RETURN",
+        "destination": "scenario",
+        "scene": "SCN-QA",
+        "storyCursor": 16,
+        "latest_locale": true
+      },
+      "reference_refs": [
+        "SRC-020",
+        "SRC-020"
+      ],
+      "evidence_status": "approved_demo_design; synthetic_case; bank_validation_required",
+      "reading_writes": false,
+      "snapshot_boundary": "Explicit reviewed D → E continuation archives current session",
+      "requirement_refs": [
+        "CTT-REQ-008",
+        "CTT-REQ-009",
+        "CTT-REQ-010"
+      ],
+      "observation_refs": [
+        "SRC-017:R18",
+        "SRC-017:R20",
+        "SRC-017:R21",
+        "SRC-017:R22",
+        "SRC-017:R26",
+        "SRC-017:R28",
+        "SRC-016:R-C03",
+        "SRC-020:M6-M8"
+      ]
+    },
+    {
+      "beat_id": "E4",
+      "scene_id": "SCN-READINESS",
+      "case_id": "DEMO-CTT-001",
+      "stage": "S5",
+      "process_refs": [
+        "M8.1"
+      ],
+      "title": {
+        "en-AU": "Close remaining conditions",
+        "en-US": "Close remaining conditions",
+        "zh-CN": "闭合剩余条件"
+      },
+      "trigger": "new-relationship",
+      "primary_roles": [
+        "ROLE-KYCOPS",
+        "ROLE-CASEMGR"
+      ],
+      "goal": {
+        "en-AU": "Close remaining conditions",
+        "en-US": "Close remaining conditions",
+        "zh-CN": "闭合剩余条件"
+      },
+      "current_work": {
+        "en-AU": "Separate completion reports do not show dependencies or unknown applicability.",
+        "en-US": "Separate completion reports do not show dependencies or unknown applicability.",
+        "zh-CN": "分散的完成报告无法显示依赖或未知适用性。"
+      },
+      "target_work": {
+        "en-AU": "Review named Conflicts, full coverage, EDD, scope context, KYC and Legal closure events.",
+        "en-US": "Review named Conflicts, full coverage, EDD, scope context, KYC and Legal closure events.",
+        "zh-CN": "复核指定利益冲突、完整覆盖、EDD、范围背景、KYC 与法务闭合事件。"
+      },
+      "inputs": [
+        {
+          "en-AU": "Current scope and assembled case records",
+          "en-US": "Current scope and assembled case records",
+          "zh-CN": "当前范围与汇集案件记录"
+        }
+      ],
+      "outputs": [
+        {
+          "en-AU": "Confirm each current prerequisite; Legal uses current Credit and separate Signatory S authority.",
+          "en-US": "Confirm each current prerequisite; Legal uses current Credit and separate Signatory S authority.",
+          "zh-CN": "确认每项当前前提；法务使用当前信贷与独立签署人 S 权限。"
+        }
+      ],
+      "decision_refs": [
+        {
+          "en-AU": "Explicit configured human review; bank authority remains to validate",
+          "en-US": "Explicit configured human review; bank authority remains to validate",
+          "zh-CN": "已配置的明确人工复核；银行权限仍待验证"
+        }
+      ],
+      "wait_refs": [
+        {
+          "en-AU": "Current scope and assembled case records",
+          "en-US": "Current scope and assembled case records",
+          "zh-CN": "当前范围与汇集案件记录"
+        }
+      ],
+      "dependency_refs": [
+        "SRC-010:DEP-12"
+      ],
+      "state_change_refs": [
+        {
+          "en-AU": "Confirm each current prerequisite; Legal uses current Credit and separate Signatory S authority.",
+          "en-US": "Confirm each current prerequisite; Legal uses current Credit and separate Signatory S authority.",
+          "zh-CN": "确认每项当前前提；法务使用当前信贷与独立签署人 S 权限。"
+        }
+      ],
+      "next_scene_id": "SCN-READINESS",
+      "next_beat_ref": "E5",
+      "prototype_entry_ref": {
+        "scene": "SCN-READINESS",
+        "step": "clearance",
+        "beat": "E4",
+        "action": "PRODUCT",
+        "loads_snapshot": false
+      },
+      "return_ref": {
+        "action": "RETURN",
+        "destination": "scenario",
+        "scene": "SCN-READINESS",
+        "storyCursor": 17,
+        "latest_locale": true
+      },
+      "reference_refs": [
+        "SRC-020",
+        "SRC-020"
+      ],
+      "evidence_status": "approved_demo_design; synthetic_case; bank_validation_required",
+      "reading_writes": false,
+      "snapshot_boundary": "Explicit reviewed D → E continuation archives current session",
+      "requirement_refs": [
+        "CTT-REQ-007",
+        "CTT-REQ-009",
+        "CTT-REQ-010"
+      ],
+      "observation_refs": [
+        "SRC-017:R16",
+        "SRC-017:R17",
+        "SRC-017:R18",
+        "SRC-017:R19",
+        "SRC-017:R20",
+        "SRC-017:R22",
+        "SRC-017:R26",
+        "SRC-017:R28",
+        "SRC-016:R-C03",
+        "SRC-016:INT-C04",
+        "SRC-020:M6-M8"
+      ]
+    },
+    {
+      "beat_id": "E5",
+      "scene_id": "SCN-READINESS",
+      "case_id": "DEMO-CTT-001",
+      "stage": "S5",
+      "process_refs": [
+        "M8.1"
+      ],
+      "title": {
+        "en-AU": "Ready for authorised confirmation",
+        "en-US": "Ready for authorised confirmation",
+        "zh-CN": "就绪，等待获授权确认"
+      },
+      "trigger": "new-relationship",
+      "primary_roles": [
+        "ROLE-KYCOPS",
+        "ROLE-CASEMGR"
+      ],
+      "goal": {
+        "en-AU": "Ready for authorised confirmation",
+        "en-US": "Ready for authorised confirmation",
+        "zh-CN": "就绪，等待获授权确认"
+      },
+      "current_work": {
+        "en-AU": "A ready checklist can be mistaken for an authorised clearance.",
+        "en-US": "A ready checklist can be mistaken for an authorised clearance.",
+        "zh-CN": "就绪清单可能被误认为获授权的准入。"
+      },
+      "target_work": {
+        "en-AU": "Evaluate current applicable prerequisites and inspect the scoped readiness snapshot.",
+        "en-US": "Evaluate current applicable prerequisites and inspect the scoped readiness snapshot.",
+        "zh-CN": "评估当前适用前提并检查限定范围就绪快照。"
+      },
+      "inputs": [
+        {
+          "en-AU": "Current scope and assembled case records",
+          "en-US": "Current scope and assembled case records",
+          "zh-CN": "当前范围与汇集案件记录"
+        }
+      ],
+      "outputs": [
+        {
+          "en-AU": "The configured Authorised Clearance Reviewer reviews the complete basis and explicitly confirms.",
+          "en-US": "The configured Authorised Clearance Reviewer reviews the complete basis and explicitly confirms.",
+          "zh-CN": "已配置的获授权准入复核人员复核完整依据，再明确确认。"
+        }
+      ],
+      "decision_refs": [
+        {
+          "en-AU": "Explicit configured human review; bank authority remains to validate",
+          "en-US": "Explicit configured human review; bank authority remains to validate",
+          "zh-CN": "已配置的明确人工复核；银行权限仍待验证"
+        }
+      ],
+      "wait_refs": [
+        {
+          "en-AU": "Current scope and assembled case records",
+          "en-US": "Current scope and assembled case records",
+          "zh-CN": "当前范围与汇集案件记录"
+        }
+      ],
+      "dependency_refs": [
+        "SRC-010:DEP-12"
+      ],
+      "state_change_refs": [
+        {
+          "en-AU": "The configured Authorised Clearance Reviewer reviews the complete basis and explicitly confirms.",
+          "en-US": "The configured Authorised Clearance Reviewer reviews the complete basis and explicitly confirms.",
+          "zh-CN": "已配置的获授权准入复核人员复核完整依据，再明确确认。"
+        }
+      ],
+      "next_scene_id": "SCN-PUBLISH",
+      "next_beat_ref": "E6",
+      "prototype_entry_ref": {
+        "scene": "SCN-READINESS",
+        "step": "clearance",
+        "beat": "E5",
+        "action": "PRODUCT",
+        "loads_snapshot": false
+      },
+      "return_ref": {
+        "action": "RETURN",
+        "destination": "scenario",
+        "scene": "SCN-READINESS",
+        "storyCursor": 18,
+        "latest_locale": true
+      },
+      "reference_refs": [
+        "SRC-020",
+        "SRC-020"
+      ],
+      "evidence_status": "approved_demo_design; synthetic_case; bank_validation_required",
+      "reading_writes": false,
+      "snapshot_boundary": "Explicit reviewed D → E continuation archives current session",
+      "requirement_refs": [
+        "CTT-REQ-007",
+        "CTT-REQ-009",
+        "CTT-REQ-010"
+      ],
+      "observation_refs": [
+        "SRC-017:R16",
+        "SRC-017:R17",
+        "SRC-017:R18",
+        "SRC-017:R19",
+        "SRC-017:R20",
+        "SRC-017:R22",
+        "SRC-017:R26",
+        "SRC-017:R28",
+        "SRC-016:R-C03",
+        "SRC-016:INT-C04",
+        "SRC-020:M6-M8"
+      ]
+    },
+    {
+      "beat_id": "E6",
+      "scene_id": "SCN-PUBLISH",
+      "case_id": "DEMO-CTT-001",
+      "stage": "S5",
+      "process_refs": [
+        "M8.2–M8.5"
+      ],
+      "title": {
+        "en-AU": "Record the decision and publish",
+        "en-US": "Record the decision and publish",
+        "zh-CN": "记录决定并发布"
+      },
+      "trigger": "new-relationship",
+      "primary_roles": [
+        "ROLE-CASEMGR"
+      ],
+      "goal": {
+        "en-AU": "Record the decision and publish",
+        "en-US": "Record the decision and publish",
+        "zh-CN": "记录决定并发布"
+      },
+      "current_work": {
+        "en-AU": "Recorded clearance, delivered outcome and executed trade can be conflated.",
+        "en-US": "Recorded clearance, delivered outcome and executed trade can be conflated.",
+        "zh-CN": "准入记录、结果传达和交易执行可能被混淆。"
+      },
+      "target_work": {
+        "en-AU": "Record scoped clearance and timestamp, then separately simulate permitted outcome delivery.",
+        "en-US": "Record scoped clearance and timestamp, then separately simulate permitted outcome delivery.",
+        "zh-CN": "记录限定范围准入与时间戳，再单独模拟获准结果传达。"
+      },
+      "inputs": [
+        {
+          "en-AU": "Current scope and assembled case records",
+          "en-US": "Current scope and assembled case records",
+          "zh-CN": "当前范围与汇集案件记录"
+        }
+      ],
+      "outputs": [
+        {
+          "en-AU": "Inspect delivery status and retry a failure without discarding the clearance decision.",
+          "en-US": "Inspect delivery status and retry a failure without discarding the clearance decision.",
+          "zh-CN": "检查传达状态，失败时重试并保留准入决定。"
+        }
+      ],
+      "decision_refs": [
+        {
+          "en-AU": "Explicit configured human review; bank authority remains to validate",
+          "en-US": "Explicit configured human review; bank authority remains to validate",
+          "zh-CN": "已配置的明确人工复核；银行权限仍待验证"
+        }
+      ],
+      "wait_refs": [
+        {
+          "en-AU": "Current scope and assembled case records",
+          "en-US": "Current scope and assembled case records",
+          "zh-CN": "当前范围与汇集案件记录"
+        }
+      ],
+      "dependency_refs": [
+        "SRC-010:DEP-13"
+      ],
+      "state_change_refs": [
+        {
+          "en-AU": "Inspect delivery status and retry a failure without discarding the clearance decision.",
+          "en-US": "Inspect delivery status and retry a failure without discarding the clearance decision.",
+          "zh-CN": "检查传达状态，失败时重试并保留准入决定。"
+        }
+      ],
+      "next_scene_id": null,
+      "next_beat_ref": null,
+      "prototype_entry_ref": {
+        "scene": "SCN-PUBLISH",
+        "step": "clearance",
+        "beat": "E6",
+        "action": "PRODUCT",
+        "loads_snapshot": false
+      },
+      "return_ref": {
+        "action": "RETURN",
+        "destination": "scenario",
+        "scene": "SCN-PUBLISH",
+        "storyCursor": 19,
+        "latest_locale": true
+      },
+      "reference_refs": [
+        "SRC-020",
+        "SRC-020"
+      ],
+      "evidence_status": "approved_demo_design; synthetic_case; bank_validation_required",
+      "reading_writes": false,
+      "snapshot_boundary": "Explicit reviewed D → E continuation archives current session",
+      "requirement_refs": [
+        "CTT-REQ-009",
+        "CTT-REQ-010"
+      ],
+      "observation_refs": [
+        "SRC-017:R18",
+        "SRC-017:R20",
+        "SRC-017:R22",
+        "SRC-017:R26",
+        "SRC-017:R28",
+        "SRC-016:R-C03",
+        "SRC-020:M6-M8"
+      ]
+    }
+  ]
+}

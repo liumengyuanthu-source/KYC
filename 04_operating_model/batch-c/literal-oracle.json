@@ -1,0 +1,69 @@
+{
+  "source_ref": "SRC-016",
+  "status": "independent_literal_demo_expectations",
+  "expected": {
+    "entry": {
+      "inventory_status": "incomplete",
+      "identity_artifact_count": 0,
+      "c_finding_count": 0,
+      "edd_applicability": "unknown"
+    },
+    "query_failed": {
+      "run_status": "failed",
+      "result_count": null,
+      "coverage_status": "incomplete"
+    },
+    "query_zero": {
+      "run_status": "completed",
+      "result_count": 0,
+      "coverage_status": "incomplete"
+    },
+    "query_partial": {
+      "run_status": "partial",
+      "result_count": 1,
+      "coverage_status": "incomplete"
+    },
+    "identity_received": {
+      "alias": "EV-ID-C01",
+      "intake_security_status": "received",
+      "sufficiency": "not_assessed"
+    },
+    "unresolved": {
+      "disposition": "unresolved",
+      "review_status": "unresolved",
+      "inventory_status": "incomplete",
+      "edd_applicability": "unknown",
+      "readiness": "not_ready"
+    },
+    "referred": {
+      "disposition": "refer_specialist",
+      "owner_ref": "Unassigned",
+      "finding_resolved": false
+    },
+    "b_isolation": {
+      "original_items_overwritten": false,
+      "original_grants_expanded": false
+    },
+    "permission_unknown": {
+      "action_allowed": false
+    },
+    "scope_stale": {
+      "record_allowed": false
+    },
+    "empty_coverage": {
+      "complete": false
+    }
+  },
+  "exclusion_positive": {
+    "status": "not_run_disabled_pending_fixture_review",
+    "reason": "No reviewed identity exclusion package or independent sufficiency oracle supplied"
+  },
+  "comprehensive_positive": {
+    "status": "not_run_interface_not_configured",
+    "reason": "No source-linked upstream inventory confirmation event supplied"
+  },
+  "edd_approval_positive": {
+    "status": "not_run_interface_not_configured",
+    "reason": "No reviewed EDD approval contract supplied"
+  }
+}

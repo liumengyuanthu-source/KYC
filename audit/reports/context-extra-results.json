@@ -1,0 +1,24 @@
+{
+  "at": "2026-09-07T19:06:42.023Z",
+  "results": [
+    {
+      "name": "horizontal pan modal Current-Target and same return anchor",
+      "status": "passed",
+      "detail": {
+        "original_scroll": 760,
+        "returned_scroll": 760
+      }
+    },
+    {
+      "name": "original source expansion and keyboard visible focus",
+      "status": "passed",
+      "detail": {
+        "outline": "solid"
+      }
+    },
+    {
+      "name": "step timing reveals event times but creates no entered event",
+      "status": "passed"
+    }
+  ]
+}

@@ -1,0 +1,158 @@
+{
+  "schema_version": 2,
+  "diagram_type": "workflow",
+  "meta": {
+    "title": "请求关联协作",
+    "locale": "zh-CN",
+    "quality_profile": "showcase",
+    "animation": "none",
+    "legend": {
+      "mode": "auto",
+      "entries": {
+        "external": {
+          "label": "协作节点"
+        }
+      }
+    }
+  },
+  "lanes": [
+    {
+      "id": "request",
+      "label": "员工审阅"
+    },
+    {
+      "id": "contributor",
+      "label": "有限贡献者"
+    },
+    {
+      "id": "review",
+      "label": "用途评估"
+    },
+    {
+      "id": "case",
+      "label": "同一案件"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "requirements",
+      "lane": "request",
+      "col": 0,
+      "type": "external",
+      "label": "要求 / 缺口",
+      "sublabel": "主体及用途",
+      "width": 180
+    },
+    {
+      "id": "request-items",
+      "lane": "request",
+      "col": 1,
+      "type": "external",
+      "label": "请求 · 两个项目",
+      "sublabel": "先审阅，再模拟派发",
+      "width": 180
+    },
+    {
+      "id": "grant",
+      "lane": "contributor",
+      "col": 1,
+      "type": "external",
+      "label": "Person T · 有限访问",
+      "sublabel": "认证与访问范围独立",
+      "width": 180
+    },
+    {
+      "id": "submission",
+      "lane": "contributor",
+      "col": 2,
+      "type": "external",
+      "label": "提交权限项目",
+      "sublabel": "Ownership 项目仍未完成",
+      "width": 180
+    },
+    {
+      "id": "intake",
+      "lane": "review",
+      "col": 2,
+      "type": "external",
+      "label": "模拟文件接收",
+      "sublabel": "Released 不代表充分",
+      "width": 180
+    },
+    {
+      "id": "assessment",
+      "lane": "review",
+      "col": 3,
+      "type": "external",
+      "label": "协调资料用途",
+      "sublabel": "Ops 记录用途评估",
+      "width": 180
+    },
+    {
+      "id": "case-state",
+      "lane": "case",
+      "col": 3,
+      "type": "external",
+      "label": "案件 · 尚未就绪",
+      "sublabel": "保留其他未决条件",
+      "width": 180
+    }
+  ],
+  "mainPath": [
+    "requirements",
+    "request-items",
+    "grant",
+    "submission",
+    "intake",
+    "assessment",
+    "case-state"
+  ],
+  "edges": [
+    {
+      "from": "requirements",
+      "to": "request-items"
+    },
+    {
+      "from": "request-items",
+      "to": "grant",
+      "label": "已审阅范围"
+    },
+    {
+      "from": "grant",
+      "to": "submission",
+      "label": "仅分配项目"
+    },
+    {
+      "from": "submission",
+      "to": "intake"
+    },
+    {
+      "from": "intake",
+      "to": "assessment",
+      "label": "已释放及关联"
+    },
+    {
+      "from": "assessment",
+      "to": "case-state",
+      "label": "仅本项进展"
+    }
+  ],
+  "cards": [
+    {
+      "dot": "slate",
+      "title": "访问不等于业务权限",
+      "items": [
+        "Reference 用于定位；模拟认证用于识别。",
+        "Grant 仅开放已分配项目，而非整个案件。"
+      ]
+    },
+    {
+      "dot": "slate",
+      "title": "局部进展",
+      "items": [
+        "EV-A05 仅可能支持代表 Entity A 协调资料。",
+        "签约、交易及整体准入保持独立。"
+      ]
+    }
+  ]
+}

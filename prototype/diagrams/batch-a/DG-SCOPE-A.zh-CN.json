@@ -1,0 +1,100 @@
+{
+  "schema_version": 2,
+  "diagram_type": "workflow",
+  "meta": {
+    "title": "明确本次关系范围",
+    "locale": "zh-CN",
+    "quality_profile": "showcase",
+    "animation": "none"
+  },
+  "lanes": [
+    {
+      "id": "request",
+      "label": "收到的请求"
+    },
+    {
+      "id": "review",
+      "label": "人工复核 · 合成"
+    },
+    {
+      "id": "open",
+      "label": "未确定的背景"
+    }
+  ],
+  "mainPath": [
+    "request",
+    "group",
+    "entity",
+    "scope"
+  ],
+  "nodes": [
+    {
+      "id": "request",
+      "lane": "request",
+      "col": 0,
+      "type": "external",
+      "label": "外汇远期业务申请",
+      "sublabel": "美元采购风险",
+      "width": 190
+    },
+    {
+      "id": "group",
+      "lane": "request",
+      "col": 1,
+      "type": "external",
+      "label": "Group A",
+      "sublabel": "展示名称，并非主体编号",
+      "width": 200
+    },
+    {
+      "id": "entity",
+      "lane": "review",
+      "col": 2,
+      "type": "backend",
+      "label": "Entity A · 澳大利亚",
+      "sublabel": "拟交易主体",
+      "width": 200
+    },
+    {
+      "id": "scope",
+      "lane": "review",
+      "col": 3,
+      "type": "backend",
+      "label": "工作范围",
+      "sublabel": "人工记录，保留版本",
+      "width": 190
+    },
+    {
+      "id": "unknown",
+      "lane": "open",
+      "col": 3,
+      "type": "external",
+      "label": "整体尚未就绪",
+      "sublabel": "Booking / 资格未知",
+      "width": 220
+    }
+  ],
+  "edges": [
+    {
+      "from": "request",
+      "to": "group",
+      "label": "描述"
+    },
+    {
+      "from": "group",
+      "to": "entity",
+      "label": "客户经理澄清"
+    },
+    {
+      "from": "entity",
+      "to": "scope",
+      "label": "记录"
+    },
+    {
+      "from": "scope",
+      "to": "unknown",
+      "label": "保留缺口",
+      "variant": "dashed"
+    }
+  ]
+}

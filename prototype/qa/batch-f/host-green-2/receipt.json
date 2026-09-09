@@ -1,0 +1,35 @@
+{
+  "run": "host-green-2",
+  "date": "2026-09-07T21:25:20.639Z",
+  "results": [
+    {
+      "id": "F-SECONDARY",
+      "status": "passed"
+    },
+    {
+      "id": "F-READONLY-GRAPHS-LAB",
+      "status": "passed"
+    },
+    {
+      "id": "F-LOCALE-PRINT",
+      "status": "passed"
+    },
+    {
+      "id": "F-STORY-RETURN",
+      "status": "passed"
+    },
+    {
+      "id": "F-CONTEXT-BACK",
+      "status": "passed"
+    },
+    {
+      "id": "F-RESPONSIVE",
+      "status": "passed"
+    },
+    {
+      "id": "F-CONSOLE",
+      "status": "passed"
+    }
+  ],
+  "errors": []
+}

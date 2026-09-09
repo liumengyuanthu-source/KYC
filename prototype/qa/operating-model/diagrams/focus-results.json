@@ -1,0 +1,76 @@
+{
+  "results": [
+    {
+      "lang": "en-AU",
+      "focus": "skill",
+      "file": "prototype/diagrams/operating-model/D4_01_agentic_suitability__MATCH.en-AU.skill.svg",
+      "geometry_preserved": true,
+      "visible_nodes": 8,
+      "sha256": "04065dd69c699d1ad8f56aaaef2ba18c00cd1ba2d0d9799471af1558ded0b7f5"
+    },
+    {
+      "lang": "en-AU",
+      "focus": "agent",
+      "file": "prototype/diagrams/operating-model/D4_01_agentic_suitability__MATCH.en-AU.agent.svg",
+      "geometry_preserved": true,
+      "visible_nodes": 8,
+      "sha256": "99f305bcdc7b5bfdac74a19da9719982db7e43f02e8b2143c7fedf26fc123e8a"
+    },
+    {
+      "lang": "en-AU",
+      "focus": "human",
+      "file": "prototype/diagrams/operating-model/D4_01_agentic_suitability__MATCH.en-AU.human.svg",
+      "geometry_preserved": true,
+      "visible_nodes": 8,
+      "sha256": "c3cde460b93db85aaaf45f6c9714c5f5075e42fbb589d864f5d1f05b0d9f5eb3"
+    },
+    {
+      "lang": "en-US",
+      "focus": "skill",
+      "file": "prototype/diagrams/operating-model/D4_01_agentic_suitability__MATCH.en-US.skill.svg",
+      "geometry_preserved": true,
+      "visible_nodes": 8,
+      "sha256": "049f72c2acb8729d09d1237ab054d05ea9948ac3edac6073830c09dd11f8212e"
+    },
+    {
+      "lang": "en-US",
+      "focus": "agent",
+      "file": "prototype/diagrams/operating-model/D4_01_agentic_suitability__MATCH.en-US.agent.svg",
+      "geometry_preserved": true,
+      "visible_nodes": 8,
+      "sha256": "68bb79f2a56c8d32d20835f8a68e0b88316b46e6a4b10dff23d1f2ecf2d4fa16"
+    },
+    {
+      "lang": "en-US",
+      "focus": "human",
+      "file": "prototype/diagrams/operating-model/D4_01_agentic_suitability__MATCH.en-US.human.svg",
+      "geometry_preserved": true,
+      "visible_nodes": 8,
+      "sha256": "cbedc5ba6d2bf91189b5c5afab3150ec13fdfa60cf19f2c7454e629a092c2902"
+    },
+    {
+      "lang": "zh-CN",
+      "focus": "skill",
+      "file": "prototype/diagrams/operating-model/D4_01_agentic_suitability__MATCH.zh-CN.skill.svg",
+      "geometry_preserved": true,
+      "visible_nodes": 8,
+      "sha256": "6eb5ae6618fa29b7e61d8d5b33689ed9ec802ea447a8800d4bb8fefbd184a7ad"
+    },
+    {
+      "lang": "zh-CN",
+      "focus": "agent",
+      "file": "prototype/diagrams/operating-model/D4_01_agentic_suitability__MATCH.zh-CN.agent.svg",
+      "geometry_preserved": true,
+      "visible_nodes": 8,
+      "sha256": "f226044845b476a450f4517280290dfeeb3117a319b86b787e4a52d94201bda2"
+    },
+    {
+      "lang": "zh-CN",
+      "focus": "human",
+      "file": "prototype/diagrams/operating-model/D4_01_agentic_suitability__MATCH.zh-CN.human.svg",
+      "geometry_preserved": true,
+      "visible_nodes": 8,
+      "sha256": "573151eedaedf95d41ea0f64250f08d3d716ab277f9ff211a2d5acbbe13fd885"
+    }
+  ]
+}

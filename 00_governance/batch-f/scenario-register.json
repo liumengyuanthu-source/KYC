@@ -1,0 +1,175 @@
+{
+  "derived": true,
+  "runtime_store": false,
+  "source_ref": "SRC-021",
+  "case_id": "DEMO-CTT-001",
+  "validation_status": "approved_demo_design_not_bank_validation",
+  "generator": "04_operating_model/batch-f/build-consolidation.mjs",
+  "scenarios": [
+    {
+      "scene_id": "SCN-SCOPE",
+      "case_id": "DEMO-CTT-001",
+      "beat_refs": [
+        "STORY-1"
+      ],
+      "source_refs": [
+        "SRC-007",
+        "SRC-010"
+      ]
+    },
+    {
+      "scene_id": "SCN-ENTITY",
+      "case_id": "DEMO-CTT-001",
+      "beat_refs": [
+        "STORY-2"
+      ],
+      "source_refs": [
+        "SRC-007",
+        "SRC-010"
+      ]
+    },
+    {
+      "scene_id": "SCN-REQUIREMENTS",
+      "case_id": "DEMO-CTT-001",
+      "beat_refs": [
+        "STORY-3"
+      ],
+      "source_refs": [
+        "SRC-007",
+        "SRC-010"
+      ]
+    },
+    {
+      "scene_id": "SCN-SOURCE",
+      "case_id": "DEMO-CTT-001",
+      "beat_refs": [
+        "STORY-4"
+      ],
+      "source_refs": [
+        "SRC-007",
+        "SRC-010"
+      ]
+    },
+    {
+      "scene_id": "SCN-GAP",
+      "case_id": "DEMO-CTT-001",
+      "beat_refs": [
+        "STORY-5"
+      ],
+      "source_refs": [
+        "SRC-007",
+        "SRC-010"
+      ]
+    },
+    {
+      "scene_id": "SCN-VALIDATE",
+      "case_id": "DEMO-CTT-001",
+      "beat_refs": [
+        "STORY-6"
+      ],
+      "source_refs": [
+        "SRC-007",
+        "SRC-010"
+      ]
+    },
+    {
+      "scene_id": "SCN-POPULATION",
+      "case_id": "DEMO-CTT-001",
+      "beat_refs": [
+        "STORY-7"
+      ],
+      "source_refs": [
+        "SRC-007",
+        "SRC-010"
+      ]
+    },
+    {
+      "scene_id": "SCN-MATCH",
+      "case_id": "DEMO-CTT-001",
+      "beat_refs": [
+        "STORY-8"
+      ],
+      "source_refs": [
+        "SRC-007",
+        "SRC-010"
+      ]
+    },
+    {
+      "scene_id": "SCN-EDD",
+      "case_id": "DEMO-CTT-001",
+      "beat_refs": [
+        "STORY-9"
+      ],
+      "source_refs": [
+        "SRC-007",
+        "SRC-010"
+      ]
+    },
+    {
+      "scene_id": "SCN-CONFLICTS",
+      "case_id": "DEMO-CTT-001",
+      "beat_refs": [
+        "D1",
+        "D2"
+      ],
+      "source_refs": [
+        "SRC-019"
+      ]
+    },
+    {
+      "scene_id": "SCN-CREDIT",
+      "case_id": "DEMO-CTT-001",
+      "beat_refs": [
+        "D3"
+      ],
+      "source_refs": [
+        "SRC-019"
+      ]
+    },
+    {
+      "scene_id": "SCN-LEGAL",
+      "case_id": "DEMO-CTT-001",
+      "beat_refs": [
+        "D4"
+      ],
+      "source_refs": [
+        "SRC-019"
+      ]
+    },
+    {
+      "scene_id": "SCN-READINESS",
+      "case_id": "DEMO-CTT-001",
+      "beat_refs": [
+        "D5",
+        "E4",
+        "E5"
+      ],
+      "source_refs": [
+        "SRC-019",
+        "SRC-020"
+      ]
+    },
+    {
+      "scene_id": "SCN-QA",
+      "case_id": "DEMO-CTT-001",
+      "beat_refs": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "source_refs": [
+        "SRC-020"
+      ]
+    },
+    {
+      "scene_id": "SCN-PUBLISH",
+      "case_id": "DEMO-CTT-001",
+      "beat_refs": [
+        "E6"
+      ],
+      "source_refs": [
+        "SRC-020"
+      ]
+    }
+  ]
+}

@@ -1,1 +1,10 @@
 qa_id,frame_code,item_id,check_type,result,severity,details,auto_correction_applied,owner,status,last_updated
+QA-1-BOX,F00A,,RECTANGLE_OVERLAP,PASS,INFO,Zero overlap among returned managed rectangles,false,Codex,VERIFIED,2026-09-07
+QA-1-READ,F00A,,MANAGED_READBACK,PASS,INFO,Managed IDs and native endpoint references resolved,false,Codex,VERIFIED,2026-09-07
+QA-2-BOX,F02,,RECTANGLE_OVERLAP,PASS,INFO,Zero overlap among returned managed rectangles,false,Codex,VERIFIED,2026-09-07
+QA-2-READ,F02,,MANAGED_READBACK,PASS,INFO,Managed IDs and native endpoint references resolved,false,Codex,VERIFIED,2026-09-07
+QA-3-BOX,F04,,RECTANGLE_OVERLAP,PASS,INFO,Zero overlap among returned managed rectangles,false,Codex,VERIFIED,2026-09-07
+QA-3-READ,F04,,MANAGED_READBACK,PASS,INFO,Managed IDs and native endpoint references resolved,false,Codex,VERIFIED,2026-09-07
+QA-4-BOX,F09,,RECTANGLE_OVERLAP,PASS,INFO,Zero overlap among returned managed rectangles,false,Codex,VERIFIED,2026-09-07
+QA-4-READ,F09,,MANAGED_READBACK,PASS,INFO,Managed IDs and native endpoint references resolved,false,Codex,VERIFIED,2026-09-07
+QA-F02-NAV,F02,,NAVIGATION_AND_SCENARIO,PASS,INFO,Added links and synthetic case; resized and re-read frame,true,Codex,VERIFIED,2026-09-07

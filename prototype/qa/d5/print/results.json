@@ -1,0 +1,46 @@
+{
+  "at": "2026-09-07T17:54:42.919Z",
+  "browser": "152.0.7977.76",
+  "results": [
+    {
+      "name": "review-en-AU",
+      "locale": "en-AU",
+      "role": "ROLE-KYCOPS",
+      "status": "passed",
+      "pdf": "prototype/qa/d5/print/review-en-AU.pdf",
+      "html": "prototype/qa/d5/print/review-en-AU.html-fragment"
+    },
+    {
+      "name": "review-en-US",
+      "locale": "en-US",
+      "role": "ROLE-KYCOPS",
+      "status": "passed",
+      "pdf": "prototype/qa/d5/print/review-en-US.pdf",
+      "html": "prototype/qa/d5/print/review-en-US.html-fragment"
+    },
+    {
+      "name": "review-zh-CN",
+      "locale": "zh-CN",
+      "role": "ROLE-KYCOPS",
+      "status": "passed",
+      "pdf": "prototype/qa/d5/print/review-zh-CN.pdf",
+      "html": "prototype/qa/d5/print/review-zh-CN.html-fragment"
+    },
+    {
+      "name": "rm-en-AU",
+      "locale": "en-AU",
+      "role": "ROLE-RM",
+      "status": "passed",
+      "pdf": "prototype/qa/d5/print/rm-en-AU.pdf",
+      "html": "prototype/qa/d5/print/rm-en-AU.html-fragment"
+    },
+    {
+      "name": "client-en-AU",
+      "locale": "en-AU",
+      "role": "ROLE-CLIENT",
+      "status": "passed",
+      "pdf": "prototype/qa/d5/print/client-en-AU.pdf",
+      "html": "prototype/qa/d5/print/client-en-AU.html-fragment"
+    }
+  ]
+}

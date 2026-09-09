@@ -1,0 +1,22 @@
+{
+  "source_deck_sha256": "9ce02c70bdacabc3209208d82bb92efdf01352b2122caa2ba8dca175226f1f11",
+  "scenarios": 15,
+  "change_records": 94,
+  "source_occurrences": 144,
+  "current_unique_codes": 66,
+  "mapped_current_unique_codes": 66,
+  "target_unique_codes": 71,
+  "unmapped_current_codes": [],
+  "references": 20,
+  "issues": 15,
+  "checks": {
+    "json_roundtrip": true,
+    "all_after_rows_have_provenance": true,
+    "all_source_ids_resolve": true,
+    "all_references_resolve": true,
+    "all_current_codes_covered": true
+  },
+  "application_tests": "NOT_RUN",
+  "diagrams_generated": "NONE",
+  "approval_status": "DETAILED_REVIEW_BASELINE"
+}
