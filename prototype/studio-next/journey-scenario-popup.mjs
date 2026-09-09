@@ -20,6 +20,18 @@ export function scenariosForNode(nodeId) {
 }
 const esc = value => String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 
+// S1 currently opens the approved M0.1 workshop sample. Other scenarios retain
+// their existing detail until their own workshop templates are available.
+export function scenarioCtaHtml(id) {
+  const scenario = scenarioMappings.find(s => s.id === id);
+  if (!scenario) return '';
+  const attrs = `class="jsp-cta" data-scenario-id="${id}" aria-label="View scenario detail: ${esc(scenario.number)} · ${esc(scenario.title)}"`;
+  const label = '<span>View scenario detail</span><span aria-hidden="true">↗</span>';
+  return id === 'SCN-SCOPE'
+    ? `<a ${attrs} href="../scenario-samples/m0-1/index.html" target="_blank" rel="noopener noreferrer">${label}</a>`
+    : `<button type="button" ${attrs}><span>View scenario detail</span><span aria-hidden="true">→</span></button>`;
+}
+
 function sourceRow(s, code, related) {
   const d = getSourceDetail(s.id, code);
   const target = d.occurrences.filter(o => o.page === 'p2');
@@ -71,7 +83,7 @@ export function installScenarioPopup() {
   scroll.append(picker, content, connections);
   const footer = document.createElement('footer');
   footer.className = 'jsp-footer';
-  footer.innerHTML = '<button type="button" class="jsp-cta"><span>View scenario detail</span><span aria-hidden="true">→</span></button>';
+
   inspector.append(scroll, footer);
   const eyebrow = inspector.querySelector('.relationship-lens-eyebrow');
   eyebrow.textContent = 'JOURNEY STEP';
@@ -96,9 +108,7 @@ export function installScenarioPopup() {
   const renderScenario = (id, resetScroll = true) => {
     activeScenario = id;
     content.innerHTML = scenarioPopupHtml(id);
-    const scenario = scenarioMappings.find(s => s.id === id);
-    footer.querySelector('button').setAttribute('aria-label', `View scenario detail: ${scenario.number} · ${scenario.title}`);
-    footer.querySelector('button').dataset.scenarioId = id;
+    footer.innerHTML = scenarioCtaHtml(id);
     if (resetScroll) scroll.scrollTop = 0;
     translate();
   };
@@ -140,13 +150,15 @@ export function installScenarioPopup() {
       location.href = url.href;
     } else parent.postMessage({channel:'ctt-approved-map',type:'select',kind:'scene',id:activeScenario},location.origin);
   };
-  footer.querySelector('button').addEventListener('click', open);
+  footer.addEventListener('click', event => {
+    if (event.target.closest('button.jsp-cta')) open();
+  });
   new MutationObserver(sync).observe(svg, {subtree:true,attributes:true,attributeFilter:['data-focus-selected']});
   // Keyboard, hash links, story focus and mouse selection share the same state.
   sync();
   addEventListener('message', e => {
     if (e.source !== parent || e.origin !== location.origin) return;
-    if (e.data?.channel === 'ctt-approved-map' && e.data.type === 'focus') footer.querySelector('button')?.focus();
+    if (e.data?.channel === 'ctt-approved-map' && e.data.type === 'focus') footer.querySelector('.jsp-cta')?.focus();
   });
   parent.postMessage({channel:'ctt-approved-map',type:'height',height:950},location.origin);
   parent.postMessage({channel:'ctt-approved-map',type:'ready'},location.origin);

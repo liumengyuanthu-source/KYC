@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {scenarioMappings, getSourceDetail} from '../studio-next/scenario-mapping.mjs';
-import {scenariosForNode, scenarioPopupHtml} from '../studio-next/journey-scenario-popup.mjs';
+import {scenariosForNode, scenarioPopupHtml, scenarioCtaHtml} from '../studio-next/journey-scenario-popup.mjs';
 
 test('every authored CJ and Hero node has a valid preview and all 15 scenarios are reachable', () => {
   const reachable = new Set();
@@ -49,4 +49,31 @@ test('M0.1 preview source data retains separate Target occurrences and the ambig
   assert.notEqual(target[0].locator,target[1].locator);
   assert.match(s.note,/Initiation relationship/);
   assert.match(s.note,/Determine sales location/);
+});
+
+
+test('S1 opens the existing M0.1 sample in a separate tab under root and GitHub project paths', () => {
+  const html = scenarioCtaHtml('SCN-SCOPE');
+  assert.match(html, /^<a /);
+  assert.match(html, /target="_blank"/);
+  assert.match(html, /rel="noopener noreferrer"/);
+  const href = html.match(/href="([^"]+)"/)[1];
+  for (const prefix of ['', '/KYC']) {
+    for (const view of ['target', 'hero']) {
+      const destination = new URL(href, `https://example.com${prefix}/prototype/studio-next/${view}-journey.html`);
+      assert.equal(destination.pathname, `${prefix}/prototype/scenario-samples/m0-1/index.html`);
+    }
+  }
+  const sample = readFileSync(new URL(href, new URL('../studio-next/target-journey.html', import.meta.url)), 'utf8');
+  assert.match(sample, /Scenario M0\.1 - Sales location &amp; booking entity/);
+});
+
+test('unimplemented workshops keep their own scenario detail instead of opening the S1 sample', () => {
+  for (const scenario of scenarioMappings.filter(s => s.id !== 'SCN-SCOPE')) {
+    const html = scenarioCtaHtml(scenario.id);
+    assert.match(html, /^<button /);
+    assert.ok(html.includes(`data-scenario-id="${scenario.id}"`));
+    assert.doesNotMatch(html, /m0-1/);
+  }
+  assert.equal(scenarioCtaHtml('unknown'), '');
 });

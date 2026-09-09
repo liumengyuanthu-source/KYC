@@ -6,7 +6,7 @@ Christina 于 2026-09-09 指定 Xiaoming 今日更新版为后续主流程。开
 
 后续 Scenario ↔ M/C steps 映射依据用户指定的 [Scenario Template ↔ Source Process Mapping](docs/scenario-mapping/Clear_to_Trade_Scenario_to_Source_Process_Mapping_for_Codex.md)。15 个 Scenario 为工作坊容器，71 个 M/C 来源编号为追溯层；Primary 与 Related 分开处理。
 
-已完成 [映射与交互分析](docs/scenario-mapping/interaction-analysis.md)、[逐来源动作映射表](docs/scenario-mapping/scenario-source-steps.csv) 和 [结构化映射](docs/scenario-mapping/scenario-source-mapping.json)。现已接入场景目录、弹窗 Primary / Related 来源及既有工作入口，门户视觉向用户提供的参考图靠齐。按用户最新要求，Scenario Template 暂不修改或接入；详见 [本轮实施与验证](docs/scenario-mapping/implementation-20260909.md)。
+已完成 [映射与交互分析](docs/scenario-mapping/interaction-analysis.md)、[逐来源动作映射表](docs/scenario-mapping/scenario-source-steps.csv) 和 [结构化映射](docs/scenario-mapping/scenario-source-mapping.json)。现已接入场景目录、弹窗 Primary / Related 来源及既有工作入口，门户视觉向用户提供的参考图靠齐。按用户最新要求，Scenario Template 暂不修改；S1 现按用户最新要求接入既有 M0.1 打样，新标签页打开；详见 [本轮实施与验证](docs/scenario-mapping/implementation-20260909.md)。
 
 ## 来源与范围
 

@@ -7,7 +7,7 @@ The map's existing node inspector now presents the scenario-to-source relationsh
 1. Select a journey node. Its popup identifies the node, scenario and journey stage.
 2. Nodes with several scenarios offer a scenario selector. Each selection has its own Primary and Related source groups.
 3. Select an M/C code to read its source action, relationship to the selected scenario and source notes. Source locations expand to reveal the original occurrence locators.
-4. The persistent yellow **View scenario detail** CTA opens the existing detail for the selected scenario. Returning preserves the selected scenario in the node preview.
+4. The persistent yellow **View scenario detail** CTA opens S1 in a separate tab using the existing M0.1 workshop sample. The original map and source selection remain open. Other scenarios retain their existing detail behavior until their workshop samples are ready.
 
 Mapping rationale and notes remain available below the source groups. Existing reachability and connection exploration is retained under **Map connections**. Technical node metadata is no longer the primary popup content. The narrow-screen preview covers the map toolbar until closed, so the CTA remains accessible.
 

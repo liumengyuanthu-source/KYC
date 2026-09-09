@@ -68,8 +68,8 @@ html body #focus-chip .jsp-source-chips button[aria-pressed=true] { background:#
 #focus-chip .jsp-connections .semantic-passport-reach { margin:10px 0; }
 .jsp-footer { flex-shrink:0; padding:12px 20px; border-top:1px solid #e3ebf3; background:#fff; }
 .jsp-footer[hidden] { display:none; }
-html body #focus-chip button.jsp-cta { width:100%; display:flex; justify-content:space-between; align-items:center; min-height:44px; padding:12px 18px; font-size:13px; font-weight:600; color:#192239!important; background:#ffca24!important; border:1px solid #ffca24; border-radius:24px; }
-html body #focus-chip button.jsp-cta:hover { background:#f5be13!important; }
+html body #focus-chip .jsp-cta { width:100%; display:flex; justify-content:space-between; align-items:center; min-height:44px; padding:12px 18px; font-size:13px; font-weight:600; color:#192239!important; background:#ffca24!important; border:1px solid #ffca24; border-radius:24px; }
+html body #focus-chip .jsp-cta:hover { background:#f5be13!important; }
 #focus-chip.jsp-inspector :is(summary,select):focus-visible { outline:2px solid #1675b7; outline-offset:3px; border-radius:3px; }
 @media(max-width:600px) {
   html body #focus-chip.jsp-inspector { position:fixed; z-index:400; left:8px!important; right:8px!important; top:72px!important; bottom:16px; width:calc(100% - 16px)!important; max-width:calc(100% - 16px)!important; max-height:none; }
@@ -79,3 +79,6 @@ html body #focus-chip button.jsp-cta:hover { background:#f5be13!important; }
   #focus-chip .jsp-scenario h2 { font-size:21px; }
   .jsp-footer { padding:10px 16px; }
 }
+
+html body #focus-chip a.jsp-cta{box-sizing:border-box;text-decoration:none}
+html body #focus-chip .jsp-cta:focus-visible{outline:3px solid #006ac3;outline-offset:3px}
