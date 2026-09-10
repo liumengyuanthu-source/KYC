@@ -24,6 +24,7 @@ python3 -m http.server 8899 --bind 127.0.0.1
 
 - [主流程 CJ（中文）](http://127.0.0.1:8899/prototype/index.html?locale=zh-CN&studio=fulljourney&dimension=cj)
 - [Hero case（中文）](http://127.0.0.1:8899/prototype/index.html?locale=zh-CN&studio=fulljourney&dimension=hero)
+- [Scoreboard（中文）](http://127.0.0.1:8899/prototype/index.html?locale=zh-CN&studio=fulljourney&dimension=scoreboard)
 - [主流程 CJ（英文）](http://127.0.0.1:8899/prototype/index.html?locale=en-US&studio=fulljourney&dimension=cj)
 - Scenario 映射：从 Journey Map 的场景弹窗查看 Primary / Related 来源。
 - [Workshop](http://127.0.0.1:8899/prototype/index.html?locale=zh-CN&studio=journey)
@@ -43,7 +44,7 @@ python3 -m http.server 8899 --bind 127.0.0.1
 
 2026-09-10 按用户最新要求，`08_inspire/app/` 已由 `Kimi_Agent_8阶段图标未显示.zip` 中的完整 `app/` 替换，作为后续逐步调优的新基线。仅将主角 Annette 改为 Morgan，并在五个页面加入返回 Scenario Studio 的按钮。详见 [Kimi Demo 替换与验证](docs/demo-kimi-replacement-20260910.md)。此前的 [Demo UI 实施记录](docs/demo-ui-20260909.md) 保留为历史。
 
-2026-09-09 导航精简：用户进一步要求去掉 Journey map / Scenario mapping 切换。地图上方现仅保留左对齐的 Customer journey / Hero case 两个 tab；已验证两者双向切换，场景弹窗来源映射保持可用。
+2026-09-09 导航精简：用户进一步要求去掉 Journey map / Scenario mapping 切换。地图上方改为视图 Tab；2026-09-10 在 Customer journey / Hero case 后加入 Scoreboard。评分沿用现有五维工作坊，直接覆盖同一组 15 个场景，并保留本地保存、排名、Bundle、Portfolio 与 Roadmap。
 
 ## GitHub 准备 · 2026-09-09
 

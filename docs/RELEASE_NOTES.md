@@ -36,3 +36,7 @@ Explicit Play now resumes Live from Still in the V2 Before and both To-be reader
 ## Kimi Demo baseline — September 10
 
 The complete Demo is replaced by the user-supplied Kimi `app/` package. Its five-page flow, shared styling, interactions and photographic hero are retained. Annette is renamed Morgan, and every Demo page includes a return control to Scenario Studio. The Studio Demo navigation opens this new baseline. All eight Home stage icons render.
+
+## Scenario Scoreboard tab — September 10
+
+Scenario Studio now exposes Scoreboard beside Customer journey and Hero case. It embeds the existing prioritization workshop in the same content area and scores the same 15 mapped scenarios across five dimensions. URL state, local scoring persistence, live ranking, bundles, portfolio and roadmap remain available under root and GitHub project paths.

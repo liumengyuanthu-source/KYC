@@ -6,6 +6,7 @@ let mapping=null;
 const moduleMessage=(type,value)=>parent.postMessage({channel:'ctt-module',type,...(type==='view'?{view:value}:{id:value})},location.origin);
 const returnNav=document.createElement('nav');returnNav.className='module-return';returnNav.innerHTML='<button class="btn" id="returnProduct">← Product demo</button><button class="btn" id="returnJourney">Journey / scenarios</button><span class="tag">Workshop · final step</span>';
 document.querySelector('.container').prepend(returnNav);document.getElementById('returnProduct').onclick=()=>moduleMessage('view','product');document.getElementById('returnJourney').onclick=()=>moduleMessage('view','journey');
+if(new URLSearchParams(location.search).get('embedded')==='studio')returnNav.remove();
 function validScore(v){return Number.isFinite(v)&&v>=1&&v<=5}
 save=function(){try{localStorage.setItem(STORE,JSON.stringify(state));showToast('Saved locally')}catch{showToast('Storage unavailable — export your session before leaving')}};
 scheduleSave=function(){clearTimeout(st);renderMetrics();save()};
