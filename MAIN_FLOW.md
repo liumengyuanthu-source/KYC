@@ -48,6 +48,8 @@ python3 -m http.server 8899 --bind 127.0.0.1
 
 2026-09-10 场景编号：Customer journey 与 Hero case 的每个场景入口节点直接显示对应的 `S1–S15` 标签。同一节点关联多个场景时并列显示全部编号；选中节点的编号以黄色强调，编号与弹窗所用映射保持一致。
 
+2026-09-10 Hero case 业务故事：Hero case 的 15 个场景弹窗增加独立的业务叙事，说明 Entity A、Entity B、Person T、Morgan 及相关团队在该场景中处理的具体问题、阻塞点与预期结果。故事随场景选择和系统语言同步切换；Customer journey 保留通用来源映射视图。
+
 ## GitHub 准备 · 2026-09-09
 
 目标仓库为 `liumengyuanthu-source/KYC`。站点入口、发布文件清单、运行脚本及手动 GitHub Pages 工作流已准备；独立发布副本生成于 `.release/KYC/`。完整部署状态与步骤见 [部署说明](docs/DEPLOYMENT.md)。尚未上传或公开发布。

@@ -46,3 +46,7 @@ The embedded Scoreboard now inherits the Studio language and removes its duplica
 ## Scenario numbers on journey maps — September 10
 
 Customer journey and Hero case nodes now display their mapped `S1–S15` scenario numbers directly on the canvas. Shared nodes retain each distinct number, and the selected node changes its badges to amber. The labels are generated from the same mapping used by the scenario popup, so canvas labels and popup content remain aligned.
+
+## Hero case business stories — September 10
+
+Each of the 15 Hero case scenario popups now begins with a distinct business story grounded in the Entity A / Entity B / Person T case and Morgan's relationship-manager role. The story changes with the scenario selected at a shared node and follows the Studio's English or Simplified Chinese setting. Customer journey popups remain focused on reusable source mapping.

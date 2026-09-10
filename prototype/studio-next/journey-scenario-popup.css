@@ -25,6 +25,9 @@ html body #focus-chip.jsp-inspector[hidden] { display:none; }
 .jsp-meta { display:flex; align-items:center; gap:10px; color:#64798b; font-size:11px; }
 .jsp-meta span:first-child { background:#e6f3fb; color:#0868ac; padding:3px 8px; border-radius:4px; font-weight:700; }
 #focus-chip .jsp-scenario h2 { margin:10px 0; font:600 23px/1.2 Georgia,'Songti SC',serif; letter-spacing:-.02em; color:#172239; }
+.jsp-hero-story { margin:14px 0 20px; padding:13px 14px 14px; border:1px solid #d5e5f4; border-left:4px solid #f0ad2e; border-radius:8px; background:linear-gradient(135deg,#f5f9fd,#edf5fc); }
+.jsp-hero-story strong { display:block; margin-bottom:6px; color:#0868ac; font-size:10px; font-weight:700; letter-spacing:.12em; }
+.jsp-hero-story p { margin:0; color:#304c65; font-size:12px; line-height:1.62; }
 .jsp-rationale { color:#53687d; font-size:12px; line-height:1.65; margin:0 0 20px; }
 #focus-chip :is(.jsp-primary,.jsp-related) h3 { display:flex; align-items:center; gap:8px; font:600 12px Arial,'PingFang SC',sans-serif; color:#0a65a7; margin:0 0 5px; }
 .jsp-primary h3>span,.jsp-related>summary>span { color:#6a8196; font-size:11px; font-weight:400; }

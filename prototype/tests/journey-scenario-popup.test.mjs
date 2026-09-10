@@ -53,6 +53,23 @@ test('journey and Hero nodes expose their mapped S numbers on the canvas', () =>
   assert.match(css, /\.jsp-node-scenario-badge/);
 });
 
+test('every Hero case scenario explains its distinct business story in both languages', () => {
+  const englishStories = new Set();
+  for (const scenario of scenarioMappings) {
+    const english = scenarioPopupHtml(scenario.id,{heroCase:true,locale:'en-US'});
+    const chinese = scenarioPopupHtml(scenario.id,{heroCase:true,locale:'zh-CN'});
+    assert.match(english,/data-hero-case-story/);
+    assert.match(english,/HERO CASE · BUSINESS STORY/);
+    assert.match(chinese,/HERO CASE · 业务故事/);
+    assert.match(chinese,/[\u4e00-\u9fff]/);
+    const story = english.match(/<p data-hero-case-story>([^<]+)<\/p>/)?.[1];
+    assert.ok(story?.length > 80,`${scenario.number} needs a concrete business story`);
+    englishStories.add(story);
+    assert.doesNotMatch(scenarioPopupHtml(scenario.id),/data-hero-case-story/);
+  }
+  assert.equal(englishStories.size,scenarioMappings.length);
+});
+
 test('M0.1 preview source data retains separate Target occurrences and the ambiguity note', () => {
   const s = getSourceDetail(scenariosForNode('trigger')[0].id,'M0.1');
   const target = s.occurrences.filter(o=>o.page==='p2');

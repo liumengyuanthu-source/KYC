@@ -1,4 +1,5 @@
 import {scenarioMappings, getSourceDetail, relatedRoles} from './scenario-mapping.mjs';
+import {heroCaseStory} from './hero-case-stories.mjs';
 
 // A journey node is a reading entry point. Its scenarios keep the guideline's
 // complete scope; source codes are not reassigned to individual canvas shapes.
@@ -87,13 +88,16 @@ function sourceRow(s, code, related) {
     </div></details>`;
 }
 
-export function scenarioPopupHtml(id) {
+export function scenarioPopupHtml(id,{heroCase=false,locale='en-US'}={}) {
   const s = scenarioMappings.find(s => s.id === id);
   if (!s) return '';
   const chips = (codes, related) => codes.map(code => `<button type="button" data-jsp-source="${code}" data-source-role="${related ? 'related' : 'primary'}" aria-label="${code} · ${esc(getSourceDetail(s.id, code).title)}" aria-pressed="false" aria-controls="jsp-source-preview"><code>${code}</code></button>`).join('');
+  const story = heroCase ? heroCaseStory(id,locale) : '';
+  const storyLabel = locale === 'zh-CN' ? 'HERO CASE · 业务故事' : 'HERO CASE · BUSINESS STORY';
   return `<article class="jsp-scenario" data-scenario-id="${s.id}" aria-labelledby="jsp-scenario-title">
     <div class="jsp-meta"><span>${s.number}</span><span>${s.stage === 'Clear' ? 'Confirm readiness' : s.stage}</span></div>
     <h2 id="jsp-scenario-title">${esc(s.title)}</h2>
+    ${story ? `<section class="jsp-hero-story"><strong>${storyLabel}</strong><p data-hero-case-story>${esc(story)}</p></section>` : ''}
     <section class="jsp-primary"><h3>Primary source steps <span>${s.primary.length}</span></h3><p class="jsp-caption">These steps form this scenario’s backbone.</p><div class="jsp-source-chips">${chips(s.primary,false)}</div></section>
     <section class="jsp-related"><h3>Related source steps <span>${s.related.length}</span></h3><div class="jsp-source-chips">${chips(s.related,true)}</div>${!s.related.length ? '<p>No related actions specified.</p>' : '<p class="jsp-caption">Inputs, reuse and handoffs; not extra steps in sequence.</p>'}</section>
     <div id="jsp-source-preview" class="jsp-source-preview" aria-live="polite"><p class="jsp-caption">Select a source step to see its role and origin.</p></div>
@@ -133,6 +137,8 @@ export function installScenarioPopup() {
   closeButton.setAttribute('aria-label','Close scenario preview');
   let activeNode = null;
   let activeScenario = null;
+  const isHeroCase = location.pathname.includes('hero-journey');
+  const currentLocale = () => window.CTTLanguage?.locale || new URLSearchParams(location.search).get('locale') || 'en-US';
   const translate = () => window.CTTLanguage?.refresh();
   content.addEventListener('click', event => {
     const button = event.target.closest('[data-jsp-source]');
@@ -147,9 +153,9 @@ export function installScenarioPopup() {
     translate();
     preview.scrollIntoView({block:'nearest'});
   });
-  const renderScenario = (id, resetScroll = true) => {
+  const renderScenario = (id, resetScroll = true,locale = currentLocale()) => {
     activeScenario = id;
-    content.innerHTML = scenarioPopupHtml(id);
+    content.innerHTML = scenarioPopupHtml(id,{heroCase:isHeroCase,locale});
     footer.innerHTML = scenarioCtaHtml(id);
     if (resetScroll) scroll.scrollTop = 0;
     translate();
@@ -201,6 +207,7 @@ export function installScenarioPopup() {
   addEventListener('message', e => {
     if (e.source !== parent || e.origin !== location.origin) return;
     if (e.data?.channel === 'ctt-approved-map' && e.data.type === 'focus') footer.querySelector('.jsp-cta')?.focus();
+    if (e.data?.channel === 'ctt-locale' && activeScenario) renderScenario(activeScenario,false,e.data.locale);
   });
   parent.postMessage({channel:'ctt-approved-map',type:'height',height:950},location.origin);
   parent.postMessage({channel:'ctt-approved-map',type:'ready'},location.origin);
