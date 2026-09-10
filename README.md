@@ -32,7 +32,7 @@ python3 scripts/preview.py
 
 ```sh
 python3 -m unittest discover -s tests -p test_site_build.py -v
-node --test prototype/tests/scenario-mapping.test.mjs prototype/tests/journey-scenario-popup.test.mjs
+node --test prototype/tests/scenario-mapping.test.mjs prototype/tests/journey-scenario-popup.test.mjs prototype/tests/scenario-progress.test.mjs
 python3 scripts/build_site.py
 ```
 
@@ -46,8 +46,8 @@ python3 scripts/prepare_kyc_release.py
 
 ## 部署
 
-目标仓库：[liumengyuanthu-source/KYC](https://github.com/liumengyuanthu-source/KYC)。当前仅完成本地准备，尚未上传或发布。
+目标仓库：[liumengyuanthu-source/KYC](https://github.com/liumengyuanthu-source/KYC)。`main` 保存当前发布版本；GitHub Pages 由仓库工作流构建。
 
 完整步骤、权限状态与公开发布前的内容检查见 [部署说明](docs/DEPLOYMENT.md)；功能范围见 [版本说明](docs/RELEASE_NOTES.md)。GitHub Pages 使用相对路径，支持 `/KYC/` 项目子路径。推送／PR 执行校验，手动运行 main 分支工作流才部署站点。
 
-Scenario Template 暂不改动。浏览器中保存的讨论记录和 Demo 状态不会同步到 GitHub。
+Scenario Template 的讨论进度保存在浏览器中，并反馈到 Customer Journey；浏览器中保存的讨论记录和 Demo 状态不会同步到 GitHub。

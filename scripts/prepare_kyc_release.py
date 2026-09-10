@@ -13,6 +13,7 @@ EXTRAS = [
     'scripts/build_site.py', 'scripts/preview.py', 'scripts/prepare_kyc_release.py',
     'tests/test_site_build.py',
     'prototype/tests/scenario-mapping.test.mjs', 'prototype/tests/journey-scenario-popup.test.mjs',
+    'prototype/tests/scenario-progress.test.mjs',
 ]
 
 if __name__ == '__main__':
@@ -28,6 +29,6 @@ if __name__ == '__main__':
     commit = subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip()
     report = {'source_commit':commit, 'source_has_uncommitted_changes':bool(subprocess.check_output(['git','status','--porcelain'],cwd=ROOT,text=True).strip()),
               'target_repository':'https://github.com/liumengyuanthu-source/KYC.git',
-              'status':'prepared locally; not uploaded', 'files':manifest}
+              'status':'curated deployment snapshot', 'files':manifest}
     (output/'release-manifest.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n')
     print(f'Prepared {len(manifest)} files, {sum(f["bytes"] for f in manifest)/1024**2:.1f} MiB at {output}')

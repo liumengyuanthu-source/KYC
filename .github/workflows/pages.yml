@@ -21,7 +21,7 @@ jobs:
       - name: Test packaging
         run: python3 -m unittest discover -s tests -p test_site_build.py -v
       - name: Test scenario mapping
-        run: node --test prototype/tests/scenario-mapping.test.mjs prototype/tests/journey-scenario-popup.test.mjs
+        run: node --test prototype/tests/scenario-mapping.test.mjs prototype/tests/journey-scenario-popup.test.mjs prototype/tests/scenario-progress.test.mjs
       - name: Build static site
         run: python3 scripts/build_site.py
       - name: Configure Pages
