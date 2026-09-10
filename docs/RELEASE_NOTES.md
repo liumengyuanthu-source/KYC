@@ -40,3 +40,5 @@ The complete Demo is replaced by the user-supplied Kimi `app/` package. Its five
 ## Scenario Scoreboard tab — September 10
 
 Scenario Studio now exposes Scoreboard beside Customer journey and Hero case. It embeds the existing prioritization workshop in the same content area and scores the same 15 mapped scenarios across five dimensions. URL state, local scoring persistence, live ranking, bundles, portfolio and roadmap remain available under root and GitHub project paths.
+
+The embedded Scoreboard now inherits the Studio language and removes its duplicate locale selector. Its visual layer uses the same navy, blue, amber, pale-blue and white system as the Kimi Demo, with Source Serif display headings, Inter body text, tighter cards and matching shadows. The scoring flow and saved workshop data are unchanged.

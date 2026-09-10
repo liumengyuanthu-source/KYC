@@ -7,6 +7,7 @@ import {
   studioDimensionFrame,
   studioDimensions,
 } from '../studio-next/studio-dimensions.mjs';
+import {shouldInstallLocaleControl} from '../i18n/control-policy.mjs';
 
 test('the journey toolbar exposes the scoreboard as a third dimension', () => {
   assert.deepEqual(studioDimensions.map(dimension => dimension.id), [
@@ -50,4 +51,17 @@ test('the scoreboard scores the same 15 scenarios used by scenario mapping', () 
 test('the embedded scoreboard removes its duplicate internal navigation', () => {
   const extension = readFileSync(new URL('../workshop/extension.js', import.meta.url), 'utf8');
   assert.match(extension, /embedded.*returnNav\.remove\(\)/);
+});
+
+test('the embedded scoreboard follows the Studio locale without its own selector', () => {
+  assert.equal(shouldInstallLocaleControl('?embedded=studio&locale=en-US'), false);
+  assert.equal(shouldInstallLocaleControl('?locale=zh-CN'), true);
+});
+
+test('the scoreboard theme uses the Demo portal visual tokens', () => {
+  const theme = readFileSync(new URL('../workshop/theme.css', import.meta.url), 'utf8');
+  assert.match(theme, /--navy:\s*#171f31/);
+  assert.match(theme, /--amber:\s*#f0ad2e/);
+  assert.match(theme, /--font-display:/);
+  assert.match(theme, /body\s*\{[^}]*background:\s*#f4f5f8/s);
 });
