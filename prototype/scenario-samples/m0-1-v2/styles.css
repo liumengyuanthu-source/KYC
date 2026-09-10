@@ -690,6 +690,13 @@ input,textarea,select{font-family:inherit;color:inherit}
 .activity-meta{display:flex;align-items:center;gap:8px;margin-bottom:4px}
 .activity-meta b{font-size:20px;font-family:'Bricolage Grotesque'}
 .activity-meta .chip{font-size:10px}
+.scenario-step-meta{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin-bottom:10px}
+.scenario-step-meta b{font-family:'Bricolage Grotesque';font-size:22px;color:var(--ink)}
+.scenario-step-meta span{font-size:11px;font-weight:800;color:var(--blue-d);text-align:right}
+.scenario-progress-track{height:9px;overflow:hidden;border-radius:99px;background:var(--line-soft)}
+.scenario-progress-track i{display:block;height:100%;border-radius:inherit;background:var(--blue-d);transition:width 450ms var(--ease)}
+.scenario-progress-note{font-size:11px;line-height:1.5;color:var(--muted);margin-top:9px}
+.activity-divider{height:1px;background:var(--line-soft);margin:18px 0}
 
 .feed-card{flex:1}
 .feed{list-style:none;display:flex;flex-direction:column;gap:0}

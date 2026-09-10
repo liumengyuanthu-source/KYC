@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {scenarioMappings, getSourceDetail} from '../studio-next/scenario-mapping.mjs';
-import {scenariosForNode, scenarioNumbersForNode, scenarioPopupHtml, scenarioCtaHtml, scenarioSourceRowHtml} from '../studio-next/journey-scenario-popup.mjs';
+import {scenariosForNode, scenarioNumbersForNode, scenarioPopupHtml, scenarioCtaHtml, scenarioSourceRowHtml, progressForNode} from '../studio-next/journey-scenario-popup.mjs';
 
 test('every authored CJ and Hero node has a valid preview and all 15 scenarios are reachable', () => {
   const reachable = new Set();
@@ -54,6 +54,8 @@ test('journey and Hero nodes expose their mapped S numbers on the canvas', () =>
 
   const css = readFileSync(new URL('../studio-next/journey-scenario-popup.css', import.meta.url), 'utf8');
   assert.match(css, /\.jsp-node-scenario-badge/);
+  assert.match(css, /\.jsp-node-scenario-badge\.is-complete/);
+  assert.match(css, /\.jsp-scenario-complete/);
 });
 
 test('every Hero case scenario explains its distinct business story in both languages', () => {
@@ -93,7 +95,7 @@ test('map popup source descriptions show business context without PowerPoint sha
 });
 
 
-test('S1 opens the M0.1 Version 2 Summary in a separate tab under root and GitHub project paths', () => {
+test('S1 opens the M0.1 Version 2 first workshop step in a separate tab under root and GitHub project paths', () => {
   const html = scenarioCtaHtml('SCN-SCOPE');
   assert.match(html, /^<a /);
   assert.match(html, /target="_blank"/);
@@ -103,7 +105,7 @@ test('S1 opens the M0.1 Version 2 Summary in a separate tab under root and GitHu
     for (const view of ['target', 'hero']) {
       const destination = new URL(href, `https://example.com${prefix}/prototype/studio-next/${view}-journey.html`);
       assert.equal(destination.pathname, `${prefix}/prototype/scenario-samples/m0-1-v2/index.html`);
-      assert.equal(destination.hash, '#6');
+      assert.equal(destination.hash, '#1');
     }
   }
   const sample = readFileSync(new URL(href, new URL('../studio-next/target-journey.html', import.meta.url)), 'utf8');
@@ -111,6 +113,35 @@ test('S1 opens the M0.1 Version 2 Summary in a separate tab under root and GitHu
   assert.match(sample, /Version 2/);
   assert.match(sample, /version-2\.css/);
   assert.match(sample, /tobe-workflow\.js/);
+});
+
+test('completed scenario progress resolves to every mapped journey node', () => {
+  const records = {
+    'SCN-SCOPE': {step:6,total:6,completed:true},
+    'SCN-ENTITY': {step:2,total:6,completed:false},
+  };
+  assert.deepEqual(progressForNode('booking',records),{
+    completed:['S1'],
+    inProgress:[],
+    scenarios:['S1'],
+  });
+  assert.deepEqual(progressForNode('intake',records),{
+    completed:['S1'],
+    inProgress:['S2'],
+    scenarios:['S1','S2'],
+  });
+  assert.deepEqual(progressForNode('unknown',records),{
+    completed:[],inProgress:[],scenarios:[],
+  });
+});
+
+test('scenario and journey pages load the shared progress bridge', () => {
+  const sample = readFileSync(new URL('../scenario-samples/m0-1-v2/index.html', import.meta.url),'utf8');
+  assert.match(sample,/\.\.\/\.\.\/shared\/scenario-progress\.js/);
+  for (const file of ['target-journey.html','hero-journey.html']) {
+    const html = readFileSync(new URL(`../studio-next/${file}`, import.meta.url),'utf8');
+    assert.match(html,/\.\.\/shared\/scenario-progress\.js/);
+  }
 });
 
 test('unimplemented workshops keep their own scenario detail instead of opening the S1 sample', () => {

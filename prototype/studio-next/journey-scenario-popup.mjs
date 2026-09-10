@@ -22,6 +22,14 @@ export function scenariosForNode(nodeId) {
 export function scenarioNumbersForNode(nodeId) {
   return scenariosForNode(nodeId).map(scenario => scenario.number).join(' · ');
 }
+export function progressForNode(nodeId, records = {}) {
+  const scenarios = scenariosForNode(nodeId);
+  return {
+    completed: scenarios.filter(scenario => records[scenario.id]?.completed).map(scenario => scenario.number),
+    inProgress: scenarios.filter(scenario => records[scenario.id] && !records[scenario.id].completed).map(scenario => scenario.number),
+    scenarios: scenarios.map(scenario => scenario.number),
+  };
+}
 const esc = value => String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 
 const SVG_NS = 'http://www.w3.org/2000/svg';
@@ -40,6 +48,7 @@ export function installScenarioBadges(svg) {
       cursor -= badgeWidth;
       const badge = document.createElementNS(SVG_NS,'g');
       badge.setAttribute('class','jsp-node-scenario-badge');
+      badge.setAttribute('data-scenario-id',scenario.id);
       badge.setAttribute('data-scenario-number',scenario.number);
       badge.setAttribute('aria-hidden','true');
       const rect = document.createElementNS(SVG_NS,'rect');
@@ -62,6 +71,20 @@ export function installScenarioBadges(svg) {
   }
 }
 
+export function applyScenarioProgress(svg, storage = globalThis.localStorage) {
+  const records = globalThis.CTTScenarioProgress?.read(storage) || {};
+  for (const node of svg.querySelectorAll('[data-node-id]')) {
+    const state = progressForNode(node.getAttribute('data-node-id'),records);
+    node.classList.toggle('jsp-scenario-complete',state.completed.length > 0);
+    node.classList.toggle('jsp-scenario-in-progress',state.inProgress.length > 0 && !state.completed.length);
+    for (const badge of node.querySelectorAll('.jsp-node-scenario-badge')) {
+      const record = records[badge.getAttribute('data-scenario-id')];
+      badge.classList.toggle('is-complete',Boolean(record?.completed));
+      badge.classList.toggle('is-in-progress',Boolean(record && !record.completed));
+    }
+  }
+}
+
 // S1 currently opens the approved M0.1 Version 2 workshop sample. Other scenarios retain
 // their existing detail until their own workshop templates are available.
 export function scenarioCtaHtml(id) {
@@ -70,7 +93,7 @@ export function scenarioCtaHtml(id) {
   const attrs = `class="jsp-cta" data-scenario-id="${id}" aria-label="View scenario detail: ${esc(scenario.number)} · ${esc(scenario.title)}"`;
   const label = '<span>View scenario detail</span><span aria-hidden="true">↗</span>';
   return id === 'SCN-SCOPE'
-    ? `<a ${attrs} href="../scenario-samples/m0-1-v2/index.html#6" target="_blank" rel="noopener noreferrer">${label}</a>`
+    ? `<a ${attrs} href="../scenario-samples/m0-1-v2/index.html#1" target="_blank" rel="noopener noreferrer">${label}</a>`
     : `<button type="button" ${attrs}><span>View scenario detail</span><span aria-hidden="true">→</span></button>`;
 }
 
@@ -117,6 +140,7 @@ export function installScenarioPopup() {
   const svg = document.querySelector('svg[data-focus-active]') || document.querySelector('.diagram-container svg');
   if (!inspector || !svg) return;
   installScenarioBadges(svg);
+  applyScenarioProgress(svg);
   inspector.classList.add('jsp-inspector');
   document.querySelector('.ctt-node-detail')?.remove();
   const scroll = document.createElement('div');
@@ -208,6 +232,12 @@ export function installScenarioPopup() {
     if (event.target.closest('button.jsp-cta')) open();
   });
   new MutationObserver(sync).observe(svg, {subtree:true,attributes:true,attributeFilter:['data-focus-selected']});
+  const refreshProgress = () => applyScenarioProgress(svg);
+  addEventListener('storage', event => {
+    if (event.key === globalThis.CTTScenarioProgress?.KEY) refreshProgress();
+  });
+  addEventListener('focus',refreshProgress);
+  document.addEventListener('visibilitychange',() => { if (!document.hidden) refreshProgress(); });
   // Keyboard, hash links, story focus and mouse selection share the same state.
   sync();
   addEventListener('message', e => {

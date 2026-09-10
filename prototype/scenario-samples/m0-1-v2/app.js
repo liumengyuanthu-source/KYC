@@ -326,6 +326,9 @@ const CMP = [
    state
    ============================================================ */
 const LS_KEY = 'ctt-m01-studio-v2';
+const SCENARIO_ID = 'SCN-SCOPE';
+const SCENARIO_NUMBER = 'S1';
+const SUBPROCESS_ID = 'M0.1';
 const blank = {
   step:0, done:{}, notes:{}, actions:{}, hypo:{}, gates:{},
   bundle:{}, summary:{status:'',trans:[],target:'',note:''},
@@ -334,6 +337,17 @@ const blank = {
 let S;
 try{ S = Object.assign(JSON.parse(JSON.stringify(blank)), JSON.parse(localStorage.getItem(LS_KEY)||'{}')); }
 catch(e){ S = JSON.parse(JSON.stringify(blank)); }
+
+function publishScenarioProgress(completed = Boolean(S.done.summary)) {
+  return globalThis.CTTScenarioProgress?.record(localStorage,{
+    scenarioId:SCENARIO_ID,
+    scenarioNumber:SCENARIO_NUMBER,
+    subprocess:SUBPROCESS_ID,
+    step:S.step + 1,
+    total:STEPS.length,
+    completed,
+  });
+}
 
 let saveTimer=null;
 function save(){
@@ -488,10 +502,21 @@ function renderActivity(){
   const coverage=discussionCoverage(),recorded=coverage.reduce((n,s)=>n+s.recorded,0),slots=coverage.reduce((n,s)=>n+s.total,0);
   const p=moduleProgress();
   const total=Math.round(recorded/slots*100);
+  const completedSteps=STEPS.filter(step=>S.done[step.id]).length;
+  const currentStep=S.step+1;
+  const workshopPercent=Math.round(currentStep/STEPS.length*100);
+  const progressNote=S.done.summary
+    ? 'Scenario complete. S1 is highlighted on the Customer Journey.'
+    : `${completedSteps} of ${STEPS.length} steps completed. Finish and save to light up S1 on the Customer Journey.`;
   const colors=['var(--pink)','var(--peach)','var(--lav)','var(--mint)','var(--gate-bg)','var(--blue)'];
   const bars=p.map((v,i)=>
     `<div class="bar" title="${STEPS[i].label}: ${coverage[i].recorded} / ${coverage[i].total} recorded"><i style="height:${Math.round(v*100)}%;background:${colors[i]}"></i><span>${STEPS[i].label.split(' ')[0]}</span></div>`).join('');
   $('#activityCard').innerHTML=`
+    <div class="t">${I.doc} Scenario progress</div>
+    <div class="scenario-step-meta"><b>Step ${currentStep} / ${STEPS.length}</b><span>${STEPS[S.step].label}</span></div>
+    <div class="scenario-progress-track" role="progressbar" aria-label="Scenario workshop progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="${workshopPercent}"><i style="width:${workshopPercent}%"></i></div>
+    <p class="scenario-progress-note">${progressNote}</p>
+    <div class="activity-divider"></div>
     <div class="t">${I.doc} Discussion activity</div>
     <div class="activity-meta"><b>${total}%</b>
       <span class="chip ${total===100?'chip-mint':'chip-yellow'}" style="font-size:10px">${recorded===0?'Not started':total===100?'All prompts recorded':'In progress'}</span>
@@ -1201,6 +1226,7 @@ function renderSummary(m){
   $('#btnPrint').addEventListener('click',()=>{buildPrint();window.print();});
   $('#btnNext2').addEventListener('click',()=>{
     S.done.summary=true; save(); renderRail(); renderWiz();
+    publishScenarioProgress(true);
     toast('M0.1 marked complete — M0.2 prepared with the same template');
     feed('M0.1 completed → M0.2 workspace prepared','var(--gate-d)');
   });
@@ -1250,13 +1276,15 @@ const SCENARIO_OBJECTIVE_HTML=$('#moduleSub').innerHTML;
 // SRC-007:p5:shape22:pain1/3/4/6; adapted from the PPT's analyst-wide pain points, not a verified RM interview.
 const BEFORE_SUMMARY='Fragmented systems, manual data entry and repeated clarifications create multiple handoffs and delays.';
 
-function go(i){
+function go(i,{syncHash=true}={}){
   beforeWorkflowCleanup?.();beforeWorkflowCleanup=null;
   tobeWorkflowCleanup?.();tobeWorkflowCleanup=null;
   const prev=STEPS[S.step];
   if(i>S.step) S.done[prev.id]=true;
   S.step=Math.max(0,Math.min(STEPS.length-1,i));
   save();
+  publishScenarioProgress();
+  if(syncHash) history.replaceState(null,'',`#${S.step+1}`);
   const s=STEPS[S.step];
   // Scenario identity and journey location stay global; Before has its own summary.
   $('#moduleSub').innerHTML=s.id==='before'
@@ -1282,6 +1310,7 @@ $('#btnBack').addEventListener('click',()=>go(S.step-1));
 $('#btnNext').addEventListener('click',()=>{
   if(S.step===STEPS.length-1){
     S.done.summary=true; save(); renderRail(); renderWiz();
+    publishScenarioProgress(true);
     toast('M0.1 saved · ready for M0.2');
     feed('M0.1 finished & saved','var(--mint-d)');
   } else go(S.step+1);
@@ -1294,7 +1323,7 @@ renderHeroMini();
 renderFeed();
 const _mm=(location.hash||'').match(/^#(\d)(?:\/(\w+))?/);
 if(_mm){ const h=+_mm[1]; if(h>=1&&h<=STEPS.length) S.step=h-1; }
-go(S.step);
+go(S.step,{syncHash:false});
 if(_mm&&_mm[2]){
   const sub=_mm[2];
   if(S.step===1&&/^\d+$/.test(sub)) openBeforeStep(+sub);

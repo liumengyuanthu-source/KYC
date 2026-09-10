@@ -2,8 +2,15 @@
 svg .jsp-node-scenario-badge { pointer-events:none; }
 svg .jsp-node-scenario-badge rect { fill:#0877c9; stroke:#fff; stroke-width:1; vector-effect:non-scaling-stroke; }
 svg .jsp-node-scenario-badge text { fill:#fff; font:700 10px/1 Inter,Arial,'PingFang SC',sans-serif; letter-spacing:.01em; }
+svg .jsp-node-scenario-badge.is-in-progress rect { fill:#f0ad2e; stroke:#fff; }
+svg .jsp-node-scenario-badge.is-in-progress text { fill:#172239; }
+svg .jsp-node-scenario-badge.is-complete rect { fill:#16825d; stroke:#fff; stroke-width:1.5; }
+svg [data-node-id].jsp-scenario-complete > rect:not(.c-mask) { fill:#e4f5ec!important; stroke:#16825d!important; stroke-width:2.5!important; }
+svg [data-node-id].jsp-scenario-complete { filter:drop-shadow(0 0 5px rgba(22,130,93,.38)); }
 svg [data-focus-selected] .jsp-node-scenario-badge rect { fill:#f0ad2e; stroke:#171f31; }
 svg [data-focus-selected] .jsp-node-scenario-badge text { fill:#171f31; }
+svg [data-focus-selected] .jsp-node-scenario-badge.is-complete rect { fill:#16825d; stroke:#fff; }
+svg [data-focus-selected] .jsp-node-scenario-badge.is-complete text { fill:#fff; }
 html body #focus-chip.jsp-inspector {
   padding:0!important; display:flex; flex-direction:column; overflow:hidden;
   width:min(460px,calc(100% - 32px))!important; max-width:calc(100% - 32px)!important;
