@@ -1,8 +1,10 @@
 // Local workshop state is separate from product case state. Imported scoring dimensions are retained.
-HERO.clear();SCENARIOS.forEach(s=>HERO.add(s.id));
+HERO.clear();SCENARIOS.forEach((s,index)=>{HERO.add(s.id);s.number=`S${index+1}`});
 state={...initialState(),...state,previewBundles:state.previewBundles||{},gates:state.gates||{},phaseOverrides:state.phaseOverrides||{}};
 const baseRender=renderAll,basePortfolioCard=portfolioCard,baseBundlePanel=bundleScorePanel;
 let mapping=null;
+function applyScenarioLabels(){const byId=new Map(SCENARIOS.map(s=>[s.id,s]));document.querySelectorAll('.code,.phase-code').forEach(el=>{const scenario=byId.get(el.textContent.trim());if(!scenario)return;el.dataset.scenarioId=scenario.id;el.textContent=scenario.number;el.title=scenario.name});document.querySelectorAll('.tag.hero').forEach(el=>{el.textContent='Hero case';el.title='Included in the Hero case story. This label does not affect the score.'});document.querySelectorAll('.source-links p').forEach(el=>{for(const scenario of SCENARIOS)el.textContent=el.textContent.replaceAll(scenario.id,scenario.number)});for(const el of document.querySelectorAll('#step1 .section-head p'))if(el.textContent.includes('Hero Case anchors'))el.textContent='All 15 scenarios make up the Hero case story. Hero case membership does not change the score.'}
+const baseEnhanceAccessibility=enhanceAccessibility;enhanceAccessibility=function(){baseEnhanceAccessibility();queueMicrotask(applyScenarioLabels)};
 const moduleMessage=(type,value)=>parent.postMessage({channel:'ctt-module',type,...(type==='view'?{view:value}:{id:value})},location.origin);
 const returnNav=document.createElement('nav');returnNav.className='module-return';returnNav.innerHTML='<button class="btn" id="returnProduct">← Product demo</button><button class="btn" id="returnJourney">Journey / scenarios</button><span class="tag">Workshop · final step</span>';
 document.querySelector('.container').prepend(returnNav);document.getElementById('returnProduct').onclick=()=>moduleMessage('view','product');document.getElementById('returnJourney').onclick=()=>moduleMessage('view','journey');

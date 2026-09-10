@@ -65,3 +65,11 @@ test('the scoreboard theme uses the Demo portal visual tokens', () => {
   assert.match(theme, /--font-display:/);
   assert.match(theme, /body\s*\{[^}]*background:\s*#f4f5f8/s);
 });
+
+test('the scoreboard presents S1-S15 and explains the Hero case label', () => {
+  const extension = readFileSync(new URL('../workshop/extension.js', import.meta.url), 'utf8');
+  assert.match(extension, /s\.number=`S\$\{index\+1\}`/);
+  assert.match(extension, /applyScenarioLabels/);
+  assert.match(extension, /All 15 scenarios make up the Hero case story/);
+  assert.match(extension, /Included in the Hero case story/);
+});

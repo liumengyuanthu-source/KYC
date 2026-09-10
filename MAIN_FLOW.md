@@ -50,6 +50,8 @@ python3 -m http.server 8899 --bind 127.0.0.1
 
 2026-09-10 Hero case 业务故事：Hero case 的 15 个场景弹窗增加独立的业务叙事，说明 Entity A、Entity B、Person T、Morgan 及相关团队在该场景中处理的具体问题、阻塞点与预期结果。故事随场景选择和系统语言同步切换；Customer journey 保留通用来源映射视图。
 
+2026-09-10 Scoreboard 场景标识：评分卡、详情、组合、Portfolio 与 Roadmap 对外统一显示 `S1–S15`；内部继续使用稳定的 `SCN-*` 标识保存评分和工作坊状态。原 “Hero Case Anchor” 改为 “Hero case”，表示该场景属于 Entity A / Person T 主线故事，不参与评分加权；页面同时明确 15 个场景共同组成 Hero case。
+
 ## GitHub 准备 · 2026-09-09
 
 目标仓库为 `liumengyuanthu-source/KYC`。站点入口、发布文件清单、运行脚本及手动 GitHub Pages 工作流已准备；独立发布副本生成于 `.release/KYC/`。完整部署状态与步骤见 [部署说明](docs/DEPLOYMENT.md)。尚未上传或公开发布。

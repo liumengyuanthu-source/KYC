@@ -1778,6 +1778,8 @@
   "Scenario priority": "场景优先级",
   "Scenarios reviewed": "已审阅场景",
   "Hero Case Anchor": "主线案例锚点",
+  "Included in the Hero case story. This label does not affect the score.": "属于主线案例故事；该标签不会影响评分。",
+  "All 15 scenarios make up the Hero case story. Hero case membership does not change the score.": "全部 15 个场景共同构成主线案例故事；是否属于主线案例不会改变评分。",
   "Hero Case coverage": "主线案例覆盖",
   "Pain & Urgency": "痛点与紧迫性",
   "Business & Control Value": "业务与控制价值",

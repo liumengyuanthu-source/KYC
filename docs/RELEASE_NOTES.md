@@ -43,6 +43,8 @@ Scenario Studio now exposes Scoreboard beside Customer journey and Hero case. It
 
 The embedded Scoreboard now inherits the Studio language and removes its duplicate locale selector. Its visual layer uses the same navy, blue, amber, pale-blue and white system as the Kimi Demo, with Source Serif display headings, Inter body text, tighter cards and matching shadows. The scoring flow and saved workshop data are unchanged.
 
+All Scoreboard surfaces now present the scenario catalogue as `S1–S15`, including scoring cards, details, bundles, portfolio and roadmap. Stable `SCN-*` keys remain internal so existing saved sessions and exports keep their data relationships. The former “Hero Case Anchor” badge is now “Hero case”; an on-page explanation states that all 15 scenarios make up the Hero case story and that membership does not change the score.
+
 ## Scenario numbers on journey maps — September 10
 
 Customer journey and Hero case nodes now display their mapped `S1–S15` scenario numbers directly on the canvas. Shared nodes retain each distinct number, and the selected node changes its badges to amber. The labels are generated from the same mapping used by the scenario popup, so canvas labels and popup content remain aligned.
