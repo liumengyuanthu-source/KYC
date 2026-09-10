@@ -38,7 +38,7 @@ export function filterScenarioMappings(stage = 'all', query = '') {
 
 function sourceItem(s, code, related) {
   const d = getSourceDetail(s.id, code);
-  const occurrences = d.occurrences.map(o => `<li><span>${o.page === 'p1' ? 'Current' : 'Target'}</span><span data-i18n-source>${escape(o.lane)}</span><code>${escape(o.locator)}</code></li>`).join('');
+  const occurrences = d.occurrences.map(o => `<li><span>${o.page === 'p1' ? 'Current' : 'Target'}</span><span data-i18n-source>${escape(o.lane)}</span><code>${escape(o.action)}</code></li>`).join('');
   return `<details class="sm-source" data-source-code="${escape(code)}" data-source-role="${related ? 'related' : 'primary'}">
     <summary><code>${escape(code)}</code><span>${escape(d.title)}${related ? `<small class="sm-relation-semantic">${escape(relatedRoles[s.number]?.[code] || 'Context & dependencies')}</small>` : ''}</span><span class="sm-expand" aria-hidden="true">+</span></summary>
     <div class="sm-source-detail"><p class="sm-role">${related ? 'Related source · context, dependency or reuse' : 'Primary source · scenario backbone'}</p>
@@ -46,7 +46,7 @@ function sourceItem(s, code, related) {
     ${d.note ? `<p data-i18n-source>${escape(d.note)}</p>` : ''}
     ${occurrences ? `<ul class="sm-occurrences">${occurrences}</ul>` : '<p>Occurrence detail is not linked in the existing work records.</p>'}
     ${d.workItems.length ? `<div class="sm-linked-work"><p>Explore the existing work</p>${d.workItems.map(w => `<button type="button" data-sn="work" data-sn-value="${escape(w.id)}"><span>${escape(w.title)}</span><small class="sn-id">${escape(w.id)}</small><span aria-hidden="true">→</span></button>`).join('')}</div>` : ''}
-    <p class="sm-provenance">Source wording and locators are inherited from the existing process records.</p></div>
+    <p class="sm-provenance">Source wording is inherited from the existing process records. Technical locators remain internal.</p></div>
   </details>`;
 }
 

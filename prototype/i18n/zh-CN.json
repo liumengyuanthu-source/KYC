@@ -3041,7 +3041,7 @@
   "Related source · context, dependency or reuse": "关联来源 · 上下文、依赖或复用",
   "Explicit in Target only. Do not infer that the responsibility was absent in Current.": "仅在目标流程中显式列出，不代表现状中不存在该责任。",
   "Occurrence detail is not linked in the existing work records.": "既有工作记录尚未关联该来源实例的详情。",
-  "Source wording and locators are inherited from the existing process records.": "来源文字与定位信息沿用既有流程记录。",
+  "Source wording is inherited from the existing process records. Technical locators remain internal.": "来源文字沿用既有流程记录；技术定位信息仅在内部保留。",
   "No scenarios match. Try another source step or select All scenarios.": "没有匹配场景。请更换来源编号或选择全部场景。",
   "Related scenarios": "关联场景",
   "Define onboarding scope": "确定入驻范围",

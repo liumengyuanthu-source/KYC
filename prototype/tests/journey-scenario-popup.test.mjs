@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {scenarioMappings, getSourceDetail} from '../studio-next/scenario-mapping.mjs';
-import {scenariosForNode, scenarioNumbersForNode, scenarioPopupHtml, scenarioCtaHtml} from '../studio-next/journey-scenario-popup.mjs';
+import {scenariosForNode, scenarioNumbersForNode, scenarioPopupHtml, scenarioCtaHtml, scenarioSourceRowHtml} from '../studio-next/journey-scenario-popup.mjs';
 
 test('every authored CJ and Hero node has a valid preview and all 15 scenarios are reachable', () => {
   const reachable = new Set();
@@ -77,6 +77,16 @@ test('M0.1 preview source data retains separate Target occurrences and the ambig
   assert.notEqual(target[0].locator,target[1].locator);
   assert.match(s.note,/Initiation relationship/);
   assert.match(s.note,/Determine sales location/);
+});
+
+test('map popup source descriptions show business context without PowerPoint shape IDs', () => {
+  const html = scenarioSourceRowHtml('SCN-SCOPE','M0.1');
+  assert.doesNotMatch(html,/shape\d+/i);
+  assert.doesNotMatch(html,/SRC-\d+/i);
+  assert.match(html,/M0\.1/);
+  assert.match(html,/SALES \/ RM \(Front Office\)/);
+  assert.match(html,/Current/);
+  assert.match(html,/Target/);
 });
 
 

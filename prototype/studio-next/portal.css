@@ -129,9 +129,9 @@ dialog.sn-panel .sn-panel-bar button { background:transparent; border:1px solid 
 .sm-source-detail .sm-role { color:#216a9c; font-weight:600; }
 .sm-source-detail .sm-source-warning { padding:10px; border-left:3px solid #e8b325; background:#fff9e9; color:#745111; }
 .sm-occurrences { list-style:none; padding:0; margin:12px 0; }
-.sm-occurrences li { display:grid; grid-template-columns:60px minmax(0,1fr); gap:5px 10px; padding:10px 0; border-top:1px solid #e6edf2; font-size:11px; }
+.sm-occurrences li { display:grid; grid-template-columns:60px minmax(0,1fr) auto; gap:5px 10px; align-items:center; padding:10px 0; border-top:1px solid #e6edf2; font-size:11px; }
 .sm-occurrences li>span:first-child { color:#1068b2; font-weight:600; }
-.sm-occurrences code { grid-column:1 / -1; font-size:10px; white-space:normal; color:#63748a; overflow-wrap:anywhere; }
+.sm-occurrences code { font-size:11px; white-space:nowrap; color:#1068b2; }
 .sm-source-detail .sm-provenance { font-size:11px; color:#6c7786; }
 .sm-linked-work { margin:12px 0; padding:12px; border-radius:7px; background:#f1f7fc; }
 .sm-linked-work>p { font-weight:600; color:#47647e; }

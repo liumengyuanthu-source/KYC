@@ -35,6 +35,16 @@ test('source details retain both target M0.1 occurrences without merging by code
   assert.equal(new Set(target.map(o => o.locator)).size, 2);
 });
 
+test('user-facing source descriptions omit internal PowerPoint shape locators', () => {
+  const raw = api.getSourceDetail('SCN-SCOPE', 'M0.1');
+  assert.ok(raw.occurrences.some(o => o.shape === 'shape283'), 'exact source locator must remain available internally');
+  const html = api.scenarioMappingHtml('SCN-SCOPE');
+  assert.doesNotMatch(html, /shape\d+/i);
+  assert.doesNotMatch(html, /SRC-\d+/i);
+  assert.match(html, /M0\.1/);
+  assert.match(html, /SALES \/ RM \(Front Office\)/);
+});
+
 test('mapping filter finds the scenario through related anchors as well as its title', () => {
   assert.equal(typeof api.filterScenarioMappings, 'function');
   assert.deepEqual(api.filterScenarioMappings('Resolve', 'C2.7').map(s => s.id), ['SCN-CREDIT','SCN-LEGAL']);

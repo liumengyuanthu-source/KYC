@@ -84,8 +84,14 @@ function sourceRow(s, code, related) {
     ${d.currentLane === 'NOT_PRESENT' ? '<p>Explicit in Target only. Do not infer that the responsibility was absent in Current.</p>' : ''}
     <details class="jsp-origins"><summary>Source locations</summary><dl><dt>Current</dt><dd data-i18n-source>${esc(d.currentLane)}</dd><dt>Target</dt><dd data-i18n-source>${esc(d.targetLane)}</dd></dl>
     ${target.length > 1 ? `<p class="jsp-occurrence-note">Multiple Target occurrences share this code; each source location is retained.</p>` : ''}
-    <ul class="jsp-occurrences">${d.occurrences.map(o => `<li><span>${o.page === 'p1' ? 'Current' : 'Target'}</span><code>${esc(o.locator)}</code></li>`).join('')}</ul></details>
+    <ul class="jsp-occurrences">${d.occurrences.map(o => `<li><span>${o.page === 'p1' ? 'Current' : 'Target'}</span><span data-i18n-source>${esc(o.lane)}</span><code>${esc(o.action)}</code></li>`).join('')}</ul></details>
     </div></details>`;
+}
+
+export function scenarioSourceRowHtml(id, code) {
+  const scenario = scenarioMappings.find(s => s.id === id);
+  if (!scenario || ![...scenario.primary,...scenario.related].includes(code)) return '';
+  return sourceRow(scenario,code,scenario.related.includes(code));
 }
 
 export function scenarioPopupHtml(id,{heroCase=false,locale='en-US'}={}) {
@@ -148,7 +154,7 @@ export function installScenarioPopup() {
     if (!s || ![...s.primary,...s.related].includes(code)) return;
     content.querySelectorAll('[data-jsp-source]').forEach(b => b.setAttribute('aria-pressed',String(b === button)));
     const preview = content.querySelector('#jsp-source-preview');
-    preview.innerHTML = sourceRow(s,code,s.related.includes(code));
+    preview.innerHTML = scenarioSourceRowHtml(s.id,code);
     preview.querySelector('details').open = true;
     translate();
     preview.scrollIntoView({block:'nearest'});

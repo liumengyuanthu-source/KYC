@@ -59,9 +59,10 @@ html body #focus-chip .jsp-source-chips button[aria-pressed=true] { background:#
 .jsp-source-body dl { display:grid; grid-template-columns:50px minmax(0,1fr); gap:5px 10px; margin:12px 0; }
 .jsp-source-body dd { margin:0; }
 .jsp-occurrences { list-style:none; padding:0; margin:12px 0 0; }
-.jsp-occurrences li { margin-top:8px; }
+.jsp-occurrences li { display:grid; grid-template-columns:48px minmax(0,1fr) auto; gap:5px 8px; align-items:center; margin-top:8px; }
 .jsp-occurrences span { display:block; font-size:10px; }
-.jsp-occurrences code { display:block; font-size:10px; overflow-wrap:anywhere; white-space:normal; }
+.jsp-occurrences li>span:first-child { color:#116da9; font-weight:600; }
+.jsp-occurrences code { display:block; font-size:10px; color:#116da9; white-space:nowrap; }
 .jsp-occurrence-note { border-left:2px solid #e5b64f; padding-left:8px; }
 .jsp-related { margin-top:18px; }
 .jsp-related>summary,.jsp-notes>summary,.jsp-connections>summary { cursor:pointer; font-size:12px; font-weight:600; color:#466b89; }
