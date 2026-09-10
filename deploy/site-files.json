@@ -1,0 +1,17 @@
+{
+  "include": [
+    "index.html",
+    "prototype",
+    "08_inspire/app",
+    "08_inspire/md/01_原型需求说明.md",
+    "00_governance/batch-f/product-definition.json",
+    "00_governance/batch-f/build-inventory.json",
+    "00_governance/batch-f/final-fix-verification/red-team-master.json",
+    "04_operating_model/round-a/synthetic-case-fixture.json",
+    "04_operating_model/round-a/batch-a-story-snapshots.json",
+    "04_operating_model/batch-b/collaboration-snapshots.json",
+    "04_operating_model/batch-d/specialist-snapshots.json"
+  ],
+  "exclude": ["prototype/qa", "prototype/tests"],
+  "extensions": [".html", ".mjs", ".js", ".css", ".json", ".svg", ".png", ".jpg", ".jpeg", ".webp", ".gif", ".ico", ".woff", ".woff2", ".ttf", ".mp4", ".webm", ".mp3", ".wav", ".md", ".csv", ".txt"]
+}

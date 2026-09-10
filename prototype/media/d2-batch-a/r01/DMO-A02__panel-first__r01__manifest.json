@@ -1,0 +1,418 @@
+{
+  "asset_revision": "r01",
+  "source_batch": "D2 Batch A",
+  "source_document_revision": "Batch A Scope / Entity Final v1.0",
+  "case_fixture_revision": "Batch-A-Final-v1.0/read-only-media-projection-r01",
+  "source_snapshot_ref": "source/Clear_to_Trade_D2_Batch_A_Scope_Entity_Final_v1.0.md#3.2",
+  "synthetic": true,
+  "locale": [
+    "zh-CN",
+    "en-AU",
+    "en-US"
+  ],
+  "caption_tracks": null,
+  "caption_tracks_reason": "Silent interactive HTML and stills; no audio/video; localised cue text in HTML. No WebVTT tracks claimed.",
+  "data_mutation_scope": "none; read-only media; no Shared Case Spine writes",
+  "content_status": "mapped_to_approved_Batch_A_Final; media meaning pending user review",
+  "visual_status": "candidate visually inspected; pending design selection",
+  "test_status": {
+    "content": "7 node tests passed",
+    "browser": "14 browser red-team checks passed; includes 66 cue/locale/comparison combinations",
+    "delivery": "6 static stories, no-JS navigation, actual PDFs checked; see artifacts/tests",
+    "lifecycle": "see artifacts/tests/lifecycle.json"
+  },
+  "promotion_status": "candidate; not approved_for_mainline",
+  "review_owner": {
+    "business": "Christina — pending",
+    "expression": "Xiaoming / Coco — pending",
+    "technical": "Codex — recorded local checks"
+  },
+  "asset_id": "DMO-A02",
+  "variant_id": "panel-first",
+  "scenario_refs": [
+    "SCN-ENTITY"
+  ],
+  "beat_refs": [
+    "B-01",
+    "B-02",
+    "B-03",
+    "B-04",
+    "B-05",
+    "B-exit"
+  ],
+  "diagram_refs": [
+    "DG-ENTITY-A",
+    "DG-ENABLE-A"
+  ],
+  "asset_type": "read_only_interactive_motion_sample",
+  "file_format": "HTML/CSS/ES modules + local JSON/SVG/WebP",
+  "dimensions": {
+    "layout": "responsive",
+    "desktop_review": "1440×900 / 1366 width",
+    "mobile_review": "390 CSS px",
+    "poster": "see per-file actual dimensions"
+  },
+  "duration": {
+    "seconds": 20,
+    "semantics": "narrative only; DMO-A02 pauses at 9.5s for explicit Next; no business SLA"
+  },
+  "fps": null,
+  "fps_reason": "requestAnimationFrame and controlled local effects; no encoded video or measured fixed FPS",
+  "file_size": 80734,
+  "file_size_scope": "shared runtime/source files excluding shared media dependencies; individual files listed below",
+  "source_files": [
+    {
+      "path": "index.html",
+      "file_size": 5717,
+      "sha256": "d3c004f4991a673584d4afbe9d6125a0f00b92dd15d552213b51db2b0db3bf14",
+      "dimensions": null
+    },
+    {
+      "path": "styles/media.css",
+      "file_size": 18126,
+      "sha256": "7ed9a0eca211509814cb4f994ed5a081412d455ded48a6118be9e2a596373cc7",
+      "dimensions": null
+    },
+    {
+      "path": "src/app.js",
+      "file_size": 11933,
+      "sha256": "0c0dce125570e8202015bae6142b74c11522f82d5b273284149c4ca8a32d1481",
+      "dimensions": null
+    },
+    {
+      "path": "src/views.js",
+      "file_size": 4156,
+      "sha256": "3ab1e7b3ff7d16fe88c7896b5db7be44d3d2edfcbbccd48f73182039a2aea2fa",
+      "dimensions": null
+    },
+    {
+      "path": "src/player.js",
+      "file_size": 950,
+      "sha256": "5aa21875f25c0827f4adefe58685269f3bc194b739b590d1b2016ad2a461f6f4",
+      "dimensions": null
+    },
+    {
+      "path": "src/content.js",
+      "file_size": 4353,
+      "sha256": "a57d1d24107fe8b4f88369a2bde9e2600ceb415ebb875d706841d427aad6f73b",
+      "dimensions": null
+    },
+    {
+      "path": "source/cue-manifest.json",
+      "file_size": 4942,
+      "sha256": "d4ebd3b5c87d9fda3ebbaac3d4bc627348a3d7a05540aa4d88fe26bb23e23ca3",
+      "dimensions": null
+    },
+    {
+      "path": "source/diagram-contract.json",
+      "file_size": 4110,
+      "sha256": "c4a7ca07974bd5c273c51d63454cdde2242db100519aed3adbeebb1fd7b66781",
+      "dimensions": null
+    },
+    {
+      "path": "locales/zh-CN.json",
+      "file_size": 8327,
+      "sha256": "274c8fab27876bbbbdb6a0727bb2624c233643007fbc680c58428c037aaa2e98",
+      "dimensions": null
+    },
+    {
+      "path": "locales/en-AU.json",
+      "file_size": 9060,
+      "sha256": "f66443cd1b1e58ec1b48aef9115ab0bd7df575eaab7445d95347b9318ccdcb4c",
+      "dimensions": null
+    },
+    {
+      "path": "locales/en-US.json",
+      "file_size": 9060,
+      "sha256": "19d849b7bfbf206b54bf234ee921c38889c391ba57c40a5b673d27d927c1f0b3",
+      "dimensions": null
+    }
+  ],
+  "preview_file": "index.html",
+  "poster_file": "assets/posters/DMO-A02__panel-first__r01__zh-CN__C1.png",
+  "static_fallback": "print/DMO-A02__r01__zh-CN.html",
+  "localized": {
+    "zh-CN": {
+      "preview_file": "index.html?demo=DMO-A02&locale=zh-CN",
+      "preview_url": "http://127.0.0.1:4182/?demo=DMO-A02&locale=zh-CN",
+      "poster_file": {
+        "path": "assets/posters/DMO-A02__panel-first__r01__zh-CN__C1.png",
+        "file_size": 132398,
+        "sha256": "c3b9360349053e42b1d784847ed19426d63c435b29355b6b4b24932be649e156",
+        "dimensions": {
+          "width": 1284,
+          "height": 733
+        }
+      },
+      "keyframes": [
+        {
+          "path": "assets/posters/DMO-A02__panel-first__r01__zh-CN__C1.png",
+          "file_size": 132398,
+          "sha256": "c3b9360349053e42b1d784847ed19426d63c435b29355b6b4b24932be649e156",
+          "dimensions": {
+            "width": 1284,
+            "height": 733
+          }
+        },
+        {
+          "path": "assets/posters/DMO-A02__panel-first__r01__zh-CN__C2.png",
+          "file_size": 139211,
+          "sha256": "942fa22a2f054167fd6eb68ec3455d0887bd39315eebd0ebf62e50c78897b31f",
+          "dimensions": {
+            "width": 1284,
+            "height": 733
+          }
+        },
+        {
+          "path": "assets/posters/DMO-A02__panel-first__r01__zh-CN__C3.png",
+          "file_size": 139174,
+          "sha256": "61732ecd9b7cd6e0e308fbe27cc5ba9a3a9214b4ada7f0612945bd489e6c1f7c",
+          "dimensions": {
+            "width": 1284,
+            "height": 733
+          }
+        },
+        {
+          "path": "assets/posters/DMO-A02__panel-first__r01__zh-CN__C4.png",
+          "file_size": 153799,
+          "sha256": "21770763b9218385b0b6d5b2363c9b565506c57b222fa146a9428257f1af4b61",
+          "dimensions": {
+            "width": 1284,
+            "height": 733
+          }
+        },
+        {
+          "path": "assets/posters/DMO-A02__panel-first__r01__zh-CN__C5.png",
+          "file_size": 152448,
+          "sha256": "826bcb928b426e1c72ac7908168d4d6b89de7b1c0215b8e9ed5ca0670597dd65",
+          "dimensions": {
+            "width": 1284,
+            "height": 733
+          }
+        },
+        {
+          "path": "assets/posters/DMO-A02__panel-first__r01__zh-CN__C6.png",
+          "file_size": 153841,
+          "sha256": "0273f8f00215ccffa9a30dd6d6acfcb2786c02719c725e51158f686a1b74d502",
+          "dimensions": {
+            "width": 1284,
+            "height": 733
+          }
+        }
+      ],
+      "static_fallback": {
+        "path": "print/DMO-A02__r01__zh-CN.html",
+        "file_size": 18924,
+        "sha256": "ce782e022393682cfb366da46b75012dccbde5984326dfbeea7ae2bdf905937c",
+        "dimensions": null
+      },
+      "print_pdf": {
+        "path": "print/DMO-A02__r01__zh-CN.pdf",
+        "file_size": 584315,
+        "sha256": "86b7a2e47b6753b5047ef5242f538dfa70177be930757ec5cfb189f9189eb669",
+        "dimensions": null
+      },
+      "description_ref": "locales/zh-CN.json#a02_title"
+    },
+    "en-AU": {
+      "preview_file": "index.html?demo=DMO-A02&locale=en-AU",
+      "preview_url": "http://127.0.0.1:4182/?demo=DMO-A02&locale=en-AU",
+      "poster_file": {
+        "path": "assets/posters/DMO-A02__panel-first__r01__en-AU__C1.png",
+        "file_size": 131246,
+        "sha256": "1d14ef5bffb5ce22b9fd60d3367210f5d3e29ff7a7863fd986858289cf926580",
+        "dimensions": {
+          "width": 1284,
+          "height": 733
+        }
+      },
+      "keyframes": [
+        {
+          "path": "assets/posters/DMO-A02__panel-first__r01__en-AU__C1.png",
+          "file_size": 131246,
+          "sha256": "1d14ef5bffb5ce22b9fd60d3367210f5d3e29ff7a7863fd986858289cf926580",
+          "dimensions": {
+            "width": 1284,
+            "height": 733
+          }
+        },
+        {
+          "path": "assets/posters/DMO-A02__panel-first__r01__en-AU__C2.png",
+          "file_size": 136172,
+          "sha256": "185b40ab436b79ae0c642c279d81c94664778a97df0ee2e5a1ece8f1c4a5e4fb",
+          "dimensions": {
+            "width": 1284,
+            "height": 733
+          }
+        },
+        {
+          "path": "assets/posters/DMO-A02__panel-first__r01__en-AU__C3.png",
+          "file_size": 136138,
+          "sha256": "cd9f57ca57cbf192d38d46ad35b2bf92595ff9ea781b16713041e40920a49ec6",
+          "dimensions": {
+            "width": 1284,
+            "height": 733
+          }
+        },
+        {
+          "path": "assets/posters/DMO-A02__panel-first__r01__en-AU__C4.png",
+          "file_size": 150066,
+          "sha256": "1f7afefbe9285c7ab4de2aab0c06ec568f9871c58b94f8fecea6de4c377313a3",
+          "dimensions": {
+            "width": 1284,
+            "height": 733
+          }
+        },
+        {
+          "path": "assets/posters/DMO-A02__panel-first__r01__en-AU__C5.png",
+          "file_size": 146780,
+          "sha256": "8bf8a8a86c041ddb5ea7c1e196bea81980d101da6c24fe272f2aebd6a604a92c",
+          "dimensions": {
+            "width": 1284,
+            "height": 733
+          }
+        },
+        {
+          "path": "assets/posters/DMO-A02__panel-first__r01__en-AU__C6.png",
+          "file_size": 149944,
+          "sha256": "07d73d1eed1ec8cad7a0895483b1039bb506f7d75ebeece216b969baf7367f2c",
+          "dimensions": {
+            "width": 1284,
+            "height": 733
+          }
+        }
+      ],
+      "static_fallback": {
+        "path": "print/DMO-A02__r01__en-AU.html",
+        "file_size": 20042,
+        "sha256": "1a9634be85d95fe17915308a49167e4d878ee90db742fd51b256745f41fdc141",
+        "dimensions": null
+      },
+      "print_pdf": {
+        "path": "print/DMO-A02__r01__en-AU.pdf",
+        "file_size": 211379,
+        "sha256": "ee578406d18e33e585f69ae3e50da62b1e8e5ac4b990d6478452a2a3d0f93c35",
+        "dimensions": null
+      },
+      "description_ref": "locales/en-AU.json#a02_title"
+    },
+    "en-US": {
+      "preview_file": "index.html?demo=DMO-A02&locale=en-US",
+      "preview_url": "http://127.0.0.1:4182/?demo=DMO-A02&locale=en-US",
+      "poster_file": {
+        "path": "assets/posters/DMO-A02__panel-first__r01__en-US__C1.png",
+        "file_size": 131246,
+        "sha256": "1d14ef5bffb5ce22b9fd60d3367210f5d3e29ff7a7863fd986858289cf926580",
+        "dimensions": {
+          "width": 1284,
+          "height": 733
+        }
+      },
+      "keyframes": [
+        {
+          "path": "assets/posters/DMO-A02__panel-first__r01__en-US__C1.png",
+          "file_size": 131246,
+          "sha256": "1d14ef5bffb5ce22b9fd60d3367210f5d3e29ff7a7863fd986858289cf926580",
+          "dimensions": {
+            "width": 1284,
+            "height": 733
+          }
+        },
+        {
+          "path": "assets/posters/DMO-A02__panel-first__r01__en-US__C2.png",
+          "file_size": 136172,
+          "sha256": "185b40ab436b79ae0c642c279d81c94664778a97df0ee2e5a1ece8f1c4a5e4fb",
+          "dimensions": {
+            "width": 1284,
+            "height": 733
+          }
+        },
+        {
+          "path": "assets/posters/DMO-A02__panel-first__r01__en-US__C3.png",
+          "file_size": 136138,
+          "sha256": "cd9f57ca57cbf192d38d46ad35b2bf92595ff9ea781b16713041e40920a49ec6",
+          "dimensions": {
+            "width": 1284,
+            "height": 733
+          }
+        },
+        {
+          "path": "assets/posters/DMO-A02__panel-first__r01__en-US__C4.png",
+          "file_size": 150066,
+          "sha256": "1f7afefbe9285c7ab4de2aab0c06ec568f9871c58b94f8fecea6de4c377313a3",
+          "dimensions": {
+            "width": 1284,
+            "height": 733
+          }
+        },
+        {
+          "path": "assets/posters/DMO-A02__panel-first__r01__en-US__C5.png",
+          "file_size": 146780,
+          "sha256": "8bf8a8a86c041ddb5ea7c1e196bea81980d101da6c24fe272f2aebd6a604a92c",
+          "dimensions": {
+            "width": 1284,
+            "height": 733
+          }
+        },
+        {
+          "path": "assets/posters/DMO-A02__panel-first__r01__en-US__C6.png",
+          "file_size": 149944,
+          "sha256": "07d73d1eed1ec8cad7a0895483b1039bb506f7d75ebeece216b969baf7367f2c",
+          "dimensions": {
+            "width": 1284,
+            "height": 733
+          }
+        }
+      ],
+      "static_fallback": {
+        "path": "print/DMO-A02__r01__en-US.html",
+        "file_size": 20042,
+        "sha256": "b2adbd6b02e0133380c05fdee90523d83d944104a91f4945217e8c95d3d17e52",
+        "dimensions": null
+      },
+      "print_pdf": {
+        "path": "print/DMO-A02__r01__en-US.pdf",
+        "file_size": 211389,
+        "sha256": "8c70ecf9efef05ead26efc0e80a33a0614d076e2c30423a79cc138088bd0c414",
+        "dimensions": null
+      },
+      "description_ref": "locales/en-US.json#a02_title"
+    }
+  },
+  "alt_text_refs": [
+    "portrait_t_alt",
+    "portrait_ops_alt",
+    "diagram_alt_entity",
+    "diagram_alt_enable"
+  ],
+  "motion_mode": "user-initiated controlled emphasis; static/reduced-motion alternatives; no audio/no loop",
+  "controls_supported": [
+    "Play",
+    "Pause",
+    "Previous",
+    "Next",
+    "Replay",
+    "Current/Target",
+    "locale",
+    "Static",
+    "return"
+  ],
+  "allowed_intents": [
+    "media_started",
+    "media_paused",
+    "media_finished",
+    "focus_requested",
+    "story_beat_requested",
+    "return_requested"
+  ],
+  "licence_or_generation_provenance": "Locally authored HTML/CSS/JS; system fonts only. Personas use generated images; diagrams use Archify 2.17 MIT. See source/image-generation.md and diagram receipts.",
+  "known_limitations": [
+    "Read-only narrative; no real product actions, save, evidence upload, email or host integration.",
+    "Current/Target changes the presented organising role and commentary, not case facts or a measured automation outcome.",
+    "No video/audio/WebVTT; optional DMO-A03 and VID-A01 not generated.",
+    "Browser evidence covers installed Chromium only; Safari/Firefox and native browser zoom not tested.",
+    "Narrow-screen diagram uses contained horizontal scrolling; standalone SVG/HTML available.",
+    "Image identity consistency is visual review, not a biometric or licensing audit.",
+    "Mainline remains unconnected; source facts are a frozen media projection, not a new business schema."
+  ]
+}

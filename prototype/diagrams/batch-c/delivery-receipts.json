@@ -1,0 +1,1708 @@
+[
+  {
+    "name": "DG-C-POPULATION.Current.zh-CN.r02",
+    "phase": "validate",
+    "exit_code": 1,
+    "receipt": {
+      "schemaVersion": 1,
+      "ok": false,
+      "command": "validate",
+      "stage": "render",
+      "type": "workflow",
+      "input": "/Users/christinaliu/Documents/ChatGPT/Australia Bank/clear-to-trade-product/prototype/diagrams/batch-c/DG-C-POPULATION.Current.zh-CN.r02.json",
+      "error": "Workflow edge \"edge1\" cannot satisfy route preset \"up-channel\" under readable-v2 constraints (minimum 8px endpoint stubs, 16px interior turns, and 28px direct clearance).",
+      "diagnostics": [
+        {
+          "code": "workflow/route-preset-conflict",
+          "severity": "error",
+          "message": "Workflow edge \"edge1\" cannot satisfy route preset \"up-channel\" under readable-v2 constraints (minimum 8px endpoint stubs, 16px interior turns, and 28px direct clearance).",
+          "subject": {
+            "diagramType": "workflow",
+            "edge": "edge1",
+            "from": "context",
+            "to": "comprehensive",
+            "route": "up-channel"
+          },
+          "evidence": {
+            "attemptedCandidateFamily": "up-channel",
+            "points": [
+              [
+                140,
+                369
+              ],
+              [
+                140,
+                58
+              ],
+              [
+                225.2,
+                58
+              ],
+              [
+                225.2,
+                161
+              ]
+            ],
+            "fromSide": "right",
+            "toSide": "left",
+            "requiredEndpointStubPx": 8,
+            "requiredInteriorSegmentPx": 16,
+            "requiredDirectClearancePx": 28
+          },
+          "supportedFixes": [
+            "set edge \"edge1\" route to verified preset \"return-left\""
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "name": "DG-C-POPULATION.Target.zh-CN.r02",
+    "phase": "validate",
+    "exit_code": 1,
+    "receipt": {
+      "schemaVersion": 1,
+      "ok": false,
+      "command": "validate",
+      "stage": "render",
+      "type": "workflow",
+      "input": "/Users/christinaliu/Documents/ChatGPT/Australia Bank/clear-to-trade-product/prototype/diagrams/batch-c/DG-C-POPULATION.Target.zh-CN.r02.json",
+      "error": "Workflow edge \"edge1\" cannot satisfy route preset \"up-channel\" under readable-v2 constraints (minimum 8px endpoint stubs, 16px interior turns, and 28px direct clearance).",
+      "diagnostics": [
+        {
+          "code": "workflow/route-preset-conflict",
+          "severity": "error",
+          "message": "Workflow edge \"edge1\" cannot satisfy route preset \"up-channel\" under readable-v2 constraints (minimum 8px endpoint stubs, 16px interior turns, and 28px direct clearance).",
+          "subject": {
+            "diagramType": "workflow",
+            "edge": "edge1",
+            "from": "context",
+            "to": "comprehensive",
+            "route": "up-channel"
+          },
+          "evidence": {
+            "attemptedCandidateFamily": "up-channel",
+            "points": [
+              [
+                140,
+                369
+              ],
+              [
+                140,
+                58
+              ],
+              [
+                225.2,
+                58
+              ],
+              [
+                225.2,
+                161
+              ]
+            ],
+            "fromSide": "right",
+            "toSide": "left",
+            "requiredEndpointStubPx": 8,
+            "requiredInteriorSegmentPx": 16,
+            "requiredDirectClearancePx": 28
+          },
+          "supportedFixes": [
+            "set edge \"edge1\" route to verified preset \"return-left\""
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "name": "DG-C-POPULATION.Current.en-AU.r02",
+    "phase": "validate",
+    "exit_code": 0,
+    "receipt": {
+      "schemaVersion": 1,
+      "ok": true,
+      "command": "validate",
+      "type": "workflow",
+      "input": "/Users/christinaliu/Documents/ChatGPT/Australia Bank/clear-to-trade-product/prototype/diagrams/batch-c/DG-C-POPULATION.Current.en-AU.r02.json",
+      "checks": [
+        {
+          "name": "single_svg",
+          "ok": true,
+          "details": [
+            "found 1 <svg> block(s)"
+          ]
+        },
+        {
+          "name": "finite_svg",
+          "ok": true,
+          "details": []
+        },
+        {
+          "name": "orthogonal_arrows",
+          "ok": true,
+          "details": []
+        },
+        {
+          "name": "label_route_clearance",
+          "ok": true,
+          "details": []
+        },
+        {
+          "name": "relationship_crossings",
+          "ok": true,
+          "details": []
+        },
+        {
+          "name": "relationship_corridors",
+          "ok": true,
+          "details": []
+        },
+        {
+          "name": "container_border_runs",
+          "ok": true,
+          "details": []
+        },
+        {
+          "name": "route_rhythm",
+          "ok": true,
+          "details": []
+        },
+        {
+          "name": "legend_clearance",
+          "ok": true,
+          "details": []
+        }
+      ],
+      "composition": {
+        "schemaVersion": 1,
+        "profile": "showcase",
+        "status": "pass",
+        "summary": {
+          "errors": 0,
+          "warnings": 0
+        },
+        "metrics": {
+          "properCrossings": 0,
+          "ambiguousCorridors": 0,
+          "containerBorderRuns": 0,
+          "labelRouteClearanceIssues": 0,
+          "minLabelRouteClearance": 78,
+          "desktopReadabilityIssues": 0,
+          "minProjectedNodeTextPx": null,
+          "maxBends": 3,
+          "routesOverSuggestedBends": 1,
+          "maxStretch": 1.096,
+          "routesOverSuggestedStretch": 0,
+          "minSegmentPx": 16,
+          "minInteriorSegmentPx": 110,
+          "shortSegmentCount": 0,
+          "shortEndpointSegmentCount": 0,
+          "shortInteriorSegmentCount": 0,
+          "microSegmentCount": 0
+        },
+        "suggestedLimits": {
+          "bendsPerRelationship": 2,
+          "stretch": 1.35,
+          "segmentPx": 16,
+          "microSegmentPx": 8
+        },
+        "issues": []
+      }
+    }
+  },
+  {
+    "name": "DG-C-POPULATION.Current.en-AU.r02",
+    "phase": "deliver",
+    "exit_code": 0,
+    "receipt": {
+      "schemaVersion": 1,
+      "ok": true,
+      "command": "deliver",
+      "type": "workflow",
+      "input": "/Users/christinaliu/Documents/ChatGPT/Australia Bank/clear-to-trade-product/prototype/diagrams/batch-c/DG-C-POPULATION.Current.en-AU.r02.json",
+      "output": "/Users/christinaliu/Documents/ChatGPT/Australia Bank/clear-to-trade-product/prototype/diagrams/batch-c/DG-C-POPULATION.Current.en-AU.r02.html",
+      "specification": {
+        "sha256": "965befdb10666f9cc02f52affe14fef84eee5def3f69cb4085dbaabcbecb7e0d",
+        "bytes": 2351
+      },
+      "artifact": {
+        "sha256": "19706e638b8539e360e8e314107df973411f25e6efdd5446fa821a6d28f43c13",
+        "bytes": 704454
+      },
+      "validation": {
+        "checksPassed": 9,
+        "checkCount": 9,
+        "compositionProfile": "showcase",
+        "compositionStatus": "pass",
+        "errors": 0,
+        "warnings": 0
+      }
+    }
+  },
+  {
+    "name": "DG-C-POPULATION.Target.en-AU.r02",
+    "phase": "validate",
+    "exit_code": 0,
+    "receipt": {
+      "schemaVersion": 1,
+      "ok": true,
+      "command": "validate",
+      "type": "workflow",
+      "input": "/Users/christinaliu/Documents/ChatGPT/Australia Bank/clear-to-trade-product/prototype/diagrams/batch-c/DG-C-POPULATION.Target.en-AU.r02.json",
+      "checks": [
+        {
+          "name": "single_svg",
+          "ok": true,
+          "details": [
+            "found 1 <svg> block(s)"
+          ]
+        },
+        {
+          "name": "finite_svg",
+          "ok": true,
+          "details": []
+        },
+        {
+          "name": "orthogonal_arrows",
+          "ok": true,
+          "details": []
+        },
+        {
+          "name": "label_route_clearance",
+          "ok": true,
+          "details": []
+        },
+        {
+          "name": "relationship_crossings",
+          "ok": true,
+          "details": []
+        },
+        {
+          "name": "relationship_corridors",
+          "ok": true,
+          "details": []
+        },
+        {
+          "name": "container_border_runs",
+          "ok": true,
+          "details": []
+        },
+        {
+          "name": "route_rhythm",
+          "ok": true,
+          "details": []
+        },
+        {
+          "name": "legend_clearance",
+          "ok": true,
+          "details": []
+        }
+      ],
+      "composition": {
+        "schemaVersion": 1,
+        "profile": "showcase",
+        "status": "pass",
+        "summary": {
+          "errors": 0,
+          "warnings": 0
+        },
+        "metrics": {
+          "properCrossings": 0,
+          "ambiguousCorridors": 0,
+          "containerBorderRuns": 0,
+          "labelRouteClearanceIssues": 0,
+          "minLabelRouteClearance": 78,
+          "desktopReadabilityIssues": 0,
+          "minProjectedNodeTextPx": null,
+          "maxBends": 3,
+          "routesOverSuggestedBends": 1,
+          "maxStretch": 1.096,
+          "routesOverSuggestedStretch": 0,
+          "minSegmentPx": 16,
+          "minInteriorSegmentPx": 110,
+          "shortSegmentCount": 0,
+          "shortEndpointSegmentCount": 0,
+          "shortInteriorSegmentCount": 0,
+          "microSegmentCount": 0
+        },
+        "suggestedLimits": {
+          "bendsPerRelationship": 2,
+          "stretch": 1.35,
+          "segmentPx": 16,
+          "microSegmentPx": 8
+        },
+        "issues": []
+      }
+    }
+  },
+  {
+    "name": "DG-C-POPULATION.Target.en-AU.r02",
+    "phase": "deliver",
+    "exit_code": 0,
+    "receipt": {
+      "schemaVersion": 1,
+      "ok": true,
+      "command": "deliver",
+      "type": "workflow",
+      "input": "/Users/christinaliu/Documents/ChatGPT/Australia Bank/clear-to-trade-product/prototype/diagrams/batch-c/DG-C-POPULATION.Target.en-AU.r02.json",
+      "output": "/Users/christinaliu/Documents/ChatGPT/Australia Bank/clear-to-trade-product/prototype/diagrams/batch-c/DG-C-POPULATION.Target.en-AU.r02.html",
+      "specification": {
+        "sha256": "126c3e1a66c23803ce68fca972549d1caa3670d391b88625469d0daf3d11f558",
+        "bytes": 2379
+      },
+      "artifact": {
+        "sha256": "0ee4ee1415e83d67dd12260e796a7037374f7cc58ae219b1bac183d609391d64",
+        "bytes": 704741
+      },
+      "validation": {
+        "checksPassed": 9,
+        "checkCount": 9,
+        "compositionProfile": "showcase",
+        "compositionStatus": "pass",
+        "errors": 0,
+        "warnings": 0
+      }
+    }
+  },
+  {
+    "name": "DG-C-POPULATION.Current.en-US.r02",
+    "phase": "validate",
+    "exit_code": 0,
+    "receipt": {
+      "schemaVersion": 1,
+      "ok": true,
+      "command": "validate",
+      "type": "workflow",
+      "input": "/Users/christinaliu/Documents/ChatGPT/Australia Bank/clear-to-trade-product/prototype/diagrams/batch-c/DG-C-POPULATION.Current.en-US.r02.json",
+      "checks": [
+        {
+          "name": "single_svg",
+          "ok": true,
+          "details": [
+            "found 1 <svg> block(s)"
+          ]
+        },
+        {
+          "name": "finite_svg",
+          "ok": true,
+          "details": []
+        },
+        {
+          "name": "orthogonal_arrows",
+          "ok": true,
+          "details": []
+        },
+        {
+          "name": "label_route_clearance",
+          "ok": true,
+          "details": []
+        },
+        {
+          "name": "relationship_crossings",
+          "ok": true,
+          "details": []
+        },
+        {
+          "name": "relationship_corridors",
+          "ok": true,
+          "details": []
+        },
+        {
+          "name": "container_border_runs",
+          "ok": true,
+          "details": []
+        },
+        {
+          "name": "route_rhythm",
+          "ok": true,
+          "details": []
+        },
+        {
+          "name": "legend_clearance",
+          "ok": true,
+          "details": []
+        }
+      ],
+      "composition": {
+        "schemaVersion": 1,
+        "profile": "showcase",
+        "status": "pass",
+        "summary": {
+          "errors": 0,
+          "warnings": 0
+        },
+        "metrics": {
+          "properCrossings": 0,
+          "ambiguousCorridors": 0,
+          "containerBorderRuns": 0,
+          "labelRouteClearanceIssues": 0,
+          "minLabelRouteClearance": 78,
+          "desktopReadabilityIssues": 0,
+          "minProjectedNodeTextPx": null,
+          "maxBends": 3,
+          "routesOverSuggestedBends": 1,
+          "maxStretch": 1.096,
+          "routesOverSuggestedStretch": 0,
+          "minSegmentPx": 16,
+          "minInteriorSegmentPx": 110,
+          "shortSegmentCount": 0,
+          "shortEndpointSegmentCount": 0,
+          "shortInteriorSegmentCount": 0,
+          "microSegmentCount": 0
+        },
+        "suggestedLimits": {
+          "bendsPerRelationship": 2,
+          "stretch": 1.35,
+          "segmentPx": 16,
+          "microSegmentPx": 8
+        },
+        "issues": []
+      }
+    }
+  },
+  {
+    "name": "DG-C-POPULATION.Current.en-US.r02",
+    "phase": "deliver",
+    "exit_code": 0,
+    "receipt": {
+      "schemaVersion": 1,
+      "ok": true,
+      "command": "deliver",
+      "type": "workflow",
+      "input": "/Users/christinaliu/Documents/ChatGPT/Australia Bank/clear-to-trade-product/prototype/diagrams/batch-c/DG-C-POPULATION.Current.en-US.r02.json",
+      "output": "/Users/christinaliu/Documents/ChatGPT/Australia Bank/clear-to-trade-product/prototype/diagrams/batch-c/DG-C-POPULATION.Current.en-US.r02.html",
+      "specification": {
+        "sha256": "965befdb10666f9cc02f52affe14fef84eee5def3f69cb4085dbaabcbecb7e0d",
+        "bytes": 2351
+      },
+      "artifact": {
+        "sha256": "19706e638b8539e360e8e314107df973411f25e6efdd5446fa821a6d28f43c13",
+        "bytes": 704454
+      },
+      "validation": {
+        "checksPassed": 9,
+        "checkCount": 9,
+        "compositionProfile": "showcase",
+        "compositionStatus": "pass",
+        "errors": 0,
+        "warnings": 0
+      }
+    }
+  },
+  {
+    "name": "DG-C-POPULATION.Target.en-US.r02",
+    "phase": "validate",
+    "exit_code": 0,
+    "receipt": {
+      "schemaVersion": 1,
+      "ok": true,
+      "command": "validate",
+      "type": "workflow",
+      "input": "/Users/christinaliu/Documents/ChatGPT/Australia Bank/clear-to-trade-product/prototype/diagrams/batch-c/DG-C-POPULATION.Target.en-US.r02.json",
+      "checks": [
+        {
+          "name": "single_svg",
+          "ok": true,
+          "details": [
+            "found 1 <svg> block(s)"
+          ]
+        },
+        {
+          "name": "finite_svg",
+          "ok": true,
+          "details": []
+        },
+        {
+          "name": "orthogonal_arrows",
+          "ok": true,
+          "details": []
+        },
+        {
+          "name": "label_route_clearance",
+          "ok": true,
+          "details": []
+        },
+        {
+          "name": "relationship_crossings",
+          "ok": true,
+          "details": []
+        },
+        {
+          "name": "relationship_corridors",
+          "ok": true,
+          "details": []
+        },
+        {
+          "name": "container_border_runs",
+          "ok": true,
+          "details": []
+        },
+        {
+          "name": "route_rhythm",
+          "ok": true,
+          "details": []
+        },
+        {
+          "name": "legend_clearance",
+          "ok": true,
+          "details": []
+        }
+      ],
+      "composition": {
+        "schemaVersion": 1,
+        "profile": "showcase",
+        "status": "pass",
+        "summary": {
+          "errors": 0,
+          "warnings": 0
+        },
+        "metrics": {
+          "properCrossings": 0,
+          "ambiguousCorridors": 0,
+          "containerBorderRuns": 0,
+          "labelRouteClearanceIssues": 0,
+          "minLabelRouteClearance": 78,
+          "desktopReadabilityIssues": 0,
+          "minProjectedNodeTextPx": null,
+          "maxBends": 3,
+          "routesOverSuggestedBends": 1,
+          "maxStretch": 1.096,
+          "routesOverSuggestedStretch": 0,
+          "minSegmentPx": 16,
+          "minInteriorSegmentPx": 110,
+          "shortSegmentCount": 0,
+          "shortEndpointSegmentCount": 0,
+          "shortInteriorSegmentCount": 0,
+          "microSegmentCount": 0
+        },
+        "suggestedLimits": {
+          "bendsPerRelationship": 2,
+          "stretch": 1.35,
+          "segmentPx": 16,
+          "microSegmentPx": 8
+        },
+        "issues": []
+      }
+    }
+  },
+  {
+    "name": "DG-C-POPULATION.Target.en-US.r02",
+    "phase": "deliver",
+    "exit_code": 0,
+    "receipt": {
+      "schemaVersion": 1,
+      "ok": true,
+      "command": "deliver",
+      "type": "workflow",
+      "input": "/Users/christinaliu/Documents/ChatGPT/Australia Bank/clear-to-trade-product/prototype/diagrams/batch-c/DG-C-POPULATION.Target.en-US.r02.json",
+      "output": "/Users/christinaliu/Documents/ChatGPT/Australia Bank/clear-to-trade-product/prototype/diagrams/batch-c/DG-C-POPULATION.Target.en-US.r02.html",
+      "specification": {
+        "sha256": "126c3e1a66c23803ce68fca972549d1caa3670d391b88625469d0daf3d11f558",
+        "bytes": 2379
+      },
+      "artifact": {
+        "sha256": "0ee4ee1415e83d67dd12260e796a7037374f7cc58ae219b1bac183d609391d64",
+        "bytes": 704741
+      },
+      "validation": {
+        "checksPassed": 9,
+        "checkCount": 9,
+        "compositionProfile": "showcase",
+        "compositionStatus": "pass",
+        "errors": 0,
+        "warnings": 0
+      }
+    }
+  },
+  {
+    "name": "DG-C-MATCH.Current.zh-CN.r02",
+    "phase": "validate",
+    "exit_code": 0,
+    "receipt": {
+      "schemaVersion": 1,
+      "ok": true,
+      "command": "validate",
+      "type": "workflow",
+      "input": "/Users/christinaliu/Documents/ChatGPT/Australia Bank/clear-to-trade-product/prototype/diagrams/batch-c/DG-C-MATCH.Current.zh-CN.r02.json",
+      "checks": [
+        {
+          "name": "single_svg",
+          "ok": true,
+          "details": [
+            "found 1 <svg> block(s)"
+          ]
+        },
+        {
+          "name": "finite_svg",
+          "ok": true,
+          "details": []
+        },
+        {
+          "name": "orthogonal_arrows",
+          "ok": true,
+          "details": []
+        },
+        {
+          "name": "label_route_clearance",
+          "ok": true,
+          "details": []
+        },
+        {
+          "name": "relationship_crossings",
+          "ok": true,
+          "details": []
+        },
+        {
+          "name": "relationship_corridors",
+          "ok": true,
+          "details": []
+        },
+        {
+          "name": "container_border_runs",
+          "ok": true,
+          "details": []
+        },
+        {
+          "name": "route_rhythm",
+          "ok": true,
+          "details": []
+        },
+        {
+          "name": "legend_clearance",
+          "ok": true,
+          "details": []
+        }
+      ],
+      "composition": {
+        "schemaVersion": 1,
+        "profile": "showcase",
+        "status": "pass",
+        "summary": {
+          "errors": 0,
+          "warnings": 0
+        },
+        "metrics": {
+          "properCrossings": 0,
+          "ambiguousCorridors": 0,
+          "containerBorderRuns": 0,
+          "labelRouteClearanceIssues": 0,
+          "minLabelRouteClearance": 6,
+          "desktopReadabilityIssues": 0,
+          "minProjectedNodeTextPx": null,
+          "maxBends": 3,
+          "routesOverSuggestedBends": 1,
+          "maxStretch": 1,
+          "routesOverSuggestedStretch": 0,
+          "minSegmentPx": 16,
+          "minInteriorSegmentPx": 51.2,
+          "shortSegmentCount": 0,
+          "shortEndpointSegmentCount": 0,
+          "shortInteriorSegmentCount": 0,
+          "microSegmentCount": 0
+        },
+        "suggestedLimits": {
+          "bendsPerRelationship": 2,
+          "stretch": 1.35,
+          "segmentPx": 16,
+          "microSegmentPx": 8
+        },
+        "issues": []
+      }
+    }
+  },
+  {
+    "name": "DG-C-MATCH.Current.zh-CN.r02",
+    "phase": "deliver",
+    "exit_code": 0,
+    "receipt": {
+      "schemaVersion": 1,
+      "ok": true,
+      "command": "deliver",
+      "type": "workflow",
+      "input": "/Users/christinaliu/Documents/ChatGPT/Australia Bank/clear-to-trade-product/prototype/diagrams/batch-c/DG-C-MATCH.Current.zh-CN.r02.json",
+      "output": "/Users/christinaliu/Documents/ChatGPT/Australia Bank/clear-to-trade-product/prototype/diagrams/batch-c/DG-C-MATCH.Current.zh-CN.r02.html",
+      "specification": {
+        "sha256": "4c95bb5ae63062a73afb0775f850a501bef628a98b4fdefc7cb935ed457b6d49",
+        "bytes": 2276
+      },
+      "artifact": {
+        "sha256": "ceeef2a61a634cda16a4e396b155d507e7205055c7380d386ff9e214c484e90d",
+        "bytes": 704931
+      },
+      "validation": {
+        "checksPassed": 9,
+        "checkCount": 9,
+        "compositionProfile": "showcase",
+        "compositionStatus": "pass",
+        "errors": 0,
+        "warnings": 0
+      }
+    }
+  },
+  {
+    "name": "DG-C-MATCH.Target.zh-CN.r02",
+    "phase": "validate",
+    "exit_code": 0,
+    "receipt": {
+      "schemaVersion": 1,
+      "ok": true,
+      "command": "validate",
+      "type": "workflow",
+      "input": "/Users/christinaliu/Documents/ChatGPT/Australia Bank/clear-to-trade-product/prototype/diagrams/batch-c/DG-C-MATCH.Target.zh-CN.r02.json",
+      "checks": [
+        {
+          "name": "single_svg",
+          "ok": true,
+          "details": [
+            "found 1 <svg> block(s)"
+          ]
+        },
+        {
+          "name": "finite_svg",
+          "ok": true,
+          "details": []
+        },
+        {
+          "name": "orthogonal_arrows",
+          "ok": true,
+          "details": []
+        },
+        {
+          "name": "label_route_clearance",
+          "ok": true,
+          "details": []
+        },
+        {
+          "name": "relationship_crossings",
+          "ok": true,
+          "details": []
+        },
+        {
+          "name": "relationship_corridors",
+          "ok": true,
+          "details": []
+        },
+        {
+          "name": "container_border_runs",
+          "ok": true,
+          "details": []
+        },
+        {
+          "name": "route_rhythm",
+          "ok": true,
+          "details": []
+        },
+        {
+          "name": "legend_clearance",
+          "ok": true,
+          "details": []
+        }
+      ],
+      "composition": {
+        "schemaVersion": 1,
+        "profile": "showcase",
+        "status": "pass",
+        "summary": {
+          "errors": 0,
+          "warnings": 0
+        },
+        "metrics": {
+          "properCrossings": 0,
+          "ambiguousCorridors": 0,
+          "containerBorderRuns": 0,
+          "labelRouteClearanceIssues": 0,
+          "minLabelRouteClearance": 6,
+          "desktopReadabilityIssues": 0,
+          "minProjectedNodeTextPx": null,
+          "maxBends": 3,
+          "routesOverSuggestedBends": 1,
+          "maxStretch": 1,
+          "routesOverSuggestedStretch": 0,
+          "minSegmentPx": 16,
+          "minInteriorSegmentPx": 51.2,
+          "shortSegmentCount": 0,
+          "shortEndpointSegmentCount": 0,
+          "shortInteriorSegmentCount": 0,
+          "microSegmentCount": 0
+        },
+        "suggestedLimits": {
+          "bendsPerRelationship": 2,
+          "stretch": 1.35,
+          "segmentPx": 16,
+          "microSegmentPx": 8
+        },
+        "issues": []
+      }
+    }
+  },
+  {
+    "name": "DG-C-MATCH.Target.zh-CN.r02",
+    "phase": "deliver",
+    "exit_code": 0,
+    "receipt": {
+      "schemaVersion": 1,
+      "ok": true,
+      "command": "deliver",
+      "type": "workflow",
+      "input": "/Users/christinaliu/Documents/ChatGPT/Australia Bank/clear-to-trade-product/prototype/diagrams/batch-c/DG-C-MATCH.Target.zh-CN.r02.json",
+      "output": "/Users/christinaliu/Documents/ChatGPT/Australia Bank/clear-to-trade-product/prototype/diagrams/batch-c/DG-C-MATCH.Target.zh-CN.r02.html",
+      "specification": {
+        "sha256": "45f8a2a9003b8aea807dd70dd1fe69791a7cd82a73052d256897467c0b2648d4",
+        "bytes": 2299
+      },
+      "artifact": {
+        "sha256": "ae58f3feb3dffd8642bff54a1b708b8247cef69f5dfc2dce0f46524ceadfb60f",
+        "bytes": 705230
+      },
+      "validation": {
+        "checksPassed": 9,
+        "checkCount": 9,
+        "compositionProfile": "showcase",
+        "compositionStatus": "pass",
+        "errors": 0,
+        "warnings": 0
+      }
+    }
+  },
+  {
+    "name": "DG-C-MATCH.Current.en-AU.r02",
+    "phase": "validate",
+    "exit_code": 0,
+    "receipt": {
+      "schemaVersion": 1,
+      "ok": true,
+      "command": "validate",
+      "type": "workflow",
+      "input": "/Users/christinaliu/Documents/ChatGPT/Australia Bank/clear-to-trade-product/prototype/diagrams/batch-c/DG-C-MATCH.Current.en-AU.r02.json",
+      "checks": [
+        {
+          "name": "single_svg",
+          "ok": true,
+          "details": [
+            "found 1 <svg> block(s)"
+          ]
+        },
+        {
+          "name": "finite_svg",
+          "ok": true,
+          "details": []
+        },
+        {
+          "name": "orthogonal_arrows",
+          "ok": true,
+          "details": []
+        },
+        {
+          "name": "label_route_clearance",
+          "ok": true,
+          "details": []
+        },
+        {
+          "name": "relationship_crossings",
+          "ok": true,
+          "details": []
+        },
+        {
+          "name": "relationship_corridors",
+          "ok": true,
+          "details": []
+        },
+        {
+          "name": "container_border_runs",
+          "ok": true,
+          "details": []
+        },
+        {
+          "name": "route_rhythm",
+          "ok": true,
+          "details": []
+        },
+        {
+          "name": "legend_clearance",
+          "ok": true,
+          "details": []
+        }
+      ],
+      "composition": {
+        "schemaVersion": 1,
+        "profile": "showcase",
+        "status": "pass",
+        "summary": {
+          "errors": 0,
+          "warnings": 0
+        },
+        "metrics": {
+          "properCrossings": 0,
+          "ambiguousCorridors": 0,
+          "containerBorderRuns": 0,
+          "labelRouteClearanceIssues": 0,
+          "minLabelRouteClearance": 6,
+          "desktopReadabilityIssues": 0,
+          "minProjectedNodeTextPx": null,
+          "maxBends": 3,
+          "routesOverSuggestedBends": 1,
+          "maxStretch": 1.119,
+          "routesOverSuggestedStretch": 0,
+          "minSegmentPx": 16,
+          "minInteriorSegmentPx": 213.2,
+          "shortSegmentCount": 0,
+          "shortEndpointSegmentCount": 0,
+          "shortInteriorSegmentCount": 0,
+          "microSegmentCount": 0
+        },
+        "suggestedLimits": {
+          "bendsPerRelationship": 2,
+          "stretch": 1.35,
+          "segmentPx": 16,
+          "microSegmentPx": 8
+        },
+        "issues": []
+      }
+    }
+  },
+  {
+    "name": "DG-C-MATCH.Current.en-AU.r02",
+    "phase": "deliver",
+    "exit_code": 0,
+    "receipt": {
+      "schemaVersion": 1,
+      "ok": true,
+      "command": "deliver",
+      "type": "workflow",
+      "input": "/Users/christinaliu/Documents/ChatGPT/Australia Bank/clear-to-trade-product/prototype/diagrams/batch-c/DG-C-MATCH.Current.en-AU.r02.json",
+      "output": "/Users/christinaliu/Documents/ChatGPT/Australia Bank/clear-to-trade-product/prototype/diagrams/batch-c/DG-C-MATCH.Current.en-AU.r02.html",
+      "specification": {
+        "sha256": "0c615413fd087b79db3a286be3f60f79f58723ad6c763baf7fa86e79766dbb30",
+        "bytes": 2250
+      },
+      "artifact": {
+        "sha256": "136075d3be8d49c2be18468fe5ace1b1d9e424a4f99f579f8058350be5f8033b",
+        "bytes": 704341
+      },
+      "validation": {
+        "checksPassed": 9,
+        "checkCount": 9,
+        "compositionProfile": "showcase",
+        "compositionStatus": "pass",
+        "errors": 0,
+        "warnings": 0
+      }
+    }
+  },
+  {
+    "name": "DG-C-MATCH.Target.en-AU.r02",
+    "phase": "validate",
+    "exit_code": 0,
+    "receipt": {
+      "schemaVersion": 1,
+      "ok": true,
+      "command": "validate",
+      "type": "workflow",
+      "input": "/Users/christinaliu/Documents/ChatGPT/Australia Bank/clear-to-trade-product/prototype/diagrams/batch-c/DG-C-MATCH.Target.en-AU.r02.json",
+      "checks": [
+        {
+          "name": "single_svg",
+          "ok": true,
+          "details": [
+            "found 1 <svg> block(s)"
+          ]
+        },
+        {
+          "name": "finite_svg",
+          "ok": true,
+          "details": []
+        },
+        {
+          "name": "orthogonal_arrows",
+          "ok": true,
+          "details": []
+        },
+        {
+          "name": "label_route_clearance",
+          "ok": true,
+          "details": []
+        },
+        {
+          "name": "relationship_crossings",
+          "ok": true,
+          "details": []
+        },
+        {
+          "name": "relationship_corridors",
+          "ok": true,
+          "details": []
+        },
+        {
+          "name": "container_border_runs",
+          "ok": true,
+          "details": []
+        },
+        {
+          "name": "route_rhythm",
+          "ok": true,
+          "details": []
+        },
+        {
+          "name": "legend_clearance",
+          "ok": true,
+          "details": []
+        }
+      ],
+      "composition": {
+        "schemaVersion": 1,
+        "profile": "showcase",
+        "status": "pass",
+        "summary": {
+          "errors": 0,
+          "warnings": 0
+        },
+        "metrics": {
+          "properCrossings": 0,
+          "ambiguousCorridors": 0,
+          "containerBorderRuns": 0,
+          "labelRouteClearanceIssues": 0,
+          "minLabelRouteClearance": 6,
+          "desktopReadabilityIssues": 0,
+          "minProjectedNodeTextPx": null,
+          "maxBends": 3,
+          "routesOverSuggestedBends": 1,
+          "maxStretch": 1.119,
+          "routesOverSuggestedStretch": 0,
+          "minSegmentPx": 16,
+          "minInteriorSegmentPx": 213.2,
+          "shortSegmentCount": 0,
+          "shortEndpointSegmentCount": 0,
+          "shortInteriorSegmentCount": 0,
+          "microSegmentCount": 0
+        },
+        "suggestedLimits": {
+          "bendsPerRelationship": 2,
+          "stretch": 1.35,
+          "segmentPx": 16,
+          "microSegmentPx": 8
+        },
+        "issues": []
+      }
+    }
+  },
+  {
+    "name": "DG-C-MATCH.Target.en-AU.r02",
+    "phase": "deliver",
+    "exit_code": 0,
+    "receipt": {
+      "schemaVersion": 1,
+      "ok": true,
+      "command": "deliver",
+      "type": "workflow",
+      "input": "/Users/christinaliu/Documents/ChatGPT/Australia Bank/clear-to-trade-product/prototype/diagrams/batch-c/DG-C-MATCH.Target.en-AU.r02.json",
+      "output": "/Users/christinaliu/Documents/ChatGPT/Australia Bank/clear-to-trade-product/prototype/diagrams/batch-c/DG-C-MATCH.Target.en-AU.r02.html",
+      "specification": {
+        "sha256": "e98c93679f0acf8a71658c27f2bd0bb23b7748b88ec9f007c2d267222d2ca7c2",
+        "bytes": 2278
+      },
+      "artifact": {
+        "sha256": "54c03087f55ba7e78e7c9b0e42195a3395e5cbc4d44a0530f84184bc0d2d4d13",
+        "bytes": 704715
+      },
+      "validation": {
+        "checksPassed": 9,
+        "checkCount": 9,
+        "compositionProfile": "showcase",
+        "compositionStatus": "pass",
+        "errors": 0,
+        "warnings": 0
+      }
+    }
+  },
+  {
+    "name": "DG-C-MATCH.Current.en-US.r02",
+    "phase": "validate",
+    "exit_code": 0,
+    "receipt": {
+      "schemaVersion": 1,
+      "ok": true,
+      "command": "validate",
+      "type": "workflow",
+      "input": "/Users/christinaliu/Documents/ChatGPT/Australia Bank/clear-to-trade-product/prototype/diagrams/batch-c/DG-C-MATCH.Current.en-US.r02.json",
+      "checks": [
+        {
+          "name": "single_svg",
+          "ok": true,
+          "details": [
+            "found 1 <svg> block(s)"
+          ]
+        },
+        {
+          "name": "finite_svg",
+          "ok": true,
+          "details": []
+        },
+        {
+          "name": "orthogonal_arrows",
+          "ok": true,
+          "details": []
+        },
+        {
+          "name": "label_route_clearance",
+          "ok": true,
+          "details": []
+        },
+        {
+          "name": "relationship_crossings",
+          "ok": true,
+          "details": []
+        },
+        {
+          "name": "relationship_corridors",
+          "ok": true,
+          "details": []
+        },
+        {
+          "name": "container_border_runs",
+          "ok": true,
+          "details": []
+        },
+        {
+          "name": "route_rhythm",
+          "ok": true,
+          "details": []
+        },
+        {
+          "name": "legend_clearance",
+          "ok": true,
+          "details": []
+        }
+      ],
+      "composition": {
+        "schemaVersion": 1,
+        "profile": "showcase",
+        "status": "pass",
+        "summary": {
+          "errors": 0,
+          "warnings": 0
+        },
+        "metrics": {
+          "properCrossings": 0,
+          "ambiguousCorridors": 0,
+          "containerBorderRuns": 0,
+          "labelRouteClearanceIssues": 0,
+          "minLabelRouteClearance": 6,
+          "desktopReadabilityIssues": 0,
+          "minProjectedNodeTextPx": null,
+          "maxBends": 3,
+          "routesOverSuggestedBends": 1,
+          "maxStretch": 1.119,
+          "routesOverSuggestedStretch": 0,
+          "minSegmentPx": 16,
+          "minInteriorSegmentPx": 213.2,
+          "shortSegmentCount": 0,
+          "shortEndpointSegmentCount": 0,
+          "shortInteriorSegmentCount": 0,
+          "microSegmentCount": 0
+        },
+        "suggestedLimits": {
+          "bendsPerRelationship": 2,
+          "stretch": 1.35,
+          "segmentPx": 16,
+          "microSegmentPx": 8
+        },
+        "issues": []
+      }
+    }
+  },
+  {
+    "name": "DG-C-MATCH.Current.en-US.r02",
+    "phase": "deliver",
+    "exit_code": 0,
+    "receipt": {
+      "schemaVersion": 1,
+      "ok": true,
+      "command": "deliver",
+      "type": "workflow",
+      "input": "/Users/christinaliu/Documents/ChatGPT/Australia Bank/clear-to-trade-product/prototype/diagrams/batch-c/DG-C-MATCH.Current.en-US.r02.json",
+      "output": "/Users/christinaliu/Documents/ChatGPT/Australia Bank/clear-to-trade-product/prototype/diagrams/batch-c/DG-C-MATCH.Current.en-US.r02.html",
+      "specification": {
+        "sha256": "0c615413fd087b79db3a286be3f60f79f58723ad6c763baf7fa86e79766dbb30",
+        "bytes": 2250
+      },
+      "artifact": {
+        "sha256": "136075d3be8d49c2be18468fe5ace1b1d9e424a4f99f579f8058350be5f8033b",
+        "bytes": 704341
+      },
+      "validation": {
+        "checksPassed": 9,
+        "checkCount": 9,
+        "compositionProfile": "showcase",
+        "compositionStatus": "pass",
+        "errors": 0,
+        "warnings": 0
+      }
+    }
+  },
+  {
+    "name": "DG-C-MATCH.Target.en-US.r02",
+    "phase": "validate",
+    "exit_code": 0,
+    "receipt": {
+      "schemaVersion": 1,
+      "ok": true,
+      "command": "validate",
+      "type": "workflow",
+      "input": "/Users/christinaliu/Documents/ChatGPT/Australia Bank/clear-to-trade-product/prototype/diagrams/batch-c/DG-C-MATCH.Target.en-US.r02.json",
+      "checks": [
+        {
+          "name": "single_svg",
+          "ok": true,
+          "details": [
+            "found 1 <svg> block(s)"
+          ]
+        },
+        {
+          "name": "finite_svg",
+          "ok": true,
+          "details": []
+        },
+        {
+          "name": "orthogonal_arrows",
+          "ok": true,
+          "details": []
+        },
+        {
+          "name": "label_route_clearance",
+          "ok": true,
+          "details": []
+        },
+        {
+          "name": "relationship_crossings",
+          "ok": true,
+          "details": []
+        },
+        {
+          "name": "relationship_corridors",
+          "ok": true,
+          "details": []
+        },
+        {
+          "name": "container_border_runs",
+          "ok": true,
+          "details": []
+        },
+        {
+          "name": "route_rhythm",
+          "ok": true,
+          "details": []
+        },
+        {
+          "name": "legend_clearance",
+          "ok": true,
+          "details": []
+        }
+      ],
+      "composition": {
+        "schemaVersion": 1,
+        "profile": "showcase",
+        "status": "pass",
+        "summary": {
+          "errors": 0,
+          "warnings": 0
+        },
+        "metrics": {
+          "properCrossings": 0,
+          "ambiguousCorridors": 0,
+          "containerBorderRuns": 0,
+          "labelRouteClearanceIssues": 0,
+          "minLabelRouteClearance": 6,
+          "desktopReadabilityIssues": 0,
+          "minProjectedNodeTextPx": null,
+          "maxBends": 3,
+          "routesOverSuggestedBends": 1,
+          "maxStretch": 1.119,
+          "routesOverSuggestedStretch": 0,
+          "minSegmentPx": 16,
+          "minInteriorSegmentPx": 213.2,
+          "shortSegmentCount": 0,
+          "shortEndpointSegmentCount": 0,
+          "shortInteriorSegmentCount": 0,
+          "microSegmentCount": 0
+        },
+        "suggestedLimits": {
+          "bendsPerRelationship": 2,
+          "stretch": 1.35,
+          "segmentPx": 16,
+          "microSegmentPx": 8
+        },
+        "issues": []
+      }
+    }
+  },
+  {
+    "name": "DG-C-MATCH.Target.en-US.r02",
+    "phase": "deliver",
+    "exit_code": 0,
+    "receipt": {
+      "schemaVersion": 1,
+      "ok": true,
+      "command": "deliver",
+      "type": "workflow",
+      "input": "/Users/christinaliu/Documents/ChatGPT/Australia Bank/clear-to-trade-product/prototype/diagrams/batch-c/DG-C-MATCH.Target.en-US.r02.json",
+      "output": "/Users/christinaliu/Documents/ChatGPT/Australia Bank/clear-to-trade-product/prototype/diagrams/batch-c/DG-C-MATCH.Target.en-US.r02.html",
+      "specification": {
+        "sha256": "e98c93679f0acf8a71658c27f2bd0bb23b7748b88ec9f007c2d267222d2ca7c2",
+        "bytes": 2278
+      },
+      "artifact": {
+        "sha256": "54c03087f55ba7e78e7c9b0e42195a3395e5cbc4d44a0530f84184bc0d2d4d13",
+        "bytes": 704715
+      },
+      "validation": {
+        "checksPassed": 9,
+        "checkCount": 9,
+        "compositionProfile": "showcase",
+        "compositionStatus": "pass",
+        "errors": 0,
+        "warnings": 0
+      }
+    }
+  },
+  {
+    "name": "DG-C-EDD.Current.zh-CN.r02",
+    "phase": "validate",
+    "exit_code": 1,
+    "receipt": {
+      "schemaVersion": 1,
+      "ok": false,
+      "command": "validate",
+      "stage": "render",
+      "type": "workflow",
+      "input": "/Users/christinaliu/Documents/ChatGPT/Australia Bank/clear-to-trade-product/prototype/diagrams/batch-c/DG-C-EDD.Current.zh-CN.r02.json",
+      "error": "Workflow edge \"edge1\" cannot satisfy route preset \"up-channel\" under readable-v2 constraints (minimum 8px endpoint stubs, 16px interior turns, and 28px direct clearance).",
+      "diagnostics": [
+        {
+          "code": "workflow/route-preset-conflict",
+          "severity": "error",
+          "message": "Workflow edge \"edge1\" cannot satisfy route preset \"up-channel\" under readable-v2 constraints (minimum 8px endpoint stubs, 16px interior turns, and 28px direct clearance).",
+          "subject": {
+            "diagramType": "workflow",
+            "edge": "edge1",
+            "from": "context",
+            "to": "notrequired",
+            "route": "up-channel"
+          },
+          "evidence": {
+            "attemptedCandidateFamily": "up-channel",
+            "points": [
+              [
+                288,
+                369
+              ],
+              [
+                288,
+                58
+              ],
+              [
+                387.6,
+                58
+              ],
+              [
+                387.6,
+                161
+              ]
+            ],
+            "fromSide": "right",
+            "toSide": "left",
+            "requiredEndpointStubPx": 8,
+            "requiredInteriorSegmentPx": 16,
+            "requiredDirectClearancePx": 28
+          },
+          "supportedFixes": [
+            "set edge \"edge1\" route to verified preset \"return-left\""
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "name": "DG-C-EDD.Target.zh-CN.r02",
+    "phase": "validate",
+    "exit_code": 1,
+    "receipt": {
+      "schemaVersion": 1,
+      "ok": false,
+      "command": "validate",
+      "stage": "render",
+      "type": "workflow",
+      "input": "/Users/christinaliu/Documents/ChatGPT/Australia Bank/clear-to-trade-product/prototype/diagrams/batch-c/DG-C-EDD.Target.zh-CN.r02.json",
+      "error": "Workflow edge \"edge1\" cannot satisfy route preset \"up-channel\" under readable-v2 constraints (minimum 8px endpoint stubs, 16px interior turns, and 28px direct clearance).",
+      "diagnostics": [
+        {
+          "code": "workflow/route-preset-conflict",
+          "severity": "error",
+          "message": "Workflow edge \"edge1\" cannot satisfy route preset \"up-channel\" under readable-v2 constraints (minimum 8px endpoint stubs, 16px interior turns, and 28px direct clearance).",
+          "subject": {
+            "diagramType": "workflow",
+            "edge": "edge1",
+            "from": "context",
+            "to": "notrequired",
+            "route": "up-channel"
+          },
+          "evidence": {
+            "attemptedCandidateFamily": "up-channel",
+            "points": [
+              [
+                288,
+                369
+              ],
+              [
+                288,
+                58
+              ],
+              [
+                387.6,
+                58
+              ],
+              [
+                387.6,
+                161
+              ]
+            ],
+            "fromSide": "right",
+            "toSide": "left",
+            "requiredEndpointStubPx": 8,
+            "requiredInteriorSegmentPx": 16,
+            "requiredDirectClearancePx": 28
+          },
+          "supportedFixes": [
+            "set edge \"edge1\" route to verified preset \"return-left\""
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "name": "DG-C-EDD.Current.en-AU.r02",
+    "phase": "validate",
+    "exit_code": 1,
+    "receipt": {
+      "schemaVersion": 1,
+      "ok": false,
+      "command": "validate",
+      "stage": "render",
+      "type": "workflow",
+      "input": "/Users/christinaliu/Documents/ChatGPT/Australia Bank/clear-to-trade-product/prototype/diagrams/batch-c/DG-C-EDD.Current.en-AU.r02.json",
+      "error": "Workflow edge \"edge1\" cannot satisfy route preset \"up-channel\" under readable-v2 constraints (minimum 8px endpoint stubs, 16px interior turns, and 28px direct clearance).",
+      "diagnostics": [
+        {
+          "code": "workflow/route-preset-conflict",
+          "severity": "error",
+          "message": "Workflow edge \"edge1\" cannot satisfy route preset \"up-channel\" under readable-v2 constraints (minimum 8px endpoint stubs, 16px interior turns, and 28px direct clearance).",
+          "subject": {
+            "diagramType": "workflow",
+            "edge": "edge1",
+            "from": "context",
+            "to": "notrequired",
+            "route": "up-channel"
+          },
+          "evidence": {
+            "attemptedCandidateFamily": "up-channel",
+            "points": [
+              [
+                288,
+                369
+              ],
+              [
+                288,
+                58
+              ],
+              [
+                406.79999999999995,
+                58
+              ],
+              [
+                406.79999999999995,
+                161
+              ]
+            ],
+            "fromSide": "right",
+            "toSide": "left",
+            "requiredEndpointStubPx": 8,
+            "requiredInteriorSegmentPx": 16,
+            "requiredDirectClearancePx": 28
+          },
+          "supportedFixes": [
+            "set edge \"edge1\" route to verified preset \"return-left\""
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "name": "DG-C-EDD.Target.en-AU.r02",
+    "phase": "validate",
+    "exit_code": 1,
+    "receipt": {
+      "schemaVersion": 1,
+      "ok": false,
+      "command": "validate",
+      "stage": "render",
+      "type": "workflow",
+      "input": "/Users/christinaliu/Documents/ChatGPT/Australia Bank/clear-to-trade-product/prototype/diagrams/batch-c/DG-C-EDD.Target.en-AU.r02.json",
+      "error": "Workflow edge \"edge1\" cannot satisfy route preset \"up-channel\" under readable-v2 constraints (minimum 8px endpoint stubs, 16px interior turns, and 28px direct clearance).",
+      "diagnostics": [
+        {
+          "code": "workflow/route-preset-conflict",
+          "severity": "error",
+          "message": "Workflow edge \"edge1\" cannot satisfy route preset \"up-channel\" under readable-v2 constraints (minimum 8px endpoint stubs, 16px interior turns, and 28px direct clearance).",
+          "subject": {
+            "diagramType": "workflow",
+            "edge": "edge1",
+            "from": "context",
+            "to": "notrequired",
+            "route": "up-channel"
+          },
+          "evidence": {
+            "attemptedCandidateFamily": "up-channel",
+            "points": [
+              [
+                288,
+                369
+              ],
+              [
+                288,
+                58
+              ],
+              [
+                406.79999999999995,
+                58
+              ],
+              [
+                406.79999999999995,
+                161
+              ]
+            ],
+            "fromSide": "right",
+            "toSide": "left",
+            "requiredEndpointStubPx": 8,
+            "requiredInteriorSegmentPx": 16,
+            "requiredDirectClearancePx": 28
+          },
+          "supportedFixes": [
+            "set edge \"edge1\" route to verified preset \"return-left\""
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "name": "DG-C-EDD.Current.en-US.r02",
+    "phase": "validate",
+    "exit_code": 1,
+    "receipt": {
+      "schemaVersion": 1,
+      "ok": false,
+      "command": "validate",
+      "stage": "render",
+      "type": "workflow",
+      "input": "/Users/christinaliu/Documents/ChatGPT/Australia Bank/clear-to-trade-product/prototype/diagrams/batch-c/DG-C-EDD.Current.en-US.r02.json",
+      "error": "Workflow edge \"edge1\" cannot satisfy route preset \"up-channel\" under readable-v2 constraints (minimum 8px endpoint stubs, 16px interior turns, and 28px direct clearance).",
+      "diagnostics": [
+        {
+          "code": "workflow/route-preset-conflict",
+          "severity": "error",
+          "message": "Workflow edge \"edge1\" cannot satisfy route preset \"up-channel\" under readable-v2 constraints (minimum 8px endpoint stubs, 16px interior turns, and 28px direct clearance).",
+          "subject": {
+            "diagramType": "workflow",
+            "edge": "edge1",
+            "from": "context",
+            "to": "notrequired",
+            "route": "up-channel"
+          },
+          "evidence": {
+            "attemptedCandidateFamily": "up-channel",
+            "points": [
+              [
+                288,
+                369
+              ],
+              [
+                288,
+                58
+              ],
+              [
+                406.79999999999995,
+                58
+              ],
+              [
+                406.79999999999995,
+                161
+              ]
+            ],
+            "fromSide": "right",
+            "toSide": "left",
+            "requiredEndpointStubPx": 8,
+            "requiredInteriorSegmentPx": 16,
+            "requiredDirectClearancePx": 28
+          },
+          "supportedFixes": [
+            "set edge \"edge1\" route to verified preset \"return-left\""
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "name": "DG-C-EDD.Target.en-US.r02",
+    "phase": "validate",
+    "exit_code": 1,
+    "receipt": {
+      "schemaVersion": 1,
+      "ok": false,
+      "command": "validate",
+      "stage": "render",
+      "type": "workflow",
+      "input": "/Users/christinaliu/Documents/ChatGPT/Australia Bank/clear-to-trade-product/prototype/diagrams/batch-c/DG-C-EDD.Target.en-US.r02.json",
+      "error": "Workflow edge \"edge1\" cannot satisfy route preset \"up-channel\" under readable-v2 constraints (minimum 8px endpoint stubs, 16px interior turns, and 28px direct clearance).",
+      "diagnostics": [
+        {
+          "code": "workflow/route-preset-conflict",
+          "severity": "error",
+          "message": "Workflow edge \"edge1\" cannot satisfy route preset \"up-channel\" under readable-v2 constraints (minimum 8px endpoint stubs, 16px interior turns, and 28px direct clearance).",
+          "subject": {
+            "diagramType": "workflow",
+            "edge": "edge1",
+            "from": "context",
+            "to": "notrequired",
+            "route": "up-channel"
+          },
+          "evidence": {
+            "attemptedCandidateFamily": "up-channel",
+            "points": [
+              [
+                288,
+                369
+              ],
+              [
+                288,
+                58
+              ],
+              [
+                406.79999999999995,
+                58
+              ],
+              [
+                406.79999999999995,
+                161
+              ]
+            ],
+            "fromSide": "right",
+            "toSide": "left",
+            "requiredEndpointStubPx": 8,
+            "requiredInteriorSegmentPx": 16,
+            "requiredDirectClearancePx": 28
+          },
+          "supportedFixes": [
+            "set edge \"edge1\" route to verified preset \"return-left\""
+          ]
+        }
+      ]
+    }
+  }
+]

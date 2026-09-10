@@ -1,0 +1,96 @@
+{
+  "schema_version": 2,
+  "diagram_type": "workflow",
+  "meta": {
+    "title": "准备工作不等于交易准入",
+    "locale": "zh-CN",
+    "quality_profile": "showcase",
+    "animation": "none"
+  },
+  "lanes": [
+    {
+      "id": "ready",
+      "label": "仅在前置条件满足时"
+    },
+    {
+      "id": "wait",
+      "label": "保留未知事项"
+    }
+  ],
+  "mainPath": [
+    "scope",
+    "gate",
+    "prepare"
+  ],
+  "nodes": [
+    {
+      "id": "scope",
+      "lane": "ready",
+      "col": 0,
+      "type": "backend",
+      "label": "当前范围版本",
+      "sublabel": "Entity A / 外汇远期",
+      "width": 210
+    },
+    {
+      "id": "gate",
+      "lane": "ready",
+      "col": 1,
+      "type": "security",
+      "label": "各任务专属门槛",
+      "sublabel": "输入 + 权限 + 无适用暂停",
+      "width": 220
+    },
+    {
+      "id": "prepare",
+      "lane": "ready",
+      "col": 2,
+      "type": "backend",
+      "label": "仅准备工作",
+      "sublabel": "要求 / 来源 / 检查准备",
+      "width": 235
+    },
+    {
+      "id": "wait",
+      "lane": "wait",
+      "col": 1,
+      "type": "external",
+      "label": "等待输入",
+      "sublabel": "法务 / 信贷适用性",
+      "width": 220
+    },
+    {
+      "id": "notready",
+      "lane": "wait",
+      "col": 2,
+      "type": "external",
+      "label": "案件：尚未就绪",
+      "sublabel": "权限 / Booking / 条件",
+      "width": 235
+    }
+  ],
+  "edges": [
+    {
+      "from": "scope",
+      "to": "gate",
+      "label": "评估"
+    },
+    {
+      "from": "gate",
+      "to": "prepare",
+      "label": "输入充分"
+    },
+    {
+      "from": "gate",
+      "to": "wait",
+      "label": "未知或暂停",
+      "variant": "dashed"
+    },
+    {
+      "from": "prepare",
+      "to": "notready",
+      "label": "不代表全权批准",
+      "variant": "dashed"
+    }
+  ]
+}

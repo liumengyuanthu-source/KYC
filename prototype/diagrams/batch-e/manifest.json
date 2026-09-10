@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "sourceRef": "SRC-020",
+  "sourceStatus": "approved_demo_design_not_bank_validation",
+  "archifyVersion": "2.17",
+  "readOnly": true,
+  "businessStateWrites": false,
+  "localeAliases": {"en-US": "en-AU"},
+  "hostContract": {
+    "render": "Use *.host.svg for the mainline, *.print.svg for print. Offer semantic step text alongside graphics, including on small screens.",
+    "focus": "Host-owned selection only; no iframe playback or business commands. Preserve scenario and journey location.",
+    "palette": "Host derivatives are explicitly neutral black/blue/white, sans-serif; geometry and text unchanged from canonical Archify SVG export.",
+    "validation": "Five canonical HTML artifacts passed Archify structural and browser checks. Host derivative palette/export checks passed. Host embedding/return/print tests are separate.",
+    "media": "No video or audio received; static fallback only. Do not present static steps as recorded playback."
+  },
+  "diagrams": [
+    {"id":"DG-E01","scenes":["SCN-QA"],"title":{"en-AU":"Resolve a quality gap","zh-CN":"处理质量缺口"},"locales":{"en-AU":"DG-E01.en-AU.host.svg","zh-CN":"DG-E01.zh-CN.host.svg"},"steps":["E01-check","E01-gap","E01-remediate","E01-rereview","E01-signoff"],"scopeNote":"This diagram illustrates the authored ownership-purpose gap loop, not a claim that every QA case must need remediation."},
+    {"id":"DG-E02","scenes":["SCN-READINESS"],"title":{"en-AU":"Assess current readiness","zh-CN":"核对当前就绪状态"},"locales":{"en-AU":"DG-E02.en-AU.host.svg","zh-CN":"DG-E02.zh-CN.host.svg"},"steps":["E02-scope","E02-prerequisites","E02-evaluate","E02-ready","E02-notready"]},
+    {"id":"DG-E03","scenes":["SCN-PUBLISH"],"title":{"en-AU":"Confirm and communicate","zh-CN":"确认并传达结果"},"locales":{"en-AU":null,"zh-CN":"DG-E03.zh-CN.host.svg"},"steps":["E03-ready","E03-confirm","E03-decision","E03-publish","E03-communicate","E03-failure"],"fallback":{"en-AU":["Review the current readiness snapshot and complete basis.","An authorised demo reviewer confirms the current scope with rationale.","Record the scoped clearance decision and timestamp.","Publish the permitted outcome through a separate simulated action.","Record delivery status; a failed publication preserves the decision.","No trade is executed."]},"limitation":"English Archify candidate failed the projected-text readability gate. Bounded repair stopped after two non-improving results; use the English semantic static fallback, not the failed graph."}
+  ],
+  "evidence": ["delivery-receipts.json","export-receipts.json","DG-E01.en-AU.visual-check.json","DG-E01.zh-CN.visual-check.json","DG-E02.en-AU.visual-check.json","DG-E02.zh-CN.visual-check.json","DG-E03.zh-CN.visual-check.json"],
+  "visualReview": {"status":"reviewed_with_limitations","reviewer":"Codex root","images":"All five *.host.png inspected; neutral palette, no observed clipping or overlaps at captured desktop size. Wide diagrams require zoom or semantic text on narrow hosts. This is not user visual acceptance."}
+}

@@ -1,0 +1,116 @@
+{
+  "schema_version": 2,
+  "diagram_type": "workflow",
+  "meta": {
+    "title": "QA remediation",
+    "locale": "en",
+    "quality_profile": "showcase",
+    "animation": "none",
+    "legend": {
+      "mode": "auto",
+      "entries": {
+        "frontend": {
+          "label": "Read-only activity"
+        }
+      }
+    }
+  },
+  "lanes": [
+    {
+      "id": "qa",
+      "label": "Quality assurance"
+    },
+    {
+      "id": "ops",
+      "label": "KYC Operations"
+    }
+  ],
+  "mainPath": [
+    "E01-check",
+    "E01-gap",
+    "E01-remediate",
+    "E01-rereview",
+    "E01-signoff"
+  ],
+  "nodes": [
+    {
+      "id": "E01-check",
+      "lane": "qa",
+      "col": 0,
+      "width": 154,
+      "type": "frontend",
+      "label": "Review case",
+      "sublabel": "Requirements and evidence uses",
+      "height": 150
+    },
+    {
+      "id": "E01-gap",
+      "lane": "qa",
+      "col": 1,
+      "width": 154,
+      "type": "frontend",
+      "label": "Specify gap",
+      "sublabel": "Ownership / control purpose",
+      "height": 150
+    },
+    {
+      "id": "E01-remediate",
+      "lane": "ops",
+      "col": 2,
+      "width": 154,
+      "type": "frontend",
+      "label": "Remediate",
+      "sublabel": "Only the affected requirement",
+      "height": 150
+    },
+    {
+      "id": "E01-rereview",
+      "lane": "qa",
+      "col": 3,
+      "width": 154,
+      "type": "frontend",
+      "label": "Re-review",
+      "sublabel": "Current evidence and purpose",
+      "height": 150
+    },
+    {
+      "id": "E01-signoff",
+      "lane": "qa",
+      "col": 4,
+      "width": 154,
+      "type": "frontend",
+      "label": "QA sign-off",
+      "sublabel": "Not whole-case clearance",
+      "height": 150
+    }
+  ],
+  "edges": [
+    {
+      "from": "E01-check",
+      "to": "E01-gap",
+      "label": "Insufficient use"
+    },
+    {
+      "from": "E01-gap",
+      "to": "E01-remediate",
+      "label": "Assigned action"
+    },
+    {
+      "from": "E01-remediate",
+      "to": "E01-rereview",
+      "label": "Submitted for review"
+    },
+    {
+      "from": "E01-rereview",
+      "to": "E01-signoff",
+      "label": "Supported and current"
+    },
+    {
+      "from": "E01-rereview",
+      "to": "E01-gap",
+      "label": "Gap remains",
+      "role": "return",
+      "variant": "default"
+    }
+  ]
+}

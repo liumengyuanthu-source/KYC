@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Scenario Template Version 2 · Clear-to-Trade — M0.1</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css?v=journey-return-1">
+<link rel="stylesheet" href="version-2.css?v=journey-return-1">
+</head>
+<body>
+<div class="window" id="window">
+
+  <!-- window chrome -->
+  <div class="chrome">
+    <div class="brand-mark" aria-hidden="true">CT</div>
+    <div class="chrome-title">
+      <svg viewBox="0 0 24 24" class="ic"><path d="M12 2l7 4v6c0 5-3.5 8.5-7 10-3.5-1.5-7-5-7-10V6l7-4z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M8.5 12l2.5 2.5 4.5-5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span>Clear-to-Trade · Scenario Studio<small>Scenario Template · Version 2</small></span>
+    </div>
+    <a class="back-journey" id="backJourney" href="../../index.html?locale=en-US&amp;comparison=after&amp;mapview=map&amp;dimension=cj&amp;studio=fulljourney" aria-label="Back to Customer Journey">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7M8 12h11" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span>Back to Customer Journey</span>
+    </a>
+    <div class="chrome-right">
+      <span class="save-state" id="saveState">All drafts saved locally</span>
+      <span class="live-pill"><span class="pulse-dot"></span>Workshop live</span>
+    </div>
+  </div>
+
+  <div class="shell">
+
+    <!-- left icon rail -->
+    <nav class="rail" id="rail" aria-label="Workshop steps"></nav>
+
+    <!-- main canvas -->
+    <main class="canvas" id="canvas">
+      <header class="masthead">
+        <div class="masthead-top">
+          <div class="scenario-heading">
+            <span class="scenario-kicker">NEW INSTITUTIONAL RELATIONSHIP · WORKSHOP</span>
+            <h1 id="moduleTitle">Scenario M0.1 - Sales location &amp; booking entity</h1>
+            <p class="module-sub" id="moduleSub"><b class="objective-label">Objective</b> Determine the appropriate sales location, reporting context and booking entity for Entity A’s onboarding request, using supported relationship, product and jurisdiction information; identify unresolved questions and any human decisions needed before downstream handoff.</p>
+          </div>
+          <div class="you-are-here" aria-label="Customer journey location">
+            <span class="yah-label" id="journeyLabel">Clear-to-Trade customer journey</span>
+            <ol class="journey-chain" aria-labelledby="journeyLabel">
+              <li class="journey-stage" aria-current="step"><span class="journey-stage-name">Initiate</span><span class="journey-marker">You are here</span></li>
+              <li class="journey-stage"><span class="journey-stage-name">Determine</span></li>
+              <li class="journey-stage"><span class="journey-stage-name">Assess</span></li>
+              <li class="journey-stage"><span class="journey-stage-name">Resolve</span></li>
+              <li class="journey-stage"><span class="journey-stage-name">Clear</span></li>
+            </ol>
+          </div>
+        </div>
+        <div class="wiz" id="wiz"></div>
+      </header>
+
+      <section id="module" class="module"></section>
+
+      <footer class="wiznav">
+        <button class="btn btn-ghost" id="btnBack">
+          <svg viewBox="0 0 24 24" class="ic"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Back
+        </button>
+        <div class="wiznav-note" id="wiznavNote">Notes are kept when you move between steps</div>
+        <button class="btn btn-dark" id="btnNext">
+          Continue
+          <svg viewBox="0 0 24 24" class="ic"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+      </footer>
+    </main>
+
+    <!-- right rail -->
+    <aside class="side">
+      <div class="side-card hero-mini" id="heroMini"></div>
+      <div class="side-card activity-card" id="activityCard"></div>
+      <div class="side-card feed-card" id="feedCard"></div>
+    </aside>
+  </div>
+
+  <!-- detail drawer -->
+  <div class="scrim" id="scrim"></div>
+  <aside class="drawer" id="drawer" aria-hidden="true"></aside>
+
+  <!-- toast -->
+  <div class="toast" id="toast"></div>
+</div>
+
+<div id="printArea" class="print-area"></div>
+
+<script src="before-workflow.js"></script>
+<script src="tobe-workflow.js?v=manual-play-1"></script>
+<script src="discussion-summary.js"></script>
+<script src="../../shared/scenario-progress.js"></script>
+<script src="app.js?v=journey-return-1"></script>
+</body>
+</html>

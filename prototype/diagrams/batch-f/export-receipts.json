@@ -1,0 +1,34 @@
+[
+  {
+    "name": "DG-F01.en-AU",
+    "canonical_export": "SVG viewer download",
+    "html_sha256": "62b30e3330f9e6dac5964f1194401a9ecb0a98c1d9be83e4216c1dbd789deb03",
+    "svg_sha256": "75dd146a1cfa3aaf7d68fb80a43385332fc216ef3277394c8d6caca997ae044e",
+    "host_derivative": "Neutral black/blue/white palette and sans-serif font; geometry/text unchanged",
+    "state_writes": false
+  },
+  {
+    "name": "DG-F01.zh-CN",
+    "canonical_export": "SVG viewer download",
+    "html_sha256": "2282cf0275761560e3dffc963819fb815adc515e6277d35705932e84bf66fc5a",
+    "svg_sha256": "bf1a630e1e888933ad9c55b47fdff4c07408da0ab23712e1205e2dcf62dcb10c",
+    "host_derivative": "Neutral black/blue/white palette and sans-serif font; geometry/text unchanged",
+    "state_writes": false
+  },
+  {
+    "name": "DG-F03.en-AU",
+    "canonical_export": "SVG viewer download",
+    "html_sha256": "d6b9d11255f3102d4b46af2c447b9cbe1bb2aa5982983c1f6218e0ae2ee972f3",
+    "svg_sha256": "534f004ea67881614f9b568d363c826578b1ecfe21d810ea867a3bc96152df90",
+    "host_derivative": "Neutral black/blue/white palette and sans-serif font; geometry/text unchanged",
+    "state_writes": false
+  },
+  {
+    "name": "DG-F03.zh-CN",
+    "canonical_export": "SVG viewer download",
+    "html_sha256": "1b855c636d066f32485e26c482d14747e19bdd08faf857c6fdf77e8bc4042815",
+    "svg_sha256": "1bd60bca5159dd38813abbb626029b10f69ad8f065c0fcde4e31e92f8ee00620",
+    "host_derivative": "Neutral black/blue/white palette and sans-serif font; geometry/text unchanged",
+    "state_writes": false
+  }
+]

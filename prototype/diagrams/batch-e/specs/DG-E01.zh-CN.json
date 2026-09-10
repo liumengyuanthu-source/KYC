@@ -1,0 +1,116 @@
+{
+  "schema_version": 2,
+  "diagram_type": "workflow",
+  "meta": {
+    "title": "质量复核与定向补救",
+    "locale": "zh-CN",
+    "quality_profile": "showcase",
+    "animation": "none",
+    "legend": {
+      "mode": "auto",
+      "entries": {
+        "frontend": {
+          "label": "只读活动"
+        }
+      }
+    }
+  },
+  "lanes": [
+    {
+      "id": "qa",
+      "label": "质量复核"
+    },
+    {
+      "id": "ops",
+      "label": "KYC 运营"
+    }
+  ],
+  "mainPath": [
+    "E01-check",
+    "E01-gap",
+    "E01-remediate",
+    "E01-rereview",
+    "E01-signoff"
+  ],
+  "nodes": [
+    {
+      "id": "E01-check",
+      "lane": "qa",
+      "col": 0,
+      "width": 154,
+      "type": "frontend",
+      "label": "复核案件",
+      "sublabel": "适用要求与证据用途",
+      "height": 150
+    },
+    {
+      "id": "E01-gap",
+      "lane": "qa",
+      "col": 1,
+      "width": 154,
+      "type": "frontend",
+      "label": "明确缺口",
+      "sublabel": "所有权与控制用途",
+      "height": 150
+    },
+    {
+      "id": "E01-remediate",
+      "lane": "ops",
+      "col": 2,
+      "width": 154,
+      "type": "frontend",
+      "label": "定向补救",
+      "sublabel": "仅处理受影响的要求",
+      "height": 150
+    },
+    {
+      "id": "E01-rereview",
+      "lane": "qa",
+      "col": 3,
+      "width": 154,
+      "type": "frontend",
+      "label": "重新复核",
+      "sublabel": "当前证据与指定用途",
+      "height": 150
+    },
+    {
+      "id": "E01-signoff",
+      "lane": "qa",
+      "col": 4,
+      "width": 154,
+      "type": "frontend",
+      "label": "质量签核",
+      "sublabel": "不等于全案准入",
+      "height": 150
+    }
+  ],
+  "edges": [
+    {
+      "from": "E01-check",
+      "to": "E01-gap",
+      "label": "用途依据不足"
+    },
+    {
+      "from": "E01-gap",
+      "to": "E01-remediate",
+      "label": "分配补救任务"
+    },
+    {
+      "from": "E01-remediate",
+      "to": "E01-rereview",
+      "label": "提交等待复核"
+    },
+    {
+      "from": "E01-rereview",
+      "to": "E01-signoff",
+      "label": "依据充分且版本有效"
+    },
+    {
+      "from": "E01-rereview",
+      "to": "E01-gap",
+      "label": "仍有缺口",
+      "role": "return",
+      "variant": "default"
+    }
+  ]
+}

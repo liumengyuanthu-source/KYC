@@ -1,0 +1,110 @@
+{
+  "schema_version": 2,
+  "diagram_type": "workflow",
+  "meta": {
+    "title": "筛查复核 · 拟议协作",
+    "locale": "zh-CN",
+    "quality_profile": "showcase",
+    "animation": "none",
+    "legend": {
+      "mode": "hidden"
+    }
+  },
+  "lanes": [
+    {
+      "id": "product",
+      "label": "产品 · 准备"
+    },
+    {
+      "id": "human",
+      "label": "人工 · 演示权限"
+    },
+    {
+      "id": "case",
+      "label": "共享案件 · 条件"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "M4-5",
+      "lane": "product",
+      "col": 0,
+      "type": "backend",
+      "label": "疑似命中",
+      "sublabel": "合成筛查发现",
+      "width": 132
+    },
+    {
+      "id": "comparison",
+      "lane": "product",
+      "col": 1,
+      "type": "database",
+      "label": "比对证据",
+      "sublabel": "主体与用途",
+      "width": 156
+    },
+    {
+      "id": "SCN-MATCH",
+      "lane": "human",
+      "col": 2,
+      "type": "security",
+      "label": "人工复核",
+      "sublabel": "证据与理由",
+      "width": 132
+    },
+    {
+      "id": "waiting",
+      "lane": "human",
+      "col": 3,
+      "type": "messagebus",
+      "label": "等待输入",
+      "sublabel": "具体证据缺口",
+      "width": 132
+    },
+    {
+      "id": "M4-7",
+      "lane": "case",
+      "col": 3,
+      "type": "database",
+      "label": "记录处置",
+      "sublabel": "仅为局部结果",
+      "width": 156
+    },
+    {
+      "id": "SCN-READINESS",
+      "lane": "case",
+      "col": 4,
+      "type": "security",
+      "label": "仍未就绪",
+      "sublabel": "法务 · 信用 · 质量",
+      "width": 156
+    }
+  ],
+  "edges": [
+    {
+      "from": "M4-5",
+      "to": "comparison"
+    },
+    {
+      "from": "comparison",
+      "to": "SCN-MATCH"
+    },
+    {
+      "from": "SCN-MATCH",
+      "to": "waiting",
+      "label": "证据不足",
+      "role": "branch",
+      "variant": "dashed"
+    },
+    {
+      "from": "SCN-MATCH",
+      "to": "M4-7",
+      "label": "证据充分且有权限",
+      "variant": "security"
+    },
+    {
+      "from": "M4-7",
+      "to": "SCN-READINESS"
+    }
+  ]
+}

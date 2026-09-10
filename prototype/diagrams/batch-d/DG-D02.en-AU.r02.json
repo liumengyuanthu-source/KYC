@@ -1,0 +1,173 @@
+{
+  "schema_version": 2,
+  "diagram_type": "workflow",
+  "meta": {
+    "title": "Credit-to-Legal version chain",
+    "locale": "en",
+    "quality_profile": "showcase",
+    "legend": {
+      "mode": "auto",
+      "entries": {
+        "external": {
+          "label": "Read-only work nodes"
+        }
+      }
+    }
+  },
+  "lanes": [
+    {
+      "id": "credit",
+      "label": "Credit output"
+    },
+    {
+      "id": "legal",
+      "label": "Agreement lifecycle"
+    },
+    {
+      "id": "execution",
+      "label": "Execution"
+    }
+  ],
+  "mainPath": [
+    "D02-ASSESS",
+    "D02-DECISION",
+    "D02-CONDITION",
+    "D02-INPUT",
+    "D02-REVISION",
+    "D02-REVIEW",
+    "D02-APPROVAL",
+    "D02-EXECUTION"
+  ],
+  "nodes": [
+    {
+      "id": "D02-ASSESS",
+      "lane": "credit",
+      "col": 0,
+      "type": "external",
+      "label": "Assessment",
+      "sublabel": "Credit data",
+      "width": 120
+    },
+    {
+      "id": "D02-DECISION",
+      "lane": "credit",
+      "col": 1,
+      "type": "external",
+      "label": "CD-01",
+      "sublabel": "Credit decision",
+      "width": 120
+    },
+    {
+      "id": "D02-CONDITION",
+      "lane": "credit",
+      "col": 2,
+      "type": "external",
+      "label": "CC-01",
+      "sublabel": "Credit condition",
+      "width": 120
+    },
+    {
+      "id": "D02-INPUT",
+      "lane": "credit",
+      "col": 3,
+      "type": "external",
+      "label": "AI-01",
+      "sublabel": "Agreement input",
+      "width": 120
+    },
+    {
+      "id": "D02-REVISION",
+      "lane": "legal",
+      "col": 3,
+      "type": "external",
+      "label": "AGR-01 rev 03",
+      "sublabel": "Current agreement",
+      "width": 120
+    },
+    {
+      "id": "D02-REVIEW",
+      "lane": "legal",
+      "col": 4,
+      "type": "external",
+      "label": "Legal review",
+      "sublabel": "Version-specific",
+      "width": 120
+    },
+    {
+      "id": "D02-APPROVAL",
+      "lane": "legal",
+      "col": 5,
+      "type": "external",
+      "label": "Approval",
+      "sublabel": "Not executed",
+      "width": 120
+    },
+    {
+      "id": "D02-EXECUTION",
+      "lane": "execution",
+      "col": 5,
+      "type": "external",
+      "label": "Execution",
+      "sublabel": "Authority needed",
+      "width": 120
+    }
+  ],
+  "edges": [
+    {
+      "id": "D02-E01",
+      "from": "D02-ASSESS",
+      "to": "D02-DECISION",
+      "label": "Basis",
+      "variant": "default",
+      "width": 1.2
+    },
+    {
+      "id": "D02-E02",
+      "from": "D02-DECISION",
+      "to": "D02-CONDITION",
+      "label": "Condition",
+      "variant": "default",
+      "width": 1.2
+    },
+    {
+      "id": "D02-E03",
+      "from": "D02-CONDITION",
+      "to": "D02-INPUT",
+      "label": "Terms",
+      "variant": "default",
+      "width": 1.2
+    },
+    {
+      "id": "D02-E04",
+      "from": "D02-INPUT",
+      "to": "D02-REVISION",
+      "label": "Incorporate",
+      "variant": "default",
+      "width": 1.2
+    },
+    {
+      "id": "D02-E05",
+      "from": "D02-REVISION",
+      "to": "D02-REVIEW",
+      "label": "Review",
+      "variant": "default",
+      "width": 1.2
+    },
+    {
+      "id": "D02-E06",
+      "from": "D02-REVIEW",
+      "to": "D02-APPROVAL",
+      "label": "Approve",
+      "variant": "default",
+      "width": 1.2
+    },
+    {
+      "id": "D02-E07",
+      "from": "D02-APPROVAL",
+      "to": "D02-EXECUTION",
+      "label": "Execution gate",
+      "variant": "default",
+      "width": 1.2
+    }
+  ]
+}

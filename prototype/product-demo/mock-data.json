@@ -1,0 +1,820 @@
+{
+  "schema": "ctt-product-demo-r10",
+  "synthetic": true,
+  "source_pack": [
+    "Clear_to_Trade_Product_Prototype_v2_Pack.zip",
+    "Clear_to_Trade_Product_Prototype_v3_Pack.zip"
+  ],
+  "qualification": "R12 exported seed data. Runtime uses model.mjs; structured forms and fixtures use smart-forms.mjs and form-samples.json. All data is synthetic.",
+  "cases": [
+    {
+      "id": "CTT-DEMO-001",
+      "name": "Entity A",
+      "variant": "hero",
+      "synthetic": true,
+      "relationship": "New institutional onboarding",
+      "country": "Australia",
+      "product": "FX forward",
+      "parent": "Entity B · Singapore",
+      "subject": "Person T",
+      "scopeVersion": 1,
+      "inputVersion": 1,
+      "requestVersion": 1,
+      "authority": "Not established",
+      "signingAuthority": "Not established",
+      "scope": {
+        "salesLocation": "Australia",
+        "bookingEntity": "Unknown — requires RM confirmation",
+        "bookingBasis": ""
+      },
+      "requirements": [],
+      "evidence": [
+        {
+          "id": "EV-REG-01",
+          "name": "Company registry extract",
+          "purpose": "Entity identification",
+          "status": "Candidate",
+          "version": 1,
+          "source": "Synthetic registry fixture; not an ASIC lookup"
+        },
+        {
+          "id": "EV-ADDR-01",
+          "name": "Address record",
+          "purpose": "Address verification",
+          "status": "Candidate",
+          "version": 1,
+          "source": "Synthetic submitted fixture"
+        },
+        {
+          "id": "EV-STRUCT-01",
+          "name": "Group structure",
+          "purpose": "Ownership context",
+          "status": "Older version — review only",
+          "version": 1,
+          "source": "Synthetic client fixture"
+        }
+      ],
+      "done": [],
+      "request": "Not created",
+      "requestItems": [
+        "Identity evidence for screening",
+        "Evidence of information-coordination authority"
+      ],
+      "uploads": [],
+      "responseDraft": "",
+      "controls": {
+        "Screening": {
+          "status": "Not started",
+          "version": 1
+        },
+        "EDD": {
+          "status": "Not started",
+          "version": 1
+        },
+        "Conflicts": {
+          "status": "Not started",
+          "version": 1
+        },
+        "Credit": {
+          "status": "Not started",
+          "version": 1
+        },
+        "Legal": {
+          "status": "Not started",
+          "version": 1
+        },
+        "QA": {
+          "status": "Not started",
+          "version": 1
+        }
+      },
+      "reviewPack": null,
+      "decision": null,
+      "decisionDraft": {
+        "choice": "",
+        "note": ""
+      },
+      "eddRequired": false,
+      "qaFinding": null,
+      "creditConditions": null,
+      "agreement": null,
+      "readinessVersion": null,
+      "confirmation": null,
+      "publications": {
+        "caseRegister": "Not sent",
+        "clientStatus": "Not sent"
+      },
+      "history": [],
+      "notes": [],
+      "messages": [],
+      "prepared": {},
+      "archived": false
+    },
+    {
+      "id": "CTT-P-002",
+      "name": "Maple Group",
+      "variant": "gap",
+      "synthetic": true,
+      "relationship": "New institutional onboarding",
+      "country": "Australia",
+      "product": "FX forward",
+      "parent": "Reported parent — synthetic group",
+      "subject": "Maple Group contributor",
+      "scopeVersion": 1,
+      "inputVersion": 1,
+      "requestVersion": 1,
+      "authority": "Not established",
+      "signingAuthority": "Not established",
+      "scope": {
+        "salesLocation": "Australia",
+        "bookingEntity": "Demo AU booking entity",
+        "bookingBasis": "Synthetic reviewed context"
+      },
+      "requirements": [
+        "Identity disambiguation",
+        "Information-coordination authority",
+        "Professional controls"
+      ],
+      "evidence": [
+        {
+          "id": "EV-REG-01",
+          "name": "Company registry extract",
+          "purpose": "Entity identification",
+          "status": "Candidate",
+          "version": 1,
+          "source": "Synthetic registry fixture; not an ASIC lookup"
+        },
+        {
+          "id": "EV-ADDR-01",
+          "name": "Address record",
+          "purpose": "Address verification",
+          "status": "Candidate",
+          "version": 1,
+          "source": "Synthetic submitted fixture"
+        },
+        {
+          "id": "EV-STRUCT-01",
+          "name": "Group structure",
+          "purpose": "Ownership context",
+          "status": "Older version — review only",
+          "version": 1,
+          "source": "Synthetic client fixture"
+        }
+      ],
+      "done": [
+        "SCOPE",
+        "ENTITY",
+        "REQUIREMENTS",
+        "SOURCE",
+        "GAP"
+      ],
+      "request": "Issued",
+      "requestItems": [
+        "Identity evidence for screening",
+        "Evidence of information-coordination authority"
+      ],
+      "uploads": [],
+      "responseDraft": "",
+      "controls": {
+        "Screening": {
+          "status": "Not started",
+          "version": 1
+        },
+        "EDD": {
+          "status": "Not started",
+          "version": 1
+        },
+        "Conflicts": {
+          "status": "Ready to start",
+          "version": 1
+        },
+        "Credit": {
+          "status": "In progress",
+          "version": 1
+        },
+        "Legal": {
+          "status": "Preparing in parallel",
+          "version": 1
+        },
+        "QA": {
+          "status": "Not started",
+          "version": 1
+        }
+      },
+      "reviewPack": null,
+      "decision": null,
+      "decisionDraft": {
+        "choice": "",
+        "note": ""
+      },
+      "eddRequired": false,
+      "qaFinding": null,
+      "creditConditions": null,
+      "agreement": null,
+      "readinessVersion": null,
+      "confirmation": null,
+      "publications": {
+        "caseRegister": "Not sent",
+        "clientStatus": "Not sent"
+      },
+      "history": [
+        {
+          "id": "DEMO-CTT-P-002-E001",
+          "at": "2026-09-08T12:06:07.302Z",
+          "action": "SEED",
+          "actor": "Jamie Park",
+          "detail": "Authored starting state; not a completed live workflow",
+          "scenario": null,
+          "inputVersion": 1,
+          "synthetic": true
+        }
+      ],
+      "notes": [],
+      "messages": [],
+      "prepared": {},
+      "archived": false,
+      "entityProfile": {
+        "legalName": "Maple Group",
+        "country": "Australia",
+        "registrationId": "DEMO-AU-002",
+        "legalForm": "Company",
+        "incorporationDate": "2014-03-12",
+        "address": "12 Market Street, Sydney, Australia",
+        "claimPurpose": "Information coordination",
+        "reviewed": true,
+        "revision": 1,
+        "source": "Authored v3 profile fixture applied to this separate synthetic case"
+      }
+    },
+    {
+      "id": "CTT-P-003",
+      "name": "Northbridge Holdings",
+      "variant": "legal",
+      "synthetic": true,
+      "relationship": "New institutional onboarding",
+      "country": "Australia",
+      "product": "FX forward",
+      "parent": "Reported parent — synthetic group",
+      "subject": "Northbridge Holdings contributor",
+      "scopeVersion": 1,
+      "inputVersion": 1,
+      "requestVersion": 1,
+      "authority": "Information coordination only",
+      "signingAuthority": "Not established",
+      "scope": {
+        "salesLocation": "Australia",
+        "bookingEntity": "Demo AU booking entity",
+        "bookingBasis": "Synthetic reviewed context"
+      },
+      "requirements": [
+        "Identity disambiguation",
+        "Information-coordination authority",
+        "Professional controls"
+      ],
+      "evidence": [
+        {
+          "id": "EV-REG-01",
+          "name": "Company registry extract",
+          "purpose": "Entity identification",
+          "status": "Candidate",
+          "version": 1,
+          "source": "Synthetic registry fixture; not an ASIC lookup"
+        },
+        {
+          "id": "EV-ADDR-01",
+          "name": "Address record",
+          "purpose": "Address verification",
+          "status": "Candidate",
+          "version": 1,
+          "source": "Synthetic submitted fixture"
+        },
+        {
+          "id": "EV-STRUCT-01",
+          "name": "Group structure",
+          "purpose": "Ownership context",
+          "status": "Older version — review only",
+          "version": 1,
+          "source": "Synthetic client fixture"
+        },
+        {
+          "id": "EV-EMP-01",
+          "name": "Identity and employment fixture",
+          "purpose": "Identity disambiguation",
+          "status": "Sufficient for identity disambiguation",
+          "version": 1,
+          "source": "Synthetic reviewed starting-state evidence"
+        },
+        {
+          "id": "EV-AUTH-01",
+          "name": "Information-coordination confirmation",
+          "purpose": "Information coordination only",
+          "status": "Sufficient for information coordination only",
+          "version": 1,
+          "source": "Synthetic reviewed starting-state evidence"
+        }
+      ],
+      "done": [
+        "SCOPE",
+        "ENTITY",
+        "REQUIREMENTS",
+        "SOURCE",
+        "GAP",
+        "VALIDATE",
+        "POPULATION",
+        "MATCH",
+        "EDD",
+        "CONFLICTS",
+        "CREDIT"
+      ],
+      "request": "Purpose assessed",
+      "requestItems": [
+        "Identity evidence for screening",
+        "Evidence of information-coordination authority"
+      ],
+      "uploads": [],
+      "responseDraft": "",
+      "controls": {
+        "Screening": {
+          "status": "Complete",
+          "version": 1
+        },
+        "EDD": {
+          "status": "Complete",
+          "version": 1
+        },
+        "Conflicts": {
+          "status": "Complete",
+          "version": 1
+        },
+        "Credit": {
+          "status": "Complete",
+          "version": 1
+        },
+        "Legal": {
+          "status": "Preparing in parallel",
+          "version": 1
+        },
+        "QA": {
+          "status": "Not started",
+          "version": 1
+        }
+      },
+      "reviewPack": null,
+      "decision": {
+        "result": "False positive — scoped finding only",
+        "inputVersion": 1,
+        "reviewer": "Sam Ellis"
+      },
+      "decisionDraft": {
+        "choice": "",
+        "note": ""
+      },
+      "eddRequired": false,
+      "qaFinding": null,
+      "creditConditions": {
+        "version": 1,
+        "text": "Synthetic FX limit and signed agreement condition",
+        "fulfilled": true
+      },
+      "agreement": null,
+      "readinessVersion": null,
+      "confirmation": null,
+      "publications": {
+        "caseRegister": "Not sent",
+        "clientStatus": "Not sent"
+      },
+      "history": [
+        {
+          "id": "DEMO-CTT-P-003-E001",
+          "at": "2026-09-08T12:06:07.308Z",
+          "action": "SEED",
+          "actor": "Jamie Park",
+          "detail": "Authored starting state; not a completed live workflow",
+          "scenario": null,
+          "inputVersion": 1,
+          "synthetic": true
+        }
+      ],
+      "notes": [],
+      "messages": [],
+      "prepared": {},
+      "archived": false,
+      "entityProfile": {
+        "legalName": "Northbridge Holdings",
+        "country": "Australia",
+        "registrationId": "DEMO-AU-003",
+        "legalForm": "Company",
+        "incorporationDate": "2014-03-12",
+        "address": "12 Market Street, Sydney, Australia",
+        "claimPurpose": "Information coordination",
+        "reviewed": true,
+        "revision": 1,
+        "source": "Authored v3 profile fixture applied to this separate synthetic case"
+      },
+      "intake": {
+        "EV-EMP-01": {
+          "version": 1,
+          "note": "Authored reviewed starting state"
+        },
+        "EV-AUTH-01": {
+          "version": 1,
+          "note": "Authored reviewed starting state"
+        }
+      },
+      "assessments": {
+        "identity": {
+          "outcome": "sufficient",
+          "document": "EV-EMP-01",
+          "documentVersion": 1,
+          "inputVersion": 1,
+          "note": "Authored reviewed starting state"
+        },
+        "coordination": {
+          "outcome": "sufficient",
+          "document": "EV-AUTH-01",
+          "documentVersion": 1,
+          "inputVersion": 1,
+          "note": "Authored reviewed starting state"
+        }
+      }
+    },
+    {
+      "id": "CTT-P-008",
+      "name": "Aurora Resources",
+      "variant": "edd",
+      "synthetic": true,
+      "relationship": "New institutional onboarding",
+      "country": "Australia",
+      "product": "FX forward",
+      "parent": "Reported parent — synthetic group",
+      "subject": "Aurora Resources contributor",
+      "scopeVersion": 1,
+      "inputVersion": 1,
+      "requestVersion": 1,
+      "authority": "Not established",
+      "signingAuthority": "Not established",
+      "scope": {
+        "salesLocation": "Australia",
+        "bookingEntity": "Demo AU booking entity",
+        "bookingBasis": "Synthetic reviewed context"
+      },
+      "requirements": [
+        "Identity disambiguation",
+        "Information-coordination authority",
+        "Professional controls"
+      ],
+      "evidence": [
+        {
+          "id": "EV-REG-01",
+          "name": "Company registry extract",
+          "purpose": "Entity identification",
+          "status": "Candidate",
+          "version": 1,
+          "source": "Synthetic registry fixture; not an ASIC lookup"
+        },
+        {
+          "id": "EV-ADDR-01",
+          "name": "Address record",
+          "purpose": "Address verification",
+          "status": "Candidate",
+          "version": 1,
+          "source": "Synthetic submitted fixture"
+        },
+        {
+          "id": "EV-STRUCT-01",
+          "name": "Group structure",
+          "purpose": "Ownership context",
+          "status": "Older version — review only",
+          "version": 1,
+          "source": "Synthetic client fixture"
+        }
+      ],
+      "done": [
+        "SCOPE",
+        "ENTITY",
+        "REQUIREMENTS",
+        "SOURCE",
+        "GAP"
+      ],
+      "request": "Issued",
+      "requestItems": [
+        "Identity evidence for screening",
+        "Evidence of information-coordination authority"
+      ],
+      "uploads": [],
+      "responseDraft": "",
+      "controls": {
+        "Screening": {
+          "status": "Not started",
+          "version": 1
+        },
+        "EDD": {
+          "status": "Not started",
+          "version": 1
+        },
+        "Conflicts": {
+          "status": "Ready to start",
+          "version": 1
+        },
+        "Credit": {
+          "status": "In progress",
+          "version": 1
+        },
+        "Legal": {
+          "status": "Preparing in parallel",
+          "version": 1
+        },
+        "QA": {
+          "status": "Not started",
+          "version": 1
+        }
+      },
+      "reviewPack": null,
+      "decision": null,
+      "decisionDraft": {
+        "choice": "",
+        "note": ""
+      },
+      "eddRequired": true,
+      "qaFinding": null,
+      "creditConditions": null,
+      "agreement": null,
+      "readinessVersion": null,
+      "confirmation": null,
+      "publications": {
+        "caseRegister": "Not sent",
+        "clientStatus": "Not sent"
+      },
+      "history": [
+        {
+          "id": "DEMO-CTT-P-008-E001",
+          "at": "2026-09-08T12:06:07.308Z",
+          "action": "SEED",
+          "actor": "Jamie Park",
+          "detail": "Authored starting state; not a completed live workflow",
+          "scenario": null,
+          "inputVersion": 1,
+          "synthetic": true
+        }
+      ],
+      "notes": [],
+      "messages": [],
+      "prepared": {},
+      "archived": false,
+      "entityProfile": {
+        "legalName": "Aurora Resources",
+        "country": "Australia",
+        "registrationId": "DEMO-AU-008",
+        "legalForm": "Company",
+        "incorporationDate": "2014-03-12",
+        "address": "12 Market Street, Sydney, Australia",
+        "claimPurpose": "Information coordination",
+        "reviewed": true,
+        "revision": 1,
+        "source": "Authored v3 profile fixture applied to this separate synthetic case"
+      }
+    },
+    {
+      "id": "CTT-P-013",
+      "name": "Redgum International",
+      "variant": "archived",
+      "synthetic": true,
+      "relationship": "New institutional onboarding",
+      "country": "Australia",
+      "product": "FX forward",
+      "parent": "Reported parent — synthetic group",
+      "subject": "Redgum International contributor",
+      "scopeVersion": 1,
+      "inputVersion": 1,
+      "requestVersion": 1,
+      "authority": "Not established",
+      "signingAuthority": "Not established",
+      "scope": {
+        "salesLocation": "Australia",
+        "bookingEntity": "Unknown — requires RM confirmation",
+        "bookingBasis": ""
+      },
+      "requirements": [],
+      "evidence": [
+        {
+          "id": "EV-REG-01",
+          "name": "Company registry extract",
+          "purpose": "Entity identification",
+          "status": "Candidate",
+          "version": 1,
+          "source": "Synthetic registry fixture; not an ASIC lookup"
+        },
+        {
+          "id": "EV-ADDR-01",
+          "name": "Address record",
+          "purpose": "Address verification",
+          "status": "Candidate",
+          "version": 1,
+          "source": "Synthetic submitted fixture"
+        },
+        {
+          "id": "EV-STRUCT-01",
+          "name": "Group structure",
+          "purpose": "Ownership context",
+          "status": "Older version — review only",
+          "version": 1,
+          "source": "Synthetic client fixture"
+        }
+      ],
+      "done": [],
+      "request": "Not created",
+      "requestItems": [
+        "Identity evidence for screening",
+        "Evidence of information-coordination authority"
+      ],
+      "uploads": [],
+      "responseDraft": "",
+      "controls": {
+        "Screening": {
+          "status": "Not started",
+          "version": 1
+        },
+        "EDD": {
+          "status": "Not started",
+          "version": 1
+        },
+        "Conflicts": {
+          "status": "Not started",
+          "version": 1
+        },
+        "Credit": {
+          "status": "Not started",
+          "version": 1
+        },
+        "Legal": {
+          "status": "Not started",
+          "version": 1
+        },
+        "QA": {
+          "status": "Not started",
+          "version": 1
+        }
+      },
+      "reviewPack": null,
+      "decision": null,
+      "decisionDraft": {
+        "choice": "",
+        "note": ""
+      },
+      "eddRequired": false,
+      "qaFinding": null,
+      "creditConditions": null,
+      "agreement": null,
+      "readinessVersion": null,
+      "confirmation": null,
+      "publications": {
+        "caseRegister": "Not sent",
+        "clientStatus": "Not sent"
+      },
+      "history": [
+        {
+          "id": "DEMO-CTT-P-013-E001",
+          "at": "2026-09-08T12:06:07.308Z",
+          "action": "WITHDRAWN",
+          "actor": "Alex Morgan",
+          "detail": "Synthetic new relationship withdrawn before clearance",
+          "scenario": null,
+          "inputVersion": 1,
+          "synthetic": true
+        }
+      ],
+      "notes": [],
+      "messages": [],
+      "prepared": {},
+      "archived": true
+    }
+  ],
+  "roles": {
+    "rm": [
+      "Alex Morgan",
+      "Relationship Manager",
+      "PERSONA-RM"
+    ],
+    "manager": [
+      "Jamie Park",
+      "Case Manager",
+      "PERSONA-CASEMGR"
+    ],
+    "ops": [
+      "Morgan Lee",
+      "KYC Operations",
+      "PERSONA-KYCOPS"
+    ],
+    "specialist": [
+      "Sam Ellis",
+      "Financial Crime Specialist",
+      "PERSONA-RISK"
+    ],
+    "client": [
+      "Person T",
+      "Limited information contributor",
+      "PERSONA-CLIENT-T"
+    ],
+    "control": [
+      "Taylor Shaw",
+      "Conflicts specialist",
+      "PERSONA-CONTROL"
+    ],
+    "credit": [
+      "Jordan Blake",
+      "Credit specialist",
+      "PERSONA-CREDIT"
+    ],
+    "legal": [
+      "Casey Reed",
+      "Legal specialist",
+      "PERSONA-LEGAL"
+    ],
+    "qa": [
+      "Robin Hale",
+      "QA reviewer",
+      "PERSONA-QA"
+    ],
+    "approver": [
+      "Demo approver",
+      "Authorised confirmation seat",
+      null
+    ],
+    "executive": [
+      "Portfolio viewer",
+      "Executive demo seat",
+      null
+    ]
+  },
+  "scenario_order": [
+    "SCN-SCOPE",
+    "SCN-ENTITY",
+    "SCN-REQUIREMENTS",
+    "SCN-SOURCE",
+    "SCN-GAP",
+    "SCN-VALIDATE",
+    "SCN-POPULATION",
+    "SCN-MATCH",
+    "SCN-EDD",
+    "SCN-CONFLICTS",
+    "SCN-CREDIT",
+    "SCN-LEGAL",
+    "SCN-QA",
+    "SCN-READINESS",
+    "SCN-PUBLISH"
+  ],
+  "requestFixtures": [
+    {
+      "id": "EV-EMP-01",
+      "name": "Identity and employment fixture",
+      "subject": "Person T",
+      "employer": "Entity B",
+      "dob": "1982-03-14",
+      "purpose": "Identity disambiguation",
+      "statusOnSubmission": "Received — not assessed",
+      "synthetic": true
+    },
+    {
+      "id": "EV-AUTH-01",
+      "name": "Information-coordination confirmation fixture",
+      "subject": "Person T",
+      "principal": "Entity A",
+      "purpose": "Information coordination only",
+      "excludes": "Signing authority",
+      "statusOnSubmission": "Received — not assessed",
+      "synthetic": true
+    }
+  ],
+  "screeningFixture": {
+    "id": "FIND-PT-01",
+    "name": "Synthetic near-name candidate for Person T",
+    "dob": "1975-07-22",
+    "notRealSanctionsEntry": true
+  },
+  "checkpoints": [
+    {
+      "id": "CP-01",
+      "mode": "Read-only authored preview; never changes live demo case"
+    },
+    {
+      "id": "CP-02",
+      "mode": "Read-only authored preview; never changes live demo case"
+    },
+    {
+      "id": "CP-03",
+      "mode": "Read-only authored preview; never changes live demo case"
+    },
+    {
+      "id": "CP-04",
+      "mode": "Read-only authored preview; never changes live demo case"
+    },
+    {
+      "id": "CP-05",
+      "mode": "Read-only authored preview; never changes live demo case"
+    },
+    {
+      "id": "CP-06",
+      "mode": "Read-only authored preview; never changes live demo case"
+    }
+  ]
+}

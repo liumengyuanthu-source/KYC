@@ -1,0 +1,23 @@
+{
+  "schema_version":2,"diagram_type":"workflow",
+  "meta":{"title":"并行专业工作","locale":"zh-CN","quality_profile":"showcase","views":[{"id":"parallel","label":"独立启动","focus":["D01-SCOPE","D01-CONFLICTS","D01-CREDIT","D01-KYC"]},{"id":"dependency","label":"信贷与协议","focus":["D01-CREDIT","D01-LEGAL"]},{"id":"readiness","label":"条件汇合","focus":["D01-READY"]}]},
+  "lanes":[{"id":"conflicts","label":"利益冲突"},{"id":"specialist","label":"信贷与协议"},{"id":"kyc","label":"尽调与筛查"}],
+  "mainPath":["D01-SCOPE","D01-CREDIT","D01-LEGAL","D01-READY"],
+  "nodes":[
+    {"id":"D01-SCOPE","lane":"specialist","col":0,"type":"backend","label":"范围与要求","sublabel":"按各项输入判断启动"},
+    {"id":"D01-CONFLICTS","lane":"conflicts","col":2,"type":"backend","label":"利益冲突检查","sublabel":"搜索完成 · 专业复核待办"},
+    {"id":"D01-CREDIT","lane":"specialist","col":2,"type":"backend","label":"信贷条件","sublabel":"有条件批准 · 合成状态"},
+    {"id":"D01-LEGAL","lane":"specialist","col":3,"type":"backend","label":"协议工作","sublabel":"内部批准 · 待签署"},
+    {"id":"D01-KYC","lane":"kyc","col":2,"type":"backend","label":"尽调与筛查","sublabel":"局部结果 · 覆盖未闭合"},
+    {"id":"D01-READY","lane":"specialist","col":5,"type":"backend","label":"整体就绪","sublabel":"尚未就绪 · 不等于批准"}
+  ],
+  "edges":[
+    {"id":"D01-E01","from":"D01-SCOPE","to":"D01-CONFLICTS","label":"启动条件","variant":"dashed"},
+    {"id":"D01-E02","from":"D01-SCOPE","to":"D01-CREDIT","label":"启动条件","variant":"dashed"},
+    {"id":"D01-E03","from":"D01-SCOPE","to":"D01-KYC","label":"启动条件","variant":"dashed"},
+    {"id":"D01-E04","from":"D01-CREDIT","to":"D01-LEGAL","label":"版本依赖","variant":"emphasis"},
+    {"id":"D01-E05","from":"D01-CONFLICTS","to":"D01-READY","label":"条件贡献","variant":"default"},
+    {"id":"D01-E06","from":"D01-LEGAL","to":"D01-READY","label":"条件贡献","variant":"default"},
+    {"id":"D01-E07","from":"D01-KYC","to":"D01-READY","label":"条件贡献","variant":"default"}
+  ]
+}

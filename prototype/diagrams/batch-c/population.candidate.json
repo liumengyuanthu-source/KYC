@@ -1,0 +1,39 @@
+{
+  "schema_version": 2,
+  "diagram_type": "workflow",
+  "meta": {"title":"筛查对象与覆盖判断","locale":"zh-CN","quality_profile":"showcase","animation":"none"},
+  "lanes":[{"id":"context","label":"范围与纳入依据"},{"id":"preliminary","label":"已知子集 · 初步查询"},{"id":"comprehensive","label":"完整计划 · 独立判断"},{"id":"waiting","label":"未决与范围结果","variant":"exception"}],
+  "mainPath":["P01","P02","P03","P04","P05","P06"],
+  "nodes":[
+    {"id":"P01","lane":"context","col":0,"type":"database","label":"范围与主体","sublabel":"保留所有权缺口"},
+    {"id":"P02","lane":"context","col":1,"type":"security","label":"纳入与输入","sublabel":"逐主体、类别判断"},
+    {"id":"P03","lane":"preliminary","col":2,"type":"security","label":"子集可查询？","sublabel":"输入、权限与限制"},
+    {"id":"P04","lane":"preliminary","col":3,"type":"messagebus","label":"固定初步计划","sublabel":"执行合成查询"},
+    {"id":"P05","lane":"preliminary","col":4,"type":"security","label":"查询结果状态","sublabel":"成功、部分、失败、等待"},
+    {"id":"P06","lane":"preliminary","col":5,"type":"database","label":"保存结果与复核","sublabel":"有命中进入 M01"},
+    {"id":"P07","lane":"comprehensive","col":2,"type":"security","label":"适用群体完整？","sublabel":"完整性依据与版本"},
+    {"id":"P08","lane":"comprehensive","col":3,"type":"backend","label":"确认完整计划","sublabel":"先确认版本与权限"},
+    {"id":"P09","lane":"comprehensive","col":4,"type":"messagebus","label":"执行或评估复用","sublabel":"不复制旧绿色结果"},
+    {"id":"P10","lane":"comprehensive","col":5,"type":"security","label":"全部覆盖满足？","sublabel":"执行、复核与时效"},
+    {"id":"P11","lane":"waiting","col":5,"type":"database","label":"本范围覆盖结果","sublabel":"不是交易准入批准"},
+    {"id":"P12","lane":"waiting","col":2,"type":"security","label":"具体缺口或等待","sublabel":"保留对象、原因与返回"}
+  ],
+  "edges":[
+    {"id":"P01-P02","from":"P01","to":"P02","label":"范围可读"},
+    {"id":"P02-P03","from":"P02","to":"P03","label":"已知主体"},
+    {"id":"P02-P07","from":"P02","to":"P07","label":"独立评估","role":"branch"},
+    {"id":"P02-P12","from":"P02","to":"P12","label":"纳入未决","role":"error"},
+    {"id":"P03-P04","from":"P03","to":"P04","label":"允许"},
+    {"id":"P03-P12","from":"P03","to":"P12","label":"不足或受限","role":"error"},
+    {"id":"P04-P05","from":"P04","to":"P05","label":"请求已记录"},
+    {"id":"P05-P06","from":"P05","to":"P06","label":"成功返回"},
+    {"id":"P05-P12","from":"P05","to":"P12","label":"部分、失败或等待","role":"error","route":"drop","fromSide":"bottom"},
+    {"id":"P06-P10","from":"P06","to":"P10","label":"重评覆盖"},
+    {"id":"P07-P08","from":"P07","to":"P08","label":"完整且有权"},
+    {"id":"P07-P12","from":"P07","to":"P12","label":"不完整或未知","role":"error"},
+    {"id":"P08-P09","from":"P08","to":"P09","label":"计划已确认"},
+    {"id":"P09-P10","from":"P09","to":"P10","label":"结果或复用依据"},
+    {"id":"P10-P11","from":"P10","to":"P11","label":"满足、不足或未知"},
+    {"id":"P12-P02","from":"P12","to":"P02","label":"新输入后重评","role":"return"}
+  ]
+}

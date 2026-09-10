@@ -1,0 +1,96 @@
+{
+  "schema_version": 2,
+  "diagram_type": "workflow",
+  "meta": {
+    "title": "Preparation is not clearance",
+    "locale": "en",
+    "quality_profile": "showcase",
+    "animation": "none"
+  },
+  "lanes": [
+    {
+      "id": "ready",
+      "label": "Only where prerequisites hold"
+    },
+    {
+      "id": "wait",
+      "label": "Unknowns stay visible"
+    }
+  ],
+  "mainPath": [
+    "scope",
+    "gate",
+    "prepare"
+  ],
+  "nodes": [
+    {
+      "id": "scope",
+      "lane": "ready",
+      "col": 0,
+      "type": "backend",
+      "label": "Current scope revision",
+      "sublabel": "Entity A / FX forward",
+      "width": 210
+    },
+    {
+      "id": "gate",
+      "lane": "ready",
+      "col": 1,
+      "type": "security",
+      "label": "Task-specific gate",
+      "sublabel": "Inputs + permission + no hold",
+      "width": 220
+    },
+    {
+      "id": "prepare",
+      "lane": "ready",
+      "col": 2,
+      "type": "backend",
+      "label": "Preparation only",
+      "sublabel": "Requirements / sources / checks",
+      "width": 235
+    },
+    {
+      "id": "wait",
+      "lane": "wait",
+      "col": 1,
+      "type": "external",
+      "label": "Awaiting input",
+      "sublabel": "Legal / Credit applicability",
+      "width": 220
+    },
+    {
+      "id": "notready",
+      "lane": "wait",
+      "col": 2,
+      "type": "external",
+      "label": "Case: Not ready",
+      "sublabel": "Authority / booking / conditions",
+      "width": 235
+    }
+  ],
+  "edges": [
+    {
+      "from": "scope",
+      "to": "gate",
+      "label": "evaluate"
+    },
+    {
+      "from": "gate",
+      "to": "prepare",
+      "label": "inputs sufficient"
+    },
+    {
+      "from": "gate",
+      "to": "wait",
+      "label": "unknown or hold",
+      "variant": "dashed"
+    },
+    {
+      "from": "prepare",
+      "to": "notready",
+      "label": "no blanket approval",
+      "variant": "dashed"
+    }
+  ]
+}

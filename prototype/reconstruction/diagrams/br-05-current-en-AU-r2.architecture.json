@@ -1,0 +1,99 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "Residual Gaps & Client Collaboration · Current",
+    "locale": "en",
+    "quality_profile": "showcase",
+    "animation": "none",
+    "viewBox": [
+      1380,
+      620
+    ],
+    "legend": {
+      "mode": "hidden"
+    }
+  },
+  "components": [
+    {
+      "id": "ROOT-BR-05-current",
+      "type": "external",
+      "label": "Residual Gaps & Client Collaboration",
+      "sublabel": "Work grouping · not execution",
+      "pos": [
+        60,
+        266
+      ],
+      "size": [
+        400,
+        88
+      ]
+    },
+    {
+      "id": "CURRENT-BR04-M3-4-CAPTURE-VALIDATE-EVIDENCE",
+      "type": "external",
+      "label": "Capture and validate evidence",
+      "pos": [
+        850,
+        70
+      ],
+      "size": [
+        500,
+        92
+      ]
+    },
+    {
+      "id": "CURRENT-BR05-M3-2-IDENTIFY-RESIDUAL-GAPS",
+      "type": "external",
+      "label": "Identify residual gaps",
+      "pos": [
+        850,
+        195
+      ],
+      "size": [
+        500,
+        92
+      ]
+    },
+    {
+      "id": "CURRENT-BR05-M3-3-REQUEST-INFORMATION",
+      "type": "external",
+      "label": "Request information from the client",
+      "pos": [
+        850,
+        320
+      ],
+      "size": [
+        500,
+        92
+      ]
+    }
+  ],
+  "connections": [
+    {
+      "id": "CONTAINS-BR-05-current-1",
+      "from": "ROOT-BR-05-current",
+      "to": "CURRENT-BR04-M3-4-CAPTURE-VALIDATE-EVIDENCE",
+      "label": "Contains work",
+      "variant": "default"
+    },
+    {
+      "id": "CONTAINS-BR-05-current-2",
+      "from": "ROOT-BR-05-current",
+      "to": "CURRENT-BR05-M3-2-IDENTIFY-RESIDUAL-GAPS",
+      "label": "Contains work",
+      "variant": "default",
+      "labelAt": [
+        755,
+        241
+      ]
+    },
+    {
+      "id": "CONTAINS-BR-05-current-3",
+      "from": "ROOT-BR-05-current",
+      "to": "CURRENT-BR05-M3-3-REQUEST-INFORMATION",
+      "label": "Contains work",
+      "variant": "default"
+    }
+  ]
+}

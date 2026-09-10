@@ -1,0 +1,186 @@
+{
+  "schemaVersion": 1,
+  "sourceRef": "SRC-021",
+  "sourceStatus": "approved_demo_design_not_bank_validation",
+  "archifyVersion": "2.17",
+  "readOnly": true,
+  "businessStateWrites": false,
+  "localeAliases": {
+    "en-US": "en-AU"
+  },
+  "hostContract": {
+    "render": "Use checked host.svg / print.svg and adjacent semantic step text.",
+    "focus": "Host-owned presentation selection only; no business commands or iframe controls.",
+    "palette": "Neutral black/blue/white derivatives; canonical geometry and text preserved.",
+    "validation": "DG-F01/F03: deterministic delivery and static exports pass; canonical standalone viewers fail vertical viewport containment. DG-F02: failed routing validation, semantic fallback only. Mainline host acceptance is recorded separately.",
+    "media": "No media supplied; static explanation, not recorded playback."
+  },
+  "diagrams": [
+    {
+      "id": "DG-F01",
+      "scenes": [],
+      "title": {
+        "en-AU": "Shared case spine",
+        "zh-CN": "共享案件结构"
+      },
+      "locales": {
+        "en-AU": "DG-F01.en-AU.host.svg",
+        "zh-CN": "DG-F01.zh-CN.host.svg"
+      },
+      "steps": [
+        "F01-case",
+        "F01-party",
+        "F01-authority",
+        "F01-requirement",
+        "F01-evidence",
+        "F01-work",
+        "F01-specialist",
+        "F01-prerequisite",
+        "F01-readiness",
+        "F01-decision",
+        "F01-publication"
+      ],
+      "fallback": {
+        "en-AU": [
+          "Case / scope: Current version",
+          "Parties: Entity and person",
+          "Authority: Separate mandate",
+          "Requirement: Purpose and scope",
+          "Evidence: Use assessment",
+          "Work / decision: Receipt is not sufficiency",
+          "Specialists: Current conditions",
+          "Prerequisites: All applicable inputs",
+          "Readiness: Not an authorisation",
+          "Human decision: Scoped authority",
+          "Publication: No trade execution"
+        ],
+        "zh-CN": [
+          "案件 / 范围：当前版本",
+          "参与方：实体与人员",
+          "权限：单独建立授权",
+          "适用要求：用途与范围",
+          "证据：用途评估",
+          "工作 / 决定：收到不等于充分",
+          "专业条线：当前条件",
+          "准入前提：全部适用输入",
+          "就绪状态：不等于已授权",
+          "人工决定：限定范围权限",
+          "发布结果：不执行交易"
+        ]
+      },
+      "scopeNote": "Logical object links, not a serial bank process or automatic state transition.",
+      "status": "static_delivered_standalone_viewer_failed",
+      "standaloneViewer": "Not a primary preview: vertical containment failed in all six tested viewport/theme combinations per locale."
+    },
+    {
+      "id": "DG-F02",
+      "scenes": [],
+      "title": {
+        "en-AU": "Dependency and hold impact",
+        "zh-CN": "依赖与暂停影响"
+      },
+      "locales": {
+        "en-AU": null,
+        "zh-CN": null
+      },
+      "steps": [
+        "F02-change",
+        "F02-dependency",
+        "F02-scope",
+        "F02-task",
+        "F02-branch",
+        "F02-case",
+        "F02-unknown",
+        "F02-affected",
+        "F02-unaffected",
+        "F02-unknowns",
+        "F02-reassess",
+        "F02-readiness"
+      ],
+      "fallback": {
+        "en-AU": [
+          "Change / issue: Versioned input",
+          "Find dependency: Current edge and basis",
+          "Determine scope: Do not infer",
+          "Task: Named work item",
+          "Branch: Named branch",
+          "Case: Applicable case scope",
+          "Unknown: Review required",
+          "Affected work: Recorded dependency",
+          "Permitted work: Positive current basis",
+          "Unknown links: Not independence",
+          "Resolve / reassess: Reviewed current inputs",
+          "Re-evaluate: Where relevant"
+        ],
+        "zh-CN": [
+          "变更 / 问题：有版本的输入",
+          "识别依赖：当前关系与依据",
+          "判断范围：不推断独立",
+          "任务级：指定工作项",
+          "分支级：指定分支",
+          "案件级：当前适用范围",
+          "未知：需要复核",
+          "受影响工作：已记录的依赖",
+          "可继续工作：明确的当前依据",
+          "未知依赖：不等于独立",
+          "解决 / 重评：已复核当前输入",
+          "重评就绪状态：按相关范围"
+        ]
+      },
+      "scopeNote": "Permitted/unaffected work requires a positive current basis; absent edges never prove independence.",
+      "status": "failed_semantic_fallback",
+      "limitation": "Routing validation still fails after two consecutive non-improving repairs. No checked graphical artifact is claimed; all twelve semantic nodes remain available."
+    },
+    {
+      "id": "DG-F03",
+      "scenes": [],
+      "title": {
+        "en-AU": "One case, connected experiences",
+        "zh-CN": "同一案件，衔接体验"
+      },
+      "locales": {
+        "en-AU": "DG-F03.en-AU.host.svg",
+        "zh-CN": "DG-F03.zh-CN.host.svg"
+      },
+      "steps": [
+        "F03-spine",
+        "F03-studio",
+        "F03-product",
+        "F03-lab",
+        "F03-print"
+      ],
+      "fallback": {
+        "en-AU": [
+          "Shared case: One current revision",
+          "Studio: Understand / explore",
+          "Product: Guarded work actions",
+          "Optional Lab: Read-only shadow",
+          "Print: Projection, not a store"
+        ],
+        "zh-CN": [
+          "共享案件：同一当前版本",
+          "旅程与场景：理解 / 探索",
+          "产品工作区：受校验的工作动作",
+          "可选案例实验室：只读影子状态",
+          "打印：投影，不另存真相"
+        ]
+      },
+      "scopeNote": "Only Studio and Product are top-level experiences. Lab is optional; print is a projection, not a separate data store.",
+      "status": "static_delivered_standalone_viewer_failed",
+      "standaloneViewer": "Not a primary preview: vertical containment failed in all six tested viewport/theme combinations per locale."
+    }
+  ],
+  "evidence": [
+    "DG-F01.en-AU.deliver.json", "DG-F01.zh-CN.deliver.json",
+    "DG-F03.en-AU.deliver.json", "DG-F03.zh-CN.deliver.json",
+    "DG-F01.en-AU.visual-check.json", "DG-F01.zh-CN.visual-check.json",
+    "DG-F03.en-AU.visual-check.json", "DG-F03.zh-CN.visual-check.json",
+    "DG-F02.en-AU.validate.json", "DG-F02.zh-CN.validate.json",
+    "export-receipts.json"
+  ],
+  "visualReview": {
+    "status": "static_captures_inspected_with_disclosed_limits",
+    "evidence": ["DG-F01.en-AU.host.png", "DG-F01.zh-CN.host.png", "DG-F03.en-AU.host.png", "DG-F03.zh-CN.host.png"],
+    "finding": "Four neutral static captures inspected: no observed clipping or text overlap. This is not a canonical viewer containment pass or user acceptance. Mainline host/print verification remains separate."
+  }
+}

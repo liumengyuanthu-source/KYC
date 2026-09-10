@@ -1,0 +1,97 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "Group label and trading entity",
+    "locale": "en",
+    "quality_profile": "showcase",
+    "animation": "none",
+    "legend": {
+      "mode": "hidden"
+    },
+    "viewBox": [
+      1100,
+      620
+    ]
+  },
+  "components": [
+    {
+      "id": "request",
+      "type": "external",
+      "label": "Synthetic request",
+      "sublabel": "EV-A01 / FX forward",
+      "pos": [
+        50,
+        80
+      ],
+      "size": [
+        220,
+        96
+      ]
+    },
+    {
+      "id": "group-a",
+      "type": "external",
+      "label": "Group A",
+      "sublabel": "Commercial display name",
+      "pos": [
+        780,
+        80
+      ],
+      "size": [
+        220,
+        96
+      ]
+    },
+    {
+      "id": "entity-a",
+      "type": "external",
+      "label": "Entity A",
+      "sublabel": "Australian operating company",
+      "pos": [
+        50,
+        430
+      ],
+      "size": [
+        220,
+        96
+      ]
+    },
+    {
+      "id": "scope",
+      "type": "external",
+      "label": "Working scope",
+      "sublabel": "Booking / eligibility unresolved",
+      "pos": [
+        780,
+        430
+      ],
+      "size": [
+        220,
+        96
+      ]
+    }
+  ],
+  "connections": [
+    {
+      "id": "uses-group-label",
+      "from": "request",
+      "to": "group-a",
+      "label": "uses group label"
+    },
+    {
+      "id": "intended-entity",
+      "from": "request",
+      "to": "entity-a",
+      "label": "RM clarifies intended entity",
+      "variant": "dashed",
+      "labelDy": 130
+    },
+    {
+      "id": "scope-subject",
+      "from": "entity-a",
+      "to": "scope",
+      "label": "sole intended trading entity"
+    }
+  ]
+}

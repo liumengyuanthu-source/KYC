@@ -1,0 +1,1971 @@
+// Generated semantic content from approved Final §20; presentation only.
+export default {
+  "version": "1.0",
+  "source_document": "SRC-016",
+  "source_section": "20",
+  "archify_version": "2.17",
+  "strategy": "Grouped overview plus complete semantic decision/edge table; no executable graph writes",
+  "failed_candidate": "population.candidate.json: composition crossing/shared corridors; stopped after bounded non-improving repairs",
+  "families": [
+    {
+      "id": "DG-C-POPULATION",
+      "scene": "SCN-POPULATION",
+      "nodes": [
+        {
+          "id": "P01",
+          "type": "input",
+          "title_en": "Load scope & party inventory",
+          "title_zh": "读取范围和主体",
+          "contract": "case_scope、party revisions、ownership gap；PROJECT-SOURCE M1/M4 + design typing",
+          "reference_aliases": [
+            "S-C01"
+          ],
+          "source_document": "SRC-016",
+          "source_process_refs": [
+            {
+              "source": "SRC-007",
+              "locator_status": "high_level_M4_mapping_only_no_node_exact_locator",
+              "support_kind": "project_process_context"
+            }
+          ],
+          "predicate_ref": "context",
+          "action_ref": null,
+          "input_refs": [
+            "case_ref",
+            "scope_revision",
+            "inputRevisions"
+          ],
+          "required_input_revisions": "current projection",
+          "authority_policy_ref": "demoConfig.batchC / explicit action-time guard",
+          "hold_evaluation_ref": "screeningPredicates",
+          "writes": [],
+          "forbidden_writes": "All business writes: presentation only",
+          "performer_kind": {
+            "Current": "human",
+            "Target": "product"
+          },
+          "display_group": "context"
+        },
+        {
+          "id": "P02",
+          "type": "decision",
+          "title_en": "Assess membership & query inputs",
+          "title_zh": "判断纳入与查询输入",
+          "contract": "criterion、membership、identifiers、permissions/holds；included/excluded/unresolved 分开",
+          "reference_aliases": [
+            "S-C01",
+            "R-C02"
+          ],
+          "source_document": "SRC-016",
+          "source_process_refs": [
+            {
+              "source": "SRC-007",
+              "locator_status": "high_level_M4_mapping_only_no_node_exact_locator",
+              "support_kind": "project_process_context"
+            }
+          ],
+          "predicate_ref": "preliminary",
+          "action_ref": null,
+          "input_refs": [
+            "case_ref",
+            "scope_revision",
+            "inputRevisions"
+          ],
+          "required_input_revisions": "current projection",
+          "authority_policy_ref": "demoConfig.batchC / explicit action-time guard",
+          "hold_evaluation_ref": "screeningPredicates",
+          "writes": [],
+          "forbidden_writes": "All business writes: presentation only",
+          "performer_kind": {
+            "Current": "human",
+            "Target": "rule_and_authorised_human"
+          },
+          "display_group": "context"
+        },
+        {
+          "id": "P03",
+          "type": "decision",
+          "title_en": "Permitted preliminary subset?",
+          "title_zh": "是否可查已知子集",
+          "contract": "指定 subject/category/query 的输入和权限成立；不要求全体 inventory 已齐",
+          "reference_aliases": [
+            "S-C01",
+            "INT-C01"
+          ],
+          "source_document": "SRC-016",
+          "source_process_refs": [
+            {
+              "source": "SRC-007",
+              "locator_status": "high_level_M4_mapping_only_no_node_exact_locator",
+              "support_kind": "project_process_context"
+            }
+          ],
+          "predicate_ref": "preliminary",
+          "action_ref": "prepare_preliminary",
+          "input_refs": [
+            "case_ref",
+            "scope_revision",
+            "inputRevisions"
+          ],
+          "required_input_revisions": "current projection",
+          "authority_policy_ref": "demoConfig.batchC / explicit action-time guard",
+          "hold_evaluation_ref": "screeningPredicates",
+          "writes": [],
+          "forbidden_writes": "All business writes: presentation only",
+          "performer_kind": {
+            "Current": "human",
+            "Target": "rule_and_authorised_human"
+          },
+          "display_group": "preliminary"
+        },
+        {
+          "id": "P04",
+          "type": "action",
+          "title_en": "Freeze & run preliminary plan",
+          "title_zh": "固定并执行初步计划",
+          "contract": "冻结 scope/subject/query revisions；调用合成 adapter；无真实查询",
+          "reference_aliases": [
+            "S-C01"
+          ],
+          "source_document": "SRC-016",
+          "source_process_refs": [
+            {
+              "source": "SRC-007",
+              "locator_status": "high_level_M4_mapping_only_no_node_exact_locator",
+              "support_kind": "project_process_context"
+            }
+          ],
+          "predicate_ref": "preliminary",
+          "action_ref": "request_preliminary",
+          "input_refs": [
+            "case_ref",
+            "scope_revision",
+            "inputRevisions"
+          ],
+          "required_input_revisions": "current projection",
+          "authority_policy_ref": "demoConfig.batchC / explicit action-time guard",
+          "hold_evaluation_ref": "screeningPredicates",
+          "writes": [],
+          "forbidden_writes": "All business writes: presentation only",
+          "performer_kind": {
+            "Current": "human",
+            "Target": "product_or_human"
+          },
+          "display_group": "preliminary"
+        },
+        {
+          "id": "P05",
+          "type": "decision",
+          "title_en": "Result status",
+          "title_zh": "查询结果状态",
+          "contract": "completed / partial / failed / pending；失败/未知不写0",
+          "reference_aliases": [
+            "INT-C01"
+          ],
+          "source_document": "SRC-016",
+          "source_process_refs": [
+            {
+              "source": "SRC-007",
+              "locator_status": "high_level_M4_mapping_only_no_node_exact_locator",
+              "support_kind": "project_process_context"
+            }
+          ],
+          "predicate_ref": "result",
+          "action_ref": "receive_result",
+          "input_refs": [
+            "case_ref",
+            "scope_revision",
+            "inputRevisions"
+          ],
+          "required_input_revisions": "current projection",
+          "authority_policy_ref": "demoConfig.batchC / explicit action-time guard",
+          "hold_evaluation_ref": "screeningPredicates",
+          "writes": [],
+          "forbidden_writes": "All business writes: presentation only",
+          "performer_kind": {
+            "Current": "human",
+            "Target": "rule_and_authorised_human"
+          },
+          "display_group": "preliminary"
+        },
+        {
+          "id": "P06",
+          "type": "state",
+          "title_en": "Store results & open needed reviews",
+          "title_zh": "记录并发起复核",
+          "contract": "immutable result；有 finding 接 MATCH；无 finding 仅说明本查询未返回",
+          "reference_aliases": [
+            "R-C01"
+          ],
+          "source_document": "SRC-016",
+          "source_process_refs": [
+            {
+              "source": "SRC-007",
+              "locator_status": "high_level_M4_mapping_only_no_node_exact_locator",
+              "support_kind": "project_process_context"
+            }
+          ],
+          "predicate_ref": "review",
+          "action_ref": "save_review_draft",
+          "input_refs": [
+            "case_ref",
+            "scope_revision",
+            "inputRevisions"
+          ],
+          "required_input_revisions": "current projection",
+          "authority_policy_ref": "demoConfig.batchC / explicit action-time guard",
+          "hold_evaluation_ref": "screeningPredicates",
+          "writes": [],
+          "forbidden_writes": "All business writes: presentation only",
+          "performer_kind": {
+            "Current": "human",
+            "Target": "product"
+          },
+          "display_group": "preliminary"
+        },
+        {
+          "id": "P07",
+          "type": "decision",
+          "title_en": "Complete applicable inventory?",
+          "title_zh": "适用主体范围完整吗",
+          "contract": "明确 completeness basis 与 membership 决定；scope/ownership未知则不确认",
+          "reference_aliases": [
+            "S-C01",
+            "INT-C01"
+          ],
+          "source_document": "SRC-016",
+          "source_process_refs": [
+            {
+              "source": "SRC-007",
+              "locator_status": "high_level_M4_mapping_only_no_node_exact_locator",
+              "support_kind": "project_process_context"
+            }
+          ],
+          "predicate_ref": "comprehensive",
+          "action_ref": "confirm_population",
+          "input_refs": [
+            "case_ref",
+            "scope_revision",
+            "inputRevisions"
+          ],
+          "required_input_revisions": "current projection",
+          "authority_policy_ref": "demoConfig.batchC / explicit action-time guard",
+          "hold_evaluation_ref": "screeningPredicates",
+          "writes": [],
+          "forbidden_writes": "All business writes: presentation only",
+          "performer_kind": {
+            "Current": "human",
+            "Target": "rule_and_authorised_human"
+          },
+          "display_group": "comprehensive"
+        },
+        {
+          "id": "P08",
+          "type": "action",
+          "title_en": "Confirm revision & comprehensive plan",
+          "title_zh": "确认版本和完整计划",
+          "contract": "先确认 population revision、required coverage tuple 和 authority，再 dispatch",
+          "reference_aliases": [
+            "S-C01",
+            "INT-C01"
+          ],
+          "source_document": "SRC-016",
+          "source_process_refs": [
+            {
+              "source": "SRC-007",
+              "locator_status": "high_level_M4_mapping_only_no_node_exact_locator",
+              "support_kind": "project_process_context"
+            }
+          ],
+          "predicate_ref": "comprehensive",
+          "action_ref": "prepare_comprehensive",
+          "input_refs": [
+            "case_ref",
+            "scope_revision",
+            "inputRevisions"
+          ],
+          "required_input_revisions": "current projection",
+          "authority_policy_ref": "demoConfig.batchC / explicit action-time guard",
+          "hold_evaluation_ref": "screeningPredicates",
+          "writes": [],
+          "forbidden_writes": "All business writes: presentation only",
+          "performer_kind": {
+            "Current": "human",
+            "Target": "product_or_human"
+          },
+          "display_group": "comprehensive"
+        },
+        {
+          "id": "P09",
+          "type": "action",
+          "title_en": "Execute or evaluate explicit reuse",
+          "title_zh": "执行或评估结果复用",
+          "contract": "按完整计划执行；复用须有范围/时效/版本判断；不是复制旧绿色",
+          "reference_aliases": [
+            "INT-C01"
+          ],
+          "source_document": "SRC-016",
+          "source_process_refs": [
+            {
+              "source": "SRC-007",
+              "locator_status": "high_level_M4_mapping_only_no_node_exact_locator",
+              "support_kind": "project_process_context"
+            }
+          ],
+          "predicate_ref": "comprehensive",
+          "action_ref": "request_comprehensive",
+          "input_refs": [
+            "case_ref",
+            "scope_revision",
+            "inputRevisions"
+          ],
+          "required_input_revisions": "current projection",
+          "authority_policy_ref": "demoConfig.batchC / explicit action-time guard",
+          "hold_evaluation_ref": "screeningPredicates",
+          "writes": [],
+          "forbidden_writes": "All business writes: presentation only",
+          "performer_kind": {
+            "Current": "human",
+            "Target": "product_or_human"
+          },
+          "display_group": "comprehensive"
+        },
+        {
+          "id": "P10",
+          "type": "decision",
+          "title_en": "All required coverage satisfied?",
+          "title_zh": "适用覆盖是否满足",
+          "contract": "known inventory+applicability；所有 required tuple 执行、review、currency成立；空集/失败不可真",
+          "reference_aliases": [
+            "INT-C01"
+          ],
+          "source_document": "SRC-016",
+          "source_process_refs": [
+            {
+              "source": "SRC-007",
+              "locator_status": "high_level_M4_mapping_only_no_node_exact_locator",
+              "support_kind": "project_process_context"
+            }
+          ],
+          "predicate_ref": "coverage",
+          "action_ref": "reassess_coverage",
+          "input_refs": [
+            "case_ref",
+            "scope_revision",
+            "inputRevisions"
+          ],
+          "required_input_revisions": "current projection",
+          "authority_policy_ref": "demoConfig.batchC / explicit action-time guard",
+          "hold_evaluation_ref": "screeningPredicates",
+          "writes": [],
+          "forbidden_writes": "All business writes: presentation only",
+          "performer_kind": {
+            "Current": "human",
+            "Target": "rule_and_authorised_human"
+          },
+          "display_group": "coverage"
+        },
+        {
+          "id": "P11",
+          "type": "state",
+          "title_en": "Coverage result for current scope",
+          "title_zh": "当前范围覆盖结果",
+          "contract": "satisfied_for_scope 或 incomplete/unknown/concern；只更新 screening 条件投影",
+          "reference_aliases": [
+            "S-C01",
+            "INT-C01"
+          ],
+          "source_document": "SRC-016",
+          "source_process_refs": [
+            {
+              "source": "SRC-007",
+              "locator_status": "high_level_M4_mapping_only_no_node_exact_locator",
+              "support_kind": "project_process_context"
+            }
+          ],
+          "predicate_ref": "coverage",
+          "action_ref": "reassess_coverage",
+          "input_refs": [
+            "case_ref",
+            "scope_revision",
+            "inputRevisions"
+          ],
+          "required_input_revisions": "current projection",
+          "authority_policy_ref": "demoConfig.batchC / explicit action-time guard",
+          "hold_evaluation_ref": "screeningPredicates",
+          "writes": [],
+          "forbidden_writes": "All business writes: presentation only",
+          "performer_kind": {
+            "Current": "human",
+            "Target": "product"
+          },
+          "display_group": "coverage"
+        },
+        {
+          "id": "P12",
+          "type": "wait",
+          "title_en": "Named gap / wait / safe error",
+          "title_zh": "明确缺口等待",
+          "contract": "保留 input/source/permission/hold/revision reason；回原对象，不增加人物",
+          "reference_aliases": [
+            "S-C03"
+          ],
+          "source_document": "SRC-016",
+          "source_process_refs": [
+            {
+              "source": "SRC-007",
+              "locator_status": "high_level_M4_mapping_only_no_node_exact_locator",
+              "support_kind": "project_process_context"
+            }
+          ],
+          "predicate_ref": "resume",
+          "action_ref": "resume_branch",
+          "input_refs": [
+            "case_ref",
+            "scope_revision",
+            "inputRevisions"
+          ],
+          "required_input_revisions": "current projection",
+          "authority_policy_ref": "demoConfig.batchC / explicit action-time guard",
+          "hold_evaluation_ref": "screeningPredicates",
+          "writes": [],
+          "forbidden_writes": "All business writes: presentation only",
+          "performer_kind": {
+            "Current": "human",
+            "Target": "product"
+          },
+          "display_group": "waiting"
+        }
+      ],
+      "edges": [
+        {
+          "id": "P01-P02",
+          "from": "P01",
+          "to": "P02",
+          "condition": "当前范围可读取；失败则当前节点显示缺失并停止",
+          "support_kind": "design_interpretation",
+          "source_ref": "SRC-016#20",
+          "predicate_ref": "context",
+          "executable": false
+        },
+        {
+          "id": "P02-P03",
+          "from": "P02",
+          "to": "P03",
+          "condition": "对 included 且可能可查询的已知主体评估 preliminary",
+          "support_kind": "design_interpretation",
+          "source_ref": "SRC-016#20",
+          "predicate_ref": "preliminary",
+          "executable": false
+        },
+        {
+          "id": "P02-P07",
+          "from": "P02",
+          "to": "P07",
+          "condition": "独立评估完整 inventory；不等 preliminary 结束",
+          "support_kind": "design_interpretation",
+          "source_ref": "SRC-016#20",
+          "predicate_ref": "preliminary",
+          "executable": false
+        },
+        {
+          "id": "P02-P12",
+          "from": "P02",
+          "to": "P12",
+          "condition": "membership unresolved 或排除依据不足；保留 gap",
+          "support_kind": "design_interpretation",
+          "source_ref": "SRC-016#20",
+          "predicate_ref": "preliminary",
+          "executable": false
+        },
+        {
+          "id": "P03-P04",
+          "from": "P03",
+          "to": "P04",
+          "condition": "输入足够、权限明确、无禁止性 Hold",
+          "support_kind": "design_interpretation",
+          "source_ref": "SRC-016#20",
+          "predicate_ref": "preliminary",
+          "executable": false
+        },
+        {
+          "id": "P03-P12",
+          "from": "P03",
+          "to": "P12",
+          "condition": "输入/权限不足或未知，或有适用 Hold",
+          "support_kind": "design_interpretation",
+          "source_ref": "SRC-016#20",
+          "predicate_ref": "preliminary",
+          "executable": false
+        },
+        {
+          "id": "P04-P05",
+          "from": "P04",
+          "to": "P05",
+          "condition": "adapter 返回或保留 pending",
+          "support_kind": "design_interpretation",
+          "source_ref": "SRC-016#20",
+          "predicate_ref": "preliminary",
+          "executable": false
+        },
+        {
+          "id": "P05-P06",
+          "from": "P05",
+          "to": "P06",
+          "condition": "completed；记录本 scope 观察值和实际 returned findings",
+          "support_kind": "design_interpretation",
+          "source_ref": "SRC-016#20",
+          "predicate_ref": "result",
+          "executable": false
+        },
+        {
+          "id": "P05-P12",
+          "from": "P05",
+          "to": "P12",
+          "condition": "partial/failed/pending；coverage 不完整，保留已返回子结果",
+          "support_kind": "design_interpretation",
+          "source_ref": "SRC-016#20",
+          "predicate_ref": "result",
+          "executable": false
+        },
+        {
+          "id": "P06-P10",
+          "from": "P06",
+          "to": "P10",
+          "condition": "结果/处置可影响覆盖检查，不自动满足全体覆盖",
+          "support_kind": "design_interpretation",
+          "source_ref": "SRC-016#20",
+          "predicate_ref": "review",
+          "executable": false
+        },
+        {
+          "id": "P07-P08",
+          "from": "P07",
+          "to": "P08",
+          "condition": "complete_for_scope、membership resolved、确认权限/范围明确",
+          "support_kind": "design_interpretation",
+          "source_ref": "SRC-016#20",
+          "predicate_ref": "comprehensive",
+          "executable": false
+        },
+        {
+          "id": "P07-P12",
+          "from": "P07",
+          "to": "P12",
+          "condition": "incomplete 或 unknown；保留原 inventory gap",
+          "support_kind": "design_interpretation",
+          "source_ref": "SRC-016#20",
+          "predicate_ref": "comprehensive",
+          "executable": false
+        },
+        {
+          "id": "P08-P09",
+          "from": "P08",
+          "to": "P09",
+          "condition": "已确认相应 population/plan revision，own-input/hold检查通过",
+          "support_kind": "design_interpretation",
+          "source_ref": "SRC-016#20",
+          "predicate_ref": "comprehensive",
+          "executable": false
+        },
+        {
+          "id": "P09-P10",
+          "from": "P09",
+          "to": "P10",
+          "condition": "新结果或显式 reuse assessment 到达；必要 Finding 已关联",
+          "support_kind": "design_interpretation",
+          "source_ref": "SRC-016#20",
+          "predicate_ref": "comprehensive",
+          "executable": false
+        },
+        {
+          "id": "P10-P11",
+          "from": "P10",
+          "to": "P11",
+          "condition": "满足/不满足/未知均形成明确 scoped result，绝不直接发布 CTT",
+          "support_kind": "design_interpretation",
+          "source_ref": "SRC-016#20",
+          "predicate_ref": "coverage",
+          "executable": false
+        },
+        {
+          "id": "P12-P02",
+          "from": "P12",
+          "to": "P02",
+          "condition": "原对象缺口获得相应事件或重试依据，重新评估版本与权限",
+          "support_kind": "design_interpretation",
+          "source_ref": "SRC-016#20",
+          "predicate_ref": "resume",
+          "executable": false
+        }
+      ],
+      "groups": [
+        {
+          "archify_node_id": "context",
+          "semantic_nodes": [
+            "P01",
+            "P02"
+          ]
+        },
+        {
+          "archify_node_id": "preliminary",
+          "semantic_nodes": [
+            "P03",
+            "P04",
+            "P05",
+            "P06"
+          ]
+        },
+        {
+          "archify_node_id": "comprehensive",
+          "semantic_nodes": [
+            "P07",
+            "P08",
+            "P09"
+          ]
+        },
+        {
+          "archify_node_id": "coverage",
+          "semantic_nodes": [
+            "P10",
+            "P11"
+          ]
+        },
+        {
+          "archify_node_id": "waiting",
+          "semantic_nodes": [
+            "P12"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "DG-C-MATCH",
+      "scene": "SCN-MATCH",
+      "nodes": [
+        {
+          "id": "M01",
+          "type": "input",
+          "title_en": "Receive possible match",
+          "title_zh": "接收疑似命中",
+          "contract": "finding、run、subject/provider snapshots；immutable inputs",
+          "reference_aliases": [
+            "S-C01",
+            "R-C01"
+          ],
+          "source_document": "SRC-016",
+          "source_process_refs": [
+            {
+              "source": "SRC-007",
+              "locator_status": "high_level_M4_mapping_only_no_node_exact_locator",
+              "support_kind": "project_process_context"
+            }
+          ],
+          "predicate_ref": "review",
+          "action_ref": "save_review_draft",
+          "input_refs": [
+            "case_ref",
+            "scope_revision",
+            "inputRevisions"
+          ],
+          "required_input_revisions": "current projection",
+          "authority_policy_ref": "demoConfig.batchC / explicit action-time guard",
+          "hold_evaluation_ref": "screeningPredicates",
+          "writes": [],
+          "forbidden_writes": "All business writes: presentation only",
+          "performer_kind": {
+            "Current": "human",
+            "Target": "product"
+          },
+          "display_group": "context"
+        },
+        {
+          "id": "M02",
+          "type": "decision",
+          "title_en": "Need immediate specialist/hold action?",
+          "title_zh": "是否需优先专业处置",
+          "contract": "按具名 demo concern/hold policy；没有该 policy 不宣称无限继续",
+          "reference_aliases": [
+            "INT-C02"
+          ],
+          "source_document": "SRC-016",
+          "source_process_refs": [
+            {
+              "source": "SRC-007",
+              "locator_status": "high_level_M4_mapping_only_no_node_exact_locator",
+              "support_kind": "project_process_context"
+            }
+          ],
+          "predicate_ref": "referral",
+          "action_ref": "refer",
+          "input_refs": [
+            "case_ref",
+            "scope_revision",
+            "inputRevisions"
+          ],
+          "required_input_revisions": "current projection",
+          "authority_policy_ref": "demoConfig.batchC / explicit action-time guard",
+          "hold_evaluation_ref": "screeningPredicates",
+          "writes": [],
+          "forbidden_writes": "All business writes: presentation only",
+          "performer_kind": {
+            "Current": "human",
+            "Target": "rule_and_authorised_human"
+          },
+          "display_group": "context"
+        },
+        {
+          "id": "M03",
+          "type": "action",
+          "title_en": "Prepare comparison & issues",
+          "title_zh": "组织对照与问题",
+          "contract": "similar/different/inconclusive；来源、精度、未知；不写自动裁决",
+          "reference_aliases": [
+            "R-C01",
+            "R-C02"
+          ],
+          "source_document": "SRC-016",
+          "source_process_refs": [
+            {
+              "source": "SRC-007",
+              "locator_status": "high_level_M4_mapping_only_no_node_exact_locator",
+              "support_kind": "project_process_context"
+            }
+          ],
+          "predicate_ref": "review",
+          "action_ref": "save_review_draft",
+          "input_refs": [
+            "case_ref",
+            "scope_revision",
+            "inputRevisions"
+          ],
+          "required_input_revisions": "current projection",
+          "authority_policy_ref": "demoConfig.batchC / explicit action-time guard",
+          "hold_evaluation_ref": "screeningPredicates",
+          "writes": [],
+          "forbidden_writes": "All business writes: presentation only",
+          "performer_kind": {
+            "Current": "human",
+            "Target": "product_or_human"
+          },
+          "display_group": "evidence"
+        },
+        {
+          "id": "M04",
+          "type": "decision",
+          "title_en": "Evidence supports an in-scope review?",
+          "title_zh": "资料能否支持当前复核",
+          "contract": "用途充分性与待审矛盾；能否请求明确补充；unknown 不作sufficient",
+          "reference_aliases": [
+            "S-C01",
+            "INT-C02"
+          ],
+          "source_document": "SRC-016",
+          "source_process_refs": [
+            {
+              "source": "SRC-007",
+              "locator_status": "high_level_M4_mapping_only_no_node_exact_locator",
+              "support_kind": "project_process_context"
+            }
+          ],
+          "predicate_ref": "identity",
+          "action_ref": "assess_identity",
+          "input_refs": [
+            "case_ref",
+            "scope_revision",
+            "inputRevisions"
+          ],
+          "required_input_revisions": "current projection",
+          "authority_policy_ref": "demoConfig.batchC / explicit action-time guard",
+          "hold_evaluation_ref": "screeningPredicates",
+          "writes": [],
+          "forbidden_writes": "All business writes: presentation only",
+          "performer_kind": {
+            "Current": "human",
+            "Target": "rule_and_authorised_human"
+          },
+          "display_group": "evidence"
+        },
+        {
+          "id": "M05",
+          "type": "branch",
+          "title_en": "Source / request specific evidence",
+          "title_zh": "获取指定证据",
+          "contract": "information_gap；复用 B request/grant/intake/assessment；原 Finding 不变",
+          "reference_aliases": [
+            "S-C03"
+          ],
+          "source_document": "SRC-016",
+          "source_process_refs": [
+            {
+              "source": "SRC-007",
+              "locator_status": "high_level_M4_mapping_only_no_node_exact_locator",
+              "support_kind": "project_process_context"
+            }
+          ],
+          "predicate_ref": "request",
+          "action_ref": "request_identity",
+          "input_refs": [
+            "case_ref",
+            "scope_revision",
+            "inputRevisions"
+          ],
+          "required_input_revisions": "current projection",
+          "authority_policy_ref": "demoConfig.batchC / explicit action-time guard",
+          "hold_evaluation_ref": "screeningPredicates",
+          "writes": [],
+          "forbidden_writes": "All business writes: presentation only",
+          "performer_kind": {
+            "Current": "human",
+            "Target": "product"
+          },
+          "display_group": "evidence"
+        },
+        {
+          "id": "M06",
+          "type": "decision",
+          "title_en": "Reviewer has required authority?",
+          "title_zh": "当前人有相应权限吗",
+          "contract": "actor/action/case scope、必要approval policy；未知即不能record",
+          "reference_aliases": [
+            "S-C01",
+            "INT-C02"
+          ],
+          "source_document": "SRC-016",
+          "source_process_refs": [
+            {
+              "source": "SRC-007",
+              "locator_status": "high_level_M4_mapping_only_no_node_exact_locator",
+              "support_kind": "project_process_context"
+            }
+          ],
+          "predicate_ref": "review",
+          "action_ref": "save_review_draft",
+          "input_refs": [
+            "case_ref",
+            "scope_revision",
+            "inputRevisions"
+          ],
+          "required_input_revisions": "current projection",
+          "authority_policy_ref": "demoConfig.batchC / explicit action-time guard",
+          "hold_evaluation_ref": "screeningPredicates",
+          "writes": [],
+          "forbidden_writes": "All business writes: presentation only",
+          "performer_kind": {
+            "Current": "human",
+            "Target": "rule_and_authorised_human"
+          },
+          "display_group": "decision"
+        },
+        {
+          "id": "M07",
+          "type": "action",
+          "title_en": "Human reviews and proposes action",
+          "title_zh": "人工评审及拟定处理",
+          "contract": "选择具体 outcome / further info / referral；理由及当前 inputs；不由相似度替人判断",
+          "reference_aliases": [
+            "R-C01"
+          ],
+          "source_document": "SRC-016",
+          "source_process_refs": [
+            {
+              "source": "SRC-007",
+              "locator_status": "high_level_M4_mapping_only_no_node_exact_locator",
+              "support_kind": "project_process_context"
+            }
+          ],
+          "predicate_ref": "review",
+          "action_ref": "record_unresolved",
+          "input_refs": [
+            "case_ref",
+            "scope_revision",
+            "inputRevisions"
+          ],
+          "required_input_revisions": "current projection",
+          "authority_policy_ref": "demoConfig.batchC / explicit action-time guard",
+          "hold_evaluation_ref": "screeningPredicates",
+          "writes": [],
+          "forbidden_writes": "All business writes: presentation only",
+          "performer_kind": {
+            "Current": "human",
+            "Target": "product_or_human"
+          },
+          "display_group": "decision"
+        },
+        {
+          "id": "M08",
+          "type": "decision",
+          "title_en": "Record guards satisfied now?",
+          "title_zh": "此刻可记录吗",
+          "contract": "当前revision、证据/理由、权限、所需批准、hold均检查；必要approval pending保持未决",
+          "reference_aliases": [
+            "INT-C02"
+          ],
+          "source_document": "SRC-016",
+          "source_process_refs": [
+            {
+              "source": "SRC-007",
+              "locator_status": "high_level_M4_mapping_only_no_node_exact_locator",
+              "support_kind": "project_process_context"
+            }
+          ],
+          "predicate_ref": "disposition",
+          "action_ref": "record_disposition",
+          "input_refs": [
+            "case_ref",
+            "scope_revision",
+            "inputRevisions"
+          ],
+          "required_input_revisions": "current projection",
+          "authority_policy_ref": "demoConfig.batchC / explicit action-time guard",
+          "hold_evaluation_ref": "screeningPredicates",
+          "writes": [],
+          "forbidden_writes": "All business writes: presentation only",
+          "performer_kind": {
+            "Current": "human",
+            "Target": "rule_and_authorised_human"
+          },
+          "display_group": "decision"
+        },
+        {
+          "id": "M09",
+          "type": "action",
+          "title_en": "Record scoped disposition",
+          "title_zh": "记录限定输入的处置",
+          "contract": "append decision、audit、finding result；不授予其他业务权利",
+          "reference_aliases": [
+            "S-C01",
+            "R-C05"
+          ],
+          "source_document": "SRC-016",
+          "source_process_refs": [
+            {
+              "source": "SRC-007",
+              "locator_status": "high_level_M4_mapping_only_no_node_exact_locator",
+              "support_kind": "project_process_context"
+            }
+          ],
+          "predicate_ref": "disposition",
+          "action_ref": "record_disposition",
+          "input_refs": [
+            "case_ref",
+            "scope_revision",
+            "inputRevisions"
+          ],
+          "required_input_revisions": "current projection",
+          "authority_policy_ref": "demoConfig.batchC / explicit action-time guard",
+          "hold_evaluation_ref": "screeningPredicates",
+          "writes": [],
+          "forbidden_writes": "All business writes: presentation only",
+          "performer_kind": {
+            "Current": "human",
+            "Target": "product_or_human"
+          },
+          "display_group": "decision"
+        },
+        {
+          "id": "M10",
+          "type": "branch",
+          "title_en": "Refer / maintain unresolved",
+          "title_zh": "移交或保留未决",
+          "contract": "referral；reason、owner、held actions；可以不作排除决定结束本次讨论",
+          "reference_aliases": [
+            "S-C01",
+            "INT-C02"
+          ],
+          "source_document": "SRC-016",
+          "source_process_refs": [
+            {
+              "source": "SRC-007",
+              "locator_status": "high_level_M4_mapping_only_no_node_exact_locator",
+              "support_kind": "project_process_context"
+            }
+          ],
+          "predicate_ref": "referral",
+          "action_ref": "refer",
+          "input_refs": [
+            "case_ref",
+            "scope_revision",
+            "inputRevisions"
+          ],
+          "required_input_revisions": "current projection",
+          "authority_policy_ref": "demoConfig.batchC / explicit action-time guard",
+          "hold_evaluation_ref": "screeningPredicates",
+          "writes": [],
+          "forbidden_writes": "All business writes: presentation only",
+          "performer_kind": {
+            "Current": "human",
+            "Target": "product"
+          },
+          "display_group": "referral"
+        },
+        {
+          "id": "M11",
+          "type": "action",
+          "title_en": "Reassess linked impact",
+          "title_zh": "重评关联影响",
+          "contract": "影响 finding/coverage/QA-readiness；unknown dependencies可见，原资料/历史不删",
+          "reference_aliases": [
+            "R-C05",
+            "INT-C04"
+          ],
+          "source_document": "SRC-016",
+          "source_process_refs": [
+            {
+              "source": "SRC-007",
+              "locator_status": "high_level_M4_mapping_only_no_node_exact_locator",
+              "support_kind": "project_process_context"
+            }
+          ],
+          "predicate_ref": "coverage",
+          "action_ref": "reassess_coverage",
+          "input_refs": [
+            "case_ref",
+            "scope_revision",
+            "inputRevisions"
+          ],
+          "required_input_revisions": "current projection",
+          "authority_policy_ref": "demoConfig.batchC / explicit action-time guard",
+          "hold_evaluation_ref": "screeningPredicates",
+          "writes": [],
+          "forbidden_writes": "All business writes: presentation only",
+          "performer_kind": {
+            "Current": "human",
+            "Target": "product_or_human"
+          },
+          "display_group": "impact"
+        },
+        {
+          "id": "M12",
+          "type": "state",
+          "title_en": "Return to case with remaining conditions",
+          "title_zh": "返回案件及未决条件",
+          "contract": "scoped result/unresolved；显示 population、独立 EDD、Legal/Credit/QA；不是CTT approved",
+          "reference_aliases": [
+            "S-C06"
+          ],
+          "source_document": "SRC-016",
+          "source_process_refs": [
+            {
+              "source": "SRC-007",
+              "locator_status": "high_level_M4_mapping_only_no_node_exact_locator",
+              "support_kind": "project_process_context"
+            }
+          ],
+          "predicate_ref": "coverage",
+          "action_ref": "reassess_coverage",
+          "input_refs": [
+            "case_ref",
+            "scope_revision",
+            "inputRevisions"
+          ],
+          "required_input_revisions": "current projection",
+          "authority_policy_ref": "demoConfig.batchC / explicit action-time guard",
+          "hold_evaluation_ref": "screeningPredicates",
+          "writes": [],
+          "forbidden_writes": "All business writes: presentation only",
+          "performer_kind": {
+            "Current": "human",
+            "Target": "product"
+          },
+          "display_group": "impact"
+        }
+      ],
+      "edges": [
+        {
+          "id": "M01-M02",
+          "from": "M01",
+          "to": "M02",
+          "condition": "结果绑定正确case与input后",
+          "support_kind": "design_interpretation",
+          "source_ref": "SRC-016#20",
+          "predicate_ref": "review",
+          "executable": false
+        },
+        {
+          "id": "M02-M10",
+          "from": "M02",
+          "to": "M10",
+          "condition": "重大关注、适用策略要求立即升级，或须专业判断当前保护范围",
+          "support_kind": "design_interpretation",
+          "source_ref": "SRC-016#20",
+          "predicate_ref": "referral",
+          "executable": false
+        },
+        {
+          "id": "M02-M03",
+          "from": "M02",
+          "to": "M03",
+          "condition": "已可按已审阅策略做有限准备；不延迟必要升级",
+          "support_kind": "design_interpretation",
+          "source_ref": "SRC-016#20",
+          "predicate_ref": "referral",
+          "executable": false
+        },
+        {
+          "id": "M03-M04",
+          "from": "M03",
+          "to": "M04",
+          "condition": "对照/问题准备好；prepare本身不授予record权限",
+          "support_kind": "design_interpretation",
+          "source_ref": "SRC-016#20",
+          "predicate_ref": "review",
+          "executable": false
+        },
+        {
+          "id": "M04-M05",
+          "from": "M04",
+          "to": "M05",
+          "condition": "存在可说明且可获准取得的具体缺口",
+          "support_kind": "design_interpretation",
+          "source_ref": "SRC-016#20",
+          "predicate_ref": "identity",
+          "executable": false
+        },
+        {
+          "id": "M04-M06",
+          "from": "M04",
+          "to": "M06",
+          "condition": "当前证据可交相应角色复核；不代表结论已确定",
+          "support_kind": "design_interpretation",
+          "source_ref": "SRC-016#20",
+          "predicate_ref": "identity",
+          "executable": false
+        },
+        {
+          "id": "M04-M10",
+          "from": "M04",
+          "to": "M10",
+          "condition": "充分性或行动边界仍不能判断、信息取得不合适或有重大关注",
+          "support_kind": "design_interpretation",
+          "source_ref": "SRC-016#20",
+          "predicate_ref": "identity",
+          "executable": false
+        },
+        {
+          "id": "M05-M03",
+          "from": "M05",
+          "to": "M03",
+          "condition": "相应资料到达并完成接收/用途评估前置，重建当前comparison；未到保持wait",
+          "support_kind": "design_interpretation",
+          "source_ref": "SRC-016#20",
+          "predicate_ref": "request",
+          "executable": false
+        },
+        {
+          "id": "M06-M07",
+          "from": "M06",
+          "to": "M07",
+          "condition": "权限明确允许此类复核/拟定处理",
+          "support_kind": "design_interpretation",
+          "source_ref": "SRC-016#20",
+          "predicate_ref": "review",
+          "executable": false
+        },
+        {
+          "id": "M06-M10",
+          "from": "M06",
+          "to": "M10",
+          "condition": "无权限、范围不符、未知或需其他角色",
+          "support_kind": "design_interpretation",
+          "source_ref": "SRC-016#20",
+          "predicate_ref": "review",
+          "executable": false
+        },
+        {
+          "id": "M07-M05",
+          "from": "M07",
+          "to": "M05",
+          "condition": "有权人员要求进一步指定证据",
+          "support_kind": "design_interpretation",
+          "source_ref": "SRC-016#20",
+          "predicate_ref": "review",
+          "executable": false
+        },
+        {
+          "id": "M07-M10",
+          "from": "M07",
+          "to": "M10",
+          "condition": "仍不确定、重大关注或提出移交",
+          "support_kind": "design_interpretation",
+          "source_ref": "SRC-016#20",
+          "predicate_ref": "review",
+          "executable": false
+        },
+        {
+          "id": "M07-M08",
+          "from": "M07",
+          "to": "M08",
+          "condition": "提出限定 disposition 并提交保存检查",
+          "support_kind": "design_interpretation",
+          "source_ref": "SRC-016#20",
+          "predicate_ref": "review",
+          "executable": false
+        },
+        {
+          "id": "M08-M09",
+          "from": "M08",
+          "to": "M09",
+          "condition": "all required guards satisfied；仅配置范围内的合成action",
+          "support_kind": "design_interpretation",
+          "source_ref": "SRC-016#20",
+          "predicate_ref": "disposition",
+          "executable": false
+        },
+        {
+          "id": "M08-M10",
+          "from": "M08",
+          "to": "M10",
+          "condition": "所需独立review/approval未完成、权限不足或仍需专业判断",
+          "support_kind": "design_interpretation",
+          "source_ref": "SRC-016#20",
+          "predicate_ref": "disposition",
+          "executable": false
+        },
+        {
+          "id": "M08-M03",
+          "from": "M08",
+          "to": "M03",
+          "condition": "相关输入过时；保留draft，先显示变更并重新复核",
+          "support_kind": "design_interpretation",
+          "source_ref": "SRC-016#20",
+          "predicate_ref": "disposition",
+          "executable": false
+        },
+        {
+          "id": "M08-M07",
+          "from": "M08",
+          "to": "M07",
+          "condition": "缺少可修正的理由/字段：留在任务内，不声称已record",
+          "support_kind": "design_interpretation",
+          "source_ref": "SRC-016#20",
+          "predicate_ref": "disposition",
+          "executable": false
+        },
+        {
+          "id": "M09-M11",
+          "from": "M09",
+          "to": "M11",
+          "condition": "记录成功事件",
+          "support_kind": "design_interpretation",
+          "source_ref": "SRC-016#20",
+          "predicate_ref": "disposition",
+          "executable": false
+        },
+        {
+          "id": "M10-M11",
+          "from": "M10",
+          "to": "M11",
+          "condition": "记录未决/移交/hold变化；不得生成排除处置",
+          "support_kind": "design_interpretation",
+          "source_ref": "SRC-016#20",
+          "predicate_ref": "referral",
+          "executable": false
+        },
+        {
+          "id": "M10-M03",
+          "from": "M10",
+          "to": "M03",
+          "condition": "有权接手者或具体输入到达后恢复同finding；导航返回不触发此边",
+          "support_kind": "design_interpretation",
+          "source_ref": "SRC-016#20",
+          "predicate_ref": "referral",
+          "executable": false
+        },
+        {
+          "id": "M11-M12",
+          "from": "M11",
+          "to": "M12",
+          "condition": "刷新关联对象与当前阻塞投影",
+          "support_kind": "design_interpretation",
+          "source_ref": "SRC-016#20",
+          "predicate_ref": "coverage",
+          "executable": false
+        }
+      ],
+      "groups": [
+        {
+          "archify_node_id": "context",
+          "semantic_nodes": [
+            "M01",
+            "M02"
+          ]
+        },
+        {
+          "archify_node_id": "evidence",
+          "semantic_nodes": [
+            "M03",
+            "M04",
+            "M05"
+          ]
+        },
+        {
+          "archify_node_id": "decision",
+          "semantic_nodes": [
+            "M06",
+            "M07",
+            "M08",
+            "M09"
+          ]
+        },
+        {
+          "archify_node_id": "referral",
+          "semantic_nodes": [
+            "M10"
+          ]
+        },
+        {
+          "archify_node_id": "impact",
+          "semantic_nodes": [
+            "M11",
+            "M12"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "DG-C-EDD",
+      "scene": "SCN-EDD",
+      "nodes": [
+        {
+          "id": "E01",
+          "type": "input",
+          "title_en": "Read risk/context and existing assessment",
+          "title_zh": "读取风险与现有评估",
+          "contract": "risk trigger、scope revision、已有applicability记录；排除命中不是取消EDD理由",
+          "reference_aliases": [
+            "S-C01",
+            "R-C03"
+          ],
+          "source_document": "SRC-016",
+          "source_process_refs": [
+            {
+              "source": "SRC-007",
+              "locator_status": "high_level_M4_mapping_only_no_node_exact_locator",
+              "support_kind": "project_process_context"
+            }
+          ],
+          "predicate_ref": "edd",
+          "action_ref": "record_edd_applicability",
+          "input_refs": [
+            "case_ref",
+            "scope_revision",
+            "inputRevisions"
+          ],
+          "required_input_revisions": "current projection",
+          "authority_policy_ref": "demoConfig.batchC / explicit action-time guard",
+          "hold_evaluation_ref": "screeningPredicates",
+          "writes": [],
+          "forbidden_writes": "All business writes: presentation only",
+          "performer_kind": {
+            "Current": "human",
+            "Target": "product"
+          },
+          "display_group": "context"
+        },
+        {
+          "id": "E02",
+          "type": "decision",
+          "title_en": "Valid applicability outcome?",
+          "title_zh": "是否有有效适用性结果",
+          "contract": "评估依据、范围版本、决策权限；required / not_required / unknown",
+          "reference_aliases": [
+            "R-C03",
+            "INT-C03"
+          ],
+          "source_document": "SRC-016",
+          "source_process_refs": [
+            {
+              "source": "SRC-007",
+              "locator_status": "high_level_M4_mapping_only_no_node_exact_locator",
+              "support_kind": "project_process_context"
+            }
+          ],
+          "predicate_ref": "edd",
+          "action_ref": "record_edd_applicability",
+          "input_refs": [
+            "case_ref",
+            "scope_revision",
+            "inputRevisions"
+          ],
+          "required_input_revisions": "current projection",
+          "authority_policy_ref": "demoConfig.batchC / explicit action-time guard",
+          "hold_evaluation_ref": "screeningPredicates",
+          "writes": [],
+          "forbidden_writes": "All business writes: presentation only",
+          "performer_kind": {
+            "Current": "human",
+            "Target": "rule_and_authorised_human"
+          },
+          "display_group": "context"
+        },
+        {
+          "id": "E03",
+          "type": "state",
+          "title_en": "Not required for this scope",
+          "title_zh": "本范围不适用",
+          "contract": "只有有依据的not_required decision；仍显示原因/版本；不代表Case ready",
+          "reference_aliases": [
+            "INT-C03"
+          ],
+          "source_document": "SRC-016",
+          "source_process_refs": [
+            {
+              "source": "SRC-007",
+              "locator_status": "high_level_M4_mapping_only_no_node_exact_locator",
+              "support_kind": "project_process_context"
+            }
+          ],
+          "predicate_ref": "edd",
+          "action_ref": "record_edd_applicability",
+          "input_refs": [
+            "case_ref",
+            "scope_revision",
+            "inputRevisions"
+          ],
+          "required_input_revisions": "current projection",
+          "authority_policy_ref": "demoConfig.batchC / explicit action-time guard",
+          "hold_evaluation_ref": "screeningPredicates",
+          "writes": [],
+          "forbidden_writes": "All business writes: presentation only",
+          "performer_kind": {
+            "Current": "human",
+            "Target": "product"
+          },
+          "display_group": "notrequired"
+        },
+        {
+          "id": "E04",
+          "type": "wait",
+          "title_en": "Applicability review needed",
+          "title_zh": "适用性待审",
+          "contract": "缺理由、冲突、旧版本或权限未知；保持unknown与具体owner/question",
+          "reference_aliases": [
+            "S-C06",
+            "INT-C03"
+          ],
+          "source_document": "SRC-016",
+          "source_process_refs": [
+            {
+              "source": "SRC-007",
+              "locator_status": "high_level_M4_mapping_only_no_node_exact_locator",
+              "support_kind": "project_process_context"
+            }
+          ],
+          "predicate_ref": "edd",
+          "action_ref": "record_edd_applicability",
+          "input_refs": [
+            "case_ref",
+            "scope_revision",
+            "inputRevisions"
+          ],
+          "required_input_revisions": "current projection",
+          "authority_policy_ref": "demoConfig.batchC / explicit action-time guard",
+          "hold_evaluation_ref": "screeningPredicates",
+          "writes": [],
+          "forbidden_writes": "All business writes: presentation only",
+          "performer_kind": {
+            "Current": "human",
+            "Target": "product"
+          },
+          "display_group": "unknown"
+        },
+        {
+          "id": "E05",
+          "type": "action",
+          "title_en": "Create linked EDD work",
+          "title_zh": "建立关联EDD工作",
+          "contract": "required + scope/reason；缺owner显示Unassigned；不伪开始无人负责审批",
+          "reference_aliases": [
+            "S-C01"
+          ],
+          "source_document": "SRC-016",
+          "source_process_refs": [
+            {
+              "source": "SRC-007",
+              "locator_status": "high_level_M4_mapping_only_no_node_exact_locator",
+              "support_kind": "project_process_context"
+            }
+          ],
+          "predicate_ref": "edd",
+          "action_ref": "prepare_edd_pack",
+          "input_refs": [
+            "case_ref",
+            "scope_revision",
+            "inputRevisions"
+          ],
+          "required_input_revisions": "current projection",
+          "authority_policy_ref": "demoConfig.batchC / explicit action-time guard",
+          "hold_evaluation_ref": "screeningPredicates",
+          "writes": [],
+          "forbidden_writes": "All business writes: presentation only",
+          "performer_kind": {
+            "Current": "human",
+            "Target": "product_or_human"
+          },
+          "display_group": "required"
+        },
+        {
+          "id": "E06",
+          "type": "action",
+          "title_en": "Prepare targeted pack",
+          "title_zh": "准备针对性证据包",
+          "contract": "risk question、已有Evidence/Claims及版本；不固定每案都要SoF/SoW",
+          "reference_aliases": [
+            "S-C01",
+            "R-C03"
+          ],
+          "source_document": "SRC-016",
+          "source_process_refs": [
+            {
+              "source": "SRC-007",
+              "locator_status": "high_level_M4_mapping_only_no_node_exact_locator",
+              "support_kind": "project_process_context"
+            }
+          ],
+          "predicate_ref": "edd",
+          "action_ref": "prepare_edd_pack",
+          "input_refs": [
+            "case_ref",
+            "scope_revision",
+            "inputRevisions"
+          ],
+          "required_input_revisions": "current projection",
+          "authority_policy_ref": "demoConfig.batchC / explicit action-time guard",
+          "hold_evaluation_ref": "screeningPredicates",
+          "writes": [],
+          "forbidden_writes": "All business writes: presentation only",
+          "performer_kind": {
+            "Current": "human",
+            "Target": "product_or_human"
+          },
+          "display_group": "required"
+        },
+        {
+          "id": "E07",
+          "type": "decision",
+          "title_en": "Required evidence sufficient for assessment?",
+          "title_zh": "材料够评估吗",
+          "contract": "针对性不足回具体问题；critical concern可随时走专业保护",
+          "reference_aliases": [
+            "INT-C03"
+          ],
+          "source_document": "SRC-016",
+          "source_process_refs": [
+            {
+              "source": "SRC-007",
+              "locator_status": "high_level_M4_mapping_only_no_node_exact_locator",
+              "support_kind": "project_process_context"
+            }
+          ],
+          "predicate_ref": "edd",
+          "action_ref": "prepare_edd_pack",
+          "input_refs": [
+            "case_ref",
+            "scope_revision",
+            "inputRevisions"
+          ],
+          "required_input_revisions": "current projection",
+          "authority_policy_ref": "demoConfig.batchC / explicit action-time guard",
+          "hold_evaluation_ref": "screeningPredicates",
+          "writes": [],
+          "forbidden_writes": "All business writes: presentation only",
+          "performer_kind": {
+            "Current": "human",
+            "Target": "rule_and_authorised_human"
+          },
+          "display_group": "required"
+        },
+        {
+          "id": "E08",
+          "type": "action",
+          "title_en": "Specialist assessment",
+          "title_zh": "专业评估",
+          "contract": "风险判断、outcome与conditions分别记录",
+          "reference_aliases": [
+            "S-C01",
+            "R-C03"
+          ],
+          "source_document": "SRC-016",
+          "source_process_refs": [
+            {
+              "source": "SRC-007",
+              "locator_status": "high_level_M4_mapping_only_no_node_exact_locator",
+              "support_kind": "project_process_context"
+            }
+          ],
+          "predicate_ref": "edd",
+          "action_ref": "prepare_edd_pack",
+          "input_refs": [
+            "case_ref",
+            "scope_revision",
+            "inputRevisions"
+          ],
+          "required_input_revisions": "current projection",
+          "authority_policy_ref": "demoConfig.batchC / explicit action-time guard",
+          "hold_evaluation_ref": "screeningPredicates",
+          "writes": [],
+          "forbidden_writes": "All business writes: presentation only",
+          "performer_kind": {
+            "Current": "human",
+            "Target": "product_or_human"
+          },
+          "display_group": "required"
+        },
+        {
+          "id": "E09",
+          "type": "decision",
+          "title_en": "Required approval recorded and current?",
+          "title_zh": "所需批准是否已记录且当前有效",
+          "contract": "pack/assessment revision、permissions、approval requirement；unknown不能跳过",
+          "reference_aliases": [
+            "S-C01",
+            "INT-C03"
+          ],
+          "source_document": "SRC-016",
+          "source_process_refs": [
+            {
+              "source": "SRC-007",
+              "locator_status": "high_level_M4_mapping_only_no_node_exact_locator",
+              "support_kind": "project_process_context"
+            }
+          ],
+          "predicate_ref": "edd",
+          "action_ref": null,
+          "input_refs": [
+            "case_ref",
+            "scope_revision",
+            "inputRevisions"
+          ],
+          "required_input_revisions": "current projection",
+          "authority_policy_ref": "demoConfig.batchC / explicit action-time guard",
+          "hold_evaluation_ref": "screeningPredicates",
+          "writes": [],
+          "forbidden_writes": "All business writes: presentation only",
+          "performer_kind": {
+            "Current": "human",
+            "Target": "rule_and_authorised_human"
+          },
+          "display_group": "required"
+        },
+        {
+          "id": "E10",
+          "type": "action",
+          "title_en": "Record outcome & conditions",
+          "title_zh": "记录结果与条件",
+          "contract": "EDD自身决定与condition refs；资料充分不等于结果批准",
+          "reference_aliases": [
+            "S-C01",
+            "R-C05"
+          ],
+          "source_document": "SRC-016",
+          "source_process_refs": [
+            {
+              "source": "SRC-007",
+              "locator_status": "high_level_M4_mapping_only_no_node_exact_locator",
+              "support_kind": "project_process_context"
+            }
+          ],
+          "predicate_ref": "edd",
+          "action_ref": null,
+          "input_refs": [
+            "case_ref",
+            "scope_revision",
+            "inputRevisions"
+          ],
+          "required_input_revisions": "current projection",
+          "authority_policy_ref": "demoConfig.batchC / explicit action-time guard",
+          "hold_evaluation_ref": "screeningPredicates",
+          "writes": [],
+          "forbidden_writes": "All business writes: presentation only",
+          "performer_kind": {
+            "Current": "human",
+            "Target": "product_or_human"
+          },
+          "display_group": "required"
+        },
+        {
+          "id": "E11",
+          "type": "state",
+          "title_en": "Feed QA / readiness",
+          "title_zh": "更新QA与准备状态",
+          "contract": "条件满足情况独立；finding disposition、其他hold、发布保持各自语义",
+          "reference_aliases": [
+            "S-C06"
+          ],
+          "source_document": "SRC-016",
+          "source_process_refs": [
+            {
+              "source": "SRC-007",
+              "locator_status": "high_level_M4_mapping_only_no_node_exact_locator",
+              "support_kind": "project_process_context"
+            }
+          ],
+          "predicate_ref": "coverage",
+          "action_ref": "reassess_coverage",
+          "input_refs": [
+            "case_ref",
+            "scope_revision",
+            "inputRevisions"
+          ],
+          "required_input_revisions": "current projection",
+          "authority_policy_ref": "demoConfig.batchC / explicit action-time guard",
+          "hold_evaluation_ref": "screeningPredicates",
+          "writes": [],
+          "forbidden_writes": "All business writes: presentation only",
+          "performer_kind": {
+            "Current": "human",
+            "Target": "product"
+          },
+          "display_group": "impact"
+        },
+        {
+          "id": "E12",
+          "type": "branch",
+          "title_en": "Targeted information / referral",
+          "title_zh": "指定补充或移交",
+          "contract": "复用information_gap/referral机制；不建新大分支或第三个产品",
+          "reference_aliases": [
+            "S-C03"
+          ],
+          "source_document": "SRC-016",
+          "source_process_refs": [
+            {
+              "source": "SRC-007",
+              "locator_status": "high_level_M4_mapping_only_no_node_exact_locator",
+              "support_kind": "project_process_context"
+            }
+          ],
+          "predicate_ref": "referral",
+          "action_ref": "refer",
+          "input_refs": [
+            "case_ref",
+            "scope_revision",
+            "inputRevisions"
+          ],
+          "required_input_revisions": "current projection",
+          "authority_policy_ref": "demoConfig.batchC / explicit action-time guard",
+          "hold_evaluation_ref": "screeningPredicates",
+          "writes": [],
+          "forbidden_writes": "All business writes: presentation only",
+          "performer_kind": {
+            "Current": "human",
+            "Target": "product"
+          },
+          "display_group": "required"
+        }
+      ],
+      "edges": [
+        {
+          "id": "E01-E02",
+          "from": "E01",
+          "to": "E02",
+          "condition": "新context或已记录assessment需要评价时；不是仅依赖matching结束",
+          "support_kind": "design_interpretation",
+          "source_ref": "SRC-016#20",
+          "predicate_ref": "edd",
+          "executable": false
+        },
+        {
+          "id": "E02-E03",
+          "from": "E02",
+          "to": "E03",
+          "condition": "not_required AND 有依据、范围当前、有权记录",
+          "support_kind": "design_interpretation",
+          "source_ref": "SRC-016#20",
+          "predicate_ref": "edd",
+          "executable": false
+        },
+        {
+          "id": "E02-E04",
+          "from": "E02",
+          "to": "E04",
+          "condition": "unknown、absence、conflict、stale或无权确认",
+          "support_kind": "design_interpretation",
+          "source_ref": "SRC-016#20",
+          "predicate_ref": "edd",
+          "executable": false
+        },
+        {
+          "id": "E02-E05",
+          "from": "E02",
+          "to": "E05",
+          "condition": "required AND 关联依据/版本明确",
+          "support_kind": "design_interpretation",
+          "source_ref": "SRC-016#20",
+          "predicate_ref": "edd",
+          "executable": false
+        },
+        {
+          "id": "E04-E02",
+          "from": "E04",
+          "to": "E02",
+          "condition": "有权适用性决定或新证据/上下文；离开视图不触发",
+          "support_kind": "design_interpretation",
+          "source_ref": "SRC-016#20",
+          "predicate_ref": "edd",
+          "executable": false
+        },
+        {
+          "id": "E05-E06",
+          "from": "E05",
+          "to": "E06",
+          "condition": "可做的准备具备输入与任务/分支/案件限制检查",
+          "support_kind": "design_interpretation",
+          "source_ref": "SRC-016#20",
+          "predicate_ref": "edd",
+          "executable": false
+        },
+        {
+          "id": "E06-E07",
+          "from": "E06",
+          "to": "E07",
+          "condition": "证据包和未决问题已组织",
+          "support_kind": "design_interpretation",
+          "source_ref": "SRC-016#20",
+          "predicate_ref": "edd",
+          "executable": false
+        },
+        {
+          "id": "E07-E08",
+          "from": "E07",
+          "to": "E08",
+          "condition": "对相应评估任务具备充分输入与权限",
+          "support_kind": "design_interpretation",
+          "source_ref": "SRC-016#20",
+          "predicate_ref": "edd",
+          "executable": false
+        },
+        {
+          "id": "E07-E12",
+          "from": "E07",
+          "to": "E12",
+          "condition": "不足、未知、需专门补充或处置",
+          "support_kind": "design_interpretation",
+          "source_ref": "SRC-016#20",
+          "predicate_ref": "edd",
+          "executable": false
+        },
+        {
+          "id": "E12-E06",
+          "from": "E12",
+          "to": "E06",
+          "condition": "相应输入/有权处理到达，保留版本与历史",
+          "support_kind": "design_interpretation",
+          "source_ref": "SRC-016#20",
+          "predicate_ref": "referral",
+          "executable": false
+        },
+        {
+          "id": "E08-E09",
+          "from": "E08",
+          "to": "E09",
+          "condition": "当前assessment及条件建议已记录",
+          "support_kind": "design_interpretation",
+          "source_ref": "SRC-016#20",
+          "predicate_ref": "edd",
+          "executable": false
+        },
+        {
+          "id": "E09-E10",
+          "from": "E09",
+          "to": "E10",
+          "condition": "所需批准均已记录且当前有效；或有明确不需额外批准配置",
+          "support_kind": "design_interpretation",
+          "source_ref": "SRC-016#20",
+          "predicate_ref": "edd",
+          "executable": false
+        },
+        {
+          "id": "E09-E12",
+          "from": "E09",
+          "to": "E12",
+          "condition": "审批待办/缺权限；按相应referral保留未决",
+          "support_kind": "design_interpretation",
+          "source_ref": "SRC-016#20",
+          "predicate_ref": "edd",
+          "executable": false
+        },
+        {
+          "id": "E09-E06",
+          "from": "E09",
+          "to": "E06",
+          "condition": "所需输入/证据包已变更，需要重新审阅",
+          "support_kind": "design_interpretation",
+          "source_ref": "SRC-016#20",
+          "predicate_ref": "edd",
+          "executable": false
+        },
+        {
+          "id": "E10-E11",
+          "from": "E10",
+          "to": "E11",
+          "condition": "记录结果与条件事件；条件不因批准动作自动全部关闭",
+          "support_kind": "design_interpretation",
+          "source_ref": "SRC-016#20",
+          "predicate_ref": "edd",
+          "executable": false
+        },
+        {
+          "id": "E03-E11",
+          "from": "E03",
+          "to": "E11",
+          "condition": "只投影本范围不适用结论；不改其他控制",
+          "support_kind": "design_interpretation",
+          "source_ref": "SRC-016#20",
+          "predicate_ref": "edd",
+          "executable": false
+        },
+        {
+          "id": "E04-E11",
+          "from": "E04",
+          "to": "E11",
+          "condition": "也投影unknown阻塞/待判断状态；该边不结束适用性待办",
+          "support_kind": "design_interpretation",
+          "source_ref": "SRC-016#20",
+          "predicate_ref": "edd",
+          "executable": false
+        }
+      ],
+      "groups": [
+        {
+          "archify_node_id": "context",
+          "semantic_nodes": [
+            "E01",
+            "E02"
+          ]
+        },
+        {
+          "archify_node_id": "required",
+          "semantic_nodes": [
+            "E05",
+            "E06",
+            "E07",
+            "E08",
+            "E09",
+            "E10",
+            "E12"
+          ]
+        },
+        {
+          "archify_node_id": "notrequired",
+          "semantic_nodes": [
+            "E03"
+          ]
+        },
+        {
+          "archify_node_id": "unknown",
+          "semantic_nodes": [
+            "E04"
+          ]
+        },
+        {
+          "archify_node_id": "impact",
+          "semantic_nodes": [
+            "E11"
+          ]
+        }
+      ]
+    }
+  ]
+};

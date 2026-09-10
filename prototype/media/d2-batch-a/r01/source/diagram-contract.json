@@ -1,0 +1,157 @@
+{
+  "revision": "r01",
+  "renderer": {
+    "skill": "archify",
+    "version": "2.17",
+    "schema": "architecture/schema_version=1",
+    "note": "Renderer component type external is a neutral shape; business types below are semantic, not invented Archify API types.",
+    "native_exports": true
+  },
+  "content_revision": "Batch-A-Final-v1.0",
+  "nodes": {
+    "request": {
+      "type": "evidence",
+      "ref": "EV-A01",
+      "status": "received"
+    },
+    "group-a": {
+      "type": "commercial_display_label",
+      "ref": "Group A",
+      "legal_entity_key": false
+    },
+    "entity-a": {
+      "type": "legal_entity",
+      "ref": "Entity A",
+      "jurisdiction": "Australia",
+      "scope": "sole_intended_trading_entity"
+    },
+    "entity-b": {
+      "type": "legal_entity",
+      "ref": "Entity B",
+      "jurisdiction": "Singapore",
+      "scope": "reported_related_parent_only",
+      "counterparty": false,
+      "guarantor": false
+    },
+    "person-t": {
+      "type": "person",
+      "ref": "Person T",
+      "role": "group_treasury_contact"
+    },
+    "scope": {
+      "type": "working_scope",
+      "booking": null,
+      "eligibility": "not_assessed"
+    },
+    "authority": {
+      "type": "authority_assessment",
+      "person": "Person T",
+      "principal": "Entity A",
+      "purpose": "coordinate_information",
+      "status": "evidence_required",
+      "established": false
+    },
+    "context": {
+      "type": "reviewed_working_context"
+    },
+    "requirements": {
+      "type": "preparation_task",
+      "scope": "known_context_draft_only",
+      "gate": "sufficient_inputs_and_no_applicable_task_branch_case_hold"
+    },
+    "external": {
+      "type": "external_action",
+      "status": "awaiting_authority_and_permission"
+    }
+  },
+  "diagrams": {
+    "DG-SCOPE-A": {
+      "scene": "SCN-SCOPE",
+      "nodes": [
+        "request",
+        "group-a",
+        "entity-a",
+        "scope"
+      ],
+      "relations": [
+        {
+          "from": "request",
+          "to": "group-a",
+          "type": "uses_display_label",
+          "source": "EV-A01"
+        },
+        {
+          "from": "request",
+          "to": "entity-a",
+          "type": "intended_trading_entity",
+          "source": "preauthored_RM_clarification",
+          "visible_from": "A01-C3"
+        },
+        {
+          "from": "entity-a",
+          "to": "scope",
+          "type": "scope_subject",
+          "visible_from": "A01-C4"
+        }
+      ]
+    },
+    "DG-ENTITY-A": {
+      "scene": "SCN-ENTITY",
+      "nodes": [
+        "person-t",
+        "entity-b",
+        "authority",
+        "entity-a"
+      ],
+      "relations": [
+        {
+          "from": "person-t",
+          "to": "entity-b",
+          "type": "role_claim",
+          "source": "EV-A03",
+          "status": "reported",
+          "authenticity": "separate_assessment"
+        },
+        {
+          "from": "entity-b",
+          "to": "entity-a",
+          "type": "reported_parent",
+          "source": "EV-A02",
+          "status": "reported"
+        },
+        {
+          "from": "person-t",
+          "to": "authority",
+          "type": "representation_claim",
+          "status": "claimed"
+        },
+        {
+          "from": "authority",
+          "to": "entity-a",
+          "type": "principal_for_specific_action",
+          "status": "not_established",
+          "evidence_required": "EV-A05",
+          "received": false
+        }
+      ]
+    },
+    "DG-ENABLE-A": {
+      "scene": "SCN-ENTITY",
+      "nodes": [
+        "context",
+        "requirements",
+        "authority",
+        "external"
+      ],
+      "gate": "sufficient_inputs_and_no_applicable_hold",
+      "other_branches": "not_assessed",
+      "does_not_enable": [
+        "client_approval",
+        "trading",
+        "publication",
+        "external_email"
+      ]
+    }
+  },
+  "implementation": "Archify CLI validated/delivered HTML; SVG exported with the actual viewer export control. Host adds focus ring/visibility only. Diagrams in en-AU and zh-CN; en-US reuses en-AU diagram because these exact labels require no spelling change."
+}

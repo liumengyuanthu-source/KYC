@@ -1,0 +1,98 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "Preparation and waiting",
+    "locale": "en",
+    "quality_profile": "showcase",
+    "animation": "none",
+    "legend": {
+      "mode": "hidden"
+    },
+    "viewBox": [
+      1100,
+      620
+    ]
+  },
+  "components": [
+    {
+      "id": "context",
+      "type": "external",
+      "label": "Reviewed context",
+      "sublabel": "Scope / entity / known inputs",
+      "pos": [
+        50,
+        80
+      ],
+      "size": [
+        220,
+        96
+      ]
+    },
+    {
+      "id": "requirements",
+      "type": "external",
+      "label": "Requirements draft",
+      "sublabel": "Known context only",
+      "pos": [
+        780,
+        80
+      ],
+      "size": [
+        220,
+        96
+      ]
+    },
+    {
+      "id": "authority",
+      "type": "external",
+      "label": "Authority review",
+      "sublabel": "Evidence required / Unassigned",
+      "pos": [
+        50,
+        430
+      ],
+      "size": [
+        220,
+        96
+      ]
+    },
+    {
+      "id": "external",
+      "type": "external",
+      "label": "External actions",
+      "sublabel": "Awaiting permission / not performed",
+      "pos": [
+        780,
+        430
+      ],
+      "size": [
+        220,
+        96
+      ]
+    }
+  ],
+  "connections": [
+    {
+      "id": "draft-gate",
+      "from": "context",
+      "to": "requirements",
+      "label": "Sufficient inputs + no holds"
+    },
+    {
+      "id": "authority-gap",
+      "from": "context",
+      "to": "authority",
+      "label": "Principal / action evidence gap",
+      "variant": "dashed",
+      "labelDy": 130
+    },
+    {
+      "id": "action-waits",
+      "from": "authority",
+      "to": "external",
+      "label": "Specific authority required",
+      "variant": "dashed"
+    }
+  ]
+}

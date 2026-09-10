@@ -1,0 +1,114 @@
+{
+  "schema_version": 2,
+  "diagram_type": "workflow",
+  "meta": {
+    "title": "Readiness for the current scope",
+    "locale": "en",
+    "quality_profile": "showcase",
+    "animation": "none",
+    "legend": {
+      "mode": "auto",
+      "entries": {
+        "frontend": {
+          "label": "Read-only activity"
+        }
+      }
+    }
+  },
+  "lanes": [
+    {
+      "id": "evaluate",
+      "label": "Current scope and prerequisites"
+    },
+    {
+      "id": "wait",
+      "label": "Unresolved work"
+    }
+  ],
+  "mainPath": [
+    "E02-scope",
+    "E02-prerequisites",
+    "E02-evaluate",
+    "E02-ready"
+  ],
+  "nodes": [
+    {
+      "id": "E02-scope",
+      "lane": "evaluate",
+      "col": 0,
+      "width": 154,
+      "type": "frontend",
+      "label": "Bind scope",
+      "sublabel": "Entity, product, booking, revision",
+      "height": 150
+    },
+    {
+      "id": "E02-prerequisites",
+      "lane": "evaluate",
+      "col": 1,
+      "width": 154,
+      "type": "frontend",
+      "label": "Read prerequisites",
+      "sublabel": "KYC, screening, specialists, QA",
+      "height": 150
+    },
+    {
+      "id": "E02-evaluate",
+      "lane": "evaluate",
+      "col": 2,
+      "width": 154,
+      "type": "frontend",
+      "label": "Evaluate current basis",
+      "sublabel": "Versions, applicability and holds",
+      "height": 150
+    },
+    {
+      "id": "E02-ready",
+      "lane": "evaluate",
+      "col": 3,
+      "width": 154,
+      "type": "frontend",
+      "label": "Ready for confirmation",
+      "sublabel": "Still not cleared to trade",
+      "height": 150
+    },
+    {
+      "id": "E02-notready",
+      "lane": "wait",
+      "col": 2,
+      "width": 154,
+      "type": "frontend",
+      "label": "Not ready",
+      "sublabel": "Named blocker, owner, next action",
+      "height": 150
+    }
+  ],
+  "edges": [
+    {
+      "from": "E02-scope",
+      "to": "E02-prerequisites"
+    },
+    {
+      "from": "E02-prerequisites",
+      "to": "E02-evaluate"
+    },
+    {
+      "from": "E02-evaluate",
+      "to": "E02-ready",
+      "label": "All required satisfied"
+    },
+    {
+      "from": "E02-evaluate",
+      "to": "E02-notready",
+      "label": "Open, unknown or stale",
+      "role": "branch"
+    },
+    {
+      "from": "E02-notready",
+      "to": "E02-prerequisites",
+      "label": "Reviewed change",
+      "role": "return",
+      "variant": "default"
+    }
+  ]
+}

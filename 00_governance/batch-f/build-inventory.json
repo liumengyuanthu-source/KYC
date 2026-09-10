@@ -1,0 +1,166 @@
+{
+  "derived": true,
+  "runtime_store": false,
+  "source_ref": "SRC-021",
+  "case_id": "DEMO-CTT-001",
+  "validation_status": "approved_demo_design_not_bank_validation",
+  "generator": "04_operating_model/batch-f/build-consolidation.mjs",
+  "inputs": [
+    {
+      "path": "prototype/navigation.mjs",
+      "sha256": "7929ccda43c859d86a9dbc5c9c16289a8a83c9cf607e39864c22c40fb2279f9b"
+    },
+    {
+      "path": "prototype/content.mjs",
+      "sha256": "bfa34f1934a950b6685673dc88b6595f0fde504d54d1dea85b3dee05bc37ee21"
+    },
+    {
+      "path": "prototype/clearance-ui.mjs",
+      "sha256": "e8850bea07f13000d152ce315e9dcfb4bd8dcb6aed4683e9cc90ba198c3f6435"
+    },
+    {
+      "path": "prototype/consolidation.mjs",
+      "sha256": "f646dc284b7237c38ddcc0d159af3030a52f9f1d810a31bb651702f36abd1a23"
+    },
+    {
+      "path": "prototype/references.mjs",
+      "sha256": "e04ebbfd86ef25501bf3f68d498e4399b121fdc54a5faa79caafd69d707aae5a"
+    },
+    {
+      "path": "prototype/references/registry.mjs",
+      "sha256": "5801db7b659de67c765294d1127fec04d502734a652f71853249885bb70bb511"
+    },
+    {
+      "path": "prototype/references/design.mjs",
+      "sha256": "d7d5a719ccca13991084d4584b7f3bb50b526ea1ada194598aff423b4a38b12e"
+    },
+    {
+      "path": "prototype/references/project.mjs",
+      "sha256": "97279b43fa64f1fc77d4785cf15153940ffc608c6284c3b7f3f510dcd2d22d72"
+    },
+    {
+      "path": "prototype/references/clearance.mjs",
+      "sha256": "b25297bdf44d5af448bb0c0309e5ec0d18e10e6d9fb414e6461895e9194b3aa2"
+    },
+    {
+      "path": "05_product_requirements/capability_map.csv",
+      "sha256": "8eb528aff8e880e1b1bfe07188abcaf1a20b29b442e6afa11d566d6ed268224c"
+    },
+    {
+      "path": "05_product_requirements/requirement_backlog.csv",
+      "sha256": "d45b06249875b4e23248b26c1442cecf4bfbf8a70bdb4ec473f255161b7b6f7f"
+    },
+    {
+      "path": "05_product_requirements/requirement_traceability.csv",
+      "sha256": "0154d6abd1728ab7fd07363fe799d7a636e1ab7ad6713ab930a3c2d88ce2e6d8"
+    },
+    {
+      "path": "05_product_requirements/acceptance_criteria.csv",
+      "sha256": "d1b1e477b73952fb9155f478c4826193e9f27abb1f5d242e8fbbe63a4efc03bc"
+    },
+    {
+      "path": "00_governance/open_questions.csv",
+      "sha256": "28a35be09c2692ebe14fff86942cfd64201a814b1323ff3c1c3dd00319454c93"
+    },
+    {
+      "path": "00_governance/batch-f/friday-question-map.csv",
+      "sha256": "1d80e75b87cbebd0a68c9604851b1cb4fa0c9abc0f0b95c3c54e567df96066ce"
+    },
+    {
+      "path": "00_governance/source_register.csv",
+      "sha256": "15a0dd210a14674a5761d3765cf47384282549672fa08eeb2df6a04e40abe5e9"
+    },
+    {
+      "path": "04_operating_model/round-a/field_dictionary.csv",
+      "sha256": "bfa6a3f9b5fcd736b70424fe7a6126283e17798e2067aab6f0cef036ab7e3105"
+    },
+    {
+      "path": "04_operating_model/round-a/batch-a-field-delta.csv",
+      "sha256": "dc8ab3b12fd03688080b78804afd4fd8f074b1bec8949c65a020e41d594424a0"
+    },
+    {
+      "path": "04_operating_model/batch-b/field-dictionary.json",
+      "sha256": "15467414a55a4b7a5100b97c426a095da79f9eba9e8d930701aee014c0ebcc10"
+    },
+    {
+      "path": "04_operating_model/batch-c/field-dictionary.json",
+      "sha256": "bcfb972d06ba38e9d3b1db3d6c3e52331a2eab9fe8c4bbadf05e0265bbcd4fca"
+    },
+    {
+      "path": "04_operating_model/batch-d/field-dictionary.json",
+      "sha256": "3e57b5fbb72f6956e5ec714a297d2fa21d7bebeb5935a7ee6a90b126cc1b4382"
+    },
+    {
+      "path": "04_operating_model/batch-e/field-dictionary.json",
+      "sha256": "ca0c728fd7c86a6bc1b1810ec0f7e72af2aa1b5c5019ad049e5b1f1e4f65ddf2"
+    },
+    {
+      "path": "04_operating_model/batch-e/clearance-snapshots.json",
+      "sha256": "badac1bebdc301f8e079f0f1fdb55b7aad2ad50e2524d8017c825d7f359de7dc"
+    },
+    {
+      "path": "prototype/specialist-story.mjs",
+      "sha256": "db19402df5da6d8d124a5acfc2297c5363ed1ca8fc889a472aa3ce981e86b643"
+    },
+    {
+      "path": "prototype/references/consolidation.mjs",
+      "sha256": "31b8779748ed9f8448cecb99f2def3c6f9e6cadcaa02b7be8961d4d2d4b47893"
+    },
+    {
+      "path": "00_governance/batch-f/reference-link-checks.json",
+      "sha256": "004f8382974b32bfd1d75ff4359af6f49853427b1d32e8d0ebea11489ab7853c"
+    },
+    {
+      "path": "prototype/diagrams/batch-f/manifest.json",
+      "sha256": "13202a607b703ba88dd04c0af9ce182824b14b13d7aa9960315a700b9f322d00"
+    },
+    {
+      "path": "00_governance/round-a/source_manifest.json",
+      "sha256": "a009ea5a118ae93eb94280b0e3846dc7947412080fa3c4e10426fe87acbf3459"
+    },
+    {
+      "path": "00_governance/round-a/batch-a-sources.json",
+      "sha256": "6e40665f875dbbcd858c1092e801d363bbeca7edb6aa0a35c9c046348091e15a"
+    },
+    {
+      "path": "04_operating_model/batch-b/source-manifest.json",
+      "sha256": "2526cdafa07a7d9813709d6f707a273b4fa2b749227f4f0b3e35721ab528a730"
+    },
+    {
+      "path": "00_governance/batch-c/source-manifest.json",
+      "sha256": "a27c00d8bb278628528df9b1373b9006ad8b5bb4c9c7b7011e44b91228bb9a26"
+    },
+    {
+      "path": "00_governance/batch-d/source-manifest.json",
+      "sha256": "8c2291eeff68f260d55758e90fbac77d735f7f9a17995613624f4fd06a238e1e"
+    },
+    {
+      "path": "04_operating_model/round-a/batch-a-story-snapshots.json",
+      "sha256": "1f27ee9f48733552a15afe39b5fc77b4f33587585e8ec1be56d35abb44f104a8"
+    },
+    {
+      "path": "04_operating_model/batch-b/collaboration-snapshots.json",
+      "sha256": "d0c2f245923ec65640efebefc220c7e3a62e7d8b9ecb90c1167243b71c4cbe22"
+    },
+    {
+      "path": "04_operating_model/batch-c/screening-snapshots.json",
+      "sha256": "746199e0b729cae04c06bae9d8e647eb19933b175f62a7aae551a1f2f7d13550"
+    },
+    {
+      "path": "04_operating_model/batch-d/specialist-snapshots.json",
+      "sha256": "fe2b890c19d87ffd8bdf931c909e279fa87c0a53d604e178db2c541c55dd7eea"
+    }
+  ],
+  "counts": {
+    "capabilities": 10,
+    "requirements": 10,
+    "acceptance": 10,
+    "questions": 12,
+    "story_beats": 20,
+    "scenarios": 15,
+    "reference_sources": 48,
+    "observations": 49,
+    "dependencies": 54,
+    "holds": 2
+  }
+}

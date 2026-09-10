@@ -1,0 +1,501 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Clear-to-Trade · approved journey and hero case</title><style>
+:root{
+ --ink:#17191C; --muted:#5B6067; --blue:#086BB5; --deep:#004D86;
+ --paper:#EFEDE9; --cool:#BBC9D6; --line:rgba(89,103,121,.19);
+ --focus:#07558F; --sel:#EAF2F8; --ctrl:#7A8490; --white:#fff;
+ --r-panel:30px; --r-card:22px; --r-ctrl:999px;
+ --labelw:200px; --colmin:136px;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);
+ font-family:"Helvetica Neue",Helvetica,Arial,"PingFang SC","Microsoft YaHei",sans-serif;
+ font-size:15px;line-height:1.55;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1760px;margin:0 auto;padding:24px 32px 96px}
+h1{font-size:34px;font-weight:400;line-height:1.2;margin:0 0 6px}
+.sub{color:var(--muted);font-size:15px;margin:0 0 4px}
+.qual{color:var(--muted);font-size:13px;margin:0}
+:focus-visible{outline:2px solid var(--focus);outline-offset:3px}
+img{max-width:100%;display:block}
+h2.sec{font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);
+ margin:0 0 12px;font-weight:600}
+
+.case{background:var(--white);border:1px solid var(--line);border-radius:var(--r-card);
+ padding:16px 20px;margin:18px 0 22px;display:flex;gap:32px;flex-wrap:wrap}
+.case div{font-size:14px}.case b{font-weight:600}
+.case .k{display:block;color:var(--muted);font-size:12px;letter-spacing:.06em;text-transform:uppercase}
+
+/* ---------------- hero case ---------------- */
+.hero{background:var(--white);border:1px solid var(--line);border-radius:var(--r-card);
+ padding:18px 22px 16px;margin:18px 0 26px}
+.herohead{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin:0 0 6px}
+.herofig{width:100%;height:auto;max-height:220px}
+.herofig .n rect{fill:#FBFAF8;stroke:var(--ctrl);stroke-width:1}
+.herofig .n.on rect{fill:var(--sel);stroke:var(--blue)}
+.herofig .nl{font-size:10px;letter-spacing:.09em;fill:var(--muted);font-weight:600}
+.herofig .nt{font-size:15px;fill:var(--ink);font-weight:600}
+.herofig .ot{font-size:13.5px;fill:var(--ink)}
+.herofig .el{font-size:10.5px;fill:var(--muted)}
+.herofig .e{stroke:var(--ctrl);stroke-width:1.2;fill:none}
+.herofig .d{stroke:var(--ctrl);stroke-width:1.2;fill:none;stroke-dasharray:3 4}
+.herofig .pring{fill:none;stroke:var(--ctrl);stroke-width:1.5}
+.herofig .open rect{fill:#fff;stroke:var(--ink);stroke-width:1.2;stroke-dasharray:none}
+.heronav{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin:8px 0 0;
+ border-top:1px solid var(--line);padding-top:12px}
+.hn{font-size:11.5px;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.hchip{font:inherit;font-size:12.5px;border:1px solid var(--ctrl);background:var(--white);color:var(--ink);
+ border-radius:var(--r-ctrl);padding:5px 13px;cursor:pointer}
+.hchip:hover{background:var(--sel);border-color:var(--blue)}
+
+/* ---------------- map head + legend ---------------- */
+.maphead{display:flex;justify-content:space-between;align-items:flex-start;gap:24px;
+ flex-wrap:wrap;margin:0 0 12px}
+.maplegend{list-style:none;margin:0;padding:0;display:flex;gap:8px 18px;flex-wrap:wrap;
+ justify-content:flex-end;max-width:660px}
+.maplegend li{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--muted)}
+.maplegend .sw{width:22px;height:15px;border-radius:5px;border:1px solid var(--ctrl);flex:none}
+.maplegend .sw.prepared{background:var(--sel);border-color:var(--blue)}
+.maplegend .sw.human{background:var(--white);border-color:var(--ink)}
+.maplegend .sw.client{border:1.5px solid var(--ctrl)}
+.maplegend .sw.par{background:#FAFAF8;box-shadow:inset 0 0 0 1px rgba(8,107,181,.25)}
+.maplegend svg.ln{width:30px;height:8px;flex:none}
+.maplegend svg.ln line{stroke:var(--deep);stroke-width:1.6}
+.maplegend svg.ln line.loop{stroke-dasharray:6 4}
+.maplegend svg.ln line.early{stroke:var(--ctrl);stroke-dasharray:2 4}
+
+/* ---------------- matrix ---------------- */
+.matrixwrap{border:1px solid var(--line);border-radius:var(--r-panel);background:var(--white);
+ overflow-x:auto;margin:0 0 24px}
+.matrix{position:relative;min-width:calc(var(--labelw) + 9 * var(--colmin))}
+.hrow{display:grid;grid-template-columns:var(--labelw) 1fr}
+.hcols{display:grid;grid-template-columns:repeat(9,minmax(var(--colmin),1fr))}
+.hlabel{padding:12px 14px;display:flex;flex-direction:column;justify-content:flex-end}
+.hrow.stages{background:var(--ink);color:#fff}
+.hrow.stages .hlabel .t{font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--cool)}
+.sh{border-left:1px solid rgba(255,255,255,.16);padding:12px 14px}
+.sn{display:block;font-size:14px;font-weight:600;letter-spacing:.04em}
+.sd{display:block;font-size:11.5px;color:rgba(255,255,255,.6);line-height:1.35;margin-top:2px}
+.hrow.procs{background:#F4F2EF;border-bottom:1px solid var(--line)}
+.hrow.procs .hlabel{font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;
+ color:var(--muted);font-weight:600;justify-content:center}
+.ph{border-left:1px solid var(--line);padding:8px 12px}
+.pid{display:block;font-size:13px;font-weight:600}
+.pnm{display:block;font-size:11px;color:var(--muted);line-height:1.3}
+
+.lane{display:grid;grid-template-columns:var(--labelw) 1fr;border-top:1px solid var(--line)}
+.lane[data-lane="PERSONA-CLIENT-T"]{background:#EDF1F4}
+.lanehead{display:flex;gap:9px;align-items:flex-start;padding:12px;background:#FBFAF8;
+ border:0;border-right:1px solid var(--line);font:inherit;color:inherit;text-align:left;cursor:pointer}
+.lane[data-lane="PERSONA-CLIENT-T"] .lanehead{background:#E3EAEF}
+.lanehead[aria-pressed=true]{background:var(--sel);box-shadow:inset 3px 0 0 var(--blue)}
+.lanehead img{width:44px;height:55px;border-radius:10px;object-fit:cover;flex:none}
+.lh{min-width:0;display:flex;flex-direction:column}
+.pname{font-size:13.5px;font-weight:600;line-height:1.25}
+.prole{font-size:11px;color:var(--muted);line-height:1.3}
+.pn{font-size:11px;color:var(--deep);margin-top:3px}
+.lanebody{display:grid;grid-template-columns:repeat(9,minmax(var(--colmin),1fr));
+ gap:6px;padding:8px;align-content:start;position:relative}
+.lanebody:before{content:"";position:absolute;inset:0;pointer-events:none;
+ background:repeating-linear-gradient(to right,var(--line) 0 1px,transparent 1px calc(100%/9))}
+
+.blk{border:1px solid var(--ctrl);background:var(--white);border-radius:14px;padding:8px 10px;
+ font:inherit;color:inherit;text-align:left;cursor:pointer;display:flex;flex-direction:column;gap:3px;
+ min-height:76px;position:relative;z-index:2;
+ transition:transform .18s cubic-bezier(.2,.75,.25,1),box-shadow .18s}
+.blk:hover{transform:translateY(-2px);box-shadow:0 4px 14px rgba(89,103,121,.18)}
+.blk:active{transform:translateY(0)}
+.blk[aria-pressed=true],.blk.kin{border-color:var(--blue);border-width:2px;background:var(--sel)}
+.blk.par{background:#FAFAF8;box-shadow:inset 0 0 0 1px rgba(8,107,181,.14)}
+.blk.par[aria-pressed=true],.blk.par.kin{background:var(--sel)}
+.blk.ct{border-style:solid}
+.blk.ct.removed{opacity:.7}
+.bid{font-size:10.5px;letter-spacing:.05em;color:var(--muted);font-weight:600;
+ display:flex;gap:6px;flex-wrap:wrap;align-items:baseline}
+.bid i{font-style:normal;font-weight:400;opacity:.75;letter-spacing:0}
+.btitle{font-size:13px;font-weight:500;line-height:1.3}
+.bmeta{font-size:11px;color:var(--muted)}
+.bmarks{display:flex;gap:4px;flex-wrap:wrap;margin-top:1px}
+.bm{font-size:10px;padding:1px 6px;border-radius:var(--r-ctrl);border:1px solid var(--line);color:var(--muted)}
+.bm.lp{border-color:var(--blue);color:var(--deep)}
+.bm.lk{border-color:var(--deep);color:var(--deep)}
+.bm.pain{border-color:var(--ink);color:var(--ink);font-weight:600}
+.bm.lk.early{border-style:solid;border-color:var(--ctrl);color:var(--muted)}
+
+#links{position:absolute;inset:0;pointer-events:none;z-index:3;overflow:visible}
+#links path{fill:none;stroke-width:1.6;stroke-linecap:round;opacity:.5;
+ transition:opacity .18s}
+#links path.on,#links text.on{opacity:1}
+#links path.loop{stroke-dasharray:6 4}
+#links path.early{stroke-dasharray:2 4}
+#links text{font-size:10.5px;paint-order:stroke;stroke:#fff;stroke-width:3px;font-weight:600;opacity:.6}
+#links .dim{opacity:.1}
+
+/* ---------------- panel ---------------- */
+.panel{border:1px solid var(--line);border-radius:var(--r-panel);background:var(--white);
+ scroll-margin-top:16px;overflow:clip}
+.phead{display:flex;gap:16px;align-items:flex-start;padding:20px 24px;border-bottom:1px solid var(--line)}
+.phead img.hero{width:190px;aspect-ratio:16/9;object-fit:cover;border-radius:16px;flex:none}
+.phead .pt{flex:1;min-width:0}
+.phead h3{margin:0 0 4px;font-size:24px;font-weight:500;line-height:1.25}
+.phead .pmeta{color:var(--muted);font-size:13px;margin:0}
+.pbody{padding:20px 24px 26px}
+.placeholder{padding:44px 24px;text-align:center;color:var(--muted)}
+.placeholder .ph1{font-size:17px;color:var(--ink);margin:0 auto 6px}
+.placeholder p{margin:0 auto;max-width:62ch;font-size:14px}
+.placeholder .phicon{font-size:26px;opacity:.5;margin-bottom:10px}
+
+.actors{display:flex;gap:8px;flex-wrap:wrap;margin:14px 0 0}
+.actor{display:flex;align-items:center;gap:7px;border:1px solid var(--line);border-radius:var(--r-ctrl);
+ padding:4px 12px 4px 4px;font-size:12.5px}
+.actor img{width:26px;height:26px;border-radius:50%;object-fit:cover}
+.actor b{font-weight:600}.actor span{color:var(--muted)}
+
+.wf{list-style:none;margin:0;padding:0}
+.wf>li{position:relative;padding:0 0 18px 60px}
+.wf>li:before{content:"";position:absolute;left:21px;top:34px;bottom:0;width:1px;background:var(--line)}
+.wf>li:last-child{padding-bottom:0}
+.wf>li:last-child:before{display:none}
+.step{border:1px solid var(--line);border-radius:16px;padding:14px 16px;background:var(--white)}
+.step.prepared{background:var(--sel);border-color:var(--blue)}
+.step.human{background:var(--white);border-color:var(--ink)}
+.num{position:absolute;left:0;top:0;width:44px;height:44px;border-radius:50%;
+ display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:600;
+ background:var(--white);border:1px solid var(--ctrl);z-index:1}
+.step h4{margin:0 0 6px;font-size:16px;font-weight:500;line-height:1.3}
+.who{display:flex;align-items:center;gap:8px;margin:0 0 8px}
+.who img{width:30px;height:30px;border-radius:50%;object-fit:cover}
+.who span{font-size:12.5px;color:var(--muted)}
+.who b{font-size:12.5px;color:var(--ink);font-weight:600}
+.mode{display:inline-flex;align-items:center;gap:5px;font-size:11.5px;color:var(--muted);
+ border:1px solid var(--line);border-radius:var(--r-ctrl);padding:2px 9px}
+.g{width:13px;height:13px;flex:none}
+.ba{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:10px 0 0}
+.ba>div{border:1px solid var(--line);border-radius:12px;padding:10px 12px;font-size:13px;line-height:1.45}
+.ba .now{background:#FBFAF8}
+.ba .next{background:var(--white);border-color:var(--blue)}
+.ba h5{margin:0 0 4px;font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.io{font-size:12px;color:var(--muted);margin:9px 0 0}
+.io b{color:var(--ink);font-weight:600}
+details.atoms{margin:9px 0 0}
+details.atoms summary{font-size:12.5px;color:var(--deep);cursor:pointer}
+details.atoms ul{list-style:none;margin:8px 0 0;padding:0;display:flex;flex-direction:column;gap:6px}
+details.atoms li{border:1px solid var(--line);border-radius:10px;padding:8px 10px;font-size:12.5px}
+details.atoms .aid{font-size:11px;color:var(--muted);letter-spacing:.04em}
+.ho{font-size:12.5px;margin:9px 0 0;color:var(--muted);border-left:2px solid var(--blue);padding-left:10px}
+.ho b{color:var(--ink)}
+/* pain and opportunity inside a workflow step */
+.po{border-radius:12px;padding:10px 12px;margin:10px 0 0;font-size:13px;line-height:1.5;
+ display:flex;gap:10px;align-items:flex-start}
+.po .ic{width:20px;height:20px;border-radius:50%;flex:none;display:flex;align-items:center;
+ justify-content:center;font-size:12px;font-weight:700;border:1px solid currentColor;margin-top:1px}
+.po.pain{background:#FBFAF8;border:1px solid var(--line)}
+.po.pain .ic{color:var(--ink)}
+.po.opp{background:var(--white);border:1px solid var(--blue)}
+.po.opp .ic{color:var(--deep)}
+.po .pt2{min-width:0;flex:1}
+.po h5{margin:0 0 3px;font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;
+ color:var(--muted);font-weight:600;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.dirbadge{font-size:10px;border:1px solid var(--deep);color:var(--deep);border-radius:var(--r-ctrl);
+ padding:1px 8px;letter-spacing:.03em;text-transform:none;font-weight:600}
+.dirbadge.addon{border-style:solid}
+
+/* small 5-segment meters: number plus shape, never colour alone */
+.meter{display:inline-flex;align-items:center;gap:6px;font-size:10.5px;color:var(--muted);
+ white-space:nowrap}
+.meter .segs{display:inline-flex;gap:2px}
+.meter i{width:7px;height:10px;border-radius:2px;border:1px solid var(--ctrl);display:block}
+.meter i.on{background:var(--deep);border-color:var(--deep)}
+.meter i.half{background:linear-gradient(90deg,var(--deep) 50%,transparent 50%);border-color:var(--deep)}
+.meter b{color:var(--ink);font-weight:600}
+.scores{display:flex;gap:14px;flex-wrap:wrap;margin:9px 0 0}
+.bnd{font-size:12px;color:var(--muted);margin:9px 0 0;border-left:2px solid var(--ctrl);padding-left:10px}
+.bnd b{color:var(--ink);font-weight:600}
+
+/* references */
+.refchips{display:flex;gap:6px;flex-wrap:wrap;margin:9px 0 0}
+.refchip{font-size:11px;border:1px solid var(--line);border-radius:var(--r-ctrl);padding:2px 9px;
+ color:var(--muted)}
+.reflist{list-style:none;margin:12px 0 0;padding:0;display:flex;flex-direction:column;gap:8px}
+.reflist li{border:1px solid var(--line);border-radius:12px;padding:10px 13px;font-size:13px}
+.reflist .rid{font-size:10.5px;letter-spacing:.05em;color:var(--muted);font-weight:600}
+.reflist b{font-weight:600}
+.refgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:10px;margin:14px 0 0}
+.refcard{border:1px solid var(--line);border-radius:16px;padding:14px 16px;background:var(--white)}
+.refcard .fam{font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.refcard h4{margin:3px 0 6px;font-size:15px;font-weight:600;line-height:1.3}
+.refcard p{margin:0 0 6px;font-size:12.5px;color:var(--muted);line-height:1.45}
+.refcard .used{font-size:11.5px;color:var(--deep)}
+.refcard details{margin-top:8px}
+.refcard summary{font-size:12px;color:var(--deep);cursor:pointer}
+.refcard dl{display:grid;grid-template-columns:96px 1fr;gap:5px 10px;margin:8px 0 0;font-size:12px}
+.refcard dt{color:var(--muted)}
+.refcard dd{margin:0}
+.reffilter{display:flex;gap:6px;flex-wrap:wrap;margin:10px 0 0}
+.reffilter button{font:inherit;font-size:12px;border:1px solid var(--ctrl);background:var(--white);
+ color:var(--ink);border-radius:var(--r-ctrl);padding:4px 12px;cursor:pointer}
+.reffilter button[aria-pressed=true]{background:var(--deep);border-color:var(--deep);color:#fff}
+
+.linklist{list-style:none;margin:12px 0 0;padding:0;display:flex;flex-direction:column;gap:8px}
+.linklist li{border:1px solid var(--line);border-left-width:3px;border-radius:12px;padding:9px 12px;font-size:13px}
+.linklist li.handoff{border-left-color:var(--deep)}
+.linklist li.loop{border-left-color:var(--blue);border-left-style:solid}
+.linklist li.early{border-left-color:var(--ctrl);border-left-style:solid}
+.linklist li.intent{border-left-color:var(--ctrl)}
+.linklist .lk{font-size:11px;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.ctlist{list-style:none;margin:14px 0 0;padding:0;display:flex;flex-direction:column;gap:8px}
+.ctlist li{border:1.5px solid var(--ctrl);border-radius:14px;padding:10px 13px;font-size:13px}
+.ctlist .anchor{font-size:11px;letter-spacing:.05em;color:var(--muted);font-weight:600}
+.plist{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px}
+.plist li{border:1px solid var(--line);border-radius:14px;padding:10px 13px;font-size:13.5px;
+ display:flex;gap:10px;align-items:baseline}
+.plist .pscn{font-size:11px;letter-spacing:.05em;color:var(--muted);font-weight:600;flex:none;width:150px}
+
+.note{margin:22px 0 0;background:var(--white);border:1px solid var(--line);
+ border-radius:var(--r-card);padding:18px 22px}
+.note h2{font-size:17px;font-weight:600;margin:0 0 8px}
+.note p{margin:0 0 8px;font-size:14px;color:var(--muted);max-width:80ch}
+.note p strong{color:var(--ink)}
+.legend ul{list-style:none;margin:0;padding:0;display:flex;gap:10px 24px;flex-wrap:wrap}
+.legend li{display:flex;align-items:center;gap:7px;font-size:13px;color:var(--muted)}
+.legend .sw{width:24px;height:17px;border-radius:6px;border:1px solid var(--ctrl);flex:none}
+.legend .sw.prepared{background:var(--sel);border-color:var(--blue)}
+.legend .sw.human{background:var(--white);border-color:var(--ink)}
+.legend .sw.client{border:1.5px solid var(--ctrl)}
+.legend .sw.par{background:#FAFAF8;box-shadow:inset 0 0 0 1px rgba(8,107,181,.25)}
+.legend svg.ln{width:34px;height:10px;flex:none}
+.legend svg.ln line{stroke:var(--deep);stroke-width:1.6}
+.legend svg.ln line.loop{stroke-dasharray:6 4}
+.legend svg.ln line.early{stroke:var(--ctrl);stroke-dasharray:2 4}
+
+@media (max-width:900px){
+ .wrap{padding:16px 18px 64px}
+ .ba{grid-template-columns:1fr}
+ .phead{flex-direction:column}
+ .phead img.hero{width:100%}
+}
+@media (prefers-reduced-motion:reduce){
+ .blk,.lanehead{transition:none}
+ .blk:hover{transform:none}
+ html{scroll-behavior:auto}
+}
+@media print{
+ body{background:#fff}
+ .blk,.step{break-inside:avoid;box-shadow:none}
+ .step.prepared{background:#fff;border:1px solid #333}
+ .step.human{background:#fff;border:2px solid #000}
+ .matrixwrap,.panel{border-radius:0;overflow:visible}
+}
+/* Workshop: remove cross-map dashed routes; retain their details in workflows. */
+#links path.loop,#links path.early,.herofig .d{display:none}
+</style><link rel="stylesheet" href="../i18n/language.css"><link rel="stylesheet" href="./corporate.css?v=1"></head><body class="ctt-map"><div class="wrap"><section class="hero">
+  <div class="herohead">
+    <h2 class="sec" style="margin:0">The case</h2>
+    <span class="qual">One synthetic case runs through every scenario.</span>
+  </div>
+  <svg class="herofig" viewBox="0 0 980 210" role="img"
+       aria-label="Entity B in Singapore is the reported parent of Entity A in Australia, which requests an FX forward. Person T is employed by Entity B and claims to coordinate information for Entity A; purpose-specific authority for Entity A is not established.">
+    <defs><clipPath id="pt"><circle cx="286" cy="163" r="26"/></clipPath></defs>
+
+    <g class="n">
+      <rect x="28" y="34" width="212" height="66" rx="16"/>
+      <text x="44" y="60" class="nl">REPORTED PARENT</text>
+      <text x="44" y="80" class="nt">Entity B · Singapore</text>
+    </g>
+    <path class="e" d="M244 67 H 352" marker-end="url(#hx)"/>
+    <text x="298" y="58" class="el" text-anchor="middle">reports as parent</text>
+
+    <g class="n on">
+      <rect x="356" y="34" width="212" height="66" rx="16"/>
+      <text x="372" y="60" class="nl">APPLICANT</text>
+      <text x="372" y="80" class="nt">Entity A · Australia</text>
+    </g>
+    <path class="e" d="M572 67 H 680" marker-end="url(#hx)"/>
+    <text x="626" y="58" class="el" text-anchor="middle">requests</text>
+
+    <g class="n">
+      <rect x="684" y="34" width="212" height="66" rx="16"/>
+      <text x="700" y="60" class="nl">PRODUCT</text>
+      <text x="700" y="80" class="nt">FX forward</text>
+    </g>
+
+    <image href="assets/PERSONA-CLIENT-T.jpg" x="256" y="129" width="60" height="68"
+           preserveAspectRatio="xMidYMin slice" clip-path="url(#pt)"/>
+    <circle cx="286" cy="163" r="26" class="pring"/>
+    <text x="326" y="158" class="nt">Person T</text>
+    <text x="326" y="176" class="nl">client · information contributor</text>
+
+    <path class="d" d="M264 140 C 220 118, 150 118, 134 104"/>
+    <text x="150" y="132" class="el">employed by</text>
+    <path class="d" d="M310 140 C 360 120, 420 118, 440 104"/>
+    <text x="392" y="134" class="el">claims to coordinate</text>
+
+    <g class="open">
+      <rect x="560" y="132" width="392" height="62" rx="16"/>
+      <text x="580" y="156" class="nl">OPEN QUESTION</text>
+      <text x="580" y="177" class="ot">Purpose-specific authority for Entity A is not established</text>
+    </g>
+
+    <marker id="hx" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6"
+            orient="auto-start-reverse"><path d="M0 0 L8 4 L0 8 z" fill="#5B6067"/></marker>
+  </svg>
+  <div class="heronav">
+    <span class="hn">Where this question gets decided</span>
+    <button class="hchip" type="button" data-scn="SCN-ENTITY">ENTITY · Separate entity and authority</button><button class="hchip" type="button" data-scn="SCN-MATCH">MATCH · Review the potential match</button><button class="hchip" type="button" data-scn="SCN-GAP">GAP · Request the specific missing fact</button><button class="hchip" type="button" data-scn="SCN-VALIDATE">VALIDATE · Assess evidence for its purpose</button>
+  </div>
+</section>
+
+<div class="maphead">
+  <div>
+    <h2 class="sec" style="margin:0 0 3px">The journey</h2>
+    <span class="qual">Use the case buttons to locate a journey card. Select the card to open details; close to return to the same place.</span>
+  </div>
+  <ul class="maplegend">
+    <li><span class="sw human"></span>Human decision</li>
+    <li><span class="sw prepared"></span>Product-prepared</li>
+    <li><span class="sw par"></span>Parallel track</li>
+    <li><span class="sw client"></span>Client touchpoint</li>
+    <li><svg class="ln" viewBox="0 0 30 8"><line x1="1" y1="4" x2="29" y2="4"/></svg>Handoff</li>
+    <li><span class="bm pain">! 4</span>Highest pain intensity in the scenario</li>
+    <li><span class="bm lp">↺</span>In the rework loop</li>
+  </ul>
+</div>
+<div class="matrixwrap"><div class="matrix" id="matrix">
+  <svg id="links" aria-hidden="true"></svg>
+
+  <div class="hrow stages">
+    <div class="hlabel"><span class="t">Journey stage</span></div>
+    <div class="hcols"><div class="sh" style="grid-column:1 / 3"><span class="sn">01 INITIATE</span><span class="sd">Establish what is being asked for, and by whom</span></div><div class="sh" style="grid-column:3 / 5"><span class="sn">02 DETERMINE</span><span class="sd">Work out what applies, and gather what is missing</span></div><div class="sh" style="grid-column:5 / 7"><span class="sn">03 ASSESS</span><span class="sd">Screen, adjudicate and assess where required</span></div><div class="sh" style="grid-column:7 / 9"><span class="sn">04 RESOLVE</span><span class="sd">Close findings and clear conflicts</span></div><div class="sh" style="grid-column:9 / 10"><span class="sn">05 CLEAR</span><span class="sd">Confirm prerequisites and record the outcome</span></div></div>
+  </div>
+  <div class="hrow procs">
+    <div class="hlabel">Process</div>
+    <div class="hcols"><div class="ph" data-col="M0"><span class="pid">M0</span><span class="pnm">Booking model</span></div><div class="ph" data-col="M1"><span class="pid">M1</span><span class="pnm">Intake &amp; triage</span></div><div class="ph" data-col="M2"><span class="pid">M2</span><span class="pnm">Requirements</span></div><div class="ph" data-col="M3"><span class="pid">M3</span><span class="pnm">Document sourcing</span></div><div class="ph" data-col="M4"><span class="pid">M4</span><span class="pnm">Screening</span></div><div class="ph" data-col="M5"><span class="pid">M5</span><span class="pnm">EDD assessment</span></div><div class="ph" data-col="M6"><span class="pid">M6</span><span class="pnm">Quality assurance</span></div><div class="ph" data-col="M7"><span class="pid">M7</span><span class="pnm">Conflicts</span></div><div class="ph" data-col="M8"><span class="pid">M8</span><span class="pnm">Cleared to trade</span></div></div>
+  </div>
+
+  <div class="lane" data-lane="PERSONA-CLIENT-T"><button class="lanehead" type="button" data-pid="PERSONA-CLIENT-T" aria-pressed="false"><img src="assets/PERSONA-CLIENT-T.jpg" alt="Person T, Client / information contributor" loading="lazy" width="44" height="55"><span class="lh"><span class="pname">Person T</span><span class="prole">Client / information contributor</span><span class="pn">1 step</span></span></button><div class="lanebody" style="grid-template-rows:repeat(2,auto)"><button class="blk ct" type="button" data-ctid="CT-01" aria-pressed="false" style="grid-column:1 / 2;grid-row:1"><span class="bid">CT-01<i>M0 / M1</i></span><span class="btitle">Provide initial relationship information</span><span class="bmeta">◷ waiting</span><span class="bmarks"><span class="bm">= unchanged</span></span></button><button class="blk ct" type="button" data-ctid="CT-02" aria-pressed="false" style="grid-column:3 / 4;grid-row:1"><span class="bid">CT-02<i>M2</i></span><span class="btitle">Respond to requirements / clarifications</span><span class="bmeta">◷ waiting</span><span class="bmarks"><span class="bm">= unchanged</span></span></button><button class="blk hasloop" type="button" data-scn="SCN-GAP" data-pid="PERSONA-CLIENT-T" data-key="SCN-GAP|PERSONA-CLIENT-T" aria-pressed="false" style="grid-column:4 / 5;grid-row:1"><span class="bid">GAP<i>M3.3</i></span><span class="btitle">Request the specific missing fact</span><span class="bmeta">1 step · 1 human</span><span class="bmarks"><span class="bm lp">↺</span><span class="bm pain" title="highest analyst pain intensity in this scenario">! 4</span></span></button><button class="blk ct" type="button" data-ctid="CT-03" aria-pressed="false" style="grid-column:4 / 5;grid-row:2"><span class="bid">CT-03<i>M3</i></span><span class="btitle">Provide requested documents &amp; information</span><span class="bmeta">◷ waiting</span><span class="bmarks"><span class="bm">= unchanged</span></span></button><button class="blk ct" type="button" data-ctid="CT-04" aria-pressed="false" style="grid-column:5 / 6;grid-row:1"><span class="bid">CT-04<i>M4</i></span><span class="btitle">Respond to screening clarifications / additional info</span><span class="bmeta">◷ waiting</span><span class="bmarks"><span class="bm">= unchanged</span></span></button><button class="blk ct" type="button" data-ctid="CT-05" aria-pressed="false" style="grid-column:6 / 7;grid-row:1"><span class="bid">CT-05<i>M5</i></span><span class="btitle">Provide EDD information (e.g. SoF / SoW)</span><span class="bmeta">◷ waiting</span><span class="bmarks"><span class="bm">= unchanged</span></span></button><button class="blk ct" type="button" data-ctid="CT-06" aria-pressed="false" style="grid-column:7 / 8;grid-row:1"><span class="bid">CT-06<i>M6</i></span><span class="btitle">Respond to QA gap requests</span><span class="bmeta">◷ waiting</span><span class="bmarks"><span class="bm">= unchanged</span></span></button><button class="blk ct removed" type="button" data-ctid="CT-07" aria-pressed="false" style="grid-column:8 / 9;grid-row:1"><span class="bid">CT-07<i>M7 column</i></span><span class="btitle">Respond to QA gap requests (second instance)</span><span class="bmeta">◷ waiting</span><span class="bmarks"><span class="bm">− removed in target</span></span></button><button class="blk ct" type="button" data-ctid="CT-08" aria-pressed="false" style="grid-column:9 / 10;grid-row:1"><span class="bid">CT-08<i>M8</i></span><span class="btitle">Receive outcome &amp; next steps</span><span class="bmeta">◷ waiting</span><span class="bmarks"><span class="bm">= unchanged</span></span></button></div></div><div class="lane" data-lane="PERSONA-RM"><button class="lanehead" type="button" data-pid="PERSONA-RM" aria-pressed="false"><img src="assets/PERSONA-RM.jpg" alt="Alex Morgan, Relationship Manager" loading="lazy" width="44" height="55"><span class="lh"><span class="pname">Alex Morgan</span><span class="prole">Relationship Manager</span><span class="pn">5 steps</span></span></button><div class="lanebody" style="grid-template-rows:repeat(1,auto)"><button class="blk" type="button" data-scn="SCN-SCOPE" data-pid="PERSONA-RM" data-key="SCN-SCOPE|PERSONA-RM" aria-pressed="false" style="grid-column:1 / 3;grid-row:1"><span class="bid">SCOPE<i>M0.1–M0.4 · M1.1</i></span><span class="btitle">Establish the relationship</span><span class="bmeta">3 steps · 3 human</span><span class="bmarks"><span class="bm pain" title="highest analyst pain intensity in this scenario">! 4</span></span></button><button class="blk hasloop" type="button" data-scn="SCN-GAP" data-pid="PERSONA-RM" data-key="SCN-GAP|PERSONA-RM" aria-pressed="false" style="grid-column:4 / 5;grid-row:1"><span class="bid">GAP<i>M3.3</i></span><span class="btitle">Request the specific missing fact</span><span class="bmeta">1 step · 1 human</span><span class="bmarks"><span class="bm lp">↺</span><span class="bm pain" title="highest analyst pain intensity in this scenario">! 4</span></span></button><button class="blk" type="button" data-scn="SCN-PUBLISH" data-pid="PERSONA-RM" data-key="SCN-PUBLISH|PERSONA-RM" aria-pressed="false" style="grid-column:9 / 10;grid-row:1"><span class="bid">PUBLISH<i>M8.2–M8.5</i></span><span class="btitle">Record a scoped outcome</span><span class="bmeta">1 step · 1 human</span><span class="bmarks"><span class="bm pain" title="highest analyst pain intensity in this scenario">! 4</span></span></button></div></div><div class="lane" data-lane="PERSONA-CASEMGR"><button class="lanehead" type="button" data-pid="PERSONA-CASEMGR" aria-pressed="false"><img src="assets/PERSONA-CASEMGR.jpg" alt="Jamie Park, Case Manager · design role" loading="lazy" width="44" height="55"><span class="lh"><span class="pname">Jamie Park</span><span class="prole">Case Manager · design role</span><span class="pn">8 steps</span></span></button><div class="lanebody" style="grid-template-rows:repeat(2,auto)"><button class="blk" type="button" data-scn="SCN-READINESS" data-pid="PERSONA-CASEMGR" data-key="SCN-READINESS|PERSONA-CASEMGR" aria-pressed="false" style="grid-column:9 / 10;grid-row:1"><span class="bid">READINESS<i>M8.1</i></span><span class="btitle">Understand open prerequisites</span><span class="bmeta">5 steps</span><span class="bmarks"><span class="bm pain" title="highest analyst pain intensity in this scenario">! 4</span></span></button><button class="blk" type="button" data-scn="SCN-PUBLISH" data-pid="PERSONA-CASEMGR" data-key="SCN-PUBLISH|PERSONA-CASEMGR" aria-pressed="false" style="grid-column:9 / 10;grid-row:2"><span class="bid">PUBLISH<i>M8.2–M8.5</i></span><span class="btitle">Record a scoped outcome</span><span class="bmeta">3 steps</span><span class="bmarks"><span class="bm pain" title="highest analyst pain intensity in this scenario">! 4</span></span></button></div></div><div class="lane" data-lane="PERSONA-KYCOPS"><button class="lanehead" type="button" data-pid="PERSONA-KYCOPS" aria-pressed="false"><img src="assets/PERSONA-KYCOPS.jpg" alt="Morgan Lee, KYC Operations" loading="lazy" width="44" height="55"><span class="lh"><span class="pname">Morgan Lee</span><span class="prole">KYC Operations</span><span class="pn">23 steps</span></span></button><div class="lanebody" style="grid-template-rows:repeat(3,auto)"><button class="blk" type="button" data-scn="SCN-ENTITY" data-pid="PERSONA-KYCOPS" data-key="SCN-ENTITY|PERSONA-KYCOPS" aria-pressed="false" style="grid-column:2 / 3;grid-row:1"><span class="bid">ENTITY<i>M1.2–M1.5</i></span><span class="btitle">Separate entity and authority</span><span class="bmeta">5 steps · 5 human</span><span class="bmarks"><span class="bm pain" title="highest analyst pain intensity in this scenario">! 3</span></span></button><button class="blk" type="button" data-scn="SCN-REQUIREMENTS" data-pid="PERSONA-KYCOPS" data-key="SCN-REQUIREMENTS|PERSONA-KYCOPS" aria-pressed="false" style="grid-column:3 / 4;grid-row:1"><span class="bid">REQUIREMENTS<i>M2.1–M2.5</i></span><span class="btitle">Determine applicable requirements</span><span class="bmeta">4 steps · 2 human</span><span class="bmarks"><span class="bm pain" title="highest analyst pain intensity in this scenario">! 4</span></span></button><button class="blk" type="button" data-scn="SCN-SOURCE" data-pid="PERSONA-KYCOPS" data-key="SCN-SOURCE|PERSONA-KYCOPS" aria-pressed="false" style="grid-column:4 / 5;grid-row:1"><span class="bid">SOURCE<i>M3.1–M3.2</i></span><span class="btitle">Reuse permitted evidence</span><span class="bmeta">4 steps</span><span class="bmarks"><span class="bm pain" title="highest analyst pain intensity in this scenario">! 4</span></span></button><button class="blk hasloop" type="button" data-scn="SCN-GAP" data-pid="PERSONA-KYCOPS" data-key="SCN-GAP|PERSONA-KYCOPS" aria-pressed="false" style="grid-column:4 / 5;grid-row:2"><span class="bid">GAP<i>M3.3</i></span><span class="btitle">Request the specific missing fact</span><span class="bmeta">3 steps · 2 human</span><span class="bmarks"><span class="bm lp">↺</span><span class="bm pain" title="highest analyst pain intensity in this scenario">! 4</span></span></button><button class="blk hasloop" type="button" data-scn="SCN-VALIDATE" data-pid="PERSONA-KYCOPS" data-key="SCN-VALIDATE|PERSONA-KYCOPS" aria-pressed="false" style="grid-column:4 / 5;grid-row:3"><span class="bid">VALIDATE<i>M3.4–M3.5</i></span><span class="btitle">Assess evidence for its purpose</span><span class="bmeta">4 steps · 2 human</span><span class="bmarks"><span class="bm lp">↺</span><span class="bm pain" title="highest analyst pain intensity in this scenario">! 4</span></span></button><button class="blk" type="button" data-scn="SCN-POPULATION" data-pid="PERSONA-KYCOPS" data-key="SCN-POPULATION|PERSONA-KYCOPS" aria-pressed="false" style="grid-column:5 / 6;grid-row:1"><span class="bid">POPULATION<i>M4.1–M4.3</i></span><span class="btitle">Define who and what to screen</span><span class="bmeta">3 steps</span><span class="bmarks"><span class="bm pain" title="highest analyst pain intensity in this scenario">! 4</span></span></button></div></div><div class="lane" data-lane="PERSONA-RISK"><button class="lanehead" type="button" data-pid="PERSONA-RISK" aria-pressed="false"><img src="assets/PERSONA-RISK.jpg" alt="Sam Ellis, Financial Crime / Risk / Compliance" loading="lazy" width="44" height="55"><span class="lh"><span class="pname">Sam Ellis</span><span class="prole">Financial Crime / Risk / Compliance</span><span class="pn">13 steps</span></span></button><div class="lanebody" style="grid-template-rows:repeat(2,auto)"><button class="blk" type="button" data-scn="SCN-SCOPE" data-pid="PERSONA-RISK" data-key="SCN-SCOPE|PERSONA-RISK" aria-pressed="false" style="grid-column:1 / 3;grid-row:1"><span class="bid">SCOPE<i>M0.1–M0.4 · M1.1</i></span><span class="btitle">Establish the relationship</span><span class="bmeta">1 step · 1 human</span><span class="bmarks"><span class="bm pain" title="highest analyst pain intensity in this scenario">! 4</span></span></button><button class="blk" type="button" data-scn="SCN-POPULATION" data-pid="PERSONA-RISK" data-key="SCN-POPULATION|PERSONA-RISK" aria-pressed="false" style="grid-column:5 / 6;grid-row:1"><span class="bid">POPULATION<i>M4.1–M4.3</i></span><span class="btitle">Define who and what to screen</span><span class="bmeta">1 step · 1 human</span><span class="bmarks"><span class="bm pain" title="highest analyst pain intensity in this scenario">! 4</span></span></button><button class="blk hasloop" type="button" data-scn="SCN-MATCH" data-pid="PERSONA-RISK" data-key="SCN-MATCH|PERSONA-RISK" aria-pressed="false" style="grid-column:5 / 6;grid-row:2"><span class="bid">MATCH<i>M4.4–M4.7</i></span><span class="btitle">Review the potential match</span><span class="bmeta">5 steps · 2 human</span><span class="bmarks"><span class="bm lp">↺</span><span class="bm pain" title="highest analyst pain intensity in this scenario">! 4</span></span></button><button class="blk" type="button" data-scn="SCN-EDD" data-pid="PERSONA-RISK" data-key="SCN-EDD|PERSONA-RISK" aria-pressed="false" style="grid-column:6 / 7;grid-row:1"><span class="bid">EDD<i>M5.1–M5.10</i></span><span class="btitle">Assess EDD when applicable</span><span class="bmeta">5 steps · 5 human</span><span class="bmarks"><span class="bm pain" title="highest analyst pain intensity in this scenario">! 3</span></span></button><button class="blk" type="button" data-scn="SCN-PUBLISH" data-pid="PERSONA-RISK" data-key="SCN-PUBLISH|PERSONA-RISK" aria-pressed="false" style="grid-column:9 / 10;grid-row:1"><span class="bid">PUBLISH<i>M8.2–M8.5</i></span><span class="btitle">Record a scoped outcome</span><span class="bmeta">1 step · 1 human</span><span class="bmarks"><span class="bm pain" title="highest analyst pain intensity in this scenario">! 4</span></span></button></div></div><div class="lane" data-lane="PERSONA-QA"><button class="lanehead" type="button" data-pid="PERSONA-QA" aria-pressed="false"><img src="assets/PERSONA-QA.jpg" alt="Robin Hale, Quality Assurance" loading="lazy" width="44" height="55"><span class="lh"><span class="pname">Robin Hale</span><span class="prole">Quality Assurance</span><span class="pn">5 steps</span></span></button><div class="lanebody" style="grid-template-rows:repeat(1,auto)"><button class="blk" type="button" data-scn="SCN-QA" data-pid="PERSONA-QA" data-key="SCN-QA|PERSONA-QA" aria-pressed="false" style="grid-column:7 / 8;grid-row:1"><span class="bid">QA<i>M6.1–M6.8</i></span><span class="btitle">Remediate a precise finding</span><span class="bmeta">5 steps · 4 human</span><span class="bmarks"><span class="bm pain" title="highest analyst pain intensity in this scenario">! 4</span></span></button></div></div><div class="lane" data-lane="PERSONA-CONTROL"><button class="lanehead" type="button" data-pid="PERSONA-CONTROL" aria-pressed="false"><img src="assets/PERSONA-CONTROL.jpg" alt="Taylor Shaw, Conflicts Control Room" loading="lazy" width="44" height="55"><span class="lh"><span class="pname">Taylor Shaw</span><span class="prole">Conflicts Control Room</span><span class="pn">4 steps</span></span></button><div class="lanebody" style="grid-template-rows:repeat(1,auto)"><button class="blk par" type="button" data-scn="SCN-CONFLICTS" data-pid="PERSONA-CONTROL" data-key="SCN-CONFLICTS|PERSONA-CONTROL" aria-pressed="false" style="grid-column:8 / 9;grid-row:1"><span class="bid">CONFLICTS<i>M7.1–M7.7</i></span><span class="btitle">Investigate conflicts early</span><span class="bmeta">4 steps · 3 human</span><span class="bmarks"><span class="bm">≋ parallel</span><span class="bm pain" title="highest analyst pain intensity in this scenario">! 4</span><span class="bm lk early">⇠ from M1</span></span></button></div></div><div class="lane" data-lane="PERSONA-LEGAL"><button class="lanehead" type="button" data-pid="PERSONA-LEGAL" aria-pressed="false"><img src="assets/PERSONA-LEGAL.jpg" alt="Casey Reed, Legal" loading="lazy" width="44" height="55"><span class="lh"><span class="pname">Casey Reed</span><span class="prole">Legal</span><span class="pn">5 steps</span></span></button><div class="lanebody" style="grid-template-rows:repeat(1,auto)"><button class="blk par" type="button" data-scn="SCN-LEGAL" data-pid="PERSONA-LEGAL" data-key="SCN-LEGAL|PERSONA-LEGAL" aria-pressed="false" style="grid-column:2 / 9;grid-row:1"><span class="bid">LEGAL<i>C1.1–C1.8</i></span><span class="btitle">Prepare and review agreements</span><span class="bmeta">5 steps · 5 human</span><span class="bmarks"><span class="bm">≋ parallel</span><span class="bm pain" title="highest analyst pain intensity in this scenario">! 3</span><span class="bm lk in" title="C2.6 → C1.4">← CREDIT</span></span></button></div></div><div class="lane" data-lane="PERSONA-CREDIT"><button class="lanehead" type="button" data-pid="PERSONA-CREDIT" aria-pressed="false"><img src="assets/PERSONA-CREDIT.jpg" alt="Jordan Blake, Credit" loading="lazy" width="44" height="55"><span class="lh"><span class="pname">Jordan Blake</span><span class="prole">Credit</span><span class="pn">5 steps</span></span></button><div class="lanebody" style="grid-template-rows:repeat(1,auto)"><button class="blk par" type="button" data-scn="SCN-CREDIT" data-pid="PERSONA-CREDIT" data-key="SCN-CREDIT|PERSONA-CREDIT" aria-pressed="false" style="grid-column:2 / 9;grid-row:1"><span class="bid">CREDIT<i>C2.1–C2.7</i></span><span class="btitle">Assess risk and conditions</span><span class="bmeta">5 steps · 4 human</span><span class="bmarks"><span class="bm">≋ parallel</span><span class="bm pain" title="highest analyst pain intensity in this scenario">! 4</span><span class="bm lk out" title="C2.6 → C1.4">→ LEGAL</span></span></button></div></div>
+</div></div>
+
+<div class="maphead">
+  <div>
+    <h2 class="sec" style="margin:0 0 3px">Workflow</h2>
+    <span class="qual">Pain point → the change → opportunity, step by step.</span>
+  </div>
+  <ul class="maplegend">
+    <li><svg class="g" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 3h8v8h-8z" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg> Rule</li>
+    <li><svg class="g" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 5h4v4h-4z M9 9h4v4h-4z M7 7h2" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg> Workflow</li>
+    <li><svg class="g" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 8h3l2-3 2 6 2-3h1" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg> Deterministic Skill</li>
+    <li><svg class="g" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 3a5 5 0 100 10 5 5 0 100-10 M8 6v4" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg> Semantic Skill</li>
+    <li><svg class="g" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 4h8v8h-8z M6 6h4v4h-4z" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg> Bounded Agent candidate</li>
+    <li><svg class="g" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 4a2 2 0 100 4 2 2 0 100-4 M4 13c0-2.5 1.8-4 4-4s4 1.5 4 4" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg> Human</li>
+  </ul>
+</div>
+</div><script>
+const LINKS=[{"from": "SCN-CREDIT|PERSONA-CREDIT", "to": "SCN-LEGAL|PERSONA-LEGAL", "from_scn": "SCN-CREDIT", "to_scn": "SCN-LEGAL", "kind": "handoff", "label": "Specified credit condition package \u2192 Legal incorporation review", "anchor": "C2.6 \u2192 C1.4", "status": "source_supported_parent_handoff; atomic endpoints are design projections", "limit": "This specific handoff does not serialize all C1 and C2 work."}, {"from": "SCN-MATCH|PERSONA-RISK", "to": "SCN-GAP|PERSONA-CLIENT-T", "from_scn": "SCN-MATCH", "to_scn": "SCN-GAP", "kind": "loop", "label": "Permitted identity-evidence request \u2192 limited contributor response", "anchor": "", "status": "design_loop; exact purpose and request binding required", "limit": "Intermediate approval/send/access steps omitted from overview; screening_identity is separate from coordinate_information."}, {"from": "SCN-GAP|PERSONA-CLIENT-T", "to": "SCN-VALIDATE|PERSONA-KYCOPS", "from_scn": "SCN-GAP", "to_scn": "SCN-VALIDATE", "kind": "loop", "label": "Submitted artifact \u2192 purpose-specific sufficiency review", "anchor": "", "status": "design_loop; not direct atomic contract link", "limit": "Submission does not mean sufficient, accepted or cleared; intake and adoption controls remain."}, {"from": "SCN-VALIDATE|PERSONA-KYCOPS", "to": "SCN-MATCH|PERSONA-RISK", "from_scn": "SCN-VALIDATE", "to_scn": "SCN-MATCH", "kind": "loop", "label": "Return to the same finding for a supported disposition", "anchor": "", "status": "design_loop; pilot same-case/finding binding required", "limit": "Pilot identity evidence remains insufficient; finding remains unresolved. Return navigation writes no business event."}, {"from": "COL|M1", "to": "SCN-CONFLICTS|PERSONA-CONTROL", "from_scn": "", "to_scn": "SCN-CONFLICTS", "kind": "early", "label": "can start from M1", "anchor": "", "status": "", "limit": "M7 can start from M1. The target map draws the M7 header beside M1 while M7.1\u2013M7.4 stay in the M7 column \u2014 the source is ambiguous here."}];
+const svg=document.getElementById("links"),matrix=document.getElementById("matrix");
+const STROKE={handoff:"#004D86",loop:"#086BB5",early:"#7A8490",intent:"#7A8490"};
+function esc(s){const d=document.createElement("div");d.textContent=s==null?"":s;return d.innerHTML}
+function rectOf(sel){
+  const el=document.querySelector(sel);
+  if(!el) return null;
+  const r=el.getBoundingClientRect(), m=matrix.getBoundingClientRect();
+  return {x:r.left-m.left, y:r.top-m.top, w:r.width, h:r.height};
+}
+function drawLinks(){
+  const m=matrix.getBoundingClientRect();
+  svg.setAttribute('viewBox',`0 0 ${m.width} ${m.height}`);
+  svg.setAttribute('width',m.width); svg.setAttribute('height',m.height);
+  let out='';
+  LINKS.forEach((l,i)=>{
+    const a = l.from.startsWith('COL|')
+      ? rectOf(`.ph[data-col="${l.from.slice(4)}"]`)
+      : rectOf(`[data-key="${CSS.escape(l.from)}"]`);
+    const b = rectOf(`[data-key="${CSS.escape(l.to)}"]`);
+    if(!a||!b) return;
+    const ax=a.x+a.w/2, ay=a.y+a.h/2, bx=b.x+b.w/2, by=b.y+b.h/2;
+    // curve along the dominant axis, so lane-to-lane links read as vertical S-curves
+    // instead of near-straight lines cutting through blocks
+    const dx=bx-ax, dy=by-ay;
+    let d;
+    if(Math.abs(dy)>Math.abs(dx)){
+      const c=Math.max(30,Math.min(Math.abs(dy)*0.4,120));
+      d=`M ${ax} ${ay} C ${ax} ${ay+(dy>=0?c:-c)}, ${bx} ${by-(dy>=0?c:-c)}, ${bx} ${by}`;
+    }else{
+      const c=Math.max(30,Math.min(Math.abs(dx)*0.45,90));
+      d=`M ${ax} ${ay} C ${ax+(dx>=0?c:-c)} ${ay}, ${bx-(dx>=0?c:-c)} ${by}, ${bx} ${by}`;
+    }
+    const col=STROKE[l.kind]||'#004D86';
+    out+=`<marker id="ar${i}" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0 L8 4 L0 8 z" fill="${col}"/></marker>`;
+    out+=`<path class="${l.kind}" data-i="${i}" d="${d}" stroke="${col}" marker-end="url(#ar${i})"/>`;
+    const label=l.anchor||(l.kind==='early'?l.label:'');
+    if(label) out+=`<text data-i="${i}" x="${(ax+bx)/2}" y="${(ay+by)/2-7}" text-anchor="middle" fill="${col}">${esc(label)}</text>`;
+  });
+  svg.innerHTML='<defs></defs>'+out;
+}
+let raf=null, tmr=null;
+function scheduleDraw(){
+  // rAF is throttled to nothing while the page is hidden (background tab, hidden pane),
+  // so pair it with a timeout that fires regardless.
+  if(raf) cancelAnimationFrame(raf);
+  if(tmr) clearTimeout(tmr);
+  raf=requestAnimationFrame(drawLinks);
+  tmr=setTimeout(drawLinks,150);
+}
+addEventListener('resize',scheduleDraw);
+addEventListener('load',scheduleDraw);
+document.addEventListener('visibilitychange',scheduleDraw);
+if(document.fonts&&document.fonts.ready) document.fonts.ready.then(scheduleDraw);
+document.querySelector('.matrixwrap').addEventListener('scroll',scheduleDraw,{passive:true});
+// lazy images and font swaps change block geometry after first paint
+if(window.ResizeObserver) new ResizeObserver(scheduleDraw).observe(matrix);
+document.querySelectorAll('.lanehead img').forEach(i=>i.addEventListener('load',scheduleDraw));
+scheduleDraw();
+
+function clearPressed(){
+  document.querySelectorAll('[aria-pressed=true]').forEach(b=>b.setAttribute('aria-pressed','false'));
+  document.querySelectorAll('.blk.kin').forEach(b=>b.classList.remove('kin'));
+  svg.querySelectorAll('.dim,.on').forEach(p=>p.classList.remove('dim','on'));
+}
+function highlightScenario(id){
+  document.querySelectorAll(`.blk[data-scn="${CSS.escape(id)}"]`).forEach(b=>b.classList.add('kin'));
+  LINKS.forEach((l,i)=>{
+    const rel = l.from_scn===id || l.to_scn===id;
+    svg.querySelectorAll(`[data-i="${i}"]`).forEach(p=>{
+      p.classList.toggle('dim',!rel); p.classList.toggle('on',rel);
+    });
+  });
+}
+
+
+let selected={};
+function send(data){parent.postMessage({channel:'ctt-approved-map',...data},location.origin)}
+function select(data){
+ selected=data;clearPressed();
+ const sel=data.kind==='scene'?'.blk[data-scn="'+CSS.escape(data.id)+'"]':data.kind==='persona'?'.lanehead[data-pid="'+CSS.escape(data.id)+'"]':data.kind==='touchpoint'?'[data-ctid="'+CSS.escape(data.id)+'"]':null;
+ if(sel){document.querySelector(sel)?.setAttribute('aria-pressed','true');if(data.kind==='scene')highlightScenario(data.id)}
+}
+const originalDraw=drawLinks;
+drawLinks=function(){originalDraw();if(selected.kind)select(selected)};
+document.addEventListener('click',e=>{
+ const b=e.target.closest('button[data-scn],button[data-pid],button[data-ctid]');if(!b)return;
+ const data=b.dataset.scn?{kind:'scene',id:b.dataset.scn}:b.dataset.ctid?{kind:'touchpoint',id:b.dataset.ctid}:{kind:'persona',id:b.dataset.pid};
+ select(data);
+ if(b.classList.contains('hchip')){
+  send({type:'preview',...data});
+  const card=document.querySelector('.blk[data-scn="'+CSS.escape(data.id)+'"]');
+  card?.scrollIntoView({block:'center',inline:'center',behavior:'instant'});
+  card?.focus({preventScroll:true});
+  return;
+ }
+ send({type:'select',...data});
+});
+document.addEventListener('keydown',e=>{if(e.key==='Escape'){select({});send({type:'close'})}});
+addEventListener('message',e=>{
+ if(e.source!==parent||e.origin!==location.origin||e.data?.channel!=='ctt-approved-map')return;
+ if(e.data.type==='selection')select(e.data);
+ if(e.data.type==='camera')document.querySelector('.matrixwrap').scrollLeft=e.data.x||0;
+ if(e.data.type==='focus'){const b=document.querySelector('[aria-pressed="true"]')||document.querySelector('.hchip');b?.focus({preventScroll:true})}
+});
+document.querySelector('.matrixwrap').addEventListener('scroll',()=>send({type:'camera',x:document.querySelector('.matrixwrap').scrollLeft}),{passive:true});
+let lastHeight=0;
+function size(){const height=Math.ceil(document.querySelector('.wrap').getBoundingClientRect().height);if(height!==lastHeight){lastHeight=height;send({type:'height',height})}}
+new ResizeObserver(size).observe(document.querySelector('.wrap'));
+addEventListener('load',()=>{size();send({type:'ready'})});size();
+</script><script type="module" src="../i18n/runtime.mjs?v=workshop-10"></script></body></html>

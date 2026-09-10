@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "ok": true,
+  "command": "deliver",
+  "type": "workflow",
+  "input": "/Users/christinaliu/Documents/ChatGPT/Australia Bank/clear-to-trade-product/prototype/diagrams/batch-d/DG-D02.zh-CN.r02.json",
+  "output": "/Users/christinaliu/Documents/ChatGPT/Australia Bank/clear-to-trade-product/prototype/diagrams/batch-d/DG-D02.zh-CN.r02.html",
+  "specification": {
+    "sha256": "a882eb92e50052b90454c7257d3bc3cfb6c6e27440e7dc93816e5f290466f0dc",
+    "bytes": 3393
+  },
+  "artifact": {
+    "sha256": "cefd3740c8854bde1bf56c3c535d35fc154676a494e20d08dcd9404bf65d428d",
+    "bytes": 709081
+  },
+  "validation": {
+    "checksPassed": 9,
+    "checkCount": 9,
+    "compositionProfile": "showcase",
+    "compositionStatus": "pass",
+    "errors": 0,
+    "warnings": 0
+  }
+}

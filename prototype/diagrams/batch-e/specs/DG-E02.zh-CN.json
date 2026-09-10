@@ -1,0 +1,114 @@
+{
+  "schema_version": 2,
+  "diagram_type": "workflow",
+  "meta": {
+    "title": "当前范围的准入准备状态",
+    "locale": "zh-CN",
+    "quality_profile": "showcase",
+    "animation": "none",
+    "legend": {
+      "mode": "auto",
+      "entries": {
+        "frontend": {
+          "label": "只读活动"
+        }
+      }
+    }
+  },
+  "lanes": [
+    {
+      "id": "evaluate",
+      "label": "当前范围与前置条件"
+    },
+    {
+      "id": "wait",
+      "label": "未决工作"
+    }
+  ],
+  "mainPath": [
+    "E02-scope",
+    "E02-prerequisites",
+    "E02-evaluate",
+    "E02-ready"
+  ],
+  "nodes": [
+    {
+      "id": "E02-scope",
+      "lane": "evaluate",
+      "col": 0,
+      "width": 154,
+      "type": "frontend",
+      "label": "绑定范围",
+      "sublabel": "主体、产品、记账实体与版本",
+      "height": 150
+    },
+    {
+      "id": "E02-prerequisites",
+      "lane": "evaluate",
+      "col": 1,
+      "width": 154,
+      "type": "frontend",
+      "label": "读取前置条件",
+      "sublabel": "尽调、筛查、专业条线与质量",
+      "height": 150
+    },
+    {
+      "id": "E02-evaluate",
+      "lane": "evaluate",
+      "col": 2,
+      "width": 154,
+      "type": "frontend",
+      "label": "核对当前依据",
+      "sublabel": "版本、适用性与暂停限制",
+      "height": 150
+    },
+    {
+      "id": "E02-ready",
+      "lane": "evaluate",
+      "col": 3,
+      "width": 154,
+      "type": "frontend",
+      "label": "可提交有权确认",
+      "sublabel": "尚未获得交易准入",
+      "height": 150
+    },
+    {
+      "id": "E02-notready",
+      "lane": "wait",
+      "col": 2,
+      "width": 154,
+      "type": "frontend",
+      "label": "尚未就绪",
+      "sublabel": "明确阻塞、责任与下一动作",
+      "height": 150
+    }
+  ],
+  "edges": [
+    {
+      "from": "E02-scope",
+      "to": "E02-prerequisites"
+    },
+    {
+      "from": "E02-prerequisites",
+      "to": "E02-evaluate"
+    },
+    {
+      "from": "E02-evaluate",
+      "to": "E02-ready",
+      "label": "适用前置条件全部满足"
+    },
+    {
+      "from": "E02-evaluate",
+      "to": "E02-notready",
+      "label": "未决、未知或过时",
+      "role": "branch"
+    },
+    {
+      "from": "E02-notready",
+      "to": "E02-prerequisites",
+      "label": "已审阅的变更",
+      "role": "return",
+      "variant": "default"
+    }
+  ]
+}

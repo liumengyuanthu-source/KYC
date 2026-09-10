@@ -1,0 +1,107 @@
+{
+  "schema_version": 2,
+  "diagram_type": "workflow",
+  "meta": {
+    "title": "筛查对象与覆盖 · 目标",
+    "locale": "zh-CN",
+    "quality_profile": "showcase",
+    "animation": "none"
+  },
+  "lanes": [
+    {
+      "id": "upper",
+      "label": "独立判断"
+    },
+    {
+      "id": "main",
+      "label": "产品准备 · 规则检查 · 人工决定"
+    },
+    {
+      "id": "lower",
+      "label": "未决、保护与返回",
+      "variant": "exception"
+    }
+  ],
+  "mainPath": [
+    "context",
+    "preliminary",
+    "coverage"
+  ],
+  "nodes": [
+    {
+      "id": "context",
+      "col": 0,
+      "lane": "main",
+      "type": "security",
+      "label": "范围与纳入",
+      "sublabel": "P01 · P02"
+    },
+    {
+      "id": "preliminary",
+      "col": 1,
+      "lane": "main",
+      "type": "security",
+      "label": "已知子集查询",
+      "sublabel": "P03 · P04 · P05 · P06"
+    },
+    {
+      "id": "comprehensive",
+      "col": 1,
+      "lane": "upper",
+      "type": "security",
+      "label": "完整计划判断",
+      "sublabel": "P07 · P08 · P09"
+    },
+    {
+      "id": "coverage",
+      "col": 2,
+      "lane": "main",
+      "type": "security",
+      "label": "范围覆盖结果",
+      "sublabel": "P10 · P11"
+    },
+    {
+      "id": "waiting",
+      "col": 1,
+      "lane": "lower",
+      "type": "security",
+      "label": "明确缺口与等待",
+      "sublabel": "P12"
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge0",
+      "from": "context",
+      "to": "preliminary",
+      "label": "具名输入与权限"
+    },
+    {
+      "id": "edge1",
+      "from": "context",
+      "to": "comprehensive",
+      "label": "独立评估完整性",
+      "role": "branch"
+    },
+    {
+      "id": "edge2",
+      "from": "context",
+      "to": "waiting",
+      "label": "不足、未知、受限",
+      "role": "branch"
+    },
+    {
+      "id": "edge3",
+      "from": "preliminary",
+      "to": "coverage",
+      "label": "重评 · 非自动满足"
+    },
+    {
+      "id": "edge4",
+      "from": "comprehensive",
+      "to": "coverage",
+      "label": "确认后执行或复用",
+      "role": "branch"
+    }
+  ]
+}

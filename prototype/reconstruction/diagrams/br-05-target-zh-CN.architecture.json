@@ -1,0 +1,123 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "缺口与客户协作 · To-be",
+    "locale": "zh-CN",
+    "quality_profile": "showcase",
+    "animation": "none",
+    "viewBox": [
+      1000,
+      740
+    ],
+    "legend": {
+      "mode": "hidden"
+    }
+  },
+  "components": [
+    {
+      "id": "ROOT-BR-05-target",
+      "type": "external",
+      "label": "缺口与客户协作",
+      "sublabel": "工作归组 · 非执行顺序",
+      "pos": [
+        60,
+        326
+      ],
+      "size": [
+        300,
+        88
+      ]
+    },
+    {
+      "id": "TOBE-D3-GAP-01-SPECIFIC-GAP",
+      "type": "external",
+      "label": "形成具体缺口",
+      "pos": [
+        590,
+        70
+      ],
+      "size": [
+        360,
+        92
+      ]
+    },
+    {
+      "id": "TOBE-D3-GAP-03-RECIPIENT",
+      "type": "external",
+      "label": "区分适当收件人",
+      "pos": [
+        590,
+        230
+      ],
+      "size": [
+        360,
+        92
+      ]
+    },
+    {
+      "id": "TOBE-D3-GAP-03-LIMITED-GRANT",
+      "type": "external",
+      "label": "限制逐项访问",
+      "pos": [
+        590,
+        390
+      ],
+      "size": [
+        360,
+        92
+      ]
+    },
+    {
+      "id": "TOBE-D3-GAP-05-PARTIAL-RESPONSE",
+      "type": "external",
+      "label": "保存、提交与局部保持 Open",
+      "pos": [
+        590,
+        550
+      ],
+      "size": [
+        360,
+        92
+      ]
+    }
+  ],
+  "connections": [
+    {
+      "id": "CONTAINS-BR-05-target-1",
+      "from": "ROOT-BR-05-target",
+      "to": "TOBE-D3-GAP-01-SPECIFIC-GAP",
+      "label": "包含工作",
+      "variant": "default"
+    },
+    {
+      "id": "CONTAINS-BR-05-target-2",
+      "from": "ROOT-BR-05-target",
+      "to": "TOBE-D3-GAP-03-RECIPIENT",
+      "label": "包含工作",
+      "variant": "default",
+      "labelAt": [
+        535,
+        276
+      ]
+    },
+    {
+      "id": "CONTAINS-BR-05-target-3",
+      "from": "ROOT-BR-05-target",
+      "to": "TOBE-D3-GAP-03-LIMITED-GRANT",
+      "label": "包含工作",
+      "variant": "default",
+      "labelAt": [
+        535,
+        436
+      ]
+    },
+    {
+      "id": "CONTAINS-BR-05-target-4",
+      "from": "ROOT-BR-05-target",
+      "to": "TOBE-D3-GAP-05-PARTIAL-RESPONSE",
+      "label": "包含工作",
+      "variant": "default"
+    }
+  ]
+}

@@ -1,0 +1,114 @@
+{
+  "schema_version": 2,
+  "diagram_type": "workflow",
+  "meta": {
+    "title": "Establish entity and authority",
+    "locale": "en",
+    "quality_profile": "showcase",
+    "animation": "none",
+    "views": [
+      {
+        "id": "person-t",
+        "label": "Person T and authority",
+        "focus": [
+          "a",
+          "b",
+          "t",
+          "evidence",
+          "gap"
+        ],
+        "note": "Employer B is not principal A; EV-A03 does not establish the coordination purpose."
+      }
+    ]
+  },
+  "lanes": [
+    {
+      "id": "entities",
+      "label": "Legal entities · synthetic"
+    },
+    {
+      "id": "person",
+      "label": "Person and purpose"
+    }
+  ],
+  "mainPath": [
+    "evidence",
+    "t",
+    "gap"
+  ],
+  "nodes": [
+    {
+      "id": "b",
+      "lane": "entities",
+      "col": 0,
+      "type": "external",
+      "label": "Entity B · Singapore",
+      "sublabel": "Reported parent, not guarantor",
+      "width": 220
+    },
+    {
+      "id": "a",
+      "lane": "entities",
+      "col": 2,
+      "type": "external",
+      "label": "Entity A · Australia",
+      "sublabel": "Only proposed counterparty",
+      "width": 220
+    },
+    {
+      "id": "evidence",
+      "lane": "person",
+      "col": 0,
+      "type": "database",
+      "label": "EV-A03",
+      "sublabel": "Appointment at Entity B",
+      "width": 210
+    },
+    {
+      "id": "t",
+      "lane": "person",
+      "col": 1,
+      "type": "external",
+      "label": "Person T",
+      "sublabel": "Group treasury contact",
+      "width": 210
+    },
+    {
+      "id": "gap",
+      "lane": "person",
+      "col": 2,
+      "type": "security",
+      "label": "Coordinate for Entity A",
+      "sublabel": "Evidence required",
+      "width": 220
+    }
+  ],
+  "edges": [
+    {
+      "from": "b",
+      "to": "a",
+      "label": "reported parent"
+    },
+    {
+      "from": "evidence",
+      "to": "t",
+      "label": "supports role"
+    },
+    {
+      "from": "t",
+      "to": "b",
+      "label": "employed by"
+    },
+    {
+      "from": "t",
+      "to": "gap",
+      "label": "claims authority"
+    },
+    {
+      "from": "gap",
+      "to": "a",
+      "label": "principal scope unproven",
+      "variant": "dashed"
+    }
+  ]
+}

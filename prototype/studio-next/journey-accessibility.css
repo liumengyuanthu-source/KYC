@@ -1,0 +1,38 @@
+/* Readable light surface for the journey node inspector, independent of canvas theme. */
+#focus-chip {
+ --text:#10253b!important; --text-muted:#354e65!important; --text-faint:#354e65!important; --text-dim:#354e65!important;
+ --toolbar-text:#10253b!important; --toolbar-menu-bg:#fff!important; --toolbar-border:#879db0!important; --toolbar-hover:#e7f2fa!important;
+ --panel:#edf4fa!important; --frontend-stroke:#005d96!important; --database-stroke:#005d96!important; --backend-stroke:#005d96!important; --security-stroke:#005d96!important;
+ --frontend-fill:#e7f2fa!important; --database-fill:#e7f2fa!important; --backend-fill:#e7f2fa!important;
+ background:#fff!important;color:#10253b!important;backdrop-filter:none!important;
+ border:2px solid #005d96!important;box-shadow:0 8px 30px #0b152733;
+ width:min(420px,calc(100% - 24px))!important;max-width:calc(100% - 24px)!important;
+ max-height:calc(100% - 32px);overflow:auto;font-size:14px;line-height:1.5;
+}
+#focus-chip .relationship-lens-head{background:#fff!important;padding:16px;gap:12px}
+#focus-chip .relationship-lens-title{font-size:20px;white-space:normal;overflow-wrap:anywhere;line-height:1.35}
+#focus-chip .semantic-passport-detail,#focus-chip .relationship-lens-summary,#focus-chip .semantic-passport-reach-status,#focus-chip .relationship-lens-row small,#focus-chip .relationship-lens-empty{font-size:14px;white-space:normal;line-height:1.5}
+#focus-chip .relationship-lens-eyebrow,#focus-chip .semantic-passport-reach-label,#focus-chip .relationship-lens-group-title,#focus-chip .relationship-lens-direction{font-size:12px;letter-spacing:.04em}
+#focus-chip .semantic-passport-meta span,#focus-chip .semantic-passport-meta code{font-size:12px;color:#354e65!important;background:#edf4fa!important;white-space:normal;overflow-wrap:anywhere}
+#focus-chip button{font-size:14px;min-height:44px;color:#10253b!important}
+#focus-chip .semantic-passport-reach-actions button{background:#edf4fa!important;border-color:#879db0!important;padding:8px 10px}
+#focus-chip .semantic-passport-reach-actions button[aria-pressed=true]{background:#005d96!important;color:#fff!important;border:2px solid #003e73!important}
+#focus-chip .semantic-passport-reach-actions button[aria-pressed=true] strong{color:#fff!important}
+#focus-chip .semantic-passport-reach-actions strong{font-size:14px;color:#005d96}
+#focus-chip button:disabled{opacity:1;color:#52677e!important;background:#f3f5f7!important;border-color:#bac8d3!important}
+#focus-chip .relationship-lens-row{grid-template-columns:48px minmax(0,1fr);padding:10px!important;border-radius:4px}
+#focus-chip .relationship-lens-row strong{font-size:15px;white-space:normal;overflow-wrap:anywhere}
+#focus-chip button:hover:not(:disabled){background:#e7f2fa!important;color:#10253b!important}
+#focus-chip button:hover:not(:disabled) strong{color:#10253b!important}
+#focus-chip button:focus-visible{outline:3px solid #005d96!important;outline-offset:2px!important;box-shadow:0 0 0 5px #fff!important}
+#focus-chip #btn-focus-clear{width:44px;height:44px;min-width:44px;font-size:24px;color:#10253b!important}
+#focus-chip #btn-focus-copy,#focus-chip #btn-focus-relations{color:#005d96!important}
+#focus-chip .relationship-lens-list{max-height:none;padding:8px}
+@media(max-width:600px){#focus-chip{left:8px;top:8px;max-height:calc(100% - 16px);width:calc(100% - 16px)!important;max-width:calc(100% - 16px)!important}}
+
+/* Keep workflow actions within the same node inspector and scroll surface. */
+#focus-chip .ctt-node-detail{position:static!important;display:flex;flex-direction:column;align-items:stretch;gap:8px;max-width:none;width:auto;box-sizing:border-box;background:#edf4fa;color:#10253b;border:0;border-top:1px solid #879db0;border-radius:0;padding:14px 16px;margin:0;box-shadow:none;font-size:14px}
+#focus-chip .ctt-node-detail[hidden]{display:none!important}
+#focus-chip .ctt-node-detail>strong{font-size:14px;color:#10253b}
+#focus-chip .ctt-node-detail>button{white-space:normal;text-align:left;line-height:1.4;background:white!important;border:1px solid #879db0;border-radius:4px;padding:10px 12px;color:#005d96!important;min-height:44px;width:100%}
+#focus-chip .ctt-node-detail>button:hover{background:#dcecf8!important}

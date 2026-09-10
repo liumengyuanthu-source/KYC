@@ -1,0 +1,79 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "证据取得与用途评估 · Current",
+    "locale": "zh-CN",
+    "quality_profile": "showcase",
+    "animation": "none",
+    "viewBox": [
+      1380,
+      620
+    ],
+    "legend": {
+      "mode": "hidden"
+    }
+  },
+  "components": [
+    {
+      "id": "ROOT-BR-04-current",
+      "type": "external",
+      "label": "证据取得与用途评估",
+      "sublabel": "工作归组 · 非执行顺序",
+      "pos": [
+        60,
+        266
+      ],
+      "size": [
+        400,
+        88
+      ]
+    },
+    {
+      "id": "CURRENT-BR04-M3-1-SOURCE-INFORMATION",
+      "type": "external",
+      "label": "从公共与商业源取得资料",
+      "pos": [
+        850,
+        70
+      ],
+      "size": [
+        500,
+        92
+      ]
+    },
+    {
+      "id": "CURRENT-BR04-M3-4-CAPTURE-VALIDATE-EVIDENCE",
+      "type": "external",
+      "label": "捕获并验证资料",
+      "pos": [
+        850,
+        195
+      ],
+      "size": [
+        500,
+        92
+      ]
+    }
+  ],
+  "connections": [
+    {
+      "id": "CONTAINS-BR-04-current-1",
+      "from": "ROOT-BR-04-current",
+      "to": "CURRENT-BR04-M3-1-SOURCE-INFORMATION",
+      "label": "包含工作",
+      "variant": "default"
+    },
+    {
+      "id": "CONTAINS-BR-04-current-2",
+      "from": "ROOT-BR-04-current",
+      "to": "CURRENT-BR04-M3-4-CAPTURE-VALIDATE-EVIDENCE",
+      "label": "包含工作",
+      "variant": "default",
+      "labelAt": [
+        755,
+        241
+      ]
+    }
+  ]
+}

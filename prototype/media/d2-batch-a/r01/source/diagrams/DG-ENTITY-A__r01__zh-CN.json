@@ -1,0 +1,106 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "任职关系与代表权限声明",
+    "locale": "zh-CN",
+    "quality_profile": "showcase",
+    "animation": "none",
+    "legend": {
+      "mode": "hidden"
+    },
+    "viewBox": [
+      1100,
+      620
+    ]
+  },
+  "components": [
+    {
+      "id": "person-t",
+      "type": "external",
+      "label": "Person T",
+      "sublabel": "集团资金联系人",
+      "pos": [
+        50,
+        80
+      ],
+      "size": [
+        220,
+        96
+      ]
+    },
+    {
+      "id": "entity-b",
+      "type": "external",
+      "label": "Entity B",
+      "sublabel": "新加坡 / 任职组织声明",
+      "pos": [
+        780,
+        80
+      ],
+      "size": [
+        220,
+        96
+      ]
+    },
+    {
+      "id": "authority",
+      "type": "external",
+      "label": "协调申请资料",
+      "sublabel": "已声称 / 权限未建立",
+      "pos": [
+        50,
+        430
+      ],
+      "size": [
+        220,
+        96
+      ]
+    },
+    {
+      "id": "entity-a",
+      "type": "external",
+      "label": "Entity A",
+      "sublabel": "澳大利亚经营公司",
+      "pos": [
+        780,
+        430
+      ],
+      "size": [
+        220,
+        96
+      ]
+    }
+  ],
+  "connections": [
+    {
+      "id": "employment",
+      "from": "person-t",
+      "to": "entity-b",
+      "label": "岗位声明 / EV-A03"
+    },
+    {
+      "id": "reported-parent",
+      "from": "entity-b",
+      "to": "entity-a",
+      "label": "母公司声明 / EV-A02",
+      "variant": "dashed",
+      "labelDy": 130
+    },
+    {
+      "id": "representation-claim",
+      "from": "person-t",
+      "to": "authority",
+      "label": "声称代表",
+      "variant": "dashed",
+      "labelDy": 130
+    },
+    {
+      "id": "principal",
+      "from": "authority",
+      "to": "entity-a",
+      "label": "被代表主体 / 权限未建立",
+      "variant": "dashed"
+    }
+  ]
+}

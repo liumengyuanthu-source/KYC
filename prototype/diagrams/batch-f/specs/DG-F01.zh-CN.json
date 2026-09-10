@@ -1,0 +1,214 @@
+{
+  "schema_version": 2,
+  "diagram_type": "workflow",
+  "meta": {
+    "title": "共享案件结构",
+    "locale": "zh-CN",
+    "quality_profile": "showcase",
+    "animation": "none",
+    "legend": {
+      "mode": "auto",
+      "entries": {
+        "frontend": {
+          "label": "只读结构说明"
+        }
+      }
+    }
+  },
+  "lanes": [
+    {
+      "id": "scope",
+      "label": "范围与参与方"
+    },
+    {
+      "id": "assess",
+      "label": "要求、证据与工作"
+    },
+    {
+      "id": "readiness",
+      "label": "专业条线与就绪状态"
+    },
+    {
+      "id": "outcome",
+      "label": "决定与发布"
+    }
+  ],
+  "mainPath": [
+    "F01-case",
+    "F01-party"
+  ],
+  "nodes": [
+    {
+      "id": "F01-case",
+      "lane": "scope",
+      "col": 0,
+      "width": 180,
+      "height": 100,
+      "type": "frontend",
+      "label": "案件 / 范围",
+      "sublabel": "当前版本"
+    },
+    {
+      "id": "F01-party",
+      "lane": "scope",
+      "col": 1,
+      "width": 180,
+      "height": 100,
+      "type": "frontend",
+      "label": "参与方",
+      "sublabel": "实体与人员"
+    },
+    {
+      "id": "F01-authority",
+      "lane": "scope",
+      "col": 2,
+      "width": 180,
+      "height": 100,
+      "type": "frontend",
+      "label": "权限",
+      "sublabel": "单独建立授权"
+    },
+    {
+      "id": "F01-requirement",
+      "lane": "assess",
+      "col": 0,
+      "width": 180,
+      "height": 100,
+      "type": "frontend",
+      "label": "适用要求",
+      "sublabel": "用途与范围"
+    },
+    {
+      "id": "F01-evidence",
+      "lane": "assess",
+      "col": 1,
+      "width": 180,
+      "height": 100,
+      "type": "frontend",
+      "label": "证据",
+      "sublabel": "用途评估"
+    },
+    {
+      "id": "F01-work",
+      "lane": "assess",
+      "col": 2,
+      "width": 180,
+      "height": 100,
+      "type": "frontend",
+      "label": "工作 / 决定",
+      "sublabel": "收到不等于充分"
+    },
+    {
+      "id": "F01-specialist",
+      "lane": "readiness",
+      "col": 0,
+      "width": 180,
+      "height": 100,
+      "type": "frontend",
+      "label": "专业条线",
+      "sublabel": "当前条件"
+    },
+    {
+      "id": "F01-prerequisite",
+      "lane": "readiness",
+      "col": 1,
+      "width": 180,
+      "height": 100,
+      "type": "frontend",
+      "label": "准入前提",
+      "sublabel": "全部适用输入"
+    },
+    {
+      "id": "F01-readiness",
+      "lane": "readiness",
+      "col": 2,
+      "width": 180,
+      "height": 100,
+      "type": "frontend",
+      "label": "就绪状态",
+      "sublabel": "不等于已授权"
+    },
+    {
+      "id": "F01-decision",
+      "lane": "outcome",
+      "col": 1,
+      "width": 180,
+      "height": 100,
+      "type": "frontend",
+      "label": "人工决定",
+      "sublabel": "限定范围权限"
+    },
+    {
+      "id": "F01-publication",
+      "lane": "outcome",
+      "col": 2,
+      "width": 180,
+      "height": 100,
+      "type": "frontend",
+      "label": "发布结果",
+      "sublabel": "不执行交易"
+    }
+  ],
+  "edges": [
+    {
+      "from": "F01-case",
+      "to": "F01-party"
+    },
+    {
+      "from": "F01-party",
+      "to": "F01-authority"
+    },
+    {
+      "from": "F01-party",
+      "to": "F01-requirement"
+    },
+    {
+      "from": "F01-requirement",
+      "to": "F01-evidence"
+    },
+    {
+      "from": "F01-evidence",
+      "to": "F01-work"
+    },
+    {
+      "from": "F01-work",
+      "to": "F01-specialist"
+    },
+    {
+      "from": "F01-specialist",
+      "to": "F01-prerequisite"
+    },
+    {
+      "from": "F01-prerequisite",
+      "to": "F01-readiness"
+    },
+    {
+      "from": "F01-readiness",
+      "to": "F01-decision"
+    },
+    {
+      "from": "F01-decision",
+      "to": "F01-publication"
+    },
+    {
+      "from": "F01-authority",
+      "to": "F01-decision",
+      "label": "权限依据",
+      "role": "branch",
+      "via": [
+        [
+          720,
+          136
+        ],
+        [
+          720,
+          532
+        ],
+        [
+          346,
+          532
+        ]
+      ]
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+/* Host-only light skin. No graph geometry, node text or export data changes. */
+html[data-theme="light"][data-preset="classic"]{
+ --bg:#f7f9fc;--grid:#e9eff4;--text:#17243c;--text-muted:#526679;--text-dim:#6c8093;--text-faint:#536a80;
+ --panel:#fff;--panel-border:#dce5ee;--lane-fill:#fafcfe;--lane-stroke:#d5e1ec;
+ --arrow:#8499aa;--arrow-emphasis:#086db5;--mask:#fff;
+ --frontend-fill:#e8f3fc;--frontend-stroke:#6395bc;
+ --security-fill:#fff1c8;--security-stroke:#b28d39;
+ --external-fill:#eef1f5;--external-stroke:#8997a7;
+ --toolbar-bg:#fff;--toolbar-border:#dce5ee;--toolbar-text:#364d63;--toolbar-hover:#e8f3fc;--toolbar-menu-bg:#fff;
+}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif}
+svg{font-family:'JetBrains Mono',monospace}
+/* Keep native header space: it separates the toolbar from the chapter rail. */
+html[data-workshop-tobe="true"][data-theme="light"][data-preset="classic"]{
+ --backend-fill:#e7f2fb;--backend-stroke:#086db5;
+}

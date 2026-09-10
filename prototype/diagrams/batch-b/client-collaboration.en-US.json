@@ -1,0 +1,150 @@
+{
+  "schema_version": 2,
+  "diagram_type": "workflow",
+  "meta": {
+    "title": "Request-linked collaboration",
+    "locale": "en",
+    "quality_profile": "showcase",
+    "animation": "none"
+  },
+  "lanes": [
+    {
+      "id": "request",
+      "label": "Staff review"
+    },
+    {
+      "id": "contributor",
+      "label": "Limited contributor"
+    },
+    {
+      "id": "review",
+      "label": "Purpose assessment"
+    },
+    {
+      "id": "case",
+      "label": "Same case"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "requirements",
+      "lane": "request",
+      "col": 0,
+      "type": "external",
+      "label": "Requirements / gaps",
+      "sublabel": "Subject + purpose",
+      "width": 180
+    },
+    {
+      "id": "request-items",
+      "lane": "request",
+      "col": 1,
+      "type": "external",
+      "label": "Request · two items",
+      "sublabel": "Review before dispatch",
+      "width": 180
+    },
+    {
+      "id": "grant",
+      "lane": "contributor",
+      "col": 1,
+      "type": "external",
+      "label": "Person T",
+      "sublabel": "Limited item-scoped grant",
+      "width": 180
+    },
+    {
+      "id": "submission",
+      "lane": "contributor",
+      "col": 2,
+      "type": "external",
+      "label": "Authority response",
+      "sublabel": "Ownership remains open",
+      "width": 180
+    },
+    {
+      "id": "intake",
+      "lane": "review",
+      "col": 2,
+      "type": "external",
+      "label": "Mock file intake",
+      "sublabel": "Released is not sufficient",
+      "width": 180
+    },
+    {
+      "id": "assessment",
+      "lane": "review",
+      "col": 3,
+      "type": "external",
+      "label": "Coordination purpose",
+      "sublabel": "Ops records assessment",
+      "width": 180
+    },
+    {
+      "id": "case-state",
+      "lane": "case",
+      "col": 3,
+      "type": "external",
+      "label": "Case · not ready",
+      "sublabel": "Other conditions retained",
+      "width": 180
+    }
+  ],
+  "mainPath": [
+    "requirements",
+    "request-items",
+    "grant",
+    "submission",
+    "intake",
+    "assessment",
+    "case-state"
+  ],
+  "edges": [
+    {
+      "from": "requirements",
+      "to": "request-items"
+    },
+    {
+      "from": "request-items",
+      "to": "grant",
+      "label": "reviewed scope"
+    },
+    {
+      "from": "grant",
+      "to": "submission",
+      "label": "assigned item only"
+    },
+    {
+      "from": "submission",
+      "to": "intake"
+    },
+    {
+      "from": "intake",
+      "to": "assessment",
+      "label": "released + linked"
+    },
+    {
+      "from": "assessment",
+      "to": "case-state",
+      "label": "local progress only"
+    }
+  ],
+  "cards": [
+    {
+      "dot": "slate",
+      "title": "Access is not authority",
+      "items": [
+        "Reference locates; mock authentication identifies.",
+        "A grant exposes assigned items, not the whole case."
+      ]
+    },
+    {
+      "dot": "slate",
+      "title": "Partial progress",
+      "items": [
+        "EV-A05 may support coordination for Entity A only.",
+        "Signing, trading and clearance remain separate."
+      ]
+    }
+  ]
+}

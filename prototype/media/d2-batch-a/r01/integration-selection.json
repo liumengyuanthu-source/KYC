@@ -1,0 +1,47 @@
+{
+  "recorded_at": "2026-09-07T07:49:43.181624+00:00",
+  "selection_status": "user_accepted_sample_direction_for_integration",
+  "user_statement": "如何把这个小样，介入到主线任务中？可以了小样",
+  "source_task": "制作小工具演示Demo",
+  "target_task": "分析 Australia Bank workshop prework",
+  "selected_assets": [
+    {
+      "asset_id": "DMO-A01",
+      "variant_id": "panel-first",
+      "asset_revision": "r01",
+      "scene": "SCN-SCOPE"
+    },
+    {
+      "asset_id": "DMO-A02",
+      "variant_id": "panel-first",
+      "asset_revision": "r01",
+      "scene": "SCN-ENTITY"
+    }
+  ],
+  "host_integration_status": "not_implemented_by_this_task",
+  "host_integration_tests": "not_run",
+  "mainline_modified_by_this_handoff": false,
+  "handoff_document": "MAINLINE_INTEGRATION_HANDOFF.md",
+  "source_manifests": [
+    {
+      "path": "DMO-A01__panel-first__r01__manifest.json",
+      "sha256": "63f587d712ba59309fabe91d468d1bb7867ee3c284dbb6dc5b8aff72c2c4639f"
+    },
+    {
+      "path": "DMO-A02__panel-first__r01__manifest.json",
+      "sha256": "a284618b20154398260b3d729be04a0dd0f8e6c4587ba481c3b8ea856c2c6d65"
+    },
+    {
+      "path": "asset-manifest.json",
+      "sha256": "6bed5da1a381318f8fb8eccc5d8fa83868fa568d97531af553795c09267e0435"
+    },
+    {
+      "path": "source/cue-manifest.json",
+      "sha256": "d4ebd3b5c87d9fda3ebbaac3d4bc627348a3d7a05540aa4d88fe26bb23e23ca3"
+    },
+    {
+      "path": "source/diagram-contract.json",
+      "sha256": "c4a7ca07974bd5c273c51d63454cdde2242db100519aed3adbeebb1fd7b66781"
+    }
+  ]
+}

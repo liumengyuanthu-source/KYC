@@ -1,0 +1,110 @@
+{
+  "schema_version": 2,
+  "diagram_type": "workflow",
+  "meta": {
+    "title": "Screening review · proposed collaboration",
+    "locale": "en",
+    "quality_profile": "showcase",
+    "animation": "none",
+    "legend": {
+      "mode": "hidden"
+    }
+  },
+  "lanes": [
+    {
+      "id": "product",
+      "label": "Product · preparation"
+    },
+    {
+      "id": "human",
+      "label": "Human · demo authority"
+    },
+    {
+      "id": "case",
+      "label": "Shared case · conditions"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "M4-5",
+      "lane": "product",
+      "col": 0,
+      "type": "backend",
+      "label": "Possible match",
+      "sublabel": "Synthetic finding",
+      "width": 132
+    },
+    {
+      "id": "comparison",
+      "lane": "product",
+      "col": 1,
+      "type": "database",
+      "label": "Compare evidence",
+      "sublabel": "Subject + purpose",
+      "width": 156
+    },
+    {
+      "id": "SCN-MATCH",
+      "lane": "human",
+      "col": 2,
+      "type": "security",
+      "label": "Human review",
+      "sublabel": "Evidence + rationale",
+      "width": 132
+    },
+    {
+      "id": "waiting",
+      "lane": "human",
+      "col": 3,
+      "type": "messagebus",
+      "label": "Awaiting input",
+      "sublabel": "Specific evidence gap",
+      "width": 132
+    },
+    {
+      "id": "M4-7",
+      "lane": "case",
+      "col": 3,
+      "type": "database",
+      "label": "Record disposition",
+      "sublabel": "Local outcome only",
+      "width": 156
+    },
+    {
+      "id": "SCN-READINESS",
+      "lane": "case",
+      "col": 4,
+      "type": "security",
+      "label": "Still not ready",
+      "sublabel": "Legal · Credit · QA",
+      "width": 156
+    }
+  ],
+  "edges": [
+    {
+      "from": "M4-5",
+      "to": "comparison"
+    },
+    {
+      "from": "comparison",
+      "to": "SCN-MATCH"
+    },
+    {
+      "from": "SCN-MATCH",
+      "to": "waiting",
+      "label": "Insufficient",
+      "role": "branch",
+      "variant": "dashed"
+    },
+    {
+      "from": "SCN-MATCH",
+      "to": "M4-7",
+      "label": "Sufficient + authorised",
+      "variant": "security"
+    },
+    {
+      "from": "M4-7",
+      "to": "SCN-READINESS"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+[
+  {
+    "name": "client-collaboration.en-AU",
+    "method": "Archify viewer Export → SVG",
+    "canonical": true,
+    "sourceSha256": "d1cbc8ab5f71651389ae1515d5be159dd81d29d7094a68c996a6c29d2b677a9e",
+    "svgSha256": "66c02f10943e6600e785b0d56b03b9cd698e786a02765c63e8e4409850f5ca91",
+    "bytes": 51249
+  },
+  {
+    "name": "client-collaboration.en-US",
+    "method": "Archify viewer Export → SVG",
+    "canonical": true,
+    "sourceSha256": "d1cbc8ab5f71651389ae1515d5be159dd81d29d7094a68c996a6c29d2b677a9e",
+    "svgSha256": "66c02f10943e6600e785b0d56b03b9cd698e786a02765c63e8e4409850f5ca91",
+    "bytes": 51249
+  },
+  {
+    "name": "client-collaboration.zh-CN",
+    "method": "Archify viewer Export → SVG",
+    "canonical": true,
+    "sourceSha256": "cc2421d21ccf987ccb21f88266a1a79d97066ca45ad707dc5d7501d4d9472710",
+    "svgSha256": "b82eb8ecf5b7457e966a199b3d31b2d8a98c7eb11c0951854942d643c3715e4f",
+    "bytes": 51229
+  }
+]

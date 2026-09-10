@@ -1,0 +1,578 @@
+[
+  {
+    "name": "DG-C-POPULATION.Current.zh-CN",
+    "canonical": true,
+    "method": "Archify viewer Export → SVG",
+    "sha256": "907b89e7ea05182c8d6dfcf274eebb17220a980ef5fa2877dbeaa1dfe7bb1326",
+    "sizes": [
+      {
+        "width": 1440,
+        "height": 900,
+        "scrollWidth": 1440,
+        "scrollHeight": 900
+      },
+      {
+        "width": 1600,
+        "height": 1000,
+        "scrollWidth": 1600,
+        "scrollHeight": 1000
+      },
+      {
+        "width": 1920,
+        "height": 1080,
+        "scrollWidth": 1920,
+        "scrollHeight": 1080
+      },
+      {
+        "width": 2048,
+        "height": 1320,
+        "scrollWidth": 2048,
+        "scrollHeight": 1320
+      }
+    ]
+  },
+  {
+    "name": "DG-C-POPULATION.Current.en-AU.r02",
+    "canonical": true,
+    "method": "Archify viewer Export → SVG",
+    "sha256": "f8284bd51d158aa4efa830eade7b8e288311b39a8b1548002588b6f95aaf5288",
+    "sizes": [
+      {
+        "width": 1440,
+        "height": 900,
+        "scrollWidth": 1440,
+        "scrollHeight": 900
+      },
+      {
+        "width": 1600,
+        "height": 1000,
+        "scrollWidth": 1600,
+        "scrollHeight": 1000
+      },
+      {
+        "width": 1920,
+        "height": 1080,
+        "scrollWidth": 1920,
+        "scrollHeight": 1080
+      },
+      {
+        "width": 2048,
+        "height": 1320,
+        "scrollWidth": 2048,
+        "scrollHeight": 1320
+      }
+    ]
+  },
+  {
+    "name": "DG-C-POPULATION.Current.en-US.r02",
+    "canonical": true,
+    "method": "Archify viewer Export → SVG",
+    "sha256": "f8284bd51d158aa4efa830eade7b8e288311b39a8b1548002588b6f95aaf5288",
+    "sizes": [
+      {
+        "width": 1440,
+        "height": 900,
+        "scrollWidth": 1440,
+        "scrollHeight": 900
+      },
+      {
+        "width": 1600,
+        "height": 1000,
+        "scrollWidth": 1600,
+        "scrollHeight": 1063
+      },
+      {
+        "width": 1920,
+        "height": 1080,
+        "scrollWidth": 1920,
+        "scrollHeight": 1080
+      },
+      {
+        "width": 2048,
+        "height": 1320,
+        "scrollWidth": 2048,
+        "scrollHeight": 1320
+      }
+    ]
+  },
+  {
+    "name": "DG-C-POPULATION.Target.zh-CN",
+    "canonical": true,
+    "method": "Archify viewer Export → SVG",
+    "sha256": "3de1c3168952c00ffdcaf941d1f6e3d802be313d5f21227737947b429cfdc767",
+    "sizes": [
+      {
+        "width": 1440,
+        "height": 900,
+        "scrollWidth": 1440,
+        "scrollHeight": 916
+      },
+      {
+        "width": 1600,
+        "height": 1000,
+        "scrollWidth": 1600,
+        "scrollHeight": 1000
+      },
+      {
+        "width": 1920,
+        "height": 1080,
+        "scrollWidth": 1920,
+        "scrollHeight": 1080
+      },
+      {
+        "width": 2048,
+        "height": 1320,
+        "scrollWidth": 2048,
+        "scrollHeight": 1320
+      }
+    ]
+  },
+  {
+    "name": "DG-C-POPULATION.Target.en-AU.r02",
+    "canonical": true,
+    "method": "Archify viewer Export → SVG",
+    "sha256": "790c7c55738bc18ca22894255d2118c9a7c777daf945fb7e016acf46f4e75dc5",
+    "sizes": [
+      {
+        "width": 1440,
+        "height": 900,
+        "scrollWidth": 1440,
+        "scrollHeight": 900
+      },
+      {
+        "width": 1600,
+        "height": 1000,
+        "scrollWidth": 1600,
+        "scrollHeight": 1000
+      },
+      {
+        "width": 1920,
+        "height": 1080,
+        "scrollWidth": 1920,
+        "scrollHeight": 1080
+      },
+      {
+        "width": 2048,
+        "height": 1320,
+        "scrollWidth": 2048,
+        "scrollHeight": 1320
+      }
+    ]
+  },
+  {
+    "name": "DG-C-POPULATION.Target.en-US.r02",
+    "canonical": true,
+    "method": "Archify viewer Export → SVG",
+    "sha256": "790c7c55738bc18ca22894255d2118c9a7c777daf945fb7e016acf46f4e75dc5",
+    "sizes": [
+      {
+        "width": 1440,
+        "height": 900,
+        "scrollWidth": 1440,
+        "scrollHeight": 900
+      },
+      {
+        "width": 1600,
+        "height": 1000,
+        "scrollWidth": 1600,
+        "scrollHeight": 1000
+      },
+      {
+        "width": 1920,
+        "height": 1080,
+        "scrollWidth": 1920,
+        "scrollHeight": 1080
+      },
+      {
+        "width": 2048,
+        "height": 1320,
+        "scrollWidth": 2048,
+        "scrollHeight": 1320
+      }
+    ]
+  },
+  {
+    "name": "DG-C-MATCH.Current.zh-CN.r02",
+    "canonical": true,
+    "method": "Archify viewer Export → SVG",
+    "sha256": "14a5b08ee05ab1b0b96f0db801c13032cffc68d860ae56e572f03d499dcf2696",
+    "sizes": [
+      {
+        "width": 1440,
+        "height": 900,
+        "scrollWidth": 1440,
+        "scrollHeight": 900
+      },
+      {
+        "width": 1600,
+        "height": 1000,
+        "scrollWidth": 1600,
+        "scrollHeight": 1000
+      },
+      {
+        "width": 1920,
+        "height": 1080,
+        "scrollWidth": 1920,
+        "scrollHeight": 1080
+      },
+      {
+        "width": 2048,
+        "height": 1320,
+        "scrollWidth": 2048,
+        "scrollHeight": 1320
+      }
+    ]
+  },
+  {
+    "name": "DG-C-MATCH.Current.en-AU.r02",
+    "canonical": true,
+    "method": "Archify viewer Export → SVG",
+    "sha256": "fd150efd5e8bb21ae1faebc7e9a03c8491acddc6617aab01901449849a3bb0aa",
+    "sizes": [
+      {
+        "width": 1440,
+        "height": 900,
+        "scrollWidth": 1440,
+        "scrollHeight": 900
+      },
+      {
+        "width": 1600,
+        "height": 1000,
+        "scrollWidth": 1600,
+        "scrollHeight": 1000
+      },
+      {
+        "width": 1920,
+        "height": 1080,
+        "scrollWidth": 1920,
+        "scrollHeight": 1080
+      },
+      {
+        "width": 2048,
+        "height": 1320,
+        "scrollWidth": 2048,
+        "scrollHeight": 1320
+      }
+    ]
+  },
+  {
+    "name": "DG-C-MATCH.Current.en-US.r02",
+    "canonical": true,
+    "method": "Archify viewer Export → SVG",
+    "sha256": "fd150efd5e8bb21ae1faebc7e9a03c8491acddc6617aab01901449849a3bb0aa",
+    "sizes": [
+      {
+        "width": 1440,
+        "height": 900,
+        "scrollWidth": 1440,
+        "scrollHeight": 900
+      },
+      {
+        "width": 1600,
+        "height": 1000,
+        "scrollWidth": 1600,
+        "scrollHeight": 1000
+      },
+      {
+        "width": 1920,
+        "height": 1080,
+        "scrollWidth": 1920,
+        "scrollHeight": 1080
+      },
+      {
+        "width": 2048,
+        "height": 1320,
+        "scrollWidth": 2048,
+        "scrollHeight": 1320
+      }
+    ]
+  },
+  {
+    "name": "DG-C-MATCH.Target.zh-CN.r02",
+    "canonical": true,
+    "method": "Archify viewer Export → SVG",
+    "sha256": "0ddfa14cc7a887d5dff510a9dd594e28aa90fb38daa633be4a9fba7d2d3de5db",
+    "sizes": [
+      {
+        "width": 1440,
+        "height": 900,
+        "scrollWidth": 1440,
+        "scrollHeight": 969
+      },
+      {
+        "width": 1600,
+        "height": 1000,
+        "scrollWidth": 1600,
+        "scrollHeight": 1146
+      },
+      {
+        "width": 1920,
+        "height": 1080,
+        "scrollWidth": 1920,
+        "scrollHeight": 1080
+      },
+      {
+        "width": 2048,
+        "height": 1320,
+        "scrollWidth": 2048,
+        "scrollHeight": 1320
+      }
+    ]
+  },
+  {
+    "name": "DG-C-MATCH.Target.en-AU.r02",
+    "canonical": true,
+    "method": "Archify viewer Export → SVG",
+    "sha256": "1eb5bc43d213db6105adacc1598c3ad8ebe72d85c4426d63414bce025ef2f60b",
+    "sizes": [
+      {
+        "width": 1440,
+        "height": 900,
+        "scrollWidth": 1440,
+        "scrollHeight": 900
+      },
+      {
+        "width": 1600,
+        "height": 1000,
+        "scrollWidth": 1600,
+        "scrollHeight": 1000
+      },
+      {
+        "width": 1920,
+        "height": 1080,
+        "scrollWidth": 1920,
+        "scrollHeight": 1080
+      },
+      {
+        "width": 2048,
+        "height": 1320,
+        "scrollWidth": 2048,
+        "scrollHeight": 1320
+      }
+    ]
+  },
+  {
+    "name": "DG-C-MATCH.Target.en-US.r02",
+    "canonical": true,
+    "method": "Archify viewer Export → SVG",
+    "sha256": "1eb5bc43d213db6105adacc1598c3ad8ebe72d85c4426d63414bce025ef2f60b",
+    "sizes": [
+      {
+        "width": 1440,
+        "height": 900,
+        "scrollWidth": 1440,
+        "scrollHeight": 900
+      },
+      {
+        "width": 1600,
+        "height": 1000,
+        "scrollWidth": 1600,
+        "scrollHeight": 1000
+      },
+      {
+        "width": 1920,
+        "height": 1080,
+        "scrollWidth": 1920,
+        "scrollHeight": 1080
+      },
+      {
+        "width": 2048,
+        "height": 1320,
+        "scrollWidth": 2048,
+        "scrollHeight": 1320
+      }
+    ]
+  },
+  {
+    "name": "DG-C-EDD.Current.zh-CN",
+    "canonical": true,
+    "method": "Archify viewer Export → SVG",
+    "sha256": "173386e9f621bbaa60604dd566f8a03e445bc7757cc735540db3f0b66089a841",
+    "sizes": [
+      {
+        "width": 1440,
+        "height": 900,
+        "scrollWidth": 1440,
+        "scrollHeight": 900
+      },
+      {
+        "width": 1600,
+        "height": 1000,
+        "scrollWidth": 1600,
+        "scrollHeight": 1000
+      },
+      {
+        "width": 1920,
+        "height": 1080,
+        "scrollWidth": 1920,
+        "scrollHeight": 1080
+      },
+      {
+        "width": 2048,
+        "height": 1320,
+        "scrollWidth": 2048,
+        "scrollHeight": 1320
+      }
+    ]
+  },
+  {
+    "name": "DG-C-EDD.Current.en-AU",
+    "canonical": true,
+    "method": "Archify viewer Export → SVG",
+    "sha256": "ac4c179db2dd3041b30ad485a5db5cb90000ba9e72a57410354fb50fe683045f",
+    "sizes": [
+      {
+        "width": 1440,
+        "height": 900,
+        "scrollWidth": 1440,
+        "scrollHeight": 900
+      },
+      {
+        "width": 1600,
+        "height": 1000,
+        "scrollWidth": 1600,
+        "scrollHeight": 1000
+      },
+      {
+        "width": 1920,
+        "height": 1080,
+        "scrollWidth": 1920,
+        "scrollHeight": 1080
+      },
+      {
+        "width": 2048,
+        "height": 1320,
+        "scrollWidth": 2048,
+        "scrollHeight": 1320
+      }
+    ]
+  },
+  {
+    "name": "DG-C-EDD.Current.en-US",
+    "canonical": true,
+    "method": "Archify viewer Export → SVG",
+    "sha256": "ac4c179db2dd3041b30ad485a5db5cb90000ba9e72a57410354fb50fe683045f",
+    "sizes": [
+      {
+        "width": 1440,
+        "height": 900,
+        "scrollWidth": 1440,
+        "scrollHeight": 900
+      },
+      {
+        "width": 1600,
+        "height": 1000,
+        "scrollWidth": 1600,
+        "scrollHeight": 1000
+      },
+      {
+        "width": 1920,
+        "height": 1080,
+        "scrollWidth": 1920,
+        "scrollHeight": 1080
+      },
+      {
+        "width": 2048,
+        "height": 1320,
+        "scrollWidth": 2048,
+        "scrollHeight": 1320
+      }
+    ]
+  },
+  {
+    "name": "DG-C-EDD.Target.zh-CN",
+    "canonical": true,
+    "method": "Archify viewer Export → SVG",
+    "sha256": "bca7346c7d472fe21a94b26bde4a3b6915d0d82450a0f3344d7b92afb84b601d",
+    "sizes": [
+      {
+        "width": 1440,
+        "height": 900,
+        "scrollWidth": 1440,
+        "scrollHeight": 900
+      },
+      {
+        "width": 1600,
+        "height": 1000,
+        "scrollWidth": 1600,
+        "scrollHeight": 1000
+      },
+      {
+        "width": 1920,
+        "height": 1080,
+        "scrollWidth": 1920,
+        "scrollHeight": 1080
+      },
+      {
+        "width": 2048,
+        "height": 1320,
+        "scrollWidth": 2048,
+        "scrollHeight": 1320
+      }
+    ]
+  },
+  {
+    "name": "DG-C-EDD.Target.en-AU",
+    "canonical": true,
+    "method": "Archify viewer Export → SVG",
+    "sha256": "dae7fd1f7ec0b8355128e985d43dc5ad8e1c49d2f3e71c2e325493b98f255258",
+    "sizes": [
+      {
+        "width": 1440,
+        "height": 900,
+        "scrollWidth": 1440,
+        "scrollHeight": 900
+      },
+      {
+        "width": 1600,
+        "height": 1000,
+        "scrollWidth": 1600,
+        "scrollHeight": 1000
+      },
+      {
+        "width": 1920,
+        "height": 1080,
+        "scrollWidth": 1920,
+        "scrollHeight": 1080
+      },
+      {
+        "width": 2048,
+        "height": 1320,
+        "scrollWidth": 2048,
+        "scrollHeight": 1320
+      }
+    ]
+  },
+  {
+    "name": "DG-C-EDD.Target.en-US",
+    "canonical": true,
+    "method": "Archify viewer Export → SVG",
+    "sha256": "dae7fd1f7ec0b8355128e985d43dc5ad8e1c49d2f3e71c2e325493b98f255258",
+    "sizes": [
+      {
+        "width": 1440,
+        "height": 900,
+        "scrollWidth": 1440,
+        "scrollHeight": 900
+      },
+      {
+        "width": 1600,
+        "height": 1000,
+        "scrollWidth": 1600,
+        "scrollHeight": 1000
+      },
+      {
+        "width": 1920,
+        "height": 1080,
+        "scrollWidth": 1920,
+        "scrollHeight": 1080
+      },
+      {
+        "width": 2048,
+        "height": 1320,
+        "scrollWidth": 2048,
+        "scrollHeight": 1320
+      }
+    ]
+  }
+]

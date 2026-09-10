@@ -1,0 +1,112 @@
+{
+  "schema_version": 2,
+  "diagram_type": "workflow",
+  "meta": {
+    "title": "同一案件，衔接体验",
+    "locale": "zh-CN",
+    "quality_profile": "showcase",
+    "animation": "none",
+    "legend": {
+      "mode": "auto",
+      "entries": {
+        "frontend": {
+          "label": "只读结构说明"
+        }
+      }
+    }
+  },
+  "lanes": [
+    {
+      "id": "shared",
+      "label": "共享当前案件"
+    },
+    {
+      "id": "experience",
+      "label": "衔接的体验"
+    },
+    {
+      "id": "projection",
+      "label": "可打印投影"
+    }
+  ],
+  "mainPath": [
+    "F03-spine",
+    "F03-product",
+    "F03-print"
+  ],
+  "nodes": [
+    {
+      "id": "F03-spine",
+      "lane": "shared",
+      "col": 1,
+      "width": 180,
+      "height": 145,
+      "type": "frontend",
+      "label": "共享案件",
+      "sublabel": "同一当前版本"
+    },
+    {
+      "id": "F03-studio",
+      "lane": "experience",
+      "col": 0,
+      "width": 180,
+      "height": 145,
+      "type": "frontend",
+      "label": "旅程与场景",
+      "sublabel": "理解 / 探索"
+    },
+    {
+      "id": "F03-product",
+      "lane": "experience",
+      "col": 1,
+      "width": 180,
+      "height": 145,
+      "type": "frontend",
+      "label": "产品工作区",
+      "sublabel": "受校验的工作动作"
+    },
+    {
+      "id": "F03-lab",
+      "lane": "experience",
+      "col": 2,
+      "width": 180,
+      "height": 145,
+      "type": "frontend",
+      "label": "可选案例实验室",
+      "sublabel": "只读影子状态"
+    },
+    {
+      "id": "F03-print",
+      "lane": "projection",
+      "col": 1,
+      "width": 180,
+      "height": 145,
+      "type": "frontend",
+      "label": "打印",
+      "sublabel": "投影，不另存真相"
+    }
+  ],
+  "edges": [
+    {
+      "from": "F03-spine",
+      "to": "F03-studio"
+    },
+    {
+      "from": "F03-spine",
+      "to": "F03-product"
+    },
+    {
+      "from": "F03-spine",
+      "to": "F03-lab",
+      "role": "branch"
+    },
+    {
+      "from": "F03-studio",
+      "to": "F03-print"
+    },
+    {
+      "from": "F03-product",
+      "to": "F03-print"
+    }
+  ]
+}

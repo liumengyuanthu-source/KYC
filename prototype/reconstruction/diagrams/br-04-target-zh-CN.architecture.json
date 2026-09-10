@@ -1,0 +1,123 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "证据取得与用途评估 · To-be",
+    "locale": "zh-CN",
+    "quality_profile": "showcase",
+    "animation": "none",
+    "viewBox": [
+      1000,
+      740
+    ],
+    "legend": {
+      "mode": "hidden"
+    }
+  },
+  "components": [
+    {
+      "id": "ROOT-BR-04-target",
+      "type": "external",
+      "label": "证据取得与用途评估",
+      "sublabel": "工作归组 · 非执行顺序",
+      "pos": [
+        60,
+        326
+      ],
+      "size": [
+        300,
+        88
+      ]
+    },
+    {
+      "id": "TOBE-D3-SOURCE-03-CANDIDATE-CLAIMS",
+      "type": "external",
+      "label": "准备候选 Claims",
+      "pos": [
+        590,
+        70
+      ],
+      "size": [
+        360,
+        92
+      ]
+    },
+    {
+      "id": "TOBE-D3-SOURCE-03-CONFIRMED-VALUES",
+      "type": "external",
+      "label": "确认后形成可用值",
+      "pos": [
+        590,
+        230
+      ],
+      "size": [
+        360,
+        92
+      ]
+    },
+    {
+      "id": "TOBE-D3-VALIDATE-04-USE-ASSESSMENT",
+      "type": "external",
+      "label": "按用途准备评估",
+      "pos": [
+        590,
+        390
+      ],
+      "size": [
+        360,
+        92
+      ]
+    },
+    {
+      "id": "TOBE-D3-VALIDATE-04-HUMAN-SUFFICIENCY",
+      "type": "external",
+      "label": "保留复杂充分性判断",
+      "pos": [
+        590,
+        550
+      ],
+      "size": [
+        360,
+        92
+      ]
+    }
+  ],
+  "connections": [
+    {
+      "id": "CONTAINS-BR-04-target-1",
+      "from": "ROOT-BR-04-target",
+      "to": "TOBE-D3-SOURCE-03-CANDIDATE-CLAIMS",
+      "label": "包含工作",
+      "variant": "default"
+    },
+    {
+      "id": "CONTAINS-BR-04-target-2",
+      "from": "ROOT-BR-04-target",
+      "to": "TOBE-D3-SOURCE-03-CONFIRMED-VALUES",
+      "label": "包含工作",
+      "variant": "default",
+      "labelAt": [
+        535,
+        276
+      ]
+    },
+    {
+      "id": "CONTAINS-BR-04-target-3",
+      "from": "ROOT-BR-04-target",
+      "to": "TOBE-D3-VALIDATE-04-USE-ASSESSMENT",
+      "label": "包含工作",
+      "variant": "default",
+      "labelAt": [
+        535,
+        436
+      ]
+    },
+    {
+      "id": "CONTAINS-BR-04-target-4",
+      "from": "ROOT-BR-04-target",
+      "to": "TOBE-D3-VALIDATE-04-HUMAN-SUFFICIENCY",
+      "label": "包含工作",
+      "variant": "default"
+    }
+  ]
+}

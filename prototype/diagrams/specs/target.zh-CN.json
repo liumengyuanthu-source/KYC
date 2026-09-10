@@ -1,0 +1,245 @@
+{
+  "schema_version": 2,
+  "diagram_type": "workflow",
+  "meta": {
+    "title": "目标 · 交易准入",
+    "locale": "zh-CN",
+    "quality_profile": "showcase",
+    "animation": "none",
+    "legend": {
+      "mode": "hidden"
+    }
+  },
+  "lanes": [
+    {
+      "id": "kyc",
+      "label": "KYC · 证据与质量"
+    },
+    {
+      "id": "conditional",
+      "label": "按条件开展尽职调查"
+    },
+    {
+      "id": "parallel",
+      "label": "并行 · 各自输入与权限"
+    },
+    {
+      "id": "release",
+      "label": "条件 · 授权 · 发布"
+    }
+  ],
+  "phases": [
+    {
+      "id": "scope",
+      "label": "1 范围",
+      "fromCol": 0,
+      "toCol": 0
+    },
+    {
+      "id": "evidence",
+      "label": "2 证据",
+      "fromCol": 1,
+      "toCol": 1
+    },
+    {
+      "id": "assess",
+      "label": "3 评估",
+      "fromCol": 2,
+      "toCol": 2
+    },
+    {
+      "id": "assure",
+      "label": "4 质量",
+      "fromCol": 3,
+      "toCol": 3
+    },
+    {
+      "id": "release-stage",
+      "label": "5 交易准入",
+      "fromCol": 4,
+      "toCol": 5
+    }
+  ],
+  "nodes": [
+    {
+      "id": "M0-M1",
+      "lane": "kyc",
+      "col": 0,
+      "type": "frontend",
+      "label": "范围与身份",
+      "sublabel": "M0 / M1 · 案件输入",
+      "width": 132
+    },
+    {
+      "id": "M2-M3",
+      "lane": "kyc",
+      "col": 1,
+      "type": "database",
+      "label": "要求与证据",
+      "sublabel": "M2 / M3 · 寻源与验证",
+      "width": 144
+    },
+    {
+      "id": "M4",
+      "lane": "kyc",
+      "col": 2,
+      "type": "security",
+      "label": "筛查",
+      "sublabel": "M4 · 发现与处置",
+      "width": 144
+    },
+    {
+      "id": "M6",
+      "lane": "kyc",
+      "col": 3,
+      "type": "security",
+      "label": "质量复核",
+      "sublabel": "M6 · 充分性与缺口",
+      "width": 144
+    },
+    {
+      "id": "M5",
+      "lane": "conditional",
+      "col": 2,
+      "type": "security",
+      "label": "强化尽调",
+      "sublabel": "M5 · 风险与适用性",
+      "width": 144
+    },
+    {
+      "id": "M7",
+      "lane": "parallel",
+      "col": 1,
+      "type": "security",
+      "label": "冲突检查",
+      "sublabel": "M7 · 从 M1 提前触发",
+      "width": 132
+    },
+    {
+      "id": "C2",
+      "lane": "parallel",
+      "col": 2,
+      "type": "backend",
+      "label": "信用",
+      "sublabel": "C2 · 适用条款",
+      "width": 132
+    },
+    {
+      "id": "C1",
+      "lane": "parallel",
+      "col": 3,
+      "type": "backend",
+      "label": "法务",
+      "sublabel": "C1 · 复核与协议",
+      "width": 144
+    },
+    {
+      "id": "M8-conditions",
+      "lane": "release",
+      "col": 4,
+      "type": "database",
+      "label": "条件汇合",
+      "sublabel": "M8.1 / .2 · 关联成果",
+      "width": 160
+    },
+    {
+      "id": "M8-authority",
+      "lane": "release",
+      "col": 5,
+      "type": "security",
+      "label": "授权",
+      "sublabel": "需要明确权限",
+      "width": 160
+    },
+    {
+      "id": "M8-publish",
+      "lane": "kyc",
+      "col": 5,
+      "type": "messagebus",
+      "label": "发布状态",
+      "sublabel": "M8.3–.5 · 记录与沟通",
+      "width": 160
+    }
+  ],
+  "edges": [
+    {
+      "from": "M0-M1",
+      "to": "M2-M3"
+    },
+    {
+      "from": "M2-M3",
+      "to": "M4"
+    },
+    {
+      "from": "M4",
+      "to": "M6",
+      "label": "复核输入"
+    },
+    {
+      "from": "M4",
+      "to": "M5",
+      "label": "适用时",
+      "role": "branch"
+    },
+    {
+      "from": "M5",
+      "to": "M6",
+      "label": "所需结果"
+    },
+    {
+      "from": "M0-M1",
+      "to": "M7",
+      "label": "M1 提前输入",
+      "role": "branch"
+    },
+    {
+      "from": "C2",
+      "to": "C1",
+      "label": "协议数据"
+    },
+    {
+      "from": "M6",
+      "to": "M8-conditions"
+    },
+    {
+      "from": "M7",
+      "to": "M8-conditions"
+    },
+    {
+      "from": "C1",
+      "to": "M8-conditions"
+    },
+    {
+      "from": "C2",
+      "to": "M8-conditions"
+    },
+    {
+      "from": "M8-conditions",
+      "to": "M8-authority",
+      "label": "适用条件均满足"
+    },
+    {
+      "from": "M8-authority",
+      "to": "M8-publish",
+      "label": "已获授权"
+    }
+  ],
+  "cards": [
+    {
+      "dot": "cyan",
+      "title": "结构化协作",
+      "items": [
+        "共享案件关联要求、证据用途与并行成果。",
+        "保留条件性强化尽调及独立法务、信用工作；准备完成不产生授权。"
+      ]
+    },
+    {
+      "dot": "amber",
+      "title": "来源边界",
+      "items": [
+        "SRC-007 · 第2页目标；来源支持的依赖也存在于现状。",
+        "拟议产品准备证据并关联工作；人工权限仍需确认。"
+      ]
+    }
+  ]
+}

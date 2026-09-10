@@ -1,0 +1,209 @@
+{
+  "schema_version": 2,
+  "diagram_type": "workflow",
+  "meta": {
+    "title": "限定范围的暂停",
+    "locale": "zh-CN",
+    "quality_profile": "showcase"
+  },
+  "lanes": [
+    {
+      "id": "task",
+      "label": "任务影响"
+    },
+    {
+      "id": "branch",
+      "label": "分支影响"
+    },
+    {
+      "id": "case",
+      "label": "案件影响"
+    },
+    {
+      "id": "unknown",
+      "label": "影响待定"
+    }
+  ],
+  "mainPath": [
+    "D03-ISSUE",
+    "D03-IMPACT",
+    "D03-TASK",
+    "D03-AFFECTED",
+    "D03-RESOLVE"
+  ],
+  "nodes": [
+    {
+      "id": "D03-ISSUE",
+      "lane": "branch",
+      "col": 0,
+      "type": "backend",
+      "label": "发现问题",
+      "sublabel": "不自动暂停全案"
+    },
+    {
+      "id": "D03-IMPACT",
+      "lane": "branch",
+      "col": 1,
+      "type": "backend",
+      "label": "判断影响",
+      "sublabel": "依据依赖与授权"
+    },
+    {
+      "id": "D03-TASK",
+      "lane": "task",
+      "col": 2,
+      "type": "backend",
+      "label": "任务暂停",
+      "sublabel": "仅对应活动"
+    },
+    {
+      "id": "D03-BRANCH",
+      "lane": "branch",
+      "col": 2,
+      "type": "backend",
+      "label": "分支暂停",
+      "sublabel": "仅对应工作分支"
+    },
+    {
+      "id": "D03-CASE",
+      "lane": "case",
+      "col": 2,
+      "type": "backend",
+      "label": "案件暂停",
+      "sublabel": "需明确全案依据"
+    },
+    {
+      "id": "D03-UNKNOWN",
+      "lane": "unknown",
+      "col": 2,
+      "type": "backend",
+      "label": "影响未知",
+      "sublabel": "不能当作不受影响"
+    },
+    {
+      "id": "D03-AFFECTED",
+      "lane": "branch",
+      "col": 3,
+      "type": "backend",
+      "label": "受影响工作",
+      "sublabel": "核对暂停解除条件"
+    },
+    {
+      "id": "D03-UNAFFECTED",
+      "lane": "task",
+      "col": 4,
+      "type": "backend",
+      "label": "独立工作",
+      "sublabel": "须有独立性依据"
+    },
+    {
+      "id": "D03-DEPS",
+      "lane": "unknown",
+      "col": 4,
+      "type": "backend",
+      "label": "未知依赖",
+      "sublabel": "等待复核影响"
+    },
+    {
+      "id": "D03-RESOLVE",
+      "lane": "branch",
+      "col": 5,
+      "type": "backend",
+      "label": "解决或重评",
+      "sublabel": "保留决定及历史"
+    }
+  ],
+  "edges": [
+    {
+      "id": "D03-E01",
+      "from": "D03-ISSUE",
+      "to": "D03-IMPACT",
+      "label": "评估范围",
+      "variant": "default"
+    },
+    {
+      "id": "D03-E02",
+      "from": "D03-IMPACT",
+      "to": "D03-TASK",
+      "label": "已证实任务影响",
+      "variant": "default"
+    },
+    {
+      "id": "D03-E03",
+      "from": "D03-IMPACT",
+      "to": "D03-BRANCH",
+      "label": "已证实分支影响",
+      "variant": "default"
+    },
+    {
+      "id": "D03-E04",
+      "from": "D03-IMPACT",
+      "to": "D03-CASE",
+      "label": "已证实全案影响",
+      "variant": "default"
+    },
+    {
+      "id": "D03-E05",
+      "from": "D03-IMPACT",
+      "to": "D03-UNKNOWN",
+      "label": "尚未判定",
+      "variant": "dashed"
+    },
+    {
+      "id": "D03-E06",
+      "from": "D03-TASK",
+      "to": "D03-AFFECTED",
+      "label": "限定暂停",
+      "variant": "default"
+    },
+    {
+      "id": "D03-E07",
+      "from": "D03-BRANCH",
+      "to": "D03-AFFECTED",
+      "label": "限定暂停",
+      "variant": "default"
+    },
+    {
+      "id": "D03-E08",
+      "from": "D03-CASE",
+      "to": "D03-AFFECTED",
+      "label": "限定暂停",
+      "variant": "default"
+    },
+    {
+      "id": "D03-E09",
+      "from": "D03-TASK",
+      "to": "D03-UNAFFECTED",
+      "label": "独立性已证实",
+      "variant": "default"
+    },
+    {
+      "id": "D03-E10",
+      "from": "D03-UNKNOWN",
+      "to": "D03-DEPS",
+      "label": "保持未知",
+      "variant": "dashed"
+    },
+    {
+      "id": "D03-E11",
+      "from": "D03-AFFECTED",
+      "to": "D03-RESOLVE",
+      "label": "检查解除",
+      "variant": "default"
+    },
+    {
+      "id": "D03-E12",
+      "from": "D03-UNAFFECTED",
+      "to": "D03-RESOLVE",
+      "label": "继续独立工作",
+      "variant": "default"
+    },
+    {
+      "id": "D03-E13",
+      "from": "D03-DEPS",
+      "to": "D03-RESOLVE",
+      "label": "重新判断",
+      "variant": "dashed"
+    }
+  ]
+}
