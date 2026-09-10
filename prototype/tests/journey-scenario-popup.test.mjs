@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {scenarioMappings, getSourceDetail} from '../studio-next/scenario-mapping.mjs';
-import {scenariosForNode, scenarioPopupHtml, scenarioCtaHtml} from '../studio-next/journey-scenario-popup.mjs';
+import {scenariosForNode, scenarioNumbersForNode, scenarioPopupHtml, scenarioCtaHtml} from '../studio-next/journey-scenario-popup.mjs';
 
 test('every authored CJ and Hero node has a valid preview and all 15 scenarios are reachable', () => {
   const reachable = new Set();
@@ -40,6 +40,17 @@ test('shared canvas nodes offer distinct scenarios without combining source owne
   assert.match(readiness,/data-jsp-source="M8\.3" data-source-role="related"/);
   assert.match(scenarioPopupHtml('SCN-PUBLISH'),/data-jsp-source="M8\.3" data-source-role="primary"/);
   assert.match(scenarioPopupHtml('SCN-LEGAL'),/data-jsp-source="C2\.7" data-source-role="related"/);
+});
+
+test('journey and Hero nodes expose their mapped S numbers on the canvas', () => {
+  assert.equal(scenarioNumbersForNode('booking'), 'S1');
+  assert.equal(scenarioNumbersForNode('intake'), 'S1 · S2');
+  assert.equal(scenarioNumbersForNode('screening'), 'S7 · S8');
+  assert.equal(scenarioNumbersForNode('readiness'), 'S14 · S15');
+  assert.equal(scenarioNumbersForNode('unknown'), '');
+
+  const css = readFileSync(new URL('../studio-next/journey-scenario-popup.css', import.meta.url), 'utf8');
+  assert.match(css, /\.jsp-node-scenario-badge/);
 });
 
 test('M0.1 preview source data retains separate Target occurrences and the ambiguity note', () => {

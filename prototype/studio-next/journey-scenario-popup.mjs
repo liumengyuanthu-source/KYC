@@ -18,7 +18,48 @@ export const nodeScenarios = {
 export function scenariosForNode(nodeId) {
   return (nodeScenarios[nodeId] || []).map(id => scenarioMappings.find(s => s.id === `SCN-${id}`)).filter(Boolean);
 }
+export function scenarioNumbersForNode(nodeId) {
+  return scenariosForNode(nodeId).map(scenario => scenario.number).join(' · ');
+}
 const esc = value => String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+
+const SVG_NS = 'http://www.w3.org/2000/svg';
+export function installScenarioBadges(svg) {
+  for (const node of svg.querySelectorAll('[data-node-id]')) {
+    const scenarios = scenariosForNode(node.getAttribute('data-node-id'));
+    if (!scenarios.length || node.querySelector('.jsp-node-scenario-badge')) continue;
+    let sourceBox;
+    try { sourceBox = JSON.parse(node.getAttribute('data-source-box')); } catch { continue; }
+    if (!Array.isArray(sourceBox) || sourceBox.length < 4) continue;
+    const [x,y,width] = sourceBox.map(Number);
+    if (![x,y,width].every(Number.isFinite)) continue;
+    let cursor = x + width + 4;
+    for (const scenario of [...scenarios].reverse()) {
+      const badgeWidth = scenario.number.length > 2 ? 34 : 30;
+      cursor -= badgeWidth;
+      const badge = document.createElementNS(SVG_NS,'g');
+      badge.setAttribute('class','jsp-node-scenario-badge');
+      badge.setAttribute('data-scenario-number',scenario.number);
+      badge.setAttribute('aria-hidden','true');
+      const rect = document.createElementNS(SVG_NS,'rect');
+      rect.setAttribute('x',String(cursor));
+      rect.setAttribute('y',String(y - 8));
+      rect.setAttribute('width',String(badgeWidth));
+      rect.setAttribute('height','18');
+      rect.setAttribute('rx','9');
+      const text = document.createElementNS(SVG_NS,'text');
+      text.setAttribute('x',String(cursor + badgeWidth / 2));
+      text.setAttribute('y',String(y + 4));
+      text.setAttribute('text-anchor','middle');
+      text.textContent = scenario.number;
+      badge.append(rect,text);
+      node.append(badge);
+      cursor -= 3;
+    }
+    const existingLabel = node.getAttribute('aria-label') || node.getAttribute('data-node-label') || '';
+    node.setAttribute('aria-label',`${existingLabel}. Scenarios ${scenarios.map(scenario => scenario.number).join(', ')}`);
+  }
+}
 
 // S1 currently opens the approved M0.1 Version 2 workshop sample. Other scenarios retain
 // their existing detail until their own workshop templates are available.
@@ -65,6 +106,7 @@ export function installScenarioPopup() {
   const inspector = document.getElementById('focus-chip');
   const svg = document.querySelector('svg[data-focus-active]') || document.querySelector('.diagram-container svg');
   if (!inspector || !svg) return;
+  installScenarioBadges(svg);
   inspector.classList.add('jsp-inspector');
   document.querySelector('.ctt-node-detail')?.remove();
   const scroll = document.createElement('div');

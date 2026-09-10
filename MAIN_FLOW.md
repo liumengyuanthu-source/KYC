@@ -46,6 +46,8 @@ python3 -m http.server 8899 --bind 127.0.0.1
 
 2026-09-09 导航精简：用户进一步要求去掉 Journey map / Scenario mapping 切换。地图上方改为视图 Tab；2026-09-10 在 Customer journey / Hero case 后加入 Scoreboard。评分沿用现有五维工作坊，直接覆盖同一组 15 个场景，并保留本地保存、排名、Bundle、Portfolio 与 Roadmap。嵌入 Studio 后，Scoreboard 语言跟随系统设置，不再显示重复的语言控件；界面使用与 Kimi Demo 一致的深蓝、亮黄、浅蓝、白色及衬线标题体系。
 
+2026-09-10 场景编号：Customer journey 与 Hero case 的每个场景入口节点直接显示对应的 `S1–S15` 标签。同一节点关联多个场景时并列显示全部编号；选中节点的编号以黄色强调，编号与弹窗所用映射保持一致。
+
 ## GitHub 准备 · 2026-09-09
 
 目标仓库为 `liumengyuanthu-source/KYC`。站点入口、发布文件清单、运行脚本及手动 GitHub Pages 工作流已准备；独立发布副本生成于 `.release/KYC/`。完整部署状态与步骤见 [部署说明](docs/DEPLOYMENT.md)。尚未上传或公开发布。

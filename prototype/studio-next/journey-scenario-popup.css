@@ -1,4 +1,9 @@
 /* Scenario/source relationships are the primary content of the map inspector. */
+svg .jsp-node-scenario-badge { pointer-events:none; }
+svg .jsp-node-scenario-badge rect { fill:#0877c9; stroke:#fff; stroke-width:1; vector-effect:non-scaling-stroke; }
+svg .jsp-node-scenario-badge text { fill:#fff; font:700 10px/1 Inter,Arial,'PingFang SC',sans-serif; letter-spacing:.01em; }
+svg [data-focus-selected] .jsp-node-scenario-badge rect { fill:#f0ad2e; stroke:#171f31; }
+svg [data-focus-selected] .jsp-node-scenario-badge text { fill:#171f31; }
 html body #focus-chip.jsp-inspector {
   padding:0!important; display:flex; flex-direction:column; overflow:hidden;
   width:min(460px,calc(100% - 32px))!important; max-width:calc(100% - 32px)!important;
