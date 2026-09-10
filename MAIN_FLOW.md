@@ -41,7 +41,7 @@ python3 -m http.server 8899 --bind 127.0.0.1
 
 ## Demo UI · 2026-09-09
 
-按用户补充要求，`08_inspire/app/` 六类页面已统一门户风格，并更新故事角色展示；原有流程和状态交互保留。详见 [Demo UI 实施与验证](docs/demo-ui-20260909.md)。Scenario Template 继续保持原样。
+2026-09-10 按用户最新要求，`08_inspire/app/` 已由 `Kimi_Agent_8阶段图标未显示.zip` 中的完整 `app/` 替换，作为后续逐步调优的新基线。仅将主角 Annette 改为 Morgan，并在五个页面加入返回 Scenario Studio 的按钮。详见 [Kimi Demo 替换与验证](docs/demo-kimi-replacement-20260910.md)。此前的 [Demo UI 实施记录](docs/demo-ui-20260909.md) 保留为历史。
 
 2026-09-09 导航精简：用户进一步要求去掉 Journey map / Scenario mapping 切换。地图上方现仅保留左对齐的 Customer journey / Hero case 两个 tab；已验证两者双向切换，场景弹窗来源映射保持可用。
 

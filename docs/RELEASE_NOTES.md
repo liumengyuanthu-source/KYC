@@ -32,3 +32,7 @@ The sample retains its M0.1 title and content; converting it into the full Scena
 ## Diagram playback — September 10
 
 Explicit Play now resumes Live from Still in the V2 Before and both To-be readers, as well as Customer journey / Hero case. Pause and system reduced-motion behavior are retained. V2 source and packaged copy are synchronized; viewer URLs are versioned to avoid stale cached controls.
+
+## Kimi Demo baseline — September 10
+
+The complete Demo is replaced by the user-supplied Kimi `app/` package. Its five-page flow, shared styling, interactions and photographic hero are retained. Annette is renamed Morgan, and every Demo page includes a return control to Scenario Studio. The Studio Demo navigation opens this new baseline. All eight Home stage icons render.

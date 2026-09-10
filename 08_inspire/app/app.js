@@ -144,7 +144,7 @@
       if (!body.dataset.seeded) {
         body.dataset.seeded = "1";
         const hello = {
-          home: "Hi Person T — I'm Aria, orchestrating your clear-to-trade cases. Ask me about status, what's blocking, or what I need from you next.",
+          home: "Hi Morgan — I'm Aria, orchestrating your clear-to-trade cases. Ask me about status, what's blocking, or what I need from you next.",
           intake: "I'll guide you through this request. I auto-fill what I can and only ask for what the booking model and risk rules actually require.",
           case: "You're looking at the live execution state of case OB-2026-0147. Ask me why anything is waiting, or what's running in parallel.",
           documents: "I source documents from registries and data providers first — uploads are the last resort. Ask me about any row.",
@@ -307,4 +307,70 @@
       });
     });
   });
+
+  /* ---------- home: All Requests / Browse 8 Stages toggle ---------- */
+  const seg = document.querySelector("[data-view-seg]");
+  if (seg) {
+    const panes = document.querySelectorAll("[data-view-pane]");
+    seg.querySelectorAll("button").forEach((b) => {
+      b.addEventListener("click", () => {
+        seg.querySelectorAll("button").forEach((x) => x.classList.remove("active"));
+        b.classList.add("active");
+        panes.forEach((p) => { p.hidden = p.dataset.viewPane !== b.dataset.view; });
+      });
+    });
+  }
+
+  /* ---------- home: request table search ---------- */
+  const rqSearch = document.querySelector("[data-rq-search]");
+  if (rqSearch) {
+    rqSearch.addEventListener("input", () => {
+      const q = rqSearch.value.trim().toLowerCase();
+      document.querySelectorAll("[data-rq-row]").forEach((r) => {
+        r.style.display = !q || (r.dataset.key || "").includes(q) || r.textContent.toLowerCase().includes(q) ? "" : "none";
+      });
+      document.querySelectorAll(".stage-case").forEach((c) => {
+        c.style.display = !q || c.textContent.toLowerCase().includes(q) ? "" : "none";
+      });
+    });
+  }
+
+  /* ---------- home: briefing tabs ---------- */
+  const bfTabs = document.querySelector("[data-bf-tabs]");
+  if (bfTabs) {
+    const note = document.querySelector("[data-bf-note]");
+    const notes = {
+      you: "Harbourview is with a specialist. No action requested from you.",
+      bank: "FC Risk is reviewing the EDD outcome for Meridian. KYC Ops is active on two further cases."
+    };
+    bfTabs.querySelectorAll("button").forEach((b) => {
+      b.addEventListener("click", () => {
+        bfTabs.querySelectorAll("button").forEach((x) => x.classList.remove("active"));
+        b.classList.add("active");
+        if (note) note.textContent = notes[b.dataset.tab] || notes.you;
+      });
+    });
+  }
+
+  /* ---------- home: stage card selection ---------- */
+  const stageGrid = document.querySelector("[data-stage-grid]");
+  if (stageGrid) {
+    const title = document.querySelector("[data-stage-title]");
+    const list = document.querySelector("[data-stage-list]");
+    const intakeCard = list ? list.innerHTML : "";
+    stageGrid.querySelectorAll(".stage-card").forEach((card) => {
+      card.addEventListener("click", () => {
+        stageGrid.querySelectorAll(".stage-card").forEach((x) => x.classList.remove("active"));
+        card.classList.add("active");
+        const name = card.dataset.stage;
+        if (name === "Intake") {
+          if (title) title.textContent = "Intake (1)";
+          if (list) list.innerHTML = intakeCard;
+        } else {
+          if (title) title.textContent = name + " (" + card.dataset.cases + ")";
+          if (list) list.innerHTML = '<div class="stage-empty">No cases waiting in ' + name.toLowerCase() + ' right now. Aria will move cases here automatically as upstream steps complete.</div>';
+        }
+      });
+    });
+  }
 })();

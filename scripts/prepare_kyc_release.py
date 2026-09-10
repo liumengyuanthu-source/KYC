@@ -9,7 +9,7 @@ from build_site import ROOT, site_files, prepare_output, copy_files
 EXTRAS = [
     'README.md', '.gitignore', '.gitattributes',
     '.github/workflows/pages.yml', 'deploy/site-files.json',
-    'docs/DEPLOYMENT.md', 'docs/RELEASE_NOTES.md',
+    'docs/DEPLOYMENT.md', 'docs/RELEASE_NOTES.md', 'docs/demo-kimi-replacement-20260910.md',
     'scripts/build_site.py', 'scripts/preview.py', 'scripts/prepare_kyc_release.py',
     'tests/test_site_build.py',
     'prototype/tests/scenario-mapping.test.mjs', 'prototype/tests/journey-scenario-popup.test.mjs',
