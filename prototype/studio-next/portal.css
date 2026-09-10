@@ -42,6 +42,20 @@ body .sn-root:has(.sm-portal) .sm-scoreboard-canvas { padding:0; }
 .sm-scenario-index-fold[open]>summary { border-bottom:1px solid #e4ebf1; }
 .sm-scenario-index-body { padding:0 18px 18px; }
 .sm-scenario-index-note { margin:16px 4px 12px; color:#536174; font-size:12px; }
+.sm-four-level { padding:20px 0 22px; border-bottom:1px solid #e4ebf1; }
+.sm-four-level-heading { display:flex; align-items:flex-end; justify-content:space-between; gap:24px; margin:0 4px 14px; }
+.sm-four-level-heading h3,.sm-source-list-title { margin:0; color:var(--sm-navy); font:600 20px/1.3 Georgia,'Songti SC',serif; }
+.sm-four-level-heading p { max-width:72ch; margin:0; color:#536174; font-size:12px; line-height:1.55; }
+.sm-source-list-title { margin:20px 4px 0; }
+.sm-four-level-table tbody th { width:22%; }
+.sm-four-level-table tbody td:first-child { width:13%; color:#172036; }
+.sm-four-level-group { display:flex; align-items:flex-start; gap:6px; flex-wrap:wrap; margin:3px 0; }
+.sm-four-level-group>span:first-child { width:48px; color:#687687; font-size:10px; line-height:23px; }
+.sm-process-chip { display:inline-flex; align-items:center; gap:5px; padding:3px 7px; border-radius:4px; background:#eff6fb; color:#36566f; font-size:10px; }
+.sm-process-chip b { color:#0869ad; }
+.sm-four-level-group:nth-child(3) .sm-process-chip { background:#f1f2f4; }
+.sm-action-chips { flex:1; min-width:120px; }
+.sm-action-chips code { display:inline-block; margin:2px 3px 2px 0; padding:2px 5px; border-radius:3px; background:#eff6fb; color:#165c90; font:10px ui-monospace,SFMono-Regular,monospace; }
 .sm-directory { margin:0 clamp(0px,2vw,32px); }
 .sm-directory-head { display:flex; align-items:center; justify-content:space-between; gap:24px; margin:24px 0 22px; }
 .sm-directory h2 { font:600 25px/1.3 Georgia,'Songti SC',serif; color:var(--sm-navy); margin:0 0 6px; }
@@ -173,6 +187,8 @@ dialog.sn-panel .sn-panel-bar button { background:transparent; border:1px solid 
   .sm-scenario-index-fold>summary strong { font-size:18px; }
   .sm-fold-count { font-size:0; }
   .sm-scenario-index-body { padding:0 14px 14px; }
+  .sm-four-level-heading { display:block; }
+  .sm-four-level-heading p { margin-top:6px; }
   .sn-panel .sn-panel-body { padding:0 16px 24px; }
   .sn-panel .sn-modal-intro-text h2 { font-size:25px; }
   .sm-mapping-heading { padding:20px 16px; align-items:flex-start; flex-direction:column; gap:14px; }

@@ -52,7 +52,7 @@ python3 -m http.server 8899 --bind 127.0.0.1
 
 2026-09-10 Scoreboard 场景标识：评分卡、详情、组合、Portfolio 与 Roadmap 对外统一显示 `S1–S15`；内部继续使用稳定的 `SCN-*` 标识保存评分和工作坊状态。原 “Hero Case Anchor” 改为 “Hero case”，表示该场景属于 Entity A / Person T 主线故事，不参与评分加权；页面同时明确 15 个场景共同组成 Hero case。
 
-2026-09-10 Customer Journey 场景索引：地图下方增加默认收起的 “Scenario list & source mapping”。展开后按 `S1–S15` 列出场景阶段、Primary 主干来源与 Related 输入/复用/交接来源；点击场景直接打开同一份场景映射详情。清单复用地图弹窗的数据源，并随 Studio 语言切换。
+2026-09-10 Customer Journey 场景索引：地图下方增加默认收起的 “Scenario list & source mapping”。展开后先用四层表解释 Customer Journey 阶段 → Process 组 → Scenario → M/C 来源动作，再按 `S1–S15` 列出 Primary 主干来源与 Related 输入/复用/交接来源；点击场景直接打开同一份场景映射详情。清单复用地图弹窗的数据源，并随 Studio 语言切换。
 
 ## GitHub 准备 · 2026-09-09
 

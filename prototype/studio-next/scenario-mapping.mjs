@@ -72,10 +72,37 @@ export function mappingDirectoryHtml(stage = 'all', query = '') {
   </section>`;
 }
 
+const processGroupNames = {
+  M0: 'Booking model',
+  M1: 'Client intake & triage',
+  M2: 'Requirements determination',
+  M3: 'Document sourcing',
+  M4: 'Screening',
+  M5: 'EDD assessment',
+  M6: 'Quality assurance',
+  M7: 'Conflicts check',
+  M8: 'Clear-to-Trade',
+  C1: 'Legal agreements',
+  C2: 'Credit assessment',
+};
+const processGroup = code => code.match(/^[MC]\d+/)?.[0] || code;
+const uniqueProcessGroups = codes => [...new Set(codes.map(processGroup))];
+const processGroupChips = (codes, role) => codes.length ? `<div class="sm-four-level-group"><span>${role}</span>${uniqueProcessGroups(codes).map(code => `<span class="sm-process-chip"><b>${code}</b> ${processGroupNames[code] || ''}</span>`).join('')}</div>` : '';
+const sourceActionChips = (codes, role) => codes.length ? `<div class="sm-four-level-group"><span>${role}</span><span class="sm-action-chips">${codes.map(code => `<code>${code}</code>`).join(' ')}</span></div>` : '';
+
+export function scenarioJourneyProcessMatrixHtml() {
+  return `<section class="sm-four-level" aria-labelledby="sm-four-level-title">
+    <div class="sm-four-level-heading"><h3 id="sm-four-level-title">How the four levels map</h3><p>The journey stage shows when the scenario is discussed. Process groups show where the source work comes from. M/C actions provide exact traceability.</p></div>
+    <div class="sm-table-wrap"><table class="sm-table sm-four-level-table"><thead><tr><th>Customer journey</th><th>Process group</th><th>Scenario</th><th>Source actions</th></tr></thead><tbody>
+      ${scenarioMappings.map(s => `<tr data-four-level-scenario="${escape(s.id)}"><td><span class="sm-mobile-label">Customer journey</span><strong>${s.stage === 'Clear' ? 'Confirm readiness' : s.stage}</strong></td><td><span class="sm-mobile-label">Process group</span>${processGroupChips(s.primary,'Primary')}${processGroupChips(s.related,'Related')}</td><th scope="row"><span class="sm-mobile-label">Scenario</span><span class="sm-scenario-number">${s.number}</span><button type="button" data-sn="scene" data-sn-value="${escape(s.id)}">${escape(s.title)}</button></th><td><span class="sm-mobile-label">Source actions</span>${sourceActionChips(s.primary,'Primary')}${sourceActionChips(s.related,'Related')}</td></tr>`).join('')}
+    </tbody></table></div>
+  </section>`;
+}
+
 export function scenarioSourceIndexHtml() {
   return `<details class="sm-scenario-index-fold">
     <summary><span><strong>Scenario list & source mapping</strong><small>See how S1–S15 map to M/C source steps.</small></span><span class="sm-fold-count">15 scenarios <b aria-hidden="true">+</b></span></summary>
-    <div class="sm-scenario-index-body"><p class="sm-scenario-index-note">Primary steps form the scenario backbone. Related steps are inputs, reuse or handoffs.</p>
+    <div class="sm-scenario-index-body">${scenarioJourneyProcessMatrixHtml()}<h3 class="sm-source-list-title">Scenario source details</h3><p class="sm-scenario-index-note">Primary steps form the scenario backbone. Related steps are inputs, reuse or handoffs.</p>
       <div class="sm-table-wrap"><table class="sm-table"><thead><tr><th>Scenario</th><th>Primary source steps</th><th>Related sources</th><th><span class="sr-only">Open scenario</span></th></tr></thead><tbody>
         ${scenarioMappings.map(s => `<tr data-scenario-id="${escape(s.id)}"><th scope="row"><span class="sm-scenario-number">${s.number}</span><button type="button" data-sn="scene" data-sn-value="${escape(s.id)}">${escape(s.title)}</button><small>${s.stage === 'Clear' ? 'Confirm readiness' : s.stage}</small></th><td><span class="sm-mobile-label">Primary source steps</span>${s.primary.map(code => `<code>${code}</code>`).join(' ')}</td><td><span class="sm-mobile-label">Related sources</span>${s.related.length ? s.related.map(code => `<code>${code}</code>`).join(' ') : '—'}</td><td><button type="button" class="sm-open" data-sn="scene" data-sn-value="${escape(s.id)}" aria-label="${escape(`Open ${s.number} ${s.title}`)}">Open mapping <span aria-hidden="true">→</span></button></td></tr>`).join('')}
       </tbody></table></div>
