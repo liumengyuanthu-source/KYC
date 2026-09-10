@@ -87,13 +87,13 @@ export function applyScenarioProgress(svg, storage = globalThis.localStorage) {
 
 // S1 currently opens the approved M0.1 Version 2 workshop sample. Other scenarios retain
 // their existing detail until their own workshop templates are available.
-export function scenarioCtaHtml(id) {
+export function scenarioCtaHtml(id,{locale='en-US'}={}) {
   const scenario = scenarioMappings.find(s => s.id === id);
   if (!scenario) return '';
   const attrs = `class="jsp-cta" data-scenario-id="${id}" aria-label="View scenario detail: ${esc(scenario.number)} · ${esc(scenario.title)}"`;
   const label = '<span>View scenario detail</span><span aria-hidden="true">↗</span>';
   return id === 'SCN-SCOPE'
-    ? `<a ${attrs} href="../scenario-samples/m0-1-v2/index.html#1" target="_blank" rel="noopener noreferrer">${label}</a>`
+    ? `<a ${attrs} href="../scenario-samples/m0-1-v2/index.html?locale=${encodeURIComponent(locale)}#1" target="_blank" rel="noopener noreferrer">${label}</a>`
     : `<button type="button" ${attrs}><span>View scenario detail</span><span aria-hidden="true">→</span></button>`;
 }
 
@@ -186,7 +186,7 @@ export function installScenarioPopup() {
   const renderScenario = (id, resetScroll = true,locale = currentLocale()) => {
     activeScenario = id;
     content.innerHTML = scenarioPopupHtml(id,{heroCase:isHeroCase,locale});
-    footer.innerHTML = scenarioCtaHtml(id);
+    footer.innerHTML = scenarioCtaHtml(id,{locale});
     if (resetScroll) scroll.scrollTop = 0;
     translate();
   };

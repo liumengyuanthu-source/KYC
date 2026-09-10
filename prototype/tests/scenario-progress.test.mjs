@@ -43,3 +43,13 @@ test('M0.1 wizard publishes navigation and completion while showing separate ste
   assert.match(app,/aria-label="Scenario workshop progress"/);
   assert.match(app,/Step \$\{currentStep\} \/ \$\{STEPS\.length\}/);
 });
+
+test('M0.1 workshop keeps a persistent return path to the Customer Journey', () => {
+  const html = readFileSync(new URL('../scenario-samples/m0-1-v2/index.html', import.meta.url),'utf8');
+  assert.match(html,/id="backJourney"/);
+  assert.match(html,/href="\.\.\/\.\.\/index\.html\?[^"#]*dimension=cj/);
+  assert.match(html,/Back to Customer Journey/);
+  const app = readFileSync(new URL('../scenario-samples/m0-1-v2/app.js', import.meta.url),'utf8');
+  assert.match(app,/prepareJourneyReturn\(\)/);
+  assert.match(app,/localStorage\.setItem\(LS_KEY,JSON\.stringify\(S\)\)/);
+});

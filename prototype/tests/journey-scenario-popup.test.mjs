@@ -96,7 +96,7 @@ test('map popup source descriptions show business context without PowerPoint sha
 
 
 test('S1 opens the M0.1 Version 2 first workshop step in a separate tab under root and GitHub project paths', () => {
-  const html = scenarioCtaHtml('SCN-SCOPE');
+  const html = scenarioCtaHtml('SCN-SCOPE',{locale:'zh-CN'});
   assert.match(html, /^<a /);
   assert.match(html, /target="_blank"/);
   assert.match(html, /rel="noopener noreferrer"/);
@@ -105,6 +105,7 @@ test('S1 opens the M0.1 Version 2 first workshop step in a separate tab under ro
     for (const view of ['target', 'hero']) {
       const destination = new URL(href, `https://example.com${prefix}/prototype/studio-next/${view}-journey.html`);
       assert.equal(destination.pathname, `${prefix}/prototype/scenario-samples/m0-1-v2/index.html`);
+      assert.equal(destination.searchParams.get('locale'),'zh-CN');
       assert.equal(destination.hash, '#1');
     }
   }

@@ -360,6 +360,19 @@ function save(){
     el.textContent='All drafts saved locally';
   },350);
 }
+function prepareJourneyReturn(){
+  const link=document.getElementById('backJourney');
+  if(!link)return;
+  const locale=new URLSearchParams(location.search).get('locale')||'en-US';
+  const destination=new URL(link.getAttribute('href'),location.href);
+  destination.searchParams.set('locale',locale);
+  link.href=destination.href;
+  link.addEventListener('click',()=>{
+    clearTimeout(saveTimer);
+    try{localStorage.setItem(LS_KEY,JSON.stringify(S));}catch(e){}
+    publishScenarioProgress();
+  });
+}
 function feed(text,color){
   const t=new Date();
   S.feed.unshift({text,color:color||'var(--lav-d)',
@@ -1319,6 +1332,7 @@ $('#btnNext').addEventListener('click',()=>{
 /* ============================================================
    init
    ============================================================ */
+prepareJourneyReturn();
 renderHeroMini();
 renderFeed();
 const _mm=(location.hash||'').match(/^#(\d)(?:\/(\w+))?/);
