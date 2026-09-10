@@ -31,6 +31,17 @@ body .sn-root:has(.sm-portal) .sm-canvas .sn-approved-frame { display:block; bor
 .sm-scoreboard-view .sm-explorer-content { margin-inline:clamp(12px,2vw,32px); }
 body .sn-root:has(.sm-portal) .sm-scoreboard-canvas { padding:0; }
 .sm-scoreboard-frame { display:block; width:100%; height:calc(100dvh - 156px); min-height:760px; border:0; border-radius:12px; background:#efede9; }
+.sm-scenario-index-fold { margin:20px 0 0; border:1px solid #d9e2ea; border-radius:12px; background:#fff; overflow:hidden; }
+.sm-scenario-index-fold>summary { display:flex; align-items:center; justify-content:space-between; gap:24px; padding:18px 22px; cursor:pointer; list-style:none; color:var(--sm-navy); }
+.sm-scenario-index-fold>summary::-webkit-details-marker { display:none; }
+.sm-scenario-index-fold>summary strong { display:block; font:600 20px/1.3 Georgia,'Songti SC',serif; }
+.sm-scenario-index-fold>summary small { display:block; margin-top:4px; color:#5d6a79; font-size:12px; }
+.sm-fold-count { display:flex; align-items:center; gap:14px; color:#1068b2; font-size:12px; white-space:nowrap; }
+.sm-fold-count b { display:grid; place-items:center; width:28px; height:28px; border-radius:50%; background:#e8f3fa; font-size:18px; font-weight:400; transition:transform .18s ease; }
+.sm-scenario-index-fold[open] .sm-fold-count b { transform:rotate(45deg); }
+.sm-scenario-index-fold[open]>summary { border-bottom:1px solid #e4ebf1; }
+.sm-scenario-index-body { padding:0 18px 18px; }
+.sm-scenario-index-note { margin:16px 4px 12px; color:#536174; font-size:12px; }
 .sm-directory { margin:0 clamp(0px,2vw,32px); }
 .sm-directory-head { display:flex; align-items:center; justify-content:space-between; gap:24px; margin:24px 0 22px; }
 .sm-directory h2 { font:600 25px/1.3 Georgia,'Songti SC',serif; color:var(--sm-navy); margin:0 0 6px; }
@@ -158,6 +169,10 @@ dialog.sn-panel .sn-panel-bar button { background:transparent; border:1px solid 
   .sm-table .sm-open { width:100%; text-align:left; min-height:40px; }
   .sm-explorer-content { margin-inline:12px; }
   .sm-scoreboard-frame { height:calc(100dvh - 188px); min-height:640px; }
+  .sm-scenario-index-fold>summary { align-items:flex-start; padding:16px; }
+  .sm-scenario-index-fold>summary strong { font-size:18px; }
+  .sm-fold-count { font-size:0; }
+  .sm-scenario-index-body { padding:0 14px 14px; }
   .sn-panel .sn-panel-body { padding:0 16px 24px; }
   .sn-panel .sn-modal-intro-text h2 { font-size:25px; }
   .sm-mapping-heading { padding:20px 16px; align-items:flex-start; flex-direction:column; gap:14px; }

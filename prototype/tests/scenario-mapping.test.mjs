@@ -1,5 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
+import {readFileSync} from 'node:fs';
 
 // These protect source role separation, shared IDs and lossless source instances.
 const api = await import('../studio-next/scenario-mapping.mjs').catch(e => {
@@ -51,4 +52,19 @@ test('source drilldown links to the existing work inside the selected scenario',
   const detail = api.getSourceDetail('SCN-SCOPE', 'M0.1');
   assert.ok(detail.workItems?.some(w => w.id === 'D3-SCOPE-01'));
   assert.ok(detail.workItems.every(w => w.id.startsWith('D3-SCOPE-')));
+});
+
+test('the customer journey can render a collapsed S1-S15 source index', () => {
+  assert.equal(typeof api.scenarioSourceIndexHtml, 'function');
+  const html = api.scenarioSourceIndexHtml();
+  assert.match(html, /^<details class="sm-scenario-index-fold"/);
+  assert.doesNotMatch(html, /^<details[^>]+open/);
+  assert.equal([...html.matchAll(/data-scenario-id="SCN-[A-Z-]+"/g)].length, 15);
+  assert.match(html, />S1</);
+  assert.match(html, /M0\.1/);
+  assert.match(html, /Primary source steps/);
+  assert.match(html, /Related sources/);
+
+  const ui = readFileSync(new URL('../studio-next/ui.mjs', import.meta.url), 'utf8');
+  assert.match(ui, /state\.dimension==='cj'\?scenarioSourceIndexHtml\(\):''/);
 });

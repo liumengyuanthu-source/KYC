@@ -71,3 +71,14 @@ export function mappingDirectoryHtml(stage = 'all', query = '') {
     <div class="sm-directory-results"><p class="sm-results" role="status"><b>${hits.length}</b> <span>scenarios shown</span></p><div class="sm-table-wrap"><table class="sm-table"><thead><tr><th>Scenario</th><th>Primary source steps</th><th>Related sources</th><th><span class="sr-only">Open scenario</span></th></tr></thead><tbody>${hits.map(s => `<tr><th scope="row"><span class="sm-scenario-number">${s.number}</span><button type="button" data-sn="scene" data-sn-value="${s.id}">${escape(s.title)}</button><small>${s.stage==='Clear'?'Confirm readiness':s.stage}</small></th><td><span class="sm-mobile-label">Primary source steps</span>${s.primary.map(code => `<code>${code}</code>`).join(' ')}</td><td><span class="sm-mobile-label">Related sources</span>${s.related.length ? s.related.map(code => `<code>${code}</code>`).join(' ') : '—'}</td><td><button type="button" class="sm-open" data-sn="scene" data-sn-value="${s.id}" aria-label="${escape('Open '+s.number+' '+s.title)}">View mapping <span aria-hidden="true">→</span></button></td></tr>`).join('')}</tbody></table>${hits.length ? '' : '<p class="sm-empty">No scenarios match. Try another source step or select All scenarios.</p>'}</div></div>
   </section>`;
 }
+
+export function scenarioSourceIndexHtml() {
+  return `<details class="sm-scenario-index-fold">
+    <summary><span><strong>Scenario list & source mapping</strong><small>See how S1–S15 map to M/C source steps.</small></span><span class="sm-fold-count">15 scenarios <b aria-hidden="true">+</b></span></summary>
+    <div class="sm-scenario-index-body"><p class="sm-scenario-index-note">Primary steps form the scenario backbone. Related steps are inputs, reuse or handoffs.</p>
+      <div class="sm-table-wrap"><table class="sm-table"><thead><tr><th>Scenario</th><th>Primary source steps</th><th>Related sources</th><th><span class="sr-only">Open scenario</span></th></tr></thead><tbody>
+        ${scenarioMappings.map(s => `<tr data-scenario-id="${escape(s.id)}"><th scope="row"><span class="sm-scenario-number">${s.number}</span><button type="button" data-sn="scene" data-sn-value="${escape(s.id)}">${escape(s.title)}</button><small>${s.stage === 'Clear' ? 'Confirm readiness' : s.stage}</small></th><td><span class="sm-mobile-label">Primary source steps</span>${s.primary.map(code => `<code>${code}</code>`).join(' ')}</td><td><span class="sm-mobile-label">Related sources</span>${s.related.length ? s.related.map(code => `<code>${code}</code>`).join(' ') : '—'}</td><td><button type="button" class="sm-open" data-sn="scene" data-sn-value="${escape(s.id)}" aria-label="${escape(`Open ${s.number} ${s.title}`)}">Open mapping <span aria-hidden="true">→</span></button></td></tr>`).join('')}
+      </tbody></table></div>
+    </div>
+  </details>`;
+}
