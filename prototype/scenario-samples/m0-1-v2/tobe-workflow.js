@@ -51,11 +51,11 @@ window.TobeWorkflow={
    stop();disconnect();clearTimeout(timeout);memory.view=view;memory.active=active||(view==='investigate'?'trigger':'t7');
    const name='tobe-'+view;
    root.querySelectorAll('[data-tobe-view]').forEach(b=>{const on=b.dataset.tobeView===view;b.classList.toggle('sel',on);b.setAttribute('aria-pressed',String(on));});
-   root.querySelector('#tobeFullViewer').href=`diagrams/${name}.html?theme=light`;
+   root.querySelector('#tobeFullViewer').href=`diagrams/${name}.html?theme=light&v=manual-play-1`;
    const img=root.querySelector('#tobeStatic img');img.src=`diagrams/${name}.svg`;img.alt=view==='investigate'?'Complete M0.1 investigation: trigger and steps 1–7':'Complete M0.1 resolution: steps 7–10, Human Gates, hold and downstream handoff';
    play.disabled=true;play.textContent='Loading guided tour…';play.onclick=null;showStatic(false);
    root.querySelector('#tobeViewerStatus').textContent='Loading Archify… Static fallback remains available.';
-   frame.src=`diagrams/${name}.html?theme=light`;render(memory.active);
+   frame.src=`diagrams/${name}.html?theme=light&v=manual-play-1`;render(memory.active);
    timeout=setTimeout(()=>{if(!disposed&&play.disabled&&!frame.contentDocument?.querySelector('svg'))showStatic(true);},8000);
   };
   const onLoad=()=>{

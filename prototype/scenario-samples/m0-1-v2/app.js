@@ -665,11 +665,11 @@ function renderBefore(m){
         <span class="q" id="beforeMapTitle">M0.1 Sales location &amp; booking entity ｜ Before</span>
         <button class="toolbtn before-play" id="beforePlay" aria-pressed="false" disabled>Play guided tour</button>
         <button class="toolbtn" id="beforeExpand" aria-pressed="false">Expand diagram</button>
-        <a class="toolbtn" href="diagrams/before.html?theme=light" target="_blank" rel="noopener">Open full viewer ↗</a>
+        <a class="toolbtn" href="diagrams/before.html?theme=light&v=manual-play-1" target="_blank" rel="noopener">Open full viewer ↗</a>
         <button class="toolbtn" id="beforeStaticToggle" aria-pressed="false">Static fallback</button>
       </div>
       <div class="before-viewer" id="mapscroll">
-        <iframe id="beforeArchify" title="Interactive M0.1 Before workflow — Archify" src="diagrams/before.html?theme=light" allow="fullscreen; clipboard-write" allowfullscreen></iframe>
+        <iframe id="beforeArchify" title="Interactive M0.1 Before workflow — Archify" src="diagrams/before.html?theme=light&v=manual-play-1" allow="fullscreen; clipboard-write" allowfullscreen></iframe>
         <div id="beforeStatic" hidden>
           <img src="diagrams/before.svg" alt="Complete Before workflow: Person T request followed by ten RM actions in numbered order">
           <p class="before-boundary">Static version · full process preserved. Open an action below for its discussion details.</p>
@@ -882,7 +882,7 @@ function renderTobe(m){
         </div>
         <button class="toolbtn before-play" id="tobePlay" disabled aria-pressed="false">Play guided tour</button>
         <button class="toolbtn" id="tobeExpand" aria-pressed="false">Expand diagram</button>
-        <a class="toolbtn" id="tobeFullViewer" href="diagrams/tobe-investigate.html?theme=light" target="_blank" rel="noopener">Open full viewer ↗</a>
+        <a class="toolbtn" id="tobeFullViewer" href="diagrams/tobe-investigate.html?theme=light&v=manual-play-1" target="_blank" rel="noopener">Open full viewer ↗</a>
         <button class="toolbtn" id="tobeStaticToggle" aria-pressed="false">Static fallback</button>
       </div>
       <div class="before-viewer" id="tobeScroll">

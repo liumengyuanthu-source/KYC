@@ -10075,8 +10075,14 @@
         return Math.max(0, Math.min(1, (storyBeatIndex + Math.min(1, elapsed / dwell)) / total));
       }
 
+      // Explicit Play can leave Still without changing the saved preference.
+      function storyManualPlaybackAllowed() {
+        return !document.hidden && !reducedMotion() &&
+          !(window.matchMedia && window.matchMedia('print').matches);
+      }
+
       function renderPlayback() {
-        var automaticPlaybackAllowed = storyAutomaticPlaybackAllowed();
+        var automaticPlaybackAllowed = storyManualPlaybackAllowed();
         panel.setAttribute('data-playing', playing ? 'true' : 'false');
         syncStoryPlayback();
         play.disabled = !playing && !automaticPlaybackAllowed;
@@ -10253,7 +10259,12 @@
       }
 
       function togglePlayback() {
-        return playing ? (pausePlayback(), false) : startPlayback();
+        if (playing) { pausePlayback(); return false; }
+        if (!storyManualPlaybackAllowed()) return false;
+        if (Archify.motionGovernor && Archify.motionGovernor.capable) {
+          Archify.motionGovernor.setMode('live', { persist: false });
+        }
+        return startPlayback();
       }
 
       function syncStoryControlsDisabled() {

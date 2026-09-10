@@ -28,3 +28,7 @@ Status: prepared locally; not uploaded to GitHub or published to Pages. See [dep
 S1 opens the user-selected Version 2 at its Summary step (`#6`) in a separate tab. Runtime files from `scenario-template-versions/version-2/app` are copied unchanged into `prototype/scenario-samples/m0-1-v2/`, including its V2 stylesheet, local hero image, To-be viewers and eleven-row Summary mapping. Browser drafts use the original V2 storage namespace. The previous V1 copy is replaced; the source versions remain untouched.
 
 The sample retains its M0.1 title and content; converting it into the full Scenario 1 template is deferred. Relative URLs support GitHub project paths.
+
+## Diagram playback — September 10
+
+Explicit Play now resumes Live from Still in the V2 Before and both To-be readers, as well as Customer journey / Hero case. Pause and system reduced-motion behavior are retained. V2 source and packaged copy are synchronized; viewer URLs are versioned to avoid stale cached controls.
