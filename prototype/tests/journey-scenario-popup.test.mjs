@@ -29,6 +29,9 @@ test('all popup source chips preserve exact primary/related membership from the 
     }
     assert.match(html,new RegExp(`data-scenario-id="${s.id}"`));
     assert.ok(html.includes('Mapping notes'));
+    assert.match(html,/Primary subprocesses/);
+    assert.match(html,/Related subprocesses/);
+    assert.doesNotMatch(html,/source steps/i);
   }
   assert.equal(scenarioPopupHtml('unknown'),'');
 });

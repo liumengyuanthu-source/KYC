@@ -79,11 +79,11 @@ function sourceRow(s, code, related) {
   const target = d.occurrences.filter(o => o.page === 'p2');
   return `<details class="jsp-source" data-source-code="${code}" data-source-role="${d.relationship}">
     <summary><code>${code}</code><span>${esc(d.title)}</span><span class="jsp-expand" aria-hidden="true">+</span></summary>
-    <div class="jsp-source-body"><p><span>${s.number}</span> · <span>${related ? esc(relatedRoles[s.number]?.[code] || 'Context & dependencies') : `Primary source · scenario backbone`}</span></p>
+    <div class="jsp-source-body"><p><span>${s.number}</span> · <span>${related ? esc(relatedRoles[s.number]?.[code] || 'Context & dependencies') : `Primary subprocess · scenario backbone`}</span></p>
     ${d.note ? `<p data-i18n-source>${esc(d.note)}</p>` : ''}
     ${d.currentLane === 'NOT_PRESENT' ? '<p>Explicit in Target only. Do not infer that the responsibility was absent in Current.</p>' : ''}
-    <details class="jsp-origins"><summary>Source locations</summary><dl><dt>Current</dt><dd data-i18n-source>${esc(d.currentLane)}</dd><dt>Target</dt><dd data-i18n-source>${esc(d.targetLane)}</dd></dl>
-    ${target.length > 1 ? `<p class="jsp-occurrence-note">Multiple Target occurrences share this code; each source location is retained.</p>` : ''}
+    <details class="jsp-origins"><summary>Subprocess locations</summary><dl><dt>Current</dt><dd data-i18n-source>${esc(d.currentLane)}</dd><dt>Target</dt><dd data-i18n-source>${esc(d.targetLane)}</dd></dl>
+    ${target.length > 1 ? `<p class="jsp-occurrence-note">Multiple Target occurrences share this subprocess code; each location is retained.</p>` : ''}
     <ul class="jsp-occurrences">${d.occurrences.map(o => `<li><span>${o.page === 'p1' ? 'Current' : 'Target'}</span><span data-i18n-source>${esc(o.lane)}</span><code>${esc(o.action)}</code></li>`).join('')}</ul></details>
     </div></details>`;
 }
@@ -104,11 +104,11 @@ export function scenarioPopupHtml(id,{heroCase=false,locale='en-US'}={}) {
     <div class="jsp-meta"><span>${s.number}</span><span>${s.stage === 'Clear' ? 'Confirm readiness' : s.stage}</span></div>
     <h2 id="jsp-scenario-title">${esc(s.title)}</h2>
     ${story ? `<section class="jsp-hero-story"><strong>${storyLabel}</strong><p data-hero-case-story>${esc(story)}</p></section>` : ''}
-    <section class="jsp-primary"><h3>Primary source steps <span>${s.primary.length}</span></h3><p class="jsp-caption">These steps form this scenario’s backbone.</p><div class="jsp-source-chips">${chips(s.primary,false)}</div></section>
-    <section class="jsp-related"><h3>Related source steps <span>${s.related.length}</span></h3><div class="jsp-source-chips">${chips(s.related,true)}</div>${!s.related.length ? '<p>No related actions specified.</p>' : '<p class="jsp-caption">Inputs, reuse and handoffs; not extra steps in sequence.</p>'}</section>
-    <div id="jsp-source-preview" class="jsp-source-preview" aria-live="polite"><p class="jsp-caption">Select a source step to see its role and origin.</p></div>
-    <details class="jsp-notes jsp-rationale"><summary>How these steps connect</summary><p>${esc(s.rationale)}</p></details>
-    <details class="jsp-notes"><summary>Mapping notes</summary><p>${esc(s.note)}</p><p>Source labels show provenance, not an execution order.</p></details>
+    <section class="jsp-primary"><h3>Primary subprocesses <span>${s.primary.length}</span></h3><p class="jsp-caption">These subprocesses form this scenario’s backbone.</p><div class="jsp-source-chips">${chips(s.primary,false)}</div></section>
+    <section class="jsp-related"><h3>Related subprocesses <span>${s.related.length}</span></h3><div class="jsp-source-chips">${chips(s.related,true)}</div>${!s.related.length ? '<p>No related subprocesses specified.</p>' : '<p class="jsp-caption">Inputs, reuse and handoffs; not extra subprocesses in sequence.</p>'}</section>
+    <div id="jsp-source-preview" class="jsp-source-preview" aria-live="polite"><p class="jsp-caption">Select a subprocess to see its role and origin.</p></div>
+    <details class="jsp-notes jsp-rationale"><summary>How these subprocesses connect</summary><p>${esc(s.rationale)}</p></details>
+    <details class="jsp-notes"><summary>Mapping notes</summary><p>${esc(s.note)}</p><p>Subprocess labels show provenance, not an execution order.</p></details>
   </article>`;
 }
 

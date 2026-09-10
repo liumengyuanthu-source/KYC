@@ -72,8 +72,9 @@ test('the customer journey can render a collapsed S1-S15 source index', () => {
   assert.equal([...html.matchAll(/data-scenario-id="SCN-[A-Z-]+"/g)].length, 15);
   assert.match(html, />S1</);
   assert.match(html, /M0\.1/);
-  assert.match(html, /Primary source steps/);
-  assert.match(html, /Related sources/);
+  assert.match(html, /Primary subprocesses/);
+  assert.match(html, /Related subprocesses/);
+  assert.doesNotMatch(html, /source steps|Source actions/);
 
   const ui = readFileSync(new URL('../studio-next/ui.mjs', import.meta.url), 'utf8');
   assert.match(ui, /state\.dimension==='cj'\?scenarioSourceIndexHtml\(\):''/);
@@ -86,7 +87,7 @@ test('the source index explains the four-level journey-process-scenario-action m
   assert.match(html, /Customer journey/);
   assert.match(html, /Process group/);
   assert.match(html, /Scenario/);
-  assert.match(html, /Source actions/);
+  assert.match(html, /Subprocess/);
   const s1 = html.match(/data-four-level-scenario="SCN-SCOPE"[\s\S]*?<\/tr>/)?.[0] || '';
   assert.match(s1, /Initiate/);
   assert.match(s1, /M0/);
