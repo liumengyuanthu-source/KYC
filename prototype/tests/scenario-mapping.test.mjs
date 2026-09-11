@@ -97,3 +97,25 @@ test('the source index explains the four-level journey-process-scenario-action m
   assert.match(s1, /Primary/);
   assert.match(s1, /Related/);
 });
+
+test('the Customer Journey identifies every human lane with its portrait and synthetic name', () => {
+  const html = readFileSync(new URL('../studio-next/target-journey.html', import.meta.url), 'utf8');
+  const people = [
+    ['PERSONA-CLIENT-T', 'PERSONA-CLIENT-T.jpg', 'Thomas Lee'],
+    ['PERSONA-RM', 'PERSONA-RM.jpg', 'Alex Morgan'],
+    ['PERSONA-KYCOPS', 'PERSONA-KYCOPS.jpg', 'Morgan Lee'],
+    ['PERSONA-RISK', 'PERSONA-RISK.jpg', 'Sam Ellis'],
+    ['PERSONA-CONTROL', 'PERSONA-CONTROL.jpg', 'Taylor Shaw'],
+    ['PERSONA-LEGAL', 'PERSONA-LEGAL.jpg', 'Casey Reed'],
+    ['PERSONA-CREDIT', 'PERSONA-CREDIT.jpg', 'Jordan Blake'],
+  ];
+
+  assert.equal([...html.matchAll(/class="persona-lane-label"/g)].length, people.length);
+  for (const [id, portrait, name] of people) {
+    const lane = html.match(new RegExp(`class="persona-lane-label" data-persona-id="${id}"[\\s\\S]*?<\\/g>`))?.[0] || '';
+    assert.match(lane, new RegExp(`href="assets/${portrait}"`));
+    assert.match(lane, new RegExp(`>${name}<`));
+  }
+  assert.doesNotMatch(html, /data-persona-id="APPLICATIONS-SYSTEMS"/);
+  assert.match(html, />Applications &amp;<\/text>/);
+});
