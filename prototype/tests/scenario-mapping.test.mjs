@@ -119,3 +119,36 @@ test('the Customer Journey identifies every human lane with its portrait and syn
   assert.doesNotMatch(html, /data-persona-id="APPLICATIONS-SYSTEMS"/);
   assert.match(html, />Applications &amp;<\/text>/);
 });
+
+test('the Hero case identifies every human lane with portraits and synthetic names', () => {
+  const html = readFileSync(new URL('../studio-next/hero-journey.html', import.meta.url), 'utf8');
+  const singleLanes = [
+    ['PERSONA-CLIENT-T', 'PERSONA-CLIENT-T.jpg', 'Thomas Lee'],
+    ['PERSONA-RM', 'PERSONA-RM.jpg', 'Alex Morgan'],
+    ['PERSONA-CASEMGR', 'PERSONA-CASEMGR.jpg', 'Jamie Park'],
+    ['PERSONA-KYCOPS', 'PERSONA-KYCOPS.jpg', 'Morgan Lee'],
+    ['PERSONA-RISK', 'PERSONA-RISK.jpg', 'Sam Ellis'],
+  ];
+
+  assert.equal([...html.matchAll(/class="hero-persona-lane-label"/g)].length, singleLanes.length);
+  for (const [id, portrait, name] of singleLanes) {
+    const lane = html.match(new RegExp(`class="hero-persona-lane-label" data-persona-id="${id}"[\\s\\S]*?<\\/g>`))?.[0] || '';
+    assert.match(lane, new RegExp(`href="assets/${portrait}"`));
+    assert.match(lane, new RegExp(`>${name}<`));
+  }
+
+  const specialists = html.match(/class="hero-persona-group-label"[\s\S]*?<\/g>/)?.[0] || '';
+  for (const [id, portrait, name] of [
+    ['PERSONA-CONTROL', 'PERSONA-CONTROL.jpg', 'Taylor'],
+    ['PERSONA-LEGAL', 'PERSONA-LEGAL.jpg', 'Casey'],
+    ['PERSONA-CREDIT', 'PERSONA-CREDIT.jpg', 'Jordan'],
+    ['PERSONA-QA', 'PERSONA-QA.jpg', 'Robin'],
+  ]) {
+    assert.match(specialists, new RegExp(id));
+    assert.match(specialists, new RegExp(`href="assets/${portrait}"`));
+    assert.match(specialists, new RegExp(name));
+  }
+
+  assert.match(html, />Overall readiness<\/text>/);
+  assert.doesNotMatch(html, /data-persona-id="[^"]*READINESS/);
+});

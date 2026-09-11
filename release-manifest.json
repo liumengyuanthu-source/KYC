@@ -1,5 +1,5 @@
 {
-  "source_commit": "af3d581f231f3400f36be25daa16a86dad9b4042",
+  "source_commit": "ac4371040fef73001f437aa5035681cb5097afe8",
   "source_has_uncommitted_changes": false,
   "target_repository": "https://github.com/liumengyuanthu-source/KYC.git",
   "status": "curated deployment snapshot",
@@ -9461,8 +9461,8 @@
     },
     {
       "path": "prototype/studio-next/hero-journey.html",
-      "bytes": 755456,
-      "sha256": "c8f6143ce17219950bbe250378a2fd5a29cd77a76c5c98783f0338d07bfeaf01"
+      "bytes": 759970,
+      "sha256": "0c28dc23df2857746f427321a9a51e9d1b673cad446c1a254e6dd49724a4880c"
     },
     {
       "path": "prototype/studio-next/journey-accessibility.css",
@@ -9566,8 +9566,8 @@
     },
     {
       "path": "prototype/tests/scenario-mapping.test.mjs",
-      "bytes": 5798,
-      "sha256": "0f7efe8fc5bc3a5a111b6b4360fbe6ee09ed5f0bbcef11f21bd9c05dcfafb451"
+      "bytes": 7359,
+      "sha256": "4fd760b671d1a0eab4402e00cebddcdf0103b1fe3c0626e7c3cf8bcaec7e449e"
     },
     {
       "path": "prototype/tests/scenario-progress.test.mjs",
