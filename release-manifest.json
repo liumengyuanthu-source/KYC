@@ -1,5 +1,5 @@
 {
-  "source_commit": "96c8217e2497eaede0742cabe8d02fb750e7912a",
+  "source_commit": "af3d581f231f3400f36be25daa16a86dad9b4042",
   "source_has_uncommitted_changes": false,
   "target_repository": "https://github.com/liumengyuanthu-source/KYC.git",
   "status": "curated deployment snapshot",
@@ -9541,8 +9541,8 @@
     },
     {
       "path": "prototype/studio-next/target-journey.html",
-      "bytes": 791430,
-      "sha256": "3af49b81dcb3eaed153e956a3ce934ef0b84a7b5f27b9e1797cbee9671199450"
+      "bytes": 794828,
+      "sha256": "9dcaa42315b7a0545845f56c91287c12f49f29e004f50a3f46fa1bb1418dc6dc"
     },
     {
       "path": "prototype/studio-next/theme.css",
@@ -9566,8 +9566,8 @@
     },
     {
       "path": "prototype/tests/scenario-mapping.test.mjs",
-      "bytes": 4650,
-      "sha256": "0e64e35f4c548500d870fa5a72ff4b226181906f234ec971f57183c9be739292"
+      "bytes": 5798,
+      "sha256": "0f7efe8fc5bc3a5a111b6b4360fbe6ee09ed5f0bbcef11f21bd9c05dcfafb451"
     },
     {
       "path": "prototype/tests/scenario-progress.test.mjs",
